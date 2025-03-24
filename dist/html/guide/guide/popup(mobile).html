@@ -1,0 +1,247 @@
+<div id="wrap" class="wrap">
+	<div id="header" class="header">
+		<div class="header_inner">
+			<div class="left">
+				<button type="button" class="back"><span class="blind">이전 페이지로 이동</span></button>
+			</div>
+
+			<div class="header_connect">
+				<h1 class="header_title">타이틀 t3</h1>
+			</div>
+
+			<div class="right">
+				<button type="button" class="allmenu"><span class="blind">전체메뉴 열기</span></button>
+				<div class="nav_menu_wrap" aria-hidden="true">
+					<div class="nav_menu_inner">
+						<div class="nav_menu_top">
+							<button type="button"><span class="blind">홈으로 이동</span></button>
+							<button type="button" class="allmenu_close"><span class="blind">전체메뉴 닫기</span></button>
+						</div>
+						<div class="nav_menu_bottom">
+							<div class="nav_content">전체메뉴 내용</div>
+							<div class="nav_link">기타 링크</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="container" class="container">
+		<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type01');"><span>Full 팝업열기</span></button>
+		<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type02');"><span>Layer 팝업열기</span></button>
+		<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type03');"><span>Bottom 팝업열기1</span></button>
+		<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type03');"><span>Bottom 팝업열기2</span></button>
+		<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type05');" title="Bottom 선택 팝업열기"><span>value</span></button>
+		<div class="btn popup_open" role="button" aria-label="Bottom 선택 팝업열기">
+			<span>value</span>
+		</div>
+	</div>
+
+	<!-- 추후 적용 문구
+	선택목록 :
+	호출 버튼 : 이용구분 시 : 이용구분 선택목록 보기
+	호출 버튼 : 선택된 요소가 존재하는 경우 : 이용구분 선택목록 보기 : 선택된 요소명 선택됨 -> 선택됨은 sr_only로 처리
+	추후 적용 문구 -->
+
+	<div id="footer" class="nav_footer">
+		<ul class="fix_nav_menu">
+			<li><a href="#" class="menu_num1">하단메뉴1</a></li>
+			<li><a href="#" class="menu_num2">하단메뉴2</a></li>
+			<li><a href="#" class="menu_num3">하단메뉴3</a></li>
+			<li><a href="#" class="menu_num4">하단메뉴4</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- Full 팝업 -->
+<div class="popup_wrap full" id="pop_type01" role="dialog" aria-hidden="true">
+	<div class="popup_container">
+		<div class="popup_inner">
+			<div class="popup_head">팝업 타이틀</div>
+			<div class="popup_cont">
+				팝업내용입니다
+				<br />
+				내용
+			</div>
+			<div class="popup_bottom">
+				<div class="btn_area">
+					<button type="button" class="btn"><span>확인</span></button>
+					<button type="button" class="btn"><span>확인</span></button>
+				</div>
+			</div>
+
+			<button type="button" class="popup_close" onclick="closePop('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		</div>
+	</div>
+</div>
+<!-- Full 팝업 -->
+
+<!-- Layer 팝업 -->
+<div class="popup_wrap layer" id="pop_type02" role="dialog" aria-hidden="true">
+	<div class="popup_container">
+		<div class="popup_inner">
+			<div class="popup_head">팝업 타이틀</div>
+			<div class="popup_cont">
+				팝업내용입니다
+				<br />
+				내용
+			</div>
+			<div class="popup_bottom">
+				<div class="btn_area">
+					<button type="button" class="btn"><span>확인</span></button>
+				</div>
+			</div>
+
+			<button type="button" class="popup_close" onclick="closePop('pop_type02');"><span class="blind">팝업 닫기</span></button>
+		</div>
+	</div>
+</div>
+<!-- Layer 팝업 -->
+
+<!-- Bottom 팝업 -->
+<div class="popup_wrap bottom" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="true">
+	<div class="popup_container">
+		<div class="popup_inner">
+			<div class="draggable" aria-hidden="true">
+				<div class="move"></div>
+			</div>
+			<div class="popup_head">팝업 타이틀</div>
+			<div class="popup_cont">
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용
+			</div>
+			<div class="popup_bottom">
+				<div class="btn_area">
+					<button type="button" class="btn"><span>확인</span></button>
+					<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button>
+				</div>
+			</div>
+
+			<button type="button" class="popup_close" onclick="closePop('pop_type03');"><span class="blind">팝업 닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="popup_wrap bottom" id="pop_type04" role="dialog" aria-modal="true" aria-hidden="true">
+	<div class="popup_container">
+		<div class="popup_inner">
+			<div class="draggable" aria-hidden="true">
+				<div class="move"></div>
+			</div>
+			<div class="popup_head">팝업 타이틀</div>
+			<div class="popup_cont">
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+				내용 팝업내용입니다
+				<br />
+			</div>
+			<div class="popup_bottom">
+				<div class="btn_area">
+					<button type="button" class="btn"><span>확인</span></button>
+					<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type05');"><span>Bottom 팝업열기</span></button>
+				</div>
+			</div>
+
+			<button type="button" class="popup_close" onclick="closePop('pop_type04');"><span class="blind">팝업 닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<div class="popup_wrap bottom" id="pop_type05" role="dialog" aria-modal="true" aria-hidden="true">
+	<div class="popup_container">
+		<div class="popup_inner">
+			<div class="draggable" aria-hidden="true">
+				<div class="move"></div>
+			</div>
+			<div class="popup_head">팝업 타이틀</div>
+			<div class="popup_cont">
+				<div class="bottom_select_opt">
+					<div role="button" class="option active" title="선택됨"><span>선택 옵션 1</span></div>
+					<div role="button" class="option"><span>선택 옵션 22</span></div>
+					<div role="button" class="option"><span>선택 옵션 333 선택 옵션 333 선택 옵션 333</span></div>
+					<div role="button" class="option"><span>선택 옵션 4444 선택 옵션 4444 선택 옵션 4444 선택 옵션 4444</span></div>
+				</div>
+			</div>
+			<div class="popup_bottom">
+				<div class="btn_area">
+					<button type="button" class="btn"><span>확인</span></button>
+				</div>
+			</div>
+
+			<button type="button" class="popup_close" onclick="closePop('pop_type05');"><span class="blind">팝업 닫기</span></button>
+		</div>
+	</div>
+</div>
+
+<!-- Bottom 팝업 -->
