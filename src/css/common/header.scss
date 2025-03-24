@@ -1,0 +1,40 @@
+// Header
+.header {
+	height: 48px;
+
+	.header_inner {
+		position: relative;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px;
+
+		.header_connect {
+			flex: 1;
+			width: 100%;
+			padding: 0 80px;
+
+			.header_title {
+				overflow: hidden;
+				font-size: min(5vw, 24px);
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				text-align: center;
+			}
+		}
+		
+		.left {
+			position: absolute;
+			left: 15px;
+			display: flex;
+			align-items: center;
+		}
+		.right {
+			position: absolute;
+			right: 15px;
+			display: flex;
+			align-items: center;
+		}
+	}
+}

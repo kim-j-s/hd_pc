@@ -1,0 +1,15 @@
+/* Common */
+
+
+.wrap {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+	.container {
+		overflow-y: auto;
+		flex: 1;
+		background-color: beige;
+	}
+}

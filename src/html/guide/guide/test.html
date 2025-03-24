@@ -1,0 +1,46 @@
+{{#> layout/guide gw_class="guide_test"}}
+<div class="smp">
+	<div class="smp_header">
+		<h1 class="smp_title">HEADER</h1>
+	</div>
+	<div class="stepper_wrap">
+		<div class="stepper" role="img" aria-label="5단계 중 1단계">
+			<div class="pgs">
+				<span class="pgs_per start" style="width: 0%;"><span class="motion car"></span></span>
+			</div>
+		</div>
+		<button type="button" style="display: none;" class="stm_btn stm_l" disabled>이전 단계</button>
+		<button type="button" style="display: none;" class="stm_btn stm_r">다음 단계</button>
+	</div>
+	<div class="smp_stepper">
+		<div class="smp_top">
+			<div class="ds1">
+				<div class="ds1_inner">
+					<P class="ds1_inner_text">
+						<span class="tb">누구를 위한</span> 보험인가요?
+					</P>
+					<span class="sub_text">가입이 어려운 경우</span>
+				</div>
+			</div>
+			<div class="ds2">
+				<div class="ds2_inner" aria-label="선택된 항목입니다.">
+					<button type="button" class="selected_case date" title="수정"></button>
+					<button type="button" class="selected_case person" title="대상 수정">본인</button>
+					<button type="button" class="selected_case car" title="용도 수정">자가용</button>
+					<button type="button" class="selected_case date" title="생년월일 수정">19960610</button>
+					<button type="button" class="selected_case gender" title="성별 수정">남성</button>
+				</div>
+			</div>
+		</div>
+		<div class="smp_content">
+			<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다.">
+				{{> cp/radio labelname="본인" name="radio1" id="radio1" checked=true }}
+				{{> cp/radio labelname="부모님" name="radio1" id="radio2" }}
+				{{> cp/radio labelname="배우자" name="radio1" id="radio3" }}
+				{{> cp/radio labelname="자녀" name="radio1" id="radio4" }}
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/ layout/guide }}

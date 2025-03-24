@@ -1,0 +1,47 @@
+
+@mixin list-style(
+  // $ul-padding: 0,
+  // $ul-margin: 0,
+  $li-padding: 0, 
+  $li-margin: 0, 
+  $li-font-size: 16px,
+	$li-line-height: 20px,
+  $li-color: inherit
+) {
+  // margin: $ul-margin;
+  // padding: $ul-padding;
+
+  > li {
+		position: relative;
+    margin: $li-margin;
+    padding: $li-padding;
+    font-size: $li-font-size;
+    line-height: $li-line-height;
+    color: $li-color;
+  }
+  @content;
+}
+
+.list_ty1 {
+  @include list-style(
+    $li-padding: 0 0 0 10px,
+    $li-font-size: 14px,
+    $li-color: #333
+  ) {
+    // ul.list-1에 대한 추가적인 스타일
+		// background-color: var(--color-primary);
+    > li {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background-color: #333;
+				transform: translateY(-50%);
+			}
+    }
+  }
+}

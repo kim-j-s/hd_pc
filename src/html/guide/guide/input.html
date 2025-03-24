@@ -1,0 +1,41 @@
+{{#> layout/guide }}
+    <div class="guide_h1">Input</div>
+    <div class="guide_h4">Type - text</div>
+
+    <!-- Attribute -->
+    <div class="guide_discription">Default</div>
+    {{> cp/text placeholder="플레이스홀더"}}
+    <div class="guide_discription">Value</div>
+    {{> cp/text placeholder="플레이스홀더" value="입력한 값" }}
+    <div class="guide_discription">disabled</div>
+    {{> cp/text placeholder="플레이스홀더" disabled=true }}
+    <div class="guide_discription">Readonly</div>
+    {{> cp/text placeholder="플레이스홀더" readonly=true }}
+
+    <!-- Error -->
+    <div class="guide_discription">Error success</div>
+    {{> cp/text msg1="에러문구"}}
+
+    <div class="guide_discription">Error Default</div>
+    {{> cp/text msg2="에러문구"}}
+
+    <div class="guide_discription">Error fail</div>
+    {{> cp/text msg3="에러문구"}}
+
+    <!-- 금액Comma -->
+    <div class="guide_h4">Type - 금액입력(Comma)</div>
+    {{> cp/text class="price" }}
+
+    <!-- Calendar -->
+    <div class="guide_h4">Type - calendar</div>
+    {{> cp/text readonly=true no_del=true no_cal=true }}
+
+    <!-- File -->
+    <div class="guide_h4">Type - file</div>
+		{{> cp/file id="file" text="파일을 선택해주세요." }}
+
+		<!-- email -->
+		<div class="guide_h4">Type - email</div>
+    {{> cp/text type="email" }}
+
+{{/ layout/guide }}
