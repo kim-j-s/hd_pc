@@ -1,0 +1,86 @@
+{{#> layout/default page-title="인정자대상자 정보입력  | 마이페이지"}}
+	<div id="wrap" class="wrap">		
+		{{> layout/header h-title="인정자 정보입력" }}		
+		<div id="container" class="container">
+			<div class="content">
+				<!-- s: content_top -->
+				<div class="content_top">
+					<h2 class="title_h2">
+						<!-- prettier-ignore -->
+						<strong>가입경력인정자 정보</strong>를<br>정확하게 <strong>입력</strong>해주세요
+					</h2>
+				</div>
+				<!-- e: content_top -->
+
+				<div class="info_gray">
+					<dl>
+						<dt>자동차번호</dt>
+						<dd>18루**22</dd>
+					</dl>
+					<dl>
+						<dt>운전자범위</dt>
+						<dd>가족한정</dd>
+					</dl>
+					<dl>
+						<dt>운전자범위</dt>
+						<dd>만35세이상</dd>
+					</dl>
+				</div>
+				
+				<h3 class="title_h3">가입경력인정대상자</h3>
+				<div class="space_list_ty5">
+					
+				</div>
+				<!-- s: CASE2. 입력된 정보 있을 경우 -->
+				<div class="card_item_wrap">
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inner_cont">
+								<div class="item_top">
+									<div class="title_info">
+										<div class="main_title">하이현</div>
+									</div>
+								</div>
+								<ul class="card_list_ty1">
+									<li>
+										<div class="title">생년월일</div>
+										<div class="cont">1990.12.12</div>
+									</li>
+									<li>
+										<div class="title">관계</div>
+										<div class="cont">배우자</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btn_area">
+							{{> cp/button type="3" size="2" b-text="삭제" }}
+							{{> cp/button type="2" size="2" b-text="변경" }}
+						</div>
+					</div>					
+				</div>
+				<!-- s: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
+				<div class="btn_area btn_area_space2">
+					{{> cp/button type="3" size="3" rightIcon="registerSvg" b-text="등록"}}
+				</div>
+				<!-- e: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
+				<!-- e: CASE2. 입력된 정보 있을 경우 -->
+			</div>
+		</div>
+
+		<!-- s: 하단 고정 버튼 영역 -->
+		<div class="bottom_fix_wrap">
+			<div class="btn_area">
+				{{> cp/button type="1" size="1" b-text="다음"}}
+			</div>
+		</div>
+		<!-- s: 하단 고정 버튼 영역 -->
+	</div>
+
+	<!-- s: popup area -->
+	<!-- s: 자동차 배서 메뉴 -->
+	{{> pages/pop1 }}
+	<!-- e: 자동차 배서 메뉴 -->
+	<!-- e: popup area -->
+
+{{/ layout/default }}

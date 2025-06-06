@@ -1,0 +1,38 @@
+.acd_ico_rcd_ty1 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty01.svg);
+}
+
+
+.border_list {
+	.list {
+		display: flex;
+		justify-content: space-between;
+		gap: var(--gap-3);
+
+		& ~ .list {
+			margin-top: var(--gap-5);
+			padding-top: 16px;
+			border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		}
+
+		.left {
+			.inp_checkbox {
+			}
+		}
+
+		.right {
+			flex: 1 0 auto;
+			text-align: right;
+
+			.price {
+				font-size: var(--font-size-body-medium);
+			}
+		}
+	}
+
+	& + .badge_wrap {
+		margin-top: var(--gap-5);
+		padding-top: 16px;
+		border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	}
+}

@@ -16,6 +16,14 @@ import pxtorem from 'postcss-pxtorem'; // pxtorem 플러그인 가져오기
 const partialPath = 'src/_partials';
 // const helperPath = 'src/_helpers';
 
+
+const helpers = {
+  stripHtml: (text) => {
+    if (typeof text !== 'string') return text;
+    return text.replace(/(<([^>]+)>)/gi, '');
+  },
+};
+
 const getEntries = dir => {
   const htmlEntries = {};
 
@@ -56,7 +64,7 @@ const getContexts = dir => {
 }
 
 const pageData = getContexts('src');
-console.log(getEntries('src'));
+// console.log(getEntries('src'));
 export default defineConfig({
 // export default {
   root: 'src',
@@ -70,6 +78,12 @@ export default defineConfig({
     cssMinify: false,
     // cssMinify: true,
     overwrite: true,
+		minify: false,
+		terserOptions: {
+      output: {
+        comments: true, // 주석을 보존하도록 설정
+      },
+    },
     rollupOptions: {
       minify: false,
       input: getEntries('src'),
@@ -100,12 +114,12 @@ export default defineConfig({
         resolve(__dirname, 'src/_partials'),
       ],
       context(pagePath) {
-        console.log('test2---');
-        console.log(pageData);
-        console.log(pagePath);
+        // console.log('test2---');
+        // console.log(pageData);
+        // console.log(pagePath);
         return pageData[pagePath];
       },
-      // helpers, // helpers 등록
+      helpers, // helpers 등록
     }),
     {
       name: 'html-transform', // 플러그인 이름
@@ -187,7 +201,10 @@ export default defineConfig({
     },
   },
   server: {
+    // host: 'localhost',
+    host: '0.0.0.0',
     open: 'index.html',
     port: 8082,
+		hmr: true,
   }
 });

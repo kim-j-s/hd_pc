@@ -1,0 +1,44 @@
+{{#> layout/guide }}
+
+	<div class="guide_h1">은행 선택 가이드</div>
+
+	<div class="guide_discription">height 40</div>
+	{{> cp/selectitem si_class="select_item_case01_sm" si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 은행만</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_only_select"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 은행/증권사</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 선택 전</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 선택 후</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_item="기업은행" si_popup="bank_select"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 오류</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_item="기업은행" si_popup="bank_select" si_class="error"}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 선택 불가 - 선택 전</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select" disabled=true}}
+
+	<div class="guide_h4">선택 버튼 - 은행 선택 팝업 호출 - 선택 불가 - 선택 후</div>
+	{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_item="기업은행" si_popup="bank_select" disabled=true}}
+	
+
+	<!-- s: popup area -->
+
+	<!-- s: 은행 선택 팝업 -->
+	{{> popup/bank_only_select popup-id="bank_only_select" popup-title="은행 선택" }}
+	<!-- e: 은행 선택 팝업 -->
+
+	<!-- s: 은행/증권사 선택 팝업 -->
+	{{> popup/bank_select popup-id="bank_select" popup-title="은행 선택" }}
+	<!-- e: 은행/증권사 선택 팝업 -->
+
+	<!-- e: popup area -->
+
+
+
+{{/ layout/guide }}

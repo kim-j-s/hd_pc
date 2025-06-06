@@ -30,7 +30,7 @@
 
 
 
-<script>
+<!-- <script>
 	$(function() {
     // 확대 버튼 클릭 이벤트
     $('.z_up').on('click', function() {
@@ -48,7 +48,7 @@
       }
     });
   });
-</script>
+</script> -->
 
 
 
@@ -59,7 +59,7 @@
 	.zoom_control {
 		padding: 20px 0;
 		display: flex;
-		gap: 8px;
+		gap: var(--gap-3);
 		button {
 			flex: 1 1 0;
 			height: 30px;
@@ -76,7 +76,7 @@
 			border-collapse: collapse;
 			table-layout: fixed;
 			th, td {
-				border: 1px solid #000;
+				border: var(--border-width-static-regular) solid #000;
 				padding: 10px;
 			}
 		}

@@ -1,83 +1,303 @@
 /* Radio */
-	.inp_radio {
-		position: relative;
-		input[type='radio']{
-			// overflow: hidden;
-			position: absolute;
-			width: 16px;
-			height: 16px;
-			// clip: rect(0,0,0,0);
-			opacity: 0;
-			
-			& + label {
-				position: relative;
-				display: block;
-				padding-left: 20px;
+.inp_radio {
+	position: relative;
 
-				> span {
-					font-size: 14px;
-					line-height: 20px;
-					font-weight: bold;
-				}
-				cursor: pointer;
-	
-				&::before {
-					content:'';
-					position: absolute;
-					top: 2px;
-					left: 0;
-					width: 16px;
-					height: 16px;
-					border:1px solid #000;
-					border-radius: 100%;
+	input[type='radio']{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		opacity: 0;
+		
+		& + label {
+			position: relative;
+			display: block;
+			padding-left: 28px;
+			cursor: pointer;
+
+			> .label_cont {
+				display: block;
+				font-size: var(--font-size-label-medium);
+			}
+			.sub_g_txt {
+				display: block;
+				padding-top: 4px;
+				font-size: var(--font-size-label-small);
+				color: var(--color-text-subtle);
+
+				.list_ty5 {
+					li {
+						margin-top: var(--gap-2);
+					}
 				}
 			}
-	
-			// &:focus {
-			// 	+ label {
-			// 		outline: 1px dashed gray;
-			// 	}
-			// }
+			&::before {
+				content:'';
+				position: absolute;
+				top: 1px;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				border: var(--border-width-static-regular) solid var(--color-border-gray-dark);
+				border-radius: 100%;
+			}
+			
+		}
+		&:disabled {
+			& + label {
+				&::before {
+					border: 1px dashed var(--color-border-disabled);
+					background-color: var(--color-element-gray-lighter);
+				}
+
+				> .label_cont {
+					color: var(--color-text-disabled);
+				} 
+			}
+		}
+
+		&:checked {
+			& + label {
+				&::before {
+					background: var(--color-element-primary) url(../images/icon/check_ty1.svg) no-repeat center center / 14px auto;
+					border: var(--border-width-static-regular) solid var(--color-element-primary);
+				}
+			}
 
 			&:disabled {
 				& + label {
 					&::before {
-						background-color: #f0f0f0;
-						border-color: gray;
+						border: 1px dashed var(--color-border-disabled);
+						background-color: var(--color-element-gray-lighter);
 					}
-
-					> span {
-						color: gray;
-					} 
 				}
 			}
+		}
+
+
 	
+		&:checked {
+			& + label {
+				&::before {
+					background-size: 12px auto;
+				}
+			}
+
+			&:disabled {
+				& + label {
+					&::before {
+						border: var(--border-width-static-regular) solid var(--color-border-disabled);
+						background-color: var(--color-element-gray-lighter);
+						background-image: url(../images/icon/check_ty5.svg);
+					}
+				}
+			}
+		}
+
+	}
+	&.lg {
+		input[type='radio']{
+			& + label {
+				padding-left: 32px;
+				&::before {
+					top: 0;
+					width: 24px;
+					height: 24px;
+				}
+				> .label_cont {
+					font-size: var(--font-size-label-large);
+					line-height: 24px;
+				}
+				.sub_g_txt {
+					font-size: var(--font-size-label-medium);
+				}
+			}
 			&:checked {
 				& + label {
 					&::before {
-						background-color: black;
-					}
-				}
-
-				&:disabled {
-					& + label {
-						&::before {
-							background-color: #999;
-						}
+						background-size: 16px auto;
 					}
 				}
 			}
+		}
+	}
+	&.sm {
+		input[type='radio']{
+			width: 16px;
+			height: 16px;
+
+			& + label {
+				padding-left: 24px;
+				&::before {
+					top: 2px;
+					width: 16px;
+					height: 16px;
+				}
+			}
+			
+			&:checked {
+				& + label {
+					&::before {
+						background-size: 10px auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.radio_group_link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	& + .radio_group_link {
+		margin-top: var(--gap-4);
+	}
+}
+
+.radio_group_wrap {
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gap-4);
+
+	& + .title_h3,
+	& + .info_gray,
+	& + .acd_item,
+	& + .space_list_ty2 {
+		margin-top: var(--gap-8);
+	}
+
+	& + .list_ty2,
+	& + .btn_area {
+		margin-top: var(--gap-5);
+	}
 	
+	& + .input_text.search {
+		margin-top: var(--gap-5);
+	}
 	
+	.inp_radio {
+		&[class*=rd_btn]{
+			flex: 1;
 		}
 	}
 
-.radio_group_wrap {
-	display: inline-flex;
-	gap: 20px;
+	&_ty2 {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+		gap: 12px;
 
-	&.column {
-		flex-direction: column;
-		gap: 10px;
+		& + * {
+			margin-bottom: 24px;
+		}
+
+		.inp_radio {
+			flex-basis: calc(50% - 6px);
+
+			&.rd_btn {	
+				input[type=radio] + label {
+					height: 100%;
+				}
+			}
+		}
+
+		& + .info_gray {
+			margin-top: var(--gap-7);
+		}
+		& + .table {
+			margin-top: var(--gap-5);
+		}
+	}
+	
+	&.icon_case {
+		.inp_radio {
+			input[type=radio] + label {
+				padding-left: 60px;
+			}
+		}
+	}
+
+	[class*=icon_pay]{
+		height: 56px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: auto 22px;
+
+		.label_cont {
+			overflow: hidden;
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			clip: rect(0, 0, 0, 0);
+		}
+	}
+
+	.icon_pay_ty1 {
+		background-image: url(../images/logo/pay_kakao.svg);
+	}
+	.icon_pay_ty2 {
+		background-image: url(../images/logo/pay_naver.svg);
+	}
+	.icon_pay_ty3 {
+		background-image: url(../images/logo/pay_toss.svg);
+	}
+}
+
+
+
+.radio_group_wrap.column {
+	flex-direction: column;
+	gap: 0;
+
+	.inp_radio {
+		& + .inp_radio {
+			margin-top: var(--gap-6);
+		}
+	}
+	.inp_radio.lg {
+		& ~ .lg {
+			margin-top: var(--gap-7);
+		}
+	}
+	.inp_radio.sm {
+		& ~ .sm {
+			margin-top: var(--gap-5);
+		}
+	}
+}
+
+
+.star_item {
+	display: flex;
+	justify-content: center;
+	.start_radio {
+	  direction: rtl; // 별을 오른쪽부터 왼쪽으로 찍기 위해
+	  display: inline-flex;
+	  gap: 4px;
+	
+	  input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+	  }
+	
+	  label {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		background: url('../images/icon/star.svg') no-repeat center / contain;
+		cursor: pointer;
+	  }
+	
+	  input:checked ~ label {
+		background-image: url('../images/icon/star_on.svg');
+	  }
+	}
+	& + .form_group_wrap {
+		margin-top: var(--gap-8);
 	}
 }

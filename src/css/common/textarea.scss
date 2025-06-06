@@ -1,17 +1,38 @@
 /* Textarea */
 .textarea_wrap {
 	textarea {
+		display: block;
 		width: 100%;
-		padding: 10px;
-		font-size: 14px;
-		line-height: 20px;
+		padding: var(--padding-6);
+		font-size: var(--font-size-label-medium);
+		min-height: 144px;
 		resize: none;
+		border: var(--border-width-variable-regular) solid var(--color-input-border);
+		background: var(--color-input-surface);
+		border-radius: var(--radius-medium3);
+		color: var(--color-text-subtle);
+		&:focus-within {
+			border-color: var(--color-input-border-active);
+		}
+		&:read-only {
+			background-color: var(--color-input-surface-disabled);
+		}
+		&:disabled {
+			color: var(--color-text-disabled-on);
+			background-color: var(--color-input-surface-disabled);
+		}
+		&:placeholder {
+			color: var(--color-text-disabled);
+		}
 	}
 
 	.counter {
-		font-size: 14px;
-		line-height: 20px;
+		margin-top: var(--gap-3);
+		font-size: var(--font-size-body-small);
 		text-align: right;
+		em {
+			color: var(--color-text-primary);
+		}
 	}
 
 	&.byte_check {

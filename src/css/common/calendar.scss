@@ -1,0 +1,622 @@
+/* datepicker */
+.ui-datepicker {
+  display: none;
+  position: fixed !important;
+  top: auto !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 9000 !important;
+  width: 100%;
+  padding: 42px 20px 40px 20px;
+  // border: var(--border-width-static-regular) solid #000;
+  border-radius: 30px 30px 0 0;
+  background: #FFFFFF !important;
+}
+
+.ui-datepicker:before {
+    content: "";
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+    width: calc(100% - 4px);
+    margin: 0 auto;
+}
+
+.ui-datepicker-header {
+	position: relative;
+	margin-bottom: var(--gap-4);
+	padding: 0 40px;
+	> a {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		font-size: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 20px auto;
+		&.ui-datepicker-prev {
+			left: 8px;
+			background-image: url(../images/icon/arrowLeft_ty1.svg);        
+		}
+		&.ui-datepicker-next {
+			right: 8px;
+			background-image: url(../images/icon/arrowRight_ty4.svg);
+		}
+	}
+
+	.ui-datepicker-title {
+		font-weight: 700;
+		font-size: var(--font-size-heading-small);
+		line-height: 32px;
+		text-align: center;
+		.ui-datepicker-month {
+			padding-left: 12px;
+		}
+	}
+}
+
+/* 달력 헤더 */
+.ui-datepicker .ui-datepicker-calendar th {
+  border-bottom: 3px solid #fff;
+}
+.ui-datepicker .ui-datepicker-calendar th span {
+  display: block;
+  margin: 0 auto;
+  font-size: var(--font-size-label-small);
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+/* 달력 헤더 */
+
+/* 달력 바디 */
+.ui-datepicker .ui-datepicker-calendar tbody td {
+  border: 3px solid #fff;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1) {
+    border-left: none;
+}
+.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) a,
+.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) span {
+  color: var(--color-text-danger);
+}
+.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(7) {
+  border-right: none;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td a, 
+.ui-datepicker .ui-datepicker-calendar tbody tr td span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  font-size: var(--font-size-label-medium);
+  line-height: 1;
+  border: none
+}
+.ui-state-default {
+  // display: block;
+  // width: 28px;
+  // height: 28px;
+  margin: 0 auto;
+  // font-size: 14px;
+}
+.ui-datepicker-today .ui-state-default {
+  position: relative;
+}
+.ui-datepicker-today .ui-state-default:before {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-element-point);
+  transform: translateX(-50%);
+}
+.ui-datepicker-today .ui-state-default::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 1px;
+}
+.ui-state-default.ui-state-active {
+  position: relative;
+  color: var(--color-text-inverse-static);
+}
+.ui-state-default.ui-state-active:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  background-color: var(--color-action-secondary-active);
+  transform: translateX(0);
+}
+
+.ui-state-disabled span, 
+.ui-state-disabled a {
+  color: var(--color-text-disabled);
+}
+/* 달력 바디 */
+
+
+.modal_backdrop {
+  position: fixed;
+  z-index: 8000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+}
+.modal_open {
+  .modal_backdrop {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 단일방식 - 직접 구현 */
+/* 머리 */
+.calendar_range_dp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin: 0 -24px;
+  padding: 0 24px;
+  box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+  .drd_day {
+    flex: 1 1 0;
+    padding: 3px 0;
+    font-size: var(--font-size-label-small);
+    color: var(--color-text-subtle);
+    text-align: center;
+  }
+}
+/* 머리 */
+
+.calendar_range {
+
+  .calendar_range_inner {
+    padding: 0 24px;
+    overflow: auto;
+		.calendar_range_item {
+			.calendar_cont {
+				padding-top: 8px;
+			}
+			& ~ .calendar_range_item {
+				.calendar_cont {
+					padding-top: 10px;
+				}
+			}
+		}
+  }
+
+  /* 몸 */
+  .calendar_cont {
+		.yymm {
+			display: block;
+			// padding-bottom: 10px;
+		}
+  }
+
+  
+  /* 몸 */
+
+
+}
+
+.calendar_tbl {
+  > table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    table-layout: fixed;
+    thead {
+      th {
+        padding: 7px 0;
+        font-size: var(--font-size-label-small);
+        color: var(--color-text-subtle);
+      }
+    }
+    tbody {
+      td {
+        border-top: none;
+        border-bottom: none;
+        padding: 0;
+        &:nth-child(1) {
+          border-left: none;
+          .day_default {
+            color: var(--color-text-danger);
+          }
+        }
+        &:nth-child(7) {
+          border-right: none;
+        }
+        .day_default {
+          &:disabled {
+            color: var(--color-text-disabled);
+            > .text {
+              font-size: var(--font-size-label-small);
+            }
+          }
+          > .text {
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+      tr {
+        td {
+          height: 46px;
+          padding: 1px 0;
+          button, 
+          a, 
+          span {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 44px;
+            font-size: var(--font-size-label-medium);
+            line-height: 1;
+            border: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    .day_default {
+      margin: 0 auto;
+    }
+    .day_today {
+      position: relative;
+      > .text {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: calc(50% + 8px);
+          left: 50%;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: var(--color-element-point);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+
+    .day_active {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: var(--color-action-secondary-active);
+        transform: translate(-50%, -50%);
+      }
+      > .text {
+        color: var(--color-text-inverse-static);
+      }
+      
+    }
+
+    .start_day {
+      &.start_day_fix {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 50%;
+          background-color: var(--color-action-secondary-selected);
+        }
+        > .text {
+          &::before {
+            content: '시작일';
+            font-size: 0;
+          }
+        }
+      }
+      
+    }
+
+    .day_today {
+      &.day_active {
+        > .text {
+          &::after {
+            background-color: var(--color-element-inverse-static);
+          }
+        }
+      }
+
+    }
+
+    .end_day {
+      &.end_day_fix {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 50%;
+          background-color: var(--color-action-secondary-selected);
+        }
+        > .text {
+          &::before {
+            content: '종료일';
+            font-size: 0;
+          }
+        }
+      }
+    }
+
+    .between {
+      background-color: var(--color-action-secondary-selected);
+    }
+
+
+
+    td a.day_default {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+
+
+
+
+/* 기간선택 */
+/*
+.date_select_area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 -24px;
+  // padding: 0 24px;
+  overflow: auto;
+
+  .calendar_range {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 16px;
+    // padding: 0 24px;
+    overflow: auto;
+  }
+
+  .dsa_bottom {
+    flex: none;
+    // margin: 0 -24px;
+    padding: 20px 24px 0 24px;
+    border-radius: var(--radius-large2) var(--radius-large2) 0 0;
+    box-shadow: 0px var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+
+    .dsa_date {
+      padding-left: 28px;
+
+      font-size: var(--font-size-body-medium);
+      background: url(../images/icon/icon_date.svg) no-repeat left top 2px / 20px auto;
+      + .form_group_wrap {
+        margin-top: var(--gap-5);
+      }
+    }
+  }
+
+}
+*/
+/* 기간선택 */
+
+.ds_opts {
+  margin-top: var(--gap-5);
+  .radio_group_wrap_ty2 {
+    + .opt_select_wrap {
+      margin-top: var(--gap-5);
+    }
+  }
+}
+
+
+
+.popup_calendar {
+  margin: 0 -24px;
+  padding: 0 var(--padding-6);
+}
+
+/* 단일방식 - 직접 구현 */
+.calendar {
+
+  /* 머리 */
+  .calendar_top {
+    position: relative;
+    .calendar_change_btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+      font-size: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 20px auto;
+      background-color: transparent;
+      &.ccb_prev {
+        left: 8px;
+        background-image: url(../images/icon/arrowLeft_ty1.svg);        
+      }
+      &.ccb_next {
+        right: 8px;
+        background-image: url(../images/icon/arrowRight_ty4.svg);
+      }
+    }
+    .calendar_title {
+      font-weight: 700;
+      font-size: var(--font-size-heading-small);
+      line-height: 32px;
+      text-align: center;
+      .calendar_title_dp {
+
+        &.calendar_month {
+          padding-left: 12px;
+        }
+      }
+    }
+    
+
+  }
+  /* 머리 */
+
+  /* 몸 */
+  .calendar_cont {
+    padding-top: 12px;
+  }
+
+  /*
+  .calendar_tbl {
+    > table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0 auto;
+      table-layout: fixed;
+      tbody {
+        td {
+          border: 3px solid #fff;
+          border-top: none;
+          border-bottom: none;
+          padding: 0;
+          &:nth-child(1) {
+            border-left: none;
+            .day_default {
+              color: var(--color-text-danger);
+              // background-color: green;
+            }
+          }
+          &:nth-child(7) {
+            border-right: none;
+          }
+          .day_default {
+            &.day_disabled {
+              color: var(--color-text-disabled);
+            }
+          }
+        }
+        tr {
+          td {
+            a, span {
+              display: inline-flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 48px;
+              font-size: var(--font-size-label-medium);
+              line-height: 1;
+              border: none
+            }
+          }
+        }
+      }
+
+      .day_default {
+        margin: 0 auto;
+      }
+      .day_today {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 14px;
+          left: 50%;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: var(--color-element-point);
+          transform: translateX(-50%);
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 4px;
+          margin-top: 1px;
+        }
+      }
+      .day_active {
+        position: relative;
+        color: var(--color-text-inverse-static);
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: var(--color-action-secondary-active);
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      td a.day_default {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+  */
+  /* 몸 */
+
+
+}
+
+

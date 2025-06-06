@@ -1,0 +1,43 @@
+{{#> layout/default page-title="휴면상태 안내"}}
+	<div id="wrap" class="wrap">
+		<!-- s: 25-06-02 수정 -->
+		{{> layout/header no-header=true }}
+		<!-- e: 25-06-02 수정 -->
+		<div id="container" class="container">
+			<div class="content">
+
+				<div class="process_info_area">
+					<div class="complete_info" aria-hidden="true">
+						<!-- s: 25-05-07 수정 -->
+						<lottie-player src="../../../json/lottie_complete.jso" background="transparent" speed="1" autoplay></lottie-player>
+						<!-- e: 25-05-07 수정 -->
+					</div>
+					<h2 class="process_title">
+						<!-- s: 25-06-04 수정 -->
+						<strong>휴면상태를 해제했어요</strong>
+						<!-- e: 25-06-04 수정 -->
+					</h2>
+					<div class="process_desc">
+						현대해상이 준비한 다양한 보험서비스를<br>지금 바로 만나 보세요!
+					</div>
+				</div>
+
+			</div>
+			<!-- // container -->
+		</div>
+
+		<!-- s: 하단 고정 버튼 영역 -->
+		<div class="bottom_fix_wrap">
+			<div class="btn_area">
+				{{> cp/button type="3" size="1" b-text="홈으로"}}
+				{{> cp/button type="1" size="1" b-text="로그인"}}
+			</div>
+		</div>
+		<!-- s: 하단 고정 버튼 영역 -->
+	</div>
+
+	<!-- s: popup area -->
+	 
+	<!-- e: popup area -->
+
+{{/ layout/default }}

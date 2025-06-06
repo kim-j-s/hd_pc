@@ -24,3 +24,99 @@
 		}
 	}
 }
+
+
+//step list(스텝박스)
+.step_list_container {
+	counter-reset: number 0;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	
+	& > li {
+		padding: 24px 20px 24px 52px;
+		border-radius: var(--radius-large2);
+		background: var(--color-surface-secondary-subtler);
+		
+		.inner {
+			position: relative;
+
+			&::before {
+				counter-increment: number 01;
+				content: '0' counter(number);
+				position: absolute;
+				top: 0px;
+				left: -32px;
+				width: 24px;
+				height: 24px;
+				border: var(--border-width-static-regular) solid var(--color-icon-information-static);
+				border-radius: 999px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: var(--font-size-body-xsmall);
+				font-weight: 700;
+			}
+
+			h3 {
+				font-size: var(--font-size-heading-xsmall);
+				font-weight: 700;
+				color: var(--color-text-bolder);
+				
+				& + .content {
+					margin-top: var(--gap-4);
+				}
+			}
+		}
+	}
+
+	& > li + li {
+		position: relative;
+
+		&::before {
+			display: block;
+			content:'';
+			width: 17px;
+			height: 17px;
+			position: absolute;
+			top: -25px;
+			left: 50%;
+			transform: translate(-50%, 4px);
+			background: url(../images/icon/arrowDown_ty4.svg) no-repeat center / 17px auto;
+		}
+	}
+	&.certify {
+		li {
+			font-size: var(--font-size-body-medium);
+			background-size: 24px auto;
+			background-position: 20px 24px;
+			background-repeat: no-repeat;
+			.inner {
+				&::before {
+					counter-increment: number 1;
+					content: 'STEP 0' counter(number);
+					position: static;
+					display: block;
+					width: auto;
+					height: auto;
+					border: none;
+					border-radius: 0;
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-subtle);
+					font-weight: 700;
+				}
+			}
+			&.pc {
+				background-image: url(../images/common/cert/icon_step_pc.svg);
+			}
+			&.phone {
+				background-image: url(../images/common/cert/icon_step_phone.svg);
+			}
+		}
+	}
+	& + .list_ty3 {
+		margin-top: var(--gap-8);
+	}
+}
+
+

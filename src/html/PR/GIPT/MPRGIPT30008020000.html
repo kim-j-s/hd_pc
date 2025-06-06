@@ -1,0 +1,41 @@
+
+{{#> layout/default page-title="동물등록우대할인 | 상품"}}
+<!-- s: Bottom 팝업 -->
+	{{#> popup/popup_bottom popup-active=true popup-id="pop_type03" popup-title="동물등록 우대 할인" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<!-- s: 25-05-15 수정 -->
+			<p class="bpop_sub_title">
+				동물보호관리시스템에 등록된 동물정보(동물번호 및 동물등록증)를 제출하면 반려동물담보 보장보험료의 <span class="point">5%</span>를 할인해드려요.
+			</p>
+			<!-- e: 25-05-15 수정 -->
+
+			<!-- s: 25-05-28 수정 -->
+			<div class="info_gray">
+				<div class="title_h5">대상담보</div>
+				<ul class="list_depth">
+					<!-- 강아지 Case -->
+					<li>반려견치료비</li>
+					<li>슬관절 확장보장</li>
+					<li>피부병 확장보장</li>
+					<li>구강질환 확장보장</li>
+
+					<!-- 고양이 Case -->
+					<!-- <li>반려묘치료비</li>
+					<li>구강질환 확장보장</li>
+					<li>비뇨기질환 확장보장</li> -->
+				</ul>
+			</div>
+			<!-- e: 25-05-28 수정 -->
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			<!-- s: 25-05-13 수정 -->
+			{{> cp/button type="1" size="2" b-text="확인" }}
+			<!-- e: 25-05-13 수정 -->
+		</div>
+	</div>
+	{{/ popup/popup_bottom}}
+<!-- e: Bottom 팝업 -->
+{{/ layout/default }}

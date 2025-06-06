@@ -1,0 +1,111 @@
+// bottom popup
+.popup_wrap {
+	&.confirm {
+		&.active {
+
+			// padding-top: 40px;
+			.popup_container {
+				transform: translateY(0);
+
+				.popup_inner {
+					.popup_close {
+						top: 15px;
+						right: 16px;
+					}
+				}
+			}
+		}
+
+		.popup_container {
+			align-items: center;
+			justify-content: center;
+			transition-duration: 0.3s;
+
+			.popup_inner {
+				// max-height: 85%;
+				max-height: calc(100% - 20px);
+				height: auto;
+				width: calc(100% - 96px);
+				border-radius: 32px;
+
+				.popup_head {
+					min-height: 32px;
+					padding: 14px 36px 14px 16px;
+				}
+
+				.popup_cont {
+					padding: 12px 24px 16px;
+					margin-top: var(--gap-2);
+					text-align: center;
+
+					.info_confirm {
+						padding-top: 48px;
+						background: url(../images/icon/icon_exclamation.svg) no-repeat top center / 32px auto;
+
+						strong {
+							font-size: var(--font-size-heading-small);
+
+							&+.info_text {
+								margin-top: var(--gap-5);
+							}
+						}
+					}
+
+					.info_text {
+						&+.list_ty2 {
+							margin-top: var(--gap-5);
+						}
+					}
+					.list_ty2,
+					.list_depth {
+						> li {
+							padding: 0;
+							&::before {
+								display: inline-block;
+								position: static;
+								margin-right: 4px;
+							}
+						}
+					}
+					.list_depth {
+						> li {
+							&::before {
+								transform: translateY(-100%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.msg_icon {
+	padding-top: 48px;
+	&.mi_info {
+		background: url(../images/icon/icon_exclamation.svg) no-repeat top center / 32px auto;
+	}
+	&.mi_error {
+		// padding-top: 48px;
+		background: url(../images/icon/icon_complete_error.svg) no-repeat top center / 32px auto;
+	}
+}
+
+
+
+
+
+
+// .select_list_ty_card {
+// 	button {
+// 		&:hover {
+// 남아있는건 호버
+// 			background-color: yellow;
+// 		}
+// 		&:active {
+// 			background-color: blue;
+// 		}
+// 	}
+// }

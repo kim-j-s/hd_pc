@@ -1,17 +1,18 @@
-@import '../variable.scss';
+// @import "../theme.scss";
 
 html {
-  font-size: 62.5%;
-  -webkit-text-size-adjust: 100%;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
-  position: relative;
-  font-family: 'Pretendard', Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+	position: relative;
+	font-family: "Pretendard", Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+	line-height: 1.5;
 	// overflow: hidden;
 }
 
-html, 
+html,
 body {
 	height: 100%;
 }
@@ -19,7 +20,7 @@ body {
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // recommend reset css
@@ -50,13 +51,13 @@ blockquote,
 th,
 td,
 .divider {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 fieldset,
 img {
-  border: 0;
+	border: 0;
 }
 
 address,
@@ -68,8 +69,8 @@ em,
 strong,
 th,
 var {
-  font-style: normal;
-  font-weight: normal;
+	font-style: normal;
+	font-weight: normal;
 }
 
 h1,
@@ -78,30 +79,30 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
-  font-weight: normal;
+	font-size: 100%;
+	font-weight: normal;
 }
 
 ul,
 ol,
 li {
-  list-style: none;
+	list-style: none;
 }
 
 q:before,
 q:after {
-  content: '';
+	content: "";
 }
 
 abbr,
 acronym {
-  border: 0;
+	border: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  background-color: transparent;
+	color: inherit;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 button,
@@ -109,110 +110,129 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 input,
 textarea,
 button,
 label {
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 button {
-  -webkit-appearance: none;
-  appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 	cursor: pointer;
+	border: none;
+	text-align: initial;
+	background-color: transparent;
 }
 
 a:focus,
 button:focus {
-// input:focus {
-	// outline: 2px dashed #333;
+	background-color: inherit;
 }
 
-a:focus,
-button:focus {
-	color: #fff;
-	background-color: #000;
-}
-
-.inp_radio input:focus + label,	
+.inp_radio input:focus + label,
 .inp_checkbox input:focus + label {
 	// outline: 2px dashed #333;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    // -webkit-text-fill-color: #fff !important;
+}
 
 button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-  border-style: none;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+	border-style: none;
 }
 
 button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
 }
 
 [type="checkbox"],
 [type="radio"] {
-  padding: 0;
+	padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
+	-webkit-appearance: textfield;
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
 }
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-results-button {
+    display: none;
 }
 
 ::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
+	font: inherit;
+	-webkit-appearance: button;
 }
 
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 caption {
-  position: absolute;
-  visibility: hidden;
-  clip: rect(0 0 0 0);
+	position: absolute;
+	visibility: hidden;
+	clip: rect(0 0 0 0);
 }
 
 ::-ms-clear {
-  display: none;
+	display: none;
 }
 
 ::-ms-reveal {
-  display: none;
+	display: none;
 }
 
+/* 모바일 디바이스 분기 */
+@media screen and (max-width: 375px) {
+	html {
+		font-size: calc(10 / 375 * 100vw) !important;
+	}
+}
+/* 모바일 디바이스 분기 */
+
 .sr_only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border-width: 0;
-  white-space: nowrap;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border-width: 0;
+	white-space: nowrap;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
 }

@@ -1,0 +1,81 @@
+.autocomplete_wrap {
+	position: relative;
+	z-index: 1;
+}
+
+.autocomplete_wrap_list {
+	position: absolute;
+	top: 56px;
+	left: 0;
+	display: none;
+	width: 100%;
+	padding: var(--padding-6) var(--padding-8);
+	border-radius: var(--number-10);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background-color: var(--color-background-gray-subtler);
+	&.active {
+		display: block;
+	}
+}
+.autocomplete_list {
+	max-height: 200px;
+	overflow: auto;
+	> li {
+		> a {
+			display: block;
+			padding: var(--padding-5) 0;
+			font-size: var(--font-size-body-medium);
+			line-height: 24px;
+			color: var(--color-text-subtle);
+			.mark {
+				color: var(--color-text-primary);
+			}
+		}
+		+ li {
+			// margin-top: var(--gap-7);
+		}
+	}
+
+}
+
+
+/**
+* 이메일 자동완성
+**/
+
+.mail_list_cont {
+	position: absolute;
+	top: 56px;
+	left: 0;
+	z-index: 1;
+	display: none;
+	width: 100%;
+	padding: var(--padding-8);
+	border-radius: var(--number-10);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background-color: var(--color-background-gray-subtler);
+	&.on {
+		display: block;
+	}
+}
+.mail_list {
+	max-height: 200px;
+	overflow: auto;
+	> li {
+		> .text {
+			display: block;
+			font-size: var(--font-size-body-medium);
+			line-height: 24px;
+			color: var(--color-text-subtle);
+			background-color: transparent;
+			.mark {
+				color: var(--color-text-primary);
+			}
+		}
+
+		& + li {
+			margin-top: var(--gap-7);
+		}
+	}
+
+}
