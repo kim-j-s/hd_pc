@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<meta name="format-detection" content="telephone=no, address=no, email=no" />
 		<meta name="keywords" content="자동차보험, 다이렉트자동차보험, 현대해상다이렉트, 현대해상자동차보험, 현대해상다이렉트자동차보험, 현대해상여행자보험" />
 		<meta name="description" content="현대해상 다이렉트 공식사이트, 자동차보험/운전자보험/여행자보험/유학보험 등 오프라인대비 저렴" />
@@ -29,13 +29,18 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="96x96" href="../../../images/favicon/favicon-96x96.png" />
 		<script type="text/javascript" src="../../../js/libs/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../../../js/libs/jquery-ui-1.12.1.min.js"></script>
 		<script type="text/javascript" src="../../../js/libs/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../../../js/libs/splide.min.js"></script>
 		<script type="text/javascript" src="../../../js/common.js"></script>
+		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
 		<script type="text/javascript" src="../../../js/popup.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
+		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
-		<title>dept1 &gt; dept2 &gt; dept3 &gt; 현대해상 다이렉트</title>
+		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
+		<title>dept1 &gt; dept2 &gt; dept3 &gt; - 현대해상 다이렉트</title>
 
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<link rel="stylesheet" href="../../../css/reset.css" />
@@ -70,7 +75,7 @@
 
 			<style lang="scss">
 				.guide_wrap {
-					padding: 2rem 2rem 0 2rem;
+					padding: 20px 20px 0 20px;
 				}
 
 				.contents {
@@ -87,9 +92,9 @@
 					-webkit-box-pack: center;
 					-ms-flex-pack: center;
 					justify-content: center;
-					height: 30rem;
+					height: 300px;
 					font-weight: bold;
-					font-size: 2.4rem;
+					font-size: 24px;
 					color: #fff;
 					background-color: #333;
 				}
@@ -108,29 +113,29 @@
 					left: 0;
 					display: block;
 					width: 100%;
-					height: 3rem;
-					font-size: 1.6rem;
+					height: 30px;
+					font-size: 16px;
 					color: #ffffff;
 					text-align: center;
-					line-height: 3rem;
+					line-height: 30px;
 					background: #555555;
 				}
 				/* skipNavi */
 
 				.pageTop {
 					position: fixed;
-					right: 2rem;
-					bottom: 2rem;
+					right: 20px;
+					bottom: 20px;
 					&.active {
 						position: absolute;
 					}
 
 					.pageTop_btn {
 						display: block;
-						width: 4rem;
-						height: 4rem;
+						width: 40px;
+						height: 40px;
 						font-size: 0;
-						border-radius: 5rem;
+						border-radius: 50px;
 						background-color: blue;
 					}
 				}

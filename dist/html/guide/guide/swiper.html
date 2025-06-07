@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<meta name="format-detection" content="telephone=no, address=no, email=no" />
 		<meta name="keywords" content="자동차보험, 다이렉트자동차보험, 현대해상다이렉트, 현대해상자동차보험, 현대해상다이렉트자동차보험, 현대해상여행자보험" />
 		<meta name="description" content="현대해상 다이렉트 공식사이트, 자동차보험/운전자보험/여행자보험/유학보험 등 오프라인대비 저렴" />
@@ -29,12 +29,17 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="96x96" href="../../../images/favicon/favicon-96x96.png" />
 		<script type="text/javascript" src="../../../js/libs/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../../../js/libs/jquery-ui-1.12.1.min.js"></script>
 		<script type="text/javascript" src="../../../js/libs/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../../../js/libs/splide.min.js"></script>
 		<script type="text/javascript" src="../../../js/common.js"></script>
+		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
 		<script type="text/javascript" src="../../../js/popup.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
+		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="guide.css" />
@@ -44,53 +49,65 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body class="guide_body">
-		<div class="guide_wrap">
-			<div class="wrap">
-				<div class="guide_h1">Swiper</div>
+		<div class="guide_h1">Swiper</div>
 
-				<div id="swiper1" class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">Slide 1</div>
-						<div class="swiper-slide">Slide 2</div>
-						<div class="swiper-slide">Slide 3</div>
-						<div class="swiper-slide">Slide 4</div>
-						<div class="swiper-slide">Slide 5</div>
-						<div class="swiper-slide">Slide 6</div>
-						<div class="swiper-slide">Slide 7</div>
-						<div class="swiper-slide">Slide 8</div>
-						<div class="swiper-slide">Slide 9</div>
-					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
+		<div class="guide_h4">Option Swiper</div>
+		<div class="select_rolling_opt">
+			<div id="option_swiper" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">3년</div>
+					<div class="swiper-slide">5년</div>
+					<div class="swiper-slide">7년</div>
+					<div class="swiper-slide">10년</div>
+					<div class="swiper-slide">15년</div>
+					<div class="swiper-slide">20년</div>
 				</div>
-
-				<script>
-					$(document).ready(function () {
-						var swiper = new Swiper("#swiper1", {
-							slidesPerView: 3,
-							navigation: {
-								nextEl: ".swiper-button-next",
-								prevEl: ".swiper-button-prev",
-							},
-							a11y: {
-								enabled: true,
-								prevSlideMessage: "이전 항목으로 이동",
-								nextSlideMessage: "다음 항목으로 이동",
-							},
-							pagination: {
-								el: ".swiper-pagination",
-								clickable: true,
-								type: "bullets",
-								renderBullet: function (index, className) {
-									// return `<span class="${className}" aria-label="Go to slidesss ${index + 1}">${index + 1}</span>`;
-									return `<span class="${className}">${index + 1}</span>`;
-								},
-							},
-						});
-					});
-				</script>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</div>
+
+		<script>
+			$(document).ready(function () {
+				var swiper = new Swiper("#swiper1", {
+					slidesPerView: 3,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					a11y: {
+						enabled: true,
+						prevSlideMessage: "이전 항목으로 이동",
+						nextSlideMessage: "다음 항목으로 이동",
+					},
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+						type: "bullets",
+						renderBullet: function (index, className) {
+							// return `<span class="${className}" aria-label="Go to slidesss ${index + 1}">${index + 1}</span>`;
+							return `<span class="${className}">${index + 1}</span>`;
+						},
+					},
+				});
+
+				const optionSwiper = new Swiper("#option_swiper", {
+					slidesPerView: "auto",
+					centeredSlides: true,
+					initialSlide: 2,
+					spaceBetween: 16,
+					observer: true,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					a11y: {
+						enabled: true,
+						prevSlideMessage: "이전 항목으로 이동",
+						nextSlideMessage: "다음 항목으로 이동",
+					},
+				});
+			});
+		</script>
 	</body>
 </html>

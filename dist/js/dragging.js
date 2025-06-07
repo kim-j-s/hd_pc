@@ -1,7 +1,8 @@
-function draggable(click) {
-	const $bottomSheet = click;
-	const $sheetContent = $bottomSheet.find(".popup_container");
-	const $dragIcon = $bottomSheet.find(".draggable");
+function draggable(caller) {
+	const _caller = caller;
+
+	const $sheetContent = _caller.find(".popup_container");
+	const $dragIcon = _caller.find(".draggable");
 	let isDragging = false,
 		startY,
 		startHeight,
@@ -21,8 +22,8 @@ function draggable(click) {
 		delta = 0;
 
 		// 팝업의 id를 target으로 전달
-		const targetId = $bottomSheet.attr("id");
-		closePop(targetId);
+		const targetId = _caller.attr("id");
+		closeHDPopup(targetId);
 	}
 
 	function dragStart(e) {
@@ -31,7 +32,7 @@ function draggable(click) {
 		startY = e.pageY || e.originalEvent.touches?.[0].pageY;
 		// console.log('시작위치 : '+ startY)
 
-		$bottomSheet.addClass("dragging");
+		_caller.addClass("dragging");
 		$dragIcon.attr("aria-grabbed", "true");
 	}
 
@@ -50,7 +51,7 @@ function draggable(click) {
 
 	function dragStop(e) {
 		isDragging = false;
-		$bottomSheet.removeClass("dragging");
+		_caller.removeClass("dragging");
 		const contentH = $sheetContent.height(),
 			winH = $(window).height(),
 			sheetHeight = parseInt((contentH / winH) * 100);

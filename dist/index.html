@@ -9,14 +9,15 @@
 			html {
 				font-size: 62.5%;
 			}
+
 			.p-c1 {
 				color: #cca700 !important;
-				letter-spacing: 0.2rem;
+				letter-spacing: 2px;
 			}
 
 			.p-c2 {
 				color: #89d185 !important;
-				letter-spacing: 0.2rem;
+				letter-spacing: 2px;
 			}
 
 			html,
@@ -28,7 +29,7 @@
 			body {
 				margin: 0;
 				padding: 0;
-				font-size: 1.2rem;
+				font-size: 12px;
 			}
 
 			header {
@@ -47,7 +48,7 @@
 				-ms-flex-pack: justify;
 				justify-content: space-between;
 				width: 100%;
-				padding: 1rem;
+				padding: 10px;
 				background: #000;
 				color: #fff;
 				z-index: 1;
@@ -55,25 +56,25 @@
 
 			header h1 {
 				margin: 0;
-				font-size: 2rem;
-				line-height: 2.6rem;
+				font-size: 20px;
+				line-height: 26px;
 			}
 
 			header .control_list {
 				font-size: 0;
-				margin-left: 1rem;
+				margin-left: 10px;
 			}
 
 			header .control_list button {
 				display: inline-block;
 				position: relative;
-				width: 2rem;
-				height: 2rem;
-				margin-left: 0.5rem;
+				width: 20px;
+				height: 20px;
+				margin-left: 5px;
 				background: #ddd;
 				color: #000;
 				border: 0;
-				border-radius: 0.3rem;
+				border-radius: 3px;
 				text-align: center;
 			}
 
@@ -82,8 +83,8 @@
 				display: block;
 				position: absolute;
 				left: 20%;
-				top: 0.9rem;
-				height: 0.2rem;
+				top: 9px;
+				height: 2px;
 				background: #000;
 				width: 60%;
 			}
@@ -93,8 +94,8 @@
 				display: block;
 				position: absolute;
 				left: 20%;
-				top: 0.9rem;
-				height: 0.2rem;
+				top: 9px;
+				height: 2px;
 				background: #000;
 				width: 60%;
 				-webkit-transform: rotateZ(90deg);
@@ -102,12 +103,12 @@
 			}
 
 			.main {
-				margin: 6rem 1rem 1rem;
+				margin: 60px 10px 10px;
 			}
 
 			.main h2 {
-				font-size: 1.8rem;
-				line-height: 2.2rem;
+				font-size: 18px;
+				line-height: 22px;
 				cursor: pointer;
 			}
 
@@ -116,13 +117,13 @@
 				display: inline-block;
 				vertical-align: top;
 				text-align: center;
-				width: 1.6rem;
-				height: 1.6rem;
-				line-height: 1.4rem;
-				border-radius: 0.8rem;
+				width: 16px;
+				height: 16px;
+				line-height: 14px;
+				border-radius: 8px;
 				background-color: #000;
 				color: #fff;
-				margin: 0.4rem 0.5rem 0 0;
+				margin: 4px 5px 0 0;
 			}
 
 			.main h2.on::before {
@@ -156,10 +157,10 @@
 
 			th,
 			td {
-				padding: 0.5rem 1rem;
+				padding: 5px 10px;
 				border-left: 1px solid #000;
 				border-right: 1px solid #000;
-				font-size: 1.2rem;
+				font-size: 12px;
 			}
 
 			th {
@@ -190,7 +191,42 @@
 			}
 
 			.complete.ok::after {
+				/* content: "△"; */
 				content: "O";
+			}
+			.complete.ok.fix::after {
+				content: "O";
+			}
+
+			.bigo2 {
+				background-color: #4691af;
+			}
+			.bigo2:empty {
+				background-color: transparent;
+			}
+			.bigo2.ing {
+				background-color: #f8633c;
+			}
+			.bigo2.ing::after {
+				display: block;
+				content: "기획 정의중";
+			}
+			.bigo2.design {
+				background-color: #cca700;
+			}
+			.bigo2.design::after {
+				display: block;
+				content: "디자인 확인 필요";
+			}
+			.del {
+				text-decoration: line-through;
+				background: #aaa !important;
+			}
+			.del .end_date {
+				background: #aaa !important;
+			}
+			.del .bigo2::after {
+				content: "삭제";
 			}
 
 			tbody tr:nth-child(2n) {
@@ -199,7 +235,7 @@
 
 			tbody tr:hover td {
 				color: #fff;
-				background-color: #68b95e;
+				background-color: #68b95e !important;
 			}
 
 			tbody tr:hover td a {
@@ -221,12 +257,12 @@
 
 			.title th {
 				text-align: left;
-				font-size: 1.4rem;
-				line-height: 2.2rem;
+				font-size: 14px;
+				line-height: 22px;
 				letter-spacing: 1px;
 				background: #000;
-				padding: 0.8rem 1rem;
-				border-top: 0.3rem solid #888;
+				padding: 8px 10px;
+				border-top: 3px solid #888;
 			}
 
 			colgroup + thead .title th {
@@ -245,11 +281,11 @@
 				vertical-align: top;
 				width: 0;
 				height: 0;
-				border-left: 0.5rem solid transparent;
-				border-right: 0.5rem solid transparent;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
 				border-top: 0;
-				border-bottom: 0.8rem solid #fff;
-				margin: 0.7rem 1rem 0 0;
+				border-bottom: 8px solid #fff;
+				margin: 7px 10px 0 0;
 			}
 
 			.mini tr,
@@ -258,9 +294,9 @@
 			}
 
 			.mini .title th::before {
-				border-left: 0.5rem solid transparent;
-				border-right: 0.5rem solid transparent;
-				border-top: 0.8rem solid #fff;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 8px solid #fff;
 				border-bottom: 0;
 			}
 
@@ -270,13 +306,13 @@
 
 			#mode_toggle + label {
 				position: fixed;
-				right: 1rem;
-				bottom: 1rem;
+				right: 10px;
+				bottom: 10px;
 				display: block;
-				width: 2.4rem;
-				height: 2.4rem;
-				line-height: 2.4rem;
-				border-radius: 0.3rem;
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				border-radius: 3px;
 				background-color: #000;
 				color: #fff;
 				text-align: center;
@@ -287,7 +323,7 @@
 				content: "";
 				display: block;
 				position: absolute;
-				height: 0.2rem;
+				height: 2px;
 				width: 60%;
 				background: #fff;
 				left: 50%;
@@ -300,7 +336,7 @@
 				content: "";
 				display: block;
 				position: absolute;
-				height: 0.2rem;
+				height: 2px;
 				width: 60%;
 				background: #fff;
 				left: 50%;
@@ -351,8 +387,8 @@
 				flex-wrap: wrap;
 				border-top: 0;
 				border-bottom: 1px solid white;
-				padding-top: 0.5rem;
-				padding-bottom: 0.5rem;
+				padding-top: 5px;
+				padding-bottom: 5px;
 				font-size: 0;
 			}
 
@@ -365,7 +401,7 @@
 			#mode_toggle:checked ~ .main tbody .link {
 				display: block;
 				width: 100%;
-				border-top: 0.2rem dotted black;
+				border-top: 2px dotted black;
 			}
 
 			#mode_toggle:checked ~ .main tbody .complete {
@@ -387,8 +423,8 @@
 			#mode_toggle:checked ~ .main tbody .complete ~ td {
 				display: none;
 				width: 100%;
-				padding-top: 0.2rem;
-				padding-bottom: 0.2rem;
+				padding-top: 2px;
+				padding-bottom: 2px;
 				border: 0;
 				text-align: left;
 			}
@@ -400,7 +436,7 @@
 			.m-list {
 				position: relative;
 				margin: 0;
-				padding: 2.5rem 0 0 0;
+				padding: 25px 0 0 0;
 			}
 
 			.m-list::before {
@@ -410,7 +446,7 @@
 				left: 0;
 				width: 100%;
 				font-weight: bold;
-				line-height: 2rem;
+				line-height: 20px;
 				text-align: center;
 				background-color: #fff;
 				color: #ff0000;
@@ -423,23 +459,23 @@
 				position: relative;
 				list-style: none;
 				margin: 0;
-				padding: 0 0 0 1rem;
+				padding: 0 0 0 10px;
 				color: #fff;
-				line-height: 2rem;
+				line-height: 20px;
 			}
 
 			.m-list li::before {
 				content: "";
 				position: absolute;
-				top: 0.9rem;
+				top: 9px;
 				left: 0;
-				width: 0.4rem;
-				border-bottom: 0.4rem solid #fff;
+				width: 4px;
+				border-bottom: 4px solid #fff;
 				border-radius: 50%;
 			}
 
 			.m-list li + li {
-				margin-top: 0.5rem;
+				margin-top: 5px;
 			}
 
 			.rate {
@@ -451,15 +487,15 @@
 
 			.rate > span {
 				position: relative;
-				margin-right: 1.7rem;
+				margin-right: 17px;
 			}
 
 			.rate > span::after {
 				content: "";
 				position: absolute;
 				top: 50%;
-				right: -0.8rem;
-				height: 1.2rem;
+				right: -8px;
+				height: 12px;
 				border-left: 1px solid #fff;
 				-webkit-transform: translateY(-50%);
 				transform: translateY(-50%);
@@ -497,6 +533,30 @@
 				content: "%";
 			}
 
+			.idx_link {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 20px;
+			}
+			.idx_link a {
+				-webkit-box-flex: 1;
+				-ms-flex: 1 1 0px;
+				flex: 1 1 0;
+				display: block;
+				padding: 10px;
+				font-weight: bold;
+				font-size: 24px;
+				color: #333;
+				text-align: center;
+				background-color: #ddd;
+				text-decoration: none;
+			}
+
 			@media (max-width: 600px) {
 			}
 		</style>
@@ -506,7 +566,7 @@
 		<div class="wrap">
 			<!-- header -->
 			<header>
-				<h1>index</h1>
+				<h1>현대해상 다이렉트 - PC</h1>
 				<div class="control_list">
 					<button class="close_all"></button>
 					<button class="open_all"></button>
@@ -517,6 +577,9 @@
 			<input type="checkbox" id="mode_toggle" />
 			<label for="mode_toggle"></label>
 			<div class="main">
+				<div class="idx_link">
+					<a href="index2.html">상품 외 목록 보기</a>
+				</div>
 				<!-- table -->
 				<table>
 					<colgroup>
@@ -530,175 +593,277 @@
 						<col class="end_day" />
 						<col class="link" />
 						<col class="complete" style="width: 60px" />
-						<col class="note" />
+						<col class="note" style="width: 60px" />
 						<col class="comp-date" style="width: 110px" />
 						<col class="modify-history" />
 					</colgroup>
 
 					<!-- Guide -->
-					<thead>
+					<thead class="mini">
+						<!-- <thead> -->
 						<tr class="title">
 							<th colspan="13">
 								<div class="inner">Guide</div>
 							</th>
 						</tr>
 						<tr>
-							<th colspan="10">disc.</th>
-							<th>link</th>
-							<th>완료</th>
+							<th colspan="8">disc.</th>
+							<th colspan="2">link</th>
+							<th colspan="2">완료</th>
 							<th>비고</th>
 						</tr>
 					</thead>
 					<tbody class="none">
 						<tr>
-							<td colspan="10">title - 상황별 title 유형 정의 [ input title ]</td>
-							<td class="link"><a href="html/guide/guide/title.html" target="_blank">title</a></td>
-							<td class="complete"></td>
+							<td colspan="8">이메일 자동완성 가이드</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/email.html" target="_blank">email</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">accordian</td>
-							<td class="link"><a href="html/guide/guide/accordian.html" target="_blank">accordian</a></td>
-							<td class="complete"></td>
+							<td colspan="8">기조정보 입력 가이드</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/test.html" target="_blank">test</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">button</td>
-							<td class="link"><a href="html/guide/guide/button.html" target="_blank">button</a></td>
-							<td class="complete"></td>
+							<td colspan="8">좌우 스크롤 옵션 예시</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/scroll_option.html" target="_blank">scroll_option</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">button_sample</td>
-							<td class="link"><a href="html/guide/guide/button_sample.html" target="_blank">button_sample</a></td>
-							<td class="complete"></td>
+							<td colspan="8">title - 상황별 title 유형 정의 [ input title ]</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/title.html" target="_blank">title</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">badge</td>
-							<td class="link"><a href="html/guide/guide/badge.html" target="_blank">badge</a></td>
-							<td class="complete"></td>
+							<td colspan="8">약관</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/agree.html" target="_blank">agree</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">checkbox</td>
-							<td class="link"><a href="html/guide/guide/checkbox.html" target="_blank">checkbox</a></td>
-							<td class="complete"></td>
+							<td colspan="8">항목선택 케이스</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/select_guide.html" target="_blank">select_guide</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">divider</td>
-							<td class="link"><a href="html/guide/guide/divider.html" target="_blank">divider</a></td>
-							<td class="complete"></td>
+							<td colspan="8">주소검색 버튼 케이스</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/address_guide.html" target="_blank">address_guide</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">icon</td>
-							<td class="link"><a href="html/guide/guide/icon.html" target="_blank">icon</a></td>
-							<td class="complete"></td>
+							<td colspan="8">카드 선택 케이스</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/card_guide.html" target="_blank">card_guide</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">은행 선택 케이스</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/bank_guide.html" target="_blank">bank_guide</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">accordion - 아코디언</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/accordion.html" target="_blank">accordion</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">button</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/button.html" target="_blank">button</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">button tag - 버튼으로 사용하는 태그 타입 - 일반 태그형과 혼용 사용</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/button_tag.html" target="_blank">button_tag</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">button chips - 키패드 등</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/button_chips.html" target="_blank">button_chips</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">badge</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/badge.html" target="_blank">badge</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">banner</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/banner.html" target="_blank">banner</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">card</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/card.html" target="_blank">card</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">checkbox</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/checkbox.html" target="_blank">checkbox</a></td>
+							<td class="complete" colspan="2"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="8">divider</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/divider.html" target="_blank">divider</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">icon</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/icon.html" target="_blank">icon</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note">증감</td>
 						</tr>
 						<tr>
-							<td colspan="10">input</td>
-							<td class="link"><a href="html/guide/guide/input.html" target="_blank">input</a></td>
-							<td class="complete"></td>
+							<td colspan="8">input</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/input.html" target="_blank">input</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">list - 문구 목록</td>
-							<td class="link"><a href="html/guide/guide/list.html" target="_blank">list</a></td>
-							<td class="complete"></td>
+							<td colspan="8">list - 문구 목록</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/list.html" target="_blank">list</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">d_list - 데이터 목록</td>
-							<td class="link"><a href="html/guide/guide/d_list.html" target="_blank">d_list</a></td>
-							<td class="complete"></td>
+							<td colspan="8">bg_list - 배경색이 있는 디자인된 리스트</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/bg_list.html" target="_blank">bg_list</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">pager</td>
-							<td class="link"><a href="html/guide/guide/pager.html" target="_blank">pager</a></td>
-							<td class="complete"></td>
+							<td colspan="8">info_box - list, content, data</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/info_box.html" target="_blank">info_box</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">popup(임시)</td>
-							<td class="link"><a href="html/guide/guide/popup(mobile).html" target="_blank">popup</a></td>
-							<td class="complete"></td>
+							<td colspan="8">notice - 꼭 알아두세요, 이용안내</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/notice.html" target="_blank">notice</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">popup (PC)</td>
-							<td class="link"><a href="html/guide/guide/popup_pc.html" target="_blank">popup_pc</a></td>
-							<td class="complete"></td>
-							<td class="note">PC버전</td>
-						</tr>
-						<tr>
-							<td colspan="10">radio</td>
-							<td class="link"><a href="html/guide/guide/radio.html" target="_blank">radio</a></td>
-							<td class="complete"></td>
-							<td class="note"></td>
-						</tr>
-						<!-- <tr>
-              <td colspan="10">radiobutton</td>
-              <td class="link"><a href="html/guide/guide/radiobutton.html" target="_blank">radiobutton</a></td>
-              <td class="complete"></td>
-              <td class="note"></td>
-            </tr> -->
-						<tr>
-							<td colspan="10">stepper</td>
-							<td class="link"><a href="html/guide/guide/stepper.html" target="_blank">stepper</a></td>
-							<td class="complete"></td>
+							<td colspan="8">pager</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/pager.html" target="_blank">pager</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">swiper</td>
-							<td class="link"><a href="html/guide/guide/swiper.html" target="_blank">swiper</a></td>
-							<td class="complete"></td>
+							<td colspan="8">popup</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/popup.html" target="_blank">popup</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">tab</td>
-							<td class="link"><a href="html/guide/guide/tab.html" target="_blank">tab</a></td>
-							<td class="complete"></td>
+							<td colspan="8">popup_pc</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/popup_pc.html" target="_blank">popup_pc</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">table</td>
-							<td class="link"><a href="html/guide/guide/table.html" target="_blank">table</a></td>
-							<td class="complete"></td>
+							<td colspan="8">progress</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/progress.html" target="_blank">progress</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">textarea</td>
-							<td class="link"><a href="html/guide/guide/textarea.html" target="_blank">textarea</a></td>
-							<td class="complete"></td>
+							<td colspan="8">달력</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/calendar.html" target="_blank">calendar</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note" style="background-color: red">
+								input 와 달력 버튼을 함께 사용 시 한개의 핸들바 정리 필요
+								<br />
+								datepicker 오픈 시 focus 기능 필요
+							</td>
+						</tr>
+						<tr>
+							<td colspan="8">달력</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/calendar2.html" target="_blank">calendar2</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">toast</td>
-							<td class="link"><a href="html/guide/guide/toast.html" target="_blank">toast</a></td>
-							<td class="complete"></td>
+							<td colspan="8">radio</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/radio.html" target="_blank">radio</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">tooltip</td>
-							<td class="link"><a href="html/guide/guide/tooltip.html" target="_blank">tooltip</a></td>
-							<td class="complete"></td>
+							<td colspan="8">radiobutton</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/radiobutton.html" target="_blank">radiobutton</a></td>
+							<td class="complete" colspan="2"></td>
 							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">out</td>
-							<td class="link"><a href="html/guide/guide/out.html" target="_blank">out</a></td>
-							<!-- <td class="complete"></td> -->
-							<td class="note" colspan="2">대상 외 영역 클릭 시 이벤트 발생 예시</td>
+							<td colspan="8">stepper</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/stepper.html" target="_blank">stepper</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
 						</tr>
 						<tr>
-							<td colspan="10">zoom</td>
-							<td class="link"><a href="html/guide/guide/zoom.html" target="_blank">zoom</a></td>
-							<!-- <td class="complete"></td> -->
-							<td class="note" colspan="2">
+							<td colspan="8">space_list - 컨텐츠 간격용 ul, ol li</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/space_list.html" target="_blank">space_list</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">swiper</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/swiper.html" target="_blank">swiper</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">tab</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/tab.html" target="_blank">tab</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">text</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/text.html" target="_blank">text</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note">nodata 포함</td>
+						</tr>
+						<tr>
+							<td colspan="8">table</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/table.html" target="_blank">table</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">textarea</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/textarea.html" target="_blank">textarea</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">tooltip</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/tooltip.html" target="_blank">tooltip</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td colspan="8">컨텐츠 축소 확대 기능 샘플 구현 - 추후 기능정의 필요 - 디자인 반영 필요</td>
+							<!-- <td colspan="2" class="link"><a href="html/guide/guide/zoom.html" target="_blank">zoom</a></td> -->
+							<td colspan="2" class="link"><a href="html/ZZ/AG00/MZZAG0010002000000.html" target="_blank">zoom</a></td>
+							<!-- <td class="complete" colspan="2"></td> -->
+							<td class="note" colspan="3">
 								특정 영역 확대 축소 기능 예시
 								<br />
 								적용 시 사용
@@ -708,41 +873,16 @@
 								script 페이지 내 존재
 							</td>
 						</tr>
-						<tr>
-							<td colspan="10">breadcrumb</td>
-							<td class="link"><a href="html/guide/guide/breadcrumb.html" target="_blank">breadcrumb</a></td>
-							<!-- <td class="complete"></td> -->
-							<td class="note">PC에서만 사용</td>
-						</tr>
-
-						<tr>
-							<td colspan="2">라이브러리</td>
-							<td colspan="8">적용 버젼 : swiperjs 9.2.4</td>
-							<td class="link"><a href="https://swiperjs.com/" target="_blank">swiperjs</a></td>
-							<td class="complete"></td>
-							<td class="note">외부 링크</td>
-						</tr>
-						<tr>
-							<td colspan="10">selectbox_pc</td>
-							<td class="link"><a href="html/guide/guide/selectbox_pc.html" target="_blank">selectbox_pc</a></td>
-							<td class="complete"></td>
-							<td class="note">pc버전</td>
-						</tr>
-						<tr>
-							<td colspan="10">test</td>
-							<td class="link"><a href="html/guide/guide/test.html" target="_blank">test</a></td>
-							<td class="complete"></td>
-							<td class="note"></td>
-						</tr>
 					</tbody>
 					<!-- // Guide -->
 
-					<!-- common -->
-					<thead>
+					<!-- 상품 - 운전자  -->
+					<thead class="mini">
+						<!-- <thead> -->
 						<tr class="title">
 							<th colspan="13">
 								<div class="inner">
-									<span class="title_text">Common</span>
+									상품 - 운전자
 									<span class="rate">
 										<span class="rate_total"></span>
 										<span class="rate_complete"></span>
@@ -764,512 +904,1888 @@
 							<th>link</th>
 							<th>완료</th>
 							<th>비고</th>
-							<th>이미지 누락</th>
+							<th>확인 사항</th>
 							<th>수정내역</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="no_count">
-							<td class="idx_dept1"></td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">상품안내</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="html/guide/guide/loading.html" target="_blank" title="개발 담당자1">loading1</a>
-							</td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10001000000.html" target="_blank" title="강성문">MPRLTDR10001000000</a></td>
 							<td class="complete"></td>
 							<td class="bigo"></td>
-							<td class="bigo2"></td>
+							<td class="bigo2 ing"></td>
 							<td class="note"></td>
 						</tr>
-						<tr class="no_count">
-							<td class="idx_dept1">layout_pc</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">상품안내</td>
+							<td class="idx_dept5">가입 시 유의사항</td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="html/guide/guide/layout_pc.html" target="_blank" title="개발 담당자4">layout_pc</a>
-							</td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10001010000.html" target="_blank" title="강성문">MPRLTDR10001010000</a></td>
 							<td class="complete"></td>
 							<td class="bigo"></td>
-							<td class="bigo2"></td>
-							<td class="note">
-								PC버젼
-								<br />
-								skipnav 포함
-								<br />
-								pageTop 포함
-							</td>
-						</tr>
-					</tbody>
-					<!-- // common -->
-
-					<!-- 메인 -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									<span class="title_text">메인</span>
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
+							<td class="bigo2 ing"></td>
+							<td class="note"></td>
 						</tr>
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="idx_dept1">작업 페이지1</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">기초 정보</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지1.html" target="_blank" title="개발 담당자1">작업 페이지1</a>
-							</td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10002000000.html" target="_blank" title="강성문">MPRLTDR10002000000</a></td>
 							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
-									<li>25-01-01</li>
+									<li>25-05-26</li>
 								</ul>
 							</td>
 						</tr>
 						<tr>
-							<td class="idx_dept1">작업 페이지2</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">기초 정보</td>
+							<td class="idx_dept5">다른 사람[배우자/부모/자녀] 가입 절차</td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date">25-05-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지2.html" target="_blank" title="개발 담당자2">작업 페이지2</a>
-							</td>
-							<td class="complete"></td>
-							<td class="bigo"></td>
-							<td class="bigo2"></td>
-							<td class="note"></td>
-						</tr>
-						<tr>
-							<td class="idx_dept1">작업 페이지3</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
-							<td class="idx_dept6"></td>
-							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지3.html" target="_blank" title="개발 담당자2">작업 페이지3</a>
-							</td>
-							<td class="complete"></td>
-							<td class="bigo"></td>
-							<td class="bigo2"></td>
-							<td class="note">
-								<ul class="m-list">
-									<li>25-02-28</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<td class="idx_dept1">작업 페이지4</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
-							<td class="idx_dept6"></td>
-							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지4.html" target="_blank" title="개발 담당자3">작업 페이지4</a>
-							</td>
-							<td class="complete"></td>
-							<td class="bigo"></td>
-							<td class="bigo2"></td>
-							<td class="note">
-								<ul class="m-list">
-									<li>25-02-28</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<td class="idx_dept1">작업 페이지5</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
-							<td class="idx_dept6"></td>
-							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지5.html" target="_blank" title="개발 담당자3">작업 페이지5</a>
-							</td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10002010000.html" target="_blank" title="강성문">MPRLTDR10002010000</a></td>
 							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
-									<li>25-02-28</li>
+									<li>25-05-13</li>
 								</ul>
 							</td>
 						</tr>
 						<tr>
-							<td class="idx_dept1">작업 페이지6</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">기초 정보</td>
+							<td class="idx_dept5">직업 검색</td>
+							<td class="idx_dept6">검색어로 찾기</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">기초 정보</td>
+							<td class="idx_dept5">직업 검색</td>
+							<td class="idx_dept6">분류로 찾기</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지6.html" target="_blank" title="개발 담당자4">작업 페이지6</a>
-							</td>
-							<td class="complete"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003000000.html" target="_blank" title="강성문">MPRLTDR10003000000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
-									<li>25-01-01</li>
+									<li>25-05-19</li>
+									<li>25-05-20</li>
 								</ul>
 							</td>
 						</tr>
 						<tr>
-							<td class="idx_dept1">작업자 미 지정</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입조건 변경</td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지7.html" target="_blank" title="">작업 페이지7</a>
-							</td>
-							<td class="complete"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003010000.html" target="_blank" title="강성문">MPRLTDR10003010000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입금액 변경</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003020000.html" target="_blank" title="강성문">MPRLTDR10003020000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
-									<li>25-02-28</li>
+									<li>25-05-14</li>
 								</ul>
 							</td>
 						</tr>
 						<tr>
-							<td class="idx_dept1">작업자 미 지정</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
-							<td class="idx_dept5"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">예상환급금 안내</td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date">25-01-26</td>
-							<td class="link">
-								<a href="page/layout/작업 페이지8.html" target="_blank" title="">작업 페이지8</a>
-							</td>
+							<td class="end_date"></td>
+							<td class="link"></td>
 							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통 아래로 이동</td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-05-07</li>
+									<li>25-05-15</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">계산 내역 문자로 받기</td>
+							<td class="idx_dept6">휴대폰번호 입력 안내(비로그인)</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통으로 이동</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">계산 내역 문자로 받기</td>
+							<td class="idx_dept6">휴대폰번호 확인 및 변경(로그인)</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통으로 이동</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003050000.html" target="_blank" title="강성문">MPRLTDR10003050000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-24</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6">[필수]&nbsp;고객정보 관리 및 가입설계를 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6">[선택] 상품소개 등을 위한 개인(신용)정보 처리 상세 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">인증수단 선택</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">휴대폰 본인인증</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">휴대폰 본인인증</td>
+							<td class="idx_dept7">[필수]&nbsp;휴대폰 인증을 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">공동인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">금융인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">카카오</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">카카오</td>
+							<td class="idx_dept7">[필수]&nbsp;카카오 인증을 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">PIN</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">중복되는 다른 보험 가입 사항 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003060000.html" target="_blank" title="강성문">MPRLTDR10003060000</a></td>
+							<td class="complete">ing</td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입금액 한도를 초과하는 다른 보험 가입 사항 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003070000.html" target="_blank" title="강성문">MPRLTDR10003070000</a></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">모든 플랜 한눈에 보기</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10003080000.html" target="_blank" title="강성문">MPRLTDR10003080000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
-									<li>25-02-28</li>
+									<li>25-05-15</li>
 								</ul>
 							</td>
 						</tr>
-					</tbody>
-					<!-- // 메인 -->
-
-					<!-- 상품 -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									상품
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
-						</tr>
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="idx_dept1">loading</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="page/layout/loading.html" target="_blank">loading</a>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10004000000.html" target="_blank" title="강성문">MPRLTDR10004000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-22</li>
+									<li>25-04-24</li>
+									<li>25-05-02</li>
+									<li>25-05-07</li>
+									<li>25-05-12</li>
+									<li>25-05-14</li>
+									<li>25-05-15</li>
+									<li>25-05-29</li>
+								</ul>
 							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">지번으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
 							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">도로명으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">건물명으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">해외금융계좌 신고대상 여부</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">전문금융소비자란?</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통 페이지로 이동</td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-05-07</li>
+									<li>25-05-14</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10005000000.html" target="_blank" title="강성문">MPRLTDR10005000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-21</li>
+									<li>25-04-24</li>
+									<li>25-05-02</li>
+									<li>25-05-22</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5">계약자 정보 추가 입력</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5">온라인 가입 불가 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험(계피상이)</td>
+							<td class="idx_dept4">피보험자 휴대전화 번호 입력</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10006000000.html" target="_blank" title="강성문">MPRLTDR10006000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-05-19</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10007000000.html" target="_blank" title="강성문">MPRLTDR10007000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-21</li>
+									<li>25-04-24</li>
+									<li>25-04-28</li>
+									<li>25-05-07</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">가입 내용 자세히 보기</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10007010000.html" target="_blank" title="강성문">MPRLTDR10007010000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
 						</tr>
-					</tbody>
-					<!-- // 상품 -->
-
-					<!-- MY -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									MY
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">청약서 확인(RD)</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통 페이지로 이동</td>
+							<td class="note"></td>
 						</tr>
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">상품설명서 주요 내용 확인</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10007040000.html" target="_blank" title="강성문">MPRLTDR10007040000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2">상품공통</td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-05-07</li>
+									<li>25-05-12</li>
+								</ul>
+							</td>
 						</tr>
-					</thead>
-					<tbody>
 						<tr>
-							<td class="idx_dept1">loading</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">약관 확인(RD)</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10008000000.html" target="_blank" title="강성문">MPRLTDR10008000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-22</li>
+									<li>25-04-28</li>
+									<li>25-04-29</li>
+									<li>25-05-08</li>
+									<li>25-05-12</li>
+									<li>25-05-16</li>
+									<li>25-05-27</li>
+									<li>25-05-30</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">은행 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/.html" target="_blank" title="강성문"></a></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">카드사 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/.html" target="_blank" title="강성문"></a></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">할부기간 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10008000000.html" target="_blank" title="강성문">MPRLTDR10008050000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">
+								업무공통
+								<br />
+								MPRLTDR10008000000 내 포함
+							</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">만기환급금 입금 계좌 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">자동이체 약관 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10008080000.html" target="_blank" title="강성문">MPRLTDR10008080000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">[필수]보험계약 체결,이행을 위한 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">전자금융거래 이용약관</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">온라인 플랫폼 서비스 이용약관</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">예금자 보호 안내</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">온라인 보험계약 고객센터 이용 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">휴대폰 전직접서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">카카오 전자서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">금융인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">공동인증전자서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약 완료</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-04-18</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10009000000.html" target="_blank" title="강성문">MPRLTDR10009000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note">
+								<ul class="m-list">
+									<li>25-04-24</li>
+									<li>25-05-13</li>
+									<li>25-06-04</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">보험가입 진행 정보</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-13</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR10010000000.html" target="_blank" title="강성문">MPRLTDR10010000000</a></td>
+							<td class="complete"></td>
+							<td class="bigo"></td>
+							<td class="bigo2 ing"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험</td>
+							<td class="idx_dept4">청약 완료</td>
+							<td class="idx_dept5">고객 가입 리뷰 작성</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<!-- <tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">운전자보험(전화)</td>
 							<td class="idx_dept4"></td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="page/layout/loading.html" target="_blank">loading</a>
-							</td>
+							<td class="end_date">2025-05-30</td>
+							<td class="link"><a href="html/PR/LTDR/MPRLTDR12000000000.html" target="_blank" title="강성문">MPRLTDR12000000000</a></td>
 							<td class="complete"></td>
-							<td class="bigo"></td>
+							<td class="bigo">LINK</td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
-						</tr>
-					</tbody>
-					<!-- // MY -->
-
-					<!-- 혜택 -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									혜택
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
-						</tr>
+						</tr> -->
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="idx_dept1">loading</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">상품안내</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="page/layout/loading.html" target="_blank">loading</a>
-							</td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11001000000.html" target="_blank" title="강성문">MPRLTTD11001000000</a></td>
 							<td class="complete"></td>
 							<td class="bigo"></td>
-							<td class="bigo2"></td>
+							<td class="bigo2 ing"></td>
 							<td class="note"></td>
 						</tr>
-					</tbody>
-					<!-- // 혜택 -->
-
-					<!-- 이용안내 -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									이용안내
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
-						</tr>
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="idx_dept1">loading</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">기초 정보</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="page/layout/loading.html" target="_blank">loading</a>
-							</td>
-							<td class="complete"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11002000000.html" target="_blank" title="강성문">MPRLTTD11002000000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
 						</tr>
-					</tbody>
-					<!-- // 이용안내 -->
-
-					<!-- 공통 -->
-					<thead>
-						<tr class="title">
-							<th colspan="13">
-								<div class="inner">
-									공통
-									<span class="rate">
-										<span class="rate_total"></span>
-										<span class="rate_complete"></span>
-										<span class="rate_late"></span>
-										<span class="rate_per"></span>
-									</span>
-								</div>
-							</th>
-						</tr>
 						<tr>
-							<th>lv[1]</th>
-							<th>lv[2]</th>
-							<th>lv[3]</th>
-							<th>lv[4]</th>
-							<th>lv[5]</th>
-							<th>lv[6]</th>
-							<th>lv[7]</th>
-							<th>마감일</th>
-							<th>link</th>
-							<th>완료</th>
-							<th>비고</th>
-							<th>이미지 누락</th>
-							<th>수정내역</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="idx_dept1">loading</td>
-							<td class="idx_dept2"></td>
-							<td class="idx_dept3"></td>
-							<td class="idx_dept4"></td>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
 							<td class="idx_dept5"></td>
 							<td class="idx_dept6"></td>
 							<td class="idx_dept7"></td>
-							<td class="end_date"></td>
-							<td class="link">
-								<a href="page/layout/loading.html" target="_blank">loading</a>
-							</td>
-							<td class="complete"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11003000000.html" target="_blank" title="강성문">MPRLTTD11003000000</a></td>
+							<td class="complete ok"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
 						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입조건 변경</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11003010000.html" target="_blank" title="강성문">MPRLTTD11003010000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입금액 변경</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11003020000.html" target="_blank" title="강성문">MPRLTTD11003020000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">예상환급금 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">계산 내역 문자로 받기</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6">[필수]&nbsp;고객정보 관리 및 가입설계를 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">개인 정보 동의</td>
+							<td class="idx_dept6">[선택] 상품소개 등을 위한 개인(신용)정보 처리 상세 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">인증수단 선택</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">휴대폰 본인인증</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">휴대폰 본인인증</td>
+							<td class="idx_dept7">[필수]&nbsp;휴대폰 인증을 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">공동인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">금융인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">카카오</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">카카오</td>
+							<td class="idx_dept7">[필수]&nbsp;카카오 인증을 위한 개인(신용)정보 처리&nbsp;상세&nbsp;동의</td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">본인 인증</td>
+							<td class="idx_dept6">PIN</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">중복되는 다른 보험 가입 사항 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">가입금액 한도를 초과하는 다른 보험 가입 사항 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 확인</td>
+							<td class="idx_dept5">모든 플랜 한눈에 보기</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11003030000.html" target="_blank" title="강성문">MPRLTTD11003030000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo">신규</td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11004000000.html" target="_blank" title="강성문">MPRLTTD11004000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">지번으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">도로명으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">우편번호 검색</td>
+							<td class="idx_dept6">건물명으로 검색</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">해외금융계좌 신고대상 여부</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">피보험자/계약자 정보</td>
+							<td class="idx_dept5">전문금융소비자란?</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11005000000.html" target="_blank" title="강성문">MPRLTTD11005000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5">계약자 정보 추가 입력</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">가입 전 알릴 사항</td>
+							<td class="idx_dept5">온라인 가입 불가 안내</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11006000000.html" target="_blank" title="강성문">MPRLTTD11006000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">가입 내용 자세히 보기</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11006010000.html" target="_blank" title="강성문">MPRLTTD11006010000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">청약서 확인(RD)</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">상품설명서 확인</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">상품설명서 주요 내용 확인</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11006040000.html" target="_blank" title="강성문">MPRLTTD11006040000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약내용 확인</td>
+							<td class="idx_dept5">약관 확인(RD)</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11007000000.html" target="_blank" title="강성문">MPRLTTD11007000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">신용카드</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11007000000.html" target="_blank" title="강성문">MPRLTTD11007010000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2">MPRLTTD11007000000 내 포함</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">간편결제</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11007000000.html" target="_blank" title="강성문">MPRLTTD11007020000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2">MPRLTTD11007000000 내 포함</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">계좌이체</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11007000000.html" target="_blank" title="강성문">MPRLTTD11007030000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2">MPRLTTD11007000000 내 포함</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">은행 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">카드사 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">할부기간 선택</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">[필수]보험계약 체결,이행을 위한 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">전자금융거래 이용약관</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">온라인 플랫폼 서비스 이용약관</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">예금자 보호 안내</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">보험계약 체결 동의</td>
+							<td class="idx_dept6">온라인 보험계약 고객센터 이용 동의</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">휴대폰 전직접서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">카카오 전자서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">금융인증서</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험료 결제</td>
+							<td class="idx_dept5">전자서명</td>
+							<td class="idx_dept6">공동인증전자서명</td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">업무공통</td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약 완료</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-03</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11008000000.html" target="_blank" title="강성문">MPRLTTD11008000000</a></td>
+							<td class="complete ok"></td>
+							<td class="bigo"></td>
+							<td class="bigo2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">보험가입 진행 정보</td>
+							<td class="idx_dept5"></td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date">2025-06-13</td>
+							<td class="link"><a href="html/PR/LTTD/MPRLTTD11009000000.html" target="_blank" title="강성문">MPRLTTD11009000000</a></td>
+							<td class="complete"></td>
+							<td class="bigo"></td>
+							<td class="bigo2 ing"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
+							<td class="idx_dept1">상품</td>
+							<td class="idx_dept2">운전자</td>
+							<td class="idx_dept3">오토바이운전자보험</td>
+							<td class="idx_dept4">청약 완료</td>
+							<td class="idx_dept5">고객 가입 리뷰 작성</td>
+							<td class="idx_dept6"></td>
+							<td class="idx_dept7"></td>
+							<td class="end_date"></td>
+							<td class="link"></td>
+							<td class="complete"></td>
+							<td class="bigo">공통</td>
+							<td class="bigo2">상품공통</td>
+							<td class="note"></td>
+						</tr>
 					</tbody>
-					<!-- // 공통 -->
+					<!-- // 상품 - 운전자  -->
 				</table>
 				<!-- // table -->
 			</div>
@@ -1294,9 +2810,20 @@
 
 			document.querySelectorAll(".main .title").forEach(el => {
 				el.addEventListener("click", () => {
-					console.log("click");
+					// console.log("click");
 					el.parentElement.classList.toggle("mini");
 				});
+			});
+
+			$(".bigo").each(function () {
+				const $this = $(this);
+				const $thisText = $this.text();
+				if ($thisText === "공통") {
+					if ($this.closest("tr").find(".link a").text() == "") {
+						// $this.css('background', 'green');
+						$this.closest("tr").addClass("no_count");
+					}
+				}
 			});
 
 			// 수정내역 확인 목록
@@ -1349,9 +2876,9 @@
 
 				let output = "";
 				for (let item of modifyListValue) {
-					output += item.join("\n") + "\n\n";
+					output += item.join("\n") + "\n\n\n";
 				}
-				let printInfo = "[ " + dateString + " ] PC버전 퍼블리싱 수정내역 공유드립니다.\n\n" + output;
+				let printInfo = "[ " + dateString + " ] 모바일 퍼블리싱 수정내역 공유드립니다.\n\n\n" + output + "\n\n담당자가 지정되지 않은 경우 파트별로 확인 부탁드립니다.";
 
 				console.log(printInfo);
 			}
@@ -1376,7 +2903,8 @@
 				$(".end_date").each(function () {
 					const endDateText = $(this).text().trim();
 					// console.log('마감 날짜:', endDateText);
-					const endDate = new Date("20" + endDateText.replace(/-/g, "/"));
+					// const endDate = new Date("20" + endDateText.replace(/-/g, "/"));
+					const endDate = new Date(endDateText.replace(/-/g, "/"));
 					const $tr = $(this).closest("tr");
 					const $completeTd = $tr.find(".complete");
 
@@ -1420,10 +2948,12 @@
 
 				// 이전 thead 안의 rate_total에 trCount를 텍스트로 설정
 				$tbody.prev("thead").find(".rate_total").text(trCount);
+				// console.log(trCount);
 
 				// 완료된 tr의 갯수를 계산
 				const completeCount = $tbody.find(".complete.ok").length;
 				$tbody.prev("thead").find(".rate_complete").text(completeCount);
+				// console.log(completeCount);
 
 				// 지연된 tr의 갯수를 계산
 				const lateCount = $tbody.find(".end_date").filter(".late").length;
@@ -1431,12 +2961,11 @@
 
 				// 오늘까지 작업해야 하는 페이지 총 갯수
 				const todayEnd = $tbody.find(".end_date").filter(".ing").length;
-				// console.log('오늘까지 작업해야 하는 페이지 총 갯수 : ' + todayEnd);
 
-				const ratePer = Math.round((completeCount / todayEnd) * 100);
-				// console.log(completeCount, todayEnd);
-				// console.log('진행률 : ' + ratePer + '%');
-				$tbody.prev("thead").find(".rate_per").text(ratePer);
+				// const ratePer = Math.round((completeCount / todayEnd) * 100);
+				const ratePer = Math.round((completeCount / trCount) * 100);
+				const ratePerResult = isNaN(ratePer) ? 0 : ratePer;
+				$tbody.prev("thead").find(".rate_per").text(ratePerResult);
 			});
 
 			function detectDevice() {
@@ -1455,6 +2984,7 @@
 				}
 			}
 			const deviceType = detectDevice();
+			$(function () {});
 		</script>
 	</body>
 </html>
