@@ -1,5 +1,7 @@
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
 function draggable(caller) {
-	const _caller = caller;
+	const _caller = caller; 
 
 	const $sheetContent = _caller.find(".popup_container");
 	const $dragIcon = _caller.find(".draggable");
@@ -80,3 +82,6 @@ function draggable(caller) {
 		touchend: dragStop,
 	});
 }
+
+/******/ })()
+;

@@ -36,16 +36,11 @@
 				position: fixed;
 				left: 0;
 				top: 0;
-				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
-				display: -webkit-box;
-				display: -ms-flexbox;
+				display: -webkit-flex;
 				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
+				-webkit-align-items: center;
 				align-items: center;
-				-webkit-box-pack: justify;
-				-ms-flex-pack: justify;
 				justify-content: space-between;
 				width: 100%;
 				padding: 10px;
@@ -98,7 +93,6 @@
 				height: 2px;
 				background: #000;
 				width: 60%;
-				-webkit-transform: rotateZ(90deg);
 				transform: rotateZ(90deg);
 			}
 
@@ -270,8 +264,6 @@
 			}
 
 			.title .inner {
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
 			}
 
@@ -287,6 +279,8 @@
 				border-bottom: 8px solid #fff;
 				margin: 7px 10px 0 0;
 			}
+
+			
 
 			.mini tr,
 			.mini + tbody {
@@ -328,7 +322,6 @@
 				background: #fff;
 				left: 50%;
 				top: 50%;
-				-webkit-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 			}
 
@@ -341,12 +334,10 @@
 				background: #fff;
 				left: 50%;
 				top: 50%;
-				-webkit-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 			}
 
 			#mode_toggle:checked + label::after {
-				-webkit-transform: translate(-50%, -50%) rotateZ(90deg);
 				transform: translate(-50%, -50%) rotateZ(90deg);
 			}
 
@@ -380,10 +371,7 @@
 			}
 
 			#mode_toggle:checked ~ .main tbody tr {
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
-				-ms-flex-wrap: wrap;
 				flex-wrap: wrap;
 				border-top: 0;
 				border-bottom: 1px solid white;
@@ -479,8 +467,6 @@
 			}
 
 			.rate {
-				display: -webkit-inline-box;
-				display: -ms-inline-flexbox;
 				display: inline-flex;
 				margin-left: auto;
 			}
@@ -497,7 +483,6 @@
 				right: -8px;
 				height: 12px;
 				border-left: 1px solid #fff;
-				-webkit-transform: translateY(-50%);
 				transform: translateY(-50%);
 			}
 
@@ -534,18 +519,12 @@
 			}
 
 			.idx_link {
-				display: -webkit-box;
-				display: -ms-flexbox;
 				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
 				align-items: center;
 				gap: 10px;
 				margin-bottom: 20px;
 			}
 			.idx_link a {
-				-webkit-box-flex: 1;
-				-ms-flex: 1 1 0px;
 				flex: 1 1 0;
 				display: block;
 				padding: 10px;
@@ -600,7 +579,7 @@
 
 					<!-- Guide -->
 					<thead class="mini">
-						<!-- <thead> -->
+					<!-- <thead> -->
 						<tr class="title">
 							<th colspan="13">
 								<div class="inner">Guide</div>
@@ -788,7 +767,7 @@
 							<td class="complete" colspan="2"></td>
 							<td class="note" style="background-color: red">
 								input 와 달력 버튼을 함께 사용 시 한개의 핸들바 정리 필요
-								<br />
+								<br>
 								datepicker 오픈 시 focus 기능 필요
 							</td>
 						</tr>
@@ -878,7 +857,7 @@
 
 					<!-- 상품 - 운전자  -->
 					<thead class="mini">
-						<!-- <thead> -->
+					<!-- <thead> -->
 						<tr class="title">
 							<th colspan="13">
 								<div class="inner">
@@ -1943,7 +1922,7 @@
 							<td class="bigo"></td>
 							<td class="bigo2 ing"></td>
 							<td class="note"></td>
-						</tr>
+						</tr>						
 						<tr>
 							<td class="idx_dept1">상품</td>
 							<td class="idx_dept2">운전자</td>
@@ -2786,6 +2765,8 @@
 						</tr>
 					</tbody>
 					<!-- // 상품 - 운전자  -->
+
+
 				</table>
 				<!-- // table -->
 			</div>
@@ -2815,17 +2796,19 @@
 				});
 			});
 
-			$(".bigo").each(function () {
+			
+			$('.bigo').each(function(){
 				const $this = $(this);
 				const $thisText = $this.text();
-				if ($thisText === "공통") {
-					if ($this.closest("tr").find(".link a").text() == "") {
+				if( $thisText === '공통' ) {
+					if( $this.closest('tr').find('.link a').text() == '' ) {
 						// $this.css('background', 'green');
-						$this.closest("tr").addClass("no_count");
+						$this.closest('tr').addClass('no_count');
 					}
 				}
-			});
-
+			})
+			
+			
 			// 수정내역 확인 목록
 			let today = new Date();
 			let year = today.getFullYear().toString().slice(-2);
@@ -2949,6 +2932,7 @@
 				// 이전 thead 안의 rate_total에 trCount를 텍스트로 설정
 				$tbody.prev("thead").find(".rate_total").text(trCount);
 				// console.log(trCount);
+				
 
 				// 완료된 tr의 갯수를 계산
 				const completeCount = $tbody.find(".complete.ok").length;
