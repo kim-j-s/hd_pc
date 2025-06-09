@@ -42,6 +42,24 @@ $(function() {  // DOM이 준비되었을 때 실행
 		updateDimensions();
 		floatingItem();
 	});
+
+
+	// 헤더 이벤트 스크립트
+	let lastScrollTop = 0;
+  $(window).on('scroll', function() {
+    let st = $(this).scrollTop();
+		console.log(st);
+
+    if (st > lastScrollTop) {
+      // 아래로 스크롤
+      $('body').removeClass('up').addClass('down');
+    } else if (st < lastScrollTop) {
+      // 위로 스크롤
+      $('body').removeClass('down').addClass('up');
+    }
+
+    lastScrollTop = st;
+  });
 	
 });
 

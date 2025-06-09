@@ -1,4 +1,23 @@
 // Header
 .header_pc {
-	
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		border-bottom: 1px solid var(--color-divider-gray-light);
+		pointer-events: none;
+	}
+	.header_pc_inner {
+		display: inline-block;
+		width: 1188px;
+	}
 }
+

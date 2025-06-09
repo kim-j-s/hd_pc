@@ -9,21 +9,15 @@ body {
 	min-width: 1188px;
 	height: auto;
 	min-height: 100%;
-	padding: 120px 0 210px;
+	padding: 120px 0 210px 0;
 
 
-	.header,
 	.footer  {
 		position: absolute;
 		left: 0;
 		width: 100%;
 	}
-
-	.header {
-		top: 0;
-		height: 120px;
-		background-color: beige;
-	}
+	
 	.footer {
 		bottom: 0;
 		height: 210px;
@@ -78,6 +72,7 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		flex-flow: row wrap;
 		gap: var(--gap-12);
 		width: 1188px;
 		margin: 0 auto;
@@ -112,3 +107,4 @@ body {
 		background-color: red;
 	}
 }
+/* // Layout */
