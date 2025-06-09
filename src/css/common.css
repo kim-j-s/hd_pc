@@ -7,6 +7,9 @@
 /* header */
 @import "common/header.scss";
 
+/* header_pc */
+@import "common/header_pc.scss";
+
 /* footer */
 @import "common/footer.scss";
 
