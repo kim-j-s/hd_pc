@@ -1,0 +1,44 @@
+ {{#> layout/default page-title="현재페이지 | 뎁스 페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header h-title="타이틀" }}
+		{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+		<div id="container" class="container container_tp2">
+			<div class="content" style="padding-top:150px;background-color:aliceblue;font-size:24px;font-weight:700;text-align: center;">
+				가입 설계 Case (781px)<br>
+				.container_tp2
+
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전"}}
+					{{> cp/button type="1" size="1" b-text="이대로 가입하기"}}
+				</div>
+
+				<!-- s: 꼭 알아두세요 -->
+				{{#> cp/notice }}
+					<ul class="list_depth">
+						<li>내용1</li>
+						<li>내용2</li>
+						<li>내용3</li>
+					</ul>
+				{{/ cp/notice }}
+				<!-- e: 꼭 알아두세요 -->
+
+				<!-- <div style="height:400px;background-color: aquamarine;"></div>
+				<div style="height:400px;background-color: aqua;"></div> -->
+			</div>
+			<div class="pannel" style="min-height:500px;padding-top:150px;background-color:skyblue;font-size:24px;font-weight:700;text-align: center;">
+				모바일 영역 (375px)<br>
+				.pannel
+			</div>
+			<aside style="background-color:plum;font-size:20px;text-align: center;">
+				aside 영역 (128px)
+			</aside>
+		</div>
+
+		{{> layout/footer }}
+	</div>
+
+	<!-- s: popup area -->
+	 
+	<!-- e: popup area -->
+
+{{/ layout/default }}
