@@ -1,2 +1,10 @@
-/* Custom PC */
-@import 'contents/custom_pc.scss';
+/*** Custom PC ***/
+
+/* layout  */
+@import 'contents/pc_custom_st1.scss';
+
+/* 모바일용 component  */
+@import 'contents/pc_custom_st2.scss';
+
+/* PC용 component  */
+@import 'contents/pc_custom_st3.scss';
