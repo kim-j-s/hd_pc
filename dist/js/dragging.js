@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 function draggable(caller) {
 	const _caller = caller; 
 
@@ -82,6 +80,3 @@ function draggable(caller) {
 		touchend: dragStop,
 	});
 }
-
-/******/ })()
-;

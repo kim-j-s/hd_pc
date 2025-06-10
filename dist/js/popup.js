@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 /* Popup 관련 */
 
 /**
@@ -207,6 +205,3 @@ function toastMsg(msg) {
 	// const text = $('<div class='toast_msg'></div>').text(msg);
 	$(".toast_msg").text(msg);
 }
-
-/******/ })()
-;

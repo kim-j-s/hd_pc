@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 (function() {  
   const $DOM = $(document),
         $WIN = $(window),
@@ -1278,6 +1276,3 @@ $(function(){
 $(window).resize(function(){
 	// prograssBar();
 })
-
-/******/ })()
-;

@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 const $stepper = {
 
 	selectedIdx: null,
@@ -352,6 +350,3 @@ const $stepper = {
 
 }
 
-
-/******/ })()
-;

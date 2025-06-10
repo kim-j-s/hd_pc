@@ -15,45 +15,98 @@
 
 	.summery_inner {
 		display: flex;
+		align-items: flex-end;
+		gap: var(--gap-8);
 
-		.value {
-			flex: 1;
+		.total_wrap {
 			display: flex;
+			flex-direction: column;
 			align-items: baseline;
-			gap: 10px;
 
-			.val_main {
+			.tit {
+				font-size: var(--font-size-body-medium);
+			}
+			.value {
 				display: flex;
-				align-items: center;
-				gap: 2px;
-				font-size: var(--font-size-display-medium);
-				font-weight: 700;
-				vertical-align: baseline;
-				> span {
-					margin-top: 6px;
+				align-items: baseline;
+				gap: 10px;
+
+				.val_price {
+					display: flex;
+					align-items: center;
+					gap: 2px;
+					font-size: var(--font-size-display-medium);
+					font-weight: 700;
+					> span {
+						margin-top: 6px;
+						font-size: var(--font-size-body-large);
+					}
+				}
+				.val_discount {
 					font-size: var(--font-size-body-large);
+					color: var(--color-text-disabled-on);
+					text-decoration: line-through;
 				}
 			}
-			.val_dc {
-				display: block;
-				font-size: var(--font-size-body-large);
-				color: var(--color-text-disabled-on);
-				text-decoration: line-through;
+			.sub_info {
+				display: flex;
+				gap: 8px;
+				margin-top: 4px;
+
+				> span {
+					font-size: var(--font-size-body-small);
+					&.tit {
+						color: var(--color-text-subtle);
+					}
+
+				}
 			}
 		}
+		// .detail {
+		// 	flex: 1 0 0;
+		// 	display: flex;
+		// 	flex-flow: row wrap;
+		// 	gap: var(--gap-3) var(--gap-8);
+		// 	padding-bottom: 8px;
+			
+			
+		// 	> dl {
+		// 		display: flex;
+		// 		justify-content: space-between;
+		// 		align-items: flex-start;
+		// 		gap: 12px;
+		// 		width: calc(50% - 32px);
+		// 		font-size: var(--font-size-body-small);
+
+		// 		dt {
+		// 			flex: 1 0 auto;
+		// 			color: var(--color-text-subtle);
+		// 		}
+		// 		dd {
+		// 			text-align: right;
+		// 		}
+		// 	}
+		// }
+
 		.detail {
 			display: flex;
-			align-items: flex-end;
-			gap: var(--gap-8);
-			padding-bottom: 8px;
+			flex-flow: row wrap;
+			gap: 8px 32px;
 			
 			> dl {
-				display: flex;
-				gap:var(--gap-4);
+				max-width: 50%;
+				display: grid;
+				grid-template-columns: auto 1fr;
+				align-items: start;
+				gap: 12px;
 				font-size: var(--font-size-body-small);
 
 				dt {
+					flex-shrink: 0;
 					color: var(--color-text-subtle);
+				}
+				dd {
+					flex: 1;
 				}
 			}
 		}
@@ -63,5 +116,9 @@
 		margin-top: var(--gap-6);
 		padding-top: var(--gap-6);
 		border-top: 1px solid var(--color-divider-gray-light);
+	}
+
+	& + .banner_box {
+		margin-top: var(--gap-8);
 	}
 }

@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 const $scrollOption = {
 	initOptSelectUI: function() {
 		$(".opt_select_wrap").each(function () {
@@ -239,6 +237,3 @@ $(function () {
 		$scrollOption.initOptSelectUI(); // 필요 시 리사이즈 대응
 	});
 });
-
-/******/ })()
-;
