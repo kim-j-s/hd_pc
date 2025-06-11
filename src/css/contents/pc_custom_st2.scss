@@ -19,6 +19,7 @@
 }
 
 .bottom_fix_wrap {
+	margin-top: var(--gap-11);
 	padding: var(--padding-5) 0 var(--padding-6);
 
 	.btn_area {
@@ -59,5 +60,109 @@
 
 	.acd_item {
 		border-radius: var(--radius-large2);
+	}
+}
+
+
+// divider
+.divider_ty1 {
+	height: var(--size-height_small-1);
+	margin: var(--gap-11) 0;
+}
+
+
+// form 관련
+.form_group_wrap {
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gap-8);
+	> * {
+		flex: 0 0 calc(50% - 16px);
+	}
+
+	.form_line {
+		& ~ .form_line {
+			margin-top: 0;
+		}
+	}
+
+	.full {
+		flex-basis: 100%;
+
+		.radio_group_wrap {
+			width: calc(50% - 16px);
+		}
+		.label_tit {
+			.tooltip_wrap {
+				.tooltip_panel {
+					max-width: 836 px;
+				}
+			}
+		}
+	}
+
+	.column {
+		gap: var(--gap-8);
+	}
+
+
+	.label_tit {
+		.tooltip_wrap {
+			.tooltip_panel {
+				width: auto;
+				.inner {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+
+.form_box {
+	> .btn_area {
+		justify-content: center;
+		.hd_btn {
+			min-width: 160px;
+		}
+	}
+}
+
+// .form_list	
+.form_list {
+	.form_group_wrap {
+		> * {
+			flex: 1;
+		}
+		.form_line {
+			display: flex;
+			flex-direction: column;
+			.label_tit {
+				flex: 1;
+			}
+			.radio_group_wrap {
+				.rd_btn {
+					min-width: 134px;
+				}
+			}
+		}
+	}
+}
+
+// file 관련
+.file_upload_wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.file_info_box {
+		.list_ty2 {
+			margin-top: var(--gap-4);
+		}
+	}
+
+	.btn_area {
+		flex: none;
+		width: 100%;
 	}
 }
