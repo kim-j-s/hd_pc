@@ -16,12 +16,16 @@
 	.summery_inner {
 		display: flex;
 		align-items: flex-end;
+		justify-content: space-between;
 		gap: var(--gap-8);
 
 		.total_wrap {
+			flex: 0 0 auto;
+			// flex: 1 0 auto;
 			display: flex;
 			flex-direction: column;
 			align-items: baseline;
+			max-width: 500px;
 
 			.tit {
 				font-size: var(--font-size-body-medium);
@@ -30,6 +34,7 @@
 				display: flex;
 				align-items: baseline;
 				gap: 10px;
+				flex-wrap: wrap;
 
 				.val_price {
 					display: flex;
@@ -54,6 +59,7 @@
 				margin-top: 4px;
 
 				> span {
+					flex: 1 0 auto;
 					font-size: var(--font-size-body-small);
 					&.tit {
 						color: var(--color-text-subtle);
@@ -62,53 +68,55 @@
 				}
 			}
 		}
-		// .detail {
-		// 	flex: 1 0 0;
-		// 	display: flex;
-		// 	flex-flow: row wrap;
-		// 	gap: var(--gap-3) var(--gap-8);
-		// 	padding-bottom: 8px;
-			
-			
-		// 	> dl {
-		// 		display: flex;
-		// 		justify-content: space-between;
-		// 		align-items: flex-start;
-		// 		gap: 12px;
-		// 		width: calc(50% - 32px);
-		// 		font-size: var(--font-size-body-small);
-
-		// 		dt {
-		// 			flex: 1 0 auto;
-		// 			color: var(--color-text-subtle);
-		// 		}
-		// 		dd {
-		// 			text-align: right;
-		// 		}
-		// 	}
-		// }
 
 		.detail {
-			display: flex;
-			flex-flow: row wrap;
-			gap: 8px 32px;
+			display: table;
+			padding-bottom: var(--gap-3);
 			
 			> dl {
-				max-width: 50%;
-				display: grid;
-				grid-template-columns: auto 1fr;
-				align-items: start;
-				gap: 12px;
-				font-size: var(--font-size-body-small);
+				display: table-row;
+
+				~ dl {
+					dt, dd {
+						padding-top: 8px;
+					}
+				}
+
+				dt, dd {
+					font-size: var(--font-size-body-small);
+					vertical-align: top;
+				}
 
 				dt {
-					flex-shrink: 0;
+					display: table-cell;
+					white-space: nowrap;
 					color: var(--color-text-subtle);
+
+					> span {
+						vertical-align: top;
+						&.point {
+							padding-left: 4px;
+							font-weight: 700;
+						}
+					}
+
+					~ dt {
+						padding-left: 32px;
+					}
+
+					~ dd {
+						max-width: 212px;
+						padding-left: 12px;
+					}
 				}
 				dd {
-					flex: 1;
+					display: table-cell;
 				}
 			}
+		}
+
+		& + .dc_info_box {
+			margin-top: var(--gap-6);
 		}
 	}
 
@@ -120,5 +128,313 @@
 
 	& + .banner_box {
 		margin-top: var(--gap-8);
+	}
+
+	// 보험료결제
+	&.payment {
+		background-color: var(--color-surface-primary-subtler);
+	}
+}
+
+.dc_info_box {
+	position: relative;
+	padding: var(--padding-7) var(--padding-7) var(--padding-7) 68px;
+	background-color: var(--color-surface-white-subtle);
+	border-radius: var(--radius-medium3);
+
+	&:before {
+		position: absolute;
+		left: 12px;
+		top: calc(50% - 20px);
+		content:'';
+		width: 40px;
+		height: 40px;
+		background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center / 24px auto;
+		border-radius: var(--radius-medium1);
+	}
+
+	&.ty2 {
+		background-color: var(--color-surface-primary-subtler);
+
+		&:before {
+			background-color: var(--color-surface-white);
+		}
+	}
+
+	.dc_list {
+		display: flex;
+		flex-wrap: wrap;
+
+		&.column {
+			flex-direction: column;
+
+			> li {
+				padding-left: 0;
+
+				& ~ li {
+					margin-top: 8px;
+				}
+			}
+		}
+
+		> li {
+			position: relative;
+			display: flex;
+			gap: 4px;
+			font-size: var(--font-size-body-medium);
+
+			& ~ li {
+				padding-left: 25px;
+
+				&:before {
+					position: absolute;
+					top: 4px;
+					left: 12px;
+					content:'';
+					width: 1px;
+					height: 16px;
+					background-color: var(--color-divider-gray-light);
+				}
+
+				&:nth-child(3n+1){
+					padding-left: 0;
+					&:before {
+						content: none;
+					}
+				}
+			}
+
+			.link {
+				padding-right: 20px;
+				background: url(../images/icon/arrowRight_ty3.svg) no-repeat right center / 16px auto;
+			}
+			.dc_r {
+				padding-left: var(--gap-2);
+			}
+		}
+	}
+}
+
+
+// side panel
+.sel_item_list {
+	.item {
+		font-size: var(--font-size-body-small);
+
+		& ~ .item {
+			margin-top: var(--gap-3);
+		}
+
+		.sel_tit {
+			color: var(--color-text-disabled-on);
+
+			.icon {
+				width: 16px;
+				height: 16px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% auto;
+
+				&.dog {
+					background-image: url(../images/content/bi/icon_stepper_dog.svg);
+				}
+
+				&.date {
+					background-image: url(../images/content/bi/icon_stepper_date.svg);
+				}
+
+				&.birth {
+					background-image: url(../images/content/bi/icon_stepper_birth.svg);
+				}
+
+				&.gender {
+					background-image: url(../images/content/bi/icon_stepper_gender.svg);
+				}
+			}
+		}
+	}
+}
+
+.pn_step {
+	padding: var(--padding-6) var(--padding-7);
+	background-color:  var(--color-surface-gray-subtler);
+	border-radius: var(--radius-large2);
+
+	.step_list {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			top: 16px;
+			left: 1px;
+			content: '';
+			width: 1px;
+			height: calc(100% - 32px);
+			background-color: var(--color-border-gray-light);
+		}
+
+		> .list {
+			position: relative;
+			padding: var(--padding-3) 0 var(--padding-3) 16px;
+
+			&:before {
+				position: absolute;
+				top: 16px;
+				left: 0;
+				content: '';
+				width: 3px;
+				height: 3px;
+				background-color: #33363D;
+				border-radius: 100%;
+			}
+
+			&:last-child {
+				&:after {
+					position: absolute;
+					top: 19px;
+					left: 1px;
+					content: '';
+					width: 1px;
+					height: calc(100% - 21px);
+					background-color: var(--color-surface-gray-subtler);
+				}
+			}
+
+			.step_flow {
+				font-size: var(--font-size-body-xsmall);
+				line-height: 24px;
+				color: var(--color-text-disabled-on);
+			}
+			.status_msg {
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-disabled-on);
+			}
+			.result_text {
+				font-size: var(--font-size-body-small);
+
+				& ~ .result_text {
+					margin-top: 4px;
+				}
+				
+				& ~ .status_msg{
+					display: none;
+				}
+			}
+			.btn_rd_modify {
+				display: none;
+				position: absolute;
+				right: 0;
+				top: 8px;
+			}
+
+			// 현재단계
+			&.active {
+				.step_flow {
+					font-weight: 700;
+					color:  var(--color-text-bolder);
+				}
+				.status_msg {
+					display: block;
+				}
+				.result_text {
+					& + .status_msg {
+						color: var(--color-text-basic);
+					}
+				}
+			}
+			// 완료단계
+			&.finish {
+				.step_flow {
+					font-weight: 400;
+					color: var(--color-text-disabled-on);
+				}
+				.status_msg {
+					display: none;
+				}
+				.btn_rd_modify {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.panel_total {
+	padding: var(--padding-8) var(--padding-7);
+	background-color: var(--color-surface-primary-subtler);
+	border-radius: var(--radius-large2);
+
+	.inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--gap-4);
+
+		.title {
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
+		}
+
+		.right {
+			text-align: right;
+			del {
+				font-size: var(--font-size-body-xsmall);
+				color: var(--color-text-subtle);
+			}
+			.price {
+				display: block;
+				font-size: var(--font-size-body-small);
+				font-weight: 700;
+				color: var(--color-text-primary-bold);
+			}
+		}
+	}
+}
+
+.contact_list {
+	padding: var(--padding-8) var(--padding-7);
+	background: var(--color-surface-white);
+	border: 1px solid var(--color-divider-gray-light);
+	border-radius: var(--radius-large2);
+
+	> .list {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-5);
+		font-size: var(--font-size-body-xsmall);
+
+		& + .list {
+			margin-top: var(--gap-6);
+		}
+
+		.icon {
+			display: block;
+			width: 44px;
+			height: 44px;
+			background-color: var(--color-background-gray-subtler);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 20px auto;
+			border-radius: var(--radius-medium1);
+
+			&.call {
+				background-image: url(../images/icon/icon_call_fill.svg);
+			}
+			&.car {
+				background-image: url(../images/icon/icon_car_window.svg);
+			}
+		}
+
+		.info {
+			em {
+				display: block;
+				font-size: var(--font-size-body-small);
+				font-weight: 700;
+			}
+		}
+	}
+
+	& + .list_depth_ty2 {
+		margin-top: var(--gap-4);
 	}
 }

@@ -1,8 +1,8 @@
 {{#> layout/guide }}
 <div class="guide_h1">info box</div>
 
-<div style="width: 1188px;">
-	<div class="guide_h4">info_summery</div>
+<div style="width: 836px;">
+	<div class="guide_h4">.info_summery</div>
 	<div class="info_summery">
 		<div class="title">상품명</div>
 		<div class="summery_inner">
@@ -21,18 +21,14 @@
 				<dl>
 					<dt>자동차번호</dt>
 					<dd>
-						<strong>123가4567</strong>
+						<strong>123가45**</strong>
 					</dd>
-				</dl>
-				<dl>
 					<dt>운전자범위</dt>
 					<dd>기명피보험자 1인한정</dd>
 				</dl>
 				<dl>
 					<dt>피보험자/계약자</dt>
 					<dd>김*대/김*대</dd>
-				</dl>
-				<dl>
 					<dt>연령한정</dt>
 					<dd>23,900원</dd>
 				</dl>
@@ -41,12 +37,23 @@
 					<dd>
 						2025.03.24 00시~2025.03.27 19시
 					</dd>
-				</dl>
-				<dl>
 					<dt>차량정보(연식)</dt>
 					<dd>더 뉴 EV6(롱레인지)(2025)\asdfasdfasdf</dd>
 				</dl>
 			</div>
+		</div>
+
+		<div class="dc_info_box">
+			<ul class="dc_list">
+				<li>
+					<span class="dc_l">건강정보 제공 할인 <strong class="point">15%</strong></span>
+					<span class="dc_r">-3,290원</span>
+				</li>
+				<li>
+					<span class="dc_l">건강등급 적용 할인 <strong class="point">5%</strong></span>
+					<span class="dc_r">22,290원</span>
+				</li>
+			</ul>
 		</div>
 		
 		<div class="btn_area center">
@@ -56,6 +63,83 @@
 			{{> cp/button type="3" size="3" rightIcon="documentSvg" b-text="보험강비경력인정 안내보기"}}
 		</div>
 	</div>
+
+	<div class="guide_h4">.info_summery.payment</div>
+	<div class="info_summery payment">
+		<div class="title">결제하실 금액</div>
+		<div class="summery_inner">
+			<div class="total_wrap">
+				<div class="value">
+					<div class="val_price">23,250<span>원</span></div>
+				</div>
+			</div>
+			<div class="detail">
+				<dl>
+					<dt>할인 전 보험료</dt>
+					<dd>23,900원</dd>
+					<dt>할인금액</dt>
+					<dd>-25,000원</dd>
+				</dl>
+				<dl>
+					<dt>자동차보험 고객 할인<span class="point">5%</span></dt>
+					<dd>-2,000원</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="dc_info_box">
+			<ul class="dc_list">
+				<li>
+					<span class="dc_l">다이렉트할인 <strong class="point">15%</strong></span>
+				</li>
+				<li>
+					<span class="dc_l">동반형할인 <strong class="point">5%</strong></span>
+				</li>
+				<li>
+					<span class="dc_l">다이렉트할인 <strong class="point">10%</strong></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="guide_h4">.dc_info_box</div>
+	<div class="dc_info_box">
+		<ul class="dc_list">
+			<li>
+				<span class="dc_l">다이렉트할인 <strong class="point">15%</strong></span>
+			</li>
+			<li>
+				<span class="dc_l">동반형할인 <strong class="point">5%</strong></span>
+			</li>
+			<li>
+				<span class="dc_l">다이렉트할인 <strong class="point">10%</strong></span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="dc_info_box">
+		<ul class="dc_list column">
+			<li>환급률은 최대 <strong class="point">103.23%</strong>까지 되요</li>
+			<li>환급률은 최대 <strong class="point">103.23%</strong>까지 되요</li>
+		</ul>
+	</div>
+
+	<div class="dc_info_box ty2">
+		<ul class="dc_list column">
+			<li>
+				<button type="button" onclick="openHDPopup(this,'ex_popup_bottom');" class="link">
+					현대해상 자동차보험 가입 고객 <strong class="point">매월 7% 할인</strong>해드려요
+				</button>
+			</li>
+			<li>
+				<button type="button" onclick="openHDPopup(this,'ex_popup_bottom');" class="link">
+					현대카드로 결제하고 <strong class="point">M포인트 100%</strong> 사용해보세요
+				</button>
+			</li>
+		</ul>
+	</div>
+
 
 	<div class="guide_h4">info_depth 단일 사용 케이스 - 1</div>
 	<div class="info_gray">

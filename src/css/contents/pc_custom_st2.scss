@@ -16,6 +16,15 @@
 	}
 }
 
+// icon button
+.btn_rd_modify {
+	width: 24px;
+	height: 24px;
+	background: url(../images/icon/icon_reset_ty2.svg) no-repeat center /12px auto;
+	border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+	border-radius: 100%;
+}
+
 // infobox
 // .info_gray {
 // 	h4,
@@ -87,7 +96,7 @@
 .banner_box {
 	display: flex;
 	justify-content: space-between;
-	gap: var(--gap-8);
+	gap: var(--gap-5) var(--gap-8);
 
 	& + .btn_area {
 		margin-top: 52px;
