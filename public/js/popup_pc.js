@@ -20,40 +20,9 @@ function convertObj($triggerEl=null){
 	return $trigger;
 }
 
-
-/**
- * openHDPopup
- * popup ui를 오픈하는 함수(접근성 대응)
- *
- * @param {object} $triggerEl [필수]팝업이 닫힌 뒤에 포커스할 엘리먼트
- * @param {string} target [필수]Open할 popup id
- * @returns {void}
- */
-	function openHDPopup($triggerEl, target){
-
-		if(typeof target !== 'string') throw new Error("Open할 popup id를 확인해주세요.");
-
-		const $target = $('#' + target);
-
-		if (target == undefined || target == null || $target.length <= 0) {
-			throw new Error("오픈할 팝업 타겟이 없습니다.");
-		}
-		
-		//trigger 정보 저장
-		const $trigger = convertObj($triggerEl,'open');
-
-		window.popupInfo.set(target, {
-			'trigger': $trigger,
-		});
-		// console.log((window.popupInfo.get(target).trigger instanceof jQuery))
-
-		//팝업 열기
-		$('#wrap').addClass('scroll_lock');
-		$target.addClass('active');
-		
-		//렌더링 후, focus 이동
-		setTimeout(function(){
-			$target.find('.popup_inner').attr('tabindex', '0').focus();
+//팝업 내부에 tabindex 설정
+function setTabindex($target){
+	$target.find('.popup_inner').attr('tabindex', '0').focus();
 
 			const $header = $target.find('.popup_head_title');
 			const $content = $target.find('.popup_cont');
@@ -64,29 +33,67 @@ function convertObj($triggerEl=null){
 				}
 			}
 			if($content){ $content.attr('tabindex',0); }
-			
-		},100);
+}
 
-		$target.find('.popup_inner').on('keydown', function(e) {
-			if (e.key === 'Tab') {
-				const focusableEle = $target.find('button, input, select, textarea, a, .popup_inner').filter(':not([disabled])'); // 포커스 가능한 요소들만
-				const firstEle = focusableEle.first();
-				const lastEle = focusableEle.last();
-				
-				if (e.shiftKey) {
-					if (document.activeElement === firstEle[0]) {
-						lastEle.focus();
-						e.preventDefault();
-					}
-				} else {
-					if (document.activeElement === lastEle[0]) {
-						firstEle.focus();
-						e.preventDefault();
-					}
+
+//팝업 내부에서 focus순환
+function focusTrap($target){
+	$target.find('.popup_inner').off('keydown.focusTraversal').on('keydown.focusTraversal', function(e) {
+		if (e.key === 'Tab') {
+			const focusableEle = $target.find('button, input, select, textarea, a, .popup_inner').filter(':not([disabled])'); // 포커스 가능한 요소들만
+			const firstEle = focusableEle.first();
+			const lastEle = focusableEle.last();
+			
+			if (e.shiftKey) {
+				if (document.activeElement === firstEle[0]) {
+					lastEle.focus();
+					e.preventDefault();
+				}
+			} else {
+				if (document.activeElement === lastEle[0]) {
+					firstEle.focus();
+					e.preventDefault();
 				}
 			}
+		}
+	});
+}
+
+
+/**
+ * openHDPopup
+ * popup ui를 오픈하는 함수(접근성 대응)
+ *
+ * @param {string|HTMLElement|jQuery} $triggerEl [필수]팝업이 닫힌 뒤에 포커스할 엘리먼트(팝업이 닫힌 뒤에 포커스할 엘리먼트)
+ * @param {string} target [필수]Open할 popup id
+ * @returns {void}
+ */
+	function openHDPopup($triggerEl, target){
+
+		if(typeof target !== 'string') throw new Error("Open할 popup id를 확인해주세요.");
+
+		const $target = $('#' + target);
+		if (target == undefined || target == null || $target.length <= 0) {
+			throw new Error("오픈할 팝업 타겟이 없습니다.");
+		}
+		
+		//trigger 정보 저장
+		const $trigger = convertObj($triggerEl);
+		window.popupInfo.set(target, {
+			'trigger': $trigger,
 		});
 
+		//팝업 열기
+		$('#wrap').addClass('scroll_lock');
+		$target.addClass('active');
+		
+		//렌더링 후, focus 이동
+		setTimeout(function(){
+			//팝업 내부에 tabindex 설정
+			setTabindex($target);
+			//팝업 내부에서 focus순환
+			focusTrap($target);
+		},100);
 	}
 	
 	
@@ -102,7 +109,6 @@ function convertObj($triggerEl=null){
 		if(typeof target !== 'string') throw new Error("close할 popup id를 확인해주세요.");
 
 		const $target = $('#' + target);
-
 		if ( !target || $target.length <= 0) {
 			throw new Error("팝업 타겟이 없습니다.");
 		}
@@ -119,7 +125,6 @@ function convertObj($triggerEl=null){
 
 		//하단에 다른 팝업이 열려있는 경우, 가장 최근 팝업으로 focus강제 이동
 		const $prevPopup = $(".popup_wrap.active:last");
-
 		if ($prevPopup.length > 0) {
 
 			$prevInner = $($prevPopup).find(".popup_inner");
@@ -130,19 +135,17 @@ function convertObj($triggerEl=null){
 			}
 
 			const focusTarget = $triggerEl || $prevInner || $("body");
-
 			setTimeout(() => {
 				focusTarget.focus();
-				$target.find(".popup_inner").removeAttr("tabindex", 0);
+				$target.find(".popup_inner").removeAttr("tabindex");
 			}, 350);
 
 		} else {
-
+			//팝업이 모두 닫힌 경우
 			$('#wrap').removeClass('scroll_lock');
-			$target.find(".popup_inner").removeAttr("tabindex", 0);
+			$target.find(".popup_inner").removeAttr("tabindex").off('keydown.focusTraversal');
 
 			const focusTarget = $triggerEl || $("body");
-
 			setTimeout(() => {
 				focusTarget.attr("tabindex", 0).focus();
 			}, 350);
