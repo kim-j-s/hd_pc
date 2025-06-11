@@ -1,5 +1,5 @@
 <!---
-화면번호 : MPRGITR80008000000
+화면번호 : PPRGITR80008000000
 경로 : 상품 > 여행 > 해외여행보험 > 청약내용 확인
 -->
 <!-- s: 25-05-14 수정 -->
@@ -9,59 +9,70 @@
 	<!-- s: 25-05-14 수정 -->
 	{{> layout/header_pc h-title="가입내용 확인" }}
 	<!-- e: 25-05-14 수정 -->
+	{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<!-- s: 25-05-28 수정 -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">가입내용확인</div>
+					<div class="p_title">
+						<strong>먼저 가입 내용</strong> 확인 후, <strong>계약서류를 확인</strong>해주세요
+					</div>
+				</div>
+			</div>
+
+			<div class="info_summary">
+				<div class="summary_top">
+					<div class="s_title">해외여행보험</div>
+				</div>
+				<div class="summery_inner">
+					<div class="total_wrap">
+						<div class="tit">최종 보험료</div>
+						<div class="value">
+							<div class="val_price">750,000<span class="text">원</span></div>
+						</div>
+					</div>
+					<div class="detail_wrap">
+						<div class="dt_table">
+							<dl>
+								<dt>계약자</dt>
+								<dd>김*대 (910101-*******)</dd>
+								<dt>할인 전 보험료</dt>
+								<dd>100,000원</dd>
+							</dl>
+							<dl>
+								<dt>피보험자</dt>
+								<dd>김*대 (910101-*******)</dd>
+								<dt>할인금액</dt>
+								<dd>-23,900원</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd>
+									2025.03.24 00시~2025.03.27 19시
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+				<div class="dc_info_box">
+					<ul class="dc_list">
+						<li>
+							<span class="dc_l">다이렉트할인 <strong class="point">5%</strong></span>
+						</li>
+						<li>
+							<span class="dc_l">가족형할인 <strong class="point">15%</strong></span>
+						</li>
+					</ul>
+				</div>
 				
-				<h2 class="title_h2">
-					<strong>먼저 가입 내용</strong> 확인 후,<br><strong>계약서류를 확인</strong>해주세요
-				</h2>
-				<!-- e: 25-05-28 수정 -->
+				<div class="btn_area center">
+					{{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
+				</div>
 			</div>
-			<!-- e: content_top -->
-			<div class="info_gray">
-					<h4 class="title_h4">해외여행보험</h4>
-					<!-- s: 25-05-28 수정 -->
-					<dl>
-						<dt>계약자</dt>
-						<dd>김*대 (910101-*******)</dd>
-					</dl>					
-					<!-- e: 25-05-28 수정 -->
-					
-					<dl>
-							<dt>피보험자</dt>
-							<dd>김*대 (910101-*******)</dd>
-					</dl>					
-					<dl>
-							<dt>보험기간</dt>
-							<!-- s: 25-05-30 수정 -->
-							<dd>2025.03.24 00시~2025.03.28 19시</dd>
-							<!-- e: 25-05-30 수정 -->
-					</dl>
-					<dl>
-						<dt>할인 전 보험료</dt>
-						<dd>100,000원</dd>
-					</dl>
-					<dl>
-						<dt>할인금액</dt>
-						<dd>-25,000원
-							<div class="sub_text">다이렉트 할인(10%), 동반형할인(15%)</div>
-						</dd>
-					</dl>
-					<dl class="footer_dl">
-						<dt>
-								최종보험료
-						</dt>
-						<dd class="point">
-								<span>75,000</span> 원
-						</dd>
-					</dl>
-			</div>
-			<div class="btn_area">
-				{{> cp/button type="3" size="3" b-text="가입 내용 자세히 보기"}}
-			</div>
+
 			<!-- s: 25-05-07 -->
 			<div class="info_gray mg_ty2">
 				<!-- s: 25-05-28 수정 -->
@@ -79,7 +90,16 @@
 				{{/ cp/accordion }}
 			</div>
 
-			<!-- s: 25-05-07 수정 -->
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+					{{> cp/button type="1" size="1" b-text="계약서류를 차례대로 확인할게요" }}
+				</div>
+			</div>
+			<!-- e: 하단 버튼 영역 -->
+				
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
@@ -90,16 +110,16 @@
 			</ul>
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 25-05-07 수정 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel }}
+		<!-- e: 사이드 패널 -->
 	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
-			{{> cp/button type="1" size="1" b-text="계약서류를 차례대로 확인할게요" }}
-		</div>
-	</div>
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
