@@ -1,0 +1,43 @@
+/* popup */
+/* popup */
+.popup_wrap .popup_container .popup_inner .popup_bottom {
+	padding: var(--padding-5) var(--padding-8) var(--padding-9);
+}
+.popup_wrap .popup_container .popup_inner .popup_bottom .btn_area {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.popup_wrap .popup_container .popup_inner .popup_bottom .btn_area .hd_btn {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	min-width: 160px;
+}
+.popup_wrap.active .popup_container {
+	-webkit-transform: none;
+	transform: none;
+}
+.popup_wrap.full .popup_container {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 734px;
+	-webkit-transform: none;
+	transform: none;
+}
+.popup_wrap.bottom .popup_container {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 440px;
+	-webkit-transform: none;
+	transform: none;
+}
+.popup_wrap.bottom .popup_container .popup_inner {
+	border-radius: 32px;
+}
+.popup_wrap.layer .popup_container {
+	-webkit-transform: none;
+	transform: none;
+}
