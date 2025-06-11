@@ -52,6 +52,9 @@
 .guide_h4 ~ .guide_h4 {
 	margin-top: 60px;
 }
+.guide_h4.pc {
+	background-color: aquamarine;
+}
 
 .guide_dark_wrap {
 	display: flex;

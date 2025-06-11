@@ -1,16 +1,30 @@
 /* Component */
 
 // 완료용 infobox
-.info_summery {
+.info_summary {
 	padding: var(--padding-card-medium) var(--padding-card-small);
   border-radius: var(--radius-large2);
   background: var(--color-surface-secondary-subtler);
 
-	.title {
-		font-size: var(--font-size-heading-small);
-		font-weight: 700;
-		color: var(--color-text-bolder);
+
+	.summary_top {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-3);
 		margin-bottom: var(--gap-6);
+
+		.s_title {
+			font-size: var(--font-size-heading-small);
+			font-weight: 700;
+			color: var(--color-text-bolder);
+		}
+		.s_sub_title {
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
+		}
+		.badge_wrap {
+			width: auto;
+		}
 	}
 
 	.summery_inner {
@@ -32,13 +46,13 @@
 			}
 			.value {
 				display: flex;
-				align-items: baseline;
-				gap: 10px;
+				align-items: flex-end;
 				flex-wrap: wrap;
+				gap: 10px;
 
 				.val_price {
 					display: flex;
-					align-items: center;
+					align-items: baseline;
 					gap: 2px;
 					font-size: var(--font-size-display-medium);
 					font-weight: 700;
@@ -51,6 +65,9 @@
 					font-size: var(--font-size-body-large);
 					color: var(--color-text-disabled-on);
 					text-decoration: line-through;
+				}
+				.btn_area {
+					margin-bottom: var(--gap-3);
 				}
 			}
 			.sub_info {
@@ -69,48 +86,59 @@
 			}
 		}
 
-		.detail {
-			display: table;
+		.detail_wrap {
 			padding-bottom: var(--gap-3);
-			
-			> dl {
-				display: table-row;
 
-				~ dl {
-					dt, dd {
-						padding-top: 8px;
+			> * {
+				&:first-child {
+					& + .dt_table {
+						margin-top: var(--gap-4);
 					}
 				}
+			}
 
-				dt, dd {
-					font-size: var(--font-size-body-small);
-					vertical-align: top;
-				}
+			.dt_table {
+				display: table;
 
-				dt {
-					display: table-cell;
-					white-space: nowrap;
-					color: var(--color-text-subtle);
-
-					> span {
-						vertical-align: top;
-						&.point {
-							padding-left: 4px;
-							font-weight: 700;
+				> dl {
+					display: table-row;
+	
+					~ dl {
+						dt, dd {
+							padding-top: 8px;
 						}
 					}
-
-					~ dt {
-						padding-left: 32px;
+	
+					dt, dd {
+						font-size: var(--font-size-body-small);
+						vertical-align: top;
 					}
-
-					~ dd {
-						max-width: 212px;
-						padding-left: 12px;
+	
+					dt {
+						display: table-cell;
+						white-space: nowrap;
+						color: var(--color-text-subtle);
+	
+						> span {
+							vertical-align: top;
+							&.point {
+								padding-left: 4px;
+								font-weight: 700;
+							}
+						}
+	
+						~ dt {
+							padding-left: 32px;
+						}
+	
+						~ dd {
+							max-width: 212px;
+							padding-left: 12px;
+						}
 					}
-				}
-				dd {
-					display: table-cell;
+					dd {
+						display: table-cell;
+					}
 				}
 			}
 		}
@@ -436,5 +464,53 @@
 
 	& + .list_depth_ty2 {
 		margin-top: var(--gap-4);
+	}
+}
+
+
+// 상단 title
+.title_view_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: var(--gap-7);
+
+	.page_title {
+
+		> * {
+			& ~ * {
+				margin-top: var(--gap-3);
+			}
+		}
+
+		.p_info {
+			font-size: var(--font-size-heading-xsmall);
+			font-weight: 700;
+			color: var(--color-text-primary-bold);
+
+			& + .p_title {
+				margin-top: 4px;
+			}
+		}
+		.p_title {
+			font-size: var(--font-size-display-medium);
+			color: var(--color-text-static);
+		}
+	}
+
+	.sub_desc {
+		font-size: var(--font-size-body-small);
+		color: var(--color-text-subtle);
+	}
+
+	.btn_area {
+		&:not(.column){
+			&:has(button.hd_btn_s_4, button.hd_btn_s_5){
+				gap: var(--gap-3);
+			}
+		}
+		.hd_btn {
+			min-width: auto;
+		}
 	}
 }
