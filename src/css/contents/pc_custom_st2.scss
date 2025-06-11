@@ -136,13 +136,24 @@
 		.form_line {
 			display: flex;
 			flex-direction: column;
+
+			.row {
+				gap: var(--gap-8);
+			}
+
 			.label_tit {
 				flex: 1;
+				font-size: var(--font-size-heading-small);
+  			font-weight: 700;
 			}
 			.radio_group_wrap {
 				.rd_btn {
 					min-width: 134px;
 				}
+			}
+
+			.info_gray {
+				margin: var(--gap-5) 0 0;
 			}
 		}
 	}
@@ -164,5 +175,13 @@
 	.btn_area {
 		flex: none;
 		width: 100%;
+	}
+}
+
+
+// tab 관련
+.tab_wrap {
+	.tab_wrap_list_ty1 {
+		margin: 0;
 	}
 }
