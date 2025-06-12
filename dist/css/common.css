@@ -8661,9 +8661,9 @@ strong {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 }
 .step_list > li::before {
 	content: "";
@@ -8714,6 +8714,7 @@ strong {
 .step_list > li .modify {
 	width: 32px;
 	height: 32px;
+	margin-top: -3px;
 	padding: 7px;
 	border: 1px solid var(--color-button-icon-fill-border);
 	border-radius: 50%;
