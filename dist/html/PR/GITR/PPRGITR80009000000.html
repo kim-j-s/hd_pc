@@ -99,10 +99,11 @@
 				<div class="content">
 					<div class="title_view_wrap">
 						<div class="page_title">
-							<div class="p_info">가입내용확인</div>
+							<div class="p_info">보험료 결제</div>
 							<div class="p_title">보험료를 <strong>결제하면 가입이 완료</strong>돼요</div>
 						</div>
 					</div>
+
 					<div class="info_summary payment">
 						<div class="summary_top">
 							<div class="s_title">결제하실 금액</div>
@@ -121,10 +122,6 @@
 										<dt>할인금액</dt>
 										<dd>-25,000원</dd>
 									</dl>
-									<dl>
-										<dt>자동차보험 고객 할인<span class="point">5%</span></dt>
-										<dd>-2,000원</dd>
-									</dl>
 								</div>
 							</div>
 						</div>
@@ -136,9 +133,6 @@
 								</li>
 								<li>
 									<span class="dc_l">동반형할인 <strong class="point">5%</strong></span>
-								</li>
-								<li>
-									<span class="dc_l">다이렉트할인 <strong class="point">10%</strong></span>
 								</li>
 							</ul>
 						</div>
@@ -176,13 +170,13 @@
 									<!-- e: 25-05-14 수정 -->
 								</a>
 							</div>
-							<h3 class="title_h4">신용카드 정보 입력</h3>
+
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">카드사</div>
 									<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택">
 										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="카드사 선택"></div>
+											<div class="si_item" data-placeholder="은행 선택"></div>
 											<span class="si_stat">선택됨</span>
 										</div>
 									</div>
@@ -234,18 +228,24 @@
 								</div>
 								<div class="form_line">
 									<div class="label_tit">카드 할부</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="카드 할부 선택" onclick="openHDPopup(this,'card_period_select');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="개월 수 선택"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="카드 할부 선택" class="selectbox">
+											<option value="" selected>일시불</option>
+											<option value="">2개월</option>
+											<option value="">3개월</option>
+											<option value="">4개월</option>
+											<option value="">5개월</option>
+											<option value="">6개월</option>
+											<option value="">7개월</option>
+											<option value="">8개월</option>
+										</select>
 									</div>
 									<ul class="list_ty2">
 										<li>계약자 명의의 국내발급 카드로만 결제할 수 있어요. (법인, 가족카드 불가)</li>
 									</ul>
 								</div>
 								<!-- s: 현대카드 선택 시, 노출 -->
-								<div class="form_line">
+								<div class="form_line full">
 									<div class="checkbox_group_wrap column">
 										<div class="inp_checkbox rd_box">
 											<input type="checkbox" id="checkbox01-9" />
@@ -266,59 +266,11 @@
 							</div>
 
 							<!-- s: 카드 혜택 안내 배너 -->
-							<!-- s: 25-05-08 수정 -->
-							<div class="banner_slide_wrap">
-								<div id="card_reward_banner_wrap" class="swiper">
-									<div class="swiper-wrapper">
-										<a class="swiper-slide bann_wrap bann_ty1 co_ty2" href="#">
-											<div class="inner">
-												<!-- s: 25-05-30 수정 -->
-												<!-- s: 25-05-27 수정 -->
-												<span class="logo"><i class="hd_icon i_logo_366"></i></span>
-												<!-- e: 25-05-27 수정 -->
-												<!-- e: 25-05-30 수정 -->
-												<div class="bann_cont">
-													<div class="title">신한카드로 결제해 보세요</div>
-													<div class="desc">신한카드로 결제하면 포인트 100% 사용가능</div>
-												</div>
-											</div>
-										</a>
-										<a class="swiper-slide bann_wrap bann_ty1" href="#">
-											<div class="inner">
-												<!-- s: 25-05-30 수정 -->
-												<!-- s: 25-05-27 수정 -->
-												<span class="logo"><i class="hd_icon i_logo_367"></i></span>
-												<!-- e: 25-05-27 수정 -->
-												<!-- e: 25-05-30 수정 -->
-												<div class="bann_cont">
-													<div class="title">현대카드로 결제해 보세요</div>
-													<div class="desc">
-														M포인트 100% 사용가능<br />
-														계속보험료 결제 가능
-													</div>
-												</div>
-											</div>
-										</a>
-										<a class="swiper-slide bann_wrap bann_ty1 co_ty3" href="#">
-											<div class="inner">
-												<!-- s: 25-05-30 수정 -->
-												<!-- s: 25-05-27 수정 -->
-												<span class="logo"><i class="hd_icon i_logo_365"></i></span>
-												<!-- e: 25-05-27 수정 -->
-												<!-- e: 25-05-30 수정 -->
-												<div class="bann_cont">
-													<div class="title">삼성카드로 결제해 보세요</div>
-													<div class="desc">삼성카드로 결제하면 포인트 100% 사용가능</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</div>
-								<div class="swiper-pagination sp_ty1"></div>
-								<button class="swiper_button sbc_03 sbs_01 swiper_button_left"></button>
-								<button class="swiper_button sbc_03 sbs_01 swiper_button_right" aria-label="다음" disabled></button>
+							<div class="banner_box">
+								<img src="../../../images/temp/img_card_bann_temp1.png" alt="" />
+								<img src="../../../images/temp/img_card_bann_temp2.png" alt="" />
+								<img src="../../../images/temp/img_card_bann_temp3.png" alt="" />
 							</div>
-							<!-- e: 25-05-08 수정 -->
 							<!-- e: 카드 혜택 안내 배너 -->
 						</div>
 
@@ -489,40 +441,147 @@
 
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="panel_top"></div>
-
-					<div class="panel_cont">
-						<div class="panel_total">
-							<div class="inner">
-								<div class="title">최종 보험료</div>
-								<div class="right">
-									<del>1,563,393원</del>
-									<span class="price">7,200원</span>
-								</div>
-							</div>
+					<div class="info_cont">
+						<div class="tit_box">
+							<h3 class="pop_title_h3"></h3>
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+								<span class="text">수정</span>
+								<i class="hd_icon resetSvg"></i>
+							</button>
 						</div>
-
-						<div class="customer_info">
-							<div class="contact_list">
-								<div class="list">
-									<i class="icon call"></i>
-									<span class="info">
-										다이렉트 고객센터
-										<em>1899-6782</em>
-									</span>
-								</div>
-								<div class="list">
-									<i class="icon car"></i>
-									<span class="info">
-										자동차보험 전화가입
-										<em>1577-1001</em>
-									</span>
-								</div>
-							</div>
-							<ul class="list_depth_ty2">
-								<li>인터넷가입 보험료와 차이가 있어요</li>
+						<div class="data_list">
+							<ul>
+								<li>
+									<dl>
+										<dt class="country">여행지</dt>
+										<dd>멕시코</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt class="date">기간</dt>
+										<dd>2025.05.20 11시~2025.05.24 23시</dd>
+									</dl>
+								</li>
+								<!-- s: 단독(성인/미성년자녀) -->
+								<li>
+									<dl>
+										<dt class="birth">생년월일</dt>
+										<dd>19790101</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt class="gender">성별</dt>
+										<dd>남성</dd>
+									</dl>
+								</li>
+								<!-- e: 단독(성인/미성년자녀) -->
+								<!-- s: 피보험자다수 -->
+								<li>
+									<dl>
+										<dt class="person">여행자</dt>
+										<dd>19790101(남성) 외 3명</dd>
+									</dl>
+								</li>
+								<!-- e: 피보험자다수 -->
 							</ul>
 						</div>
+						<div class="info_gray">
+							<ol class="step_list">
+								<li class="active">
+									<dl>
+										<dt class="title">1.보험료 계산 결과</dt>
+										<dd>
+											<ul>
+												<li>선택: <span>표준형, 32,700원</span></li>
+												<li>할인: <span>다이렉트할인</span></li>
+											</ul>
+											<div class="info">보험료를 확인 중이에요</div>
+										</dd>
+									</dl>
+									<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
+										<span class="sr-only">수정</span>
+										<i class="hd_icon resetSvg"></i>
+									</button>
+								</li>
+								<li>
+									<dl>
+										<dt class="title">2.피보험자/계약자 정보</dt>
+										<dd>
+											<!-- s: CASE1-1. 성인단독 -->
+											<ul>
+												<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+											</ul>
+											<div class="info">정보를 입력 중이에요</div>
+											<!-- e: CASE1-1. 성인단독 -->
+											<!-- s: 미성년자단독, 피보험자다수 -->
+											<ul>
+												<!-- s: CASE1-2. 미성년자단독 -->
+												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+												<li>피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span></li>
+												<!-- e: CASE1-2. 미성년자단독 -->
+												<!-- s: CASE1-3. 피보험자다수 -->
+												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+												<li>피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span></li>
+												<!-- e: CASE1-3. 피보험자다수 -->
+											</ul>
+											<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
+											<!-- e: 미성년자단독, 피보험자다수 -->
+										</dd>
+									</dl>
+									<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
+										<span class="sr-only">수정</span>
+										<i class="hd_icon resetSvg"></i>
+									</button>
+								</li>
+								<li>
+									<dl>
+										<dt class="title">3.가입 내용 확인</dt>
+										<dd>
+											<ul>
+												<li>확인: <span>가입내용 및 계약서류</span></li>
+											</ul>
+											<div class="info">내용을 확인 중이에요</div>
+										</dd>
+									</dl>
+									<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
+										<span class="sr-only">수정</span>
+										<i class="hd_icon resetSvg"></i>
+									</button>
+								</li>
+								<li>
+									<dl>
+										<dt class="title">4.보험료 결제</dt>
+										<dd>
+											<div class="info">정보를 입력 중이에요</div>
+										</dd>
+									</dl>
+								</li>
+							</ol>
+						</div>
+					</div>
+
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+							<div class="list">
+								<i class="icon car"></i>
+								<span class="info">
+									자동차보험 전화가입
+									<em>1577-1001</em>
+								</span>
+							</div>
+						</div>
+						<ul class="list_depth_ty2">
+							<li>인터넷가입 보험료와 차이가 있어요</li>
+						</ul>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
@@ -543,32 +602,6 @@
 		</div>
 
 		<!-- s: popup area -->
-
-		<!-- s: 카드 할부 팝업 -->
-		<div class="popup_wrap bottom" id="card_period_select" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('card_period_select');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">카드 할부</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">일시불</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">3개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">4개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">5개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">6개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">6개월</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('card_period_select');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 카드 할부 팝업 -->
 		<!-- s: 현대카드 결제 혜택 안내 팝업 -->
 		<div class="popup_wrap bottom" id="pop_type04" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
@@ -614,30 +647,3 @@
 		<!-- e: popup area -->
 	</body>
 </html>
-<!-- s: 25-05-08 수정 -->
-<script>
-	$(document).ready(function () {
-		var bannerSwiper = new Swiper("#card_reward_banner_wrap", {
-			slidesPerView: 1,
-			updateOnWindowResize: true,
-			navigation: {
-				prevEl: ".swiper_button_left", //25-05-12
-				nextEl: ".swiper_button_right", //25-05-12
-			},
-			a11y: {
-				enabled: true,
-				prevSlideMessage: "이전 항목으로 이동",
-				nextSlideMessage: "다음 항목으로 이동",
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-				type: "bullets",
-				renderBullet: function (index, className) {
-					return `<span class="${className}" aria-label="배너${index + 1}번으로 이동"></span>`;
-				},
-			},
-		});
-	});
-</script>
-<!-- e: 25-05-08 수정 -->

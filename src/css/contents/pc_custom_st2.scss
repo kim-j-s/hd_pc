@@ -16,6 +16,10 @@
 
 .btn_area {
 	justify-content: flex-start;
+
+	& + .form_group_wrap {
+		margin-top: var(--gap-7);
+	}
 }
 
 .bottom_fix_wrap {
@@ -44,6 +48,7 @@
 // banner
 .banner_box {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	gap: var(--gap-5) var(--gap-8);
 
@@ -86,6 +91,12 @@
 		}
 	}
 
+	> .list_ty2 {
+		&.full {
+			margin-top: -16px;
+		}
+	}
+
 	.full {
 		flex-basis: 100%;
 
@@ -105,7 +116,6 @@
 		gap: var(--gap-8);
 	}
 
-
 	.label_tit {
 		.tooltip_wrap {
 			.tooltip_panel {
@@ -115,6 +125,10 @@
 				}
 			}
 		}
+	}
+
+	& + .banner_box {
+		margin-top: var(--gap-8);
 	}
 }
 

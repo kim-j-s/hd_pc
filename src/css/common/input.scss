@@ -278,6 +278,17 @@
 		}
 	}
 
+	&.card {
+		.comp_wrap_keypad_call {
+			.pin_area {
+				padding: 0;
+				&.default {
+					justify-content: center;
+				}
+			}
+		}
+	}
+
 	.dash {
 		font-size: 16px;
 	}
@@ -315,6 +326,65 @@
 		}
 		&.price {
 			margin-right:4px;
+		}
+	}
+	
+	//주민번호
+	&.birth {
+		padding: 3px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		width: 100%;
+		& > .input_text {
+			width: calc(50% - 8px);
+			
+		}
+		input {
+			height: 48px;
+			&:read-only {
+				text-align: center;
+			}
+		}
+		.id_pass_box {
+			display: flex;
+			align-items: center;
+			width: calc(50% - 8px);
+			gap: 4px;
+			.input_text {
+				border: none;
+			}
+			input {
+				padding: 0;
+				width: 20px;
+				height: 25px;
+				text-align: center;
+				border-bottom: 1px solid #6D7882;
+				border-radius: 0;
+			}
+			.id_pass {
+				line-height: 48px;
+				width: 100%;
+				font-size: 16px;
+				text-align: center;
+				background-color: var(--color-input-surface-disabled);
+				border-radius: 12px;
+			}
+			.id_pass2 {
+				line-height: 48px;
+				width: 100%;
+				font-size: 16px;
+				text-align: center;
+				border-radius: 12px;
+			}
+
+			&.read_only {
+
+				input {
+					border-bottom: 0;
+					background-color: transparent;
+				}			
+			}
 		}
 	}
 }
@@ -376,67 +446,13 @@
 	& > div {
 		flex: 1;
 	}
+	& > .int_txt {
+		flex: none;
+    font-size: var(--font-size-body-medium);
+	}
 	input {
 		padding: 0;
 		text-align: center;
-	}
-}
-//주민번호
-.birth {
-	padding: 3px;
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	width: 100%;
-	& > .input_text {
-		width: calc(50% - 8px);
-		
-	}
-	input {
-		height: 48px;
-		&:read-only {
-			text-align: center;
-		}
-	}
-	.id_pass_box {
-		display: flex;
-		align-items: center;
-		width: calc(50% - 8px);
-		gap: 4px;
-		.input_text {
-			border: none;
-		}
-		input {
-			padding: 0;
-			width: 20px;
-			height: 25px;
-			text-align: center;
-			border-bottom: 1px solid #6D7882;
-			border-radius: 0;
-		}
-		.id_pass {
-			line-height: 48px;
-			width: 100%;
-			font-size: 16px;
-			text-align: center;
-			background-color: var(--color-input-surface-disabled);
-			border-radius: 12px;
-		}
-		.id_pass2 {
-			line-height: 48px;
-			width: 100%;
-			font-size: 16px;
-			text-align: center;
-			border-radius: 12px;
-		}
-
-		&.read_only {
-
-			input {
-				border-bottom: 0;
-				background-color: transparent;
-			}			
-		}
 	}
 }
 .key_number {
@@ -468,6 +484,40 @@
 		.hd_btn_s_4 {
 			padding: 6px var(--padding-3);
 		}
+	}
+}
+
+
+//계약번호
+.contractNum {
+	padding: 0 16px;
+	width: 100%;
+	&.readonly,
+	&.disabled,
+	&.readonly .input_text,
+	&.disabled .input_text,
+	&.readonly input,
+	&.disabled input {
+		background-color: var(--color-input-surface-disabled);
+	}
+
+	& > .int_txt {
+		flex: none;
+    font-size: var(--font-size-body-medium);
+		padding-top: 2px;
+	}
+
+	.input_text  {
+		width: 60px;
+		&.grow {
+			margin : 0 4px;
+			flex-grow: 1;
+		}
+	}
+
+	input {
+		padding: 0;
+		text-align: left;
 	}
 }
 
@@ -560,6 +610,10 @@
 		.form_line,
 		.btn_area {
 			margin-top: var(--gap-5);
+
+			& ~ .info_gray { 
+				margin-top: var(--gap-5);
+			}
 		}
 		.inp_checkbox {
 			& + .radio_group_wrap {
@@ -607,6 +661,12 @@
 		& ~ .form_line,
 		& ~ .extra_area {
 			margin-top: var(--gap-8);
+		}
+
+		&.hidden {
+			+ .form_line {
+				margin-top: 0;
+			}
 		}
 	}
 

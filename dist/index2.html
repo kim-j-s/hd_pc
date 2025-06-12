@@ -11991,6 +11991,12 @@
 				}
 			});
 
+			$("tr").each(function () {
+				if ($(this).hasClass("del")) {
+					$(this).addClass("no_count");
+				}
+			});
+
 			// 수정내역 확인 목록
 			let today = new Date();
 			let year = today.getFullYear().toString().slice(-2);
