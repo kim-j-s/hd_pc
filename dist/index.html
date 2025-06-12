@@ -629,6 +629,13 @@
 							<td class="note"></td>
 						</tr>
 						<tr>
+							<td colspan="5"></td>
+							<td colspan="3">selectbox</td>
+							<td colspan="2" class="link"><a href="html/guide/guide/selectbox_pc.html" target="_blank">selectbox_pc</a></td>
+							<td class="complete" colspan="2"></td>
+							<td class="note"></td>
+						</tr>
+						<tr>
 							<td colspan="8">이메일 자동완성 가이드</td>
 							<td colspan="2" class="link"><a href="html/guide/guide/email.html" target="_blank">email</a></td>
 							<td class="complete" colspan="2"></td>
@@ -22533,7 +22540,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-06</td>
 							<td class="link"><a href="html/PR/GITR/PPRGITR80009000000.html" target="_blank" title="">PPRGITR80009000000</a></td>
-							<td class="complete"></td>
+							<td class="complete">ing</td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -28308,6 +28315,12 @@
 						// $this.css('background', 'green');
 						$this.closest("tr").addClass("no_count");
 					}
+				}
+			});
+
+			$("tr").each(function () {
+				if ($(this).hasClass("del")) {
+					$(this).addClass("no_count");
 				}
 			});
 

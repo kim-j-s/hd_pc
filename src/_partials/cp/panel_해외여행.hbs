@@ -1,0 +1,82 @@
+<div class="side_panel">
+	<div class="info_cont">
+		<div class="tit_box">
+			<h3 class="pop_title_h3">{{panel-title}}</h3>
+			<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
+				<span class="text">수정</span>
+				<i class="hd_icon resetSvg"></i>
+			</button>
+		</div>
+		<div class="data_list">
+			<ul>
+					<li>
+							<dl>
+									<dt class="country">여행지</dt>
+									<dd>멕시코</dd>
+							</dl>
+					</li>
+					<li>
+							<dl>
+									<dt class="date">기간</dt>
+									<dd>2025.05.20 11시~2025.05.24 23시</dd>
+							</dl>
+					</li>
+					<!-- s: 단독(성인/미성년자녀) -->
+					<li>
+							<dl>
+									<dt class="birth">생년월일</dt>
+									<dd>19790101</dd>
+							</dl>
+					</li>
+					<li>
+							<dl>
+									<dt class="gender">성별</dt>
+									<dd>남성</dd>
+							</dl>
+					</li>
+					<!-- e: 단독(성인/미성년자녀) -->
+					<!-- s: 피보험자다수 -->
+					<li>
+							<dl>
+									<dt class="person">여행자</dt>
+									<dd>19790101(남성) 외 3명</dd>
+							</dl>
+					</li>
+					<!-- e: 피보험자다수 -->
+			</ul>
+		</div>
+		{{> @partial-block }}
+	</div>
+	
+	<div class="panel_total">
+		<div class="inner">
+			<div class="title">최종 보험료</div>
+			<div class="right">
+				<del>1,563,393원</del>
+				<span class="price">7,200원</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="customer_info">
+		<div class="contact_list">
+			<div class="list">
+				<i class="icon call"></i>
+				<span class="info">
+					다이렉트 고객센터
+					<em>1899-6782</em>
+				</span>
+			</div>
+			<div class="list">
+				<i class="icon car"></i>
+				<span class="info">
+					자동차보험 전화가입
+					<em>1577-1001</em>
+				</span>
+			</div>
+		</div>
+		<ul class="list_depth_ty2">
+			<li>인터넷가입 보험료와 차이가 있어요</li>
+		</ul>
+	</div>
+</div>

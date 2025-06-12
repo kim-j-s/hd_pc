@@ -372,6 +372,10 @@
 				}
 			}
 
+			.list_ty2 {
+				margin-top: 4px;
+			}
+
 			&.oai_lock {
 				overflow: hidden;
 				height: 100%;
@@ -563,10 +567,6 @@
 	// 세부형식
 	&.detail2 {
 		background-image: url(../images/content/bi/icon_stepper_car_detail2.svg);
-	}
-	// 주택유형
-	&.home {
-		background-image: url(../images/content/bi/icon_stepper_car_home.svg);
 	}
 	// 주택유형
 	&.home {
