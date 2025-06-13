@@ -399,9 +399,11 @@
 								<!-- e: 피보험자다수 -->
 							</ul>
 						</div>
+
 						<div class="info_gray">
 							<ol class="step_list">
-								<li>
+								<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+								<li class="active">
 									<dl>
 										<dt class="title">1.보험료 계산 결과</dt>
 										<dd>
@@ -417,17 +419,14 @@
 										<i class="hd_icon resetSvg"></i>
 									</button>
 								</li>
-								<!-- 해당 단계에 active 클래스 추가 -->
 								<li>
 									<dl>
 										<dt class="title">2.피보험자/계약자 정보</dt>
 										<dd>
 											<!-- s: CASE1-1. 성인단독 -->
-											<!-- <ul>
-														<li>
-															입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
-														</li>
-													</ul> -->
+											<ul>
+												<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+											</ul>
 											<div class="info">정보를 입력 중이에요</div>
 											<!-- e: CASE1-1. 성인단독 -->
 											<!-- s: 미성년자단독, 피보험자다수 -->
@@ -465,7 +464,7 @@
 										<i class="hd_icon resetSvg"></i>
 									</button>
 								</li>
-								<li class="active">
+								<li>
 									<dl>
 										<dt class="title">4.보험료 결제</dt>
 										<dd>

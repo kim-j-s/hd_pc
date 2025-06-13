@@ -244,6 +244,16 @@
 }
 
 
+// calendar
+.ui-datepicker {
+	// top: calc(50% - 200px) !important;
+	// width: 440px;
+	// height: 400px;
+	// margin: 0 auto;
+	// border-radius: var(--radius-xlarge2);
+}
+
+
 // 보험료 확인
 .guarantee_choice_wrap {
 	display: flex;
@@ -292,4 +302,6 @@
 		}
 	}
 }
+
+
 
