@@ -220,12 +220,19 @@ a,
 button,
 select {
 	&.focus {
-		outline: 2px dashed #333;
+		outline: 2px solid #000;
 	}
 }
 input:focus {
 	+ label {
-		outline: 2px dashed #333;
+		outline: 2px solid #000;
+	}
+}
+.inp {
+	input {
+		&:focus {
+			outline: 2px solid #000;
+		}
 	}
 }
 

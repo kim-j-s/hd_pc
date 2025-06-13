@@ -92,9 +92,6 @@
 			color: var(--color-text-disabled-on) !important;
 			background-color: var(--color-input-surface-disabled);
 		}
-		&:focus {
-			outline: none;
-		}
 	}
 
 	&.readonly,
