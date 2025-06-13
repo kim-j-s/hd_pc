@@ -22,19 +22,6 @@
 	}
 }
 
-.bottom_fix_wrap {
-	margin-top: var(--gap-11);
-	padding: var(--padding-5) 0 var(--padding-6);
-
-	.btn_area {
-		justify-content: space-between;
-	}
-	.hd_btn {
-		min-width: 160px;
-	}
-}
-
-
 // icon button
 .btn_rd_modify {
 	width: 24px;
@@ -42,6 +29,23 @@
 	background: url(../images/icon/icon_reset_ty2.svg) no-repeat center /12px auto;
 	border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
 	border-radius: 100%;
+}
+
+// 하단 버튼
+.bottom_fix_wrap {
+	margin-top: var(--gap-11);
+	padding: var(--padding-5) 0 var(--padding-6);
+
+	.btn_area {
+		justify-content: space-between;
+
+		&.center {
+			justify-content: center;
+		}
+	}
+	.hd_btn {
+		min-width: 160px;
+	}
 }
 
 
@@ -54,10 +58,19 @@
 
 	> * {
 		flex: 0 1 calc(50% - 16px);
+		
+	}
+	
+	> img {
+		width: calc(50% - 16px);
 	}
 
 	& + .btn_area {
 		margin-top: 52px;
+	}
+
+	& + [class^=list_]{
+		margin-top: var(--gap-5);
 	}
 }
 
@@ -69,6 +82,15 @@
 
 	.acd_item {
 		border-radius: var(--radius-large2);
+		.acd_head {
+			.acd_btn{
+				// padding: var(--number-3) 0;
+			} 
+		}		
+	}
+
+	& + .banner_box {
+		margin-top: var(--gap-8);
 	}
 }
 
@@ -177,6 +199,7 @@
 	}
 }
 
+
 // file 관련
 .file_upload_wrap {
 	display: flex;
@@ -209,3 +232,64 @@
 .text_lg {
 	font-size:  var(--font-size-body-medium);
 }
+
+
+// info_gray
+.info_gray {
+	.badge_wrap {
+		& + dl {
+			margin-top: 4px;
+		}
+	}
+}
+
+
+// 보험료 확인
+.guarantee_choice_wrap {
+	display: flex;
+	width: 100%;
+	transition: none;
+	gap: var(--gap-5);
+
+	&:after {
+		content: none;
+	}
+
+	&.active {
+		background-color: var(--color-surface-white-subtle);
+	}
+}
+
+.guarantee_item {
+	flex: 1;
+	border: var(--border-width-static-regular, 1px) solid var(--color-border-secondary-light);
+	border-radius: var(--radius-large2);
+
+	&.active {
+		flex-grow: 2;
+	}
+
+	& + .guarantee_item {
+		&:before {
+			content: none;
+		}
+	}
+
+	.guarantee_item_top {
+		flex-direction: column;
+		gap: var(--gap-8);
+
+		.git_r {
+			text-align: center;
+		}
+	}
+
+	.guarantee_item_cont {
+		.gic {
+			.tit {
+				background: none;
+			}
+		}
+	}
+}
+
