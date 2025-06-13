@@ -136,10 +136,6 @@ button:focus {
 	background-color: inherit;
 }
 
-.inp_radio input:focus + label,
-.inp_checkbox input:focus + label {
-	// outline: 2px dashed #333;
-}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -216,6 +212,30 @@ caption {
 ::-ms-reveal {
 	display: none;
 }
+
+
+
+/* focus */
+a,
+button,
+select {
+	&.focus {
+		outline: 2px dashed #333;
+	}
+}
+input:focus {
+	+ label {
+		outline: 2px dashed #333;
+	}
+}
+
+
+
+
+
+
+
+
 
 /* 모바일 디바이스 분기 */
 @media screen and (max-width: 375px) {
