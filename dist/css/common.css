@@ -380,6 +380,9 @@ strong {
 .no_list_area .desc.tac {
 	text-align: center;
 }
+.card_item_wrap[style*="display: none"] + .no_list_area {
+	margin-top: var(--gap-8);
+}
 [class*="file_upload_wrap"] {
 	padding: var(--padding-8) var(--padding-7);
 	background: var(--color-surface-information-subtler);
