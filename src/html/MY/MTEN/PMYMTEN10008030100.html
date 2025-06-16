@@ -1,0 +1,38 @@
+{{#> layout/default page-title="인정자 정보수정 | 마이페이지"}}
+
+<!-- s: Bottom 팝업 -->
+{{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="가입경력인정대상자 정보"}}
+<div class="popup_cont">
+		<div class="popup_content">
+			<div class="form_group_wrap">						
+				<div class="form_line">
+					<div class="label_tit">이름</div>
+					{{> cp/text type="text" placeholder="이름 입력" inp-title="이름 입력" }}
+				</div>	
+				<div class="form_line">
+					<div class="label_tit">주민등록번호</div>
+					<div class="comp_wrap birth">
+						{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
+						<span class="dash">-</span>
+						{{> cp/keypad7 case1=true kt="주민등록번호 뒷자리 입력"}}
+					</div>
+				</div>		
+				<div class="form_line">
+					<div class="label_tit">피보험자와의 관계</div>
+					{{> cp/selectitem si_ph="선택해주세요." si_title="피보험자와의 관계 선택" si_item="선택해주세요." }}
+				</div>	
+			</div>
+		</div>
+</div>
+
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="1" b-text="확인" disabled=true}}
+		<!-- s: 필수값 입력 후 버튼 활성화 처리 -->
+		<!-- {{> cp/button type="1" size="1" b-text="확인"}} -->
+		<!-- e: 필수값 입력 후 버튼 활성화 처리 -->
+	</div>
+</div>
+{{/ popup/popup_bottom}}
+<!-- e: Bottom 팝업 -->
+{{/ layout/default }}
