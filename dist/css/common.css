@@ -6211,6 +6211,9 @@ strong {
 .hd_icon.shareSvg {
 	background-image: url(../images/icon/icon_share.svg);
 }
+.hd_icon.iic {
+	background-image: url(../images/icon/icon_insurance_check.svg);
+}
 .hd_icon.jpgSvg {
 	background-image: url(../images/icon/icon_jpg.svg);
 }
@@ -11123,6 +11126,7 @@ strong {
 	margin-top: var(--gap-6);
 }
 .title_h3 + .text_sub,
+.title_h3 + .list_ty3,
 .title_h3 + .search_reult_list_container {
 	margin-top: var(--gap-4);
 }

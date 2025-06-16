@@ -477,7 +477,6 @@
 	margin-bottom: var(--gap-8);
 
 	.page_title {
-
 		> * {
 			& ~ * {
 				margin-top: var(--gap-3);
@@ -505,6 +504,7 @@
 	}
 
 	.btn_area {
+		flex: none;
 		&:not(.column){
 			&:has(button.hd_btn_s_4, button.hd_btn_s_5){
 				gap: var(--gap-3);

@@ -1,20 +1,50 @@
-/* Input */
+/* breadcrumb */
+// breadcrumb
 .breadcrumb {
-	&_inner {
-		text-align: right;
-		&_list {
-			display: inline-flex;
-			align-items: center;
-			.bc_home {
-				display: inline-flex;
-				width: 20px;
-				height: 20px;
-				background-color: blue;
+	flex: none;
+	padding-top: var(--padding-3);
+	+ .container {
+		padding-top: var(--gap-8);
+	}
+}
+
+.breadcrumb_inner {
+	width: 1188px;
+	margin: 0 auto;
+	padding-right: 4px;
+	
+	&_list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		> li {
+			position: relative;
+			font-size: var(--font-size-navigation-depth-small);
+			line-height: 24px;
+			color: var(--color-text-subtle);
+
+			> a,
+			> span {
+				display: block;
 			}
-			> li {
-				position: relative;
+
+			&:last-child {
+				font-weight: 700;
 			}
-			
+
+			& + li {
+				padding-left: 24px;
+				&::after {
+					position: absolute;
+					left: 4px;
+					top: calc(50% - 8px);
+					content:'';
+					width: 16px;
+					height: 16px;
+					background:url(../../../images/icon/arrowRight_ty3.svg) no-repeat center / 16px auto;
+				}
+			}
 		}
 	}
 }

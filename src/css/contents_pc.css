@@ -8,3 +8,7 @@
 
 /* PC용 component  */
 @import 'contents/pc_custom_st3.scss';
+
+
+/* breadcrumb */
+@import 'common/breadcrumb.scss';
