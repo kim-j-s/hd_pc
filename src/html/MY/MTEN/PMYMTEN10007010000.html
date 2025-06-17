@@ -8,9 +8,9 @@
 			<div class="item">
 				<h3 class="title_h3">운전자/연령 범위변경</h3>
 				<ul class="list_ty3">
-                    <li>자동차보험의 운전자 범위한정특약 또는 연령한정특약을 변경하는 서비스입니다.</li>
-                    <li>운전자 범위/연령특약 <span class="point">변경 효력은 계약변경 기준일의 00시부터 발생</span>합니다.</li>
-                </ul>
+					<li>자동차보험의 운전자 범위한정특약 또는 연령한정특약을 변경하는 서비스입니다.</li>
+					<li>운전자 범위/연령특약 <span class="point">변경 효력은 계약변경 기준일의 00시부터 발생</span>합니다.</li>
+				</ul>
 			</div>
 
 			<div class="item">
@@ -75,14 +75,14 @@
 						</p>
 					</div>
 					<div class="item">
-						<!-- s: 25-06-16 수정 -->
-						{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuld=100122" }}
-						<!-- e: 25-06-16 수정 -->
+						<div class="btn_area between">
+							<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
+								<span class="text">고객센터 연결(1588-5656)</span>
+							</a>
+							{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuld=100122" }}
+						</div>
 					</div>
 					<div class="item">
-						<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
-							<span class="text">고객센터 연결(1588-5656)</span>
-						</a>
 					</div>							
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="1" b-text="다음"}}
+		{{> cp/button type="1" size="2" b-text="다음"}}
 	</div>
 </div>
 {{/ popup/popup_full}}

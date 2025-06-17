@@ -1,12 +1,23 @@
 {{#> layout/default page-title="자동차보험선택 | 마이페이지"}}
 	<div id="wrap" class="wrap">
 		{{> layout/header_pc h-title="자동차보험선택"  h-ins="pop_insChk" }}
+		{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+
 		<div id="container" class="container">
 			<div class="content">
-
-				<p class="text_sub">
-					대상 계약을 선택해주세요.
-				</p>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>운전자 범위/연령 변경</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
+				</div>
 
 				<!-- s: 25-05-23 -->
 				<div class="card_item_wrap ty3">
@@ -114,6 +125,10 @@
 				<!-- e: 꼭 알아두세요 -->
 			</div>
 		</div>
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 	<!-- s: 자동차 배서 메뉴 -->
 	{{> pages/pop1 }}

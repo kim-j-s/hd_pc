@@ -1,18 +1,23 @@
 {{#> layout/default page-title="운전자범위 선택 | 마이페이지"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc h-title="운전자범위 선택" }}
+	{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					변경할 운전자 범위를 <br>선택해주세요
-				</h2>
-				<div class="btn_area basic">
-					{{> cp/button type="3" size="5" b-text="가입경력인정제도 안내" rightIcon="arrowRightSvg" popup="ex_popup_bottom"}}
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						변경할 운전자 범위를 선택해주세요
+					</h2>
+					<div class="btn_area">
+						{{> cp/button type="3" size="5" b-text="가입경력인정제도 안내" rightIcon="arrowRightSvg" popup="ex_popup_bottom"}}
+					</div>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
 				</div>
 			</div>
-			<!-- e: content_top -->
 
 			<div class="info_gray">
 				<dl>
@@ -58,17 +63,22 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="본인만으로" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 고정 버튼 영역 -->
 		</div>
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="선택 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="본인만으로" }} -->
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
