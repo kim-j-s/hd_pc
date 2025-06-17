@@ -1,9 +1,15 @@
-{{#> layout/guide page-title="selectbox >"}}
+{{#> layout/guide page-title="selectbox"}}
 
 <div class="guide_h1">Select_box - PC 버전</div>
 
 <div class="guide_h4 pc">기본 Selectbox</div>
 {{#> cp/selectbox_pc s-title="select 선택" }}
+	<option value="" selected>선택 옵션값 1</option>
+	<option value="">선택 옵션값 2</option>
+{{/ cp/selectbox_pc}}
+
+<div class="guide_h4 pc">Selectbox Case - Type2</div>
+{{#> cp/selectbox_pc s-class="ty2" s-title="select 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}

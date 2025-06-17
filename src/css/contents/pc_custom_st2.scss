@@ -12,6 +12,12 @@
 			background-image: url(../images/icon/icon_reset_ty2.svg);
 		}
 	}
+
+	&.short_cut {
+		padding-right: 20px;
+		font-size: var(--font-size-label-medium);
+		background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 2px center/16px auto;
+	}
 }
 
 .btn_area {
@@ -19,6 +25,26 @@
 
 	& + .form_group_wrap {
 		margin-top: var(--gap-7);
+	}
+}
+
+.btn_link {
+	&.price_btn {
+		padding-right: 22px;
+		background: none;
+		border-radius:0;
+	}
+}
+.price_btn {
+	&:after {
+		content:'';
+		position: absolute;
+		top: 0;
+		right : 0;
+		width: 20px;
+		height: 20px;
+		background: url(../images/icon/arrowRight_ty6.svg) no-repeat right center/20px auto;
+		transform: rotate(90deg);
 	}
 }
 
@@ -301,7 +327,77 @@
 			}
 		}
 	}
+
+	.gi_radio {
+		input:checked {
+			flex: 2;
+		}
+	}
+}
+
+
+.guarantee_container {
+	min-height: auto;
 }
 
 
 
+
+// accordion
+.acd_item {
+	&.acd_item_ty2 {
+		.acd_cont {
+			.inner {
+				display: flex;
+				flex-direction: row;
+
+				.item_text {
+					flex: 1;
+				}
+			}
+		}
+	}
+}
+
+.coverage_item_list_ty3 {
+	> .list {
+		display: flex;
+		flex-direction: row;
+
+		& ~ .list {
+			margin-top: var(--gap-5);
+		}
+
+		.detail_list {
+			flex: 1;
+
+			.item_inner {
+				display: flex;
+				gap: 8px;
+	
+				.hd_btn {
+					flex: 0 0 auto;
+				}
+				& + .cont_text_sub {
+					margin-top: 5px;
+				}
+			}
+	
+			.inp_checkbox {
+				.chk_label {
+					padding-left: 0;
+					width: 20px;
+					height: 20px;
+				}
+	
+				input[type=checkbox]{
+					left: 0;
+				}
+			}
+	
+			.chk_lby2 {
+				padding: 5px 0 0 28px;
+			}
+		}
+	}
+}

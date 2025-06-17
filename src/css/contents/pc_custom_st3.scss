@@ -241,6 +241,10 @@
 			}
 		}
 	}
+
+	& + .acc_group {
+		margin-top: var(--gap-11);
+	}
 }
 
 
@@ -477,6 +481,7 @@
 	margin-bottom: var(--gap-8);
 
 	.page_title {
+
 		> * {
 			& ~ * {
 				margin-top: var(--gap-3);
@@ -504,7 +509,6 @@
 	}
 
 	.btn_area {
-		flex: none;
 		&:not(.column){
 			&:has(button.hd_btn_s_4, button.hd_btn_s_5){
 				gap: var(--gap-3);
@@ -538,6 +542,22 @@
 	& + .inp_checkbox {
 		margin-top: var(--gap-5);
 	}
+
+	&.ty2 {
+		.selectbox {
+			width: auto;
+			padding: 0 28px 0 0;
+			background-position: right center;
+			font-size: var(--font-size-heading-small);
+			font-weight: 700;
+			border: none;
+			border-radius: 0;
+		}
+
+		& + .form_group_wrap {
+			margin-top: var(--gap-5);
+		}
+	}
 }
 
 .selectbox_btn {
@@ -563,6 +583,72 @@
 			border: var(--border-width-static-regular) solid var(--color-input-border);
 			pointer-events: none;
 			transition: all 0.3s;
+		}
+	}
+}
+
+
+
+
+// 보험료확인 radio
+.guarantee_item .gi_radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.guarantee_item .gi_radio input + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+//coverage_item_list
+.coverage_item_list_ty3 {
+	> .list {
+		display: flex;
+		flex-direction: row;
+
+		& ~ .list {
+			margin-top: var(--gap-5);
+		}
+
+		.detail_list {
+			flex: 1;
+
+			.item_inner {
+				display: flex;
+				gap: 8px;
+	
+				.hd_btn {
+					flex: 0 0 auto;
+				}
+				& + .cont_text_sub {
+					margin-top: 5px;
+				}
+			}
+	
+			.inp_checkbox {
+				.chk_label {
+					padding-left: 0;
+					width: 20px;
+					height: 20px;
+				}
+	
+				input[type=checkbox]{
+					left: 0;
+				}
+			}
+	
+			.chk_lby2 {
+				padding: 5px 0 0 28px;
+			}
 		}
 	}
 }
