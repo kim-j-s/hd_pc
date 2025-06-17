@@ -26,10 +26,63 @@
 			<div class="guarantee_select_wrap">
 				<div class="select_item">
 					<div class="item_radio">
-						<input type="radio" name="g_item" id="">
-						<label for="" ></label>
+						<input type="radio" name="g_item" id="g_item_ty01">
+						<label for="g_item_ty01">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type01">
+									<span class="text">실속 <em>5개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								부담없이 가볍게
+								<em><strong>7,200</strong>원</em>
+							</span>
+							<span class="item_desc">
+								아프거나 다칠땐 기본!<br>
+								여권분실부터 항공기 지연까지
+							</span>
+						</label>
 					</div>
-					<div class="item_visual"></div>
+				</div>
+				<div class="select_item">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty02">
+						<label for="g_item_ty02">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type02">
+									<span class="text">표준 <em>12개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								부담없이 가볍게
+								<em><strong>7,200</strong>원</em>
+							</span>
+							<span class="item_desc">
+								아프거나 다칠땐 기본!<br>
+								여권분실부터 항공기 지연까지
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty03">
+						<label for="g_item_ty03">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type03">
+									<span class="text">고급 <em>23개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								부담없이 가볍게
+								<em><strong>7,200</strong>원</em>
+							</span>
+							<span class="item_desc">
+								아프거나 다칠땐 기본!<br>
+								여권분실부터 항공기 지연까지
+							</span>
+						</label>
+					</div>
 				</div>
 			</div>
 
@@ -64,8 +117,8 @@
 								<li class="list">
 									<div class="detail_list"  id="point_chk1_cont">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-1" lbled-title="point_chk1_cont" }}
-											{{> cp/button class="short_cut" b-text="질병사망및80%고도후유장해" }}
+											{{> cp/checkbox labelname="질병사망및80%고도후유장해" id="checkbox02-1" lbled-title="point_chk1_cont" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 										<div class="chk_lby2">
 											<div class="cont_text_sub">계약자 본인 외 가족/동반인은 사망보장 미가입</div>
@@ -76,8 +129,8 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-2" }}
-											{{> cp/button class="short_cut" b-text="해외여행 상해_해외의료실비보장" }}
+											{{> cp/checkbox labelname="해외여행 상해_해외의료실비보장" id="checkbox02-2" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -85,9 +138,9 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-3" }}
-											{{> cp/button class="short_cut" b-text="해외여행 질병_해외의료실비보장" }}
-											<span class='badge_wrap'><supan class='hd_badge outline solid_pastel c_secondary size_m'>새로 나왔어요</supan></span>
+											{{> cp/checkbox labelname="해외여행 질병_해외의료실비보장" id="checkbox02-3" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
+											<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_secondary size_m'>새로 나왔어요</span></span>
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -95,8 +148,8 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-4" }}
-											{{> cp/button class="short_cut" b-text="해외여행 상해급여_국내의료실비보장(통원한도:20만원)" }}
+											{{> cp/checkbox labelname="해외여행 상해급여_국내의료실비보장(통원한도:20만원)" id="checkbox02-4" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -104,8 +157,8 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-5" }}
-											{{> cp/button class="short_cut" b-text="해외여행 질병급여_국내의료실비보장(통원한도:20만원)" }}
+											{{> cp/checkbox labelname="해외여행 질병급여_국내의료실비보장(통원한도:20만원)" id="checkbox02-5" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -113,8 +166,8 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-6" }}
-											{{> cp/button class="short_cut" b-text="해외여행 상해비급여_국내의료실비보장(통원한도:20만원)"}}
+											{{> cp/checkbox labelname="해외여행 상해비급여_국내의료실비보장(통원한도:20만원)" id="checkbox02-6" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -122,8 +175,8 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/checkbox labelname="" id="checkbox02-7" }}
-											{{> cp/button class="short_cut" b-text="해외여행 질병비급여_국내의료실비보장(통원한도:20만원)" }}
+											{{> cp/checkbox labelname="해외여행 질병비급여_국내의료실비보장(통원한도:20만원)" id="checkbox02-7" }}
+											{{> cp/button class="short_cut" b-text="보장 상세보기" }}
 										</div>
 									</div>
 									{{> cp/linkButton bl_class="price_btn" bl_text="5천만원" role_b=true question_tit="가입조건변경"}}
@@ -316,3 +369,16 @@
 
 <!-- e: popup area -->
 {{/ layout/default }}
+
+
+<script>
+	$(function(){
+		if($('.guarantee_select_wrap').length){
+			$('.guarantee_select_wrap input[name="g_item"]').on('change', function(){
+				$(this).closest('.guarantee_select_wrap').find('.select_item').removeClass('active');
+				$(this).closest('.select_item').addClass('active');
+			})
+		}
+	})
+
+</script>
