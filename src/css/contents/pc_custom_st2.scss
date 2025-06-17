@@ -75,6 +75,18 @@
 }
 
 
+// card
+.card_item_wrap {
+	.card_item {
+		.btn_area {
+			.hd_btn {
+				flex: 1;
+			}
+		}
+	}
+}
+
+
 // banner
 .banner_box {
 	display: flex;
@@ -161,6 +173,12 @@
 					max-width: 836 px;
 				}
 			}
+		}
+	}
+
+	.row {
+		.form_line {
+			margin-top: 0;
 		}
 	}
 

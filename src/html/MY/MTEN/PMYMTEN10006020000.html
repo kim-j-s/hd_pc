@@ -1,16 +1,23 @@
-<!-- s: 25-05-19 수정 -->
 {{#> layout/default page-title="단기운전자 확대특약 변경/취소 | 마이페이지"}}
-<!-- e: 25-05-19 수정 -->
 	<div id="wrap" class="wrap">
-		<!-- s: 25-05-19 수정 -->
 		{{> layout/header_pc h-title="단기운전자 확대특약 변경/취소" }}
-		<!-- e: 25-05-19 수정 -->
+		{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+
 		<div id="container" class="container">
 			<div class="content">
-
-				<p class="text_sub">
-					대상 계약을 선택해주세요.
-				</p>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>단기운전자 확대특약 신청</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
+				</div>
 
 				<!-- s: 25-05-23 -->
 				<div class="card_item_wrap ty3">
@@ -101,6 +108,9 @@
 			<!-- // container -->
 		</div>
 
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

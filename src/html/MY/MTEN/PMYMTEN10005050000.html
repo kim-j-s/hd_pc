@@ -1,19 +1,25 @@
 {{#> layout/default page-title="신청정보 확인 | 마이페이지"}}
 	<div id="wrap" class="wrap">
 		{{> layout/header_pc h-title="" }}
+		{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+		
 		<div id="container" class="container">
 			<div class="content">
-
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						<strong>신청한 내용</strong>이 맞는지<br>
-						확인해주세요
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>단기운전자 확대특약 신청</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>신청한 내용</strong>이 맞는지 확인해주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
 				</div>
-				<!-- e: content_top -->
 
-				<h3 class="title_h3">신청정보</h3>
+				<h3 class="title_h3">신청내용</h3>
 				<div class="table_wrap">
 					<table class="table">
 						<caption>자동차번호, 신청기간, 가입내용 제공</caption>
@@ -44,14 +50,14 @@
 				<h3 class="title_h3">보험료</h3>
 				<div class="table_wrap">
 					<table class="table">
-						<caption>납입 보험료 제공</caption>
+						<caption>결제 보험료 제공</caption>
 						<colgroup>
 							<col style="width:35%;">
 							<col style="width:65%;">
 						</colgroup>
 						<tbody>
 							<tr>
-								<th scope="row">납입 보험료</th>
+								<th scope="row">결제 보험료</th>
 								<td>
 									<strong class="point">15,000원</strong>
 								</td>
@@ -64,20 +70,21 @@
 					{{> cp/checkbox checkbox_class="rd_box" id="checkbox01-1" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 신청 내용과 보험료를 확인했습니다."}}
 				</div>
 
-				
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
+					</div>
+				</div>
+				<!-- s: 하단 고정 버튼 영역 -->
 			</div>
-
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="다음" disabled=true}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

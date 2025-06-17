@@ -1,8 +1,10 @@
 {{#> layout/default page-title="변경완료 | 마이페이지"}}
 	<div id="wrap" class="wrap">
 		<!-- s: 25-06-02 수정 -->
-		{{> layout/header_pc no-header=true }}
+		{{> layout/header_pc h-title="" }}
 		<!-- e: 25-06-02 수정 -->
+		{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
+
 		<div id="container" class="container">
 			<div class="content">
 
@@ -13,7 +15,7 @@
 						<!-- e: 25-05-07 수정 -->
 					</div>
 					<h2 class="process_title">
-						<strong>단기운전자 확대 특약 신청이<br> 완료되었습니다.</strong>
+						<strong>단기운전자 확대 특약 신청이 완료되었습니다.</strong>
 					</h2>
 				</div>
 
@@ -22,8 +24,7 @@
 					<dl>
 						<dt>가입기간</dt>
 						<dd>
-							2025.01.22 00시 ~<br>
-							2025.01.24 24시(1일)
+							2025.01.22 00시 ~ 2025.01.24 24시(1일)
 						</dd>
 					</dl>
 					<dl>
@@ -38,21 +39,21 @@
 					</dl>
 				</div>
 
-				
-				
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="홈으로"}}
+					</div>
+				</div>
+				<!-- s: 하단 고정 버튼 영역 -->
 			</div>
 
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="홈으로"}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
