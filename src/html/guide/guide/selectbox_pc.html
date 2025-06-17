@@ -2,19 +2,42 @@
 
 <div class="guide_h1">Select_box - PC 버전</div>
 
-<div class="guide_h4">기본 Selectbox</div>
+<div class="guide_h4 pc">기본 Selectbox</div>
 {{#> cp/selectbox_pc s-title="select 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 
 
-<div class="guide_h4">버튼 Selectbox (팝업 열리는 Case)</div>
-<div class="selectbox_btn">
+<!-- <div class="guide_h4" style="background-color: rgb(154, 219, 31);">버튼 Selectbox (팝업 열리는 Case) - 작업중</div> -->
+<!-- <div class="selectbox_btn">
 	<button type="button" class="s_btn" title="선택 팝업 호출">
 		<span>선택해주세요.</span>
 	</button>
 	<span class="si_stat">선택됨</span>
-</div>
+</div> -->
+<!-- {{> cp/selectitem si_ph="선택해주세요." si_title="선택 팝업 호출" si_popup="pop_type01" }} -->
 
+
+
+<!-- s: popup area -->
+
+	<!-- s: pop_type01 -->
+	{{#> popup/popup_bottom popup-id="pop_type01" popup-title="팝업 타이틀"}}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<div class="opt_select_list opt_case3">
+				<div role="button" tabindex="0" class="option"><span class="text">항목 1</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">항목 2</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">항목 3</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">항목 4</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">항목 5</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">항목 6</span></div>
+			</div>
+		</div>
+	</div>
+	{{/ popup/popup_bottom}}
+	<!-- e: pop_type01 -->
+
+	<!-- e: popup area -->
 {{/ layout/guide }}
