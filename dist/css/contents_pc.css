@@ -794,10 +794,10 @@ body {
 	padding-left: 2.5rem;
 }
 .dc_info_box .dc_list > li ~ li:before {
+	content: "";
 	position: absolute;
 	top: 0.4rem;
 	left: 1.2rem;
-	content: "";
 	width: 1px;
 	height: 1.6rem;
 	background-color: var(--color-divider-gray-light);
