@@ -26,6 +26,11 @@
 	& + .form_group_wrap {
 		margin-top: var(--gap-7);
 	}
+	.pack {
+		flex: 0 0 auto;
+		display: flex;
+		gap: 8px;
+	}
 }
 
 .btn_link {
@@ -375,4 +380,10 @@
 			}
 		}
 	}
+}
+
+
+
+
+.space_list_ty2 {
 }

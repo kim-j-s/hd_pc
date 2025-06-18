@@ -94,21 +94,18 @@
 							하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 현대해상홈페이지(m.hi.co.kr) 또는 대표 콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.
 						</p>
 					</div>
-					<!-- s: Case1. 대표 메뉴 있는 경우 -->
 					<div class="item">
-						<!-- s: 25-06-16 수정 -->
-						{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuld=201602" }}
-						<!-- e: 25-06-16 수정 -->
-					</div>
-					<!-- e: Case1. 대표 메뉴 있는 경우 -->
-
-					<!-- s: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
-					<div class="item">
-						<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
-							<span class="text">고객센터 연결(1588-5656)</span>
-						</a>
-					</div>	
-					<!-- e: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->						
+						<div class="btn_area between">
+							<!-- s: Case1. 대표 메뉴 있는 경우 -->
+							{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuld=201602" }}
+							<!-- e: Case1. 대표 메뉴 있는 경우 -->
+							<!-- s: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
+							<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
+								<span class="text">고객센터 연결(1588-5656)</span>
+							</a>
+							<!-- e: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->	
+						</div>
+					</div>				
 				</div>
 			</div>
 
@@ -127,7 +124,7 @@
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="1" b-text="다음"}}
+		{{> cp/button type="1" size="2" b-text="다음"}}
 	</div>
 </div>
 {{/ popup/popup_full}}
