@@ -1,59 +1,75 @@
 <!---
-화면번호 : MPRGIPC30006000000
+화면번호 : PPRGIPC30006000000
 경로 : 상품 > 레저/연금/저축 > 골프보험 > 가입전알릴사항
 -->
 {{#> layout/default page-title="골프보험 | 상품"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="가입 전 알릴 사항" }}
+		{{> layout/header_pc h-title="가입 전 알릴 사항" }}
+
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						아래에 <strong>해당하는 항목</strong>이 있으신가요?
-					</h2>
-					<div class="title_sub">
-						향후 보상처리 시 불이익이 없도록 사실대로 알려주세요.
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">가입 전 알릴 사항</div>
+						<h2 class="p_title">
+							아래에 <strong>해당하는 항목</strong>이 있으신가요?
+						</h2>
+						<div class="sub_desc">
+							향후 보상처리 시 불이익이 없도록 사실대로 알려주세요.
+						</div>
 					</div>
 				</div>
-				<!-- e: content_top -->
 
 				<ol class="form_list">
 					<li>
 						<div class="form_group_wrap">
 							<div class="form_line">
-								<!-- s: 25-05-14 수정 -->
-								<div class="label_tit">
-									골프선수, Teaching Pro, 골프용품 판매자이신가요?<!-- 25-05-02 -->
-								</div>
-								<!-- e: 25-05-14 수정 -->
-								<div class="radio_group_wrap" role="radiogroup">
-									{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
+								<div class="row">
 									<!-- s: 25-05-14 수정 -->
-									{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
+									<div class="label_tit">
+										골프선수, Teaching Pro, 골프용품 판매자이신가요?<!-- 25-05-02 -->
+									</div>
 									<!-- e: 25-05-14 수정 -->
-								</div>								
+									<div class="radio_group_wrap" role="radiogroup">
+										{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
+										<!-- s: 25-05-14 수정 -->
+										{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
+										<!-- e: 25-05-14 수정 -->
+									</div>		
+								</div>						
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="form_group_wrap">
 							<div class="form_line">
-								<!-- s: 25-05-14 수정 -->
-								<div class="label_tit">
-									골프(연습)장 경영자 및 종사자이신가요?<!-- 25-05-02 -->
-								</div>
-								<!-- e: 25-05-14 수정 -->
-								<div class="radio_group_wrap" role="radiogroup">
-									{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
+								<div class="row">
 									<!-- s: 25-05-14 수정 -->
-									{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
-									<!-- e: 25-05-14 수정 -->
+										<div class="label_tit">
+											골프(연습)장 경영자 및 종사자이신가요?<!-- 25-05-02 -->
+										</div>
+										<!-- e: 25-05-14 수정 -->
+										<div class="radio_group_wrap" role="radiogroup">
+											{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
+											<!-- s: 25-05-14 수정 -->
+											{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
+											<!-- e: 25-05-14 수정 -->
+									</div>
 								</div>
 							</div>
 						</div>
 					</li>
 				</ol>
+
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap"> 
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="해당 여부를 확인 중이에요" disabled=true }}
+						<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
 
 				<!-- s: 25-05-07 수정 -->
 				<!-- s: 꼭 알아두세요 -->
@@ -68,16 +84,15 @@
 				<!-- e: 꼭 알아두세요 -->
 				<!-- e: 25-05-07 수정 -->
 			</div>
+
+			<!-- s: 사이드 패널 -->
+			{{> cp/panel_골프 panel-title="가입자와 보장기간"step1=true }}
+			<!-- e: 사이드 패널 -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="해당 여부를 확인 중이에요" disabled=true }}
-				<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
