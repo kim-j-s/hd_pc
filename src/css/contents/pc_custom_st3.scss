@@ -662,7 +662,7 @@
 	.select_item {
 		position: relative;
 		// flex: 1;
-		width: 100%;
+		// width: 100%;
 		margin: 0;
 
 		// &.active {
@@ -792,15 +792,26 @@
 		}
 	}
 
-	&:has(input:checked){
+	&:has(input:checked) {
 		.select_item {
 			.item_radio {
 				label {
+					position: relative;
+					height: 256px;
 					justify-content: center;
 					text-align: center;
-					background-repeat: no-repeat;
-					background-position: right 20px bottom 24px;
-					background-size: 110px auto;
+					&::after {
+						content: '';
+						position: absolute;
+						right: 20px;
+						bottom: 24px;
+						width: 110px;
+						height: 100px;
+						background-repeat: no-repeat;
+						background-size: 110px auto;
+						opacity: 0;
+						transition: all 0.5s;
+					}
 				}
 			}
 
@@ -826,7 +837,9 @@
 				input {
 					&:checked {
 						& + label {
-							background: url(../images/content/mprl/img_MPRLTDR10003000000_02.svg) no-repeat right 20px bottom 24px / 110px auto;
+							&::after {
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_02.svg);
+							}
 						}
 					}
 				}
@@ -838,7 +851,9 @@
 				input {
 					&:checked {
 						& + label {
-							background: url(../images/content/mprl/img_MPRLTDR10003000000_03.svg) no-repeat right 20px bottom 24px / 110px auto;
+							&::after {
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_03.svg);
+							}
 						}
 					}
 				}
@@ -850,7 +865,9 @@
 				input {
 					&:checked {
 						& + label {
-							background: url(../images/content/mprl/img_MPRLTDR10003000000_04.svg) no-repeat right 20px bottom 24px / 110px auto;
+							&::after {
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_04.svg);
+							}
 						}
 					}
 				}
@@ -863,7 +880,7 @@
 					& + label {
 						justify-content: flex-start;
 						text-align: left;
-						width: 410px;
+						transition: width 0.3s;
 		
 						&:before {
 							position: absolute;
@@ -958,6 +975,36 @@
 
 	& + .dc_info_box {
 		margin-top: var(--gap-5);
+	}
+
+
+	&.guarantee_select_wrap_n3 {
+		.select_item {
+			.item_radio {
+				label {
+					width: 268px;
+				}
+			}
+		}
+		&:has(input:checked) {
+			.select_item {
+				.item_radio {
+					input {
+						+ label {
+							width: 197px;
+						}
+						&:checked {
+							+ label {
+								width: 410px;
+								&::after {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
