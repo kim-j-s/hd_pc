@@ -53,7 +53,21 @@ body {
 				width: 375px;
 			}
 		}
-	} 
+	}
+
+	/* 조건별 container 상단 간격 */
+	.header_pc {
+		+ .container {
+			margin-top: 64px;
+		}
+	}
+
+	.breadcrumb {
+		+ .container {
+			padding-top: var(--gap-8);
+		}
+	}
+	/* 조건별 container 상단 간격 */
 
 
 	aside {
