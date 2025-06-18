@@ -220,18 +220,24 @@ a,
 button,
 select {
 	&.focus {
-		outline: 2px solid #000;
+		// outline: 2px solid #000;
+		// outline-offset: 2px;
+		box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
 	}
 }
 input:focus {
 	+ label {
-		outline: 2px solid #000;
+		// outline: 2px solid #000;
+		// outline-offset: 2px;
+		box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
 	}
 }
 .inp {
 	input {
 		&:focus {
-			outline: 2px solid #000;
+			// outline: 2px solid #000;
+			// outline-offset: 2px;
+			box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);
 		}
 	}
 }
