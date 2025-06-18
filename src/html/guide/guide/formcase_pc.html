@@ -1,5 +1,15 @@
 {{#> layout/guide }}
 <div class="guide_h1">Input</div>
+
+<div class="guide_h4">Chceckbox Case</div>
+<div class="checkbox_group_wrap ty3">
+	{{> cp/checkbox id="checkbox01-5" labelname="라벨명 Default" labelcont="부가적인 설명이 들어갑니다." }}
+	{{> cp/checkbox id="checkbox01-6" labelname="라벨명 checked" labelcont="부가적인 설명이 들어갑니다." checked=true }}
+	{{> cp/checkbox id="checkbox01-7" labelname="라벨명 disabled" labelcont="부가적인 설명이 들어갑니다." disabled=true }}
+	{{> cp/checkbox id="checkbox01-8" labelname="라벨명 checked disabled" labelcont="부가적인 설명이 들어갑니다." checked=true disabled=true }}
+</div>
+
+<div class="guide_h4">form Case</div>
 <div class="form_group_wrap">
 	<div class="form_line">
 		<div class="row">
@@ -18,5 +28,39 @@
 		</ul>
 	</div>
 </div>
-
-	{{/ layout/guide }}
+<br><br>
+<div class="form_group_wrap">
+	<div class="form_line">
+		<div class="label_tit">휴대폰번호</div>
+		{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" value="- 1234 - 5678" inp-title="휴대폰번호" readonly=true }}
+	</div>
+	<div class="form_line">
+		<div class="label_tit">이메일</div>
+		{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
+	</div>
+	<div class="form_line full">
+		<div class="label_tit">주소</div>
+		<div class="radio_group_wrap" role="radiogroup">
+			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" checked=true }}
+			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
+		</div>
+		{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
+	</div>
+	<div class="column">
+		<div class="form_line">
+			<div class="label_tit">영문이름</div>
+			{{> cp/text type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력" }}
+			<ul class="list_ty2">
+					<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
+			</ul>
+		</div>
+		<div class="form_line">
+			<div class="label_tit">보험계약서류 받는 방법</div>
+			<div class="radio_group_wrap" role="radiogroup">
+				{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_01" name="receiveSel01" labelname="모바일" checked=true }}
+				{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_02" name="receiveSel01" labelname="이메일" }}
+			</div>
+		</div>
+	</div>
+</div>
+{{/ layout/guide }}
