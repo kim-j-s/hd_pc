@@ -434,6 +434,7 @@
 
 
 
+
 // accordion
 // .acd_item {
 // 	&.acd_item_ty2 {
@@ -473,6 +474,25 @@
 			.file_thumbnail {
 				height: 310px;
 				margin: 0;
+			}
+		}
+	}
+}
+
+
+//PPRGIPT30008000000
+.checkbox_group_wrap {
+	// &+.column {
+	// 	margin-top: 32px
+	// }
+
+	&.ty3 {
+		gap: 32px;
+		.inp_checkbox {
+			flex: 0 1 calc(50% - 16px);
+			&.full {
+				flex:none;
+				width: 100%;
 			}
 		}
 	}
