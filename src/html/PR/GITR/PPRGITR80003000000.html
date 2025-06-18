@@ -35,7 +35,7 @@
 							</span>
 							<span class="item_top">
 								부담없이 가볍게
-								<em><strong>7,200</strong>원</em>
+								<em><strong>7,200</strong> 원</em>
 							</span>
 							<span class="item_desc">
 								아프거나 다칠땐 기본!<br>
@@ -55,7 +55,7 @@
 							</span>
 							<span class="item_top">
 								부담없이 가볍게
-								<em><strong>7,200</strong>원</em>
+								<em><strong>7,200</strong> 원</em>
 							</span>
 							<span class="item_desc">
 								아프거나 다칠땐 기본!<br>
@@ -75,7 +75,7 @@
 							</span>
 							<span class="item_top">
 								부담없이 가볍게
-								<em><strong>7,200</strong>원</em>
+								<em><strong>7,200</strong> 원</em>
 							</span>
 							<span class="item_desc">
 								아프거나 다칠땐 기본!<br>
@@ -375,8 +375,9 @@
 	$(function(){
 		if($('.guarantee_select_wrap').length){
 			$('.guarantee_select_wrap input[name="g_item"]').on('change', function(){
-				$(this).closest('.guarantee_select_wrap').find('.select_item').removeClass('active');
-				$(this).closest('.select_item').addClass('active');
+			const $this = $(this);
+				$this.closest('.guarantee_select_wrap').find('.select_item').removeClass('active').addClass('init');
+				$this.closest('.select_item').removeClass('init').addClass('active');
 			})
 		}
 	})
