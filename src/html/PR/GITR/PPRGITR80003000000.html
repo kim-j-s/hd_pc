@@ -5,7 +5,6 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc h-title="해외여행보험" }}
-	{{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
 
 	<div id="container" class="container">
 		<div class="content">
@@ -371,15 +370,14 @@
 {{/ layout/default }}
 
 
-<script>
+<!-- <script>
 	$(function(){
 		if($('.guarantee_select_wrap').length){
 			$('.guarantee_select_wrap input[name="g_item"]').on('change', function(){
-			const $this = $(this);
-				$this.closest('.guarantee_select_wrap').find('.select_item').removeClass('active').addClass('init');
+				const $this = $(this);
+				$this.closest('.guarantee_select_wrap').addClass('init');
 				$this.closest('.select_item').removeClass('init').addClass('active');
 			})
 		}
 	})
-
-</script>
+</script> -->
