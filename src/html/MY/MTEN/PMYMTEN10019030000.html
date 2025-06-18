@@ -1,15 +1,21 @@
 {{#> layout/default page-title="해지일자선택 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="해지일자선택" }}
+		{{> layout/header_pc h-title="해지일자선택" bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						해지일자를 선택한 후 <strong>마일리지<br/>정산 유무</strong>를 <strong>선택</strong>해주세요
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차보험 양도/말소 해지</strong>
+						</h2>
+						<div class="sub_desc">
+							해지일자를 선택한 후 <strong>마일리지 정산 유무</strong>를 <strong>선택</strong>해주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
 				</div>
-				<!-- e: content_top -->
 
 				<div class="info_cont">
 					<div class="card_item_wrap">
@@ -65,25 +71,33 @@
 			
 				<!-- s: 선택 후 노출되는 데이터 영역 -->
 				<div class="info_gray">
-					<p class="info_text">계약해지 대상기간은 양도/말소일 2025.05.08로부터 <strong class="point">13일</strong>입니다.</p>
+					<p class="info_text">계약해지 시 환급대상 기간은 양도/말소일(2025.05.08)부터 만기일까지<strong class="point">13일</strong>입니다.</p>
 				</div>
 				<!-- e: 선택 후 노출되는 데이터 영역 -->
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전"}}
+					<div class="pack">
+						{{> cp/button type="3" size="1" b-text="마일리지 정산안함" disabled=true}}
+						{{> cp/button type="1" size="1" b-text="마일리지 해지정산" disabled=true}}
+					</div>
+	
+					<!-- s: 선택 후 버튼 활성화 처리 -->
+					<!-- <div class="pack">
+					{{> cp/button type="3" size="1" b-text="마일리지 정산안함"}}
+					{{> cp/button type="1" size="1" b-text="마일리지 해지정산"}}
+					</div> -->
+					<!-- e: 선택 후 버튼 활성화 처리 -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 			</div>
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="3" size="1" b-text="마일리지 정산안함" disabled=true}}
-				{{> cp/button type="1" size="1" b-text="마일리지 해지정산" disabled=true}}
-
-				<!-- s: 선택 후 버튼 활성화 처리 -->
-				<!-- {{> cp/button type="3" size="1" b-text="마일리지 정산안함"}}
-				{{> cp/button type="1" size="1" b-text="마일리지 해지정산"}} -->
-				<!-- e: 선택 후 버튼 활성화 처리 -->
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 {{/ layout/default }}

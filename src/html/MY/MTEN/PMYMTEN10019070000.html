@@ -1,8 +1,7 @@
 {{#> layout/default page-title="변경완료 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		<!-- s: 25-06-02 수정 -->
-    {{> layout/header_pc no-header=true }}
-    <!-- e: 25-06-02 수정 -->
+    {{> layout/header_pc }}
+
 		<div id="container" class="container">
 			<div class="content">
 				<div class="process_info_area">
@@ -10,7 +9,7 @@
 						<lottie-player src="../../../json/lottie_complete2.jso" background="transparent" speed="1" autoplay></lottie-player>
 					</div>
 					<h2 class="process_title">
-						<strong>계약해지가<br/>완료되었습니다</strong>
+						<strong>계약해지가 완료되었습니다</strong>
 					</h2>
 				</div>
 
@@ -40,15 +39,19 @@
           </dl>
           <!-- e: 결제/환급 분기 처리 -->
         </div>
-			</div>
-		</div>
 		
-    <!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="홈으로"  }}
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="홈으로"  }}
+					</div>
+				</div>
+				<!-- e: 하단 버튼 영역 -->
 			</div>
 		</div>
-    <!-- e: 하단 고정 버튼 영역 -->
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 {{/ layout/default }}

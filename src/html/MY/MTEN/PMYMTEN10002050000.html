@@ -1,7 +1,7 @@
 {{#> layout/default page-title="변경완료 | 마이페이지"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-06-02 수정 -->
-	{{> layout/header_pc no-header=true }}
+	{{> layout/header_pc bc=true }}
 	<!-- e: 25-06-02 수정 -->
 
 	<div id="container" class="container">
@@ -11,40 +11,36 @@
 					<lottie-player src="../../../json/lottie_complete2.jso" background="transparent" speed="1" autoplay></lottie-player>
 				</div>
 				<h2 class="process_title">
-					<strong>자동차번호 확정이<br> 완료되었습니다.</strong>
-					<!-- <strong>자동차번호 변경이<br> 완료되었습니다.</strong> -->
+					<strong>자동차번호 확정/변경이 완료되었습니다.</strong>
 				</h2>
 			</div>
 
 			<div class="info_gray">
-				<h4 class="title_h4">M2024****78100000</h4>
+				<h4 class="title_h4">18루**22 (Hicar개인용(CM))</h4>
 				<dl>
 					<dt>변경기준일</dt>
-					<dd class="point"><strong>2025.01.24 24시</strong></dd>
+					<dd>2025.01.24 24시</dd>
 				</dl>
 				<dl>
 					<dt>자동차번호</dt>
-					<dd class="point"><strong>109조**33</strong></dd>
-				</dl>
-				<dl>
-					<dt>보험기간</dt>
-					<dd>2024.08.23~2025.08.23</dd>
-				</dl>
-				<dl>
-					<dt>계약자</dt>
-					<dd>조*기</dd>
+					<dd>109조**33</dd>
 				</dl>
 			</div>
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="홈으로"}}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
 
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="홈으로"}}
+				</div>
+			</div>
+			<!-- s: 하단 고정 버튼 영역 -->
+		</div>
+	</div>
+	
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
