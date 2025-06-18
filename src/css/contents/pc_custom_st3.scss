@@ -210,10 +210,10 @@
 			& ~ li {
 				padding-left: 25px;
 				&:before {
+					content:'';
 					position: absolute;
 					top: 4px;
 					left: 12px;
-					content:'';
 					width: 1px;
 					height: 16px;
 					background-color: var(--color-divider-gray-light);
