@@ -376,7 +376,9 @@
 					flex: none;
 					min-width: 100px;
 					max-width: 50%;
-					background-color: #ddd;
+				}
+				dd {
+					text-align: left;
 				}
 			}
 		}

@@ -1,74 +1,48 @@
 {{#> layout/default page-title="가입 전 알릴 사항 | 해외장기체류보험"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="가입 전 알릴 사항" }}
+	{{> layout/header_pc h-title="가입 전 알릴 사항" }}
 
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				
-				<h2 class="title_h2">
-					아래에 <strong>해당하는 항목</strong>이 있으신가요?
-				</h2>
-				<p class="title_sub">
-					사실대로 알리지 않은 경우, 보험금 지급이 거절되거나 계약이 해지될 수 있습니다.<br>
-					계약자분께서는 동반자분들의 알릴 사항을 확인 후 선택해주세요.<br>
-					동반자 중 아래 체크항목에 해당하는 분들이 있다면 따로 가입하시는 것을 추천드립니다.</p>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">가입 전 알릴 사항</div>
+					<h2 class="p_title">
+						아래에 <strong>해당하는 항목</strong>이 있으신가요?
+					</h2>
+					<div class="sub_desc">
+						사실대로 알리지 않은 경우, 보험금 지급이 거절되거나 계약이 해지될 수 있습니다.<br>
+						<!-- s: 동반자가 있는 경우에만 해당 문구 출력 -->
+						계약자분께서는 동반자분들의 알릴 사항을 확인 후 선택해주세요.<br>
+						동반자 중 아래 체크항목에 해당하는 분들이 있다면 따로 가입하시는 것을 추천드립니다.
+						<!-- e: 동반자가 있는 경우에만 해당 문구 출력 -->
+					</div>
+				</div>
 			</div>
-			<!-- e: content_top -->
 			<ol class="form_list">
 				<li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								현재 외국에 거주 중이거나, 외국에서 가입을 진행하시나요?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
+							<div class="row">
+								<div class="label_tit">
+									현재 외국에 거주 중이거나, 외국에서 가입을 진행하시나요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								이미 가입하신 현대해상 해외장기체류보험의 만기 후 갱신을 위해 가입하시나요?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="form_group_wrap">
-						<div class="form_line">
-							<div class="label_tit">
-								외국인, 이중국적자, 해외 영주권자이며 해당 나라를 방문하시나요?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="form_group_wrap">
-						<div class="form_line">
-							<div class="label_tit">
-								3년 이내 10대 질병으로 입원, 수술을 받은 적이 있으신가요?
-							</div>
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="info_gray">
-										<p class="info_text">10대 질병 : 암, 백혈병, 고혈압, 협심증, 심근경색, 심장판막증, 간경화증, 뇌졸중증(뇌출혈, 뇌경색), 당뇨병, 에이즈(AIDS) 및 HIV보균</p>
-									</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										{{> cp/radio rd-class="rd_btn" rd-id="notification03_01" name="notification03" labelname="예" }}
-										{{> cp/radio rd-class="rd_btn" rd-id="notification03_02" name="notification03" labelname="아니요" }}
-									</div>
+							<div class="row">
+								<div class="label_tit">
+									이미 가입하신 현대해상 해외장기체류보험의 만기 후 갱신을 위해 가입하시나요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니요" }}
 								</div>
 							</div>
 						</div>
@@ -77,24 +51,55 @@
 				<li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								해외여행 중 외교부가 지정한 여행 제한/금지지역에 방문할 예정이신가요?
+							<div class="row">
+								<div class="label_tit">
+									외국인, 이중국적자, 해외 영주권자이며 해당 나라를 방문하시나요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
+								</div>
 							</div>
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="info_gray">
-										<p class="info_text">외교부가 지정하는 지역별 여행경보 단계 중 적색경보, 흑색경보, 특별여행주의보 지역을 방문하실 경우 보험가입과 보상이 불가능합니다. (남색경보 및 황색경보는 보험가입이 가능)</p>
-										<div class="btn_area basic">
-											<a href="https://www.0404.go.kr/dev/issue_current.mofa?level&#x3D;limit" class="hd_btn hd_btn_ty_3 hd_btn_s_4" target="_blank" title="새창열림">
-												<span class="text">여행 제한/금지지역안내</span>
-												<i class="hd_icon openWindowSvg"></i>
-											</a>
-										</div>
-									</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										{{> cp/radio rd-class="rd_btn" rd-id="notification05_01" name="notification05" labelname="예" }}
-										{{> cp/radio rd-class="rd_btn" rd-id="notification05_02" name="notification05" labelname="아니요" }}
-									</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="row">
+								<div class="label_tit">
+									3년 이내 10대 질병으로 입원, 수술을 받은 적이 있으신가요?
+								</div>		
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification03_01" name="notification03" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification03_02" name="notification03" labelname="아니요" }}
+								</div>						
+							</div>
+							<div class="info_gray">
+								<p class="info_text">10대 질병 : 암, 백혈병, 고혈압, 협심증, 심근경색, 심장판막증, 간경화증, 뇌졸중증(뇌출혈, 뇌경색), 당뇨병, 에이즈(AIDS) 및 HIV보균</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="row">
+								<div class="label_tit">
+									해외여행 중 외교부가 지정한 여행 제한/금지지역에 방문할 예정이신가요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification05_01" name="notification05" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification05_02" name="notification05" labelname="아니요" }}
+								</div>
+							</div>
+							<div class="info_gray">
+								<p class="info_text">외교부가 지정하는 지역별 여행경보 단계 중 적색경보, 흑색경보, 특별여행주의보 지역을 방문하실 경우 보험가입과 보상이 불가능합니다. (남색경보 및 황색경보는 보험가입이 가능)</p>
+								<div class="btn_area basic">
+									<a href="https://www.0404.go.kr/dev/issue_current.mofa?level&#x3D;limit" class="hd_btn hd_btn_ty_3 hd_btn_s_4" target="_blank" title="새창열림">
+										<span class="text">여행 제한/금지지역안내</span>
+										<i class="hd_icon openWindowSvg"></i>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -103,32 +108,32 @@
         <li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								체류하시는 목적이 현지취업, 해외거주, 운동경기, 선교사 및 봉사활동에 해당하시나요?
+							<div class="row">
+								<div class="label_tit">
+									체류하시는 목적이 현지취업, 해외거주, 운동경기, 선교사 및 봉사활동에 해당하시나요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
+								</div>
 							</div>
-              <div class="form_group_wrap">
-								<div class="form_line">
-                  <div class="info_gray">
-                    <p class="info_text">워킹홀리데이 중 아르바이트 등의 활동은 현지취업에 해당되지 않음</p>
-                  </div>
-                  <div class="radio_group_wrap" role="radiogroup">
-                    {{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
-                    {{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
-                  </div>
-                </div>
-              </div>              
+              <div class="info_gray">
+								<p class="info_text">워킹홀리데이 중 아르바이트 등의 활동은 현지취업에 해당되지 않음</p>
+							</div>            
 						</div>
 					</div>
 				</li>
         <li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								현재 국내에 가입되어 있는 실손의료보험이 있으신가요?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
+							<div class="row">
+								<div class="label_tit">
+									현재 국내에 가입되어 있는 실손의료보험이 있으신가요?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
+								</div>
 							</div>
               <ul class="list_ty2">
 								<li>해외장기체류자 실손의료보험 중지 및 환급제도 운영 관련 안내문을 꼭 확인해주세요.</li>
@@ -139,24 +144,32 @@
 				<li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								국가에서 의료비를 지원받는 의료수급권자이신가요?
-							</div>
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="info_gray">
-										<p class="info_text">보험가입 후 의료급여증명서를 다이렉트 고객센터(1899-6782)로 제출해주시면 국내발생 실손의료보장 보험료의 5% 할인해드립니다.</p>
-									</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										{{> cp/radio rd-class="rd_btn" rd-id="notification06_01" name="notification06" labelname="예" }}
-										{{> cp/radio rd-class="rd_btn" rd-id="notification06_02" name="notification06" labelname="아니요"}}
-									</div>
+							<div class="row">
+								<div class="label_tit">
+									국가에서 의료비를 지원받는 의료수급권자이신가요?
 								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification06_01" name="notification06" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification06_02" name="notification06" labelname="아니요"}}
+								</div>
+							</div>
+							<div class="info_gray">
+								<p class="info_text">보험가입 후 의료급여증명서를 다이렉트 고객센터(1899-6782)로 제출해주시면 국내발생 실손의료보장 보험료의 5% 할인해드립니다.</p>
 							</div>
 						</div>
 					</div>
 				</li>
 			</ol>
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap"> 
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="해당 여부를 확인 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active=true }}
@@ -167,7 +180,15 @@
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_해외장기체류 panel-title="여행자와 여행정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->

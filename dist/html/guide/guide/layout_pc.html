@@ -67,10 +67,6 @@
 				<button type="button" style="display: block; width: 100%; height: 50px">버튼</button>
 				<div style="height: 300px; background-color: #f8f8f8"></div>
 				<div style="height: 300px; background-color: #ddd"></div>
-
-				<div class="pageTop">
-					<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-				</div>
 			</div>
 
 			<footer class="footer">footer</footer>
@@ -99,47 +95,6 @@
 					font-size: 2.4rem;
 					color: #fff;
 					background-color: #333;
-				}
-
-				/* skipNavi */
-				.skipNavi {
-					position: relative;
-					z-index: 500;
-				}
-				.skipNavi a {
-					position: absolute;
-					font-size: 0;
-				}
-				.skipNavi a:focus {
-					top: 0;
-					left: 0;
-					display: block;
-					width: 100%;
-					height: 3rem;
-					font-size: 1.6rem;
-					color: #ffffff;
-					text-align: center;
-					line-height: 3rem;
-					background: #555555;
-				}
-				/* skipNavi */
-
-				.pageTop {
-					position: fixed;
-					right: 2rem;
-					bottom: 2rem;
-					&.active {
-						position: absolute;
-					}
-
-					.pageTop_btn {
-						display: block;
-						width: 4rem;
-						height: 4rem;
-						font-size: 0;
-						border-radius: 5rem;
-						background-color: blue;
-					}
 				}
 			</style>
 

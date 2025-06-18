@@ -51,6 +51,11 @@
 		<link rel="stylesheet" crossorigin href="/css/popup_pc.css" />
 	</head>
 	<body>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#container">본문바로가기</a></li>
+		</ul>
+
 		<!-- s: 25-05-07 수정 -->
 		<!-- s: Full 팝업 -->
 		<div class="popup_wrap full active" id="pop_type01" role="dialog" aria-hidden="false">
@@ -146,23 +151,20 @@
 										<div class="item">
 											<p class="text_sub">하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 현대해상홈페이지(m.hi.co.kr) 또는 대표 콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.</p>
 										</div>
-										<!-- s: Case1. 대표 메뉴 있는 경우 -->
 										<div class="item">
-											<!-- s: 25-06-16 수정 -->
-											<a href="https://hi.co.kr/serviceAction.do?menuld&#x3D;201602" class="btn_link new_open new_open_rd_box" target="_blank" title="새창열림">
-												<span class="text">현대해상 홈페이지로 이동</span>
-											</a>
-											<!-- e: 25-06-16 수정 -->
+											<div class="btn_area between">
+												<!-- s: Case1. 대표 메뉴 있는 경우 -->
+												<a href="https://hi.co.kr/serviceAction.do?menuld&#x3D;201602" class="btn_link new_open new_open_rd_box" target="_blank" title="새창열림">
+													<span class="text">현대해상 홈페이지로 이동</span>
+												</a>
+												<!-- e: Case1. 대표 메뉴 있는 경우 -->
+												<!-- s: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
+												<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
+													<span class="text">고객센터 연결(1588-5656)</span>
+												</a>
+												<!-- e: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
+											</div>
 										</div>
-										<!-- e: Case1. 대표 메뉴 있는 경우 -->
-
-										<!-- s: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
-										<div class="item">
-											<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
-												<span class="text">고객센터 연결(1588-5656)</span>
-											</a>
-										</div>
-										<!-- e: Case2. 대표 메뉴 없는 경우(PC에서는 미노출) -->
 									</div>
 								</div>
 
@@ -185,7 +187,7 @@
 					</div>
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">다음</span>
 							</button>
 						</div>

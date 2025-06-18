@@ -51,7 +51,11 @@
 		<link rel="stylesheet" crossorigin href="/css/popup_pc.css" />
 	</head>
 	<body>
-		<!-- s: 25-05-07 수정 -->
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#container">본문바로가기</a></li>
+		</ul>
+
 		<!-- s: Full 팝업 -->
 		<div class="popup_wrap full active" id="pop_type01" role="dialog" aria-hidden="false">
 			<div class="popup_container">
@@ -81,9 +85,7 @@
 										<li>
 											<span class="num">01</span>
 											<div class="cont">
-												<!-- s: 25-05-12 수정 -->
 												<strong class="tit">계약선택</strong>
-												<!-- e: 25-05-12 수정 -->
 											</div>
 										</li>
 										<li>
@@ -97,46 +99,35 @@
 											<span class="num">03</span>
 											<div class="cont">
 												<strong class="tit">변경정보 확인</strong>
-												<!-- s: 25-05-12 수정 -->
 												<p class="desc">변경정보를 확인해주세요.</p>
-												<!-- e: 25-05-12 수정 -->
 											</div>
 										</li>
 										<li>
 											<span class="num">04</span>
 											<div class="cont">
-												<!-- s: 25-05-12 수정 -->
 												<strong class="tit">전자서명 및 완료</strong>
 												<p class="desc">전자서명 후 변경기준일에 맞춰 자동차번호 확정/변경이 적용됩니다.</p>
-												<!-- e: 25-05-12 수정 -->
 											</div>
 										</li>
 									</ol>
 								</div>
-
-								<!-- s: 25-05-12 수정 -->
 								<div class="item">
 									<div class="space_list_ty2">
 										<div class="item">
 											<p class="text_sub">하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 현대해상홈페이지(m.hi.co.kr) 또는 대표 콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.</p>
 										</div>
 										<div class="item">
-											<!-- s: 25-06-13 수정 -->
-											<!-- s: 25-05-15 수정 -->
-											<a href="https://hi.co.kr/serviceAction.do?menuld&#x3D;100121" class="btn_link new_open new_open_rd_box" target="_blank" title="새창열림">
-												<span class="text">현대해상 홈페이지로 이동</span>
-											</a>
-											<!-- e: 25-05-15 수정 -->
-											<!-- e: 25-06-13 수정 -->
-										</div>
-										<div class="item">
-											<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
-												<span class="text">고객센터 연결(1588-5656)</span>
-											</a>
+											<div class="btn_area between">
+												<a href="https://hi.co.kr/serviceAction.do?menuld&#x3D;100121" class="btn_link new_open new_open_rd_box" target="_blank" title="새창열림">
+													<span class="text">현대해상 홈페이지로 이동</span>
+												</a>
+												<a href="tel:1588-5656" class="btn_link new_open new_open_rd_box tel">
+													<span class="text">고객센터 연결(1588-5656)</span>
+												</a>
+											</div>
 										</div>
 									</div>
 								</div>
-								<!-- e: 25-05-12 수정 -->
 
 								<div class="item">
 									<h3 class="title_h3">유의사항</h3>
@@ -149,7 +140,7 @@
 					</div>
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">다음</span>
 							</button>
 						</div>
@@ -159,6 +150,5 @@
 			</div>
 		</div>
 		<!-- e: Full 팝업 -->
-		<!-- e: 25-05-07 수정 -->
 	</body>
 </html>
