@@ -4,8 +4,13 @@
 }
 
 // 하단 고정메뉴
-.nav_footer {
-	
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 210px;
+	font-weight: 700;
+	font-size: 24px;
 }
 
 .fix_nav_menu {
