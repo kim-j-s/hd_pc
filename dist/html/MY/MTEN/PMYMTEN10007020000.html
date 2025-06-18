@@ -51,6 +51,10 @@
 		<link rel="stylesheet" crossorigin href="/css/popup_pc.css" />
 	</head>
 	<body>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#container">본문바로가기</a></li>
+		</ul>
 		<div id="wrap" class="wrap">
 			<div id="header" class="header_pc">
 				<div class="header_pc_inner">
@@ -80,9 +84,33 @@
 					<nav class="hpi_gnb">gnb 영역</nav>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<p class="text_sub">대상 계약을 선택해주세요.</p>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>운전자 범위/연령 변경</strong>
+							</h2>
+							<div class="sub_desc">대상 계약을 선택해주세요.</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
+					</div>
 
 					<!-- s: 25-05-23 -->
 					<div class="card_item_wrap ty3">
@@ -203,6 +231,22 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
+
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="nav_footer">
+					<ul class="fix_nav_menu">
+						<li><a href="#" class="menu_num1">하단메뉴1</a></li>
+						<li><a href="#" class="menu_num2">하단메뉴2</a></li>
+						<li><a href="#" class="menu_num3">하단메뉴3</a></li>
+						<li><a href="#" class="menu_num4">하단메뉴4</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- footer -->
 		</div>
 		<!-- s: 자동차 배서 메뉴 -->
 		<!-- s: 자동차 계약변경 -->

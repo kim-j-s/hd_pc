@@ -51,6 +51,10 @@
 		<link rel="stylesheet" crossorigin href="/css/popup_pc.css" />
 	</head>
 	<body>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#container">본문바로가기</a></li>
+		</ul>
 		<div id="wrap" class="wrap">
 			<div id="header" class="header_pc">
 				<div class="header_pc_inner">
@@ -80,29 +84,26 @@
 					<nav class="hpi_gnb">gnb 영역</nav>
 				</div>
 			</div>
-			<div class="breadcrumb">
-				<div class="breadcrumb_inner">
-					<ul class="breadcrumb_inner_list">
-						<li><a href="#" class="bc_home">홈</a></li>
-						<li><span>dept1</span></li>
-						<li><span>dept2</span></li>
-						<li><span>dept3</span></li>
-						<li><span>dept4</span></li>
-					</ul>
-				</div>
-			</div>
 			<div id="container" class="container container_tp2">
 				<div class="content" style="padding-top: 150px; background-color: aliceblue; font-size: 24px; font-weight: 700; text-align: center">
 					가입 설계 Case (781px)<br />
 					.container_tp2
 
-					<div class="btn_area">
-						<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
-							<span class="text">이전</span>
-						</button>
-						<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-							<span class="text">이대로 가입하기</span>
-						</button>
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">이대로 가입하기</span>
+							</button>
+						</div>
+
+						<div class="btn_area center">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">이대로 가입하기</span>
+							</button>
+						</div>
 					</div>
 
 					<!-- s: 꼭 알아두세요 -->
@@ -131,6 +132,7 @@
 					모바일 영역 (375px)<br />
 					.panel
 				</div>
+
 				<aside class="aside">
 					<div class="title_h3">
 						<strong>궁금하신 내용이</strong><br />
@@ -143,17 +145,13 @@
 								<strong class="num point">1899-6782</strong>
 							</div>
 						</div>
-						<div class="list">
-							<div class="title">자동차보험 전화가입</div>
-							<div class="cont">
-								<strong class="num">1577-1001</strong>
-								<p>인터넷가입 보험료와 차이가 있어요</p>
-							</div>
-						</div>
 					</div>
 				</aside>
 			</div>
 
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 			<div id="footer" class="footer">
 				<div id="footer" class="nav_footer">
 					<ul class="fix_nav_menu">

@@ -783,13 +783,16 @@ caption {
 a.focus,
 button.focus,
 select.focus {
-	outline: 0.2rem solid #000;
+	-webkit-box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
+	box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
 }
 input:focus + label {
-	outline: 0.2rem solid #000;
+	-webkit-box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
+	box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
 }
 .inp input:focus {
-	outline: 0.2rem solid #000;
+	-webkit-box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
+	box-shadow: 0 0 0 0.3rem rgba(21, 156, 228, 0.4);
 }
 /* 모바일 디바이스 분기 */
 @media screen and (max-width: 375px) {
