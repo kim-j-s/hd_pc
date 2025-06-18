@@ -198,6 +198,19 @@ body {
 	font-size: var(--font-size-label-medium);
 	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 0.2rem center/1.6rem auto;
 }
+.hd_btn.short_cut2 .short_cut2_tit {
+	display: block;
+	padding-right: 2rem;
+	font-size: var(--font-size-label-medium);
+	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 0.2rem center/1.6rem auto;
+}
+.hd_btn.short_cut2 .short_cut2_tit::after {
+	content: "";
+}
+.hd_btn.short_cut2 .cont_text_sub {
+	display: block;
+	margin-top: var(--gap-2);
+}
 .btn_area {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
@@ -735,14 +748,14 @@ body {
 	border-radius: var(--radius-medium3);
 }
 .dc_info_box:before {
+	content: "";
 	position: absolute;
 	left: 1.2rem;
 	top: calc(50% - 2rem);
-	content: "";
 	width: 4rem;
 	height: 4rem;
-	background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center/2.4rem auto;
 	border-radius: var(--radius-medium1);
+	background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center/2.4rem auto;
 }
 .dc_info_box.ty2 {
 	background-color: var(--color-surface-primary-subtler);
@@ -1157,7 +1170,6 @@ body {
 }
 .guarantee_select_wrap .select_item {
 	position: relative;
-	width: 100%;
 	margin: 0;
 }
 .guarantee_select_wrap .select_item .item_radio {
@@ -1211,13 +1223,25 @@ body {
 	color: var(--color-text-subtle);
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio label {
+	position: relative;
+	height: 25.6rem;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	text-align: center;
+}
+.guarantee_select_wrap:has(input:checked) .select_item .item_radio label::after {
+	content: "";
+	position: absolute;
+	right: 2rem;
+	bottom: 2.4rem;
+	width: 11rem;
+	height: 10rem;
 	background-repeat: no-repeat;
-	background-position: right 2rem bottom 2.4rem;
 	background-size: 11rem auto;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .guarantee_select_wrap:has(input:checked) .select_item .badge_wrap {
 	-webkit-box-pack: center;
@@ -1235,21 +1259,22 @@ body {
 .guarantee_select_wrap .select_item {
 	background: none;
 }
-.guarantee_select_wrap .select_item.t1 .item_radio input:checked + label {
-	background: url(../images/content/mprl/img_MPRLTDR10003000000_02.svg) no-repeat right 2rem bottom 2.4rem/11rem auto;
+.guarantee_select_wrap .select_item.t1 .item_radio input:checked + label::after {
+	background-image: url(../images/content/mprl/img_MPRLTDR10003000000_02.svg);
 }
-.guarantee_select_wrap .select_item.t2 .item_radio input:checked + label {
-	background: url(../images/content/mprl/img_MPRLTDR10003000000_03.svg) no-repeat right 2rem bottom 2.4rem/11rem auto;
+.guarantee_select_wrap .select_item.t2 .item_radio input:checked + label::after {
+	background-image: url(../images/content/mprl/img_MPRLTDR10003000000_03.svg);
 }
-.guarantee_select_wrap .select_item.t3 .item_radio input:checked + label {
-	background: url(../images/content/mprl/img_MPRLTDR10003000000_04.svg) no-repeat right 2rem bottom 2.4rem/11rem auto;
+.guarantee_select_wrap .select_item.t3 .item_radio input:checked + label::after {
+	background-image: url(../images/content/mprl/img_MPRLTDR10003000000_04.svg);
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
 	text-align: left;
-	width: 41rem;
+	-webkit-transition: width 0.3s;
+	transition: width 0.3s;
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label:before {
 	position: absolute;
@@ -1316,6 +1341,18 @@ body {
 }
 .guarantee_select_wrap + .dc_info_box {
 	margin-top: var(--gap-5);
+}
+.guarantee_select_wrap.guarantee_select_wrap_n3 .select_item .item_radio label {
+	width: 26.8rem;
+}
+.guarantee_select_wrap.guarantee_select_wrap_n3:has(input:checked) .select_item .item_radio input + label {
+	width: 19.7rem;
+}
+.guarantee_select_wrap.guarantee_select_wrap_n3:has(input:checked) .select_item .item_radio input:checked + label {
+	width: 41rem;
+}
+.guarantee_select_wrap.guarantee_select_wrap_n3:has(input:checked) .select_item .item_radio input:checked + label::after {
+	opacity: 1;
 }
 /* 
 df_type 
