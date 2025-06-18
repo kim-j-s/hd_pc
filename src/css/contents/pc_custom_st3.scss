@@ -621,44 +621,25 @@
 		}
 
 		.detail_list {
-			// flex: 1;
+			flex: 1;
 
 			.item_inner {
-				position: relative;
-				display: inline-flex;
-				align-items: center;
-				// gap: 8px;
+				display: flex;
+				gap: var(--gap-3);
 	
 				.hd_btn {
-					// flex: 0 0 auto;
+					flex: 0 0 auto;
 				}
 				& + .cont_text_sub {
-					margin-top: 5px;
+					margin-top: 4px;
 				}
 			}
 	
 			.inp_checkbox {
-				flex: 1 0 auto;
-				& + .hd_btn {
+				.chk_label {
+					padding-left: 0;
 					width: 20px;
 					height: 20px;
-					padding-right: 0;
-					flex: 1 0 auto;
-					.text {
-						width: 20px;
-						height: 20px;
-						overflow: hidden;
-						position: absolute;
-						width: 1px;
-						height: 1px;
-						clip: rect(0, 0, 0, 0);
-					}
-				}
-				
-				.chk_label {
-					// padding-left: 0;
-					// width: 20px;
-					// height: 20px;
 				}
 	
 				input[type=checkbox]{
@@ -685,8 +666,13 @@
 		// width: 100%;
 
 		&.init {
-			justify-content: center;
 			text-align: center;
+
+			.item_radio {
+				label {
+					justify-content: center;
+				}
+			}
 
 			.badge_wrap {
 				justify-content: center;
