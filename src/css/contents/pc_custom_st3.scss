@@ -171,19 +171,18 @@
 	border-radius: var(--radius-medium3);
 
 	&:before {
+		content:'';
 		position: absolute;
 		left: 12px;
 		top: calc(50% - 20px);
-		content:'';
 		width: 40px;
 		height: 40px;
-		background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center / 24px auto;
 		border-radius: var(--radius-medium1);
+		background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center / 24px auto;
 	}
 
 	&.ty2 {
 		background-color: var(--color-surface-primary-subtler);
-
 		&:before {
 			background-color: var(--color-surface-white);
 		}
@@ -195,10 +194,8 @@
 
 		&.column {
 			flex-direction: column;
-
 			> li {
 				padding-left: 0;
-
 				& ~ li {
 					margin-top: 8px;
 				}
@@ -210,10 +207,8 @@
 			display: flex;
 			gap: 4px;
 			font-size: var(--font-size-body-medium);
-
 			& ~ li {
 				padding-left: 25px;
-
 				&:before {
 					position: absolute;
 					top: 4px;
@@ -223,7 +218,6 @@
 					height: 16px;
 					background-color: var(--color-divider-gray-light);
 				}
-
 				&:nth-child(3n+1){
 					padding-left: 0;
 					&:before {
@@ -1110,3 +1104,25 @@ df_type
 
 	}
 }
+
+
+
+
+
+
+
+
+// 간격 임의 정리 케이스
+// .checkbox_group_wrap.column {
+// 	&:has(.chk_label_ty3) {
+// 		.rd_box {
+// 			+ .rd_box {
+// 				margin-top: 50px;
+// 			}
+// 		}
+// 	}
+// }
+
+
+
+
