@@ -1,16 +1,20 @@
 {{#> layout/default page-title="변경정보 확인 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="변경정보 확인" }}
+		{{> layout/header_pc h-title="변경정보 확인" bc=true }}
+
 		<div id="container" class="container">
 			<div class="content">
-
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						<strong>확정/변경할 내용이 맞는지<br>확인해주세요</strong>
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title"><strong>자동차번호 확정/변경</strong></h2>
+						<div class="sub_desc">
+							<strong>확정/변경할 내용</strong>이 맞는지 확인해주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
 				</div>
-				<!-- e: content_top -->
 
 				<h3 class="title_h3">기준일</h3>
 				<div class="table_wrap">
@@ -29,7 +33,7 @@
 					</table>
 				</div>
 				<ul class="list_ty2">
-					<li><strong>변경 효력은 변경 기준일의 00시부터 발생</strong>합니다.</li>
+					<li><strong class="point">변경 효력은 변경 기준일의 00시부터 발생</strong>합니다.</li>
 				</ul>
 
 				<h3 class="title_h3">변경내용</h3>
@@ -51,7 +55,7 @@
 						<tbody>
 							<tr>
 								<td>
-									확정/변경<br>자동차번호
+									확정/변경 자동차번호
 								</td>
 								<td>18루 **23</td>
 								<td class="recommend"><strong class="point">109조**33</strong></td>
@@ -63,16 +67,23 @@
 				<div class="space_list_ty2">
 					{{> cp/checkbox checkbox_class="rd_box" id="checkbox01-1" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 계약변경 기준일, 변경 전후 확정/변경 자동차번호를 확인하였습니다."}}
 				</div>
+
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전"}}
+						{{> cp/button type="1" size="1" b-text="전자서명" disabled=true}}
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
+
 			</div>
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="전자서명" disabled=true}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
+		
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

@@ -3,10 +3,25 @@
 <!-- e: 25-05-19 수정 -->
 	<div id="wrap" class="wrap">
 		<!-- s: 25-05-19 수정 -->
-		{{> layout/header_pc h-title="자동차번호 확정" }}
+		{{> layout/header_pc h-title="자동차번호 확정" bc=true }}
+
 		<!-- e: 25-05-19 수정 -->
 		<div id="container" class="container">
 			<div class="content">
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차번호 확정/변경</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" }}
+					</div>
+				</div>
 
 				<!-- s: 25-05-23 -->
 				<div class="card_item_wrap ty3">
@@ -75,6 +90,9 @@
 							</div>
 						</div>
 					</div>
+					<div class="btn_area center view_more">
+						{{> cp/button_more}}
+					</div>
 				</div>
 
 				<!-- s: 꼭 알아두세요 -->
@@ -89,6 +107,10 @@
 
 			<!-- // container -->
 		</div>
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 
 	</div>
 
