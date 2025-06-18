@@ -205,6 +205,10 @@
 	& + .banner_box {
 		margin-top: var(--gap-8);
 	}
+
+	& + .info_gray.ty2 {
+		margin-top: 16px;         
+	}
 }
 
 .form_box {
