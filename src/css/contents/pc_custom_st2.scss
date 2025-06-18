@@ -371,23 +371,33 @@
 
 
 // accordion
-.acd_item {
-	&.acd_item_ty2 {
-		.acd_cont {
-			.inner {
-				display: flex;
-				flex-direction: row;
+// .acd_item {
+// 	&.acd_item_ty2 {
+// 		.acd_cont {
+// 			.inner {
+// 				display: flex;
+// 				flex-direction: row;
 
-				.item_text {
-					flex: 1;
-				}
-			}
+// 				.item_text {
+// 					flex: 1;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// 2단 타입 
+.multi_ty1 {
+	display: flex;
+	flex-flow: wrap;
+	gap: var(--gap-5);
+
+	> * {
+		flex: 0 0 calc(50% - 8px);
+
+
+		& + * {
+			margin-top: 0;
 		}
 	}
-}
-
-
-
-
-.space_list_ty2 {
 }
