@@ -17,7 +17,30 @@
 		padding-right: 20px;
 		font-size: var(--font-size-label-medium);
 		background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 2px center/16px auto;
+		
 	}
+
+	&.short_cut2 {
+		.short_cut2_tit {
+			display: block;
+			padding-right: 20px;
+			font-size: var(--font-size-label-medium);
+			background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 2px center/16px auto;
+			&::after {
+				content: '';
+			}
+		}
+		.cont_text_sub {
+			display: block;
+			margin-top: var(--gap-2);
+		}
+	}
+
+
+
+
+
+
 }
 
 .btn_area {
