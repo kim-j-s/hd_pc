@@ -256,24 +256,49 @@
 			.row {
 				gap: var(--gap-8);
 			}
-
-			.label_tit {
-				flex: 1;
-				font-size: var(--font-size-heading-small);
-  			font-weight: 700;
-			}
+			//임시
+			// .label_tit {
+			// 	flex: 1;
+			// 	font-size: var(--font-size-heading-small);
+  		// 	font-weight: 700;        
+			// }
 			.radio_group_wrap {
 				.rd_btn {
 					min-width: 134px;
 				}
 			}
-
 			.info_gray {
 				margin: var(--gap-5) 0 0;
 			}
 		}
+		
+
+		//임시
+		&.ty3 {
+			.form_line {
+				flex: 0 0 calc(50% - 16px);
+				&.full {
+					flex-basis: 100%;
+				}
+			}
+		}
+		&:not(.ty3){
+			.label_tit {
+				flex: 1;
+				font-size: var(--font-size-heading-small);
+  			font-weight: 700;        
+			}
+		}
 	}
 }
+
+//임시
+.title_h4 + .form_group_wrap.ty3 {
+	margin-top: 16px;
+}
+
+
+
 
 
 // file 관련

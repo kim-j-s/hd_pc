@@ -1,19 +1,19 @@
 {{#> layout/default page-title="가입 전 알릴 사항 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="가입 전 알릴 사항" }}
-
+	{{> layout/header_pc h-title="가입 전 알릴 사항" }}
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					보험가입에 <strong>중요한 사항</strong>에 대한 <strong>확인</strong>이 필요합니다.
-				</h2>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">가입 전 알릴 사항</div>
+					<h2 class="p_title">
+						보험가입에 <strong>중요한 사항</strong>에 대한 <strong>확인</strong>이 필요합니다.
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
 			
 			<ol class="form_list">
-        <li>
+				 <li>
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">
@@ -40,14 +40,40 @@
 					</div>
 				</li>
 				<li>
+					<div class="form_box">
+						<p class="title_h4">고객님의 직업을 입력해 주세요.</p>
+						<div class="form_group_wrap ty3">
+							<div class="form_line">
+								<div class="label_tit">근무처</div>
+								{{> cp/text placeholder="예) 사무실, 공장" inp-title="근무처 입력"}}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">근무 지역</div>
+								{{> cp/text placeholder="예) 서울시, 경기도" inp-title="근무 지역 입력"}}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">취급하는 업무</div>
+								{{> cp/text placeholder="실제 하는 일 자세히 입력" inp-title="취급하는 업무 입력"}}
+							</div>
+						</div>
+						<div class="info_gray ty2">
+							<ul class="list_ty3">
+								<li>보험계약 체결 당시 직업 또는 직무를 사실대로 알리지 않거나 보험계약 체결 후 직업 또는 직무가 변경된 사실(예: 사무관리⥊현장관리)을 지체없이 회사에 알리지 않은 경우 계약 해지 등 알릴 의무 위반에 따른 불이익이 발생할 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">
-								현재 운전을 하십니까?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="notification09_01" name="notification09" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="notification09_02" name="notification09" labelname="아니오" }}
+							<div class="row">
+								<div class="label_tit">
+									현재 운전을 하십니까?
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="notification09_01" name="notification09" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="notification09_02" name="notification09" labelname="아니오" }}
+								</div>
 							</div>
 						</div>
 					</div>
@@ -130,14 +156,15 @@
 				<!-- e: 25-06-17 추가 -->
 			</ol>
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_주택화재 panel-title="가입자 정보" panel-title2="건물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="중요 사항을 확인해 주세요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
-		</div>
-	</div>
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
