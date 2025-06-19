@@ -158,6 +158,10 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + .info_gray {
+		margin-top: var(--gap-11);
+	}
+
 	// 보험료결제
 	&.payment {
 		background-color: var(--color-surface-primary-subtler);
