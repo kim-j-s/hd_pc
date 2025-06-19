@@ -5,19 +5,19 @@
 {{#> layout/default page-title="계약자정보 입력 | 상품"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-14 -->
-	{{> layout/header h-title="계약자정보" }}
+	{{> layout/header_pc h-title="계약자정보" }}
 	<!-- e: 25-05-14 -->
 
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					계약자<br>
-					<strong>정보를 입력</strong>해주세요
-				</h2>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">계약자</div>
+					<h2 class="p_title">
+						<strong>계약자 정보를 입력</strong>해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
 
 			<div class="form_group_wrap">
 				<!-- s: 25-05-30 삭제 -->
@@ -56,7 +56,7 @@
 					<!-- e: 25-05-15 수정 -->
 					<!-- e: 05-05-12 수정 -->
 				</div>
-				<div class="form_line">
+				<div class="form_line full">
 					<!-- s: 25-05-15 수정 -->
 					<div class="label_tit">주소</div>
 					<!-- e: 25-05-15 수정 -->
@@ -79,6 +79,17 @@
 				</div>
 			</div>
 			<!-- s: 25-05-07 수정 -->
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
@@ -89,16 +100,15 @@
 			<!-- e: 꼭 알아두세요 -->
 			<!-- e: 25-05-07 수정 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_하이펫 panel-title="반려동물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
-	
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			<!-- {{> cp/button type="1" size="1" b-text="이메일을 입력해주세요" disabled=true }} -->
-			{{> cp/button type="1" size="1" b-text="모두 입력했어요"}}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
