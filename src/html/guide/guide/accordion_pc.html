@@ -36,8 +36,7 @@
 						<li class="list">
 							<div class="detail_list">
 								<div class="item_inner">
-									{{> cp/ibs cid="checkbox02-2" sct="해외여행 상해_해외의료실비보장" }}
-								</div>
+									{{> cp/ibs cid="checkbox02-2" sct="해외여행 상해_해외의료실비보장" }}								</div>
 							</div>
 							<div class="detail_price">
 								<span class="point">5천만원</span>
@@ -46,23 +45,16 @@
 						<li class="list">
 							<div class="detail_list">
 								<div class="item_inner">
-									{{> cp/ibs cid="checkbox02-3" sct="해외여행 질병_해외의료실비보장" }}
+									{{> cp/ibs cid="checkbox02-3" sct="해외여행 상해_해외의료실비보장2" }}
 								</div>
 							</div>
 							<div class="detail_price">
-								<span class="point">5천만원</span>
+								{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+									<option value="" selected>5천만원</option>
+									<option value="">4천만원</option>
+								{{/ cp/selectbox_pc}}
 							</div>
-						</li>
-						<li class="list">
-							<div class="detail_list">
-								<div class="item_inner">
-									{{> cp/ibs cid="checkbox02-4" sct="해외여행 상해급여_국내의료실비보장(통원한도:20만원)" }}
-								</div>
-							</div>
-							<div class="detail_price">
-								<span class="point">5천만원</span>
-							</div>
-						</li>								
+						</li>						
 					</ul>
 				{{/ cp/accordion }}
 			</div>
