@@ -58,47 +58,44 @@
 				</li>
 				<li {{#if step2}}class="active"{{/if}}>
 					<dl>
-						<dt class="title">2.피보험자/계약자 정보</dt>
+						<dt class="title">2.계약자 정보</dt>
 						<dd>
-							<!-- s: CASE1-1. 성인단독 -->
 							<ul>
 								<li>
 									입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
 								</li>
 							</ul>
 							<div class="info">정보를 입력 중이에요</div>
-							<!-- e: CASE1-1. 성인단독 -->
-							<!-- s: 미성년자단독, 피보험자다수 -->
-							<ul>
-								<!-- s: CASE1-2. 미성년자단독 -->
-								<li>
-									계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
-								</li>
-								<li>
-									피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span>
-								</li>
-								<!-- e: CASE1-2. 미성년자단독 -->
-								<!-- s: CASE1-3. 피보험자다수 -->
-								<li>
-									계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
-								</li>
-								<li>
-									피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span>
-								</li>
-								<!-- e: CASE1-3. 피보험자다수 -->
-							</ul>
-							<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
-							<!-- e: 미성년자단독, 피보험자다수 -->
 						</dd>
 					</dl>
-					<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
+					<button type="button" class="modify" title="계약자 정보 수정 페이지로 이동">
 						<span class="sr-only">수정</span>
 						<i class="hd_icon resetSvg"></i>
 					</button>
 				</li>
 				<li {{#if step3}}class="active"{{/if}}>
 					<dl>
-						<dt class="title">3.가입 내용 확인</dt>
+						<dt class="title">3.반려동물 정보</dt>
+						<dd>
+							<ul>
+								<li>
+									이름: <span>뽀삐</span>
+								</li>
+								<li>
+									할인: <span>동물등록</span>
+								</li>
+							</ul>
+							<div class="info">정보를 입력 중이에요</div>
+						</dd>
+					</dl>
+					<button type="button" class="modify" title="반려동물 정보 수정 페이지로 이동">
+						<span class="sr-only">수정</span>
+						<i class="hd_icon resetSvg"></i>
+					</button>
+				</li>
+				<li {{#if step3}}class="active"{{/if}}>
+					<dl>
+						<dt class="title">4.가입 내용 확인</dt>
 						<dd>
 							<ul>
 								<li>
@@ -115,7 +112,7 @@
 				</li>
 				<li {{#if step4}}class="active"{{/if}}>
 					<dl>
-						<dt class="title">4.보험료 결제</dt>
+						<dt class="title">5.보험료 결제</dt>
 						<dd>
 							<div class="info">정보를 입력 중이에요</div>
 						</dd>
