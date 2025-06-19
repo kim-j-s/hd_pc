@@ -1,14 +1,198 @@
 <!---
-화면번호 : MPRGIPC30003000000
+화면번호 : PPRGIPC30003000000
 경로 : 상품 > 레저/연금/저축 > 골프보험 > 보험료계산결과(보험료확인)
 -->
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-14 수정 -->
-	{{> layout/header h-title="골프보험" }}
+	{{> layout/header_pc h-title="골프보험" }}
 	<!-- e: 25-05-14 수정 -->
 	<div id="container" class="container">
 		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						골프에 진심인 지금,<br>
+						<strong>얼마나 보장</strong>받고 싶으세요?
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+
+			<div class="guarantee_select_wrap guarantee_select_wrap_n3">
+				<div class="select_item t3">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty01">
+						<label for="g_item_ty01">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type03">
+									<span class="text">실속 <em>4개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">부담없이 가볍게</span>
+								<em class="top_info">
+									<span class="price"><strong>7,200</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								합리적인 보험료로<br>
+								알차게 준비해요
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item t2">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty02">
+						<label for="g_item_ty02">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type02">
+									<span class="text">표준 <em>4개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">빈틈없이 든든하게</span>
+								<em class="top_info">
+									<span class="price"><strong>32,700</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								탄탄한 보장으로<br>
+								걱정없이 충분해요
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item t1">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty03">
+						<label for="g_item_ty03">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type01">
+									<span class="text">고급 <em>4개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">더 큰 보장으로 완벽하게</span>
+								<em class="top_info">
+									<span class="price"> <strong>56,600</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								마음까지 편안하게<br>
+								더 많이 보장받아요
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="dc_info_box ty2">
+				<ul class="dc_list">
+					<li>다이렉트할인 <strong class="point">5%</strong> 받았어요</li>
+				</ul>
+			</div>
+
+			<div>
+				<div>
+
+					{{#> cp/selectbox_pc s-class="ty2 sm" s-title="보험기간 선택" }}
+						<option value="" selected>보험기간 선택</option>
+						<option value="">1개월</option>
+						<option value="">3개월</option>
+						<option value="">6개월</option>
+						<option value="">12개월</option>
+					{{/ cp/selectbox_pc}}
+
+					<div class="item_wrap flex_type">
+						<!-- e: 25-06-11 수정 -->
+							<div class="i_data">
+								<span class="text">보험기간</span>
+								
+								<!-- <strong class="data">6개월</strong> -->
+								<strong class="data">2025.06.11~2026.06.11(12개월)</strong>
+							</div>
+						</div>
+				</div>
+			</div>
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="acc_group">
+				<div class="space_list_ty2">
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
+						<div class="coverage_item_list_ty3">
+							<div class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="상해사망·후유장해(골프시설내)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1억원</span>
+								</div>
+							</div>
+							<div class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="일괄배상(골프시설)(자기부담금 2만원)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1,000만원</span>
+								</div>
+							</div>
+							<div class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="홀인원비용" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">50만원</span>
+								</div>
+							</div>
+							<div class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="상해사망·후유장해(교통)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">3,000만원</span>
+								</div>
+							</div>
+						</div>
+						{{/ cp/accordion }}
+					</div>
+				</div>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 25-05-07 수정 -->
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active="active" }}
+			<ul class="list_ty1">
+				<li>가입유형에 따라 가입금액의 차이가 있으므로 보장금액을 확인하시기 바랍니다.</li>
+			</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+			<!-- e: 25-05-07 수정 -->
+
 			<div class="guarantee_container">
 				<!-- s: guarantee_container_left -->
 				<div class="guarantee_container_left">
@@ -338,30 +522,30 @@
 							</div>
 						</div>
 
-						<!-- s: 25-05-07 수정 -->
-						<!-- s: 꼭 알아두세요 -->
-						{{#> cp/notice dp-active="active" }}
-						<ul class="list_ty1">
-							<li>가입유형에 따라 가입금액의 차이가 있으므로 보장금액을 확인하시기 바랍니다.</li>
-						</ul>
-						{{/ cp/notice }}
-						<!-- e: 꼭 알아두세요 -->
-						<!-- e: 25-05-07 수정 -->
+						
 					</div>
 					<!-- e: guarantee_detail -->
 					</div>
 				<!-- e: guarantee_container_right -->
 			</div>
-		</div>
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+		</div>		
 </div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
-			<!-- {{> cp/button type="1" size="1" b-text="이대로 가입하기" }} -->
-		</div>
-	</div>
+	
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->

@@ -555,6 +555,16 @@
 		& + .form_group_wrap {
 			margin-top: var(--gap-5);
 		}
+
+		&.sm {
+			.selectbox {
+				min-height: 21px;
+				padding: 0 16px 0 0;
+				font-size: var(--font-size-body-small);
+				background-size: 16px 16px;
+				background-position-x:100%;
+			}
+		}
 	}
 
 	&.ty3 {
