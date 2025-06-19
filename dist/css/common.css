@@ -3059,7 +3059,6 @@ strong {
 	-ms-flex-align: center;
 	align-items: center;
 	gap: var(--gap-2);
-	line-height: 150%;
 }
 .hd_btn svg {
 	fill: #ffffff;
@@ -9739,6 +9738,9 @@ strong {
 }
 .radio_comb .inp_radio.rd_btn input[type="radio"]:checked + label {
 	padding: 0;
+}
+.radio_comb .inp_radio.rd_btn input[type="radio"]:checked + label::before {
+	background-image: none;
 }
 .radio_comb .inp_radio.rd_btn input[type="radio"]:checked + label .label_cont {
 	border-radius: var(--radius-medium3);
