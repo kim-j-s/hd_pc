@@ -24,7 +24,8 @@
 	}
 
 	& + .space_list_ty2,
-	& + .checkbox_group_wrap {
+	& + .checkbox_group_wrap,
+	& + .tab_wrap {
 		margin-top: var(--gap-8);
 	}
 
@@ -171,13 +172,13 @@
 
 		thead {
 			th {
-				text-align: center;
 				vertical-align: middle;
 			}
 		}
 
 		tbody {
 			th {
+				vertical-align: unset;
 				&.body_th {
 					font-weight: 400;
 					background-color: #fff;

@@ -92,6 +92,9 @@
 			color: var(--color-text-disabled-on) !important;
 			background-color: var(--color-input-surface-disabled);
 		}
+		&:focus {
+			outline: none;
+		}
 	}
 
 	&.readonly,
@@ -727,6 +730,10 @@
 		& + .total_price_display_ty1 {
 			margin: 32px 0 0;
 		}
+
+		.radio_comb {
+			flex: none;
+		}
 	}
 
 	.column {
@@ -865,5 +872,10 @@
 				}
 			}
 		}
+	}
+}
+.search_inp_box {
+	+ .tag_item_wrap {
+		margin-top: var(--gap-3);
 	}
 }

@@ -22,10 +22,11 @@
 
 	&.short_cut2 {
 		.short_cut2_tit {
-			display: block;
-			padding-right: 20px;
+			display: inline-block;
+			padding-right: 18px;
 			font-size: var(--font-size-label-medium);
-			background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 2px center/16px auto;
+			line-height: 1.5;
+			background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 2px / 16px auto;
 			&::after {
 				content: '';
 			}
@@ -33,6 +34,7 @@
 		.cont_text_sub {
 			display: block;
 			margin-top: var(--gap-2);
+			font-size: var(--font-size-label-small);
 		}
 	}
 
@@ -237,6 +239,7 @@
 .form_box {
 	> .btn_area {
 		justify-content: center;
+		margin-top: var(--gap-5);
 		.hd_btn {
 			min-width: 160px;
 		}
@@ -317,6 +320,12 @@
 	.btn_area {
 		flex: none;
 		width: 100%;
+	}
+	.file_attach_box {
+		.file_thumbnail {
+			width: 287px;
+			height: 180px;
+		}
 	}
 }
 

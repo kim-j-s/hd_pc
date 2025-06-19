@@ -358,7 +358,7 @@
 
 		input[type=radio] {
 			& + label {
-				position: static;
+				// position: static;
 				width: 56px;
 				padding: 1px;
 				border-radius: 0;
@@ -388,6 +388,9 @@
 			&:checked {
 				+ label {
 					padding: 0;
+					&::before {
+						background-image: none;
+					}
 					.label_cont {
 						border-radius: var(--radius-medium3);;
 						background-color: var(--color-element-inverse);
