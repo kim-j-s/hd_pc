@@ -369,6 +369,7 @@ body {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+	margin-top: var(--gap-5);
 }
 .form_box > .btn_area .hd_btn {
 	min-width: 16rem;
@@ -424,6 +425,10 @@ body {
 	-ms-flex: none;
 	flex: none;
 	width: 100%;
+}
+.file_upload_wrap .file_attach_box .file_thumbnail {
+	width: 28.7rem;
+	height: 18rem;
 }
 .file_attach_box .file_thumbnail {
 	width: 44rem;

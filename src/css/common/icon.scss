@@ -32,6 +32,8 @@
 	height: 24px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
+
 	&.downloadSvg {
 		@include getSvg("icon/download_ty1");
 	}
@@ -76,9 +78,6 @@
 	}
 	&.shareSvg {
 		@include getSvg("icon/icon_share");
-	}
-	&.iic {
-		@include getSvg("icon/icon_insurance_check");
 	}
 	
 	

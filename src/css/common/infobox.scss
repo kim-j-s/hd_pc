@@ -104,7 +104,8 @@
 	& + .info_gray,
 	& + .inp_checkbox,
 	& + .card_item_wrap,
-	& + .list_ty2 {
+	& + .list_ty2,
+	& + .checkbox_group_wrap.space1 {
 		margin-top: var(--gap-5);
 	}
 
@@ -329,7 +330,7 @@
 				padding-top:  var(--padding-6);
 
 				dl {
-					align-items: center;
+					align-items: center;					
 				}
 			}
 			&.ty2 {
@@ -355,6 +356,15 @@
 		dl {
 			dt {
 				min-width: 80px;
+			}
+			& + dl {
+				margin-top: var(--gap-4);
+			}
+			&.sm {
+				margin-top: var(--gap-2);
+				dt {
+					font-size: var(--font-size-body-xsmall);
+				}
 			}
 		}
 	}
