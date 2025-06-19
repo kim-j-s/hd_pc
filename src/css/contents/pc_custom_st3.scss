@@ -679,6 +679,12 @@
 	}
 }
 
+
+/* 보험료 확인 */
+.guarantee_view_wrap {
+	
+}
+//선택옵션 존재
 .guarantee_select_wrap {
 	display: flex;
 	align-items: stretch;
@@ -686,80 +692,7 @@
 
 	.select_item {
 		position: relative;
-		// flex: 1;
-		// width: 100%;
 		margin: 0;
-
-		// &.active {
-		// 	flex: 0 0 410px;
-		// 	transition: flex .2s linear;
-
-		// 	.item_radio  {
-		// 		label {
-		// 			.hd_badge {
-		// 				&.class_type {
-		// 					width: auto;
-		// 					height: 32px;
-		// 					border-radius: var(--radius-small2);
-		
-		// 					.text {
-		// 						display: flex;
-		// 						padding: 0;
-		// 						background: none;
-		// 						font-weight: 700;
-		
-		// 						em {
-		// 							position: relative;
-		// 							display: inline-block;
-		// 							padding-left: 15px;
-		// 							font-weight: 400;
-		
-		// 							&:before {
-		// 								position: absolute;
-		// 								top: 4px;
-		// 								left: var(--gap-3);
-		// 								content:'';
-		// 								width: 1px;
-		// 								height: 12px;
-		// 								background-color: blue;
-		// 							}
-		// 						}
-		// 					}
-
-		// 					&.class_type01 {
-		// 						.text {
-		// 							em {
-		// 								&:before {
-		// 									background-color: var(--color-border-primary-light);
-		// 								}
-		// 							}
-		// 						}
-		// 					}
-
-		// 					&.class_type02 {
-		// 						.text {
-		// 							em {
-		// 								&:before {
-		// 									background-color: var(--color-border-secondary-light);
-		// 								}
-		// 							}
-		// 						}
-		// 					}
-
-		// 					&.class_type03 {
-		// 						.text {
-		// 							em {
-		// 								&:before {
-		// 									background-color: var(--color-border-success-light);
-		// 								}
-		// 							}
-		// 						}
-		// 					}
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
 
 		.item_radio	{
 			height: 100%;
@@ -774,6 +707,7 @@
 			label {
 				display: flex;
 				flex-direction: column;
+				width: 410px;
 				height: 100%;
 				padding: var(--padding-8) var(--padding-7);
 				background: none;
@@ -796,17 +730,36 @@
 		}
 
 		.item_top {
+			display: flex;
+			flex-direction: column;
 			margin-top: var(--gap-8);
-			font-size: var(--font-size-body-medium);
 
-			em {
+			.top_title {
+				font-size: var(--font-size-body-medium);
+			}
+
+			.top_info {
 				display: flex;
-				gap: 2px;
-				font-size: var(--font-size-body-large);
-				font-weight: 700;
+				align-items: center;
+				flex-flow: row wrap;
+				gap: 0 8px;
 				line-height: 42px;
-				strong {
-					font-size: var(--font-size-display-small);
+				
+				.price {
+					width: auto;
+					font-size: var(--font-size-body-large);
+					font-weight: 700;
+
+					strong {
+						font-size: var(--font-size-display-small);
+						vertical-align: top;
+					}
+				}
+				.discount {
+					font-size: var(--font-size-body-small);
+					line-height: 150%;
+					color: var(--color-text-subtle);
+					text-decoration-line: line-through;
 				}
 			}
 		}
@@ -835,7 +788,6 @@
 						background-repeat: no-repeat;
 						background-size: 110px auto;
 						opacity: 0;
-						transition: all 0.5s;
 					}
 				}
 			}
@@ -845,18 +797,24 @@
 			}
 
 			.item_top {
-				em {
+				.top_info {
 					justify-content: center;
+					.price {
+						strong {
+							font-size: var(--font-size-body-large);
+						}
+					}
+					.discount {
+						display: none;
+					}
 				}
-			}
-			.item_desc {
-				display: none;
 			}
 		}
 	}
 
 	.select_item {
 		background: none;
+
 		&.t1 {
 			.item_radio {
 				input {
@@ -916,6 +874,9 @@
 							height: 100%;
 							border: var(--border-width-static-medium, 2px) solid var(--color-border-primary);
 							border-radius: var(--radius-large2);
+						}
+						&::after {
+							opacity: 1;
 						}
 						
 						.badge_wrap {
@@ -982,11 +943,18 @@
 								}
 							}
 						}
-
 						.item_top {
 							margin-top: 56px;
-							em {
+							.top_info {
 								justify-content: flex-start;
+								.price {
+									strong {
+										font-size: var(--font-size-display-small);
+									}
+								}
+								.discount {
+									display: block;
+								}
 							}
 						}
 						.item_desc {
@@ -1003,6 +971,7 @@
 	}
 
 
+	// radio 3개
 	&.guarantee_select_wrap_n3 {
 		.select_item {
 			.item_radio {
@@ -1015,14 +984,20 @@
 			.select_item {
 				.item_radio {
 					input {
-						+ label {
+						& + label {
 							width: 197px;
+							transition: all 0.5s;
+							
+							.item_desc {
+								display: none;
+							}
 						}
 						&:checked {
 							+ label {
 								width: 410px;
-								&::after {
-									opacity: 1;
+							
+								.item_desc {
+									display: block;
 								}
 							}
 						}
@@ -1032,52 +1007,6 @@
 		}
 	}
 }
-
-
-
-// .guarantee_select_wrap {
-// 	.select_item {
-// 		// background-color: blue;
-// 		.item_desc {
-// 			display: none;
-// 		}
-// 	}
-
-// 	&:has(input:checked) {
-// 		.select_item {
-// 			// background-color: green;
-// 			.item_desc {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-
-// 	.item_radio {
-// 		input {
-// 			&:checked {
-// 				+ label {
-// 					// background-color: yellow;
-// 					.item_desc {
-// 						display: block;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
