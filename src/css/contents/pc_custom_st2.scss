@@ -237,6 +237,7 @@
 .form_box {
 	> .btn_area {
 		justify-content: center;
+		margin-top: var(--gap-5);
 		.hd_btn {
 			min-width: 160px;
 		}
@@ -292,6 +293,12 @@
 	.btn_area {
 		flex: none;
 		width: 100%;
+	}
+	.file_attach_box {
+		.file_thumbnail {
+			width: 287px;
+			height: 180px;
+		}
 	}
 }
 

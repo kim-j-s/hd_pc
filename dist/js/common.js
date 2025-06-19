@@ -616,6 +616,11 @@
 	});
 
 
+	// 선택목록 active 처리
+	$DOM.on('click', '.opt_select_list.opt_case3 .option', function(e){
+		$(this).closest('.opt_select_list').find('.option').removeClass('active').removeAttr('title');
+		$(this).addClass('active').attr('title', '선택됨');
+	});
 
 
 })();
@@ -663,12 +668,15 @@ function simpleInfo(){
 		// console.log('scroll!! : '+ scrollTop);
 
 		if ($('.simple_info_wrap').length) {
-			const $target = $('.simple_info_wrap');
-			const targetOffsetTop = $target.offset().top;
-			const $targetChild = $('.simple_info_wrap').children('.simple_info_item');
+			const $target = $(this).find('.simple_info_wrap');
+			let targetOffsetTop = null;
+			const $targetChild = $(this).find('.simple_info_wrap').children('.simple_info_item');
 			let new_headHeight = 0;
-			let simpleHeight = $('.simple_info_wrap').find('.simple_info_item').innerHeight();
-
+			let simpleHeight = $(this).find('.simple_info_wrap').find('.simple_info_item').innerHeight();
+			
+			if ($target.length && $target.css('display') !== 'none') {
+				targetOffsetTop = $target.offset().top;
+			}
 			// console.log('기준 위치 : ', targetOffsetTop);
 
 			if($('.gd_middle_b').length){
@@ -1069,7 +1077,7 @@ $(function(){
 	
 	//알릴고지 숫자 표기
 	$('ol.form_list > li').each(function (index) {
-		const $labels = $(this).find('> .form_group_wrap > .form_line > .label_tit'); // 여러 개일 수 있음
+		const $labels = $(this).find('> .form_group_wrap > .form_line .label_tit'); // 여러 개일 수 있음
 		const num = (index + 1).toString().padStart(2, '0');
 		$labels.each(function (i) {
 			let numStr = num;
