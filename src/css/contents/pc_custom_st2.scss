@@ -229,6 +229,15 @@
 		}
 	}
 
+	.c1 {
+		flex-basis: 100%;
+
+		.radio_group_wrap,
+		.label_tit {
+			width: calc(50% - 16px);
+		}
+	}
+
 	.row {
 		.form_line {
 			margin-top: 0;

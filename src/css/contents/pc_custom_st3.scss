@@ -555,6 +555,15 @@
 		& + .form_group_wrap {
 			margin-top: var(--gap-5);
 		}
+
+		&.sm {
+			.selectbox {
+				padding: 0 16px 0 0;
+				font-size: var(--font-size-body-small);
+				background-size: 16px 16px;
+				background-position-x:100%;
+			}
+		}
 	}
 
 	&.ty3 {
@@ -608,6 +617,15 @@
 	}
 }
 
+.gd_middle_ba {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 52px;
+	.item:only-child {
+		margin-left: auto; 
+	}
+}
 
 
 
