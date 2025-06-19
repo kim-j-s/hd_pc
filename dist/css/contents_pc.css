@@ -199,10 +199,11 @@ body {
 	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 0.2rem center/1.6rem auto;
 }
 .hd_btn.short_cut2 .short_cut2_tit {
-	display: block;
-	padding-right: 2rem;
+	display: inline-block;
+	padding-right: 1.8rem;
 	font-size: var(--font-size-label-medium);
-	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 0.2rem center/1.6rem auto;
+	line-height: 1.5;
+	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right 0.2rem/1.6rem auto;
 }
 .hd_btn.short_cut2 .short_cut2_tit::after {
 	content: "";
@@ -210,6 +211,7 @@ body {
 .hd_btn.short_cut2 .cont_text_sub {
 	display: block;
 	margin-top: var(--gap-2);
+	font-size: var(--font-size-label-small);
 }
 .btn_area {
 	-webkit-box-pack: start;
