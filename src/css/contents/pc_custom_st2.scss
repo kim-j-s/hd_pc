@@ -295,6 +295,15 @@
 	}
 }
 
+
+//checkbox
+.checkbox_group_wrap {
+	gap: var(--gap-8);
+	.inp_checkbox{
+		flex: 1;
+	}
+}
+
 //임시
 .title_h4 + .form_group_wrap.ty3 {
 	margin-top: 16px;
