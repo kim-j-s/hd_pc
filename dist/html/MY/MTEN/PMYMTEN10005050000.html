@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -117,7 +117,7 @@
 							<div class="sub_desc"><strong>신청한 내용</strong>이 맞는지 확인해주세요</div>
 						</div>
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" title="팝업 열기">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
 								<i class="hd_icon iic"></i>
 								<span class="text">자동차 계약변경</span>
 							</button>
@@ -131,8 +131,8 @@
 								자동차번호, 신청기간, 가입내용 제공
 							</caption>
 							<colgroup>
-								<col style="width: 35%" />
-								<col style="width: 65%" />
+								<col style="width: 160px" />
+								<col style="width: auto" />
 							</colgroup>
 							<tbody>
 								<tr>
@@ -141,10 +141,7 @@
 								</tr>
 								<tr>
 									<th scope="row">신청기간</th>
-									<td>
-										2025.01.22 00시 ~ <br />
-										2025.01.24 24시(2일)
-									</td>
+									<td>2025.01.22 00시 ~ 2025.01.24 24시(2일)</td>
 								</tr>
 								<tr>
 									<th scope="row">가입내용</th>
@@ -161,8 +158,8 @@
 								결제 보험료 제공
 							</caption>
 							<colgroup>
-								<col style="width: 35%" />
-								<col style="width: 65%" />
+								<col style="width: 160px" />
+								<col style="width: auto" />
 							</colgroup>
 							<tbody>
 								<tr>

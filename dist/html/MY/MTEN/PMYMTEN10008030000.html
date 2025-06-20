@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -96,27 +96,49 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2"><strong>가입경력인정자 정보</strong>를<br />정확하게 <strong>입력</strong>해주세요</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>가입경력인정 신청/변경</strong>
+							</h2>
+							<div class="sub_desc"><strong>가입경력인정자 정보</strong>를 정확하게 <strong>입력</strong>해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
 
-					<div class="info_gray">
-						<dl>
-							<dt>자동차번호</dt>
-							<dd>18루**22</dd>
-						</dl>
-						<dl>
-							<dt>운전자범위</dt>
-							<dd>가족한정</dd>
-						</dl>
-						<dl>
-							<dt>운전자범위</dt>
-							<dd>만35세이상</dd>
-						</dl>
+					<div class="info_gray df_type">
+						<div class="data_box df_type_w_ty1">
+							<dl>
+								<dt>자동차번호</dt>
+								<dd>18루**22</dd>
+							</dl>
+							<dl>
+								<dt>운전자범위</dt>
+								<dd>가족한정</dd>
+							</dl>
+							<dl>
+								<dt>운전자범위</dt>
+								<dd>만35세이상</dd>
+							</dl>
+						</div>
 					</div>
 
 					<h3 class="title_h3">가입경력인정대상자</h3>
@@ -154,26 +176,33 @@
 						</div>
 					</div>
 					<!-- s: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
-					<div class="btn_area btn_area_space2">
+					<div class="btn_area center">
 						<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
 							<span class="text">등록</span>
-							<i class="hd_icon registerSvg"></i>
 						</button>
 					</div>
 					<!-- e: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
 					<!-- e: CASE2. 입력된 정보 있을 경우 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">전자서명</span>
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<!-- s: 하단 고정 버튼 영역 -->
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-						<span class="text">다음</span>
-					</button>
-				</div>
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
-			<!-- s: 하단 고정 버튼 영역 -->
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->

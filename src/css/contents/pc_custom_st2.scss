@@ -131,17 +131,19 @@
 
 	&.ty3 {
 		.card_item {
-			.item_top {
-				flex-direction: row;
-				align-items: center;
-				gap: 4px;
-				padding-right: 30px;
-				background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 3.5px/20px auto;
-			
-				.title_info {
-					.main_title {
-						padding-right: 0;
-						background: none;
+			.card_link {
+				.item_top {
+					flex-direction: row;
+					align-items: center;
+					gap: 4px;
+					padding-right: 30px;
+					background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 3.5px/20px auto;
+				
+					.title_info {
+						.main_title {
+							padding-right: 0;
+							background: none;
+						}
 					}
 				}
 			}
