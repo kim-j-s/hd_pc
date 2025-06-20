@@ -982,6 +982,31 @@
 .msg_display .tip_item.top {
 	bottom: calc(100% + 1rem);
 }
+/* 기초정보입력 레이아웃 */
+.prd_bi_wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	height: 69.4rem;
+}
+.prd_bi_wrap .prd_bi_wrap_l {
+	background-color: red;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner {
+	background-repeat: no-repeat;
+	background-position: top 5.6rem right 3.2rem;
+	background-color: var(--color-surface-light-blue-subtle);
+}
+.prd_bi_wrap .prd_bi_wrap_r {
+	background-color: blue;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 37.5rem;
+}
 /* 자동완성 */
 .autocomplete_wrap {
 	position: relative;

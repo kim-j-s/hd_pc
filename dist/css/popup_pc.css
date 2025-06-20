@@ -38,14 +38,6 @@
 .popup_wrap.full .popup_container .popup_inner {
 	border-radius: var(--radius-xlarge2);
 }
-.popup_wrap.full .popup_container .popup_inner .popup_head {
-	min-height: 6.4rem;
-	padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
-}
-.popup_wrap.full .popup_container .popup_inner .popup_close {
-	top: 2rem;
-	right: 2.4rem;
-}
 .popup_wrap.bottom .popup_container {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -71,4 +63,20 @@
 }
 .popup_wrap.confirm .popup_container .popup_inner {
 	width: 44rem;
+}
+.popup_wrap.full.active .popup_container .popup_inner .popup_head,
+.popup_wrap.bottom.active .popup_container .popup_inner .popup_head,
+.popup_wrap.layer.active .popup_container .popup_inner .popup_head,
+.popup_wrap.confirm.active .popup_container .popup_inner .popup_head {
+	min-height: 6.4rem;
+	padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
+}
+.popup_wrap.full.active .popup_container .popup_inner .popup_close,
+.popup_wrap.bottom.active .popup_container .popup_inner .popup_close,
+.popup_wrap.layer.active .popup_container .popup_inner .popup_close,
+.popup_wrap.confirm.active .popup_container .popup_inner .popup_close {
+	top: 1.8rem;
+	right: 1.6rem;
+	width: 3.2rem;
+	height: 3.2rem;
 }

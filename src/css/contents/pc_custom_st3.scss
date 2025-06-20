@@ -62,6 +62,7 @@
 					}
 				}
 				.val_discount {
+					padding-bottom: var(--gap-3);
 					font-size: var(--font-size-body-large);
 					color: var(--color-text-disabled-on);
 					text-decoration: line-through;

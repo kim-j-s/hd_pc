@@ -3579,7 +3579,7 @@ strong {
 	display: block;
 	text-align: center;
 	width: auto;
-	padding: 0.8rem;
+	padding: 0.8rem var(--padding-6);
 	border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
 	background: none;
 }
