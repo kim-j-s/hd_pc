@@ -72,4 +72,11 @@
 			}
 		}
 	}
+	&.confirm {
+		.popup_container {
+			.popup_inner {
+				width: 440px;
+			}
+		}
+	}
 }
