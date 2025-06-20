@@ -1,30 +1,37 @@
 {{#> layout/default page-title="인정자대상자 정보입력  | 마이페이지"}}
 	<div id="wrap" class="wrap">		
-		{{> layout/header_pc h-title="인정자 정보입력" }}		
+		{{> layout/header_pc bc=true h-ins="pop_insChk" }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						
-						<strong>가입경력인정자 정보</strong>를<br>정확하게 <strong>입력</strong>해주세요
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>가입경력인정 신청/변경</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>가입경력인정자 정보</strong>를 정확하게 <strong>입력</strong>해주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
 				</div>
-				<!-- e: content_top -->
 
-				<div class="info_gray">
-					<dl>
-						<dt>자동차번호</dt>
-						<dd>18루**22</dd>
-					</dl>
-					<dl>
-						<dt>운전자범위</dt>
-						<dd>가족한정</dd>
-					</dl>
-					<dl>
-						<dt>운전자범위</dt>
-						<dd>만35세이상</dd>
-					</dl>
+				<div class="info_gray df_type">
+					<div class="data_box df_type_w_ty1">
+						<dl>
+							<dt>자동차번호</dt>
+							<dd>18루**22</dd>
+						</dl>
+						<dl>
+							<dt>운전자범위</dt>
+							<dd>가족한정</dd>
+						</dl>
+						<dl>
+							<dt>운전자범위</dt>
+							<dd>만35세이상</dd>
+						</dl>
+					</div>
 				</div>
 				
 				<h3 class="title_h3">가입경력인정대상자</h3>
@@ -60,21 +67,22 @@
 					</div>					
 				</div>
 				<!-- s: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
-				<div class="btn_area btn_area_space2">
-					{{> cp/button type="3" size="3" rightIcon="registerSvg" b-text="등록"}}
+				<div class="btn_area center">
+					{{> cp/button type="3" size="3" b-text="등록"}}
 				</div>
 				<!-- e: CASE1. 입력된 정보 없음 경우 등록 버튼만 노출 & CASE2. 입력된 정보 있을 경우, 등록가능한 대상자 모두 입력한 경우 [등록] 버튼 미노출 -->
 				<!-- e: CASE2. 입력된 정보 있을 경우 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전"}}
+						{{> cp/button type="1" size="1" b-text="전자서명"}}
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="다음"}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

@@ -64,6 +64,20 @@
 		background: none;
 		border-radius:0;
 	}
+
+	&.short_cut {
+		&.short_cut_icon {
+			padding: var(--padding-6) var(--padding-7);
+			> .text {
+				min-height: 32px;
+				display:flex; 
+				align-items: center;
+				> dl {
+					flex: 1;
+				}
+			}
+		}
+	}
 }
 .price_btn {
 	&:after {
