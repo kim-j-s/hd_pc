@@ -5,9 +5,73 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="다이렉트 어린이치아보험" }}
+	{{> layout/header_pc h-prd="어린이치아보험" h-title="다이렉트 어린이치아보험" }}
 	<div id="container" class="container">
 		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						소중한 우리 아이 치아,<br>
+						<strong>어디까지 보장</strong>을 받아야 할까요?
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+
+			<div class="guarantee_select_wrap">
+				<div class="select_item t3">
+					<div class="item_radio">
+						<input type="radio" name="g_item_ty01" id="g_item_ty01_1">
+						<label for="g_item_ty01_1">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type02">
+									<span class="text">표준 <em>5개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">부담없이 가볍게</span>
+								<em class="top_info">
+									<span class="price">월 <strong>7,200</strong> 원</span>
+									<span class="discount">20,000원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								합리적인 보험료로<br>
+								알차게 준비해요
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item t2">
+					<div class="item_radio">
+						<input type="radio" name="g_item_ty01" id="g_item_ty01_2">
+						<label for="g_item_ty01_2">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type01">
+									<span class="text">고급 <em>12개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">빈틈없이 든든하게</span>
+								<em class="top_info">
+									<span class="price">월 <strong>7,200</strong> 원</span>
+									<span class="discount">20,000원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								탄탄한 보장으로<br>
+								걱정없이 충분해요
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+
 			<div class="guarantee_container">
 				<!-- s: guarantee_container_left -->
 				<div class="guarantee_container_left">
@@ -459,16 +523,12 @@
 
 			</div>			
 		</div>
-			
 	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
-			<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
-		</div>
-	</div>
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
@@ -499,134 +559,6 @@
 
 
 <!-- e: popup area -->
-
-<script>
-	$(function () {
-
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-		$('.guarantee_choice_wrap .guarantee_item .gi_radio input[type="radio"]').on('change', function() {
-			const idx = $(this).closest('.guarantee_item').index();
-			// console.log(idx)
-			const $selectedItem = $(this).closest('.guarantee_item');
-			$(this).closest('.guarantee_choice_wrap').addClass('active');
-			$(this).closest('.guarantee_choice_wrap').find('.guarantee_item').removeClass('active');
-			$(this).closest('.guarantee_item').addClass('active');
-
-			// 모든 항목 초기화: 컨텐츠 닫고 타이틀 열기
-			$('.guarantee_choice_wrap .guarantee_item').each(function() {
-				$(this).find('.guarantee_item_cont').stop(true, true).slideUp(300);
-				$(this).find('.guarantee_item_top').stop(true, true).slideDown(300);
-			});
-
-			// 선택된 항목만: 컨텐츠 열고 타이틀 닫기
-			$selectedItem.find('.guarantee_item_cont').stop(true, true).slideDown(300);
-			$selectedItem.find('.guarantee_item_top').stop(true, true).slideUp(300);
-
-			// 고급 선택 시
-			if( idx === 0 && $('.gtl_special').length ) {
-				$('.gtl_special').addClass('active');
-			} else {
-				$('.gtl_special').removeClass('active');
-			}
-
-			// head 문구 변경
-			$('.guarantee_top_item').eq(idx + 1).addClass('active').siblings('.guarantee_top_item').removeClass('active');
-
-			// 비쥬얼 영역 변경			
-			$('.guarantee_visuval').stop(true, true).slideUp(300);
-
-			// 추가된 부분
-			const selectedClass = $(this).closest('.guarantee_item').data('sendclass'); // 선택된 항목의 data-sendclass 값
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-		});
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-
-		// Splide 설정
-		var splide = new Splide('#splide_wrap_ty1 .splide', {
-			speed: 500,
-			accessibility: true,
-			arrows: false, // 기본 화살표 비활성화
-			focusableNodes: 'a, button, input, textarea, select, li',
-		}).mount();
-
-		splide.on('moved', function () {
-			const $slides = $('.splide__slide');
-			const $activeSlide = $slides.filter('.is-active');
-			const $radio = $activeSlide.find('input[type="radio"]');
-
-			// 모든 슬라이드 tabindex 제거
-			$slides.removeAttr('tabindex');
-
-			// 활성화된 슬라이드에 radio 체크 및 focus 처리
-			if ($radio.length) {
-				$radio.prop('checked', true).trigger('change');
-			}
-
-			// 접근성: 현재 슬라이드에 포커스
-			$activeSlide.attr('tabindex', '0').focus();
-
-			// 버튼 상태 갱신
-			updateArrowState();
-		});
-
-		// 슬라이드 효과를 주기 위함
-		splide.on('move', function (newIndex) {
-			const $slides = $('.splide__slide');
-			$slides.removeClass('effect');
-
-			const $nextSlide = $slides.eq(newIndex);
-			$nextSlide.addClass('effect');
-		});
-
-		// 커스텀 좌우 버튼 클릭 시 이동
-		$('#splide_wrap_ty1 .swiper_button_left').on('click', () => splide.go('<'));
-		$('#splide_wrap_ty1 .swiper_button_right').on('click', () => splide.go('>'));
-
-		// 버튼 상태 업데이트 함수
-		function updateArrowState() {
-			const curr = splide.index;
-			const max = splide.length - 1;
-
-			$('#splide_wrap_ty1 .swiper_button_left').prop('disabled', curr === 0);
-			$('#splide_wrap_ty1 .swiper_button_right').prop('disabled', curr === max);
-		}
-
-		// 초기 로드 시 상태 설정
-		updateArrowState();	
-
-		// 보험 플랜 - 우측 이동
-		$('.move_detail').on('click', function () {
-			const selectedClass = $('.guarantee_choice_wrap .guarantee_item input[type="radio"]:checked').closest('.guarantee_item').data('sendclass');
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-			const targetSlide = $('.splide__slide[data-getclass="' + selectedClass + '"]');
-
-			if (targetSlide.length) {
-				const targetIndex = targetSlide.index();  // 슬라이드의 인덱스를 구합니다.
-				// console.log('목표 슬라이드 인덱스:', targetIndex);
-				$('.guarantee_container').addClass('active');
-
-				setTimeout(function() {
-					$('.splide__list').find('.splide__slide').eq(targetIndex).addClass('effect').find('input[type="radio"]').prop('checked', true);;
-					splide.go(targetIndex);
-					$('.container').scrollTop(0);
-					setTimeout(function(){
-						$('.splide__list').find('.splide__slide').eq(targetIndex).attr('tabindex', '0').focus();
-						$('.guarantee_container').css('position', 'static');
-						$('.guarantee_container_left').attr('aria-hidden', true);
-						$('.guarantee_container_right').css('position', 'static');
-					}, 100)
-				}, 500);
-			}
-		});
-		// 보험 플랜 - 우측 이동
-
-		// 25-05-19 수정
-		window.addEventListener('resize', function () {
-			splide.refresh(); // 슬라이드 다시 계산
-		});
-		// 25-05-19 수정
-	});
-</script>
 
 
 {{/ layout/default }}
