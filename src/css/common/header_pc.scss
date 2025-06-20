@@ -22,6 +22,53 @@
 		display: inline-block;
 		width: 1188px;
 	}
+
+
+}
+
+.hpi_top {
+	display: flex;
+	align-items: center;
+	padding-top: 16px;
+
+	// 모드 전환
+	.hpi_change_area {
+		flex: none;
+		.hpi_cm {
+			font-size: 0;
+			border-radius: var(--radius-small2);
+			background-color: var(--color-element-gray-lighter);
+			white-space: nowrap;
+			> .hpi_cm_btn {
+				display: inline-block;
+				width: 48px;
+				padding: 2px 0;
+				font-size: var(--font-size-label-small);
+				border-radius: var(--radius-small2);
+				&.active {
+					border: 1px solid var(--color-border-gray-light);
+					background: var(--color-element-inverse, #FFF);
+				}
+			}
+		}
+
+	}
+
+
+
+	.hpi_utils {
+		display: inline-flex;
+		gap: 0 4px;
+		margin-left: auto;
+		.hpi_utils_items {
+			flex: none;
+			> a {
+				display: block;
+				padding: 6px 8px 5px 8px;
+				font-size: var(--font-size-navigation-depth-small);
+			}
+		}
+	}
 }
 
 
