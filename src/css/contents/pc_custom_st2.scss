@@ -59,6 +59,8 @@
 }
 
 .btn_link {
+	flex: 0 1 auto;
+
 	&.price_btn {
 		padding-right: 22px;
 		background: none;
@@ -119,39 +121,6 @@
 }
 
 
-// card
-.card_item_wrap {
-	.card_item {
-		.btn_area {
-			.hd_btn {
-				flex: 1;
-			}
-		}
-	}
-
-	&.ty3 {
-		.card_item {
-			.card_link {
-				.item_top {
-					flex-direction: row;
-					align-items: center;
-					gap: 4px;
-					padding-right: 30px;
-					background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 3.5px/20px auto;
-				
-					.title_info {
-						.main_title {
-							padding-right: 0;
-							background: none;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-
 // banner
 .banner_box {
 	display: flex;
@@ -161,7 +130,6 @@
 
 	> * {
 		flex: 0 1 calc(50% - 16px);
-		
 	}
 	
 	> img {
@@ -417,7 +385,7 @@
 			margin: 0;
 			width: 50%;
 			padding-top: var(--gap-5);
-
+			gap: var(--gap-4);
 			&:nth-child(-n+2){
 				padding-top: 0;
 			}
@@ -446,10 +414,10 @@
 				}
 			}
 		}
-		&.df_type_w_ty2 {//150
+		&.df_type_w_ty2 {//130
 			> dl {
 				dt {
-					width: 150px;
+					width: 130px;
 				}
 			}
 		}
@@ -462,11 +430,11 @@
 				}
 			}
 		}
-		&.df_type_w_ty4 {//50,150
+		&.df_type_w_ty4 {//50,130
 			> dl {
 				&:nth-child(2n) {
 					dt{
-						width: 150px;
+						width: 130px;
 					}
 				}
 			}
@@ -483,22 +451,22 @@
 				}
 			}
 		}
-		&.df_type_w_ty6 {//100,150
+		&.df_type_w_ty6 {//100,130
 			> dl {
 				dt {
 					width: 100px;
 				}
 				&:nth-child(2n) {
 					dt {
-						width: 150px;
+						width: 130px;
 					}
 				}
 			}
 		}
-		&.df_type_w_ty7 {//150,50
+		&.df_type_w_ty7 {//130,50
 			> dl {
 				dt{
-					width: 150px;
+					width: 130px;
 				}
 				&:nth-child(2n) {
 					dt {
@@ -507,10 +475,10 @@
 				}
 			}
 		}
-		&.df_type_w_ty8 {//150,100
+		&.df_type_w_ty8 {//130,100
 			> dl {
 				dt{
-					width: 150px;
+					width: 130px;
 				}
 				&:nth-child(2n) {
 					dt {
@@ -523,16 +491,15 @@
 }
 
 
-/* 
-df_type 
-레이아웃 구조 변경 클래스
-*/
-/* 데이터 리스트 좌우배치 */
+
+
+// card
 .card_item_wrap {
 	.card_item {
 		.item_inner {
 			.inner_cont {
 				* {
+					/* 데이터 리스트 좌우배치 */
 					+ .card_list_ty1 {
 						display: flex;
 						flex-flow: row wrap;
@@ -557,6 +524,9 @@ df_type
 							}
 							&:nth-child(-n+2) {
 								padding-top: 0;
+							}
+
+							&:nth-child(2n-1){
 								padding-right: var(--gap-8);
 								border-right: 1px solid var(--color-divider-gray-light);
 							}
@@ -648,10 +618,42 @@ df_type
 					}
 				}
 			}
+			.inp_radio {
+				input[type=radio] {
+					top: 27px;
+				}
+			}
 		}
 		.btn_area {
 			width: 360px;
 			margin: var(--gap-5) auto 0;
+
+			.hd_btn {
+				flex: 1;
+			}
+		}
+	}
+
+	&.ty3 {
+		.card_item {
+			.card_link {
+				.item_top {
+					padding-right: 30px;
+					background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 3.5px/20px auto;
+				}
+			}
+			.item_top {
+				flex-direction: row;
+				align-items: center;
+				gap: 4px;
+
+				.title_info {
+					.main_title {
+						padding-right: 0;
+						background: none;
+					}
+				}
+			}
 		}
 	}
 }

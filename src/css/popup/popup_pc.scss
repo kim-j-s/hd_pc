@@ -4,7 +4,6 @@
 	.popup_container {
 		.popup_inner {
 			padding-bottom: var(--padding-6);
-
 			.popup_cont {
 				.tab_wrap {
 					.tab_wrap_list_ty1 {
@@ -40,14 +39,6 @@
 			
 			.popup_inner {
 				border-radius: var(--radius-xlarge2);
-				.popup_head {
-					min-height: 64px;
-					padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
-				}
-				.popup_close {
-					top: 20px;
-					right: 24px;
-				}
 			}
 		}
 	}
@@ -84,6 +75,27 @@
 		.popup_container {
 			.popup_inner {
 				width: 440px;
+			}
+		}
+	}
+	&.full,
+	&.bottom,
+	&.layer,
+	&.confirm {
+		&.active {
+			.popup_container {
+				.popup_inner {
+					.popup_head {
+						min-height: 64px;
+						padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
+					}
+					.popup_close {
+						top: 18px;
+						right: 16px;
+						width: 32px;
+						height: 32px;
+					}
+				}
 			}
 		}
 	}

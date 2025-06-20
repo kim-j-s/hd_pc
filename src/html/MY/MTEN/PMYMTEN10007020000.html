@@ -1,6 +1,6 @@
 {{#> layout/default page-title="자동차보험선택 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="자동차보험선택"  h-ins="pop_insChk" bc=true }}
+		{{> layout/header_pc bc=true }}
 
 		<div id="container" class="container">
 			<div class="content">
@@ -32,7 +32,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -80,7 +80,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -133,7 +133,7 @@
 	{{> pages/pop1 }}
 	<!-- e: 자동차 배서 메뉴 -->
 	<!-- s: alert2 -->
-	{{#> popup/popup_confirm popup-active=true popup-id="pop_type01" popup-title="서비스 이용에 불편을 드려 죄송합니다." no-header=flase }}
+	{{#> popup/popup_confirm popup-id="pop_type01" popup-title="서비스 이용에 불편을 드려 죄송합니다." no-header=flase }}
 	<div class="popup_cont">
 		<div class="popup_content">
 			<!-- info Case -->
