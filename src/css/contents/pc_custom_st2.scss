@@ -278,131 +278,15 @@
 	}
 }
 
-// .form_list	
+// form_list 가입전알릴사항
 .form_list {
-	> li {
-		> .form_group_wrap {
-			> * {
-				flex: 1;
-			}
-	
-			> .form_line {
-				flex: none;
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				flex-wrap: wrap;
-				gap: var(--gap-5) var(--gap-8);
-	
-				> .label_tit {
-					margin-bottom: 0;
-				}
-	
-				.radio_group_wrap {
-					flex: none;
-					width: 280px;
-	
-					& + .info_gray {
-						margin: 0;
-					}
-				}
-	
-				.info_gray {
-					flex: none;
-					width: 100%;
-					margin: 0;
-
-					& ~ .info_gray {
-						margin-top: var(--gap-5);
-					}
-				}
-
-				.checkbox_group_wrap {
-					&.ty2 {
-						.inp_checkbox {
-							flex: 0 0 calc(25% - 9px)
-						}
-					}
-				}
-			}
-
-			.form_group_wrap {
-				width: 100%;
-				
-				.form_line {
-					flex: none;
-					width: 100%;
-				}
-
-				&.form_group_ty2 {
-					gap: 0 var(--gap-8);
-					margin-top: -32px;
-
-					.form_line {
-						flex: 0 0 calc(50% - 16px);
-						margin-top: 32px;
-					}
-					.info_gray {
-						margin-top: 16px;
-					}
-				}
-			}
-
-			.form_line {
-				margin: 0;
-
-				& .form_line {
-					margin: 0;
-				}
-	
-				.label_tit {
-					flex: 1;
-				}
-			}
-			// .form_line {
-			// 	display: flex;
-			// 	flex-direction: column;
-	
-			// 	.row {
-			// 		gap: var(--gap-8);
-			// 	}
-			// 	//임시
-			// 	.label_tit {
-			// 		flex: 1;
-			// 		font-size: var(--font-size-heading-small);
-			// 		font-weight: 700;
-			// 	}
-			// 	.radio_group_wrap {
-			// 		.rd_btn {
-			// 			min-width: 134px;
-			// 		}
-			// 	}
-			// 	.info_gray {
-			// 		margin: var(--gap-5) 0 0;
-			// 	}
-			// }
-			
-	
-			//임시
-			// &.ty3 {
-			// 	.form_line {
-			// 		flex: 0 0 calc(50% - 16px);
-			// 		&.full {
-			// 			flex-basis: 100%;
-			// 		}
-			// 	}
-			// }
-			// &:not(.ty3){
-			// 	> .label_tit {
-			// 		flex: 1;
-			// 		font-size: var(--font-size-heading-small);
-			// 		font-weight: 700;        
-			// 	}
-			// }
+	.form_group_wrap  {
+		> * {
+			flex: 1;
 		}
 	}
 }
+
 
 
 //checkbox
