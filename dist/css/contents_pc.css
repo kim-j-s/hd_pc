@@ -86,6 +86,9 @@ body {
 	flex: none;
 	width: 83.6rem;
 }
+.wrap .container .content.content_st1 {
+	width: 118.8rem;
+}
 .wrap .container .side_panel {
 	width: 28.8rem;
 }
@@ -1386,6 +1389,10 @@ body {
 .coverage_item_list_ty3 > .list .detail_price {
 	font-size: var(--font-size-button-large);
 }
+.coverage_item_list_ty3 .table_wrap.type_mini .title {
+	margin: var(--gap-5) 0 var(--gap-4);
+	font-size: var(--font-size-body-small);
+}
 /* 보험료 확인 */
 .guarantee_view_wrap {
 	display: -webkit-box;
@@ -1776,8 +1783,8 @@ body {
 	font-weight: 700;
 	color: var(--color-text-subtle);
 }
-.guarantee_btn_area + .acc_group {
-	margin-top: var(--gap-8);
+.guarantee_btn_area {
+	margin: var(--gap-11) 0 var(--gap-8);
 }
 /* breadcrumb */
 /* breadcrumb */

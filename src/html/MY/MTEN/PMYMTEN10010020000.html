@@ -1,16 +1,24 @@
 {{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="담보/특약변경" h-ins="pop_insChk" }}
+		{{> layout/header_pc h-title="담보/특약변경" bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 
-				<p class="text_sub">
-					대상 계약을 선택해주세요.
-				</p>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>담보/특약 변경</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
 
-				<!-- s: 25-05-23 -->
 				<div class="card_item_wrap ty3">
-				<!-- e: 25-05-23 -->
 					<div class="card_item">
 						<div class="item_inner">
 							<div class="inner_cont">
@@ -22,7 +30,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -54,7 +62,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -90,11 +98,18 @@
 				<!-- e: 꼭 알아두세요 -->
 			</div>
 		</div>
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
-	<!-- s: Full 팝업 -->
-	{{> pages/pop1 }}
+
+		<!-- s: 자동차 배서 메뉴 -->
+		{{> pages/pop1 }}
+		<!-- e: 자동차 배서 메뉴 -->
+
 	<!-- e: popup area -->
 
 {{/ layout/default }}
