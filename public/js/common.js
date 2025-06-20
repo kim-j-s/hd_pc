@@ -833,6 +833,7 @@ $(function(){
 		dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
 		showAnim: "slideDown",
 		duration: 300,
+		clearBtn: true,
 		beforeShow: function () { 
 			$("body").append('<div class="modal_backdrop"></div>');
 			setTimeout(function(){
