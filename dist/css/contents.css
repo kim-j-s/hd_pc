@@ -982,6 +982,34 @@
 .msg_display .tip_item.top {
 	bottom: calc(100% + 1rem);
 }
+/* 기초정보입력 레이아웃 */
+.prd_bi_wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	height: 69.4rem;
+}
+.prd_bi_wrap .prd_bi_wrap_l {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	background-color: red;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner {
+	background-repeat: no-repeat;
+	background-position: top 5.6rem right 3.2rem;
+	background-color: var(--color-surface-light-blue-subtle);
+}
+.prd_bi_wrap .prd_bi_wrap_r {
+	background-color: blue;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 37.5rem;
+}
 /* 자동완성 */
 .autocomplete_wrap {
 	position: relative;
@@ -1088,8 +1116,12 @@
 .input_form_box .input_item_wrap {
 	overflow: hidden;
 	border-radius: 1.6rem;
-	-webkit-box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
-	box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	-webkit-box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
 }
 .input_form_box .input_item_wrap .acd_item {
 	position: relative;
@@ -1103,8 +1135,12 @@
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	-webkit-box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
-	box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	-webkit-box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
 }
 .input_form_box .input_item_wrap .acd_item ~ .acd_item {
 	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
@@ -4674,7 +4710,9 @@ ul + .form_group_wrap {
 	-webkit-transition: -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	transition: -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 }
 .is_diagnosis_service .service_visual .inner .visual_msg .msg_step1.effect {
 	color: var(--color-text-disabled);
@@ -4697,10 +4735,19 @@ ul + .form_group_wrap {
 	border-radius: var(--radius-large2) var(--radius-large2) 0 var(--radius-large2);
 	-webkit-transform-origin: top;
 	transform-origin: top;
-	-webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), opacity 0.5s ease-in-out;
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	-webkit-transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		opacity 0.5s ease-in-out;
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	-webkit-transition-delay: 2s;
 	transition-delay: 2s;
 	opacity: 0;

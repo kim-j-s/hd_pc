@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -96,13 +96,35 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<p class="text_sub">대상 계약을 선택해주세요.</p>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>담보/특약 변경</strong>
+							</h2>
+							<div class="sub_desc">대상 계약을 선택해주세요.</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
+					</div>
 
-					<!-- s: 25-05-23 -->
 					<div class="card_item_wrap ty3">
-						<!-- e: 25-05-23 -->
 						<div class="card_item">
 							<div class="item_inner">
 								<div class="inner_cont">
@@ -114,7 +136,7 @@
 											<div class="desc">Hicar개인용(CM)</div>
 										</div>
 									</div>
-									<ul class="card_list_ty1">
+									<ul class="card_list_ty1 df_type_w_ty1">
 										<li>
 											<div class="title">자동차명</div>
 											<div class="cont">더뉴싼타페 2.5터보</div>
@@ -146,7 +168,7 @@
 											<div class="desc">Hicar개인용(CM)</div>
 										</div>
 									</div>
-									<ul class="card_list_ty1">
+									<ul class="card_list_ty1 df_type_w_ty1">
 										<li>
 											<div class="title">자동차명</div>
 											<div class="cont">더뉴싼타페 2.5터보</div>
@@ -195,11 +217,21 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
+
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->
-		<!-- s: Full 팝업 -->
-		<!-- s: 자동차 계약변경 -->
+
+		<!-- s: 자동차 배서 메뉴 -->
+		<!-- s: 자동차 계약변경 (기획/디자인 미정) -->
 		<div class="popup_wrap full" id="pop_insChk" role="dialog" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_insChk');"></div>
@@ -346,6 +378,8 @@
 			</div>
 		</div>
 		<!-- e: 자동차 계약변경 -->
+		<!-- e: 자동차 배서 메뉴 -->
+
 		<!-- e: popup area -->
 	</body>
 </html>

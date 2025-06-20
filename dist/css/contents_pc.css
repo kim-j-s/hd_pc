@@ -86,6 +86,9 @@ body {
 	flex: none;
 	width: 83.6rem;
 }
+.wrap .container .content.content_st1 {
+	width: 118.8rem;
+}
 .wrap .container .side_panel {
 	width: 28.8rem;
 }
@@ -233,6 +236,11 @@ body {
 	display: flex;
 	gap: 0.8rem;
 }
+.btn_link {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
 .btn_link.price_btn {
 	padding-right: 2.2rem;
 	background: none;
@@ -289,27 +297,6 @@ body {
 }
 .bottom_fix_wrap .hd_btn {
 	min-width: 16rem;
-}
-.card_item_wrap .card_item .btn_area .hd_btn {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-.card_item_wrap.ty3 .card_item .card_link .item_top {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	gap: 0.4rem;
-	padding-right: 3rem;
-	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 0.35rem/2rem auto;
-}
-.card_item_wrap.ty3 .card_item .card_link .item_top .title_info .main_title {
-	padding-right: 0;
-	background: none;
 }
 .banner_box {
 	display: -webkit-box;
@@ -519,6 +506,7 @@ body {
 	margin: 0;
 	width: 50%;
 	padding-top: var(--gap-5);
+	gap: var(--gap-4);
 }
 .info_gray .data_box > dl:nth-child(-n + 2) {
 	padding-top: 0;
@@ -543,13 +531,13 @@ body {
 	width: 10rem;
 }
 .info_gray .data_box.df_type_w_ty2 > dl dt {
-	width: 15rem;
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty3 > dl:nth-child(2n) dt {
 	width: 10rem;
 }
 .info_gray .data_box.df_type_w_ty4 > dl:nth-child(2n) dt {
-	width: 15rem;
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty5 > dl dt {
 	width: 10rem;
@@ -561,25 +549,23 @@ body {
 	width: 10rem;
 }
 .info_gray .data_box.df_type_w_ty6 > dl:nth-child(2n) dt {
-	width: 15rem;
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty7 > dl dt {
-	width: 15rem;
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty7 > dl:nth-child(2n) dt {
 	width: 5rem;
 }
 .info_gray .data_box.df_type_w_ty8 > dl dt {
-	width: 15rem;
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty8 > dl:nth-child(2n) dt {
 	width: 10rem;
 }
-/* 
-df_type 
-레이아웃 구조 변경 클래스
-*/
-/* 데이터 리스트 좌우배치 */
+.card_item_wrap .card_item .item_inner .inner_cont * {
+	/* 데이터 리스트 좌우배치 */
+}
 .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1 {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -612,6 +598,8 @@ df_type
 }
 .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1 > li:nth-child(-n + 2) {
 	padding-top: 0;
+}
+.card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1 > li:nth-child(2n-1) {
 	padding-right: var(--gap-8);
 	border-right: 1px solid var(--color-divider-gray-light);
 }
@@ -654,9 +642,35 @@ df_type
 .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty8 > li:nth-child(2n) .title {
 	width: 10rem;
 }
+.card_item_wrap .card_item .item_inner .inp_radio input[type="radio"] {
+	top: 2.7rem;
+}
 .card_item_wrap .card_item .btn_area {
 	width: 36rem;
 	margin: var(--gap-5) auto 0;
+}
+.card_item_wrap .card_item .btn_area .hd_btn {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.card_item_wrap.ty3 .card_item .card_link .item_top {
+	padding-right: 3rem;
+	background: url(../images/icon/arrowRight_ty3.svg) no-repeat right top 0.35rem/2rem auto;
+}
+.card_item_wrap.ty3 .card_item .item_top {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: 0.4rem;
+}
+.card_item_wrap.ty3 .card_item .item_top .title_info .main_title {
+	padding-right: 0;
+	background: none;
 }
 .guarantee_choice_wrap {
 	display: -webkit-box;
@@ -1371,6 +1385,10 @@ df_type
 .coverage_item_list_ty3 > .list .detail_price {
 	font-size: var(--font-size-button-large);
 }
+.coverage_item_list_ty3 .table_wrap.type_mini .title {
+	margin: var(--gap-5) 0 var(--gap-4);
+	font-size: var(--font-size-body-small);
+}
 /* 보험료 확인 */
 .guarantee_view_wrap {
 	display: -webkit-box;
@@ -1761,8 +1779,8 @@ df_type
 	font-weight: 700;
 	color: var(--color-text-subtle);
 }
-.guarantee_btn_area + .acc_group {
-	margin-top: var(--gap-8);
+.guarantee_btn_area {
+	margin: var(--gap-11) 0 var(--gap-8);
 }
 /* breadcrumb */
 /* breadcrumb */
