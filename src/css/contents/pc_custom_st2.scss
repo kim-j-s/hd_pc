@@ -389,6 +389,7 @@
 			margin-top: var(--gap-4);
 		}
 	}
+
 	.data_box {
 		display: flex;
 		flex-flow: row wrap;
@@ -396,15 +397,18 @@
 		> dl {
 			justify-content: flex-start;
 			margin: 0;
-			width: calc(50% - 32px);
+			width: 50%;
 			padding-top: var(--gap-5);
 
 			&:nth-child(-n+2){
 				padding-top: 0;
 			}
 
+			&:nth-child(2n-1){
+				padding-right: var(--gap-8);
+			}
+
 			&:nth-child(2n){
-				margin-left: var(--gap-8);
 				padding-left: var(--gap-8);
 				border-left: 1px solid var(--color-divider-secondary-light);
 			}
@@ -486,12 +490,12 @@
 			}
 		}
 		&.df_type_w_ty8 {//150,100
-			> li {
-				.title {
+			> dl {
+				dt{
 					width: 150px;
 				}
 				&:nth-child(2n) {
-					.title {
+					dt {
 						width: 100px;
 					}
 				}
