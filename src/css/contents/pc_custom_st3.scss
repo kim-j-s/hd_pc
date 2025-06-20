@@ -617,16 +617,6 @@
 	}
 }
 
-.gd_middle_ba {
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 16px 0 52px;
-	.item:only-child {
-		margin-left: auto; 
-	}
-}
-
 
 
 // 보험료확인 radio
@@ -1025,7 +1015,39 @@
 		}
 	}
 }
-
+.guarantee_info {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 52px;
+	[class^=item] {
+		display: flex; 
+		align-items: center;		
+	}
+	.item-right {
+		gap: var(--gap-5);
+		padding-right :var(--padding-3);
+		margin-left: auto; 
+		.list_ty4 {
+			display:flex;
+			gap: var(--gap-4);
+			> li {
+				margin:0;
+				display:flex;
+				align-items: center;
+				gap: var(--gap-3);
+				&::before {
+					top: 11px;
+				}
+			}
+		}
+		.data {
+			font-size: var(--font-size-body-small);
+			font-weight: 700;
+			color: var(--color-text-subtle)
+		}		
+	}	
+}
 
 
 
