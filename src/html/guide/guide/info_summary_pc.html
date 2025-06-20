@@ -1,5 +1,43 @@
 {{#> layout/guide }}
 <div class="guide_h1">info box</div>
+<div class="guide_h4 pc">.guarantee_info</div>
+<div class="guarantee_info"> 
+	<div class="item_left">
+		<div class="btn_area">
+			{{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
+			{{> cp/button type="3" size="3" rightIcon="downloadSvg" b-text="상품 약관 다운로드"}}
+		</div>
+	</div>
+	<div class="item_right">
+		<ul class="list_ty4">
+			<li>
+				<span class="text">납입 방법</span>
+				<strong class="data">월납</strong>
+			</li>
+			<li>
+				<span class="text">보험기간</span>
+				<strong class="data">(2025.05.24~2025.11.24)</strong>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="guide_discription">Right</div>
+<div class="guarantee_info"> 
+	<div class="item_right">
+		<ul class="list_ty4">
+			<li>
+				<span class="text">보험기간</span>
+				{{#> cp/selectbox_pc s-class="ty2 sm" s-title="보험기간 선택" }}
+					<option value="">1개월</option>
+					<option value="">3개월</option>
+					<option value="">6개월</option>
+					<option value="">12개월</option> 
+				{{/ cp/selectbox_pc}}
+				<strong class="data">(2025.05.24~2025.11.24)</strong>
+			</li>
+		</ul>
+	</div>
+</div>
 
 <div class="guide_h4 pc">.dc_info_box</div>
 <div class="dc_info_box">
