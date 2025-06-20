@@ -617,6 +617,16 @@
 	}
 }
 
+.gd_middle_ba {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 52px;
+	.item:only-child {
+		margin-left: auto; 
+	}
+}
+
 
 
 // 보험료확인 radio
@@ -1143,61 +1153,6 @@
 	margin-top: var(--gap-8);
 }
 
-
-
-/* 
-df_type 
-레이아웃 구조 변경 클래스
-*/
-/* 데이터 리스트 좌우배치 */
-.card_item_wrap {
-	.card_item {
-		.item_inner {
-			.inner_cont {
-				* {
-					+ .card_list_ty1 {
-						&.df_type {
-							display: flex;
-							flex-flow: row wrap;
-							border-top: 1px solid #e1e3ea;
-							margin-top: var(--gap-5);
-							padding-top: 16px;
-							> li {
-								justify-content: flex-start;
-								width: 50%;
-								margin-top: 0;
-								padding-bottom: 0;
-								padding-top: 12px;
-								&:first-child {
-									margin-top: 0;
-									padding-top: 0;
-									border-top: none;
-								}
-								&:nth-child(-n + 2) {
-									padding-top: 0;
-								}
-								&:nth-child(2n) {
-									border-left: 1px solid #000;
-								}
-								
-							}
-
-							&.df_type_w_ty1 {
-								> li {
-									.title {
-										// background-color: #ddd;
-									}
-								}
-							}
-						}
-					}
-				}
-
-			}
-		}
-
-	}
-}
 
 
 

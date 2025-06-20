@@ -40,6 +40,14 @@
 
 			.popup_inner {
 				border-radius: var(--radius-xlarge2);
+				.popup_head {
+					min-height: 64px;
+					padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
+				}
+				.popup_close {
+					top: 20px;
+					right: 24px;
+				}
 			}
 		}
 	}
@@ -69,6 +77,13 @@
 			transform: none;
 
 			.popup_inner {
+			}
+		}
+	}
+	&.confirm {
+		.popup_container {
+			.popup_inner {
+				width: 440px;
 			}
 		}
 	}
