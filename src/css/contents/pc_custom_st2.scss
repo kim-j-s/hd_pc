@@ -215,7 +215,9 @@
 	> * {
 		flex: 0 0 calc(50% - 16px);
 	}
-
+	&.full  {
+		flex-direction: column;
+	}
 	.form_line {
 		& ~ .form_line {
 			margin-top: 0;
