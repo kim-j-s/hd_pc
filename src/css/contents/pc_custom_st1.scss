@@ -130,6 +130,9 @@ body {
 	.info_cont {
 		.data_list {
 			margin-top: var(--gap-4);
+			& + .divider_ty1 {
+				margin: var(--gap-7) 0;
+			}
 		}
 	}
 
