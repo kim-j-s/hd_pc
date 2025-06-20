@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -56,32 +56,20 @@
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 		<div id="wrap" class="wrap">
-			<div id="header" class="header_pc">
+			<div id="header" class="header_pc header_pc_nd">
 				<div class="header_pc_inner">
-					<div class="hpi_utils">
-						<span class="hpi_utils_items">
-							<a href="#">회원가입</a>
-						</span>
-						<span class="hpi_utils_items">
-							<a href="#">로그인</a>
-						</span>
-						<span class="hpi_utils_items">
-							<a href="#">상품공시</a>
-						</span>
-						<span class="hpi_utils_items">
-							<a href="#">인증센터</a>
-						</span>
-						<span class="hpi_utils_items">
-							<a href="#" target="_blank" title="새창열림">현대해상 홈페이지</a>
-						</span>
-					</div>
-					<h1 class="hpi_logo">
-						<a href="#">
-							<img src="" alt="현대해상 다이렉트 홈으로" />
-						</a>
-					</h1>
+					<div class="hpi_inner">
+						<div class="hpi_l">
+							<h1 class="hpi_logo">
+								<a href="#">
+									<img src="" alt="현대해상 다이렉트 홈으로" />
+								</a>
+							</h1>
+							<strong class="hpi_l_prd_name">골프보험</strong>
+						</div>
 
-					<nav class="hpi_gnb">gnb 영역</nav>
+						<nav class="hpi_gnb">gnb 영역</nav>
+					</div>
 				</div>
 			</div>
 
@@ -145,9 +133,9 @@
 								<!-- case: 입력 후-->
 								<div class="address_item address_item_case01" role="button" tabindex="0" title="주소검색 팝업열기">
 									<div class="address_item_inner">
-										<div class="ad_item">
+										<div class="ad_item active" data-placeholder="주소 검색">
 											<span class="zip_code">03379</span>
-											서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)
+											<span>서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)</span>
 										</div>
 										<span class="ad_stat">입력됨</span>
 									</div>
@@ -309,7 +297,7 @@
 							</button>
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
 			
-			<span class="text">모두 입력했어요</span>
+				<span class="text">모두 입력했어요</span>
 			
 			</button> -->
 						</div>
@@ -353,7 +341,6 @@
 										<dd>2025.05.20 11시~2025.05.24 23시</dd>
 									</dl>
 								</li>
-								<!-- s: 단독(성인/미성년자녀) -->
 								<li>
 									<dl>
 										<dt class="birth">생년월일</dt>
@@ -366,7 +353,6 @@
 										<dd>남성</dd>
 									</dl>
 								</li>
-								<!-- e: 단독(성인/미성년자녀) -->
 							</ul>
 						</div>
 
@@ -378,7 +364,7 @@
 										<dt class="title">1.보험료 계산 결과</dt>
 										<dd>
 											<ul>
-												<li>선택: <span>표준형, 32,700원</span></li>
+												<li>선택: <span>표준형, 15,100원</span></li>
 												<li>할인: <span>다이렉트할인</span></li>
 											</ul>
 											<div class="info">보험료를 확인 중이에요</div>
@@ -393,25 +379,10 @@
 									<dl>
 										<dt class="title">2.피보험자/계약자 정보</dt>
 										<dd>
-											<!-- s: CASE1-1. 성인단독 -->
 											<ul>
 												<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
 											</ul>
 											<div class="info">정보를 입력 중이에요</div>
-											<!-- e: CASE1-1. 성인단독 -->
-											<!-- s: 미성년자단독, 피보험자다수 -->
-											<ul>
-												<!-- s: CASE1-2. 미성년자단독 -->
-												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-												<li>피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span></li>
-												<!-- e: CASE1-2. 미성년자단독 -->
-												<!-- s: CASE1-3. 피보험자다수 -->
-												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-												<li>피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span></li>
-												<!-- e: CASE1-3. 피보험자다수 -->
-											</ul>
-											<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
-											<!-- e: 미성년자단독, 피보험자다수 -->
 										</dd>
 									</dl>
 									<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
@@ -444,6 +415,31 @@
 								</li>
 							</ol>
 						</div>
+					</div>
+
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+						<ul class="list_depth_ty2">
+							<li>인터넷가입 보험료와 차이가 있어요</li>
+						</ul>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
