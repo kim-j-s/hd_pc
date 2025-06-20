@@ -739,3 +739,47 @@
 	}
 
 }
+
+
+
+
+
+
+
+
+
+/* 기초정보입력 레이아웃 */
+.prd_bi_wrap {
+	display: flex;
+	align-items: flex-start;
+	height: 694px;
+
+	&.pbw_s1 {
+
+	}
+
+	.prd_bi_wrap_l {
+		background-color: red;
+		.pbw_inner {
+			background-repeat: no-repeat;
+			background-position: top 56px right 32px;
+			background-color: var(--color-surface-light-blue-subtle);
+
+			&.pi_bg_ty1 {
+				// background-image: url();
+			}
+	
+		}
+	}
+
+
+	.prd_bi_wrap_r {
+		background-color: blue;
+		flex: none;
+		width: 375px;
+	}
+
+
+
+}
+

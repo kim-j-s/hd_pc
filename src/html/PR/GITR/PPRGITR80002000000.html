@@ -3,275 +3,293 @@
 {{> layout/header_pc h-prd="해외여행보험" h-title="해외여행보험" }}
 <!-- {{> layout/header_pc h-title="해외여행보험" }} -->
 
-	<form action="" class="bi_form">
-		<div class="bi_wrap">
-  
-			<div class="stepper_wrap">
-				<div class="stepper" role="img">
-					<div class="pgs">
-						<span class="pgs_per" style="width: 0%;"><span class="motion travel"></span></span>
-					</div>
-				</div>
-				<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
-				<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
-			</div>
-			
-			<div class="bi_stepper">
-				<div class="bi_top">
-					<!-- bit -->
-					<div class="bit">
-						<!-- 국가 -->
-						<div class="bit_inner" data-pickitem="step1">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								설레이는 해외여행<br>
-								<span class="bold">어디로 가시나요?</span>
-							</p>
-							<!-- e: 25-05-26 수정 -->
-							<div class="bit_btn_scrollx">
-								<button type="button" class="btn_link short_cut sm rd_box">
-									<span class="text">보장내용 자세히 보기</span>
-								</button>
-							</div>
-						</div>
-						<!-- 국가 -->
-						 
-						<!-- 기간 -->
-						<!-- s: 25-05-30 수정 -->
-						<div class="bit_inner active" data-pickitem="step2">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								<span class="bold">출발일</span>과 <span class="bold">도착일</span>을 알려주세요
-								<small class="sub_txt">3개월 이상 머무실 경우 해외장기체류보험으로 가입하세요</small>
-							</p>
-							<!-- e: 25-05-26 수정 -->						
-						</div>
-						<!-- e: 25-05-30 수정 -->
-						<!-- 기간 -->
+	<div class="prd_bi_wrap">
+		<div class="prd_bi_wrap_l">
+			<div class="pbw_inner pi_bg_ty1">
 
-						<!-- 대상 -->
-						<div class="bit_inner active" data-pickitem="step3">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								<span class="bold">누가</span> 가시나요?
-								<small class="sub_txt">보험에 가입하실 분</small>
-							</p>
-							<!-- e: 25-05-26 수정 -->
-						</div>
-						<!-- 대상 -->
 
-						<!-- 생년월일 -->
-						<div class="bit_inner active" data-pickitem="step4">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								<!-- case1(단독) -->
-								보장받으실 분의<br>
-								<!-- s: 25-05-30 수정-->
-								<!-- case2(다수) : 계약하실 분의-->
-								<!-- e: 25-05-30 수정-->
-								<span class="bold">생년월일</span>을 알려주세요.
-								<small class="sub_txt">0~79세까지 가입할 수 있어요.</small>
-							</p>
-							<!-- e: 25-05-26 수정 -->
-						</div>
-						<!-- 생년월일 -->
-
-						<!-- 성별 -->
-						<!-- s: 25-05-07 수정 -->
-						<div class="bit_inner active" data-pickitem="step5">
-							<!-- s: 25-05-30 수정 -->
-							
-							<p class="bit_inner_text">
-								<span class="bold">성별</span>을 알려주세요<br>
-								보험료를 알아볼게요
-							</p>
-							<!-- e: 25-05-30 수정 -->
-						</div>
-						<!-- e: 25-05-07 수정 -->
-						<!-- 성별 -->
-
-					</div>
-					<!-- bit -->
-
-					<!-- bit_history -->
-					<div class="bit_history">
-						<div class="bit_history_inner">
-							<!-- s: 25-06-04 수정 -->
-							<button type="button" class="selected_case step1 country" title="국가 수정"></button>
-							<button type="button" class="selected_case step2 date" title="기간 수정"></button>
-							<!-- 기간 입력 후 -->
-							<!-- <button type="button" class="selected_case step2 date" title="기간 수정">2025.05.13 오전 09시~2025.05.17 오후 10시</button> -->
-							<!-- 기간 입력 후 -->
-							<button type="button" class="selected_case step3 person" title="대상 수정"></button>
-							<button type="button" class="selected_case step4 birth" title="생년월일 수정"></button>
-							<button type="button" class="selected_case step5 gender" title="성별 수정"></button>
-							<!-- e: 25-06-04 수정 -->
-						</div>
-					</div>
-					<!-- bit_history -->
-
+				<div class="pi_top">
+					타이틀 영역
 				</div>
 
 
-				<div class="bi_opts_wrap">
-					<!-- 국가 -->
-					<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio11" name="radio1" />
-								<label for="radio11">
-									<span class="label_cont">일본</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio12" name="radio1" />
-								<label for="radio12">
-									<span class="label_cont">베트남</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio13" name="radio1" />
-								<label for="radio13">
-									<span class="label_cont">유럽</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio14" name="radio1" />
-								<label for="radio14">
-									<span class="label_cont">태국</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio15" name="radio1" />
-								<label for="radio15">
-									<span class="label_cont">미국</span>
-								</label>
-							</div>
-							<button type="button" class="hd_btn direct_select_btn" title="여행 국가 선택 팝업 오픈">
-								<span class="text">직접 선택</span>
-							</button>
-						</div>
-					</div>
-					<!-- 국가 -->
-
-					<!-- 기간 -->
-					<!-- s: 25-06-05 수정 -->
-					<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
-						
-						<div class="opts_area_item column">
-							{{> cp/button type="3" size="b1" class="full" b-text="출발일시" btn-title="출발일시 선택 팝업 호출" }}
-							{{> cp/button type="3" size="b1" class="full" b-text="도착일시" btn-title="도착일시 선택 팝업 호출" }}
-							<!-- 기간 입력 후 -->
-							{{> cp/button type="3" size="b1" class="full" b-text="출발일시 2025.05.13 오전 09시" btn-title="출발일시 선택 팝업 호출" }}
-							{{> cp/button type="3" size="b1" class="full" b-text="도착일시 2025.05.17 오후 10시" btn-title="도착일시 선택 팝업 호출" }}
-							<!-- 기간 입력 후 -->
-						</div>
-					</div>
-					<!-- e: 25-06-05 수정 -->
-					<!-- 기간 -->
-				
-					<!-- 대상 -->
-					<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
-						
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio31" name="radio3" />
-								<label for="radio31">
-									<span class="label_cont">혼자</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio32" name="radio3" />
-								<label for="radio32">
-									<!-- s: 25-05-30 수정 -->
-									<span class="label_cont">부부+자녀와</span>
-									<!-- e: 25-05-30 수정 -->
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio33" name="radio3" />
-								<label for="radio33">
-									<span class="label_cont">배우자와</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio34" name="radio3" />
-								<label for="radio34">
-									<span class="label_cont">부모님과</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio35" name="radio3" />
-								<label for="radio35">
-									<span class="label_cont">가족 모두와</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio36" name="radio3" />
-								<label for="radio36">
-									<span class="label_cont">그 외</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<!-- 대상 -->
-
-					<!-- 생년월일 -->
-					<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step4">
-						<div class="opts_area_item column">
-							<div class="birth_date_field" aria-live="polite"></div>
-							<div class="bi_keypad">
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">1</button>
-									<button type="button" class="keypad_btn">2</button>
-									<button type="button" class="keypad_btn">3</button>
-									<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
-								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">4</button>
-									<button type="button" class="keypad_btn">5</button>
-									<button type="button" class="keypad_btn">6</button>
-									<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
-								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">7</button>
-									<button type="button" class="keypad_btn">8</button>
-									<button type="button" class="keypad_btn">9</button>
-									<button type="button" class="keypad_btn">0</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- 생년월일 -->
-
-					<!-- 성별 -->
-					<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step5">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio41" name="radio4" />
-								<label for="radio41">
-									<span class="label_cont">남성</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio42" name="radio4" />
-								<label for="radio42">
-									<span class="label_cont">여성</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<!-- 성별 -->
+				<div class="pi_bottom">
+					컨텐츠 영역
 				</div>
 			</div>
-
-
 		</div>
-	</form>
+		<div class="prd_bi_wrap_r">
+			<form action="" class="bi_form">
+				<div class="bi_wrap">
+			
+					<div class="stepper_wrap">
+						<div class="stepper" role="img">
+							<div class="pgs">
+								<span class="pgs_per" style="width: 0%;"><span class="motion travel"></span></span>
+							</div>
+						</div>
+						<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+						<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
+					</div>
+					
+					<div class="bi_stepper">
+						<div class="bi_top">
+							<!-- bit -->
+							<div class="bit">
+								<!-- 국가 -->
+								<div class="bit_inner" data-pickitem="step1">
+									<!-- s: 25-05-26 수정 -->
+									
+									<p class="bit_inner_text">
+										설레이는 해외여행<br>
+										<span class="bold">어디로 가시나요?</span>
+									</p>
+									<!-- e: 25-05-26 수정 -->
+									<div class="bit_btn_scrollx">
+										<button type="button" class="btn_link short_cut sm rd_box">
+											<span class="text">보장내용 자세히 보기</span>
+										</button>
+									</div>
+								</div>
+								<!-- 국가 -->
+								
+								<!-- 기간 -->
+								<!-- s: 25-05-30 수정 -->
+								<div class="bit_inner active" data-pickitem="step2">
+									<!-- s: 25-05-26 수정 -->
+									
+									<p class="bit_inner_text">
+										<span class="bold">출발일</span>과 <span class="bold">도착일</span>을 알려주세요
+										<small class="sub_txt">3개월 이상 머무실 경우 해외장기체류보험으로 가입하세요</small>
+									</p>
+									<!-- e: 25-05-26 수정 -->						
+								</div>
+								<!-- e: 25-05-30 수정 -->
+								<!-- 기간 -->
+	
+								<!-- 대상 -->
+								<div class="bit_inner active" data-pickitem="step3">
+									<!-- s: 25-05-26 수정 -->
+									
+									<p class="bit_inner_text">
+										<span class="bold">누가</span> 가시나요?
+										<small class="sub_txt">보험에 가입하실 분</small>
+									</p>
+									<!-- e: 25-05-26 수정 -->
+								</div>
+								<!-- 대상 -->
+	
+								<!-- 생년월일 -->
+								<div class="bit_inner active" data-pickitem="step4">
+									<!-- s: 25-05-26 수정 -->
+									
+									<p class="bit_inner_text">
+										<!-- case1(단독) -->
+										보장받으실 분의<br>
+										<!-- s: 25-05-30 수정-->
+										<!-- case2(다수) : 계약하실 분의-->
+										<!-- e: 25-05-30 수정-->
+										<span class="bold">생년월일</span>을 알려주세요.
+										<small class="sub_txt">0~79세까지 가입할 수 있어요.</small>
+									</p>
+									<!-- e: 25-05-26 수정 -->
+								</div>
+								<!-- 생년월일 -->
+	
+								<!-- 성별 -->
+								<!-- s: 25-05-07 수정 -->
+								<div class="bit_inner active" data-pickitem="step5">
+									<!-- s: 25-05-30 수정 -->
+									
+									<p class="bit_inner_text">
+										<span class="bold">성별</span>을 알려주세요<br>
+										보험료를 알아볼게요
+									</p>
+									<!-- e: 25-05-30 수정 -->
+								</div>
+								<!-- e: 25-05-07 수정 -->
+								<!-- 성별 -->
+	
+							</div>
+							<!-- bit -->
+	
+							<!-- bit_history -->
+							<div class="bit_history">
+								<div class="bit_history_inner">
+									<!-- s: 25-06-04 수정 -->
+									<button type="button" class="selected_case step1 country" title="국가 수정"></button>
+									<button type="button" class="selected_case step2 date" title="기간 수정"></button>
+									<!-- 기간 입력 후 -->
+									<!-- <button type="button" class="selected_case step2 date" title="기간 수정">2025.05.13 오전 09시~2025.05.17 오후 10시</button> -->
+									<!-- 기간 입력 후 -->
+									<button type="button" class="selected_case step3 person" title="대상 수정"></button>
+									<button type="button" class="selected_case step4 birth" title="생년월일 수정"></button>
+									<button type="button" class="selected_case step5 gender" title="성별 수정"></button>
+									<!-- e: 25-06-04 수정 -->
+								</div>
+							</div>
+							<!-- bit_history -->
+	
+						</div>
+	
+	
+						<div class="bi_opts_wrap">
+							<!-- 국가 -->
+							<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+								<div class="opts_area_item">
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio11" name="radio1" />
+										<label for="radio11">
+											<span class="label_cont">일본</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio12" name="radio1" />
+										<label for="radio12">
+											<span class="label_cont">베트남</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio13" name="radio1" />
+										<label for="radio13">
+											<span class="label_cont">유럽</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio14" name="radio1" />
+										<label for="radio14">
+											<span class="label_cont">태국</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio15" name="radio1" />
+										<label for="radio15">
+											<span class="label_cont">미국</span>
+										</label>
+									</div>
+									<button type="button" class="hd_btn direct_select_btn" title="여행 국가 선택 팝업 오픈">
+										<span class="text">직접 선택</span>
+									</button>
+								</div>
+							</div>
+							<!-- 국가 -->
+	
+							<!-- 기간 -->
+							<!-- s: 25-06-05 수정 -->
+							<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
+								
+								<div class="opts_area_item column">
+									{{> cp/button type="3" size="b1" class="full" b-text="출발일시" btn-title="출발일시 선택 팝업 호출" }}
+									{{> cp/button type="3" size="b1" class="full" b-text="도착일시" btn-title="도착일시 선택 팝업 호출" }}
+									<!-- 기간 입력 후 -->
+									{{> cp/button type="3" size="b1" class="full" b-text="출발일시 2025.05.13 오전 09시" btn-title="출발일시 선택 팝업 호출" }}
+									{{> cp/button type="3" size="b1" class="full" b-text="도착일시 2025.05.17 오후 10시" btn-title="도착일시 선택 팝업 호출" }}
+									<!-- 기간 입력 후 -->
+								</div>
+							</div>
+							<!-- e: 25-06-05 수정 -->
+							<!-- 기간 -->
+						
+							<!-- 대상 -->
+							<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+								
+								<div class="opts_area_item">
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio31" name="radio3" />
+										<label for="radio31">
+											<span class="label_cont">혼자</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio32" name="radio3" />
+										<label for="radio32">
+											<!-- s: 25-05-30 수정 -->
+											<span class="label_cont">부부+자녀와</span>
+											<!-- e: 25-05-30 수정 -->
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio33" name="radio3" />
+										<label for="radio33">
+											<span class="label_cont">배우자와</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio34" name="radio3" />
+										<label for="radio34">
+											<span class="label_cont">부모님과</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio35" name="radio3" />
+										<label for="radio35">
+											<span class="label_cont">가족 모두와</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio36" name="radio3" />
+										<label for="radio36">
+											<span class="label_cont">그 외</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- 대상 -->
+	
+							<!-- 생년월일 -->
+							<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step4">
+								<div class="opts_area_item column">
+									<div class="birth_date_field" aria-live="polite"></div>
+									<div class="bi_keypad">
+										<div class="bi_keypad_item">
+											<button type="button" class="keypad_btn">1</button>
+											<button type="button" class="keypad_btn">2</button>
+											<button type="button" class="keypad_btn">3</button>
+											<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
+										</div>
+										<div class="bi_keypad_item">
+											<button type="button" class="keypad_btn">4</button>
+											<button type="button" class="keypad_btn">5</button>
+											<button type="button" class="keypad_btn">6</button>
+											<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
+										</div>
+										<div class="bi_keypad_item">
+											<button type="button" class="keypad_btn">7</button>
+											<button type="button" class="keypad_btn">8</button>
+											<button type="button" class="keypad_btn">9</button>
+											<button type="button" class="keypad_btn">0</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 생년월일 -->
+	
+							<!-- 성별 -->
+							<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step5">
+								<div class="opts_area_item">
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio41" name="radio4" />
+										<label for="radio41">
+											<span class="label_cont">남성</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn_s1">
+										<input type="radio" id="radio42" name="radio4" />
+										<label for="radio42">
+											<span class="label_cont">여성</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- 성별 -->
+						</div>
+					</div>
+	
+	
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 <script>
