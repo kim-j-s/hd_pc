@@ -59,6 +59,8 @@
 }
 
 .btn_link {
+	flex: 0 1 auto;
+
 	&.price_btn {
 		padding-right: 22px;
 		background: none;
