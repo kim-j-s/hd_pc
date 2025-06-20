@@ -40,6 +40,10 @@
 
 			.popup_inner {
 				border-radius: var(--radius-xlarge2);
+				.popup_head {
+					min-height: 64px;
+					padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
+				}
 			}
 		}
 	}
