@@ -5,7 +5,7 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-14 수정 -->
-	{{> layout/header_pc h-title="골프보험" }}
+	{{> layout/header_pc h-prd="골프보험" h-title="골프보험" }}
 	<!-- e: 25-05-14 수정 -->
 	<div id="container" class="container">
 		<div class="content">
@@ -99,18 +99,17 @@
 			</div>
 			
 			<div class="guarantee_info"> 
-				<div class="item-right">
+				<div class="item_right">
 					<ul class="list_ty4">
 						<li>
-								<span class="text">보험기간</span>
-								{{#> cp/selectbox_pc s-class="ty2 sm" s-title="보험기간 선택" }}
-									<option value="" selected>보험기간 선택</option>
-									<option value="">1개월</option>
-									<option value="">3개월</option>
-									<option value="">6개월</option>
-									<option value="">12개월</option> 
-								{{/ cp/selectbox_pc}}
-								<strong class="data">(2025.05.24~2025.11.24 )</strong>
+							<span class="text">보험기간</span>
+							{{#> cp/selectbox_pc s-class="ty2 sm" s-title="보험기간 선택" }}
+								<option value="">1개월</option>
+								<option value="">3개월</option>
+								<option value="">6개월</option>
+								<option value="">12개월</option> 
+							{{/ cp/selectbox_pc}}
+							<strong class="data">(2025.05.24~2025.11.24)</strong>
 						</li>
 					</ul>
 				</div>
