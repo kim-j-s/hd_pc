@@ -406,11 +406,11 @@
 
 			&:nth-child(2n-1){
 				padding-right: var(--gap-8);
+				border-right: 1px solid var(--color-divider-gray-light);
 			}
 
 			&:nth-child(2n){
 				padding-left: var(--gap-8);
-				border-left: 1px solid var(--color-divider-secondary-light);
 			}
 
 			dt {
@@ -541,10 +541,10 @@ df_type
 								&:nth-child(-n+2) {
 									padding-top: 0;
 									padding-right: var(--gap-8);
+									border-right: 1px solid var(--color-divider-gray-light);
 								}
 								&:nth-child(2n) {
 									padding-left: var(--gap-8);
-									border-left: 1px solid var(--color-divider-gray-light);
 								}
 							}
 
