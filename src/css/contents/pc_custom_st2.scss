@@ -5,8 +5,8 @@
 	flex: 0 1 auto;
 	//icon
 	.hd_icon {
-		&.documentChkSvg {
-			background-image: url(../images/icon/icon_document_check.svg);
+		&.iic {
+			background-image: url(../images/icon/icon_insurance_check.svg);
 		}
 		&.resetSvg {
 			background-image: url(../images/icon/icon_reset_ty2.svg);
@@ -507,17 +507,18 @@ df_type
 */
 /* 데이터 리스트 좌우배치 */
 .card_item_wrap {
-	.card_item {
-		.item_inner {
-			.inner_cont {
-				* {
-					+ .card_list_ty1 {
-						&.df_type {
+	&.ty3 {
+		.card_item {
+			.item_inner {
+				.inner_cont {
+					* {
+						+ .card_list_ty1 {
 							display: flex;
 							flex-flow: row wrap;
 							border-top: 1px solid #e1e3ea;
 							margin-top: var(--gap-5);
 							padding-top: 16px;
+
 							> li {
 								justify-content: flex-start;
 								width: 50%;
@@ -533,13 +534,14 @@ df_type
 									padding-top: 0;
 									border-top: none;
 								}
-								&:nth-child(-n + 2) {
+								&:nth-child(-n+2) {
 									padding-top: 0;
+									padding-right: var(--gap-8);
 								}
 								&:nth-child(2n) {
-									border-left: 1px solid #000;
+									padding-left: var(--gap-8);
+									border-left: 1px solid var(--color-divider-gray-light);
 								}
-								
 							}
 
 							&.df_type_w_ty1 {
@@ -625,10 +627,12 @@ df_type
 						}
 					}
 				}
-
+			}				
+			.btn_area {
+				width: 360px;
+				margin: var(--gap-5) auto 0;
 			}
 		}
-
 	}
 }
 
