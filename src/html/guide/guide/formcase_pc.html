@@ -1,7 +1,7 @@
 {{#> layout/guide }}
 <div class="guide_h1">Input</div>
 
-<div class="guide_h4">Chceckbox Case</div>
+<div class="guide_h4 pc">Chceckbox Case</div>
 <div class="checkbox_group_wrap ty3">
 	{{> cp/checkbox id="checkbox01-5" labelname="라벨명 Default" labelcont="부가적인 설명이 들어갑니다." }}
 	{{> cp/checkbox id="checkbox01-6" labelname="라벨명 checked" labelcont="부가적인 설명이 들어갑니다." checked=true }}
@@ -9,7 +9,7 @@
 	{{> cp/checkbox id="checkbox01-8" labelname="라벨명 checked disabled" labelcont="부가적인 설명이 들어갑니다." checked=true disabled=true }}
 </div>
 
-<div class="guide_h4">form Case</div>
+<div class="guide_h4 pc">form Case</div>
 <div class="form_group_wrap">
 	<div class="form_line">
 		<div class="row">
@@ -37,15 +37,7 @@
 	<div class="form_line">
 		<div class="label_tit">이메일</div>
 		{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
-	</div>
-	<div class="form_line full">
-		<div class="label_tit">주소</div>
-		<div class="radio_group_wrap" role="radiogroup">
-			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" checked=true }}
-			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
-		</div>
-		{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
-	</div>
+	</div>	
 	<div class="column">
 		<div class="form_line">
 			<div class="label_tit">영문이름</div>
@@ -63,4 +55,157 @@
 		</div>
 	</div>
 </div>
+<div class="guide_discription">full(basis:100% / radio_group:50%)</div>
+<div class="form_group_wrap">
+	<div class="form_line full">
+		<div class="label_tit">주소</div>
+		<div class="radio_group_wrap" role="radiogroup">
+			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" checked=true }}
+			{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
+		</div>
+		{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
+	</div>
+</div>
+<div class="guide_discription">c1(basis:100% / radio_group_wrap,label_tit:50%)</div>
+<div class="form_group_wrap">
+	<div class="form_line c1">
+		<div class="label_tit box">
+			<div>일상생활배상책임 담보 소재지도 동일한가요?</div>
+			{{> cp/linkButton bl_class="short_cut sm" bl_text="안내" pop_id="pop_type01" question_tit="일상생활배상책임 담보 안내 팝업열기" }}
+		</div>
+		<div class="radio_group_wrap" role="radiogroup">
+			{{> cp/radio rd-class="rd_btn" rd-id="receiveSel04_01" name="receiveSel04" labelname="예" }}
+			{{> cp/radio rd-class="rd_btn" rd-id="receiveSel04_02" name="receiveSel04" labelname="아니요" }}
+		</div>
+		{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
+
+<div class="guide_h4 pc">radio Case - 보험료확인</div>
+<div class="guide_discription">선택옵션 1개 - .guarantee_view_wrap</div>
+<div class="guarantee_view_wrap">
+	
+</div>
+
+<div class="guide_discription">선택옵션 2개 - .guarantee_select_wrap</div>
+<div class="guarantee_select_wrap">
+	<div class="select_item t3">
+		<div class="item_radio">
+			<input type="radio" name="g_item_ty01" id="g_item_ty01_1">
+			<label for="g_item_ty01_1">
+				<span class="badge_wrap">
+					<span class="hd_badge class_type class_type03">
+						<span class="text">실속 <em>5개 보장</em></span>
+					</span>
+				</span>
+				<span class="item_top">
+					<span class="top_title">부담없이 가볍게</span>
+					<em class="top_info">
+						<span class="price">월 <strong>7,200</strong> 원</span>
+						<span class="discount">20,000원</span>
+					</em>
+				</span>
+				<span class="item_desc">
+					합리적인 보험료로<br>
+					알차게 준비해요
+				</span>
+			</label>
+		</div>
+	</div>
+	<div class="select_item t2">
+		<div class="item_radio">
+			<input type="radio" name="g_item_ty01" id="g_item_ty01_2">
+			<label for="g_item_ty01_2">
+				<span class="badge_wrap">
+					<span class="hd_badge class_type class_type02">
+						<span class="text">표준 <em>12개 보장</em></span>
+					</span>
+				</span>
+				<span class="item_top">
+					<span class="top_title">빈틈없이 든든하게</span>
+					<em class="top_info">
+						<span class="price">월 <strong>7,200</strong> 원</span>
+						<span class="discount">20,000원</span>
+					</em>
+				</span>
+				<span class="item_desc">
+					탄탄한 보장으로<br>
+					걱정없이 충분해요
+				</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<div class="guide_discription">선택옵션 3개 - .guarantee_select_wrap.guarantee_select_wrap_n3</div>
+<div class="guarantee_select_wrap guarantee_select_wrap_n3">
+	<div class="select_item t3">
+		<div class="item_radio">
+			<input type="radio" name="g_item_ty02" id="g_item_ty02_1">
+			<label for="g_item_ty02_1">
+				<span class="badge_wrap">
+					<span class="hd_badge class_type class_type03">
+						<span class="text">실속 <em>5개 보장</em></span>
+					</span>
+				</span>
+				<span class="item_top">
+					<span class="top_title">부담없이 가볍게</span>
+					<em class="top_info">
+						<span class="price">월 <strong>7,200</strong> 원</span>
+						<span class="discount">20,000원</span>
+					</em>
+				</span>
+				<span class="item_desc">
+					합리적인 보험료로<br>
+					알차게 준비해요
+				</span>
+			</label>
+		</div>
+	</div>
+	<div class="select_item t2">
+		<div class="item_radio">
+			<input type="radio" name="g_item_ty02" id="g_item_ty02_2">
+			<label for="g_item_ty02_2">
+				<span class="badge_wrap">
+					<span class="hd_badge class_type class_type02">
+						<span class="text">표준 <em>12개 보장</em></span>
+					</span>
+				</span>
+				<span class="item_top">
+					<span class="top_title">빈틈없이 든든하게</span>
+					<em class="top_info">
+						<span class="price">월 <strong>7,200</strong> 원</span>
+						<span class="discount">20,000원</span>
+					</em>
+				</span>
+				<span class="item_desc">
+					탄탄한 보장으로<br>
+					걱정없이 충분해요
+				</span>
+			</label>
+		</div>
+	</div>
+	<div class="select_item t1">
+		<div class="item_radio">
+			<input type="radio" name="g_item_ty02" id="g_item_ty03">
+			<label for="g_item_ty03">
+				<span class="badge_wrap">
+					<span class="hd_badge class_type class_type01">
+						<span class="text">고급 <em>23개 보장</em></span>
+					</span>
+				</span>
+				<span class="item_top">
+					<span class="top_title">더 큰 보장으로 완벽하게</span>
+					<em class="top_info">
+						<span class="price">월 <strong>7,200</strong> 원</span>
+						<span class="discount">20,000원</span>
+					</em>
+				</span>
+				<span class="item_desc">
+					마음까지 편안하게<br>
+					더 많이 보장받아요
+				</span>
+			</label>
+		</div>
+	</div>
+</div>
+
 {{/ layout/guide }}
