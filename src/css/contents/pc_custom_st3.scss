@@ -695,6 +695,15 @@
 			font-size: var(--font-size-button-large);
 		}
 	}
+	.table_wrap {
+		&.type_mini{
+			.title {
+				margin: var(--gap-5) 0 var(--gap-4);
+				font-size: var(--font-size-body-small);
+			}
+		}
+		
+	}
 }
 
 
@@ -1149,8 +1158,8 @@
 		}		
 	}	
 }
-.guarantee_btn_area + .acc_group {
-	margin-top: var(--gap-8);
+.guarantee_btn_area {
+	margin: var(--gap-11) 0 var(--gap-8);
 }
 
 
