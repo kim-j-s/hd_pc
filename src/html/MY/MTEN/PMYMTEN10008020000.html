@@ -1,11 +1,21 @@
-{{#> layout/default page-title="자동차보험선택 | 마이페이지"}}
+{{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="자동차보험선택" h-ins="pop_insChk" }}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<p class="text_sub">
-					대상 계약을 선택해주세요.
-				</p>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>가입경력인정 신청/변경</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
 				<div class="card_item_wrap ty3">
 					<div class="card_item">
 						<div class="item_inner">
@@ -18,7 +28,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -58,7 +68,7 @@
 										<div class="desc">Hicar개인용(CM)</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty1">
 									<li>
 										<div class="title">자동차명</div>
 										<div class="cont">더뉴싼타페 2.5터보</div>
@@ -87,6 +97,9 @@
 							</div>
 						</div>
 					</div>
+					<div class="btn_area center view_more">
+						{{> cp/button_more}}
+					</div>
 				</div>
 
 				<!-- s: 꼭 알아두세요 -->
@@ -94,12 +107,14 @@
 					<ul class="list_depth">
 						<li>인터넷으로 가입한 다이렉트 상품(개인용 및 개인소유 업무용)에 한해 계약변경이 가능합니다.</li>
 						<li>하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 현대해상홈페이지(m.hi.co.kr) 또는 대표 콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.</li>
-						<li>보험기간 중 운전범위를 변경하신 경우 정확한 기간입력을 위해 대표콜센터(1588-5656)를 통해 지정하시기 바랍니다.</li>
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
 			</div>
 		</div>
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 	<!-- s: 자동차 배서 메뉴 -->
 	{{> pages/pop1 }}
