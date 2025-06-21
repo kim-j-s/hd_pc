@@ -51,11 +51,10 @@ body {
 	height: auto;
 	min-height: 100%;
 	padding: 120px 0 210px 0;
-
-
-	&.etc_mode {
+	&:has(.header_pc_nd) {
 		padding: 72px 0 64px 0;
 	}
+
 
 
 	.footer  {
