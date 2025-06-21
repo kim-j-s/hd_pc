@@ -753,6 +753,7 @@
 	display: flex;
 	align-items: flex-start;
 	height: 694px;
+	// background-color: blue;
 
 	&.pbw_s1 {
 
@@ -760,14 +761,104 @@
 
 	.prd_bi_wrap_l {
 		flex: 1 1 0;
-		background-color: red;
+		height: 100%;
+		padding-right: 32px;
 		.pbw_inner {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			padding: var(--padding-10) var(--padding-9) var(--padding-9) var(--padding-9);
+			border-radius: var(--radius-large2, 24px);
 			background-repeat: no-repeat;
 			background-position: top 56px right 32px;
 			background-color: var(--color-surface-light-blue-subtle);
 
 			&.pi_bg_ty1 {
-				// background-image: url();
+				background-image: url(../images/content/bi/visual/bg_img_gitr.png);
+			}
+
+			.pi_top {
+				flex: none;
+				.pt_title {
+					> small {
+						display: block;
+						font-weight: 700;
+						font-size: var(--font-size-heading-xsmall);
+						color: var(--color-text-primary-bold);
+					}
+					font-size: var(--font-size-heading-xxlarge);
+				}
+				.pt_btn_area {
+					padding-top: 8px;
+				}
+			}
+
+			.pi_bottom {
+				margin-top: auto;
+
+				.pb_title {
+					font-weight: 700;
+					font-size: var(--font-size-heading-medium);
+				}
+				.pb_cont {
+					margin-top: var(--gap-6);
+				}
+
+				.pb_details {
+					display: flex;
+					align-items: center;
+					min-height: 210px;
+					padding: var(--padding-5) var(--padding-7);
+					border-radius: var(--radius-large2);
+					background-color: var(--color-surface-white-subtle);
+					.pb_details_inner {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 12px;
+						width: 100%;
+						.item {
+							padding: var(--padding-3) 0 var(--padding-3) 44px;
+							font-size: var(--font-size-body-small);
+							background-repeat: no-repeat;
+							background-position: left center;
+							.item_exp {
+								font-size: var(--font-size-body-small);
+								> .item_sub_txt {
+									display: block;
+									font-size: var(--font-size-body-xsmall);
+									color: var(--color-text-subtle);
+								}
+							}
+							&.item_ico_ty1 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
+							}
+							&.item_ico_ty2 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
+							}
+							&.item_ico_ty3 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
+							}
+							&.item_ico_ty4 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
+							}
+						}
+					}
+				}
+
+				.pbc_banners {
+					margin-top: var(--gap-5);
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 12px;
+					.item {
+						a {
+							display: block;
+							font-size: 0;
+						}
+					}
+
+
+				}
 			}
 	
 		}
@@ -775,9 +866,12 @@
 
 
 	.prd_bi_wrap_r {
-		background-color: blue;
 		flex: none;
 		width: 375px;
+		height: 100%;
+		border-radius: var(--radius-large2);
+		border: var(--border-width-static-regular) solid var(--color-border-information-light);
+		// background: var(--color-background-white, #FFF);
 	}
 
 

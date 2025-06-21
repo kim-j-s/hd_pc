@@ -72,7 +72,8 @@ body {
 		gap: var(--gap-12);
 		width: 1188px;
 		margin: 0 auto;
-		padding: var(--gap-12) 0 var(--padding-12);
+		// padding: var(--gap-12) 0 var(--padding-12);
+		padding: 0 0 var(--padding-12);
 	
 		.content {
 			flex: none;
@@ -101,7 +102,7 @@ body {
 	/* 조건별 container 상단 간격 */
 	.header_pc {
 		+ .container {
-			margin-top: 64px;
+			margin-top: var(--gap-12);
 		}
 	}
 
