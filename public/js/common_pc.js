@@ -16,11 +16,11 @@ $(function() {  // DOM이 준비되었을 때 실행
 		sTop = $WIN.scrollTop();
 		wrapHeight = $WRAP.outerHeight();
 		footerHeight = $FOOTER.outerHeight();
-		console.log('wrapHeight : ', wrapHeight);
+		// console.log('wrapHeight : ', wrapHeight);
 	}
 
 	function floatingItem() {
-		console.log(wrapHeight, footerHeight, sTop, wHeight);
+		// console.log(wrapHeight, footerHeight, sTop, wHeight);
 		if (wrapHeight - footerHeight < sTop + wHeight) {
 			$FLOATING_ITEM.addClass('active');
 		} else {
@@ -48,7 +48,7 @@ $(function() {  // DOM이 준비되었을 때 실행
 	let lastScrollTop = 0;
   $(window).on('scroll', function() {
     let st = $(this).scrollTop();
-		console.log(st);
+		// console.log(st);
 
     if (st > lastScrollTop) {
       // 아래로 스크롤
