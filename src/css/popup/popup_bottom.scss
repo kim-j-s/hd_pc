@@ -94,7 +94,12 @@
 					.list_ty2 + .reward_img_area.ty2 {
 						margin-top: 32px;
 					}
-
+					
+					.pop_title_h1 {
+						& + * {
+							margin-top: var(--gap-5);
+						}
+					}
 				}
 			}
 		}
