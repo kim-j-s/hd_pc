@@ -1164,7 +1164,12 @@
 }
 
 
-
+//radio 3분할
+.radio_group_wrap_ty3  {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap-4);
+}
 
 
 
