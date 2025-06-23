@@ -206,9 +206,10 @@
 			}
 		}
 
-		& + .info_gray {
+		& + .row {
 			margin-top: var(--gap-5);
 		}
+		& + .info_gray,
 		& + .table {
 			margin-top: var(--gap-5);
 		}
@@ -245,6 +246,12 @@
 	}
 	.icon_pay_ty3 {
 		background-image: url(../images/logo/pay_toss.svg);
+	}
+}
+
+.radio_group_wrap_ty2 {
+	& + .input_text {
+		margin-top: var(--gap-5);
 	}
 }
 
