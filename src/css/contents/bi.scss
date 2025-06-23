@@ -220,8 +220,23 @@
 			}
 		}
 	}
+
+	.bi_wrap_content {
+		flex: 1;
+		.form_group_wrap {
+			.column {
+				flex: 1;
+			}
+		}
+	}
 	
-	
+	.bottom_fix_wrap {
+		.btn_area {
+			.hd_btn {
+				flex: 1;
+			}
+		}
+	}
 }
 
 /* 기조정보 상단 노출 영역 */
@@ -818,6 +833,10 @@
 			&.pi_bg_ty1 {
 				background-image: url(../images/content/bi/visual/bg_img_gitr.png);
 			}
+			&.pi_bg_ty2 { //건강보험
+				background-image: url(../images/content/bi/visual/bg_img_ltht.png);
+			}
+
 
 			.pi_top {
 				flex: none;
@@ -906,11 +925,14 @@
 
 
 	.prd_bi_wrap_r {
-		position: relative;
 		flex: none;
 		width: 375px;
 		min-height: 694px;
 		// background: var(--color-background-white, #FFF);
+	}
+
+	.bi_wrap {
+		position: relative;
 		&::before {
 			content: '';
 			position: absolute;
@@ -922,9 +944,9 @@
 			border: var(--border-width-static-regular) solid var(--color-border-information-light);
 		}
 	}
-
-
-
+	.bottom_fix_notice {
+		padding-top: var(--gap-5);
+	}
 }
 
 

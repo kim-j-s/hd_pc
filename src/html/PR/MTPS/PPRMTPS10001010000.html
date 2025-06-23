@@ -1,0 +1,128 @@
+{{#> layout/default page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-title="차량 정보" }}
+
+	<div id="container" class="container">
+		<div class="content content_st1">
+			<div class="prd_bi_wrap">
+				<div class="prd_bi_wrap_l">
+					<div class="pbw_inner pi_bg_ty1">
+						<div class="pi_top">
+							<h2 class="pt_title">
+								<small>자사 오프라인 대비 18.3% 저렴</small>
+								설레는 해외여행,<br>
+								<span class="bold">어디까지 보장</span>을 받아야할까요?
+							</h2>
+							<div class="pt_btn_area">
+								<a href="javascript:void(0)" class="btn_link short_cut sm rd_box">
+									<span class="text">보장내용 자세히 보기</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="pi_bottom">
+							<h3 class="pb_title">안전한 여행을 위한 필수품! 다이렉트 해외여행보험</h3>
+							<div class="pb_cont">
+								<div class="pb_details">
+									<div class="pb_details_inner">
+										<div class="item item_ico_ty1">
+											<p class="item_exp">
+												최대 46% 할인으로 가볍게
+												<small class="item_sub_txt">자사 오프라인 대비 저렴</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty2">
+											<p class="item_exp">
+												발생하기 쉬운 사고 보장
+												<small class="item_sub_txt">휴대품손해(분실제외), 비행기 지연보상</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty3">
+											<p class="item_exp">
+												편리한 우리말 상담서비스
+												<small class="item_sub_txt">365일 24시간 우리말 상담 가능</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty4">
+											<p class="item_exp">
+												여권분실부터 배상책임까지
+												<small class="item_sub_txt">여행에서 일어날 수 있는 다양한 상황에 대비</small> 
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="pbc_banners">
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner1.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner2.png" alt="혜택 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="prd_bi_wrap_r">
+					<div class="bi_wrap">
+						<div class="bi_wrap_header">
+							<h3 class="bi_wrap_tit">자동차 소유(예정)자 정보</h3>
+						</div>
+
+						<div class="bi_wrap_content">
+							<div class="form_group_wrap">
+								<div class="column">
+									<div class="form_line">
+										<div class="label_tit">이름</div>
+										{{> cp/text class="big" placeholder="자동차 소유(예정)자" inp-title="자동차 소유(예정)자 입력" }}
+									</div>
+									<div class="form_line">
+										<div class="label_tit">주민등록번호</div>
+										<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
+										<div class="comp_wrap birth active">
+											{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
+											<span class="dash">-</span>
+											{{> cp/keypad7 kp-class="big" case1=true kt="주민등록번호 뒤 7자리 입력"}}
+										</div>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">휴대폰번호</div>
+										{{> cp/text class="phone big" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 버튼 영역 -->
+						<div class="bottom_fix_wrap">
+							<div class="btn_area">
+								{{> cp/button type="1" size="1" b-text="내 보험료를 알아볼게요" disabled=true }}
+							</div>
+						</div>
+						<!-- e: 하단 버튼 영역 -->
+					</div>
+					<!-- s: 꼭 알아두세요 -->
+					{{#> cp/notice dp-active=true }}
+					<ul class="list_ty1">
+						<li>보험료 계산시 개인(신용)정보 동의 및 본인인증이 필요합니다.</li>
+						<li>가입 가능한 연령은 만 19세 이상입니다.</li>
+					</ul>
+					{{/ cp/notice }}
+					<!-- e: 꼭 알아두세요 -->
+				</div>
+			</div>
+		</div>
+			
+		{{> layout/aside_pc }}
+	</div>
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
