@@ -59,6 +59,12 @@
 		display: flex;
 		gap: 8px;
 	}
+	&.ty3 {
+		flex-wrap: nowrap;
+		+ .title_h3 {
+			margin-top: var(--gap-11);
+		}
+	}
 }
 
 .btn_link {
