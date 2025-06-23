@@ -1,6 +1,6 @@
 {{#> layout/default page-title="청약 내용 확인 | 상품"}}
     <div id="wrap" class="wrap">
-        {{> layout/header h-title="청약 내용 확인" }}
+      {{> layout/header_pc h-prd="건강보험" h-title="청약 내용 확인" }}
     </div>
 	<!-- s: popup area -->
 
@@ -61,33 +61,6 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="info_gray">
-                  <h4 class="title_h4">보험료</h4>
-                  <dl>
-                      <dt>
-                          총 보험료
-                      </dt>
-                      <dd>
-                          15,007,200원
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt>
-                          월 보험료
-                      </dt>
-                      <dd>
-                          <strong class="point">60,560원</strong>
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt>
-                          예상만기환급금
-                      </dt>
-                      <dd>
-                          926원
-                      </dd>
-                  </dl>
                 </div>
               </div>
 
@@ -304,7 +277,7 @@
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="확인"}}
+			{{> cp/button type="1" size="2" b-text="확인"}}
 		</div>
 	</div>
 	{{/ popup/popup_full}}

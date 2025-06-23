@@ -294,6 +294,10 @@ $logo-numbers: "000", "002", "003", "004", "005", "007", "011", "012", "020", "0
 	@include getSvg("icon/arrowRight_ty5");
 }
 
+.arrowRightSvg_ty10{
+	@include getSvg("icon/arrowRight_ty10");
+}
+
 .arrowDownSvg_ty3 {
 	@include getSvg("icon/arrowDown_ty3");
 
@@ -313,7 +317,6 @@ $logo-numbers: "000", "002", "003", "004", "005", "007", "011", "012", "020", "0
 .resetSvg {
 	@include getSvg("icon/icon_reset_ty2");
 }
-
 
 
 .popover_help {

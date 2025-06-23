@@ -2,7 +2,7 @@
     
 
 	<!-- s: 초년도 보험료 5% 할인 방법 안내 full 팝업 -->
-	{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="초년도 보험료 5% 할인 방법 안내" }}
+	{{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="초년도 보험료 5% 할인 방법 안내" }}
 	<div class="popup_cont">
 		<div class="popup_content">
       <div class="popup_content_top">
@@ -27,10 +27,10 @@
       <div class="form_box">
         <h3 class="title_h3">모바일에서 사진 첨부하기</h3>
         <div class="form_group_wrap">
-          <div class="form_line">
+          <div class="form_line full">
             <div class="label_tit">휴대폰번호</div>
             {{> cp/text class="phone" type="tel" placeholder="-없이 입력" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
-           	<div class="btn_area">
+           	<div class="btn_area column">
                {{> cp/button type="3" size="3" b-text="사진첨부 링크받기"}}
             </div>  
             <ul class="list_ty2">
@@ -44,10 +44,10 @@
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="확인"}}
+			{{> cp/button type="1" size="2" b-text="확인"}}
 		</div>
 	</div>
-	{{/ popup/popup_full}}
+	{{/ popup/popup_bottom}}
 	<!-- e: 초년도 보험료 5% 할인 방법 안내 full 팝업 -->
 
 
