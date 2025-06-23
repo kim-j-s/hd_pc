@@ -285,7 +285,9 @@
 	-webkit-transition: -webkit-transform 0.3s ease;
 	transition: -webkit-transform 0.3s ease;
 	transition: transform 0.3s ease;
-	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+	transition:
+		transform 0.3s ease,
+		-webkit-transform 0.3s ease;
 }
 .popup_wrap.full .popup_container .popup_inner .popup_cont {
 	padding-bottom: var(--padding-12);
@@ -384,6 +386,9 @@
 }
 .popup_wrap.bottom .popup_container .popup_inner .popup_cont > .popup_content .list_ty2 + .reward_img_area.ty2 {
 	margin-top: 3.2rem;
+}
+.popup_wrap.bottom .popup_container .popup_inner .popup_cont > .popup_content .pop_title_h1 + * {
+	margin-top: var(--gap-5);
 }
 .popup_wrap.bottom .info_gray + ul {
 	margin-top: var(--gap-5);
