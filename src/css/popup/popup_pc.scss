@@ -38,7 +38,12 @@
 			transform: none;
 			
 			.popup_inner {
+				height: auto;
 				border-radius: var(--radius-xlarge2);
+
+				.popup_cont {
+					padding-bottom: var(--padding-8);
+				}
 			}
 		}
 	}

@@ -241,6 +241,10 @@
 	& + .info_gray.ty2 {
 		margin-top: 16px;         
 	}
+
+	& + .search_reult_list_container {
+		margin-top: var(--gap-8);
+	}
 }
 
 .form_box {
