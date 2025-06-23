@@ -52,20 +52,27 @@
 			<div class="hpi_sub_utils">
 				{{#unless h-prd}}
 				<div class="item">
-					<button type="button" class="hsu_alarm"><span class="text"></span></button>
+					<button type="button" class="hus_btn hsu_alarm"><span class="text"></span></button>
+				</div>
+				<div class="item"> 
+					<button type="button" class="hus_btn hsu_cart"><span class="text"></span></button>
 				</div>
 				<div class="item">
-					<button type="button" class="hsu_cart"><span class="text"></span></button>
+					<button type="button" class="hus_btn hsu_search"><span class="text"></span></button>
 				</div>
 				<div class="item">
-					<button type="button" class="hsu_search"><span class="text"></span></button>
-				</div>
-				<div class="item">
-					<button type="button" class="hsu_menu_all"><span class="text"></span></button>
+					<button type="button" class="hus_btn hsu_menu_all"><span class="text"></span></button>
 				</div>
 				{{else}}
-				sdf
-				sdf
+				<div class="item">
+					<button type="button" class="hus_btn hsu_chatbot"><span class="text">챗봇상담</span></button>
+				</div>
+				<div class="item">
+					<button type="button" class="hus_btn hsu_menu_all"><span class="text"></span></button>
+				</div>
+				<div class="item">
+					<button type="button" class="hus_btn hsu_home"><span class="text"></span></button>
+				</div>
 				{{/unless}}
 			</div>
 
