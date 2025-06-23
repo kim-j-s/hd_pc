@@ -493,14 +493,14 @@ body {
 .title_item {
 	margin-bottom: var(--gap-6);
 }
-.title_item .title_h3 + * {
-	margin-top: 0;
-}
-.title_item .title_h3.ct1 {
+.title_item .item .title_h3.ct1 {
 	font-weight: 400;
 }
-.title_item .title_h3.ct1 strong {
+.title_item .item .title_h3.ct1 strong {
 	font-weight: 700;
+}
+.title_item .item .title_h3 + .title_sub {
+	margin-top: var(--gap-4);
 }
 .info_gray {
 	/* 
