@@ -136,6 +136,10 @@
 							background: url(../images/content/bi/icon_spm_motorcycle.svg) no-repeat center center;
 							animation: bounce 0.8s linear infinite;
 						}
+						&.cancer {
+							background: url(../images/content/bi/icon_spm_cancer.svg) no-repeat center center;
+							animation: bounce 0.8s linear infinite;
+						}
 						
 						
 						&::after {
@@ -902,6 +906,9 @@
 			}
 			&.pi_bg_ty3 { //자동차보험(개인)
 				background-image: url(../images/content/bi/visual/bg_img_mtps.png);
+			}
+			&.pi_bg_ty4 { //암보험
+				background-image: url(../images/content/bi/visual/bg_img_ltcc.png);
 			}
 
 

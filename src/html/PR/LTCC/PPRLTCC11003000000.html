@@ -1,0 +1,365 @@
+{{#> layout/default page-title="보험료 확인 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="암보험" h-title="보험료 확인" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						나를 지키는 확실한 암보험<br>
+						<strong>어디까지 보장</strong>받고 싶으세요?
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+
+			<div class="guarantee_select_wrap guarantee_select_wrap_n3">
+				<div class="select_item t3">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty01">
+						<label for="g_item_ty01">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type03">
+									<span class="text">실속 <em>23개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">첫 암진단 이후 재진단암 보장</span>
+								<em class="top_info">
+									<span class="price">월 <strong>25,270</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								재발암과 전이암을 포함한<br>
+								재진단암을 보장받아요.
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item t2">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty02">
+						<label for="g_item_ty02">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type02">
+									<span class="text">표준 <em>32개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">넉넉한 보장으로 더욱 든든하게</span>
+								<em class="top_info">
+									<span class="price">월 <strong>58,010</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								암 치료를 단계별로 보장하고,<br>
+								100세까지 자동갱신이 가능해요.
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="select_item t1">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty03">
+						<label for="g_item_ty03">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type01">
+									<span class="text">고급 <em>35개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">간병인비까지 꼼꼼하게</span>
+								<em class="top_info">
+									<span class="price">월 <strong>70,830</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								간병인비까지 보장받아요.
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- s: 본인인증 후 대상 고객인 경우 할인정보 노출 -->
+			<!-- <div class="dc_info_box ty2">
+				<ul class="dc_list column">
+					<li>자동차보험 가입 할인 1회차 보험료 <strong class="point">12%</strong> 할인이 적용됐어요</li>
+				</ul>
+			</div> -->
+			<!-- e: 본인인증 후 대상 고객인 경우 할인정보 노출 -->
+
+			<div class="guarantee_info"> 
+				<div class="item_right">
+					<ul class="list_ty4">
+						<li>
+							<span class="text">보헙/납입기간</span>
+							<strong class="data">20년</strong>
+						</li>
+						<li>
+							<span class="text">납입방법</span>
+							<strong class="data">월납</strong>
+						</li>
+					</ul>
+					{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+				</div>
+			</div>
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="acc_group">
+				<div class="space_list_ty2">
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="암진단Ⅱ(유사암제외)(갱신형)"  }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="암진단Ⅱ(소액암및유사암제외)(갱신형)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="재진단암진단Ⅱ(갱신형)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">45만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="유사암진단Ⅱ(갱신형)" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">4백만원</span>
+								</div>
+							</li>
+						</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="암진단 보장" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-1" sct="특정암진단(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1천만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-2" sct="전이암진단(최초1회한)(특정전이암)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1천만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-3" sct="전이암진단(최초1회한)(림프절전이암)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">3백만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-4" sct="남성생식기암진단(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1천만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-5" sct="중증갑상선암진단(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span>미가입</span>
+									</div>
+								</li>					
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="암수술비 보장" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-1" sct="암수술(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1백만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-2" sct="다빈치로봇암수술(갑상선암및전립선암제외)(최초1회한)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5백만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="간병인비까지 보장" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-1" sct="간병인사용질병입원일당Ⅶ(요양병원및의원제외)(1-180일)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1십5만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-2" sct="간병인사용질병입원일당Ⅶ(요양병원및의원)(1-180일)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">3만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-3" sct="간병인사용질병입원일당Ⅶ(간호간병통합서비스)(일반병동/재활병동)(1-180일)(갱신형)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">4만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="물건이 손상됐거나 도난당했을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-1" sct="휴대품손해(분실제외)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">200만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-2" sct="해외여행중 자택 도난손해(가재)보장" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">300만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="다른 사람에게 피해를 입혔을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox06-1" sct="일괄배상(해외여행중)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+				</div>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+
+			<div class="guarantee_btn_area btn_area center">
+				{{> cp/button type="3" size="3" b-text="예상 환급금 알아보기" popup="pop1" btn-title="전체 팝업"}}
+			</div>
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+				<ul class="list_ty1">
+					<li>표적항암약물허가치료비(갱신형), 다빈치로봇암수술(최초1회한)(갱신형) 담보는 최초가입시 10년 자동갱신담보로 가입되며, 잔여 납입기간에 따라 갱신주기가 변경될 수 있습니다.</li>
+					<li>가입하지 않은 담보를 계약체결 이후 추가하시는 경우, 회사가 정하는 인수지침에 의하여 피보험자의 가입나이, 건강상태, 과거병력 및 직무 등에 따라 보험가입금액이 제한되거나 가입이 불가능할 수 있습니다.</li>
+					<li>자동갱신 종료연령이 100세가 아닌 담보- [80세] 질병사망(갱신형), 암사망(갱신형)</li>
+				</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+
+		</div>
+
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_건강 panel-title="가입자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
+	</div>
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+{{/ layout/default }}

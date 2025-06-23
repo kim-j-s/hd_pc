@@ -28,26 +28,12 @@
 	}
 }
 
-.nl_dept1 {
-	&.c1 {
-		.nld_cont {
-			// display: block;
-		}
-	}
-}
-
-// .nld_cont {
-// 	display: none;	
-// }
-
 .nld_cont {
 	position: absolute;
 	top: 72px;
 	left: 50%;
-	// left: 0;
 	z-index: 10;
 	width: 100vw;
-	// width: 100%;
 	text-align: center;
 	border-radius: 0px 0px var(--radius-xxlarge) var(--radius-xlarge2);
 	background-color: var(--color-background-white);
@@ -55,34 +41,35 @@
 	visibility: hidden;
 	opacity: 0;
 	transform: scaleY(0) translateX(-50%);
-	// transform: scaleY(0);
 	transform-origin: top center;
 	transition: 0.3s;
-	background-color: #ddd;
+	// background-color: #ddd;
 	.nld_cont_inner {
 		display: inline-block;
 		width: 1188px;
 		padding: var(--gap-8) 0px var(--gap-12) 0px;
 		text-align: left;
-		background-color: rgba(0, 0, 0, 0.3);
+		// background-color: rgba(0, 0, 0, 0.3);
 		
 		.nld_cont_top {
 			display: flex;
 			padding: var(--padding-3) var(--padding-5);
 			.nld_cont_top_btn {
 				display: inline-block;
+				padding-left: 52px;
+				background-repeat: no-repeat;
+				background-position: left center;
 				> .text {
 					display: block;
-					padding: 0 28px 0 52px;					
+					padding: 0 28px 0 0;
 					font-weight: 700;
 					font-size: var(--font-size-navigation-title-medium);
 					line-height: 40px;
-					background-repeat: no-repeat;
-					background-position: left center;
-					// &.nld_cont_top_btn_ty1 {
-					// 	background-image: url();
-					// }
+					background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center / 24px auto;
 				}
+				// &.nld_cont_top_btn_ty1 {
+					
+				// }
 			}
 		}
 
@@ -146,30 +133,38 @@
 }
 
 .nl_dept1 {
-	// &:hover,
-	// &:focus {
-	// 	.nld_cont {
-	// 		opacity: 1;
-	// 		visibility: visible;
-	// 		transform: scaleY(1) translateX(-50%);
-	// 		// transform: scaleY(1);
-	// 	}
-	// }
-
 	&:has(*:hover),
 	&:has(*:focus) {
 		.nld_cont {
 			opacity: 1;
 			visibility: visible;
 			transform: scaleY(1) translateX(-50%);
-			// transform: scaleY(1);
 		}
 	}
-	
-
 }
 
 
-// opacity: 1;
-// visibility: visible;
-// transform: scaleY(1);
+.wrap {
+	&::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 40;
+		background-color: rgba(0, 0, 0, 0.75);
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.3s;
+	}
+	&:has(.nl_dept1 *:hover),
+	&:has(.nl_dept1 *:focus) {
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+}
+
