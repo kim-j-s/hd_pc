@@ -367,22 +367,26 @@
 		margin-top: var(--gap-5);
 	}
 }
+
 .text_sub {
 	& + .file_attach_box {
 		margin-top: var(--gap-8);
 	}
 }
+
 .title_item {
 	margin-bottom: var(--gap-6);
 
-	.title_h3 {
-		& + * {
-			margin-top: 0;
-		}
-		&.ct1 {
-			font-weight: 400;
-			strong {
-				font-weight: 700;
+	.item {
+		.title_h3 {
+			&.ct1 {
+				font-weight: 400;
+				strong {
+					font-weight: 700;
+				}
+			}
+			& + .title_sub {
+				margin-top: var(--gap-4);
 			}
 		}
 	}
