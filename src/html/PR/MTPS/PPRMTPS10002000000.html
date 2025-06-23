@@ -1,37 +1,42 @@
 {{#> layout/default page-title="자동차 기본정보 | 상품"}}
 <div id="wrap" class="wrap">
-	<!-- s: 25-05-14 수정 -->
-	{{> layout/header_pc h-title="차량 정보" }}
-	<!-- e: 25-05-14 수정 -->
+	{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+
 	<div id="container" class="container">
 		<div class="content">
 			<div class="title_view_wrap">
 				<div class="page_title">
-					<div class="p_info">보험료 확인</div>
+					<div class="p_info">차량 정보</div>
 					<h2 class="p_title">
-						보험료를 계산할<br />
-						<strong>자동차를 선택</strong>하세요
+						보험료를 계산할 <strong>자동차를 선택</strong>하세요
 					</h2>
 				</div>
 				<div class="btn_area">
-					{{> cp/button type="3" size="4" b-text="다수차량 동시 계산/가입"}}
+					{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="다수차량 동시 계산/가입"}}
 				</div>
 			</div>
 
 					
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
-					{{>cp/tab_btn tb-text="보유중인 자동차보험 갱신 (3)" tb-class="tab_btn_block" tb-id="ex01" tb-active=true}}
-					{{>cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-class="tab_btn_block" tb-id="ex02"}}
-					{{>cp/tab_btn tb-text="최근 보험료 계산 내역" tb-class="tab_btn_block" tb-id="ex03"}}
+					{{>cp/tab_btn tb-text="보유중인 자동차보험 갱신 <span class='hd_badge solid_pastel c_primary size_m'>5</span>" tb-id="ex01" tb-active=true}}
+					{{>cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-id="ex02"}}
+					{{>cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
 				</div>
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
-					<div class="tit_box">
-						<div class="title_h3">
-							어떤 자동차로 보험료를 계산할까요?
+					<div class="title_item">
+						<div class="title_h3 ct1">
+							<strong>어떤 자동차</strong>로 보험료를 계산할까요?
 						</div>
 						<div class="btn_area">
-							{{> cp/button type="3" size="4" b-text="계약 상태에 따른 가입 안내"}}
+							{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="계약 상태에 따른 가입 안내"}}
+						</div>
+					</div>
+				
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전"}}
+							{{> cp/button type="1" size="1" b-text="이대로 가입하기"}}
 						</div>
 					</div>
 				</div>
@@ -42,172 +47,11 @@
 					tab inner 3
 				</div>
 			</div>
-
-			<!-- s: 신규가입 차량 -->
-			<div class="card_item_wrap">
-				<div class="card_item">
-					<div class="item_inner">
-						<div class="inner_cont">
-							<div class="item_top">
-								<div class="title_info">
-									<div class="main_title">신규차량</div>
-								</div>
-								<div class="desc">
-									가입된 차량 이외에 별도로 신규 차량의 자동차보험을 가입하시기 원하시나요?
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn_area">
-						{{> cp/button type="2" size="2" b-text="신규차량 보험가입" }}
-					</div>
-				</div>
-			</div>
-			<!-- e: 신규가입 차량 -->
-
-			<div class="list_top_wrap">
-				<div class="left">
-					<!-- s: 25-05-22 수정 -->
-					<span>보유 중인 자동차 <strong class="point">2</strong>건</span>
-					<!-- e: 25-05-22 수정 -->
-				</div>
-			</div>
-
-			
-			<div class="card_item_wrap">
-				<div class="card_item">
-					<div class="item_inner">
-						<div class="inner_cont">
-							<!-- s: 25-04-23 수정 -->
-							<div class="item_top">
-								<div class="badge_wrap">
-									<span class="hd_badge outline solid_pastel c_primary size_m">만기 D-4</span>
-								</div>
-								<div class="title_info">
-									<div class="main_title">
-										111너**11 <span class="info">(삼성)</span>
-									</div>
-								</div>
-							</div>
-							<!-- e: 25-04-23 수정 -->
-							<ul class="card_list_ty1">
-								<li>
-									<div class="title">보험기간</div>
-									<div class="cont">2020.01.01 ~ 2021.01.01</div>
-								</li>
-								<li>
-									<div class="title">계약자</div>
-									<div class="cont">김*대</div>
-								</li>
-								<li>
-									<div class="title">피보험자</div>
-									<div class="cont">김*대</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="btn_area">
-						<!-- s: 25-05-12 수정 -->
-						{{> cp/button type="2" size="2" b-text="보험료 계산" }}
-						<!-- e: 25-05-12 수정 -->
-					</div>
-				</div>
-				<!-- s: 25-05-12 수정 -->
-				<div class="card_item">
-					<div class="item_inner">
-						<div class="inner_cont">
-							<!-- s: 25-04-23 수정 -->
-							<div class="item_top">
-								<div class="title_info">
-									<div class="main_title">
-										111너**11 <span class="info hd">(현대)</span>
-									</div>
-								</div>
-							</div>
-							<!-- e: 25-04-23 수정 -->
-							<ul class="card_list_ty1">
-								<li>
-									<div class="title">보험기간</div>
-									<div class="cont">2020.01.01 ~ 2021.01.01</div>
-								</li>
-								<li>
-									<div class="title">계약자</div>
-									<div class="cont">김*대</div>
-								</li>
-								<li>
-									<div class="title">피보험자</div>
-									<div class="cont">김*대</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="btn_area">
-						{{> cp/button type="2" size="2" b-text="보험료 계산(만기경과)" }}
-					</div>
-				</div>
-				<!-- e: 25-05-12 수정 -->
-				<div class="card_item">
-					<div class="item_inner">
-						<div class="inner_cont">
-							<!-- s: 25-04-23 수정 -->
-							<div class="item_top">
-								<div class="title_info">
-									<div class="main_title">
-										111너**11 <span class="info hd">(현대)</span>
-									</div>
-								</div>
-							</div>
-							<!-- e: 25-04-23 수정 -->
-							<ul class="card_list_ty1">
-								<li>
-									<div class="title">보험기간</div>
-									<div class="cont">2020.01.01 ~ 2021.01.01</div>
-								</li>
-								<li>
-									<div class="title">계약자</div>
-									<div class="cont">김*대</div>
-								</li>
-								<li>
-									<div class="title">피보험자</div>
-									<div class="cont">김*대</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="btn_area">
-						<!-- s: 25-05-12 수정 -->
-						{{> cp/button type="3" size="2" b-text="만기알람 설정" }}
-						<!-- e: 25-05-12 수정 -->
-					</div>
-				</div>
-			</div>
 		</div>
 
-		<!-- s: 최근계산내역-->
-		<div class="fixed_link_wrap">
-			<div class="inner">
-				<div class="link_btn_box">
-					<button type="button" class="btn_current">
-						최근설계<br>
-						<span>3건</span>
-					</button>
-					<!-- s: 25-05-16 수정 -->
-					<!-- <button type="button" class="link_close">
-						<span class="sr_only">최근계산내역 닫기</span>
-					</button> -->
-					<!-- e: 25-05-16 수정 -->
-				</div>
-				<div class="current_state" aria-hidden="false">
-					<div class="cont">
-						<div class="link_icon"></div>
-						<div class="text">
-							최근설계내역 <strong><span>3</span>건</strong>이 있어요! 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- e: 최근계산내역-->
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
 	</div>
 </div>
 

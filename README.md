@@ -10,6 +10,7 @@ https://kim-j-s.github.io/hd_ko/dist/index.html
 
 ## z-index 순서
 
+- header : 50
 - tooltip : 10
 - nav : 100
 - popup(bottom, layer, full 공통) : 1000

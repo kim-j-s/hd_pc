@@ -1,14 +1,12 @@
 {{#> layout/default page-title="자동차사고/고장 접수 안내 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="자동차 사고접수/고장출동 신청" }}
+	{{> layout/header_pc }}
 	<div id="container" class="container">
 		<div class="content">
-
 			<div class="title_view_wrap">
 				<div class="page_title">
-					<div class="p_info">피보험자/계약자정보</div>
 					<h2 class="p_title">
-						<strong>계약자 정보를 입력</strong>해주세요
+						<strong>자동차사고/고장 접수 안내</strong>
 					</h2>
 				</div>
 			</div>
@@ -19,17 +17,8 @@
 					<div class="cont">
 						<strong class="tit">사고접수</strong>
 						<ul class="list_ty3">
-							<li> 
-								모바일 화면에서 접수
-								<div class="btn_area basic">
-									{{> cp/button type="3" size="5" b-text="홈페이지 접수하기" rightIcon="openWindowSvg" popup="pop_type01"}}
-								</div>
-							</li>
 							<li>
 								고객센터 (1588-5656) → ARS ②번
-								<div class="btn_area basic">
-									{{> cp/linkButton href="tel:1588-5656" bl_class="short_cut sm rd_box" bl_text="고객센터 전화걸기" }}
-								</div>
 							</li>
 						</ul>
 					</div>
@@ -80,8 +69,9 @@
 				<li>사고조사 후 보험금을 지급해드리며, 보험금 지급 후에도 추가 보험금 청구, 구상환입, 판결 등의 사유로 보험금 지급 이 변경될 수 있습니다.</li>
 				<li>보상처리 관련 내용은 담당자에게 문의해주세요.</li>
 				<li>
-					보험계약자 등은 해당 사고 건에 대해 보험회사에 소속된 손해사정사 또는 보험회사와 위탁계약이 체결된 손해사정 업자 외에 별도로 손해사정사를 선임할 수 있으며 그 비용 부담은 아래와 같습니다.(「보험업감독규정」 제9-16조)
-				
+					보험계약자 등은 해당 사고 건에 대해 보험회사에 소속된 손해사정사 또는 보험회사와 위탁계약이 체결된 손해사정 업자 외에 별도로 손해사정사를 선임할 수 있으며 그 비용 부담은 아래와
+					같습니다.(「보험업감독규정」 제9-16조)
+
 					<ol class="circle_list">
 						<li>
 							<strong>보험회사 부담</strong>
@@ -116,32 +106,14 @@
 		</div>
 	</div>
 
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
-	 
-	<!-- s: popup area -->
 
-	<!-- s: 자동차 사고 접수 팝업 -->
-	{{#> popup/popup_layer popup-id="pop_type01" popup-title="자동차 사고 접수"}}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<p class="pl_txt1">
-				<strong>현대해상 홈페이지로 이동</strong>할게요
-			</p>
-		</div>
-	</div>
-	<div class="popup_bottom">
-		<div class="btn_area">
-			<!-- s: 25-05-15 수정 -->
-			<a href="https://qa.hi.co.kr/serviceAction.do" class="hd_btn hd_btn_ty_1 hd_btn_s_2" target="_blank" title="새창열림">
-				<span class="text">확인</span>
-			</a>
-			<!-- e: 25-05-15 수정 -->
-		</div>
-	</div>
-	{{/ popup/popup_layer}}
-	<!-- e: 자동차 사고 접수 팝업 -->
-	 
-	<!-- e: popup area -->
+<!-- s: popup area -->
+
+<!-- e: popup area -->
 
 
 {{/ layout/default }}
