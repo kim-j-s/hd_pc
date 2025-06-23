@@ -338,6 +338,9 @@
 // text
 .text_lg {
 	font-size:  var(--font-size-body-medium);
+	& + .radio_group_wrap_ty2 {
+		margin-top: var(--gap-5);
+	}
 }
 .text_sub {
 	& + .file_attach_box {

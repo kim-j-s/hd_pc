@@ -8,13 +8,20 @@
 {{#> popup/popup_bottom popup-id="pop_type01" popup-title="담보 안내" popup-active=true }}
 <div class="popup_cont">
 	<div class="popup_content">
+	
 		<div class="text_lg">
-            $상세보장명 보장명은 전체명칭이 다 노출됩니다.$
-        </div>
+			$담보명$
+		</div>
+		<div class="radio_group_wrap_ty2" role="radiogroup">
+			{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g1" name="radio_g1" labelname="2천만원" checked=true }}
+			{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g2" name="radio_g1" labelname="미가입" }}
+		</div>
+
 		{{#> cp/notice dp-title="보장내용을 확인해 보세요" dp-active="active" }}
 			<ul class="list_depth">
 				<li>
-					$보장 상세 설명이 출력됩니다. 처리계 전문 호출$
+					보장개시일 이후 암(유사암 제외)으로 진단확정된 경우 가입금액 지급(최초 1회한) ※ 유사암 : 기타피부암, 갑상선암, 경계성종양, 제자리암<br/>
+					※유사암: 기타피부암, 갑상선암, 경계성종양, 제자리암
 				</li>
 			</ul>
 		{{/ cp/notice }}
