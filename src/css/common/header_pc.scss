@@ -21,9 +21,11 @@
 
 	&.header_pc_nd {
 		height: 72px;
+		background-color: var(--color-element-primary);
 	}
 	.header_pc_inner {
-		display: inline-block;
+		display: inline-flex;
+		flex-direction: column;
 		width: 1188px;
 	}
 
@@ -33,6 +35,8 @@
 .hpi_top {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 	padding-top: 16px;
 
 	// 모드 전환
@@ -76,4 +80,47 @@
 }
 
 
+.hpi_bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
 
+	.hpi_l {
+		display: inline-flex;
+		align-items: center;
+		width: 240px;
+		&.hpi_l_nd {
+			width: auto;
+		}
+		.hpi_logo {
+			font-size: 0;
+			a {
+				display: block;
+			}
+		}
+		.hpi_l_prd_name {
+			flex: none;
+			position: relative;
+			padding-left: 17px;
+			font-size: var(--font-size-heading-xsmall);
+			color: var(--color-text-bolder-inverse);
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 8px;
+				height: 16px;
+				border-left: 1px solid var(--color-divider-inverse);
+				opacity: 0.2;
+				transform: translateY(-50%);
+			}
+
+		}
+	}
+}
+
+
+.hpi_sub_utils {
+	flex: none;
+}

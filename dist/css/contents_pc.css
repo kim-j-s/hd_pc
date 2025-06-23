@@ -53,6 +53,9 @@ body {
 	/* 조건별 container 상단 간격 */
 	/* 조건별 container 상단 간격 */
 }
+.wrap:has(.header_pc_nd) {
+	padding: 7.2rem 0 6.4rem 0;
+}
 .wrap .footer {
 	position: absolute;
 	left: 0;
@@ -78,7 +81,7 @@ body {
 	gap: var(--gap-12);
 	width: 118.8rem;
 	margin: 0 auto;
-	padding: var(--gap-12) 0 var(--padding-12);
+	padding: 0 0 var(--padding-12);
 }
 .wrap .container .content {
 	-webkit-box-flex: 0;
@@ -102,7 +105,7 @@ body {
 	width: 37.5rem;
 }
 .wrap .header_pc + .container {
-	margin-top: 6.4rem;
+	margin-top: var(--gap-12);
 }
 .wrap .breadcrumb + .container {
 	padding-top: var(--gap-8);
@@ -1238,7 +1241,7 @@ body {
 .select_option_box .selectbox {
 	width: 100%;
 	min-height: 2.4rem;
-	padding: 1.6rem 4.4rem 1.6rem 1.6rem;
+	padding: 1.5rem 4.4rem 1.5rem 1.6rem;
 	font-size: var(--font-size-label-large);
 	color: var(--color-text-subtle);
 	word-break: break-all;
