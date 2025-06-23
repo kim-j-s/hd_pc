@@ -656,6 +656,51 @@
 			}
 		}
 	}
+
+	&.ty5 {
+		.card_item{
+			.card_link {
+				padding-right: 28px;
+				background: url(../images/icon/arrowRight_disabled_ty2.svg) no-repeat right center / 24px auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.item_top {
+					.title_info {
+						flex-direction: row;
+						align-items: center;
+						.main_title {
+							background: none !important;
+							padding-right: 0 !important;
+						}
+						.desc {
+							font-size: var(--font-size-body-small);
+							color: var(--color-text-subtle);
+						}
+					}
+					.btn_area {
+
+						width: 100%;
+						margin: var(--gap-5) 0 0 0;
+
+						& > * {
+							flex: none;
+						}
+					}
+				}
+			
+
+				.cont {
+					font-size: var(--font-size-body-small);
+					font-weight: 700;
+				}
+
+			}
+
+		
+		}
+	}
 }
 
 
