@@ -304,6 +304,13 @@
 			height: 180px;
 		}
 	}
+
+	&+ .checkbox_group_wrap.column {
+		margin-top: var(--gap-8);
+		& + * {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 .file_attach_box {
