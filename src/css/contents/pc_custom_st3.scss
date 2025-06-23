@@ -235,6 +235,9 @@
 				padding-right: 20px;
 				background: url(../images/icon/arrowRight_ty3.svg) no-repeat right center / 16px auto;
 			}
+			.dc_l {
+				color: var(--color-text-subtle);
+			}
 			.dc_r {
 				padding-left: var(--gap-2);
 			}
@@ -519,6 +522,10 @@
 	}
 }
 
+// 서브 title
+.sub_title_wrap {
+
+}
 
 // select
 .select_option_box {
