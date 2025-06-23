@@ -285,9 +285,7 @@
 	-webkit-transition: -webkit-transform 0.3s ease;
 	transition: -webkit-transform 0.3s ease;
 	transition: transform 0.3s ease;
-	transition:
-		transform 0.3s ease,
-		-webkit-transform 0.3s ease;
+	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .popup_wrap.full .popup_container .popup_inner .popup_cont {
 	padding-bottom: var(--padding-12);
