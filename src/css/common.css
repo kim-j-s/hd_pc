@@ -10,11 +10,14 @@
 /* header_pc */
 @import "common/header_pc.scss";
 
+/* navigation */
+@import "common/nav_pc.scss";
+
 /* footer */
 @import "common/footer.scss";
 
 /* navigation */
-@import "common/nav.scss";
+/* @import "common/nav.scss"; */
 
 /* address button */
 @import "common/address_button.scss";
