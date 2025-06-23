@@ -1,52 +1,55 @@
 {{#> layout/default page-title="변경내용 확인 | 상품"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="변경내용 확인" }}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-                    
-					<h2 class="title_h2">
-						<strong>주행거리</strong>를<br> 확인해주세요
-					</h2>
-				</div>
-				<!-- e: content_top -->
-
-				<div class="space_list_ty4">
-					<div class="item">
-						<h3 class="title_h3">등록내용</h3>
-						<div class="table_wrap">
-							<table class="table">
-								<caption>주행거리 기준일, 주행거리 제공</caption>
-								<colgroup>
-									<col style="width:35%;">
-									<col style="width:65%;">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">주행거리 기준일</th>
-										<td>2025.03.20</td>
-									</tr>
-									<tr>
-										<th scope="row">주행거리</th>
-										<td>35,000Km</td>
-									</tr>
-								</tbody>
-							</table>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>ECO마일리지 사진 등록(최종)</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>주행거리</strong>를 확인해주세요
 						</div>
 					</div>
-					<div class="item">
-						<div class="checkbox_group_wrap column space2">
-							{{> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 주행거리 기준일, 최종 주행거리를 확인하였습니다." }}
-						</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
 					</div>
 				</div>
 
-				
+				<h3 class="title_h3">등록내용</h3>
+				<div class="table_wrap">
+					<table class="table">
+						<caption>주행거리 기준일, 주행거리 제공</caption>
+						<colgroup>
+							<col style="width:160px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">주행거리 기준일</th>
+								<td>2025.03.20</td>
+							</tr>
+							<tr>
+								<th scope="row">주행거리</th>
+								<td>35,000Km</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
-				
+				<div class="checkbox_group_wrap column space2">
+					{{> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 주행거리 기준일, 최종 주행거리를 확인하였습니다." }}
+				</div>
 
-				
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전"}}
+						{{> cp/button type="1" size="1" b-text="전자서명" disabled=true}}
+					</div>
+				</div>
+				<!-- e: 하단 고정 버튼 영역 -->
 
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active=true }}
@@ -58,18 +61,12 @@
 
 				<!-- // content -->
 			</div>
-
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="전자서명"}}
-			</div>
-		</div>
-		<!-- s: 하단 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
