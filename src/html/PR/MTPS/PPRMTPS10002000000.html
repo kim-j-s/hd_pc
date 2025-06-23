@@ -1,7 +1,3 @@
-<!---
-화면번호 : PRLT10003000000
-경로 : 2. 자동차 기본정보 > 2-1. 보유차량 목록
--->
 {{#> layout/default page-title="자동차 기본정보 | 상품"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-14 수정 -->
@@ -9,20 +5,43 @@
 	<!-- e: 25-05-14 수정 -->
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<!-- s: 25-04-21 수정 -->
-				<h2 class="title_h2">
-					보험료를 계산할<br />
-					<strong>자동차를 선택</strong>하세요
-				</h2>
-
-				<div class="btn_area basic">
-					{{> cp/button type="3" size="5" b-text="계약 상태에 따른 가입 안내" rightIcon="arrowRightSvg" }}
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료 확인</div>
+					<h2 class="p_title">
+						보험료를 계산할<br />
+						<strong>자동차를 선택</strong>하세요
+					</h2>
 				</div>
-				<!-- e: 25-04-21 수정 -->
+				<div class="btn_area">
+					{{> cp/button type="3" size="4" b-text="다수차량 동시 계산/가입"}}
+				</div>
 			</div>
-			<!-- e: content_top -->
+
+					
+			<div class="tab_wrap">
+				<div class="tab_wrap_list_ty1" role="tablist">
+					{{>cp/tab_btn tb-text="보유중인 자동차보험 갱신 (3)" tb-class="tab_btn_block" tb-id="ex01" tb-active=true}}
+					{{>cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-class="tab_btn_block" tb-id="ex02"}}
+					{{>cp/tab_btn tb-text="최근 보험료 계산 내역" tb-class="tab_btn_block" tb-id="ex03"}}
+				</div>
+				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
+					<div class="tit_box">
+						<div class="title_h3">
+							어떤 자동차로 보험료를 계산할까요?
+						</div>
+						<div class="btn_area">
+							{{> cp/button type="3" size="4" b-text="계약 상태에 따른 가입 안내"}}
+						</div>
+					</div>
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanelex02">
+					tab inner 2
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex02">
+					tab inner 3
+				</div>
+			</div>
 
 			<!-- s: 신규가입 차량 -->
 			<div class="card_item_wrap">

@@ -241,6 +241,10 @@
 	& + .info_gray.ty2 {
 		margin-top: 16px;         
 	}
+
+	& + .search_reult_list_container {
+		margin-top: var(--gap-8);
+	}
 }
 
 .form_box {
@@ -302,6 +306,13 @@
 		.file_thumbnail {
 			width: 287px;
 			height: 180px;
+		}
+	}
+
+	&+ .checkbox_group_wrap.column {
+		margin-top: var(--gap-8);
+		& + * {
+			margin-top: var(--gap-8);
 		}
 	}
 }
