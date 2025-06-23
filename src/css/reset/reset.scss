@@ -216,23 +216,23 @@ caption {
 
 
 /* focus */
-a,
-button,
-select {
-	&.focus {
-		box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
-	}
+a:focus,
+button:focus,
+select:focus,
+input:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
 }
 input:focus {
 	+ label {
+		outline: none;
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
 	}
 }
 .inp {
-	input {
-		&:focus {
-			box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
-		}
+	input:focus {
+		outline: none;
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 1);
 	}
 }
 
