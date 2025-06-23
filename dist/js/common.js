@@ -425,10 +425,12 @@
 	// select_driver
 	$DOM.on('change', '.select_driver_range input[type="radio"]', function(){
 		const $relGroup = $('.driver_relationship_state').find('.relationship_box');
+		const $relGroup2 = $('.driver_relationship_cont');
 		const idx = $(this).closest('.inp_radio').index() + 1;
 		let newClass = 'pick' + idx;
 
 		$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
+		$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newClass);
 	})
 
 	// 해제가능 radio group
