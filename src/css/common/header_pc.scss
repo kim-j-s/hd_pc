@@ -126,4 +126,49 @@
 	flex: none;
 	display: inline-flex;
 	align-items: center;
+	> .item {
+		padding: 8px;
+		&.item_chatbot {
+			padding: 0 16px 0 0;
+		}
+		.hus_btn:not(.hsu_chatbot) {
+			display: block;
+			width: 24px;
+			height: 24px;
+			font-size: 0;
+			background-repeat: no-repeat;
+			background-position: center center;
+			&.hsu_alarm {
+				background-image: url(../images/common/header/bg_header_alarm.png);
+			}
+			&.hsu_cart {
+				background-image: url(../images/common/header/bg_header_cart.png);
+			}
+			&.hsu_search {
+				background-image: url(../images/common/header/bg_header_search.png);
+			}
+			&.hsu_menu_all {
+				background-image: url(../images/common/header/bg_header_menuall.png);
+			}
+			&.hsu_close {
+				background-image: url(../images/common/header/bg_header_out.png);
+			}
+			&.hsu_home {
+				background-image: url(../images/common/header/bg_header_home.png);
+			}
+		}
+		.hsu_chatbot {
+			display: block;
+			padding: 6px 12px;
+			border-radius: var(--radius-medium1);
+			border: var(--border-width-static-regular) solid var(--color-button-secondary-fill);
+			> .text {
+				display: block;
+				padding-left: 20px;
+				font-size: var(--font-size-button-small);
+				color: var(--color-text-basic-inverse);
+				background: url(../images/common/header/bg_header_chatbot.png) no-repeat left center;
+			}
+		}
+	}
 }
