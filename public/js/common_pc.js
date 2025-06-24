@@ -52,10 +52,10 @@ $(function() {  // DOM이 준비되었을 때 실행
 
     if (st > lastScrollTop) {
       // 아래로 스크롤
-      $('body').removeClass('up').addClass('down');
+      $('body').removeClass('sc_up').addClass('sc_down');
     } else if (st < lastScrollTop) {
       // 위로 스크롤
-      $('body').removeClass('down').addClass('up');
+      $('body').removeClass('sc_down').addClass('sc_up');
     }
 
     lastScrollTop = st;

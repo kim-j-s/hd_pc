@@ -256,3 +256,14 @@
 		}
 	}
 }
+
+
+/* 스크를 이벤트 관련 css */
+.sc_down {
+	.header_pc {
+		&:has(.header_pc_nd) {
+		}
+	}
+	
+}
+/* 스크를 이벤트 관련 css */
