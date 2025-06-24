@@ -60,7 +60,6 @@
 		gap: 8px;
 	}
 	&.ty3 {
-		flex-wrap: nowrap;
 		+ .title_h3 {
 			margin-top: var(--gap-11);
 		}
@@ -201,13 +200,6 @@
 		.radio_group_wrap {
 			width: calc(50% - 16px);
 		}
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					max-width: 836 px;
-				}
-			}
-		}
 	}
 
 	.c1 {
@@ -330,7 +322,13 @@
 		margin: 0 auto;
 	}
 }
-
+//tooltip
+.tooltip_wrap {
+	.tooltip_panel {
+		width: max-content;
+		max-width: 836px;
+	}
+}
 
 // tab 관련
 .tab_wrap {
@@ -837,6 +835,7 @@
 	}
 }
 
+//자동차 
 .radio_group_wrap {
 	&_ty5 {
 		display: flex;

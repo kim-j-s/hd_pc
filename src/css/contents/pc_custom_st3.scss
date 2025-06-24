@@ -1200,7 +1200,17 @@
 
 .search_box {
 	display: flex;
-	justify-content: space-between;
+	align-items: flex-end; 
+	gap: var(--gap-6);
+	.select_item  {
+		flex: 1;
+	}
+	.btn_area {
+		flex-shrink: 0; 
+		button {
+			width: 100px;
+		}
+	}
 }
 
 
