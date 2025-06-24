@@ -913,6 +913,9 @@
 			&.pi_bg_ty5 { //실손의료비보험
 				background-image: url(../images/content/bi/visual/bg_img_ltmd.png);
 			}
+			&.pi_bg_ty6 { //운전자보험
+				background-image: url(../images/content/bi/visual/bg_img_ltdr.png);
+			}
 
 
 			.pi_top {
@@ -979,6 +982,12 @@
 							}
 							&.item_ico_ty4 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty4.png);
+							}
+							&.item_ico_ty5 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty5.png);
+							}
+							&.item_ico_ty6 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty6.png);
 							}
 						}
 					}
