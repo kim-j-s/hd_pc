@@ -151,7 +151,18 @@
 			.acd_btn{
 				// padding: var(--number-3) 0;
 			} 
-		}		
+		}
+
+		.acd_cont {
+			.inner {
+				.list_depth {
+					& > li > ul > li {
+						font-size: var(--font-size-body-small);
+					}
+				}
+			}
+		}
+
 	}
 
 	& + .banner_box {
@@ -569,7 +580,7 @@
 						+ .card_list_ty1 {
 							display: flex;
 							flex-flow: row wrap;
-							border-top: 1px solid #e1e3ea;
+							border-top: 1px solid var(--color-divider-gray-light);
 							margin-top: var(--gap-5);
 							padding-top: 16px;
 	
@@ -833,6 +844,21 @@
 // 	}
 // }
 
+// accordion
+.acd_item {
+
+	&.acd_item_ty2 {
+	
+		.cont_text_sub {
+			font-weight: normal;
+			margin-top: var(--gap-2);
+		}
+	}
+}
+
+
+
+
 // 2단 타입 
 .multi_ty1 {
 	display: flex;
@@ -1038,6 +1064,64 @@
 	&.txt_center {
 		.status_icon {
 			margin-bottom: var(--gap-5)
+		}
+	}
+}
+
+//팝업 검색
+.popup_wrap.full{
+	.popup_container  {
+		.popup_inner  {
+			.popup_cont {
+			&.search_list_type2 {
+				padding-top:0; 
+				padding-bottom:0;
+				.tab_wrap {
+					position: static;
+					.tab_wrap_content {
+						padding: var(--padding-9) 0;
+						margin: 0 -24px 0;
+						max-height: 576px;
+						min-height: 576px;
+						overflow-y: auto;
+						&.has_scroll {
+							&.active {
+								display: block;
+							}
+						}
+						> * {
+							padding-left: 24px;
+							padding-right: 24px;
+						}
+						
+					}
+				}
+
+				.search_reult_list_container {
+					position: relative;
+					border-top: none;
+					&:after {
+						content: "";
+						width: calc(100% - (24px *2));
+						height: 1px;
+						background-color: var(--color-border-gray-light);
+						position: absolute;
+						top: 0;
+						left: 24px;
+					}
+				}
+			}
+		}		
+		}
+		
+	}
+}
+//table
+.table_wrap {
+	.table {
+		td {
+			vertical-align: top;
+			padding: var(--padding-5);
 		}
 	}
 }
