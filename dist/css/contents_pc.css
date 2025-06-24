@@ -424,6 +424,12 @@ body {
 .form_box > .btn_area .hd_btn {
 	min-width: 16rem;
 }
+.form_box .title_h3:has(+ .text_sub) {
+	margin-bottom: var(--gap-4);
+}
+.form_box .title_h3:has(+ .text_sub) ~ .form_group_wrap {
+	margin-top: var(--gap-8);
+}
 .form_list .form_group_wrap > * {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
@@ -532,6 +538,9 @@ body {
   레이아웃 구조 변경 클래스
   */
 	/* 데이터 리스트 좌우배치 */
+}
+.info_gray + .form_box {
+	margin-top: var(--gap-8);
 }
 .info_gray .badge_wrap + dl {
 	margin-top: 0.4rem;
@@ -982,6 +991,10 @@ body {
 	position: absolute;
 	top: 0;
 	left: 2.4rem;
+}
+.table_wrap .title {
+	font-size: var(--font-size-body-small);
+	margin-bottom: var(--gap-4);
 }
 .table_wrap .table td {
 	vertical-align: top;
