@@ -242,10 +242,6 @@ body {
 	display: flex;
 	gap: 0.8rem;
 }
-.btn_area.ty3 {
-	-ms-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-}
 .btn_area.ty3 + .title_h3 {
 	margin-top: var(--gap-11);
 }
@@ -339,7 +335,7 @@ body {
 	height: var(--size-height_small-1);
 	margin: var(--gap-11) 0;
 }
-.form_group_wrap {
+.wrap .form_group_wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -349,60 +345,71 @@ body {
 	flex-flow: row wrap;
 	gap: var(--gap-8);
 }
-.form_group_wrap > * {
+.wrap .form_group_wrap > * {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 calc(50% - 1.6rem);
 	flex: 0 0 calc(50% - 1.6rem);
 }
-.form_group_wrap.full {
+.wrap .form_group_wrap.full {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
 }
-.form_group_wrap .form_line ~ .form_line {
+.wrap .form_group_wrap .form_line ~ .form_line {
 	margin-top: 0;
 }
-.form_group_wrap > .list_ty2.full {
+.wrap .form_group_wrap > .list_ty2.full {
 	margin-top: -1.6rem;
 }
-.form_group_wrap .full {
+.wrap .form_group_wrap .full {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 }
-.form_group_wrap .full .radio_group_wrap {
+.wrap .form_group_wrap .full .radio_group_wrap {
 	width: calc(50% - 1.6rem);
 }
-.form_group_wrap .full .label_tit .tooltip_wrap .tooltip_panel {
+.wrap .form_group_wrap .full .label_tit .tooltip_wrap .tooltip_panel {
 	max-width: 836 px;
 }
-.form_group_wrap .c1 {
+.wrap .form_group_wrap .c1 {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 }
-.form_group_wrap .c1 .radio_group_wrap,
-.form_group_wrap .c1 .label_tit {
+.wrap .form_group_wrap .c1 .radio_group_wrap,
+.wrap .form_group_wrap .c1 .label_tit {
 	width: calc(50% - 1.6rem);
 }
-.form_group_wrap .row .form_line {
+.wrap .form_group_wrap .row {
 	margin-top: 0;
 }
-.form_group_wrap .column {
+.wrap .form_group_wrap .row .form_line {
+	margin-top: 0;
+}
+.wrap .form_group_wrap .column {
 	gap: var(--gap-8);
 }
-.form_group_wrap .label_tit .tooltip_wrap .tooltip_panel {
+.wrap .form_group_wrap .label_tit .tooltip_wrap .tooltip_panel {
 	width: auto;
 }
-.form_group_wrap .label_tit .tooltip_wrap .tooltip_panel .inner {
+.wrap .form_group_wrap .label_tit .tooltip_wrap .tooltip_panel .inner {
 	white-space: nowrap;
 }
-.form_group_wrap + .banner_box {
+.wrap .form_group_wrap + .banner_box {
 	margin-top: var(--gap-8);
 }
-.form_group_wrap + .info_gray.ty2 {
+.wrap .form_group_wrap .c1 {
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+}
+.wrap .form_group_wrap .c1 .radio_group_wrap,
+.wrap .form_group_wrap .c1 .label_tit {
+	width: calc(50% - 1.6rem);
+}
+.wrap .form_group_wrap .c1 + .info_gray.ty2 {
 	margin-top: 1.6rem;
 }
-.form_group_wrap + .search_reult_list_container {
+.wrap .form_group_wrap .c1 + .search_reult_list_container {
 	margin-top: var(--gap-8);
 }
 .form_box > .btn_area {
@@ -462,10 +469,19 @@ body {
 .file_upload_wrap + .checkbox_group_wrap.column + * {
 	margin-top: var(--gap-8);
 }
+.file_upload_wrap_ty2 + .btn_area {
+	margin-top: var(--gap-8);
+}
 .file_attach_box .file_thumbnail {
 	width: 44rem;
 	height: 27.6rem;
 	margin: 0 auto;
+}
+.tooltip_wrap .tooltip_panel {
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	max-width: 83.6rem;
 }
 .tab_wrap .tab_wrap_list_ty1 {
 	margin: 0;
@@ -905,6 +921,17 @@ body {
 }
 .link_flex_box.call::after {
 	content: "방법안내";
+}
+.bi_top .bit_btn_scrollx {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	overflow-x: visible;
+}
+.opt_select_list.opt_case5.grid li:nth-last-child(-2n + 2) > .option {
+	border-bottom: 1px solid var(--color-divider-gray-light);
+}
+.popup_content_top.txt_center .status_icon {
+	margin-bottom: var(--gap-5);
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
@@ -1735,7 +1762,6 @@ body {
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio label {
 	position: relative;
-	height: 25.6rem;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -1865,6 +1891,7 @@ body {
 }
 .guarantee_select_wrap.guarantee_select_wrap_n3 .select_item .item_radio label {
 	width: 26.8rem;
+	height: 25.6rem;
 }
 .guarantee_select_wrap.guarantee_select_wrap_n3:has(input:checked) .select_item .item_radio input + label {
 	width: 19.7rem;
@@ -1944,9 +1971,40 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	gap: var(--gap-6);
+}
+.search_box .select_item {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.search_box .btn_area {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+.search_box .btn_area button {
+	width: 10rem;
+}
+.grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	gap: 0 var(--gap-8);
+}
+.grid > * {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 calc(50% - 1.6rem);
+	flex: 0 1 calc(50% - 1.6rem);
 }
 /* breadcrumb */
 /* breadcrumb */

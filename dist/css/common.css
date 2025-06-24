@@ -9622,6 +9622,9 @@ strong {
 	transform: translateY(-50%);
 	right: 0;
 }
+.box_list_wrap .box_list li.box_list_item .item_inner_cont .item_meta .desc {
+	color: var(--color-text-subtle);
+}
 .box_list_wrap .box_list.ty_link li.box_list_item .item_inner_cont {
 	padding-right: var(--number-13);
 }
@@ -11222,6 +11225,7 @@ strong {
 	display: block;
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
+	margin-top: var(--gap-2);
 }
 .opt_select_list.opt_case5 > li:last-child .option {
 	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);

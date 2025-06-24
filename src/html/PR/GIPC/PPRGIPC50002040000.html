@@ -18,7 +18,13 @@
 
 		<div class="form_card_wrap">
 			<div class="form_card_case">
-				{{> cp/selectitem si_class="select_item_case02 title_h4" si_ph="선택해주세요." si_title="관계 선택" si_item="배우자" si_popup="pop_select_rel" }}
+				{{#> cp/selectbox_pc s-title="관계 선택" s-class="ty2" }}
+					<option value="" selected>배우자</option>
+					<option value="">자녀</option>
+					<option value="">부모님</option>
+					<option value="">그 외 동반자</option>
+				{{/ cp/selectbox_pc}}
+
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">생년월일/성별</div>
@@ -40,13 +46,21 @@
           </div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
-            {{> cp/selectitem si_ph="목적 선택" si_title="목적선택 팝업호출" si_popup="pop_select_subject" }}
+						{{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
+							<option value="" selected>목적 선택</option>
+							<option value="">동반가족</option>
+							<option value="">선택 옵션값 3</option>
+						{{/ cp/selectbox_pc}}
           </div>
 				</div>
 				<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
 			</div>
 			<div class="form_card_case">
-				{{> cp/selectitem si_class="select_item_case02 title_h4" si_ph="선택해주세요." si_title="관계 선택" si_item="부모님" si_popup="pop_select_rel" }}
+				{{#> cp/selectbox_pc s-title="관계 선택" s-class="ty2" }}
+					<option value="">배우자</option>
+					<option value="" selected>부모님</option>
+					<option value="">부모님(배우자 부모님)</option>
+				{{/ cp/selectbox_pc}}
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">생년월일/성별</div>
@@ -68,13 +82,22 @@
           </div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
-            {{> cp/selectitem si_ph="목적 선택" si_title="목적선택 팝업호출" si_popup="pop_select_subject" }}
+            {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
+							<option value="" selected>목적 선택</option>
+							<option value="">동반가족</option>
+							<option value="">선택 옵션값 3</option>
+						{{/ cp/selectbox_pc}}
           </div>
 				</div>
 				<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
 			</div>
-			<div class="form_card_case">
-				{{> cp/selectitem si_class="select_item_case02 title_h4" si_ph="선택해주세요." si_title="관계 선택" si_item="부모님" si_popup="pop_select_rel" }}   
+			<div class="form_card_case">				
+				{{#> cp/selectbox_pc s-title="관계 선택" s-class="ty2" }}
+					<option value="">배우자</option>
+					<option value="" selected>부모님</option>
+					<option value="">부모님(배우자 부모님)</option>
+				{{/ cp/selectbox_pc}}
+
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">생년월일/성별</div>
@@ -96,13 +119,21 @@
           </div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
-            {{> cp/selectitem si_ph="목적 선택" si_title="목적선택 팝업호출" si_popup="pop_select_subject" }}
+            {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
+							<option value="" selected>목적 선택</option>
+							<option value="">동반가족</option>
+							<option value="">선택 옵션값 3</option>
+						{{/ cp/selectbox_pc}}
           </div>
 				</div>
 				<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
 			</div>
 			<div class="form_card_case">
-				{{> cp/selectitem si_class="select_item_case02 title_h4" si_ph="선택해주세요." si_title="관계 선택" si_item="자녀" si_popup="pop_select_rel" }}
+				{{#> cp/selectbox_pc s-title="관계 선택" s-class="ty2" }}
+					<option value="">배우자</option>
+					<option value="" selected>자녀</option>
+					<option value="">부모님(배우자 부모님)</option>
+				{{/ cp/selectbox_pc}}
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">생년월일/성별</div>
@@ -124,7 +155,11 @@
           </div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
-            {{> cp/selectitem si_ph="목적 선택" si_title="목적선택 팝업호출" si_popup="pop_select_subject" }}
+           {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
+							<option value="" selected>목적 선택</option>
+							<option value="">동반가족</option>
+							<option value="">선택 옵션값 3</option>
+						{{/ cp/selectbox_pc}}
           </div>
 				</div>
 				<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
@@ -152,8 +187,8 @@
 
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="1" b-text="여행자 정보를 입력 중이에요" disabled="true"}}
-		<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요"}} -->
+		{{> cp/button type="1" size="2" b-text="여행자 정보를 입력 중이에요" disabled="true"}}
+		<!-- {{> cp/button type="1" size="2" b-text="모두 입력했어요"}} -->
 	</div>
 </div>
 {{/ popup/popup_full}}

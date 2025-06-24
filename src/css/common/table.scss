@@ -8,6 +8,11 @@
 		margin-top: var(--gap-5);
 	}
 
+	.title {
+		font-size: var(--font-size-body-small);
+		margin-bottom: var(--gap-4);
+	}
+
 	& + .title_h4 {
 		margin-top: var(--gap-9);
 	}
