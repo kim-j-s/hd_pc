@@ -180,3 +180,79 @@
 		}
 	}
 }
+
+.change_mode {
+	position: relative;
+	display: inline-flex;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: var(--radius-medium2);
+		border: 1px solid var(--color-border-danger);
+		background-color: var(--color-element-primary-dark);
+	}
+	> .item {
+		position: relative;
+		width: 117px;
+		.cm_btn {
+			display: block;
+			width: 100%;
+			text-align: center;
+			border-radius: var(--radius-medium1);
+			background-color: transparent;
+			transition: 0.3s;
+			> .text {
+				display: inline-block;
+				padding-left: 40px;
+				font-size: var(--font-size-button-medium);
+				color: var(--color-text-inverse-static);
+				line-height: 40px;
+				background-repeat: no-repeat;
+				background-position: left center;
+				background-size: 32px auto;
+			}
+
+			&.cm_btn_dog {
+				> .text {
+					background-image: url(../images/header/mode_dog_off.png);
+				}
+				&.active {
+					> .text {
+						background-image: url(../images/header/mode_dog_on.png);
+					}
+				}
+			}
+			&.cm_btn_cat {
+				> .text {
+					background-image: url(../images/header/mode_cat_off.png);
+				}
+				&.active {
+					> .text {
+						background-image: url(../images/header/mode_cat_on.png);
+					}
+				}
+			}
+
+			&.active {
+				background-color: var(--color-button-secondary-fill);
+				> .text {
+					font-weight: 700;
+					color: var(--color-text-primary-bold);
+					&::after {
+						content: '현재 선택됨';
+						position: absolute;
+						font-size: 0;
+					}
+				}
+			}
+
+			
+
+			// mode_dog_off
+		}
+	}
+}

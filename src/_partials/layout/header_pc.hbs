@@ -46,7 +46,14 @@
 
 
 			{{#if petmode}}
-			pet
+			<div class="change_mode">
+				<div class="item">
+					<button type="button" class="cm_btn cm_btn_dog active"><span class="text">강아지<span class="sr_only">정보입력으로 전환</span></span></button>
+				</div>
+				<div class="item">
+					<button type="button" class="cm_btn cm_btn_cat"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
+				</div>
+			</div>
 			{{else}}
 			<nav class="hpi_gnb">
 				{{> layout/nav2}}

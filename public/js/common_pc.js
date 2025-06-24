@@ -60,6 +60,13 @@ $(function() {  // DOM이 준비되었을 때 실행
 
     lastScrollTop = st;
   });
+
+	// 고양이/강아지 변환 
+	$DOM.on('click', '.change_mode .cm_btn', function(e) {
+		$(this).closest('.change_mode').find('.cm_btn').removeClass('active');
+		$(this).addClass('active');
+	});
+	
 	
 });
 
