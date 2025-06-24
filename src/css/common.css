@@ -28,6 +28,9 @@
 /* Accordion */
 @import "common/accordion.scss";
 
+/* article */
+@import "common/article.scss";
+
 /* button */
 @import "common/button.scss";
 
@@ -69,6 +72,9 @@
 
 /* list */
 @import "common/list.scss";
+
+/* list_box */
+@import "common/list_box.scss";
 
 /* notice */
 @import "common/notice.scss";
