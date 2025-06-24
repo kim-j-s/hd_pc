@@ -369,6 +369,11 @@
 	-webkit-animation: bounce 0.8s linear infinite;
 	animation: bounce 0.8s linear infinite;
 }
+.bi_wrap .stepper_wrap .stepper .pgs .pgs_per .motion.cancer {
+	background: url(../images/content/bi/icon_spm_cancer.svg) no-repeat center center;
+	-webkit-animation: bounce 0.8s linear infinite;
+	animation: bounce 0.8s linear infinite;
+}
 .bi_wrap .stepper_wrap .stepper .pgs .pgs_per .motion::after {
 	content: "";
 	position: absolute;
@@ -1098,6 +1103,12 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty3 {
 	background-image: url(../images/content/bi/visual/bg_img_mtps.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty4 {
+	background-image: url(../images/content/bi/visual/bg_img_ltcc.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty5 {
+	background-image: url(../images/content/bi/visual/bg_img_ltmd.png);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_top {
 	-webkit-box-flex: 0;
