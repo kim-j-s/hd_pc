@@ -182,6 +182,14 @@
 			.inner_cont {
 				flex: 1;
 
+				&:not(:has(.item_top)){
+					.inp_label {
+						.chk_label {
+							margin-top: 0;
+						}
+					}
+				}
+
 				> * {
 					& + .card_list_ty1 {
 						// margin-top: var(--gap-5);

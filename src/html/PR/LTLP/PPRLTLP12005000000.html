@@ -1,21 +1,24 @@
 <!---
-화면번호 : PPRLTLP12005000000
+화면번호 : MPRGIPT30007000000
 경로 : 하이펫보험 > 계약자정보 입력
 -->
 {{#> layout/default page-title="계약자정보 입력 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-prd="굿앤굿우리펫보험" h-title="피보험자/계약자 정보" }}
+	{{> layout/header h-title="피보험자/계약자정보" }}
 
 	<div id="container" class="container">
 		<div class="content">
-			<div class="title_view_wrap">
-				<div class="page_title">
-					<div class="p_info">피보험자/계약자정보</div>
-					<h2 class="p_title">
-						<strong>계약자 정보를 입력</strong>해주세요
-					</h2>
-				</div>
+			<!-- s: content_top -->
+			<div class="content_top">
+				<!-- s: 25-06-05 수정 -->
+				
+				<h2 class="title_h2">
+					계약자<br>
+					<strong>정보를 입력</strong>해주세요
+				</h2>
+				<!-- e: 25-06-05 수정 -->
 			</div>
+			<!-- e: content_top -->
 
 			<!-- s: 25-05-30 수정 -->
 			<div class="form_box">
@@ -130,18 +133,14 @@
 		</div>
 	</div>
 	
-	<!-- s: 하단 버튼 영역 -->
+	<!-- s: 하단 고정 버튼 영역 -->
 	<div class="bottom_fix_wrap">
 		<div class="btn_area">
 			<!-- {{> cp/button type="1" size="1" b-text="이메일을 입력해주세요" disabled=true }} -->
 			{{> cp/button type="1" size="1" b-text="모두 입력했어요"}}
 		</div>
 	</div>
-	<!-- s: 하단 버튼 영역 -->
-
-	<!-- footer -->
-	{{> layout/footer }}
-	<!-- footer -->
+	<!-- s: 하단 고정 버튼 영역 -->
 </div>
 
 <!-- s: popup area -->
