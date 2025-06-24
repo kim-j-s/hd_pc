@@ -283,6 +283,15 @@
 			min-width: 160px;
 		}
 	}
+
+	.title_h3:has(+.text_sub) {
+		margin-bottom: var(--gap-4);
+
+		& ~ .form_group_wrap {
+			margin-top: var(--gap-8);
+		}
+	}
+
 }
 
 // form_list 가입전알릴사항
@@ -435,6 +444,11 @@
 
 // info_gray
 .info_gray {
+
+	& + .form_box {
+		margin-top: var(--gap-8);
+	}
+
 	.badge_wrap {
 		& + dl {
 			margin-top: 4px;
@@ -734,7 +748,23 @@
 			}
 		}
 	}
-
+}
+.card_item_wrap {
+	.card_item {
+		.item_inner {
+			.inp_radio {
+				.chk_label {
+					width: 20px;
+					height: 20px;
+					margin-top: 3px;
+					padding-left: 0;
+					&:before {
+						top:0;
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -1102,6 +1132,12 @@
 }
 //table
 .table_wrap {
+
+	.title {
+		font-size: var(--font-size-body-small);
+		margin-bottom: var(--gap-4);
+	}
+
 	.table {
 		td {
 			vertical-align: top;

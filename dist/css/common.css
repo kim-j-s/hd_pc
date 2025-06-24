@@ -5334,6 +5334,9 @@ strong {
 	-ms-flex: 1;
 	flex: 1;
 }
+.card_item_wrap .card_item .item_inner .inner_cont:not(:has(.item_top)) .inp_label .chk_label {
+	margin-top: 0;
+}
 .card_item_wrap .card_item .item_inner .inner_cont > * + .card_list_ty1 > li:first-child {
 	margin-top: var(--gap-5);
 	padding-top: 1.6rem;
@@ -11735,6 +11738,10 @@ strong {
 .table_wrap + [class^="list_ty"],
 .table_wrap + .opt_case4 {
 	margin-top: var(--gap-5);
+}
+.table_wrap .title {
+	font-size: var(--font-size-body-small);
+	margin-bottom: var(--gap-4);
 }
 .table_wrap + .title_h4 {
 	margin-top: var(--gap-9);
