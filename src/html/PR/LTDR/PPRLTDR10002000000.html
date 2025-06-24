@@ -2,195 +2,247 @@
 <div id="wrap" class="wrap">
 {{> layout/header_pc h-prd="운전자보험" h-title="운전자보험" }}
 
-	<form action="" class="bi_form">
-		<div class="bi_wrap">
-			<div class="stepper_wrap">
-				<div class="stepper" role="img">
-					<div class="pgs">
-						<span class="pgs_per" style="width: 0%;"><span class="motion car"></span></span>
-					</div>
-				</div>
-				<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
-				<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
-			</div>
-			
-			<div class="bi_stepper">
-				<div class="bi_top">
-					<!-- bit -->
-					<div class="bit">
-						<!-- 운전자 -->
-						<div class="bit_inner" data-pickitem="step1">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								<span class="bold">누구를 위한</span> 보험인가요?
-							</p>
-							<!-- e: 25-05-26 수정 -->
-							<div class="bit_btn_scrollx">
-								{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="최근 계산 내역" }}
-								<button type="button" class="btn_link short_cut sm rd_box">
+	<div id="container" class="container">
+		<div class="content content_st1">
+			<div class="prd_bi_wrap">
+				<div class="prd_bi_wrap_l">
+					<div class="pbw_inner pi_bg_ty6">
+						<div class="pi_top">
+							<h2 class="pt_title">
+								<small>다이렉트 운전자보험</small>
+								빠르고 든든하게! 소중한 나를 위해,<br>
+								<span class="bold">다이렉트 운전자보험</span>
+							</h2>
+							<div class="pt_btn_area">
+								<a href="javascript:void(0)" class="btn_link short_cut sm rd_box">
 									<span class="text">보장내용 자세히 보기</span>
-								</button>
+								</a>
 							</div>
 						</div>
-						<!-- 운전자 -->
-						<!-- 용도 -->
-						<div class="bit_inner active" data-pickitem="step2">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								<span class="bold">운전</span>하시는 <span class="bold">용도</span>가 무엇인가요?
-							</p>
-							<!-- e: 25-05-26 수정 -->
-							<div class="bit_btn_scrollx">
-								<button type="button" class="btn_link short_cut sm rd_box">
-									<span class="text">본인이 아닌 다른 사람의 보험을 가입하는 방법</span>
-								</button>
+			
+						<div class="pi_bottom">
+							<h3 class="pb_title">빠르고 든든하게! 소중한 나를 위해 다이렉트 운전자보험</h3>
+							<div class="pb_cont">
+								<div class="pb_details">
+									<div class="pb_details_inner">
+										<div class="item item_ico_ty1">
+											<p class="item_exp">
+												보험료 매월 7% 할인
+												<small class="item_sub_txt">현대해상 자동차보험 고객</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty5">
+											<p class="item_exp">
+												경찰조사포함 변호사선임비용보장
+												<small class="item_sub_txt">타인 사망 및 중대법규 위반 사고에 한함</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty6">
+											<p class="item_exp">
+												교통사고 발생시 내차 수리비 보장
+												<small class="item_sub_txt">사고차시세하락 손실지원(차대차사고)</small>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="pbc_banners">
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner1.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner2.png" alt="혜택 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
-						<!-- 용도 -->
-						<!-- 생년월일 -->
-						<div class="bit_inner active" data-pickitem="step3">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								운전자의 <span class="bold">생년월일</span>을<br>
-								알려주세요.
-							</p>
-							<!-- e: 25-05-26 수정 -->
-						</div>
-						<!-- 생년월일 -->
-						<!-- 성별 -->
-						<div class="bit_inner active" data-pickitem="step4">
-							<!-- s: 25-05-26 수정 -->
-							
-							<p class="bit_inner_text">
-								운전자의 <span class="bold">성별</span>을 알려주시면<br>
-								보험료를 알아볼께요
-							</p>
-							<!-- e: 25-05-26 수정 -->
-						</div>
-						<!-- 성별 -->
 					</div>
-					<!-- bit -->
-
-					<!-- bit_history -->
-					<div class="bit_history">
-						<div class="bit_history_inner">
-							<button type="button" class="selected_case step1 person" title="대상 수정"></button>
-							<button type="button" class="selected_case step2 car" title="용도 수정"></button>
-							<button type="button" class="selected_case step3 birth" title="생년월일 수정"></button>
-							<button type="button" class="selected_case step4 gender" title="성별 수정"></button>
-						</div>
-					</div>
-					<!-- bit_history -->
-
 				</div>
 
-
-				<div class="bi_opts_wrap">
-					<!-- 운전자 -->
-					<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio11" name="radio1" />
-								<label for="radio11">
-									<span class="label_cont">본인</span>
-								</label>
+				<div class="prd_bi_wrap_r">
+					<form action="" class="bi_form">
+						<div class="bi_wrap">
+							<div class="bi_wrap_header">
+								<h3 class="bi_wrap_tit">기본정보 입력</h3>
 							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio12" name="radio1" />
-								<label for="radio12">
-									<span class="label_cont">부모님</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio13" name="radio1" />
-								<label for="radio13">
-									<span class="label_cont">배우자</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio14" name="radio1" />
-								<label for="radio14">
-									<span class="label_cont">자녀</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<!-- 운전자 -->
-
-					<!-- 용도 -->
-					<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio21" name="radio2" />
-								<label for="radio21">
-									<span class="label_cont">자가용</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio22" name="radio2" />
-								<label for="radio22">
-									<span class="label_cont">영업용</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<!-- 용도 -->
-
-					<!-- 생년월일 -->
-					<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step3">
-						<div class="opts_area_item column">
-							<div class="birth_date_field" aria-live="polite"></div>
-							<div class="bi_keypad">
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">1</button>
-									<button type="button" class="keypad_btn">2</button>
-									<button type="button" class="keypad_btn">3</button>
-									<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
+							<div class="stepper_wrap">
+								<div class="stepper" role="img">
+									<div class="pgs">
+										<span class="pgs_per" style="width: 0%;"><span class="motion car"></span></span>
+									</div>
 								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">4</button>
-									<button type="button" class="keypad_btn">5</button>
-									<button type="button" class="keypad_btn">6</button>
-									<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
-								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">7</button>
-									<button type="button" class="keypad_btn">8</button>
-									<button type="button" class="keypad_btn">9</button>
-									<button type="button" class="keypad_btn">0</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- 생년월일 -->
+								<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+								<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
+							</div>			
+							
+							<div class="bi_stepper">
+								<div class="bi_top">
+									<!-- bit -->
+									<div class="bit">										
+										<!-- 운전자 -->
+										<div class="bit_inner" data-pickitem="step1">
+											<!-- s: 25-05-26 수정 -->
+											
+											<p class="bit_inner_text">
+												<span class="bold">누구를 위한</span> 보험인가요?
+											</p>
+											<!-- e: 25-05-26 수정 -->
+											<div class="bit_btn_scrollx">
+												{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="최근 계산 내역" }}
+											</div>
+										</div>
+										<!-- 운전자 -->
 
-					<!-- 성별 -->
-					<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio31" name="radio3" />
-								<label for="radio31">
-									<span class="label_cont">남성</span>
-								</label>
+										<!-- 용도 -->
+										<div class="bit_inner active" data-pickitem="step2">
+											<!-- s: 25-05-26 수정 -->
+											
+											<p class="bit_inner_text">
+												<span class="bold">운전</span>하시는 <span class="bold">용도</span>가 무엇인가요?
+											</p>
+											<!-- e: 25-05-26 수정 -->
+											<div class="bit_btn_scrollx">
+												{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="최근 계산 내역" }}
+												<button type="button" class="btn_link short_cut sm rd_box">
+													<span class="text">보장내용 자세히 보기</span>
+												</button>
+											</div>
+										</div>
+										<!-- 용도 -->
+										<!-- 생년월일 -->
+										<div class="bit_inner active" data-pickitem="step3">
+											<!-- s: 25-05-26 수정 -->
+											
+											<p class="bit_inner_text">
+												운전자의 <span class="bold">생년월일</span>을<br>
+												알려주세요.
+											</p>
+											<!-- e: 25-05-26 수정 -->
+										</div>
+										<!-- 생년월일 -->
+										<!-- 성별 -->
+										<div class="bit_inner active" data-pickitem="step4">
+											<!-- s: 25-05-26 수정 -->
+											
+											<p class="bit_inner_text">
+												운전자의 <span class="bold">성별</span>을 알려주시면<br>
+												보험료를 알아볼께요
+											</p>
+											<!-- e: 25-05-26 수정 -->
+										</div>
+										<!-- 성별 -->
+									</div>
+									<!-- bit -->
+
+									<!-- bit_history -->
+									<div class="bit_history">
+										<div class="bit_history_inner">
+											<button type="button" class="selected_case step1 person" title="대상 수정">1</button>
+											<button type="button" class="selected_case step2 car" title="용도 수정">1</button>
+											<button type="button" class="selected_case step3 birth" title="생년월일 수정">1</button>
+											<button type="button" class="selected_case step4 gender" title="성별 수정">1</button>
+										</div>
+									</div>
+									<!-- bit_history -->
+
+								</div>
+
+
+								<div class="bi_opts_wrap">
+									<!-- 운전자 -->
+									<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+										<div class="opts_area_item">
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio11" name="radio1" />
+												<label for="radio11">
+													<span class="label_cont">본인</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio12" name="radio1" />
+												<label for="radio12">
+													<span class="label_cont">부모님</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio13" name="radio1" />
+												<label for="radio13">
+													<span class="label_cont">배우자</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio14" name="radio1" />
+												<label for="radio14">
+													<span class="label_cont">자녀</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- 운전자 -->
+
+									<!-- 용도 -->
+									<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
+										<div class="opts_area_item">
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio21" name="radio2" />
+												<label for="radio21">
+													<span class="label_cont">자가용</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio22" name="radio2" />
+												<label for="radio22">
+													<span class="label_cont">영업용</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- 용도 -->
+
+									<!-- 생년월일 -->
+									<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step3">
+										<div class="opts_area_item column">
+											{{> cp/text type='tel' inpclass="inp_only_num" placeholder="8자리 숫자 입력" minlength="8" maxlength="8" inp-title="생년월일 8자리를 입력" }}
+										</div>
+									</div>
+									<!-- 생년월일 -->
+
+									<!-- 성별 -->
+									<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
+										<div class="opts_area_item">
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio31" name="radio3" />
+												<label for="radio31">
+													<span class="label_cont">남성</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio32" name="radio3" />
+												<label for="radio32">
+													<span class="label_cont">여성</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- 성별 -->
+								</div>
 							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio32" name="radio3" />
-								<label for="radio32">
-									<span class="label_cont">여성</span>
-								</label>
-							</div>
+
+
 						</div>
-					</div>
-					<!-- 성별 -->
+					</form>
 				</div>
+
 			</div>
-
-
 		</div>
-	</form>
+			
+		<!-- s: aside 영역 -->
+		{{> layout/aside_pc }}
+		<!-- e: aside 영역 -->
+	</div>
 </div>
 
 <script>

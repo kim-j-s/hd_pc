@@ -44,7 +44,7 @@
 					<div class="form_line">
 						<div class="label_tit">이메일</div>
 						<!-- s: 25-05-12 수정 -->
-						{{> cp/text type="email" inpclass="email_auto" placeholder="이메일을 입력하세요" inp-title="이메일 입력" }}
+						{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
 						<!-- e: 25-05-12 수정 -->
 					</div>
 					<div class="form_line full">
@@ -64,7 +64,7 @@
 					</div>
 					<div class="form_line full">
 						<div class="label_tit">직업</div>
-						{{> cp/text inp-search=true placeholder="검색어를 입력하세요" inp-title="검색어 입력" }}
+						{{> cp/text inp-search=true placeholder="직업 검색" inp-title="검색어 입력" }}
 					</div>
 					
 					<!-- <div class="form_line">
@@ -238,23 +238,25 @@
 				위해 회사가 정한 규정에 의해 일부 제한될 수 있음을 꼭 알아두세요." }}
 			</div>
 
-			<div class="info_gray">
-				<dl>
-					<dt>
-						사망보험수익자
-					</dt>
-					<dd>
-						법정상속인
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						보험금 대리청구인 지정
-					</dt>
-					<dd>
-						미지정
-					</dd>
-				</dl>
+			<div class="info_gray df_type df_type_w_ty6">
+				<div class="data_box">
+					<dl>
+						<dt>
+							사망보험수익자
+						</dt>
+						<dd>
+							법정상속인
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							보험금 대리청구인 지정
+						</dt>
+						<dd>
+							미지정
+						</dd>
+					</dl>
+				</div>
 			</div>
 
 			<!-- s: 하단 버튼 영역 -->
@@ -286,10 +288,6 @@
 		{{> cp/panel_어린이치아 panel-title="가입자 정보" step1=true }}
 		<!-- e: 사이드 패널 -->
 	</div>
-
-	<!-- footer -->
-	{{> layout/footer }}
-	<!-- footer -->
 </div>
 
 <!-- s: popup area -->

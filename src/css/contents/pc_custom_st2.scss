@@ -60,7 +60,6 @@
 		gap: 8px;
 	}
 	&.ty3 {
-		flex-wrap: nowrap;
 		+ .title_h3 {
 			margin-top: var(--gap-11);
 		}
@@ -173,41 +172,77 @@
 
 
 // form 관련
-.form_group_wrap {
-	display: flex;
-	flex-flow: row wrap;
-	gap: var(--gap-8);
-	> * {
-		flex: 0 0 calc(50% - 16px);
-	}
-	&.full  {
-		flex-direction: column;
-	}
-	.form_line {
-		& ~ .form_line {
-			margin-top: 0;
+.wrap {
+	.form_group_wrap {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--gap-8);
+		> * {
+			flex: 0 0 calc(50% - 16px);
 		}
-	}
-
-	> .list_ty2 {
-		&.full {
-			margin-top: -16px;
+		&.full  {
+			flex-direction: column;
 		}
-	}
-
-	.full {
-		flex-basis: 100%;
-
-		.radio_group_wrap {
-			width: calc(50% - 16px);
+		.form_line {
+			& ~ .form_line {
+				margin-top: 0;
+			}
 		}
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					max-width: 836 px;
+	
+		> .list_ty2 {
+			&.full {
+				margin-top: -16px;
+			}
+		}
+	
+		.full {
+			flex-basis: 100%;
+	
+			.radio_group_wrap {
+				width: calc(50% - 16px);
+			}
+			.label_tit {
+				.tooltip_wrap {
+					.tooltip_panel {
+						max-width: 836 px;
+					}
 				}
 			}
 		}
+	
+		.c1 {
+			flex-basis: 100%;
+	
+			.radio_group_wrap,
+			.label_tit {
+				width: calc(50% - 16px);
+			}
+		}
+	
+		.row {
+			margin-top: 0;
+			.form_line {
+				margin-top: 0;
+			}
+		}
+	
+		.column {
+			gap: var(--gap-8);
+		}
+	
+		.label_tit {
+			.tooltip_wrap {
+				.tooltip_panel {
+					width: auto;
+					.inner {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+	
+		& + .banner_box {
+			margin-top: var(--gap-8);
 	}
 
 	.c1 {
@@ -217,39 +252,15 @@
 		.label_tit {
 			width: calc(50% - 16px);
 		}
-	}
-
-	.row {
-		.form_line {
-			margin-top: 0;
+	
+		& + .info_gray.ty2 {
+			margin-top: 16px;         
+		}
+	
+		& + .search_reult_list_container {
+			margin-top: var(--gap-8);
 		}
 	}
-
-	.column {
-		gap: var(--gap-8);
-	}
-
-	.label_tit {
-		.tooltip_wrap {
-			.tooltip_panel {
-				width: auto;
-				.inner {
-					white-space: nowrap;
-				}
-			}
-		}
-	}
-
-	& + .banner_box {
-		margin-top: var(--gap-8);
-	}
-
-	& + .info_gray.ty2 {
-		margin-top: 16px;         
-	}
-
-	& + .search_reult_list_container {
-		margin-top: var(--gap-8);
 	}
 }
 
@@ -321,6 +332,13 @@
 			margin-top: var(--gap-8);
 		}
 	}
+
+
+	&_ty2 {
+		& + .btn_area {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 .file_attach_box {
@@ -330,7 +348,13 @@
 		margin: 0 auto;
 	}
 }
-
+//tooltip
+.tooltip_wrap {
+	.tooltip_panel {
+		width: max-content;
+		max-width: 836px;
+	}
+}
 
 // tab 관련
 .tab_wrap {
@@ -837,6 +861,7 @@
 	}
 }
 
+//자동차 
 .radio_group_wrap {
 	&_ty5 {
 		display: flex;
@@ -972,6 +997,31 @@
 	&.call {
 		&::after {
 			content: '방법안내';
+		}
+	}
+}
+
+//기초 정보 입력
+.bi_top {
+	.bit_btn_scrollx {
+		flex-wrap: wrap;
+		overflow-x: visible;
+	}
+}
+
+
+.opt_select_list {
+	&.opt_case5.grid {
+		li:nth-last-child(-2n+2) > .option{
+			border-bottom: 1px solid var(--color-divider-gray-light);
+		}
+	}
+}
+
+.popup_content_top {
+	&.txt_center {
+		.status_icon {
+			margin-bottom: var(--gap-5)
 		}
 	}
 }

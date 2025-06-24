@@ -913,7 +913,14 @@
 			&.pi_bg_ty5 { //실손의료비보험
 				background-image: url(../images/content/bi/visual/bg_img_ltmd.png);
 			}
+			&.pi_bg_ty6 { //운전자보험
+				background-image: url(../images/content/bi/visual/bg_img_ltdr.png);
+			}
+			&.pi_bg_ty7 { //어린이치아보험
+				background-image: url(../images/content/bi/visual/bg_img_ltct.png);
+			}
 
+			
 
 			.pi_top {
 				flex: none;
@@ -979,6 +986,21 @@
 							}
 							&.item_ico_ty4 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty4.png);
+							}
+							&.item_ico_ty5 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty5.png);
+							}
+							&.item_ico_ty6 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty6.png);
+							}
+							&.item_ico_ty7 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty7.png);
+							}
+							&.item_ico_ty8 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty8.png);
+							}
+							&.item_ico_ty9 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty9.png);
 							}
 						}
 					}
