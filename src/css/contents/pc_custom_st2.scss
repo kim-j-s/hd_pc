@@ -1025,3 +1025,47 @@
 		}
 	}
 }
+
+//팝업 검색
+.popup_wrap.full{
+	.popup_container  {
+		.popup_cont {
+			&.search_list_type2 {
+				padding-top:0; 
+				.tab_wrap {
+					position: static;
+					.tab_wrap_content {
+						padding: var(--padding-9) 0 0;
+						margin: 0 -24px 0;
+						max-height: 576px;
+						overflow-y: auto;
+						&.has_scroll {
+							&.active {
+								display: block;
+							}
+						}
+						> * {
+							padding-left: 24px;
+							padding-right: 24px;
+						}
+						
+					}
+				}
+
+				.search_reult_list_container {
+					position: relative;
+					border-top: none;
+					&:after {
+						content: "";
+						width: calc(100% - (24px *2));
+						height: 1px;
+						background-color: var(--color-border-gray-light);
+						position: absolute;
+						top: 0;
+						left: 24px;
+					}
+				}
+			}
+		}		
+	}
+}
