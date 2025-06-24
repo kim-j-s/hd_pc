@@ -781,17 +781,21 @@ caption {
 	display: none;
 }
 /* focus */
-a.focus,
-button.focus,
-select.focus {
+a:focus,
+button:focus,
+select:focus,
+input:focus {
+	outline: none;
 	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 }
 input:focus + label {
+	outline: none;
 	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 }
 .inp input:focus {
+	outline: none;
 	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
 }

@@ -2,7 +2,7 @@
 
 ## dist url
 
-https://kim-j-s.github.io/hd_ko/dist/index.html
+https://kim-j-s.github.io/hd_pc/dist/index.html
 
 ## git ssl 오류 시 - openssl로 변경
 
