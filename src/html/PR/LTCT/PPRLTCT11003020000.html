@@ -7,28 +7,32 @@
 
 <!-- s: Bottom 팝업 -->
 <!-- s: 25-05-08 수정 -->
-{{#> popup/popup_bottom popup-id="pop_MPRLTCT11003020000" popup-active=true popup-title="담보 안내"}}
+{{#> popup/popup_bottom popup-id="pop_MPRLTCT11003020000" popup-active=true popup-title="변경할 담보 선택"}}
 <!-- e: 25-05-08 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
-		<div class="popup_content_top">
-			<div class="text_sub">치석제거(스케일링)</div>
+		<div class="text_lg">
+			$상세보장명 보장명은 전체명칭이 다 노출됩니다.$
+		</div>
+		<div class="radio_group_wrap_ty2" role="radiogroup">
+			{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g1" name="radio_g1" labelname="2천만원" checked=true }}
+			{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g2" name="radio_g1" labelname="미가입" }}
 		</div>
 
-		{{#> cp/notice notice-class="etc01" dp-title="보장 내용을 확인해 보세요" dp-active="true" }}
-		<ul class="list_ty1">
-			<li>치주질환(잇몸질환) 치료를 목적으로 치석제거(스케일링) 치료를 받은 경우 가입금액 지급(연간 1회 한도)</li>
-		</ul>
+		{{#> cp/notice dp-title="보장내용을 확인해 보세요" dp-active=true }}
+			<!-- s: 처리계 호출 -->
+			<ul class="list_depth">
+				<li>보장개시일 이후 암(유사암 제외)으로 진단확정된 경우 가입금액 지급(최초 1회한)<br/>
+					※유사암: 기타피부암, 갑상선암, 경계성종양, 제자리암</li>
+			</ul>
+			<!-- e: 처리계 호출 -->
 		{{/ cp/notice }}
 	</div>
 </div>
 
 <div class="popup_bottom">
 	<div class="btn_area">
-		<!-- s: 25-05-08 수정 -->
-		{{> cp/button type="3" size="2" b-text="보장에서 제외"}}
-		{{> cp/button type="1" size="2" b-text="확인"}}
-		<!-- e: 25-05-08 수정 -->
+		{{> cp/button type="1" size="2" b-text="가입 담보 변경하기" }}
 	</div>
 </div>
 {{/ popup/popup_bottom}}
