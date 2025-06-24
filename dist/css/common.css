@@ -1244,7 +1244,6 @@ strong {
 	font-size: var(--font-size-navigation-depth-small);
 }
 .hpi_bottom {
-	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1321,22 +1320,25 @@ strong {
 	background-position: center center;
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_alarm {
-	background-image: url(../images/common/header/bg_header_alarm.png);
+	background-image: url(../images/header/bg_header_alarm.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_cart {
-	background-image: url(../images/common/header/bg_header_cart.png);
+	background-image: url(../images/header/bg_header_cart.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search {
-	background-image: url(../images/common/header/bg_header_search.png);
+	background-image: url(../images/header/bg_header_search.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_menu_all {
-	background-image: url(../images/common/header/bg_header_menuall.png);
+	background-image: url(../images/header/bg_header_menuall.png);
+}
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_menu_all {
+	background-image: url(../images/header/icon_hamburger.svg);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_close {
-	background-image: url(../images/common/header/bg_header_out.png);
+	background-image: url(../images/header/bg_header_out.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_home {
-	background-image: url(../images/common/header/bg_header_home.png);
+	background-image: url(../images/header/icon_home.png);
 }
 .hpi_sub_utils > .item .hsu_chatbot {
 	display: block;
@@ -1349,7 +1351,7 @@ strong {
 	padding-left: 2rem;
 	font-size: var(--font-size-button-small);
 	color: var(--color-text-basic-inverse);
-	background: url(../images/common/header/bg_header_chatbot.png) no-repeat left center;
+	background: url(../images/header/bg_header_chatbot.png) no-repeat left center;
 }
 /* navigation */
 .hpi_gnb {
@@ -1379,21 +1381,24 @@ strong {
 .header_pc_nd .nav_list .nl_dept1_link > .text {
 	color: var(--color-text-bolder-inverse);
 }
+.header_pc_nd .nav_list .nld_cont {
+	top: 7.2rem;
+}
 .nld_cont {
 	position: absolute;
-	top: 7.2rem;
-	left: 50%;
+	top: 12rem;
+	left: 0;
 	z-index: 10;
-	width: 100vw;
+	width: 100%;
 	text-align: center;
 	border-radius: 0px 0px var(--radius-xxlarge) var(--radius-xlarge2);
 	background-color: var(--color-background-white);
 	visibility: hidden;
 	opacity: 0;
-	-webkit-transform: scaleY(0) translateX(-50%);
-	transform: scaleY(0) translateX(-50%);
 	-webkit-transform-origin: top center;
 	transform-origin: top center;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
@@ -1478,8 +1483,8 @@ strong {
 .nl_dept1:has(*:focus) .nld_cont {
 	opacity: 1;
 	visibility: visible;
-	-webkit-transform: scaleY(1) translateX(-50%);
-	transform: scaleY(1) translateX(-50%);
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
 }
 .wrap::before {
 	content: "";
@@ -5333,6 +5338,9 @@ strong {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+}
+.card_item_wrap .card_item .item_inner .inner_cont:not(:has(.item_top)) .inp_label .chk_label {
+	margin-top: 0;
 }
 .card_item_wrap .card_item .item_inner .inner_cont > * + .card_list_ty1 > li:first-child {
 	margin-top: var(--gap-5);
