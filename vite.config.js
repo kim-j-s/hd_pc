@@ -139,8 +139,16 @@ export default defineConfig({
             'href="../../../css/contents.css"'
           )
           .replace(
+            /crossorigin href="\/css\/contents_pc\.css"/g,
+            'href="../../../css/contents_pc.css"'
+          )
+          .replace(
             /crossorigin href="\/css\/popup\.css"/g,
             'href="../../../css/popup.css"'
+          )
+          .replace(
+            /crossorigin href="\/css\/popup_pc\.css"/g,
+            'href="../../../css/popup_pc.css"'
           )
           .replace(
             /crossorigin href="\/html\/guide\/guide\/guide\.css"/g,
