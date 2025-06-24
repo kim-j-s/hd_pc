@@ -173,83 +173,86 @@
 
 
 // form 관련
-.form_group_wrap {
-	display: flex;
-	flex-flow: row wrap;
-	gap: var(--gap-8);
-	> * {
-		flex: 0 0 calc(50% - 16px);
-	}
-	&.full  {
-		flex-direction: column;
-	}
-	.form_line {
-		& ~ .form_line {
+.wrap {
+	.form_group_wrap {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--gap-8);
+		> * {
+			flex: 0 0 calc(50% - 16px);
+		}
+		&.full  {
+			flex-direction: column;
+		}
+		.form_line {
+			& ~ .form_line {
+				margin-top: 0;
+			}
+		}
+	
+		> .list_ty2 {
+			&.full {
+				margin-top: -16px;
+			}
+		}
+	
+		.full {
+			flex-basis: 100%;
+	
+			.radio_group_wrap {
+				width: calc(50% - 16px);
+			}
+			.label_tit {
+				.tooltip_wrap {
+					.tooltip_panel {
+						max-width: 836 px;
+					}
+				}
+			}
+		}
+	
+		.c1 {
+			flex-basis: 100%;
+	
+			.radio_group_wrap,
+			.label_tit {
+				width: calc(50% - 16px);
+			}
+		}
+	
+		.row {
 			margin-top: 0;
+			.form_line {
+				margin-top: 0;
+			}
 		}
-	}
-
-	> .list_ty2 {
-		&.full {
-			margin-top: -16px;
+	
+		.column {
+			gap: var(--gap-8);
 		}
-	}
-
-	.full {
-		flex-basis: 100%;
-
-		.radio_group_wrap {
-			width: calc(50% - 16px);
-		}
+	
 		.label_tit {
 			.tooltip_wrap {
 				.tooltip_panel {
-					max-width: 836 px;
+					width: auto;
+					.inner {
+						white-space: nowrap;
+					}
 				}
 			}
 		}
-	}
-
-	.c1 {
-		flex-basis: 100%;
-
-		.radio_group_wrap,
-		.label_tit {
-			width: calc(50% - 16px);
+	
+		& + .banner_box {
+			margin-top: var(--gap-8);
 		}
-	}
-
-	.row {
-		.form_line {
-			margin-top: 0;
+	
+		& + .info_gray.ty2 {
+			margin-top: 16px;         
 		}
-	}
-
-	.column {
-		gap: var(--gap-8);
-	}
-
-	.label_tit {
-		.tooltip_wrap {
-			.tooltip_panel {
-				width: auto;
-				.inner {
-					white-space: nowrap;
-				}
-			}
+	
+		& + .search_reult_list_container {
+			margin-top: var(--gap-8);
 		}
-	}
-
-	& + .banner_box {
-		margin-top: var(--gap-8);
-	}
-
-	& + .info_gray.ty2 {
-		margin-top: 16px;         
-	}
-
-	& + .search_reult_list_container {
-		margin-top: var(--gap-8);
 	}
 }
 
@@ -318,6 +321,13 @@
 	&+ .checkbox_group_wrap.column {
 		margin-top: var(--gap-8);
 		& + * {
+			margin-top: var(--gap-8);
+		}
+	}
+
+
+	&_ty2 {
+		& + .btn_area {
 			margin-top: var(--gap-8);
 		}
 	}
