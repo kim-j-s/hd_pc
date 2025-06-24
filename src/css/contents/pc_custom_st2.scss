@@ -151,7 +151,18 @@
 			.acd_btn{
 				// padding: var(--number-3) 0;
 			} 
-		}		
+		}
+
+		.acd_cont {
+			.inner {
+				.list_depth {
+					& > li > ul > li {
+						font-size: var(--font-size-body-small);
+					}
+				}
+			}
+		}
+
 	}
 
 	& + .banner_box {
@@ -569,7 +580,7 @@
 						+ .card_list_ty1 {
 							display: flex;
 							flex-flow: row wrap;
-							border-top: 1px solid #e1e3ea;
+							border-top: 1px solid var(--color-divider-gray-light);
 							margin-top: var(--gap-5);
 							padding-top: 16px;
 	
@@ -817,6 +828,21 @@
 // 	}
 // }
 
+// accordion
+.acd_item {
+
+	&.acd_item_ty2 {
+	
+		.cont_text_sub {
+			font-weight: normal;
+			margin-top: var(--gap-2);
+		}
+	}
+}
+
+
+
+
 // 2단 타입 
 .multi_ty1 {
 	display: flex;
@@ -1022,6 +1048,16 @@
 	&.txt_center {
 		.status_icon {
 			margin-bottom: var(--gap-5)
+		}
+	}
+}
+
+//table
+.table_wrap {
+	.table {
+		td {
+			vertical-align: top;
+			padding: var(--padding-5);
 		}
 	}
 }
