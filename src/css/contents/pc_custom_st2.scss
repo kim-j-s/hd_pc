@@ -991,3 +991,11 @@
 		}
 	}
 }
+
+.popup_content_top {
+	&.txt_center {
+		.status_icon {
+			margin-bottom: var(--gap-5)
+		}
+	}
+}
