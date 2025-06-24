@@ -324,6 +324,9 @@ body {
 .bottom_fix_notice .acd_item {
 	border-radius: var(--radius-large2);
 }
+.bottom_fix_notice .acd_item .acd_cont .inner .list_depth > li > ul > li {
+	font-size: var(--font-size-body-small);
+}
 .bottom_fix_notice + .banner_box {
 	margin-top: var(--gap-8);
 }
@@ -620,7 +623,7 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	border-top: 1px solid #e1e3ea;
+	border-top: 1px solid var(--color-divider-gray-light);
 	margin-top: var(--gap-5);
 	padding-top: 1.6rem;
 }
@@ -718,6 +721,15 @@ body {
 	padding-right: 0;
 	background: none;
 }
+.card_item_wrap .card_item .item_inner .inp_radio .chk_label {
+	width: 2rem;
+	height: 2rem;
+	margin-top: 0.3rem;
+	padding-left: 0;
+}
+.card_item_wrap .card_item .item_inner .inp_radio .chk_label:before {
+	top: 0;
+}
 .guarantee_choice_wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -768,6 +780,10 @@ body {
 }
 .guarantee_container {
 	min-height: auto;
+}
+.acd_item.acd_item_ty2 .cont_text_sub {
+	font-weight: normal;
+	margin-top: var(--gap-2);
 }
 .multi_ty1 {
 	display: -webkit-box;
@@ -932,6 +948,44 @@ body {
 }
 .popup_content_top.txt_center .status_icon {
 	margin-bottom: var(--gap-5);
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap {
+	position: static;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap .tab_wrap_content {
+	padding: var(--padding-9) 0;
+	margin: 0 -2.4rem 0;
+	max-height: 57.6rem;
+	min-height: 57.6rem;
+	overflow-y: auto;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap .tab_wrap_content.has_scroll.active {
+	display: block;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap .tab_wrap_content > * {
+	padding-left: 2.4rem;
+	padding-right: 2.4rem;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .search_reult_list_container {
+	position: relative;
+	border-top: none;
+}
+.popup_wrap.full .popup_container .popup_inner .popup_cont.search_list_type2 .search_reult_list_container:after {
+	content: "";
+	width: calc(100% - 4.8rem);
+	height: 1px;
+	background-color: var(--color-border-gray-light);
+	position: absolute;
+	top: 0;
+	left: 2.4rem;
+}
+.table_wrap .table td {
+	vertical-align: top;
+	padding: var(--padding-5);
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
@@ -1999,6 +2053,9 @@ body {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 	gap: 0 var(--gap-8);
 }
 .grid > * {
