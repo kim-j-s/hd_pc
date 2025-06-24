@@ -1029,15 +1029,18 @@
 //팝업 검색
 .popup_wrap.full{
 	.popup_container  {
-		.popup_cont {
+		.popup_inner  {
+			.popup_cont {
 			&.search_list_type2 {
 				padding-top:0; 
+				padding-bottom:0;
 				.tab_wrap {
 					position: static;
 					.tab_wrap_content {
-						padding: var(--padding-9) 0 0;
+						padding: var(--padding-9) 0;
 						margin: 0 -24px 0;
 						max-height: 576px;
+						min-height: 576px;
 						overflow-y: auto;
 						&.has_scroll {
 							&.active {
@@ -1067,5 +1070,7 @@
 				}
 			}
 		}		
+		}
+		
 	}
 }
