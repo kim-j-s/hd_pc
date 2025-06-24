@@ -121,19 +121,76 @@
 			<div class="acc_group">
 				<div class="space_list_ty2">
 					<div class="acd_item acd_item_ty2">
-						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
-						<div class="coverage_item_list_ty3">
-							<div class="list">
+						{{#> cp/accordion ac-title="교통사고 났을 때 든든하게!" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="상해사망•후유장해(해외여행중)" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+										{{> cp/ibs cid="checkbox01-1" sct="교통상해후유장해(운전자)" cts="" }}
+										<div class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_secondary size_m">새로 나왔어요</span>
+										</div>
 									</div>									
 								</div>
 								<div class="detail_price">
-									<span class="point">3억원</span>
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+									{{/ cp/selectbox_pc}}
 								</div>
-							</div>
-						</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-2" sct="교통상해후유장해(운전자,80%이상,월지급형)" cts="" }}
+										<div class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_warning size_m">보장을 확대 했어요</span>
+										</div>
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-3" sct="교통상해사망(운전자)" cts="" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-4" sct="교통상해사망후유장해(대중교통이용중)" cts="" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+						</ul>
 						{{/ cp/accordion }}
 					</div>
 
@@ -345,6 +402,18 @@
 				</div>
 			</div>
 
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+			<ul class="list_ty1">
+				<li>가입하지 않은 담보를 계약체결 이후 추가하시는 경우, 회사가 정하는 인수지침에 의하여 피보험자의 가입나이, 건강상태, 과거병력 및 직무 등에 따라 보험가입금액이 제한되거나 가입이 불가능할 수 있습니다.</li>
+				<li>현대해상 자동차보험 가입고객 보험료 매월 7% 할인(자동차보험 보험기간 1년, 유효 계약 기준)</li>
+				<li>할인을 적용받던 계약이 할인적용대상에 해당되지 않게 된 경우 다음달 이후 납입되는 보험료부터 할인이 적용되지 않으며, 다시 적용대상에 해당되더라도 할인이 재적용되지 않습니다.</li>
+				<li>차대차사고차량시세하락손실지원(개인자가용), 차량유리교체비용지원(개인자가용, 연간 1회 한) 담보는 고객님 본인의 개인 자가용(개인명의로 소유하거나 개인명의로 리스한 자동차) 자동차번호가 있어야 가입 가능하며, 보험가입기간이 10년을 초과할 경우 이 담보는 최대 10년까지만 보장됩니다.</li>
+				<li>자동차사고변호사선임비용, 자동차사고처리지원금 담보는 다른 보험에 이미 가입했어도 보장금액 확대를 위한 추가 가입이 가능합니다. 단, 실제 손해액 범위 내에서만 비례 보상됩니다.</li>
+			</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+
 		
 		</div>
 
@@ -486,136 +555,4 @@
 	<!-- e: Full 팝업(예시) -->
 
 <!-- e: popup area -->
-
-<script>
-	$(function () {
-
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-		$('.guarantee_choice_wrap .guarantee_item .gi_radio input[type="radio"]').on('change', function() {
-			const idx = $(this).closest('.guarantee_item').index();
-			// console.log(idx)
-			const $selectedItem = $(this).closest('.guarantee_item');
-			$(this).closest('.guarantee_choice_wrap').addClass('active');
-			$(this).closest('.guarantee_choice_wrap').find('.guarantee_item').removeClass('active');
-			$(this).closest('.guarantee_item').addClass('active');
-
-			// 모든 항목 초기화: 컨텐츠 닫고 타이틀 열기
-			$('.guarantee_choice_wrap .guarantee_item').each(function() {
-				$(this).find('.guarantee_item_cont').stop(true, true).slideUp(300);
-				$(this).find('.guarantee_item_top').stop(true, true).slideDown(300);
-			});
-
-			// 선택된 항목만: 컨텐츠 열고 타이틀 닫기
-			$selectedItem.find('.guarantee_item_cont').stop(true, true).slideDown(300);
-			$selectedItem.find('.guarantee_item_top').stop(true, true).slideUp(300);
-
-			// 고급 선택 시
-			if( idx === 0 && $('.gtl_special').length ) {
-				$('.gtl_special').addClass('active');
-			} else {
-				$('.gtl_special').removeClass('active');
-			}
-
-			// head 문구 변경
-			$('.guarantee_top_item').eq(idx + 1).addClass('active').siblings('.guarantee_top_item').removeClass('active');
-
-			// 비쥬얼 영역 변경			
-			$('.guarantee_visuval').stop(true, true).slideUp(300);
-
-			// 추가된 부분
-			const selectedClass = $(this).closest('.guarantee_item').data('sendclass'); // 선택된 항목의 data-sendclass 값
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-		});
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-
-		// Splide 설정
-		var splide = new Splide('#splide_wrap_ty1 .splide', {
-			speed: 500,
-			accessibility: true,
-			arrows: false, // 기본 화살표 비활성화
-			focusableNodes: 'a, button, input, textarea, select, li',
-		}).mount();
-
-		splide.on('moved', function () {
-			const $slides = $('.splide__slide');
-			const $activeSlide = $slides.filter('.is-active');
-			const $radio = $activeSlide.find('input[type="radio"]');
-
-			// 모든 슬라이드 tabindex 제거
-			$slides.removeAttr('tabindex');
-
-			// 활성화된 슬라이드에 radio 체크 및 focus 처리
-			if ($radio.length) {
-				$radio.prop('checked', true).trigger('change');
-			}
-
-			// 접근성: 현재 슬라이드에 포커스
-			$activeSlide.attr('tabindex', '0').focus();
-
-			// 버튼 상태 갱신
-			updateArrowState();
-		});
-
-		// 슬라이드 효과를 주기 위함
-		splide.on('move', function (newIndex) {
-			const $slides = $('.splide__slide');
-			$slides.removeClass('effect');
-
-			const $nextSlide = $slides.eq(newIndex);
-			$nextSlide.addClass('effect');
-		});
-
-		// 커스텀 좌우 버튼 클릭 시 이동
-		$('#splide_wrap_ty1 .swiper_button_left').on('click', () => splide.go('<'));
-		$('#splide_wrap_ty1 .swiper_button_right').on('click', () => splide.go('>'));
-
-		// 버튼 상태 업데이트 함수
-		function updateArrowState() {
-			const curr = splide.index;
-			const max = splide.length - 1;
-
-			$('#splide_wrap_ty1 .swiper_button_left').prop('disabled', curr === 0);
-			$('#splide_wrap_ty1 .swiper_button_right').prop('disabled', curr === max);
-		}
-
-		// 초기 로드 시 상태 설정
-		updateArrowState();	
-
-		// 보험 플랜 - 우측 이동
-		$('.move_detail').on('click', function () {
-			const selectedClass = $('.guarantee_choice_wrap .guarantee_item input[type="radio"]:checked').closest('.guarantee_item').data('sendclass');
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-			const targetSlide = $('.splide__slide[data-getclass="' + selectedClass + '"]');
-
-			if (targetSlide.length) {
-				const targetIndex = targetSlide.index();  // 슬라이드의 인덱스를 구합니다.
-				// console.log('목표 슬라이드 인덱스:', targetIndex);
-				$('.guarantee_container').addClass('active');
-
-				setTimeout(function() {
-					$('.splide__list').find('.splide__slide').eq(targetIndex).addClass('effect').find('input[type="radio"]').prop('checked', true);;
-					splide.go(targetIndex);
-					$('.container').scrollTop(0);
-					setTimeout(function(){
-						$('.splide__list').find('.splide__slide').eq(targetIndex).attr('tabindex', '0').focus();
-						$('.guarantee_container').css('position', 'static');
-						$('.guarantee_container_left').attr('aria-hidden', true);
-						$('.guarantee_container_right').css('position', 'static');
-					}, 100)
-				}, 500);
-			}
-		});
-		// 보험 플랜 - 우측 이동
-
-		// 25-05-19 수정
-		window.addEventListener('resize', function () {
-			splide.refresh(); // 슬라이드 다시 계산
-		});
-		// 25-05-19 수정
-		
-	});
-</script>
-
-
-
 {{/ layout/default }}
