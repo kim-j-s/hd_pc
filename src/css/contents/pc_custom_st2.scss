@@ -983,3 +983,12 @@
 		overflow-x: visible;
 	}
 }
+
+
+.opt_select_list {
+	&.opt_case5.grid {
+		li:nth-last-child(-2n+2) > .option{
+			border-bottom: 1px solid var(--color-divider-gray-light);
+		}
+	}
+}
