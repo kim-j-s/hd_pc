@@ -1214,3 +1214,13 @@
 }
 
 
+.grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	gap: 0 var(--gap-8);
+
+	> * {
+		flex: 0 1 calc(50% - 16px);
+	}
+}
