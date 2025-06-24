@@ -1,3 +1,7 @@
+<!---
+화면번호 : PRLT10003000100
+경로 : 2.자동차 기본정보 > 2-1.보유차량 목록 > 최근 보험료 계산 내역
+-->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -46,547 +50,41 @@
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
-		<link rel="stylesheet" crossorigin href="/css/contents_pc.css" />
+		<link rel="stylesheet" href="../../../css/contents_pc.css" />
 		<link rel="stylesheet" href="../../../css/popup.css" />
-		<link rel="stylesheet" crossorigin href="/css/popup_pc.css" />
+		<link rel="stylesheet" href="../../../css/popup_pc.css" />
 	</head>
 	<body>
 		<ul id="skipNavi" class="skipNavi">
 			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
-		<div id="wrap" class="wrap">
-			<div id="header" class="header_pc header_pc_nd">
-				<div class="header_pc_inner">
-					<div class="hpi_bottom">
-						<div class="hpi_l hpi_l_nd">
-							<h1 class="hpi_logo">
-								<img src="../../../images/common/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
-							</h1>
-							<strong class="hpi_l_prd_name">자동차보험</strong>
-						</div>
 
-						<nav class="hpi_gnb">
-							<ul class="nav_list">
-								<li class="nl_dept1 c1">
-									<a href="#" class="nl_dept1_link"><span class="text">보험가입</span></a>
-									<div class="nld_cont">
-										<div class="nld_cont_inner">
-											<div class="nld_cont_top">
-												<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty1"><span class="text">보험가입</span></a>
-											</div>
-											<div class="nld_cont_body">
-												<ul class="nld_cont_body_list">
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit">자동차</strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">자동차보험(개인)</span></a>
-																</li>
-																<li class="item">
-																	<a href="#"><span class="text">자동차보험(법인)</span></a>
-																</li>
-																<li class="item">
-																	<a href="#"><span class="text">이륜차보험</span></a>
-																</li>
-																<li class="item">
-																	<a href="#"><span class="text">타임쉐어 자동차보험</span></a>
-																</li>
-																<li class="item">
-																	<a href="#"><span class="text">영업용 자동차보험</span></a>
-																</li>
-															</ul>
-														</div>
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap bottom active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head"><div class="popup_head_title">최근 보험료를 계산한 내역입니다</div></div>
 
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="popup_content_top">
+								<!-- s: 25-05-29 삭제 -->
 
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<li class="nl_dept1">
-									<a href="#" class="nl_dept1_link"><span class="text">계약관리</span></a>
-									<div class="nld_cont">
-										<div class="nld_cont_inner">
-											<div class="nld_cont_top">
-												<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty2"><span class="text">계약관리</span></a>
-											</div>
-											<div class="nld_cont_body">
-												<ul class="nld_cont_body_list">
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<li class="nl_dept1">
-									<a href="#" class="nl_dept1_link"><span class="text">보상/청구</span></a>
-									<div class="nld_cont">
-										<div class="nld_cont_inner">
-											<div class="nld_cont_top">
-												<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty3"><span class="text">보상/청구</span></a>
-											</div>
-											<div class="nld_cont_body">
-												<ul class="nld_cont_body_list">
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<li class="nl_dept1">
-									<a href="#" class="nl_dept1_link"><span class="text">혜택/서비스</span></a>
-									<div class="nld_cont">
-										<div class="nld_cont_inner">
-											<div class="nld_cont_top">
-												<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty4"><span class="text">혜택/서비스</span></a>
-											</div>
-											<div class="nld_cont_body">
-												<ul class="nld_cont_body_list">
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-
-								<li class="nl_dept1">
-									<a href="#" class="nl_dept1_link"><span class="text">고객지원</span></a>
-									<div class="nld_cont">
-										<div class="nld_cont_inner">
-											<div class="nld_cont_top">
-												<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty5"><span class="text">고객지원</span></a>
-											</div>
-											<div class="nld_cont_body">
-												<ul class="nld_cont_body_list">
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-													<li>
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-
-														<div class="nl_dept2">
-															<strong class="nl_dept2_tit"></strong>
-															<ul class="nl_dept2_list">
-																<li class="item">
-																	<a href="#"><span class="text">개인보험</span></a>
-																</li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</nav>
-
-						<div class="hpi_sub_utils">
-							<div class="item item_chatbot">
-								<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
-							</div>
-							<div class="item">
-								<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
-							</div>
-							<div class="item">
-								<a href="#" class="hus_btn hsu_home"><span class="text">홈으로 이동</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="container" class="container">
-				<div class="content">
-					<div class="title_view_wrap">
-						<div class="page_title">
-							<div class="p_info">차량 정보</div>
-							<h2 class="p_title">보험료를 계산할 <strong>자동차를 선택</strong>하세요</h2>
-						</div>
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-								<span class="text">다수차량 동시 계산/가입</span>
-								<i class="hd_icon arrowRightSvg"></i>
-							</button>
-						</div>
-					</div>
-
-					<div class="tab_wrap">
-						<div class="tab_wrap_list_ty1" role="tablist">
-							<button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelex01" id="tabex01">보유중인 자동차보험 갱신 <span class="hd_badge solid_pastel c_primary size_m">5</span></button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelex02" id="tabex02">신규차량, 또는 구매예정</button> <button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanelex03" id="tabex03">최근 보험료 계산 내역<span class="hd_badge solid_pastel c_primary size_m">2</span></button>
-						</div>
-						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">tab inner 1</div>
-						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanelex02">tab inner 2</div>
-						<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex02">
-							<div class="title_item">
-								<div class="item">
-									<div class="title_h3 ct1">
-										<strong>최근 25일간 보험료를 계산한 내역이에요.</strong>
-									</div>
-									<p class="title_sub">목록에서 선택해 이어서 진행할 수 있어요.</p>
-								</div>
+								<p class="text_sub">
+									최근 25일 간 보험료를 계산한 내역이에요.<br />
+									목록에서 선택해 이어서 진행할 수 있어요.
+								</p>
+								<!-- e: 25-05-29 삭제 -->
 							</div>
 
+							<!-- s: 25-04-16 수정 -->
 							<div class="card_item_wrap">
 								<div class="card_item">
 									<div class="item_inner">
 										<div class="inner_cont">
+											<!-- s: 25-04-29 수정 -->
 											<div role="button" class="card_link" tabindex="0">
 												<div class="item_top">
 													<div class="title_info">
@@ -594,6 +92,7 @@
 													</div>
 												</div>
 											</div>
+											<!-- e: 25-04-29 수정 -->
 											<ul class="card_list_ty1">
 												<li>
 													<div class="title">설계일시</div>
@@ -618,6 +117,7 @@
 								<div class="card_item">
 									<div class="item_inner">
 										<div class="inner_cont">
+											<!-- s: 25-04-29 수정 -->
 											<div role="button" class="card_link" tabindex="0">
 												<div class="item_top">
 													<div class="title_info">
@@ -625,6 +125,7 @@
 													</div>
 												</div>
 											</div>
+											<!-- e: 25-04-29 수정 -->
 											<ul class="card_list_ty1">
 												<li>
 													<div class="title">설계일시</div>
@@ -647,72 +148,24 @@
 									</div>
 								</div>
 							</div>
-							<div class="no_list_area">
-								<i class="hd_icon exclamationSvg"></i>
-								<p>최근 설계 내역이 없습니다.</p>
-							</div>
+							<!-- e: 25-04-16 수정 -->
 
-							<div class="bottom_fix_wrap">
-								<div class="btn_area">
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
-										<span class="text">이전</span>
-									</button>
-								</div>
-							</div>
+							<!-- s: 25-05-08 수정 -->
+							<!-- s: 25-05-29 삭제 -->
+							<!--<div class="btn_area center view_more">
+									<button type="button" class="btn btn_more_view">
+										<span class="text">
+											더보기 <span class="counter"><strong class="btn_more_view_now">1</strong> / 2</span>
+										</span>
+									</button>		</div> -->
+							<!-- e: 25-05-29 삭제 -->
+							<!-- e: 25-05-08 수정 -->
 						</div>
 					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
-
-				<!-- s: 사이드 패널 -->
-				<div class="side_panel">
-					<div class="info_cont">
-						<div class="tit_box">
-							<h3 class="pop_title_h3">고객 정보</h3>
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-								<span class="text">수정</span>
-								<i class="hd_icon resetSvg"></i>
-							</button>
-						</div>
-						<div class="data_list">
-							<ul>
-								<li>
-									<dl>
-										<dt class="country">이름</dt>
-										<dd>김*대</dd>
-									</dl>
-								</li>
-								<li>
-									<dl>
-										<dt class="date">주민등록번호</dt>
-										<dd>900101-1******</dd>
-									</dl>
-								</li>
-							</ul>
-						</div>
-
-						<div class="info_gray">기획 정의중</div>
-					</div>
-
-					<div class="customer_info">
-						<div class="contact_list">
-							<div class="list">
-								<i class="icon call"></i>
-								<span class="info">
-									다이렉트 고객센터
-									<em>1899-6782</em>
-								</span>
-							</div>
-						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
-					</div>
-				</div>
-				<!-- e: 사이드 패널 -->
 			</div>
 		</div>
-
-		<!-- s: popup area -->
-		<!-- e: popup area -->
+		<!-- e: Bottom 팝업 -->
 	</body>
 </html>
