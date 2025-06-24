@@ -894,7 +894,7 @@
 			.item_radio {
 				label {
 					position: relative;
-					height: 256px;
+					// height: 256px;
 					justify-content: center;
 					text-align: center;
 					&::after {
@@ -1096,6 +1096,7 @@
 			.item_radio {
 				label {
 					width: 268px;
+					height: 256px;
 				}
 			}
 		}
@@ -1109,6 +1110,11 @@
 							
 							.item_desc {
 								display: none;
+								// opacity: 0;
+								// height: 0;
+								// overflow: hidden;
+								// transition: opacity .5s;
+								// transition-delay: .2s;
 							}
 						}
 						&:checked {
@@ -1117,6 +1123,8 @@
 							
 								.item_desc {
 									display: block;
+									// opacity: 1;
+									// height: 40px;
 								}
 							}
 						}
@@ -1190,5 +1198,9 @@
 // }
 
 
+.search_box {
+	display: flex;
+	justify-content: space-between;
+}
 
 
