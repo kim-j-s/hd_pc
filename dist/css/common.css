@@ -1366,6 +1366,7 @@ strong {
 }
 .nav_list .nl_dept1_link {
 	position: relative;
+	z-index: 11;
 	display: block;
 	width: 12rem;
 	padding: 0.8rem 0 2.4rem 0;
