@@ -1218,10 +1218,23 @@
 }
 
 
-.popup_wrap.bottom {
-	.file_upload_wrap {
-		justify-content: center;
+.popup_wrap {
+	&.bottom,
+	&.full {
+		.file_upload_wrap {
+			.file_attach_box {
+				display: block;
+				margin: 0 auto;
+			}
+
+			.file_info_box {
+				& + .file_attach_box {
+					margin-top: var(--gap-5);
+				}
+			}
+		}
 	}
+	
 }
 
 .title_sub {
