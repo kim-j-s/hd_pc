@@ -257,7 +257,8 @@
 			}
 		}
 	
-		& + .banner_box {
+		& + .banner_box,
+		& + .file_attach_box {
 			margin-top: var(--gap-8);
 	}
 
