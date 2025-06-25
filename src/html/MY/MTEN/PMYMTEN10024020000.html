@@ -1,0 +1,108 @@
+{{#> layout/default page-title="단기운전자 확대특약 변경/취소 | 마이페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc h-title="단기운전자 확대특약 변경/취소" bc=true }}
+
+		<div id="container" class="container">
+			<div class="content">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>단기운전자 확대특약 변경(법인)</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
+
+				<!-- s: 25-05-23 -->
+				<div class="card_item_wrap ty3">
+				<!-- e: 25-05-23 -->
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inner_cont">
+								<div role="button" class="card_link" tabindex="0">
+								<div class="item_top">
+									<div class="title_info">
+										<div class="main_title">18루**22</div>
+									</div>
+									<div class="desc">Hicar업무용(CM)</div>
+								</div>
+								<ul class="card_list_ty1 df_type_w_ty3">
+									<li>
+										<div class="title">보험료</div>
+										<div class="cont">10,590원</div>
+									</li>
+									<li>
+										<div class="title">시작/종료일</div>
+										<div class="cont">2020.01.01 ~ 2021.01.01</div>
+									</li>
+								</ul>
+                                </div>
+							</div>
+						</div>
+						<div class="btn_area">
+							{{> cp/button type="3" size="2" b-text="취소" }}
+						</div>
+					</div>
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inner_cont">
+								<div class="item_top">
+									<div class="title_info">
+										<div class="main_title">18루**22</div>
+									</div>
+									<div class="desc">Hicar업무용(CM)</div>
+								</div>
+								<ul class="card_list_ty1">
+									<li>
+										<div class="title">보험료</div>
+										<div class="cont">10,590원</div>
+									</li>
+									<li>
+										<div class="title">시작/종료일</div>
+										<div class="cont">2020.01.01 ~ 2021.01.01</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btn_area bagic">
+							{{> cp/button type="2" size="2" b-text="변경" }}
+						</div>
+					</div>
+					<div class="btn_area center view_more">
+						{{> cp/button_more}}
+					</div>
+				</div>
+
+				<!-- s: 꼭 알아두세요 -->
+				{{#> cp/notice dp-active=true }}
+					<ul class="list_depth">
+						<li>취소는 특약의 시작일 전일까지만 신청가능합니다.</li>
+						<li>단기운전자 확대특약 시작일이 지난 경우, 특약의 종료일을 <strong>오늘 ~ 종료일 하루전까지로 변경</strong>하여 이용기간을 축소할 수 있습니다.</li>
+						<li>인터넷으로 가입한 다이렉트 상품(개인용 및 개인소유 업무용)에 한해 계약변경이 가능합니다.</li>
+						<li>하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 현대해상홈페이지(www.hi.co.kr) 또는 대표 콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.</li>
+					</ul>
+				{{/ cp/notice }}
+				<!-- e: 꼭 알아두세요 -->
+			</div>
+
+			<!-- // container -->
+		</div>
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	 
+	<!-- s: 자동차 배서 메뉴 -->
+	{{> pages/pop1 }}
+	<!-- e: 자동차 배서 메뉴 -->
+	<!-- e: popup area -->
+
+{{/ layout/default }}
