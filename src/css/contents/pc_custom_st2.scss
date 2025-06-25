@@ -1211,12 +1211,22 @@
 		}
 	}
 
-	.title_h4.space1 {
-		margin-bottom:16px;
+	.form_group_wrap + .title_h4 {
+		margin: 40px 0 16px;
 	}
-	.form_group_wrap {
-		& + .title_h4.space1 {
-			margin-top: 40px;
+}
+
+
+.popup_wrap.bottom {
+	.file_upload_wrap {
+		justify-content: center;
+	}
+}
+
+.title_sub {
+	& + .img_area {
+		img {
+			margin:0 auto;
 		}
 	}
 }
