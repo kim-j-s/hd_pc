@@ -423,7 +423,7 @@
 
 
 	// select_driver
-	$DOM.on('change', '.select_driver_range input[type="radio"]', function(){
+	$DOM.on('change', '.select_driver_range [class^="radio_group_wrap"] input[type="radio"]', function(){
 		const $relGroup = $('.driver_relationship_state').find('.relationship_box');
 		const $relGroup2 = $('.driver_relationship_cont');
 		const idx = $(this).closest('.inp_radio').index() + 1;

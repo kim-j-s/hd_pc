@@ -934,6 +934,9 @@
 			&.pi_bg_ty12 { //주택보험
 				background-image: url(../images/content/bi/visual/bg_img_ltfm.png);
 			}
+			&.pi_bg_ty13 { //연금보험
+				background-image: url(../images/content/bi/visual/bg_img_ltpn.png);
+			}
 
 			
 
@@ -1025,6 +1028,12 @@
 							}
 							&.item_ico_ty12 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty12.png);
+							}
+							&.item_ico_ty13 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty13.png);
+							}
+							&.item_ico_ty14 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty14.png);
 							}
 						}
 					}
