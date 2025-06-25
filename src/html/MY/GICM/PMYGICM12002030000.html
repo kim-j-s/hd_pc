@@ -4,7 +4,6 @@
 		
 		<div id="container" class="container">
 			<div class="content">
-
 				<div class="title_view_wrap">
 					<div class="page_title">
             <div class="p_info">해외여행보험 기간연장</div>
@@ -42,7 +41,10 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">카드사</div>
-							{{> cp/selectitem si_ph="카드사 선택" si_title="카드사 선택" }}
+              {{#> cp/selectbox_pc s-title="카드사 선택" }}
+                <option value="" selected>선택1</option>
+                <option value="">선택2</option>
+              {{/ cp/selectbox_pc}}
 						</div>
 						<div class="form_line">
 							<div class="label_tit">카드번호</div>

@@ -1,0 +1,94 @@
+{{#> layout/default page-title="일반보험 계약변경 | 마이페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc bc=true }}
+		
+		<div id="container" class="container">
+			<div class="content">
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>일반보험 계약취소</strong>
+						</h2>
+					</div>
+				</div>
+
+        <div class="info_gray">
+          <p class="info_text">현대해상 다이렉트 일반보험 중 보험시작일 이전(보험개시 전) 계약만 취소 가능합니다.</p>
+        </div>
+
+        <div class="info_cont">
+          <!-- s: 계약 목록 -->
+          <div class="card_item_wrap">
+            <div class="card_item">
+              <div class="item_inner">
+                <div class="inner_cont">
+                  <div role="button" class="card_link" tabindex="0">
+                    <div class="item_top">
+                      <div class="title_info">
+                        <div class="main_title">다이렉트 해외여행보험</div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="card_list_ty1">
+                    <li>
+                      <div class="title">보험기간</div>
+                      <div class="cont">2025.01.01~2025.01.05</div>
+                    </li>
+                    <li>
+                      <div class="title">보험료</div>
+                      <div class="cont">39,000원</div>
+                    </li>
+                    <li>
+                      <div class="title">계약자</div>
+                      <div class="cont">김*대</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- e: 계약 목록 -->
+        </div>
+				
+				<!-- s: 조회 내역이 없는 경우 -->
+				<!-- <div class="no_list_area">
+					{{> cp/icon iconClass="exclamationSvg"}}
+					<p>내역이 없어요</p>
+				</div> -->
+				<!-- e: 조회 내역이 없는 경우 -->
+
+        <!-- s: 꼭 알아두세요 -->
+        {{#> cp/notice dp-active=true }}
+        <ul class="list_depth">
+          <li>이용대상
+            <ul>
+              <li>다이렉트 일반보험 인터넷 가입 계약자</li>
+            </ul>
+          </li>
+          <li>이용조건
+            <ul>
+              <li>보험시작일 이전(보험개시전) 계약</li>
+            </ul>
+          </li>
+         <li>보험 계약취소는 보험개시 전날 24:00까지 가능합니다.</li>
+         <li>보험개시 전날 24:00 이후 해지하려면 다이렉트 고객센터(1899-6782, 평일 09:00~18:00)로 문의해 주세요.</li>
+         <li>계약취소 신청 즉시 보험효력이 상실되어 보험사고에 대한 보상이 불가능하니 유의해 주세요.</li>
+         <li>계약취소 시 카드결제는 취소일로부터 3~4일 이내 카드사 매출 취소가 진행되고, 즉시이체는 취소일로부터 2일 안에 출금계좌로 환불됩니다.</li>
+         <li>환불기간은 다소 달라질 수 있는 점 참고해 주세요.</li>
+        </ul>
+        {{/ cp/notice }}
+        <!-- e: 꼭 알아두세요 -->
+			</div>
+    </div>
+    <!-- // container -->
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	<!-- e: popup area -->
+
+{{/ layout/default }}
