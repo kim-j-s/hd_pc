@@ -52,14 +52,21 @@ $(function() {  // DOM이 준비되었을 때 실행
 
     if (st > lastScrollTop) {
       // 아래로 스크롤
-      $('body').removeClass('up').addClass('down');
+      $('body').removeClass('sc_up').addClass('sc_down');
     } else if (st < lastScrollTop) {
       // 위로 스크롤
-      $('body').removeClass('down').addClass('up');
+      $('body').removeClass('sc_down').addClass('sc_up');
     }
 
     lastScrollTop = st;
   });
+
+	// 고양이/강아지 변환 
+	$DOM.on('click', '.change_mode .cm_btn', function(e) {
+		$(this).closest('.change_mode').find('.cm_btn').removeClass('active');
+		$(this).addClass('active');
+	});
+	
 	
 });
 

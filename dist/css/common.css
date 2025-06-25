@@ -1353,6 +1353,72 @@ strong {
 	color: var(--color-text-basic-inverse);
 	background: url(../images/header/bg_header_chatbot.png) no-repeat left center;
 }
+.change_mode {
+	position: relative;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+.change_mode::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--radius-medium2);
+	border: 1px solid var(--color-border-danger);
+	background-color: var(--color-element-primary-dark);
+}
+.change_mode > .item {
+	position: relative;
+	width: 11.7rem;
+}
+.change_mode > .item .cm_btn {
+	display: block;
+	width: 100%;
+	text-align: center;
+	border-radius: var(--radius-medium1);
+	background-color: transparent;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.change_mode > .item .cm_btn > .text {
+	display: inline-block;
+	padding-left: 4rem;
+	font-size: var(--font-size-button-medium);
+	color: var(--color-text-inverse-static);
+	line-height: 4rem;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 3.2rem auto;
+}
+.change_mode > .item .cm_btn.cm_btn_dog > .text {
+	background-image: url(../images/header/mode_dog_off.png);
+}
+.change_mode > .item .cm_btn.cm_btn_dog.active > .text {
+	background-image: url(../images/header/mode_dog_on.png);
+}
+.change_mode > .item .cm_btn.cm_btn_cat > .text {
+	background-image: url(../images/header/mode_cat_off.png);
+}
+.change_mode > .item .cm_btn.cm_btn_cat.active > .text {
+	background-image: url(../images/header/mode_cat_on.png);
+}
+.change_mode > .item .cm_btn.active {
+	background-color: var(--color-button-secondary-fill);
+}
+.change_mode > .item .cm_btn.active > .text {
+	font-weight: 700;
+	color: var(--color-text-primary-bold);
+}
+.change_mode > .item .cm_btn.active > .text::after {
+	content: "현재 선택됨";
+	position: absolute;
+	font-size: 0;
+}
+/* 스크를 이벤트 관련 css */
+/* 스크를 이벤트 관련 css */
 /* navigation */
 .hpi_gnb {
 	display: -webkit-inline-box;
