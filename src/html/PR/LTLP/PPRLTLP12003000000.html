@@ -1,464 +1,330 @@
 {{#> layout/default page-title="보험료계산결과 | 상품"}}
-
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험료확인" }}
+	{{> layout/header_pc h-prd="굿앤굿우리펫보험" petmode=true }}
 	<div id="container" class="container">
 		<div class="content">
-			<div class="guarantee_container">
-				<!-- s: guarantee_container_left -->
-				<div class="guarantee_container_left">
-					<!-- s: live 처리 위치 -->
-					<div class="guarantee_top" aria-live="polite">
-						<!-- s: 25-06-05 수정 -->
-						<div class="guarantee_top_item active">
-							
-							<h2 class="title_h2">
-								우리 아이를 위한 펫보험
-								<br>
-								<strong>어디까지 보장</strong>받고 싶으세요?
-							</h2>
-						</div>
-						<div class="guarantee_top_item">
-							
-							<h2 class="title_h2">
-								<strong>월 39,520원</strong>을 선택하시겠어요?
-							</h2>
-						</div>
-						<div class="guarantee_top_item">
-							
-							<h2 class="title_h2">
-								<strong>월 28,050원</strong>을 선택하시겠어요?
-							</h2>
-						</div>
-						<!-- e: 25-06-05 수정 -->
-					</div>
-					<!-- e: live 처리 위치 -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						우리 아이를 위한 펫보험,<br>
+						<strong>어디까지 보장</strong>을 받아야 할까요?
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
 
-					<div class="guarantee_visuval">
-						<img src="../../../images/content/gipt/img_MPRGIPT30005000000_dog.svg" alt="배경이미지" aria-hidden="true">
-					</div>
-
-					<div class="guarantee_list_wrap">
-						<div class="guarantee_choice_wrap">
-							<div class="guarantee_item" data-sendclass="01">
-								<div class="gi_radio">
-									<input type="radio" name="guarantee_item" id="gi_radio01" aria-labelledby="guarantee_item_top_01">
-									<label for="gi_radio01"></label>
-								</div>
-								<div class="guarantee_item_ev">
-									<div class="guarantee_item_top" id="guarantee_item_top_01">
-										<div class="git_l">
-											<span class="hd_badge class_type class_type01"><span class="text">고급</span></span>
-										</div>
-										<div class="git_r">
-											빈틈 없는 보장을 원한다면
-											<!-- s: 25-05-30 추가 -->
-											<p class="title_sub">아프거나 다쳤을 때는 물론 특정질병까지 더 넓게 보장해드려요.</p>
-											<!-- e: 25-05-30 추가 -->
-
-											<!-- s: 25-06-05 수정 -->
-											
-											<span class="git_r_sub">월 <span class="git_r_sub_point">39,520</span>원</span>
-											<!-- e: 25-06-05 수정 -->
-										</div>
-									</div>
-									<div class="guarantee_item_cont">
-										<div class="gic_inner_top">
-											<div class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_primary size_m">고급</span>
-											</div>
-											<span class="text">14개 보장</span>
-										</div>	
-										<div class="gic_inner">
-											<div class="gic gic_01">
-												<strong class="tit">빈틈 없는 보장을 원한다면</strong>
-												<p class="desc">아프거나 다쳤을 때는 물론<br>특정질병까지 더 넓게 보장해드려요.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								{{> cp/linkButton bl_class="short_cut sm move_detail" bl_text="보장내용 자세히 보기" bl_title="슬라이드 이동" }}
-							</div>
-
-							<div class="guarantee_item" data-sendclass="02">
-								<div class="gi_radio">
-									<input type="radio" name="guarantee_item" id="gi_radio02" aria-labelledby="guarantee_item_top_02">
-									<label for="gi_radio02"></label>
-								</div>
-								<div class="guarantee_item_ev">
-									<div class="guarantee_item_top" id="guarantee_item_top_02">
-										<div class="git_l">
-											<span class="hd_badge class_type class_type02"><span class="text">표준</span></span>
-										</div>
-										<div class="git_r">
-											든든한 보장을 원한다면
-											<!-- s: 25-05-30 추가 -->
-											<p class="title_sub">아프거나 다쳤을 때는 물론 특정질병까지 더 넓게 보장해드려요.</p>
-											<!-- e: 25-05-30 추가 -->
-
-											<!-- s: 25-06-05 수정 -->
-											
-											<span class="git_r_sub">월 <span class="git_r_sub_point">28,050</span>원</span>
-											<!-- e: 25-06-05 수정 -->
-										</div>
-									</div>
-									<div class="guarantee_item_cont">
-										<div class="gic_inner_top">
-											<div class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_secondary size_m">표준</span>
-											</div>
-											<span class="text">7개 보장</span>
-										</div>	
-										<div class="gic_inner">
-											<div class="gic gic_02">
-												<strong class="tit">든든한 보장을 원한다면</strong>
-												<p class="desc">아프거나 다쳤을 때는 물론<br>특정질병까지 더 넓게 보장해드려요.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								{{> cp/linkButton bl_class="short_cut sm move_detail" bl_text="보장내용 자세히 보기" bl_title="슬라이드 이동" }}
-							</div>							
-						</div>
+			<div class="guarantee_select_wrap">
+				<div class="select_item t2">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty02">
+						<label for="g_item_ty02">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type02">
+									<span class="text">표준 <em>14개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">든든한 보장을 원한다면</span>
+								<em class="top_info">
+									<span class="price"><strong>28,050</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								탄탄한 보장으로 걱정없이 충분해요
+							</span>
+						</label>
 					</div>
 				</div>
-				<!-- e: guarantee_container_left -->
-
-				<!-- s: guarantee_container_right -->
-				<div class="guarantee_container_right">
-					<!-- s: guarantee_detail -->
-					<div class="guarantee_detail ty2">
-						<div class="guarantee_detail_top">
-							<div class="splide_wrap splide_wrap_ty1" id="splide_wrap_ty1">
-								<div class="splide" role="group">
-									<div class="splide__track">
-										<ul class="splide__list">											
-
-											<!-- s: 표준 -->
-											<li class="splide__slide c2" tabindex="0" data-getclass="02">
-												<div class="gd_item">
-													<div class="rdo_box">
-														<input type="radio" name="d_r" id="d_r_02" aria-labelledby="d_rdo_02">
-														<label for="d_r_02"></label>
-													</div>
-													<div class="gdi_content" aria-labelledby="d_rdo_02">
-														<div class="badge_wrap hasText">
-															<span class="hd_badge outline solid_pastel c_secondary size_m"><strong>표준</strong> <span class="pipe_line">7개 보장</span></span>
-															<span class="desc">5살 그레이트하운드(남아)</span>
-														</div>
-														<p class="head_text">
-															든든한 보장을 원한다면
-															<!-- s: 25-06-05 수정 -->
-															
-															<span class="price">
-																<strong class="price_num">28,050</strong><span class="won">원</span>
-															</span>
-															<!-- e: 25-06-05 수정 -->
-														</p>
-														<ul class="gdi_content_list">
-															<li class="ico_add ico_add_ty3">
-																<div class="item">
-																	{{#> cp/linkButton bl_class="add_text_btn" pop_id="ex_popup_bottom" question_tit="할인 안내 팝업열기" }}
-																		<!-- <div class="txt">동물등록 <strong class="point">5%</strong>, 유기동물입양 <strong class="point">3%</strong>, 다펫가입 <strong class="point">5%</strong><br />최대 13% 할인받을 수 있어요</div> -->
-																		<!-- s: 25-06-05 수정 -->
-																		
-																		<div class="txt">동물등록 <strong class="point">5%</strong>+유기동물입양 <strong class="point">3%</strong>로 <strong class="point">8%</strong> 할인받았어요.</div>
-																		<!-- e: 25-06-05 수정 -->
-																		{{/ cp/linkButton}}
-																</div>
-															</li>															
-														</ul>
-													</div>
-												</div>
-											</li>
-											<!-- e: 표준 -->
-
-											<!-- s: 고급 -->
-											<li class="splide__slide c3" tabindex="0" data-getclass="01">
-												<div class="gd_item">
-													<div class="rdo_box">
-														<input type="radio" name="d_r" id="d_r_03" aria-labelledby="d_rdo_03">
-														<label for="d_r_03"></label>
-													</div>
-													<div class="gdi_content" aria-labelledby="d_rdo_03">
-														<div class="badge_wrap hasText">
-															<span class="hd_badge outline solid_pastel c_primary size_m"><strong>고급</strong> <span class="pipe_line">14개 보장</span></span>
-															<span class="desc">5살 그레이트하운드(남아)</span>
-														</div>
-														<p class="head_text">
-															빈틈 없는 보장을 원한다면
-															<!-- s: 25-06-05 수정 -->
-															
-															<span class="price">
-																<strong class="price_num">39,520</strong><span class="won">원</span>
-															</span>
-															<!-- e: 25-06-05 수정 -->
-														</p>
-														<ul class="gdi_content_list">
-															<li class="ico_add ico_add_ty3">
-																<div class="item">
-																	{{#> cp/linkButton bl_class="add_text_btn" pop_id="ex_popup_bottom" question_tit="할인 안내 팝업열기" }}
-																		<!-- s: 25-05-19 수정 -->	
-																		<!-- s: 25-06-05 수정 -->
-																		
-																	 	<div class="txt">동물등록 <strong class="point">5%</strong>, 유기동물입양 <strong class="point">3%</strong>, 다펫가입 <strong class="point">5%</strong> <strong class="point">최대 13%</strong> 할인받을 수 있어요</div>
-																		<!-- e: 25-06-05 수정 -->
-																		<!-- e: 25-05-19 수정 -->	
-																	 <!-- <div class="txt">동물등록 <strong class="point">5%</strong>+유기동물입양 <strong class="point">3%</strong>로 <strong class="point">8%</strong> 할인받았어요.</div> -->
-																	{{/ cp/linkButton}}
-																</div>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</li>
-											<!-- e: 고급 -->
-										</ul>
-									</div>
-									<div class="splide_arrows">
-										<button type="button" class="swiper_button sbc_02 sbs_02 swiper_button_left" aria-label="이전 플랜 보기"></button>
-										<button type="button" class="swiper_button sbc_02 sbs_02 swiper_button_right" aria-label="다음 플랜 보기"></button>
-									</div>
-								</div>
-							</div>
-
-							<div class="guarantee_detail_mini">
-								<div class="item_wrap">
-									<span class="i_data">
-										<span class="text">갱신주기</span>
-										<strong class="data">3년</strong>
-									</span>
-									<span class="i_data">
-										<span class="text">납입기간</span>
-										<strong class="data">15년</strong>
-									</span>
-									<span class="i_data">
-										<span class="text">보상비율</span>
-										<strong class="data">70%</strong>
-									</span>
-									<span class="i_data">
-										<span class="text">자기부담금</span>
-										<strong class="data">3만원</strong>
-									</span>
-								</div>
-								
-								<div class="modify_ba">
-									{{> cp/button type="3" size="5" b-text="변경" btn-title="가입조건 변경 팝업열기"}}
-								</div>
-							</div>
-						</div>
-
-						<!-- 간편정보 -->
-						<div class="simple_info_wrap">
-							<div class="simple_info_item">
-								<ul class="sii_list">
-									<li>
-										<span class="sii_list_l">보험료</span>
-										<span class="sii_list_r">
-											<strong class="price">28,050원</strong>
-										</span>
-									</li>
-									<li>
-										<span class="sii_list_l">
-											<!-- s: 25-05-19 수정 -->
-											<span class="text">
-												보장 <strong class="bold">11개</strong>
-											</span>
-											<!-- e: 25-05-19 수정 -->
-										</span>
-										<span class="sii_list_r">
-											<span class="text">
-												보험/납입기간 <strong class="bold">15년</strong>
-											</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- 간편정보 -->
-
-
-						<div class="gd_middle_ba btn_area ty2">
-							{{> cp/button type="3" size="3" b-text="모든 플랜 확인" btn-title="플랜비교 팝업 열기"}}
-							{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기" btn-title="계산내역 발송 팝업열기"}}
-							{{> cp/linkButton bl_class="short_cut short_cut_icon short_cut_icon_ty2" bl_text="반려동물 의료비 한도: 1년 만기 후 재가입" btn-title="반려동물 의료비 한도 안내 팝업 열기"}}
-						</div>
-
-						<div class="acc_group">
-							<div class="space_list_ty2">
-								<div class="acd_item acd_item_ty2">
-									{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
-									<div role="button" tabindex="0" class="detail_list_btn">반려견입원의료비II(갱신형)담보</div>
-									<div role="button" tabindex="0" class="detail_list_btn">반려견통원의료비II(갱신형)담보</div>
-									{{/ cp/accordion }}
-								</div>
-
-								<div class="acd_item acd_item_ty2">
-									{{#> cp/accordion ac-title="반려동물이 아프거나 다쳤을 때" cont-class="" ac-active=true }}
-									<ul class="coverage_item_list">
-										<li class="list">
-											{{> cp/checkbox labelname="반려견입원의료비확장보장(치과및구강질환)(갱신형)담보" ag_more2=true id="checkbox01-1" }}
-										</li>
-										<li class="list">
-											{{> cp/checkbox labelname="반려견통원의료비확장보장(치과및구강질환)(갱신형)담보" ag_more2=true id="checkbox01-2" }}
-										</li>
-										<li class="list">
-											<!-- s: 25-05-19 수정 -->
-											{{#> cp/checkbox labelname="반려견입원의료비확장보장(슬관절,고관절 탈구)(갱신형)담보" ag_more2=true id="checkbox01-3" }}
-											<!-- e: 25-05-19 수정 -->
-											<div class="chk_lby2">
-												<div class="badge_wrap">
-													<span class="hd_badge outline solid_pastel c_secondary size_m">새로 나왔어요</span>
-												</div>
-											</div>
-											{{/ cp/checkbox }}
-										</li>
-										<li class="list">
-											<!-- s: 25-05-19 수정 -->
-											{{> cp/checkbox labelname="반려견통원의료비확장보장(슬관절,고관절 탈구)(갱신형)담보" ag_more2=true id="checkbox01-4" }}											
-											<!-- e: 25-05-19 수정 -->
-										</li>
-									</ul>
-									{{/ cp/accordion }}
-								</div>
-
-								<div class="acd_item acd_item_ty1">
-									{{#> cp/accordion ac-active=true ac-title="상세보기" aci="checkbox02" aclc="chk_label_ty2" acl="검사부터 처치까지 빈틈 없이"}}
-										<ul class="coverage_item_list">											
-											<li class="list">
-												{{#> cp/checkbox labelname="반려견의료비확장보장(MRI/CT)(연간1회한)(갱신형)담보" id="checkbox02-1" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="15만원" size="1" bl_class="price_btn" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>
-											<li class="list">
-												{{#> cp/checkbox labelname="반려견의료비확장보장(특정처치(이물제거))(연간2회한)(갱신형)담보" id="checkbox02-2" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="200만원" size="1" bl_class="price_btn" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>
-											<li class="list">
-												{{#> cp/checkbox labelname="반려견의료비확장보장(특정약물치료)(연간6회한)(갱신형)담보" id="checkbox02-3" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="10만원" size="1" bl_class="price_btn" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>									
-										</ul>
-									{{/ cp/accordion }}
-								</div>
-
-								<div class="acd_item acd_item_ty2">
-									{{#> cp/accordion ac-title="피해 보상 또는 반려동물이 사망했을 때" cont-class="" ac-active=true }}
-										<ul class="coverage_item_list">
-											<li class="list">
-												{{#> cp/checkbox labelname="반려견사망위로금(갱신형)담보" id="checkbox03-1" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="15만원" size="1" bl_class="price_btn" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>
-											<li class="list">
-												{{#> cp/checkbox labelname="반려견배상책임II(갱신형)담보" id="checkbox03-2" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="1,000만원" size="1" bl_class="price_btn" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>										
-										</ul>
-									{{/ cp/accordion }}
-								</div>
-							
-								<div class="acd_item acd_item_ty2">
-									{{#> cp/accordion ac-title="보호자를 위한 보장" cont-class="" ac-active=true }}
-										<ul class="coverage_item_list">
-											<li class="list">
-												<div class="item_title">기본계약(상해후유장해(80%이상))담보</div>
-													<div class="sub_txt_area">
-													{{> cp/linkButton bl_class="price_btn" bl_text="1,000만원" question_tit="담보안내 팝업열기" }}
-													</div>
-											</li>
-											<li class="list">
-												{{#> cp/checkbox labelname="반려동물돌봄비(상해입원일당(1-10일))담보" id="checkbox04-1" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="미가입" size="1" bl_class="price_btn_non" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>		
-											<li class="list">
-												{{#> cp/checkbox labelname="응급실내원진료비(응급)담보" id="checkbox04-2" }}
-													<div class="chk_lby2">
-														{{> cp/linkButton bl_text="미가입" size="1" bl_class="price_btn_non" question_tit="담보안내 팝업열기"}}
-													</div>
-												{{/ cp/checkbox }}
-											</li>
-										</ul>
-									{{/ cp/accordion }}
-								</div>
-
-							</div>
-						</div>
-
-						<!-- s: 꼭 알아두세요 -->
-						{{#> cp/notice dp-active="active" }}
-						<ul class="list_depth">
-							<li>반려동물의 가입나이, 건강상태, 과거병력 등에 따라 보험가입금액이 제한되거나 가입이 불가능할 수 있습니다.</li>
-							<li>
-								의료비 담보 보장내용 변경 주기는 1년입니다.(1년 만기 후 재가입 필요) 최초 가입 후 1년(재가입 주기)마다 재가입을 통해 반려동물의 재가입 가능 연령(만19세 이내)까지 보장받을 수 있습니다.
-							</li>
-							<li>반려견 입/통원의료비 담보는 보험(납입)기간 내에서 갱신을 통해 만 20세까지 보장됩니다.</li>
-							<li>반려견사망위로금 담보는 보험(납입)기간 내에서 갱신을 통해 만 12세까지 보장됩니다.</li>
-							<li>
-								면책사항
-								<ul>
-									<li>
-										가입 후 30일 면책(질병)
-										<ul>									
-											<li>반려견입/통원의료비Ⅱ</li>
-											<li>반려견입/통원의료비확장보장(치과 및 구강질환)</li>
-											<li>반려견의료비확장보장(MRI/CT)(연간1회한)</li>
-										</ul>
-									</li>
-									<li>
-										가입 후 90일 면책(질병)
-										<ul>									
-											<li>반려견의료비확장보장(특정약물치료)(연간6회한)</li>
-										</ul>
-									</li>
-									<li>
-										가입 후 30일 면책
-										<ul>									
-											<li>반려견사망위로금</li>
-										</ul>
-									</li>
-									<li>
-										가입 후 1년 면책
-										<ul>									
-											<li>반려견입/통원의료비확장보장(슬관절, 고관절 탈구)</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>						
-						{{/ cp/notice }}
-						<!-- e: 꼭 알아두세요 -->
+				<div class="select_item t1">
+					<div class="item_radio">
+						<input type="radio" name="g_item" id="g_item_ty03">
+						<label for="g_item_ty03">
+							<span class="badge_wrap">
+								<span class="hd_badge class_type class_type01">
+									<span class="text">고급 <em>14개 보장</em></span>
+								</span>
+							</span>
+							<span class="item_top">
+								<span class="top_title">빈틈 없는 보장을 원한다면</span>
+								<em class="top_info">
+									<span class="price"><strong>7,200</strong> 원</span>
+								</em>
+							</span>
+							<span class="item_desc">
+								마음까지 편안하게	더 많이 보장받아요
+							</span>
+						</label>
 					</div>
-					<!-- e: guarantee_detail -->
-				 </div>
-				<!-- e: guarantee_container_right -->
-
+				</div>
 			</div>
-		</div>
-	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
-			<!-- {{> cp/button type="1" size="1" b-text="이대로 가입하기" }} -->
+			<div class="dc_info_box ty2">
+				<ul class="dc_list">
+					<li>
+						<span class="dc_l">동물등록 <strong class="point">5%</strong></span>
+					</li>
+					<li>
+						<span class="dc_l">유기동물입양 <strong class="point">3%</strong></span>
+					</li>
+					<li>
+						<span class="dc_l">다펫가입 <strong class="point">5% 최대13%</strong> 할인</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="guarantee_info"> 
+				<div class="item_right">
+					<ul class="list_ty4">
+						<li>
+							<span class="text">갱신주기</span>
+							<strong class="data">3년</strong>
+						</li>
+						<li>
+							<span class="text">납입기간</span>
+							<strong class="data">15년</strong>
+						</li>
+						<li>
+							<span class="text">보상비율</span>
+							<strong class="data">70%</strong>
+						</li>
+						<li>
+							<span class="text">자기부담금</span>
+							<strong class="data">3만원</strong>
+						</li>
+					</ul>
+					{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+				</div>
+			</div>
+
+			<div class="guarantee_btn_area">
+				{{> cp/linkButton bl_class="short_cut short_cut_icon short_cut_icon_ty2" bl_text="반려동물 의료비 한도: <strong>1년 만기 후 재가입</strong>" btn-title="반려동물 의료비 한도 안내 팝업 열기"}}
+			</div>
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="acc_group">
+				<div class="space_list_ty2">
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="반려견입원의료비II(갱신형)담보" }}
+									</div>									
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="반려견통원의료비II(갱신형)담보" }}
+									</div>									
+								</div>
+							</li>
+						</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="반려동물이 아프거나 다쳤을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-1" sct="반려견입원의료비확장보장(치과및구강질환)(갱신형)담보"}}
+										</div>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-2" sct="반려견통원의료비확장보장(치과및구강질환)(갱신형)담보"}}
+										</div>
+									</div>
+								</li>			
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-3" sct="반려견입원의료비확장보장(슬관절,고관절 탈구)(갱신형)담보"}}
+										</div>
+									</div>
+								</li>			
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-4" sct="반려견통원의료비확장보장(슬관절,고관절 탈구)(갱신형)담보 "}}
+										</div>
+									</div>
+								</li>								
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty1">
+						{{#> cp/accordion ac-active=true ac-title="상세보기" aci="checkbox02" aclc="chk_label_ty2" acl="검사부터 처치까지 빈틈 없이"}}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs sct="반려견의료비확장보장(MRI/CT)(연간1회한)(갱신형)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">100만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs sct="반려견의료비확장보장(특정처치(이물제거))(연간2회한)(갱신형)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">200만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs sct="반려견의료비확장보장(특정약물치료)(연간6회한)(갱신형)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">10만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="피해 보상 또는 반려동물이 사망했을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-1" sct="반려견사망위로금(갱신형)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">15만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-2" sct="반려견배상책임II(갱신형)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1,000만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="보호자를 위한 보장" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs sct="기본계약(상해후유장해(80%이상))담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">1,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-1" sct="반려동물돌봄비(상해입원일당(1-10일))담보 " }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span>미가입</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-2" sct="응급실내원진료비(응급)담보" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span>미가입</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+				</div>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active="active" }}
+			<ul class="list_depth">
+				<li>반려동물의 가입나이, 건강상태, 과거병력 등에 따라 보험가입금액이 제한되거나 가입이 불가능할 수 있습니다.</li>
+				<li>
+					의료비 담보 보장내용 변경 주기는 1년입니다.(1년 만기 후 재가입 필요) 최초 가입 후 1년(재가입 주기)마다 재가입을 통해 반려동물의 재가입 가능 연령(만19세 이내)까지 보장받을 수 있습니다.
+				</li>
+				<li>반려견 입/통원의료비 담보는 보험(납입)기간 내에서 갱신을 통해 만 20세까지 보장됩니다.</li>
+				<li>반려견사망위로금 담보는 보험(납입)기간 내에서 갱신을 통해 만 12세까지 보장됩니다.</li>
+				<li>
+					면책사항
+					<ul>
+						<li>
+							가입 후 30일 면책(질병)
+							<ul>									
+								<li>반려견입/통원의료비Ⅱ</li>
+								<li>반려견입/통원의료비확장보장(치과 및 구강질환)</li>
+								<li>반려견의료비확장보장(MRI/CT)(연간1회한)</li>
+							</ul>
+						</li>
+						<li>
+							가입 후 90일 면책(질병)
+							<ul>									
+								<li>반려견의료비확장보장(특정약물치료)(연간6회한)</li>
+							</ul>
+						</li>
+						<li>
+							가입 후 30일 면책
+							<ul>									
+								<li>반려견사망위로금</li>
+							</ul>
+						</li>
+						<li>
+							가입 후 1년 면책
+							<ul>									
+								<li>반려견입/통원의료비확장보장(슬관절, 고관절 탈구)</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>						
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
 		</div>
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_굿앤굿우리펫보험 panel-title="반려동물 정보" panel-title2="피보험자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
+
 	</div>
 </div>
 
@@ -466,134 +332,7 @@
 
 <!-- e: popup area -->
 
-<script>
-	$(function () {
 
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-		$('.guarantee_choice_wrap .guarantee_item .gi_radio input[type="radio"]').on('change', function() {
-			const idx = $(this).closest('.guarantee_item').index();
-			// console.log(idx)
-			const $selectedItem = $(this).closest('.guarantee_item');
-			$(this).closest('.guarantee_choice_wrap').addClass('active');
-			$(this).closest('.guarantee_choice_wrap').find('.guarantee_item').removeClass('active');
-			$(this).closest('.guarantee_item').addClass('active');
-
-			// 모든 항목 초기화: 컨텐츠 닫고 타이틀 열기
-			$('.guarantee_choice_wrap .guarantee_item').each(function() {
-				$(this).find('.guarantee_item_cont').stop(true, true).slideUp(300);
-				$(this).find('.guarantee_item_top').stop(true, true).slideDown(300);
-			});
-
-			// 선택된 항목만: 컨텐츠 열고 타이틀 닫기
-			$selectedItem.find('.guarantee_item_cont').stop(true, true).slideDown(300);
-			$selectedItem.find('.guarantee_item_top').stop(true, true).slideUp(300);
-
-			// 고급 선택 시
-			if( idx === 0 && $('.gtl_special').length ) {
-				$('.gtl_special').addClass('active');
-			} else {
-				$('.gtl_special').removeClass('active');
-			}
-
-			// head 문구 변경
-			$('.guarantee_top_item').eq(idx + 1).addClass('active').siblings('.guarantee_top_item').removeClass('active');
-
-			// 비쥬얼 영역 변경			
-			$('.guarantee_visuval').stop(true, true).slideUp(300);
-
-			// 추가된 부분
-			const selectedClass = $(this).closest('.guarantee_item').data('sendclass'); // 선택된 항목의 data-sendclass 값
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-		});
-		// 보험 플랜 - 진입화면 라디오 선택 이벤트
-
-		// Splide 설정
-		var splide = new Splide('#splide_wrap_ty1 .splide', {
-			speed: 500,
-			accessibility: true,
-			arrows: false, // 기본 화살표 비활성화
-			focusableNodes: 'a, button, input, textarea, select, li',
-		}).mount();
-
-		splide.on('moved', function () {
-			const $slides = $('.splide__slide');
-			const $activeSlide = $slides.filter('.is-active');
-			const $radio = $activeSlide.find('input[type="radio"]');
-
-			// 모든 슬라이드 tabindex 제거
-			$slides.removeAttr('tabindex');
-
-			// 활성화된 슬라이드에 radio 체크 및 focus 처리
-			if ($radio.length) {
-				$radio.prop('checked', true).trigger('change');
-			}
-
-			// 접근성: 현재 슬라이드에 포커스
-			$activeSlide.attr('tabindex', '0').focus();
-
-			// 버튼 상태 갱신
-			updateArrowState();
-		});
-
-		// 슬라이드 효과를 주기 위함
-		splide.on('move', function (newIndex) {
-			const $slides = $('.splide__slide');
-			$slides.removeClass('effect');
-
-			const $nextSlide = $slides.eq(newIndex);
-			$nextSlide.addClass('effect');
-		});
-
-		// 커스텀 좌우 버튼 클릭 시 이동
-		$('#splide_wrap_ty1 .swiper_button_left').on('click', () => splide.go('<'));
-		$('#splide_wrap_ty1 .swiper_button_right').on('click', () => splide.go('>'));
-
-		// 버튼 상태 업데이트 함수
-		function updateArrowState() {
-			const curr = splide.index;
-			const max = splide.length - 1;
-
-			$('#splide_wrap_ty1 .swiper_button_left').prop('disabled', curr === 0);
-			$('#splide_wrap_ty1 .swiper_button_right').prop('disabled', curr === max);
-		}
-
-		// 초기 로드 시 상태 설정
-		updateArrowState();	
-
-		// 보험 플랜 - 우측 이동
-		$('.move_detail').on('click', function () {
-			const selectedClass = $('.guarantee_choice_wrap .guarantee_item input[type="radio"]:checked').closest('.guarantee_item').data('sendclass');
-			console.log('선택된 항목의 data-sendclass:', selectedClass);
-			const targetSlide = $('.splide__slide[data-getclass="' + selectedClass + '"]');
-
-			if (targetSlide.length) {
-				const targetIndex = targetSlide.index();  // 슬라이드의 인덱스를 구합니다.
-				// console.log('목표 슬라이드 인덱스:', targetIndex);
-				$('.guarantee_container').addClass('active');
-
-				setTimeout(function() {
-					$('.splide__list').find('.splide__slide').eq(targetIndex).addClass('effect').find('input[type="radio"]').prop('checked', true);;
-					splide.go(targetIndex);
-					$('.container').scrollTop(0);
-					setTimeout(function(){
-						$('.splide__list').find('.splide__slide').eq(targetIndex).attr('tabindex', '0').focus();
-						$('.guarantee_container').css('position', 'static');
-						$('.guarantee_container_left').attr('aria-hidden', true);
-						$('.guarantee_container_right').css('position', 'static');
-					}, 100)
-				}, 500);
-			}
-		});
-		// 보험 플랜 - 우측 이동
-
-		// 25-05-19 수정
-		window.addEventListener('resize', function () {
-			splide.refresh(); // 슬라이드 다시 계산
-		});
-		// 25-05-19 수정
-		
-	});
-</script>
 
 
 {{/ layout/default }}
