@@ -1,0 +1,96 @@
+{{#> layout/default page-title="변경정보 확인 | 마이페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc h-title="변경정보 확인" bc=true}}
+
+		<div id="container" class="container">
+			<div class="content">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>단기운전자 확대특약 변경(법인)</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>변경/취소</strong>할 내용이 맞는지 확인해주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
+
+				<h3 class="title_h3">변경/취소내용</h3>
+				<div class="table_wrap">
+					<table class="table">
+						<caption>자동차번호, 시작일시, 종료일시, 변경일수 제공</caption>
+						<colgroup>
+							<col style="width:160px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">자동차번호</th>
+								<td>18루**22</td>
+							</tr>
+							<tr>
+								<th scope="row">시작일시</th>
+								<td>2024.08.21 00시</td>
+							</tr>
+							<tr>
+								<th scope="row">종료일시</th>
+								<td>2024.08.23 24시</td>
+							</tr>
+							<tr>
+								<th scope="row">변경일수</th>
+								<td>9일</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="title_h3">보험료</h3>
+				<div class="table_wrap">
+					<table class="table">
+						<caption>환급 보험료 제공</caption>
+						<colgroup>
+							<col style="width:160px;">
+							<col style="width:auto;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">환급 보험료</th>
+								<td>
+									<strong class="point">-15,000원</strong>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="space_list_ty2">
+					{{> cp/checkbox checkbox_class="rd_box" id="checkbox01-1" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 단기운전자 확대특약의 변경/취소내용과 보험료를 확인했습니다."}}
+				</div>
+
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전"}}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true}}
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
+			</div>
+		</div>
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	 
+	<!-- s: 자동차 배서 메뉴 -->
+	{{> pages/pop1 }}
+	<!-- e: 자동차 배서 메뉴 -->
+	<!-- e: popup area -->
+
+{{/ layout/default }}
