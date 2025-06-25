@@ -170,6 +170,10 @@
 	// 보험료결제
 	&.payment {
 		background-color: var(--color-surface-primary-subtler);
+
+		& + .form_box {
+			margin-top: var(--gap-8);
+		}
 	}
 }
 
