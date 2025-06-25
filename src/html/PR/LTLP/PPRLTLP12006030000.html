@@ -19,6 +19,7 @@
 					<div>동물등록증(카드형 또는 출력형) 사진</div>
 					{{> cp/linkButton bl_class="short_cut sm" bl_text="예시" role_b=true question_tit="동물등록증 예시" }}
 				</div>
+
 				<div class="file_upload_wrap">
 					<!-- s: 이미지 파일 붙는 영역 -->
 					<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
@@ -28,8 +29,6 @@
 							<!-- <img src="../../../images/content/gipt/img_animal_certificate_card_before_cat.png" alt="고양이 동물등록증 예시 이미지"> -->
 						</div>
 					</div>
-					
-					<!-- s: 25-06-18 수정 -->
 					<!-- 
 						등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
 						등록 후 이미지일 시, active 클래스 추가
@@ -37,15 +36,16 @@
 					-->
 					<!-- <div class="file_attach_box active">
 						<div class="file_thumbnail">
-							<img src="../../../images/temp/img_carmera_temp.png" alt="동물등록증 이미지">
+						<img src="../../../images/temp/img_carmera_temp.png" alt="동물등록증 이미지">
 						</div>
+						<button type="button" class="btn_file_delete">
+							<span>등록한 이미지 삭제하기</span>
+						</button>
 					</div> -->
 					<!-- e: 이미지 파일 붙는 영역 -->
-					<!-- e: 25-06-18 수정 -->
 
 					<ul class="list_ty2">
 						<!-- s: 25-06-05 수정 -->
-						
 						<li>동물등록된 반려동물의 경우 <strong>동물등록증에 적힌 소유자와 계약자가 같은 경우에 할인</strong>을 받을 수 있어요.</li>
 						<!-- e: 25-06-05 수정 -->
 						<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요.</li>
@@ -57,9 +57,9 @@
 						<div class="file_btn">
 							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 							<label for="file">
-								<span class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+								<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
 									<i class="hd_icon carmeraSvg"></i>
-									사진 등록
+									사진 등록하기
 								</span>
 							</label>
 						</div>
@@ -67,9 +67,9 @@
 						<!-- <div class="file_btn">
 							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 							<label for="file">
-								<span class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
 									<i class="hd_icon carmeraSvg2"></i>
-									사진 변경
+									사진 변경하기
 								</span>
 							</label>
 						</div> -->

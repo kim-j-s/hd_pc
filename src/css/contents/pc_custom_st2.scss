@@ -271,7 +271,8 @@
 			}
 		}
 	
-		& + .banner_box {
+		& + .banner_box,
+		& + .file_attach_box {
 			margin-top: var(--gap-8);
 	}
 
@@ -1106,11 +1107,20 @@
 
 
 .opt_select_list {
-	&.opt_case5.grid {
-		li:nth-last-child(-2n+2) > .option{
-			border-bottom: 1px solid var(--color-divider-gray-light);
+	&.opt_case5 {
+		&.grid {
+			&	> li {
+				.option {
+					border-top : 0;
+					border-bottom: 1px  solid var(--color-divider-gray-light);
+				}
+	
+				&:nth-of-type(-n+2) { 
+					border-top: 1px  solid var(--color-divider-gray-light);
+				}
+			}
 		}
-	}
+	}//opt_case5
 }
 
 .popup_content_top {
@@ -1212,6 +1222,48 @@
 		padding-top: var(--gap-8);
 		& + .list_ty2 {
 			margin-top: var(--gap-5)
+		}
+	}
+}
+
+// 변경할 가입조건 선택 팝업
+.popup_wrap.full {
+	p.bpop_sub_title {
+		font-size: var(--font-size-body-medium);
+		& + .form_group_wrap {
+			margin-top: 16px;
+		}
+	}
+
+	.form_group_wrap + .title_h4 {
+		margin: 40px 0 16px;
+	}
+}
+
+
+.popup_wrap {
+	&.bottom,
+	&.full {
+		.file_upload_wrap {
+			.file_attach_box {
+				display: block;
+				margin: 0 auto;
+			}
+
+			.file_info_box {
+				& + .file_attach_box {
+					margin-top: var(--gap-5);
+				}
+			}
+		}
+	}
+	
+}
+
+.title_sub {
+	& + .img_area {
+		img {
+			margin:0 auto;
 		}
 	}
 }
