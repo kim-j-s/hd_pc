@@ -1198,6 +1198,17 @@
 }
 
 
+// 변경할 가입조건 선택 팝업
+.popup_wrap.full {
+	.title_h4.space1 {
+		margin-bottom:16px;
+	}
+	.form_group_wrap {
+		& + .title_h4.space1 {
+			margin-top: 40px;
+		}
+	}
+}
 
 
 
