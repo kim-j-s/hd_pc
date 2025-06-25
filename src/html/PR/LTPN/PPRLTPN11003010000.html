@@ -1,19 +1,15 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 
-<!-- s: 25-05-12 수정 -->
-<!-- 25-05-12 수정 : 전체 팝업으로 변경되면서 전체 변경 -->
 {{#> popup/popup_full popup-id="pop_type_full" popup-active=true }}
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
-			<!-- s: 25-05-14 수정 -->
 			<h2 class="title_h2">
 				원하는 보장조건으로
 				<br />
 				<strong>변경</strong>해주세요
 			</h2>
-			<!-- e: 25-05-14 수정 -->
 		</div>
 		<!-- e: popup_content_top -->
 
@@ -28,35 +24,53 @@
 				{{> cp/text type="tel" class="price" r-text="만원" inp-title="금액입력"}}
 			</div>
 
-			<!-- s: 25-05-02 수정 -->
 			<div class="selectitem_wrap row">
 				<div class="form_line grow">
 					<div class="label_tit">납입기간</div>
-					{{> cp/selectitem si_ph="선택해주세요." si_title="납입기간 선택" si_popup="select_pop_01"}}
+					{{#> cp/selectbox_pc s-title="납입기간 선택"}}
+						<option value="" selected>5년</option>
+						<option value="">7년</option>
+						<option value="">10년</option>
+						<option value="">12년</option>
+						<option value="">15년</option>
+						<option value="">20년</option>
+					{{/ cp/selectbox_pc}}
 				</div>
 				<div class="form_line grow">
 					<div class="label_tit">연금받는 기간</div>
-					<!-- s: 25-05-16 수정 -->
-					{{> cp/selectitem si_ph="선택해주세요." si_title="연금받는 기간 선택" si_popup="select_pop_02"}}
-					<!-- e: 25-05-16 수정 -->
+					{{#> cp/selectbox_pc s-title="연금받는 기간 선택"}}
+						<option value="" selected>5년</option>
+						<option value="">6년</option>
+						<option value="">7년</option>
+						<option value="">8년</option>
+						<option value="">9년</option>
+						<option value="">10년</option>
+					{{/ cp/selectbox_pc}}
 				</div>
 			</div>
 
 			<div class="selectitem_wrap row">
 				<div class="form_line grow">
 					<div class="label_tit">연금시작 나이</div>
-					<!-- s: 25-05-16 수정 -->
-					{{> cp/selectitem si_ph="선택해주세요." si_title="연금시작 나이 선택" si_popup="select_pop_03"}}
-					<!-- s: 25-05-16 수정 -->
+					{{#> cp/selectbox_pc s-title="연금시작 나이 선택"}}
+						<option value="" selected>45세</option>
+						<option value="">46세</option>
+						<option value="">47세</option>
+						<option value="">48세</option>
+						<option value="">49세</option>
+						<option value="">50세</option>
+					{{/ cp/selectbox_pc}}
 				</div>
 				<div class="form_line grow">
 					<div class="label_tit">연금받는 주기</div>
-					<!-- s: 25-05-16 수정 -->
-					{{> cp/selectitem si_ph="선택해주세요." si_title="연금받는 주기 선택" si_popup="select_pop_04"}}
-					<!-- e: 25-05-16 수정 -->
+					{{#> cp/selectbox_pc s-title="연금받는 주기 선택"}}
+						<option value="" selected>매월</option>
+						<option value="">3개월</option>
+						<option value="">6개월</option>
+						<option value="">매년</option>
+					{{/ cp/selectbox_pc}}
 				</div>
 			</div>
-			<!-- e: 25-05-02 수정 -->
 		</div>		
 	</div>
 </div>
@@ -66,7 +80,6 @@
 	</div>
 </div>
 {{/ popup/popup_full}}
-<!-- e: 25-05-12 수정 -->
 
 <!-- s: popup area -->
 
@@ -88,9 +101,7 @@
 <!-- e: 납입기간 팝업 -->
 
 <!-- s: 연금받는 기간 팝업 -->
-<!-- s: 25-05-16 수정 -->
 {{#> popup/popup_bottom popup-id="select_pop_02" popup-title="연금받는 기간 선택"}}
-<!-- e: 25-05-16 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
 		<div class="opt_select_list opt_case3">
@@ -107,9 +118,7 @@
 <!-- e: 연금받는 기간 팝업 -->
 
 <!-- s: 연금시작 나이 팝업 -->
-<!-- s: 25-05-16 수정 -->
 {{#> popup/popup_bottom popup-id="select_pop_03" popup-title="연금시작 나이 선택"}}
-<!-- e: 25-05-16 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
 		<div class="opt_select_list opt_case3">
@@ -126,9 +135,7 @@
 <!-- e: 연금시작 나이 팝업 -->
 
 <!-- s: 연금받는 주기 팝업 -->
-<!-- s: 25-05-16 수정 -->
 {{#> popup/popup_bottom popup-id="select_pop_04" popup-title="연금받는 주기 선택"}}
-<!-- e: 25-05-16 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
 		<div class="opt_select_list opt_case3">
