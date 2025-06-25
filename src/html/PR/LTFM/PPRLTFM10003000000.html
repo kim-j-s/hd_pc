@@ -42,14 +42,14 @@
 					</div>
 					<div class="column">
 						<div class="form_line">
-							<div class="label_tit">건축 년도 {{> cp/tooltip text="<p>완공 후 20년 이상인 경우, 급배수설비누출로인한손해(주택)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
+							<div class="label_tit">건축연도 {{> cp/tooltip text="<p>완공 후 20년 이상인 경우, 급배수설비누출로인한손해(주택)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
 							{{> cp/text type="tel" placeholder="숫자만 입력" value="2008" r-text="년" inp-title="건축 년도 입력" }}
 						</div>
 						<div class="form_line">
 							<div class="label_tit">같은 아파트 단지에 16층 이상의 건물이 있나요?</div>
 							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_01" name="radiobutton" labelname="예" checked=true }}
-								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_02" name="radiobutton" labelname="아니오" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_01" name="radiobutton" labelname="있음" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_02" name="radiobutton" labelname="없음" }}
 							</div>
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 			<div class="divider_ty1"></div>
 			<div class="form_box">
 				<h3 class="title_h3">화재손해담보의 가입금액</h3>
-				<p class="title_sub">화재 발생시 실제 손해액을 가입금액 한도 이내에서 보상합니다.</p>
+				<p class="title_sub">화재 발생 시 실제 손해액을 가입금액 한도 이내에서 보상해드려요.</p>
 
 				<div class="info_gray df_type">
 				<div class="data_box">
@@ -77,11 +77,21 @@
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">건물 보장</div>
-						{{> cp/selectitem si_ph="선택해주세요." si_title="건물 보장 선택" si_item="1억1천만원" si_popup="pop_type01"}}
+						{{#> cp/selectbox_pc s-title="건물 보장 선택"}}
+							<option value="" selected>1천만원</option>
+							<option value="">1억원</option>
+							<option value="">1억1천만원</option>
+							<option value="">2억</option>
+						{{/ cp/selectbox_pc}}
 					</div>
 					<div class="form_line">
 						<div class="label_tit">가재도구</div>
-						{{> cp/selectitem si_ph="선택해주세요." si_title="건물 보장 선택" si_item="1억1천만원" si_popup="pop_type02"}}
+						{{#> cp/selectbox_pc s-title="가재도구 선택"}}
+							<option value="" selected>1천만원</option>
+							<option value="">1억원</option>
+							<option value="">1억1천만원</option>
+							<option value="">2억</option>
+						{{/ cp/selectbox_pc}}
 					</div>
 				</div>
 			</div>
@@ -98,9 +108,10 @@
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
-				<li>건물 2억원, 가재도구 2억원 이내로 선택하여 가입 가능하며, 가재도구는 집에서 사용하는 살림 도구를 의미합니다.</li>
-				<li>오피스텔, 펜션, 고시원 등으로 사용시에는 인터넷을 통해 가입이 불가합니다.</li>
-				<li>가재도구 중 귀금속, 현금(유가증권), 골동품, 원고, 설계서, 도안, 장부, 금형, 소프트웨어 및 이와 비슷한 것의 손해는 보상하지 않습니다.</li>
+				<li>건물 2억원, 가재도구 2억원 이내로 선택해 가입할 수 있습니다.</li>
+				<li>가재도구는 집에서 사용하는 살림도구를 의미합니다.</li>
+				<li>오피스텔, 펜션, 고시원 등으로 사용시에는 인터넷을 통해 가입할 수 없습니다.</li>
+				<li>가재도구 중 귀금속, 현금(유가증권), 골동품, 원고, 설계서, 도안, 장부, 금형, 소프트웨어 및 이와 비슷한 물품의 손해는 보상하지 않습니다.</li>
 			</ul>
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
