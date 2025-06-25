@@ -54,11 +54,18 @@
 					<button type="button" class="cm_btn cm_btn_cat"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
 				</div>
 			</div>
-			{{else}}
-			<nav class="hpi_gnb">
+			{{/if}}
+			{{#unless h-prd}}
+			<nav id="gnb" class="hpi_gnb">
+				{{> layout/nav2}}
+			</nav>
+			{{/unless}}
+			{{#if gnbadd}}
+			<nav id="gnb" class="hpi_gnb">
 				{{> layout/nav2}}
 			</nav>
 			{{/if}}
+			
 
 			<div class="hpi_sub_utils">
 				{{#if h-prd}}

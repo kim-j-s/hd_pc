@@ -61,6 +61,11 @@ $(function() {  // DOM이 준비되었을 때 실행
     lastScrollTop = st;
   });
 
+	// 헤더 gnb
+	$DOM.on('mouseenter', '.nav_list > li', function() {
+		$(this).siblings().find('*').blur();
+	});
+
 	// 고양이/강아지 변환 
 	$DOM.on('click', '.change_mode .cm_btn', function(e) {
 		$(this).closest('.change_mode').find('.cm_btn').removeClass('active');
