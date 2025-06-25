@@ -1,31 +1,27 @@
 {{#> layout/default page-title="건물/주택 정보 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="건물/주택 정보" }}
+	{{> layout/header_pc h-prd="주택상해화재보험" }}
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					가입하시려는 <strong>건물/주택의 정보</strong>를<br>
-					입력하고 보험료를 확인해주세요
-				</h2>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">건물/주택 정보</div>
+					<h2 class="p_title">
+						가입할 <strong>건물/주택의 정보</strong>를 입력하고 보험료를 확인해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
 
 			<div class="form_box">
 				<h3 class="title_h3">건물/주택정보</h3>
 				<div class="form_group_wrap">
-					<div class="form_line">
+					<div class="form_line full">
 						<div class="label_tit">담보물 소재지</div>
-						<!-- s: 25-06-16 수정 -->
 						{{> cp/address ad_ph="주소 검색" case2=true ad_popup="pop_type01"}}
-						<!-- e: 25-06-16 수정 -->
 					</div>
-					<div class="form_line">
+					<div class="form_line full">
 						<div class="label_tit">건물 구조</div>
-						<!-- s: 25-06-16 수정 -->
 						{{> cp/address ad_ph="건물 구조 선택" msg1="건물 급수 : 1급" case3=true ad_popup="pop_type01"}}
-						<!-- e: 25-06-16 수정 -->
 					</div>
 					<div class="form_line">
 						<div class="label_tit">주택면적</div>
@@ -44,15 +40,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="form_line">
-						<div class="label_tit">건축 년도 {{> cp/tooltip text="<p>완공 후 20년 이상인 경우, 급배수설비누출로인한손해(주택)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
-						{{> cp/text type="tel" placeholder="숫자만 입력" value="2008" r-text="년" inp-title="건축 년도 입력" }}
-					</div>
-					<div class="form_line">
-						<div class="label_tit">같은 아파트 단지에 16층 이상의 건물이 있나요?</div>
-						<div class="radio_group_wrap" role="radiogroup">
-							{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_01" name="radiobutton" labelname="예" checked=true }}
-							{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_02" name="radiobutton" labelname="아니오" }}
+					<div class="column">
+						<div class="form_line">
+							<div class="label_tit">건축 년도 {{> cp/tooltip text="<p>완공 후 20년 이상인 경우, 급배수설비누출로인한손해(주택)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
+							{{> cp/text type="tel" placeholder="숫자만 입력" value="2008" r-text="년" inp-title="건축 년도 입력" }}
+						</div>
+						<div class="form_line">
+							<div class="label_tit">같은 아파트 단지에 16층 이상의 건물이 있나요?</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_01" name="radiobutton" labelname="예" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radiobutton01_02" name="radiobutton" labelname="아니오" }}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -63,16 +61,18 @@
 				<h3 class="title_h3">화재손해담보의 가입금액</h3>
 				<p class="title_sub">화재 발생시 실제 손해액을 가입금액 한도 이내에서 보상합니다.</p>
 
-				<div class="info_gray">
-					<!-- s: 25-05-27 수정 -->
+				<div class="info_gray df_type">
+				<div class="data_box">
 					<dl class="middle">
-					<!-- e: 25-05-27 수정 -->
-						<dt>건물가액</dt>
+						<dt>
+							건물가액
+						</dt>
 						<dd class="point">
 							<strong class="big">11,000,000원</strong>
 						</dd>
 					</dl>
 				</div>
+			</div>
 
 				<div class="form_group_wrap">
 					<div class="form_line">
@@ -86,7 +86,15 @@
 				</div>
 			</div>
 
-			<!-- s: 25-05-07 수정 -->
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="보험료를 확인할게요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
@@ -96,18 +104,14 @@
 			</ul>
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 25-05-07 수정 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_주택화재 panel-title="가입자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
 
-	<!-- s: 하단 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="보험료를 확인할게요" }} -->
-		</div>
-	</div>
-	<!-- s: 하단 버튼 영역 -->
+	
 </div>
 
 <!-- s: popup area -->

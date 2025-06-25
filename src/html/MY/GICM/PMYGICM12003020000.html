@@ -1,0 +1,130 @@
+{{#> layout/default page-title="일반보험 계약변경 | 마이페이지"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc bc=true }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>일반보험 계약취소</strong>
+					</h2>
+				</div>
+			</div>
+
+        <div class="info_gray df_type">
+          <h4 class="title_h4">다이렉트 해외여행보험</h4>
+          <div class="data_box df_type_w_ty3">
+            <dl>
+              <dt>계약번호</dt>
+              <dd>F2023****761</dd>
+            </dl>
+            <dl>
+              <dt>보험기간</dt>
+              <dd>2025.01.01(08시)~2025.01.05(16시)(4일)</dd>
+            </dl>
+            <dl>
+              <dt>가입유형</dt>
+              <dd>개인형</dd>
+            </dl>
+            <dl>
+              <dt>보험료</dt>
+              <dd><strong class="point">39,000원</strong></dd>
+            </dl>
+            <dl>
+              <dt>결제방법</dt>
+              <dd>신용카드/일시불</dd>
+            </dl>
+          </div>
+        </div>
+
+
+      
+        <h3 class="title_h3">계약취소 정보</h3>
+        <div class="form_group_wrap">
+          <div class="form_line">
+            <div class="label_tit">이름</div>
+            {{> cp/text type="text" readonly=true value="김*대"}}
+          </div>
+          <div class="form_line">
+            <div class="label_tit">주민등록번호/외국인등록번호</div>
+            <div class="comp_wrap birth">
+              {{> cp/text type="tel" minlength="6" maxlength="6" value="790104" readonly=true }}
+              <span class="dash">-</span>
+              <div class="id_pass_box read_only">
+                <div class="id_pass">
+                  ●●●●●●●
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_line">
+            <div class="label_tit">휴대폰번호</div>
+            {{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+          </div>
+          <div class="form_line">
+            <div class="label_tit">이메일</div>
+            {{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
+          </div>
+        </div>
+
+        <!-- s: 결제방법이 실시간 계좌이체인 경우 -->
+        <h3 class="title_h3">환급계좌 입력</h3>
+        <div class="info_gray">
+          <p class="info_text">계약자 김현대님의 계좌만 이용할 수 있어요.</p>
+        </div>
+        <div class="form_group_wrap">
+          <div class="form_line">
+            <div class="label_tit">은행</div>
+            {{#> cp/selectbox_pc s-title="은행 선택" }}
+              <option value="" selected>선택 옵션값 1</option>
+              <option value="">선택 옵션값 2</option>
+            {{/ cp/selectbox_pc}}
+          </div>
+          <div class="form_line">
+            <div class="label_tit">계좌번호</div>
+            <div class="comp_wrap key_number">
+                {{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
+                {{> cp/button type="3" size="4" b-text="계좌확인" }}
+            </div>
+          </div>
+          <div class="form_line">
+            <div class="label_tit">예금주</div>
+            {{> cp/text type="text" placeholder="[계좌확인]을 눌러 예금주 입력" inp-title="예금주 입력" readonly=true }}
+          </div>
+        </div>
+        <!-- e: 결제방법이 실시간 계좌이체인 경우 -->
+        
+        
+        <!-- s: 하단 버튼 영역 -->
+        <div class="bottom_fix_wrap">
+          <div class="btn_area">
+            {{> cp/button type="3" size="1" b-text="이전" }}
+            {{> cp/button type="1" size="1" b-text="계약취소 신청하기" }}
+          </div>
+        </div>
+        <!-- s: 하단 버튼 영역 -->
+        
+        <!-- s: 꼭 알아두세요 -->
+        {{#> cp/notice dp-active=true }}
+        <ul class="list_depth">
+          <li>자동이체 계좌는 계약자 본인명의 계좌만 가능합니다.</li>
+          <li>은행의 연결계좌(증권사 연결 CMA 계좌 등) 및 출금이 불가능한 계좌(평생계좌, 맞춤계좌 등)는 자동이체계좌로 등록할 수 없으니 유의해 주세요.</li>
+          <li>이체일에 보험료가 납입되지 않은 경우 5일, 10일, 20일, 25일, 30일 기준으로 재청구됩니다.</li>
+          <li>이체일이 같은 여러 개의 자동이체 청구가 있는 경우 출금 우선 순위 및 시간은 각 은행이 정한 기준에 따르며, 잔액 부족으로 이체되지 못한 건에 대한 책임은 본인에게 있습니다.</li>
+        </ul>
+        {{/ cp/notice }}
+        <!-- e: 꼭 알아두세요 -->
+    </div>
+	</div>
+	<!-- // container -->
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
