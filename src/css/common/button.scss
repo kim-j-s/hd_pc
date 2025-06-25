@@ -55,7 +55,8 @@
 
 		.hd_btn {
 			&.normal {
-				margin-top: 2px;
+				//margin-top: 2px;
+				margin-top: 4px;
 			}
 		}
 	}
@@ -154,6 +155,10 @@
 	svg {
 		fill: #ffffff;
 		stroke: #ffffff;
+	}
+	> .text {
+		flex: 1;
+		text-align: center;
 	}
 }
 
@@ -454,6 +459,7 @@
 	span.text {
 		cursor: pointer;
 		position: relative;
+		width: 100%;
 	}
 
 	//기본사이즈
@@ -733,11 +739,9 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			// width: calc(100%);Add commentMore actions
-			// height: calc(100%);
-			width: 100%;
-			height: 100%;
-			// margin-top: -7px;
+			width: calc(100% + 14px);
+			height: calc(100% + 14px);
+			margin-top: -7px;
 		}
 	}
 	// btn btn_search
