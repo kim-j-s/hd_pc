@@ -1221,12 +1221,35 @@
 		}
 	}
 
-	.title_h4.space1 {
-		margin-bottom:16px;
+	.form_group_wrap + .title_h4 {
+		margin: 40px 0 16px;
 	}
-	.form_group_wrap {
-		& + .title_h4.space1 {
-			margin-top: 40px;
+}
+
+
+.popup_wrap {
+	&.bottom,
+	&.full {
+		.file_upload_wrap {
+			.file_attach_box {
+				display: block;
+				margin: 0 auto;
+			}
+
+			.file_info_box {
+				& + .file_attach_box {
+					margin-top: var(--gap-5);
+				}
+			}
+		}
+	}
+	
+}
+
+.title_sub {
+	& + .img_area {
+		img {
+			margin:0 auto;
 		}
 	}
 }
