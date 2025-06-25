@@ -77,6 +77,12 @@
 	}
 }
 
+// .hpi_sub_utils {
+// 	background-color: rgba(0, 0, 0, 0.3);
+// }
+// .hpi_bottom {
+// 	background-color: #ddd;
+// }
 
 .hpi_bottom {
 	// position: relative;
@@ -161,6 +167,7 @@
 		}
 		.hsu_chatbot {
 			display: block;
+			min-width: 88px;
 			padding: 6px 12px;
 			border-radius: var(--radius-medium1);
 			border: var(--border-width-static-regular) solid var(--color-button-secondary-fill);
