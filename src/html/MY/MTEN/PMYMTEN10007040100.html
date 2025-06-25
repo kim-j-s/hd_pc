@@ -13,7 +13,7 @@
 						변경할 운전자 범위를 선택해주세요
 					</div>
 					<div class="btn_area">
-						{{> cp/button type="3" size="5" b-text="가입경력인정제도 안내" rightIcon="arrowRightSvg"}}
+						{{> cp/button type="3" size="5" b-text="가입경력인정제도 안내" btn-title="팝업 열기" rightIcon="arrowRightSvg" popup="ex_popup_bottom"}}
 					</div>
 				</div>
 				<div class="btn_area">
@@ -179,7 +179,18 @@
 							<div class="form_group_wrap full">
 								<div class="form_line">
 									<div class="label_tit">나이</div>
-									{{> cp/selectitem si_ph="나이 선택" si_title="연령 선택 팝업 호출" si_popup="select_option_ty1"}}
+									{{#> cp/selectbox_pc s-title="나이 선택" }}
+										<option value="" selected>나이 선택</option>
+										<option value="">만 21세 이상</option>
+										<option value="">만 22세 이상</option>
+										<option value="">만 24세 이상</option>
+										<option value="">만 26세 이상</option>
+										<option value="">만 28세 이상</option>
+										<option value="">만 30세 이상</option>
+										<option value="">만 35세 이상</option>
+										<option value="">만 43세 이상</option>
+										<option value="">만 48세 이상</option>
+									{{/ cp/selectbox_pc}}
 								</div>
 							</div>       
 						</div>
@@ -212,7 +223,18 @@
 							<div class="form_group_wrap full">
 								<div class="form_line">
 									<div class="label_tit">나이</div>
-									{{> cp/selectitem si_ph="나이 선택" si_title="연령 선택 팝업 호출" si_popup="select_option_ty1"}}
+									{{#> cp/selectbox_pc s-title="나이 선택" }}
+										<option value="" selected>나이 선택</option>
+										<option value="">만 21세 이상</option>
+										<option value="">만 22세 이상</option>
+										<option value="">만 24세 이상</option>
+										<option value="">만 26세 이상</option>
+										<option value="">만 28세 이상</option>
+										<option value="">만 30세 이상</option>
+										<option value="">만 35세 이상</option>
+										<option value="">만 43세 이상</option>
+										<option value="">만 48세 이상</option>
+									{{/ cp/selectbox_pc}}
 								</div>
 							</div>       
 						</div>
@@ -269,6 +291,10 @@
 							</p>
 							<div class="form_group_wrap full">
 								<div class="form_line">
+									<div class="label_tit">배우자의 생년월일</div>
+									{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" placeholder="생년월일을 입력하세요" maxlength="8" inp-title="생년월일 입력" }}
+								</div>
+								<div class="form_line">
 									<div class="label_tit">생년월일/성별</div>
 									<div class="row">
 										{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" maxlength="8" inp-title="생년월일 입력" }}
@@ -301,6 +327,10 @@
 							</p>
 							<div class="form_group_wrap full">
 								<div class="form_line">
+									<div class="label_tit">배우자의 생년월일</div>
+									{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" placeholder="생년월일을 입력하세요" maxlength="8" inp-title="생년월일 입력" }}
+								</div>
+								<div class="form_line">
 									<div class="label_tit">자녀의 생년월일/성별</div>
 									<div class="row">
 										{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" maxlength="8" inp-title="생년월일 입력" }}
@@ -330,13 +360,9 @@
 							</div>
 							<!-- e: 유효한 생년월일이 입력되면 출력 -->
 							<p class="text_sub_ty2">
-								배우자와 운전자 중 가장 나이가 어린 사람의 생년월일을 입력해 주세요.
+								운전자 중 가장 나이가 어린 사람의 생년월일을 입력해 주세요.
 							</p>
 							<div class="form_group_wrap full">
-								<div class="form_line">
-									<div class="label_tit">배우자의 생년월일</div>
-										{{> cp/text class="birth_day" type="tel" placeholder="8자리 숫자 입력" maxlength="8" inp-title="생년월일 입력" }}
-								</div>
 								<div class="form_line">
 									<div class="label_tit">자녀의 생년월일/성별</div>
 									<div class="row">
@@ -391,8 +417,15 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="선택 중이에요" disabled=true }}
+					{{> cp/button type="1" size="1" b-text="운전범위를 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="본인만으로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="부부로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="가족으로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="가족으로 보험료 확인하기" }} -->
 					<!-- {{> cp/button type="1" size="1" b-text="누구나로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="본인+지정1인으로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="부부+지정1인으로 보험료 확인하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="임직원으로 보험료 확인하기" }} -->
 				</div>
 			</div>
 			<!-- s: 하단 버튼 영역 -->
@@ -428,22 +461,30 @@
 </div>
 {{/ popup/popup_confirm}}
 <!-- e: 자녀한정 선택 시, 변경불가 alert -->
-<!-- s: 나이 선택 팝업 -->
-{{#> popup/popup_bottom popup-id="select_option_ty1" popup-title="연령선택" }}
+
+<!-- s: 가입경력인정제도 안내 -->
+{{#> popup/popup_bottom popup-id="ex_popup_bottom" popup-title="보험가입경력 인정 안내" }}
 <div class="popup_cont">
-	<div class="opt_select_list opt_case3">
-		<div role="button" tabindex="0" class="option"><span class="text">만 21세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 22세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 24세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 26세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 28세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 30세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 35세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 43세 이상</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">만 48세 이상</span></div>
+	<div class="popup_content">
+		<p class="text_sub">자동차보험 <strong>가입경력이 3년 미만인 운전자</strong>가 운전범위에 포함된 경우, 가입경력인정제도를 통해 향후 <strong>보험료를 절감</strong>할 수 있습니다.</p>
+		<!-- s: 25-05-28 수정 -->
+		<ul class="list_depth">
+		<!-- e: 25-05-28 수정 -->
+			<li>자동차보험 가입시 운전범위에 따라 기명피보험자 이외의 운전자(가족, 지정1인 등)를 가입경력인정자로 등록하시면 해당 운전자가 향후 본인명의로 자동차보험을 가입할 때 가입경력을 인정받아 보험료를 절감할 수 있습니다.</li>
+			<li>가입경력인정자 등록방법: 보험가입 완료 후 자동차 계약변경-<strong>[가입경력인정자 신청 입력]</strong> 메뉴를 통해 등록하실 수 있습니다.</li>
+			<li>운전범위에 따라 최대 2명까지 홈페이지 및 다이렉트 콜센터(1899-6782)을 통해 등록가능하며, 홈페이지 등록시 계약자의 전자서명 또는 휴대폰직접서명이 필요합니다.</li>
+			<li>과거 관공서 및 법인체에서 운전직으로 근무한 경력이나, 군에서 운전관련특기로 복무한 경력이 있을 경우, 보험가입 시 해당 증명서 제출을 통해 가입경력을 인정 받으실 수 있습니다.</li>
+			<li>다이렉트 콜센터(1899-6782)를 통해 증명서(운전직: 재직증명서 / 군경력: 병무청 발행 병적기록표 등) 제출시 계약체결 후에도 가입경력 인정이 가능합니다.</li>
+		</ul>
+	</div>
+</div>	
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
 	</div>
 </div>
 {{/ popup/popup_bottom}}
-<!-- e: 나이 선택 팝업 -->
+<!-- e: 가입경력인정제도 안내 -->
+
 <!-- e: popup area -->
 {{/ layout/default }}

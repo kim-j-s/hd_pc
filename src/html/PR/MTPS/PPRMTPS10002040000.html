@@ -1,6 +1,6 @@
 {{#> layout/default page-title="자동차 상세정보 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+	{{> layout/header_pc h-prd="자동차보험" }}
 	
 	<div id="container" class="container">
 		<div class="content">
@@ -52,7 +52,7 @@
 			</div>
 			<!-- e: content_top -->
 
-			<div class="card_item_wrap">
+			<div class="card_item_wrap ty5">
 				<div class="card_item">
 					<div class="item_inner">
 						<div class="inp_checkbox">
@@ -62,7 +62,7 @@
 						</div>
 						<div class="inner_cont">
 							<div role="button" class="card_link" tabindex="0">
-								<div class="item_top" id="card_chk_opt1_1_cont">									
+								<div class="item_top" id="card_chk_opt1_1_cont">
 									<div class="title_info">
 										<div class="main_title">
 											블랙박스
@@ -72,15 +72,13 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<ul class="card_list_ty1">
-								<li class="result">
-									<div class="title">가입금액</div>
-									<div class="cont">
-										<strong class="point">200만원</strong>
+								<div class="cont">
+									<div class="result">
+										<span class="title">가입금액</span>
+										<strong class="price">100만원</strong>
 									</div>
-								</li>
-							</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="btn_area">
@@ -101,7 +99,7 @@
 			</div>
 			<!-- e: content_top -->
 
-			<div class="card_item_wrap">
+			<div class="card_item_wrap ty5">
 				<!-- s: 선택 불가한 기본 옵션에 selected 클래스 추가 -->
 				<div class="card_item selected">
 				<!-- e: 선택 불가한 기본 옵션에 selected 클래스 추가 -->
@@ -228,14 +226,13 @@
 				<div class="card_item">
 					<div class="item_inner">
 						<div class="inp_checkbox">
-							<input type="checkbox" id="card_chk_opt2_6" name="name2" aria-labelledby="card_chk_opt2_6_cont" />
+							<input type="checkbox" id="card_chk_opt2_6" name="name1" aria-labelledby="card_chk_opt2_6_cont" />
 							<label for="card_chk_opt2_6" class="chk_label"></label>
 							<i></i>
 						</div>
 						<div class="inner_cont">
 							<div role="button" class="card_link" tabindex="0">
 								<div class="item_top" id="card_chk_opt2_6_cont">
-									
 									<div class="title_info">
 										<div class="main_title">
 											스마트크루즈
@@ -245,15 +242,13 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<ul class="card_list_ty1">
-								<li class="result">
-									<div class="title">가입금액</div>
-									<div class="cont">
-										<strong class="point">100만원</strong>
+								<div class="cont">
+									<div class="result">
+										<span class="title">가입금액</span>
+										<strong class="price">100만원</strong>
 									</div>
-								</li>
-							</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="btn_area">
@@ -266,6 +261,10 @@
 
 			<div class="divider_ty1"></div>
 
+			<div class="btn_area center">
+				{{> cp/button type="2" size="2" b-text="부속품 불러오기"}}
+			</div>
+
 		<!-- s: 추가부속품 영역 시작 -->
 			<!-- s: content_top -->
 			<div class="content_top space_between">
@@ -276,27 +275,28 @@
 			<!-- e: content_top -->
 
 			<div class="text_sub">기본 모델에 썬루프 등 추가 부속품을 장착하신 경우 입력해 주세요.</div>
-			<div class="card_item_wrap">
+			<div class="card_item_wrap ty5">
 				<div class="card_item">
 					<div class="item_inner">
 						<div class="inner_cont">
-							<div class="item_top">								
-								<div class="title_info">									
-									<div class="main_title">전방충돌포함패키지(직접입력)
-										<span class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
-										</span>
+							<div role="button" class="card_link" tabindex="0">
+								<div class="item_top">
+									<div class="title_info">
+										<div class="main_title">
+											전방충돌포함패키지(직접입력)
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="result">
+										<span class="title">가입금액</span>
+										<strong class="price">100만원</strong>
 									</div>
 								</div>
 							</div>
-							<ul class="card_list_ty1">
-								<li class="result">
-									<div class="title">가입금액</div>
-									<div class="cont">
-										<strong class="point">100만원</strong>
-									</div>
-								</li>
-							</ul>
 						</div>
 					</div>
 					<div class="btn_area">
@@ -308,22 +308,24 @@
 				<div class="card_item">
 					<div class="item_inner">
 						<div class="inner_cont">
-							<div class="item_top">
-								<div class="title_info">
-									<div class="main_title">Around View Monitor 패키지(직접입력)</div>
+							<div role="button" class="card_link" tabindex="0">
+								<div class="item_top">
+									<div class="title_info">
+										<div class="main_title">
+											Around View Monitor 패키지(직접입력)
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+											</span>
+										</div>
+									</div>
 								</div>
-								<div class="badge_wrap">
-									<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+								<div class="cont">
+									<div class="result">
+										<span class="title">가입금액</span>
+										<strong class="price">100만원</strong>
+									</div>
 								</div>
 							</div>
-							<ul class="card_list_ty1">
-								<li class="result">
-									<div class="title">가입금액</div>
-									<div class="cont">
-										<strong class="point">100만원</strong>
-									</div>
-								</li>
-							</ul>
 						</div>
 					</div>
 					<div class="btn_area">
@@ -338,7 +340,7 @@
 				<dl class="middle">
 					<dt>총 가량가액</dt>
 					<dd class="point">
-						<strong class="big">1,155,150원</strong>
+						<strong class="big">2,479만원</strong>
 					</dd>
 				</dl>
 			</div>
@@ -362,32 +364,3 @@
 <!-- s: popup area -->
 <!-- e: popup area -->
 {{/ layout/default }}
-
-<!-- s: 25-05-26 수정 -->
-<!-- 삭제 <script>
-	$(document).ready(function () {
-
-	/* 스크롤시 헤더 배경 변경 */
-	const containerOffsetTop = $('#container').offset().top;
-	let isScrollTop = true; // #container가 제자리 위치할 때 true
-	let scrollDown = false; //스크롤이 내려간 상태
-
-
-	$('#container').on('scroll', function(){
-		var scrollTop = $('#container').scrollTop();
-
-		if (scrollTop > containerOffsetTop) {
-			if(scrollDown) return;
-			$('#wrap').removeClass('scrollTop');
-			isScrollTop = false;
-			scrollDown = true;
-		} else {
-			if(isScrollTop) return;		
-			$('#wrap').addClass('scrollTop');
-			isScrollTop = true;
-			scrollDown = false;
-		}
-	});
-});
-</script> -->
-<!-- e: 25-05-26 수정 -->
