@@ -608,11 +608,15 @@
 
 		.input_text + .btn_link.short_cut,
 		.form_line,
-		.btn_area {
+		.btn_area,
+		.form_group_wrap {
 			margin-top: var(--gap-5);
 
 			& ~ .info_gray { 
 				margin-top: var(--gap-5);
+			}
+			& > .form_line {
+				margin-top: 0;
 			}
 		}
 		.inp_checkbox {

@@ -5,119 +5,117 @@
 {{#> layout/default page-title="반려동물정보 입력 | 상품"}}
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-13 수정 -->
-	{{> layout/header h-title="반려동물정보" }}
+	{{> layout/header_pc h-prd="굿앤굿우리펫보험" petmode=true  }}
 	<!-- e: 25-05-13 수정 -->
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<!-- s: 25-06-05 수정 -->
-				
-				<h2 class="title_h2">
-					반려동물<br>
-					<strong>정보를 입력</strong>해주세요
-				</h2>
-				<!-- e: 25-06-05 수정 -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">반려동물정보</div>
+					<h2 class="p_title">
+						반려동물 <strong>정보를 입력</strong>를 입력해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
 
-			<h3 class="title_h3">기본정보</h3>
-			<div class="form_group_wrap">
-				<div class="row">
-					<div class="form_line grow">
-    				    <div class="label_tit">이름</div>
+			<div class="form_box">
+				<h3 class="title_h3">기본정보</h3>
+				<div class="form_group_wrap">
+					<div class="form_line">
+						<div class="label_tit">이름</div>
 						{{> cp/text inp-title="이름 입력" }}
-    			    </div>
-					<div class="form_line grow">
-    				    <div class="label_tit">몸무게(단위: kg)</div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">몸무게(단위: kg)</div>
 						{{> cp/text type="tel" placeholder="예) 5" inp-title="몸무게 입력" }}
-    			    </div>
-				</div>
-				<div class="row">
-					<div class="form_line grow">
-                        <div class="label_tit">생년월일</div>
-                        {{> cp/text type="tel" inp-title="생년월일 입력" value="20220123" readonly=true }}
-                    </div>
-					<div class="form_line grow">
-    				    <div class="label_tit">성별</div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">생년월일</div>
+						{{> cp/text type="tel" inp-title="생년월일 입력" value="20220123" readonly=true }}
+					</div>
+					<div class="form_line">
+						<div class="label_tit">성별</div>
 						{{> cp/text value="여아" inp-title="성별 입력" readonly=true }}
-    			    </div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">품종</div>
+						{{> cp/text value="말티푸" inp-title="품종 입력" readonly=true }}
+					</div>
+					<div class="form_line">
+						<div class="label_tit">중성화 수술을 했나요?</div>
+						<div class="radio_group_wrap" role="radiogroup">
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_01" name="receiveSel01" labelname="예" checked=true }}
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_02" name="receiveSel01" labelname="아니요" }}
+						</div>
+					</div>
 				</div>
-                <div class="form_line">
-                    <div class="label_tit">품종</div>
-                    {{> cp/text value="말티푸" inp-title="품종 입력" readonly=true }}
-                </div>
-                <div class="form_line">
-									<div class="label_tit">중성화 수술을 했나요?</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										{{> cp/radio rd-class="rd_btn" rd-id="notification02_01" name="notification02" labelname="예" }}
-										<!-- s: 25-05-19 수정 -->
-										{{> cp/radio rd-class="rd_btn" rd-id="notification02_02" name="notification02" labelname="아니요" }}
-										<!-- e: 25-05-19 수정 -->
-									</div>
-                </div>
 			</div>
 
-			<!-- Case1. 동물등록 N인 경우 -->
 			<div class="divider_ty1"></div>
-			<h3 class="title_h3">반려동물 사진</h3>
-			<div class="file_upload_wrap">
-				<h3 class="title_h3">앞모습 전체 사진 등록</h3>
-
-				<!-- s: 이미지 파일 붙는 영역 -->
-				<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-				<div class="file_attach_box">
-					<div class="file_thumbnail">
-						<img src="../../../images/content/gipt/img_animal_certificate_before.png" alt="예시 이미지">
+			<div class="form_box">
+				<h3 class="title_h3">반려동물 사진</h3>
+				<div class="file_upload_wrap">
+					<div class="file_info_box">
+						<h3 class="title_h3">장애인증명서(복지카드) 사진 등록</h3>
+						<p class="info_text">
+							<strong class="point">사진을 등록하지 않으면 특약에 가입할 수 없어요.</strong><br>
+							서류(카드)가 선명하게 보이도록 정면에서 촬영해주세요.
+						</p>
+						<ul class="list_ty2">
+							<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요</li>
+						</ul>
 					</div>
+
+					<!-- s: 이미지 파일 붙는 영역 -->
+					<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+					<div class="file_attach_box">
+						<div class="file_thumbnail">
+							<img src="../../../images/common/img_certify_card_ex.png" alt="복지카드 예시 이미지" />
+						</div>
+					</div>
+					<!-- 
+						등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
+						등록 후 이미지일 시, active 클래스 추가
+						등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
+					-->
+					<!-- <div class="file_attach_box active">
+						<div class="file_thumbnail">
+							<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
+						</div>
+						<button type="button" class="btn_file_delete">
+							<span>등록한 이미지 삭제하기</span>
+						</button>
+					</div> -->
+					<!-- e: 이미지 파일 붙는 영역 -->
+
+					<!-- s: 이미지 파일 버튼 -->
+					<div class="btn_area center">
+						<!-- 등록 전 노출 -->
+						<div class="file_btn">
+							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+							<label for="file">
+								<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+									<i class="hd_icon carmeraSvg"></i>
+									사진 등록하기
+								</span>
+							</label>
+						</div>
+						<!-- 등록 후 노출 -->
+						<!-- <div class="file_btn">
+							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+							<label for="file">
+								<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+									<i class="hd_icon carmeraSvg2"></i>
+									사진 변경하기
+								</span>
+							</label>
+						</div> -->
+					</div>
+					<!-- e: 이미지 파일 버튼 -->
 				</div>
-
-				<!-- s: 25-06-18 수정 -->
-				<!-- 
-					등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
-					등록 후 이미지일 시, active 클래스 추가
-					등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
-				-->
-				<!--<div class="file_attach_box active">
-					<div class="file_thumbnail">
-						<img src="../../../images/temp/img_carmera_temp.png" alt="등록된 반려동물 이미지">
-					</div>
-				</div>-->
-				<!-- e: 이미지 파일 붙는 영역 -->
-				<!-- e: 25-06-18 수정 -->
-
-				<ul class="list_ty2">
-					<li>최근 3개월 이내의 사진을 올려주세요.</li>
-					<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요.</li>
-				</ul>
-
-				<!-- s: 이미지 파일 버튼 -->
-				<div class="btn_area center">
-					<!-- 등록 전 노출 -->
-					<div class="file_btn">
-						<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-						<label for="file">
-							<span class="hd_btn hd_btn_ty_2 hd_btn_s_2">
-								<i class="hd_icon carmeraSvg"></i>
-								사진 등록
-							</span>
-						</label>
-					</div>
-					<!-- 등록 후 노출 -->
-					 <div class="file_btn">
-						<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-						<label for="file">
-							<span class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<i class="hd_icon carmeraSvg2"></i>
-								사진 변경
-							</span>
-						</label>
-					</div> 
-				</div>
-				<!-- e: 이미지 파일 버튼 -->
 			</div>
+
 			
-			<!-- Case2. 동물등록 Y인 경우 -->
 			<div class="divider_ty1"></div>
 			<h3 class="title_h3">할인 정보</h3>
 			<!-- s: 25-05-19 수정 -->
@@ -154,16 +152,13 @@
 				{{/ cp/checkbox}}
 			</div>
 		</div>
+
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_굿앤굿우리펫보험 panel-title="반려동물 정보" panel-title2="피보험자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			<!-- {{> cp/button type="1" size="1" b-text="이름을 입력해주세요" disabled=true }} -->
-			{{> cp/button type="1" size="1" b-text="모두 입력했어요"}}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
 </div>
 
 <!-- s: popup area -->

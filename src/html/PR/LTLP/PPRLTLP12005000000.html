@@ -4,21 +4,19 @@
 -->
 {{#> layout/default page-title="계약자정보 입력 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="피보험자/계약자정보" }}
+	{{> layout/header_pc h-prd="굿앤굿우리펫보험" petmode=true  }}
+
 
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<!-- s: 25-06-05 수정 -->
-				
-				<h2 class="title_h2">
-					계약자<br>
-					<strong>정보를 입력</strong>해주세요
-				</h2>
-				<!-- e: 25-06-05 수정 -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">피보험자/계약자정보</div>
+					<h2 class="p_title">
+						<strong>계약자 정보</strong>를 입력해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
 
 			<!-- s: 25-05-30 수정 -->
 			<div class="form_box">
@@ -38,7 +36,7 @@
 						<!-- e: 25-05-19 수정 -->
 						<!-- e: 05-05-12 수정 -->
 					</div>
-					<div class="form_line">
+					<div class="form_line full">
 						<!-- s: 25-05-19 수정 -->
 						<div class="label_tit">주소</div>
 						<!-- e: 25-05-19 수정 -->
@@ -99,26 +97,40 @@
 					{{> cp/checkbox checkbox_class="rd_box" id="checkbox01-3" label_class="chk_label_ty3 check_hide" labelname="통신수단을 이용한 계약해지에 동의합니다." labelcont="보험계약자가 체결한 계약을 해지하고자 하는 경우, 통신수단(전화)을 이용할 수 있습니다. 단, 금융사고 예방 등을 위해 회사가 정한 규정에 의해 일부 제한될 수 있음을 꼭 알아두세요." }}
 				<!-- e: 25-05-27 수정 -->
 				</div>
-				<div class="info_gray">
-					<dl>
-						<dt>
+
+				<div class="info_gray df_type">
+					<div class="data_box df_type_w_ty6">
+						<dl>
+							<dt>
 								사망보험수익자
-						</dt>
-						<dd>
+							</dt>
+							<dd>
 								법정상속인
-						</dd>
-					</dl>
-					<dl>
-						<dt>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
 								보험금 대리청구인 지정
-						</dt>
-						<dd>
+							</dt>
+							<dd>
 								미지정
-						</dd>
-					</dl>
+							</dd>
+						</dl>
+					</div>
 				</div>
 			</div>
 			<!-- e: 25-05-30 수정 -->
+			
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap"> 
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
@@ -131,16 +143,16 @@
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_굿앤굿우리펫보험 panel-title="반려동물 정보" panel-title2="피보험자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 	
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			<!-- {{> cp/button type="1" size="1" b-text="이메일을 입력해주세요" disabled=true }} -->
-			{{> cp/button type="1" size="1" b-text="모두 입력했어요"}}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
 </div>
 
 <!-- s: popup area -->
