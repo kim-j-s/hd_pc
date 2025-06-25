@@ -283,15 +283,6 @@
 			min-width: 160px;
 		}
 	}
-
-	.title_h3:has(+.text_sub) {
-		margin-bottom: var(--gap-4);
-
-		& ~ .form_group_wrap {
-			margin-top: var(--gap-8);
-		}
-	}
-
 }
 
 // form_list 가입전알릴사항
@@ -765,6 +756,10 @@
 			}
 		}
 	}
+
+	& + .info_gray {
+		margin-top: var(--gap-11);
+	}
 }
 
 
@@ -1144,4 +1139,8 @@
 			padding: var(--padding-5);
 		}
 	}
+}
+
+.reward_img_area {
+	display: flex;
 }

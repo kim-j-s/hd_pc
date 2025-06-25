@@ -1,7 +1,3 @@
-<!---
-화면번호 : MPRMTPS10003020100
-경로 : 2.자동차 기본정보 > 2-2.자동차번호 입력 > 동일증권여부 (동일추가)
--->
 {{#> layout/default page-title="자동차 기본정보 | 상품"}}
 
 <!-- s: Full 팝업 -->
@@ -11,8 +7,7 @@
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
 			<h2 class="title_h2">
-				보유 차량 중 <strong>동일증권 가입대상</strong><br>
-				차량을 선택해 주세요
+				내 차 중에 <strong>동일증권 가입 대상</strong>인 자동차를 선택해주세요
 			</h2>
 			<p class="title_sub">
 				자동차가 2대 이상인 경우, 보험계약의 종료일을 동일하게 일치시켜 하나의 보험증권으로 가입하는 것을 말합니다.<br>
@@ -30,8 +25,6 @@
 				<div class="card_item">
 					<div class="item_inner">
 						<div class="inner_cont">
-							<!-- s: 25-05-26 수정 -->
-							<!-- s: 25-06-04 수정 -->
 							<div class="item_top" id="card_chk1_cont">
 								<div class="badge_wrap">
 									<span class="hd_badge outline solid_pastel c_info size_m">설계차량</span>
@@ -42,8 +35,6 @@
 									</div>
 								</div>
 							</div>
-							<!-- e: 25-06-04 수정 -->
-							<!-- e: 25-05-26 수정 -->
 							<ul class="card_list_ty1">
 								<li>
 									<div class="title">보험기간</div>
@@ -83,12 +74,12 @@
 		<div class="tab_wrap">
 			<div class="tab_wrap_list_ty1" role="tablist">
 				<!-- 동일동시 또는 동일추가 한케이스만 있는 경우 해당 비활성화될 탭 버튼에 disabled 적용 -->
-				{{>cp/tab_btn tb-text="동일동시" tb-id="01" disabled=true }}
-				{{>cp/tab_btn tb-text="동일추가" tb-id="02" tb-active=true }}
+				{{>cp/tab_btn tb-text="동일동시" tb-id="01" tb-active=true }}
+				{{>cp/tab_btn tb-text="동일추가" tb-id="02" disabled=true }}
 			</div>
 
 			<!-- 동일동시 Tab 내용 -->
-			<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
+			<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
 				<div class="card_item_wrap">
 					<div class="card_item">
 						<div class="item_inner">
@@ -98,8 +89,6 @@
 								<i></i>
 							</div>
 							<div class="inner_cont">
-								<!-- s: 25-04-29 수정 -->
-								<!-- s: 25-05-26 수정 -->
 								<div class="item_top" id="card_chk1_1_cont">
 									<div class="title_info">
 										<div class="main_title">
@@ -109,11 +98,7 @@
 											</span>
 										</div>
 									</div>
-									
 								</div>
-								<!-- e: 25-05-26 수정 -->
-								<!-- e: 25-04-29 수정 -->
-
 								<ul class="card_list_ty1">
 									<li>
 										<div class="title">할인할증등급</div>
@@ -153,8 +138,6 @@
 								<i></i>
 							</div>
 							<div class="inner_cont">
-								<!-- s: 25-04-29 수정 -->
-								<!-- s: 25-05-26 수정 -->
 								<div class="item_top" id="card_chk1_2_cont">
 									<div class="title_info">
 										<div class="main_title">
@@ -165,9 +148,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- e: 25-05-26 수정 -->
-								<!-- e: 25-04-29 수정 -->
-
 								<ul class="card_list_ty1">
 									<li>
 										<div class="title">할인할증등급</div>
@@ -223,7 +203,7 @@
 			</div>
 
 			<!-- 동일추가 Tab 내용 -->
-			<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+			<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
 				<div class="card_item_wrap">
 					<div class="card_item">
 						<div class="item_inner">
@@ -233,9 +213,6 @@
 								<i></i>
 							</div>
 							<div class="inner_cont">
-								<!-- s: 25-04-29 수정 -->
-								<!-- s: 25-05-22 수정 -->
-								<!-- s: 25-05-26 수정 -->
 								<div class="item_top" id="card_radio1_1_cont">
 									<div class="title_info">
 										<div class="main_title">
@@ -246,9 +223,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- e: 25-05-26 수정 -->
-								<!-- e: 25-05-22 수정 -->
-								<!-- e: 25-04-29 수정 -->
 								<ul class="card_list_ty1">
 									<li>
 										<div class="title">할인할증등급</div>
@@ -287,9 +261,6 @@
 								<i></i>
 							</div>
 							<div class="inner_cont">
-								<!-- s: 25-04-29 수정 -->
-								<!-- s: 25-05-22 수정 -->
-								<!-- s: 25-05-26 수정 -->
 								<div class="item_top" id="card_radio1_2_cont">
 									<div class="title_info">
 										<div class="main_title">
@@ -300,10 +271,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- e: 25-05-26 수정 -->
-								<!-- e: 25-05-22 수정 -->
-								<!-- e: 25-04-29 수정 -->
-
 								<ul class="card_list_ty1">
 									<li>
 										<div class="title">할인할증등급</div>
@@ -369,7 +336,6 @@
 {{/ popup/popup_full}}
 <!-- e: Full 팝업 -->
 
-<!-- s: 25-06-04 수정 -->
 <script>
 	$(function(){
 		prograssBar();
@@ -412,5 +378,4 @@
 		})
 	}
 </script>
-<!-- e: 25-06-04 수정 -->
 {{/ layout/default }}

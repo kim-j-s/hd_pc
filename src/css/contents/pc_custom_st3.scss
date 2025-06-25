@@ -163,9 +163,17 @@
 		margin-top: var(--gap-11);
 	}
 
+	& + .content_top {
+		margin-top: var(--gap-11);
+	}
+
 	// 보험료결제
 	&.payment {
 		background-color: var(--color-surface-primary-subtler);
+
+		& + .form_box {
+			margin-top: var(--gap-8);
+		}
 	}
 }
 
@@ -196,6 +204,14 @@
 	.dc_list {
 		display: flex;
 		flex-wrap: wrap;
+
+		&.c1 {
+			> li {
+				.dc_l {
+					color: var(--color-text-basic);
+				}
+			}
+		}
 
 		&.column {
 			flex-direction: column;
