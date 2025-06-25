@@ -1,0 +1,22 @@
+.form_key_pc {
+	display: flex;
+	> input {
+		flex: 1 1 0;
+	}
+	> span {
+		flex: none;
+		display: block;
+		width: 20px;
+		> input {
+			position: absolute;
+			opacity: 0;
+			+ label {
+				display: block;
+				width: 20px;
+				height: 100%;
+				font-size: 0;
+				background-color: #ddd;
+			}
+		}
+	}
+}
