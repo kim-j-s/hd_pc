@@ -1141,6 +1141,16 @@
 	}
 }
 
+// 제휴설계내역 팝업
 .reward_img_area {
-	display: flex;
+	width: 252px;
+	height: 55px;
+	justify-content: flex-start;
+	margin-top: 16px;
+	& + .bottom_fix_notice  {
+		padding-top: var(--gap-8);
+		& + .list_ty2 {
+			margin-top: var(--gap-5)
+		}
+	}
 }
