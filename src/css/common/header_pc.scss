@@ -157,13 +157,9 @@
 			&.hsu_close {
 				background-image: url(../images/header/bg_header_out.png);
 			}
-			// &.hsu_home {
-			// 	background-image: url(../images/header/bg_header_home.png);
-			// }
 			&.hsu_home {
-				background-image: url(../images/header/icon_home.png);
+				background-image: url(../images/header/icon_home.svg);
 			}
-			
 		}
 		.hsu_chatbot {
 			display: block;
@@ -176,6 +172,18 @@
 				font-size: var(--font-size-button-small);
 				color: var(--color-text-basic-inverse);
 				background: url(../images/header/bg_header_chatbot.png) no-repeat left center;
+			}
+		}
+	}
+}
+
+.header_pc_nd {
+	.hpi_sub_utils {
+		> .item {
+			.hus_btn {
+				&.hsu_home {
+					background-image: url(../images/header/icon_home_etc.svg);
+				}
 			}
 		}
 	}

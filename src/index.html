@@ -25806,7 +25806,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11004000000.html" target="_blank" title="">PPRLTPN11004000000</a></td>
-							<td class="complete ing"></td>
+							<td class="complete chk"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -25911,7 +25911,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11005000000.html" target="_blank" title="">PPRLTPN11005000000</a></td>
-							<td class="complete"></td>
+							<td class="complete chk"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -25926,7 +25926,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11005010100.html" target="_blank" title="">PPRLTPN11005010100</a></td>
-							<td class="complete"></td>
+							<td class="complete chk"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -26016,7 +26016,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11005020000.html" target="_blank" title="">PPRLTPN11005020000</a></td>
-							<td class="complete"></td>
+							<td class="complete chk"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -26031,7 +26031,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11005030000.html" target="_blank" title="">PPRLTPN11005030000</a></td>
-							<td class="complete"></td>
+							<td class="complete chk"></td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -26256,7 +26256,7 @@
 							<td class="idx_dept7"></td>
 							<td class="end_date">2025-06-20</td>
 							<td class="link"><a href="html/PR/LTPN/PPRLTPN11007000000.html" target="_blank" title="">PPRLTPN11007000000</a></td>
-							<td class="complete"></td>
+							<td class="complete">ing</td>
 							<td class="bigo"></td>
 							<td class="bigo2"></td>
 							<td class="note"></td>
@@ -29287,9 +29287,57 @@
 				</table>
 				<!-- // table -->
 			</div>
+
+			<button type="button" class="set ss">검수항목 검색</button>
+			<button type="button" class="set rs">검수항목 초기화</button>
+
+			<style>
+				.set {
+					position: fixed;
+					top: 5px;
+					left: 50%;
+					z-index: 20;
+					width: 200px;
+					height: 36px;
+					font-weight: 700;
+					border-radius: 16px;
+					
+					background: #ddd;
+					transform: translateX(-50%);
+					cursor: pointer;
+					transition: 0.3s;
+				}
+				.set:hover {
+					background-color: #fff;					
+				}
+				.set.ss {
+					margin-left: -100px;
+				}
+				.set.rs {
+					margin-left: 100px;
+				}
+				.dp_none {
+					display: none;
+				}
+			</style>
+
 		</div>
 		<script src="js/libs/jquery-1.8.3.min.js"></script>
 		<script>
+
+			$('.set.ss').on('click', function(){
+				$('tr').each(function(){
+					if( !$(this).find('.complete').hasClass('chk') ) {
+						$(this).addClass('dp_none');
+					}
+				});
+			});
+			$('.set.rs').on('click', function(){
+				$('tr').each(function(){
+					$(this).removeClass('dp_none');
+				});
+			});
+
 			document.querySelector(".control_list .close_all").onclick = function () {
 				var el = document.querySelectorAll(".title");
 				var len = el.length;
@@ -29384,7 +29432,7 @@
 				for (let item of modifyListValue) {
 					output += item.join("\n") + "\n\n\n";
 				}
-				let printInfo = "[ " + dateString + " ] 모바일 퍼블리싱 수정내역 공유드립니다.\n\n\n" + output + "\n\n담당자가 지정되지 않은 경우 파트별로 확인 부탁드립니다.";
+				let printInfo = "[ " + dateString + " ] PC 퍼블리싱 수정내역 공유드립니다.\n\n\n" + output + "\n\n담당자가 지정되지 않은 경우 파트별로 확인 부탁드립니다.";
 
 				console.log(printInfo);
 			}
