@@ -56,8 +56,6 @@
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 
-		<!-- s: 25-05-12 수정 -->
-		<!-- 25-05-12 수정 : 전체 팝업으로 변경되면서 전체 변경 -->
 		<div class="popup_wrap full active" id="pop_type_full" role="dialog" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type_full');"></div>
@@ -67,13 +65,11 @@
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
 							<div class="popup_content_top">
-								<!-- s: 25-05-14 수정 -->
 								<h2 class="title_h2">
 									원하는 보장조건으로
 									<br />
 									<strong>변경</strong>해주세요
 								</h2>
-								<!-- e: 25-05-14 수정 -->
 							</div>
 							<!-- e: popup_content_top -->
 
@@ -107,55 +103,61 @@
 									</div>
 								</div>
 
-								<!-- s: 25-05-02 수정 -->
 								<div class="selectitem_wrap row">
 									<div class="form_line grow">
 										<div class="label_tit">납입기간</div>
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="납입기간 선택" onclick="openHDPopup(this,'select_pop_01');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="납입기간 선택" class="selectbox">
+												<option value="" selected>5년</option>
+												<option value="">7년</option>
+												<option value="">10년</option>
+												<option value="">12년</option>
+												<option value="">15년</option>
+												<option value="">20년</option>
+											</select>
 										</div>
 									</div>
 									<div class="form_line grow">
 										<div class="label_tit">연금받는 기간</div>
-										<!-- s: 25-05-16 수정 -->
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="연금받는 기간 선택" onclick="openHDPopup(this,'select_pop_02');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="연금받는 기간 선택" class="selectbox">
+												<option value="" selected>5년</option>
+												<option value="">6년</option>
+												<option value="">7년</option>
+												<option value="">8년</option>
+												<option value="">9년</option>
+												<option value="">10년</option>
+											</select>
 										</div>
-										<!-- e: 25-05-16 수정 -->
 									</div>
 								</div>
 
 								<div class="selectitem_wrap row">
 									<div class="form_line grow">
 										<div class="label_tit">연금시작 나이</div>
-										<!-- s: 25-05-16 수정 -->
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="연금시작 나이 선택" onclick="openHDPopup(this,'select_pop_03');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="연금시작 나이 선택" class="selectbox">
+												<option value="" selected>45세</option>
+												<option value="">46세</option>
+												<option value="">47세</option>
+												<option value="">48세</option>
+												<option value="">49세</option>
+												<option value="">50세</option>
+											</select>
 										</div>
-										<!-- s: 25-05-16 수정 -->
 									</div>
 									<div class="form_line grow">
 										<div class="label_tit">연금받는 주기</div>
-										<!-- s: 25-05-16 수정 -->
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="연금받는 주기 선택" onclick="openHDPopup(this,'select_pop_04');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="연금받는 주기 선택" class="selectbox">
+												<option value="" selected>매월</option>
+												<option value="">3개월</option>
+												<option value="">6개월</option>
+												<option value="">매년</option>
+											</select>
 										</div>
-										<!-- e: 25-05-16 수정 -->
 									</div>
 								</div>
-								<!-- e: 25-05-02 수정 -->
 							</div>
 						</div>
 					</div>
@@ -170,8 +172,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- e: 25-05-12 수정 -->
-
 		<!-- s: popup area -->
 
 		<!-- s: 납입기간 팝업 -->
@@ -200,14 +200,12 @@
 		<!-- e: 납입기간 팝업 -->
 
 		<!-- s: 연금받는 기간 팝업 -->
-		<!-- s: 25-05-16 수정 -->
 		<div class="popup_wrap bottom" id="select_pop_02" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_02');"></div>
 				<div class="popup_inner">
 					<div class="popup_head"><div class="popup_head_title">연금받는 기간 선택</div></div>
 
-					<!-- e: 25-05-16 수정 -->
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="opt_select_list opt_case3">
@@ -227,14 +225,12 @@
 		<!-- e: 연금받는 기간 팝업 -->
 
 		<!-- s: 연금시작 나이 팝업 -->
-		<!-- s: 25-05-16 수정 -->
 		<div class="popup_wrap bottom" id="select_pop_03" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_03');"></div>
 				<div class="popup_inner">
 					<div class="popup_head"><div class="popup_head_title">연금시작 나이 선택</div></div>
 
-					<!-- e: 25-05-16 수정 -->
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="opt_select_list opt_case3">
@@ -254,14 +250,12 @@
 		<!-- e: 연금시작 나이 팝업 -->
 
 		<!-- s: 연금받는 주기 팝업 -->
-		<!-- s: 25-05-16 수정 -->
 		<div class="popup_wrap bottom" id="select_pop_04" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_04');"></div>
 				<div class="popup_inner">
 					<div class="popup_head"><div class="popup_head_title">연금받는 주기 선택</div></div>
 
-					<!-- e: 25-05-16 수정 -->
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="opt_select_list opt_case3">

@@ -2,16 +2,14 @@
 
 
 // Button
-.popup_wrap:has(.hd_btn){
-
-	.btn_area:not(.center, .basic) {
-		.btn_link,
-		.hd_btn {
-			flex: 1;
+.popup_wrap {
+	&:has(.hd_btn){
+		.btn_area:not(.basic) {
+			.btn_link,
+			.hd_btn {
+				flex: 1;
+			}
 		}
-	}
-	.hd_btn {
-		// flex: 1;
 	}
 }
 
@@ -311,6 +309,12 @@
 		> * {
 			flex: 1;
 		}
+	}
+}
+
+.form_group_wrap {
+	& + .search_reult_list_container {
+		margin-top: var(--gap-8);
 	}
 }
 
