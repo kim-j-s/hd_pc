@@ -51,18 +51,23 @@
 .btn_area {
 	justify-content: flex-start;
 
-	& + .form_group_wrap {
-		margin-top: var(--gap-7);
-	}
 	.pack {
 		flex: 0 0 auto;
 		display: flex;
 		gap: 8px;
 	}
+
 	&.ty3 {
 		+ .title_h3 {
 			margin-top: var(--gap-11);
 		}
+	}
+
+	& + .form_group_wrap {
+		margin-top: var(--gap-7);
+	}
+	& + .content_top {
+		margin-top: var(--gap-11);
 	}
 }
 
@@ -743,7 +748,8 @@
 .card_item_wrap {
 	.card_item {
 		.item_inner {
-			.inp_radio {
+			> .inp_checkbox,
+			> .inp_radio {
 				.chk_label {
 					width: 20px;
 					height: 20px;
@@ -751,6 +757,30 @@
 					padding-left: 0;
 					&:before {
 						top:0;
+					}
+				}
+			}
+		}
+	}
+
+	&.ty5 {
+		.card_item {
+			.item_inner {
+				.cont {
+					.result {
+						display: flex;
+						align-items: center;
+						gap: var(--gap-3);
+						
+						.title {
+							font-size: var(--font-size-body-small);
+							font-weight: 400;
+						}
+						.price {
+							width: auto;
+							font-size:  var(--font-size-body-large);
+							color: var(--color-text-primary-bold);
+						}
 					}
 				}
 			}
@@ -1137,6 +1167,23 @@
 		td {
 			vertical-align: top;
 			padding: var(--padding-5);
+		}
+	}
+}
+
+
+.content_top {
+	& + .card_item_wrap {
+		margin-top: var(--gap-5);
+	}
+}
+
+
+// 운전자정보
+.relationship_box {
+	.rel_case1{
+		&:after {
+			top: 152px;
 		}
 	}
 }
