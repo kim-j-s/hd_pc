@@ -1,0 +1,88 @@
+{{#> layout/default page-title="건물/주택 정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="풍수해·지진재해보험(주택용)" }}
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">건물/주택 정보</div>
+					<h2 class="p_title">
+						가입할 <strong>건물/주택의 정보</strong>를 입력하고 <strong>보험료</strong>를 확인해주세요
+					</h2>
+				</div>
+			</div>
+			
+			<div class="form_box">
+				<h3 class="title_h3">건물/주택정보</h3>
+				<div class="form_group_wrap">
+					<div class="form_line full">
+						<div class="label_tit">담보물 소재지</div>
+						<!-- s: 25-06-16 수정 -->
+						{{> cp/address ad_ph="주소 검색" case2=true}}
+						<!-- e: 25-06-16 수정 -->
+					</div>
+					<div class="form_line full">
+						<div class="label_tit">건물 구조</div>
+						<!-- s: 25-06-16 수정 -->
+						{{> cp/address ad_ph="건물 구조 선택" case3=true}}
+						<!-- e: 25-06-16 수정 -->
+					</div>
+					<div class="form_line">
+						<div class="label_tit">주택면적</div>
+						<div class="row balance">
+							{{> cp/text type="tel" placeholder="숫자만 입력" value="78" r-text="㎡" inp-title="제곱미터 입력" }}
+							{{> cp/text type="tel" placeholder="숫자만 입력" r-text="평" inp-title="평수 면적 입력" disabled=true }}
+						</div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">총 지상 층수{{> cp/tooltip text="<p>총 층수 기준 : 피보험자가 거주하는 아파트의 라인, 동과 상관없이 아파트의 총 층수</p>" trigger-icon="popover_help"}}</div>
+						<div class="row"> 
+							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="1" r-text="층" inp-title="층수 입력" }}
+							<div class="radio_comb origin" role="radiogroup">	
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_1" name="radio_g1" labelname="지상" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_2" name="radio_g1" labelname="지하" }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="보험료를 확인할게요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+
+			<!-- s: 25-05-07 수정 -->
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active="active" }}
+			<ul class="list_ty1">
+				<li>16층 이상 주택건물은 가입이 제한됩니다. (거주하는 아파트 단지 내 16층 이상의 건물이 없어야 합니다)</li>
+				<li>가입자는 주택 소유자로서 건물만을 가입하며. 가재도구 가입을 제외합니다.</li>
+				<li>홈페이지에서는 내국인만 가입 가능합니다.</li>
+				<li>장애인전용보험전환 특별약관 가입을 원하시는 경우, 추가서류 제출이 필요하므로 현대해상 하이플래너를 통해 가입해주세요.</li>
+				<li>보험가입 시 개인(신용)정보 수집·이용 동의 및 본인인증이 필요합니다.</li>
+			</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+			<!-- e: 25-05-07 수정 -->
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_풍수해주택용 panel-title="기초 정보" panel-title2="건물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
+	</div>
+</div>
+
+<!-- s: popup area -->
+
+
+
+
+<!-- e: popup area -->
+{{/ layout/default }}

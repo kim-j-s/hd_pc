@@ -1,34 +1,40 @@
-{{#> layout/default page-title="보험료 결제 | 상품"}}
+{{#> layout/default page-title="보험료 확인 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="$메뉴명$" }}
+	{{> layout/header_pc bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					<!-- s: 25-05-29 수정 -->
-					환급 보험료 <strong>확인</strong> 후<br>
-					<!-- e: 25-05-29 수정 -->
-					<strong>전자서명을 진행</strong>해주세요
-				</h2>
+
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>메뉴명</strong>
+					</h2>
+					<div class="sub_desc">
+						환급 보험료 <strong>확인</strong> 후 <strong>전자서명을 진행</strong>해주세요
+					</div>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+				</div>
 			</div>
-			<!-- e: content_top -->
-			 
+
 			<div class="info_gray">
-				<dl>
-					<dt>환급받으실 금액</dt>
-					<dd>24,900원</dd>
-				</dl>
+				<div class="data_box df_type_w_ty1">
+					<dl>
+						<dt>환급받으실 금액</dt>
+						<dd>24,900원</dd>
+					</dl>
+				</div>
 			</div>
 			<!-- s: 신용카드 -->
-			<h2 class="pop_title_h1">카드 부분취소</h2>
+			<h3 class="title_h3">카드 부분취소</h3>
 			<div class="table_wrap">
 					<table class="table">
 							<caption>승일일자, 신용카드사, 신용카드번호, 승인금액, 부분취소금액  제공</caption>
 							<colgroup>
-									<col style="width: 30%" />
-									<col style="width: 70%" />
+									<col style="width:160px;">
+									<col style="width:auto;">
 							</colgroup>
 							<tbody>
 									<tr>
@@ -56,6 +62,15 @@
 			</div>
 			<!-- e: 신용카드 -->
 
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="전자서명" }}
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active"}}
 				<ul class="list_depth">
@@ -67,13 +82,6 @@
 		</div>
 	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			<!-- s: 25-05-29 수정 -->
-			{{> cp/button type="1" size="1" b-text="전자서명" }}
-			<!-- e: 25-05-29 수정 -->
-		</div>
-	</div>
 </div>
 
 <!-- s: popup area -->
