@@ -140,6 +140,21 @@
 					dd {
 						display: table-cell;
 					}
+					&.sm {
+						margin-top: var(--gap-2);
+						min-height: 20px;
+						dt {
+							font-size: var(--font-size-body-xsmall);
+							padding: 0;
+							vertical-align: middle;
+						}
+						dd {
+							padding: 0;
+							.inp_checkbox input[type=checkbox].right + .switch_check {
+								min-height: 20px;
+							}
+						}
+					}
 				}
 			}
 		}
