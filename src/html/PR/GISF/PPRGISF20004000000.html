@@ -72,51 +72,65 @@
 
 			<!-- s: 상세 보장 목록 -->
 			<div class="coverage_item_wrap">
-				<ul class="coverage_item_list">
+				<ul class="coverage_item_list_ty3">
 					<li class="list">
-						<div class="item_title">
-							{{> cp/ibs cid="checkbox03-1" sct="상해재활치료(연간 15회한, 급여 및 자동차보험적용)(급여적용)" cts="" }}
+						<div class="detail_list">
+							<div class="item_inner">
+								{{> cp/ibs cid="checkbox01-1" sct="건물"}}
+							</div>
 						</div>
-						<div class="sub_txt_area">
-							<span class="price">미가입</span>
+						<div class="detail_price">
+							<div class="sub_txt_area">
+							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+								<option value="">5천만원</option>
+								<option value="">4천만원</option>
+								<option value="" selected>가입안함</option>
+							{{/ cp/selectbox_pc}}
+						</div>
 						</div>
 					</li>
 					<li class="list">
-						<div class="item_title">기계/집기</div>
-						<div class="sub_txt_area">
+						<div class="detail_list">
+							<div class="item_inner">
+								{{> cp/ibs cid="checkbox01-2" sct="기계/집기"}}
+							</div>
+						</div>
+						<div class="detail_price">
+							<div class="sub_txt_area">
 							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
 								<option value="">5천만원</option>
 								<option value="">4천만원</option>
 								<option value="" selected>3천만원</option>
 							{{/ cp/selectbox_pc}}
 						</div>
-					</li>
-					<li class="list">
-						<div class="item_title">재고자산</div>
-						<div class="sub_txt_area">
-							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
-								<option value="">5천만원</option>
-								<option value="">4천만원</option>
-								<option value="" selected>2천만원</option>
-							{{/ cp/selectbox_pc}}							
 						</div>
 					</li>
 					<li class="list">
-						<div class="item_title">야외간판</div>
-						<div class="sub_txt_area">
-							<!-- s: 25-05-02 수정 -->
-							{{> cp/linkButton bl_class="price_btn" bl_text="미가입" role_b=true question_tit="가입금액 변경" }}
-							<!-- e: 25-05-02 수정 -->
+						<div class="detail_list">
+							<div class="item_inner">
+								{{> cp/ibs cid="checkbox01-3" sct="야외간판"}}
+							</div>
+						</div>
+						<div class="detail_price">
+							<div class="sub_txt_area">
+								미가입
+							</div>
 						</div>
 					</li>
 					<li class="list">
-						<div class="item_title">자기부담금</div>
-						<div class="sub_txt_area">
+						<div class="detail_list">
+							<div class="item_inner">
+								{{> cp/ibs cid="checkbox01-4" sct="자기부담금" checked=true disabled=true}}
+							</div>
+						</div>
+						<div class="detail_price">
+							<div class="sub_txt_area">
 							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
 								<option value="">5천만원</option>
 								<option value="">4천만원</option>
-								<option value="" selected>십만원</option>
-							{{/ cp/selectbox_pc}}				
+								<option value="" selected>5십만원</option>
+							{{/ cp/selectbox_pc}}
+						</div>
 						</div>
 					</li>
 				</ul>
