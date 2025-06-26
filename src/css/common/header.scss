@@ -40,6 +40,18 @@
 			> button {
 				background-color: transparent;
 			}
+
+			.header_logo {
+				padding-top: 4px;
+				font-size: 0;
+				> a {
+					display: block;
+				}
+				img {
+					display: block;
+				}
+
+			}
 			.history_back {
 				width: 32px;
 				height: 32px;
@@ -68,9 +80,6 @@
 				height: 32px;
 				font-size: 0;
 				background: url(../images/header/icon_hamburger.svg) no-repeat center center / 32px auto;
-				// &::before {
-				// 	content: '메뉴열기';
-				// }
 			}
 			.insChk {
 				width: 32px;
@@ -78,6 +87,12 @@
 				font-size: 0;
 				background: url(../images/icon/icon_insurance_check.svg) no-repeat center / 24px auto;
 			}
+			.ins_alarm {
+				width: 32px;
+				height: 32px;
+				font-size: 0;
+				background: url(../images/header/icon_alarm.svg) no-repeat center / 32px auto;
+			}			
 			.btn_chatbot {
 				width: 32px;
 				height: 32px;

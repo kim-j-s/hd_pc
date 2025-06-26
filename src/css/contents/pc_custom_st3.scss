@@ -67,6 +67,11 @@
 					color: var(--color-text-disabled-on);
 					text-decoration: line-through;
 				}
+				.trend {
+					margin-bottom: var(--padding-3);
+					font-size: var(--font-size-body-large);
+					font-weight: 700;
+				}
 				.btn_area {
 					margin-bottom: var(--gap-3);
 				}
@@ -170,14 +175,12 @@
 		border-top: 1px solid var(--color-divider-gray-light);
 	}
 
+	& + .tag_item_wrap,
 	& + .banner_box {
 		margin-top: var(--gap-8);
 	}
 
-	& + .info_gray {
-		margin-top: var(--gap-11);
-	}
-
+	& + .info_gray,
 	& + .content_top {
 		margin-top: var(--gap-11);
 	}
@@ -805,12 +808,13 @@
 		&.v_bg_ty1 { 
 			background-image: url(../images/content/guarantee/img_perpect.svg);
 		}  
-
 		
 		&.v_bg_ty2 { //풍수해·지진재해보험(주택용)
 			background-image: url(../images/content/guarantee/bg_img_gisf.svg);
 		}  
-		
+		&.v_bg_ty3 { //풍수해·지진재해보험(소상공인용)
+			background-image: url(../images/content/guarantee/bg_img_gisf2.svg);
+		} 
 		.bubble_msg {
 			position: relative;
 			flex: 1;

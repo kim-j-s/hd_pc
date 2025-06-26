@@ -121,6 +121,13 @@
     }
   });
 
+	//리뷰 아코디언
+	$DOM.on('click', '.review_acd_item .acd_btn', function(){
+		const $this = $(this);
+		$this.parent('.review_acd_item').toggleClass('active');
+	});
+
+
 	/* 펼치기/접히기 */
 	$DOM.on('click', '.acd_item .btn_toggle', function(){
 		const $this = $(this),
@@ -143,25 +150,33 @@
 
 		if($('.tag_item_move').length){
 			const $target = $('.tag_item_move').find('.tag_move').eq(idx);
-			const targetMargin = parseFloat($target.css('margin-top'));
+			const targetPadding = parseFloat($target.css('padding-top'));
 			// const simpleHeight = $('.simple_info_wrap').height();
 			// const targetOffset = $target.position().top;
-			const simpleHeight = 122;
+			let summaryHeight = 0,
+					simpleHeight = 0;
 			const targetOffset = $target.position().top;
 			const fix_h = $(this).closest('.sticky').height();
 			
 			// console.log($target + ' : ' + targetOffset);
 			// console.log(targetOffset , targetMargin);
 
+			if($('.simple_info_wrap.ty2').length){
+				simpleHeight = 102;
+			}
+			if($('.info_summary').length){
+				summaryHeight = $('.info_summary').height();
+			}
+
 			$('.tag_item').removeClass('active');
 			$this.addClass('active');
 
 			$this.closest('.popup_cont').animate({
-				scrollTop: targetOffset + targetMargin + simpleHeight + fix_h
+				scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
 			}, 500);
 
 			if($('.btn_toggle').length){
-				posiionVal = targetOffset + targetMargin + simpleHeight + fix_h;
+				posiionVal = targetOffset + targetPadding + simpleHeight + fix_h;
 			}
 		}
 	});
@@ -669,10 +684,12 @@ function tabScroll(){
 // 간편정보 노출 방식
 function simpleInfo(){
 	$('#container, .popup_cont, .container_form').on('scroll', function() {
+		const $bigTarget = $(this);
 		const $headHeight = $('#header').outerHeight();
 		const $pop_headHeight = $('.popup_head').outerHeight();
 		const scrollTop = $('#container').scrollTop();
 		const pop_scrollTop = $('.popup_cont').scrollTop();
+		const pop_height = $('.popup_cont').height();
 
 		// console.log('scroll!! : '+ scrollTop);
 
@@ -739,10 +756,17 @@ function simpleInfo(){
 				const targetTop = $target.position().top;
 				const targetHeight = $target.height();
 				const simpleHeight = $('.simple_info_wrap').height();
+				let isLast = 0;
+				isLast = $('.tag_item_move .tag_move').length - 1;
+
+				// console.log(pop_scrollTop, pop_height, $bigTarget[0].scrollHeight)
 
 				if( pop_scrollTop + 100 >= targetTop + targetHeight + simpleHeight ){
 					$('.tag_item').removeClass('active');
 					$('.tag_item').eq(idx).addClass('active');
+				}else if (pop_scrollTop + pop_height + 145 >= $bigTarget[0].scrollHeight){
+					$('.tag_item').removeClass('active');
+					$('.tag_item').eq(isLast).addClass('active');
 				}
 			});
 		}
@@ -826,7 +850,9 @@ $(function(){
 			}
 		}
 	});
-	
+
+
+	let $lastCalendarCallBtn = null;	
 	// 달력 호출
 	$.datepicker.setDefaults({
 		dateFormat: 'yy.mm.dd',
@@ -840,34 +866,73 @@ $(function(){
 		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
 		dayNamesMin: ['일','월','화','수','목','금','토'],
 		dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
-		showAnim: "slideDown",
+		// showAnim: "slideDown",
 		duration: 300,
-		clearBtn: true,
+
+		// 닫기 버튼 추가
+		showButtonPanel: true,
+		closeText: "닫기",
+		currentText: "오늘",
+		// 닫기 버튼 추가
+
 		beforeShow: function () { 
-			$("body").append('<div class="modal_backdrop"></div>');
+			// $("body").append('<div class="modal_backdrop"></div>');
 			setTimeout(function(){
 				$("body").addClass('modal_open');
 			},50);
 		},
 		onClose: function() { 
-			setTimeout(function(){
-				$('.modal_backdrop').remove();
-			},200);
-			$("body").removeClass('modal_open')
+			// setTimeout(function(){
+			// 	$('.modal_backdrop').remove();
+			// },200);
+			$("body").removeClass('modal_open');
+			// 호출했던 버튼으로 포커스 복귀
+			if ($lastCalendarCallBtn) {
+				$lastCalendarCallBtn.focus();
+			}
 		}
 	});
 
 	$(".inp_picker").datepicker();
 
 
+	// $(".calendar_call").on("click", function (e) {
+	// 	e.preventDefault(); // 기본 동작 방지
+	// 	const $input = $(this).siblings(".inp_picker");
+	// 	$input.attr("readonly", true); // readonly 속성 추가	
+	// 	$input.datepicker("show");
+	// 	setTimeout(function(){
+	// 		$input.attr("readonly", false); // readonly 속성 제거
+	// 	}, 500);
+	// });
+
 	$(".calendar_call").on("click", function (e) {
-		e.preventDefault(); // 기본 동작 방지
-		const $input = $(this).siblings(".inp_picker");
-		$input.attr("readonly", true); // readonly 속성 추가	
+		e.preventDefault();
+	
+		const $btn = $(this);
+		const $input = $btn.siblings(".inp_picker");
+	
+		// 포커스 복귀용으로 버튼 참조 저장
+		$lastCalendarCallBtn = $btn;
+	
+		// readonly 잠시 설정 → 키보드 입력 방지
+		$input.attr("readonly", true);
 		$input.datepicker("show");
-		setTimeout(function(){
-			$input.attr("readonly", false); // readonly 속성 제거
+	
+		// 0.5초 후 readonly 제거
+		setTimeout(function () {
+			$input.attr("readonly", false);
 		}, 500);
+	
+		// ✅ 달력 내부 포커스로 이동 (접근성 강화)
+		setTimeout(function () {
+			const $dp = $("#ui-datepicker-div");
+			// 날짜가 선택되어 있으면 해당 날짜에 포커스, 없으면 현재일
+			const $focusable = $dp.find(".ui-state-active, .ui-state-highlight, td a").first();
+			if ($focusable.length) {
+				$focusable.focus();
+			}
+		}, 10);
 	});
 	
 	// 달력 호출

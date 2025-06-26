@@ -1,7 +1,3 @@
-<!---
-화면번호 : MPRMTPS10003050900
-경로 : 5.특약할인 > 5-3. 특약할인 선택 > 고령자 교통안전교육이수 할인특약
--->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -72,12 +68,10 @@
 							<div class="popup_content_top">
 								<div class="title_h2"><strong>고령자 교통안전교육이수</strong> 할인특약</div>
 								<div class="btn_area basic">
-									<!-- s: 25-04-25 수정 -->
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" onclick="openHDPopup(this,'pop_MPRMTPS10003050701');" title="고령자 교통안전교육이수 할인특약 자세히보기 팝업 열기">
+									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="고령자 교통안전교육이수 할인특약 자세히보기 팝업 열기">
 										<span class="text">자세히 보기</span>
 										<i class="hd_icon arrowRightSvg"></i>
 									</button>
-									<!-- e: 25-04-25 수정 -->
 								</div>
 							</div>
 
@@ -112,22 +106,25 @@
 
 								<div class="form_line">
 									<div class="label_tit">교육방법</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="교육방법 선택" onclick="openHDPopup(this,'pop_si_01');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="선택"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="교육방법 선택" class="selectbox">
+											<option value="" selected>선택</option>
+											<option value="">집합 교육</option>
+											<option value="">온라인 교육</option>
+										</select>
 									</div>
 								</div>
 
 								<!-- s: 교육방법>집합교육을 선택하면 출력 -->
 								<div class="form_line">
 									<div class="label_tit">운전능력진단결과 등급</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="운전능력진단결과 등급 선택" onclick="openHDPopup(this,'pop_si_02');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="선택"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="운전능력진단결과 등급 선택" class="selectbox">
+											<option value="" selected>선택</option>
+											<option value="">1등급</option>
+											<option value="">2등급</option>
+											<option value="">3등급</option>
+										</select>
 									</div>
 								</div>
 								<!-- e: 교육방법>집합교육을 선택하면 출력 -->
@@ -138,7 +135,7 @@
 					<!-- s: 하단 버튼 영역 -->
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">확인</span>
 							</button>
 						</div>
@@ -182,50 +179,6 @@
 			</div>
 		</div>
 		<!-- e: 자세히보기 팝업 -->
-
-		<!-- s: 교육방법 팝업 -->
-		<div class="popup_wrap bottom" id="pop_si_01" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_si_01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">교육방법</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">집합 교육</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">온라인 교육</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_si_01');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 교육방법 팝업 -->
-
-		<!-- s: 운전능력진단결과 등급
-			 팝업 -->
-		<div class="popup_wrap bottom" id="pop_si_02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_si_02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">운전능력진단결과 등급</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">1등급</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2등급</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">3등급</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_si_02');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 운전능력진단결과 등급 팝업 -->
 
 		<!-- e: popup area -->
 	</body>

@@ -18,6 +18,9 @@
 .popup_wrap .popup_container .popup_inner .popup_cont .bottom_fix_notice {
 	padding-top: var(--gap-11);
 }
+.popup_wrap .popup_container .popup_inner .popup_cont .bottom_fix_notice.etc01 {
+	padding-top: 3.2rem;
+}
 .popup_wrap .popup_container .popup_inner .popup_cont .file_attach_box .file_thumbnail {
 	height: 18rem;
 }
@@ -50,6 +53,9 @@
 .popup_wrap.active .popup_container {
 	-webkit-transform: none;
 	transform: none;
+}
+.popup_wrap.full.big .popup_container {
+	width: 80rem;
 }
 .popup_wrap.full .popup_container {
 	-webkit-box-align: center;
