@@ -1342,6 +1342,7 @@ strong {
 }
 .hpi_sub_utils > .item .hsu_chatbot {
 	display: block;
+	min-width: 8.8rem;
 	padding: 0.6rem 1.2rem;
 	border-radius: var(--radius-medium1);
 	border: var(--border-width-static-regular) solid var(--color-button-secondary-fill);
@@ -1457,6 +1458,10 @@ strong {
 	display: block;
 	font-weight: 700;
 	font-size: var(--font-size-navigation-depth-medium);
+}
+.nav_list .nl_dept1_link.active::after {
+	left: 0;
+	width: 100%;
 }
 .nld_cont {
 	position: absolute;

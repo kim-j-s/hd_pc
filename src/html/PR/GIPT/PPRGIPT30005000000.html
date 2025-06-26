@@ -6,7 +6,7 @@
 
 <div id="wrap" class="wrap">
 	<!-- s: 25-05-13 수정 -->
-	{{> layout/header_pc h-prd="하이펫보험" h-title="보험료확인" }}
+	{{> layout/header_pc h-prd="하이펫보험" }}
 	<!-- e: 25-05-13 수정 -->
 	<div id="container" class="container">
 		<div class="content">
@@ -124,7 +124,13 @@
 			</div>
 
 			<div class="guarantee_btn_area">
+				<!-- s: 강아지  -->
 				{{> cp/linkButton bl_class="short_cut short_cut_icon short_cut_icon_ty2" bl_text="반려동물 의료비 한도 안내" bl_title="팝업 열림" role_b=true}}
+				<!-- s: 강아지  -->
+
+				<!-- e: 강아지  -->
+				<!-- {{> cp/linkButton bl_class="short_cut short_cut_icon short_cut_icon_ty3" bl_text="반려동물 의료비 한도 안내" bl_title="팝업 열림" role_b=true}} -->
+				<!-- e: 강아지  -->
 			</div>			
 
 			<!-- s: 상세 보장 목록 -->
@@ -285,10 +291,6 @@
 		{{> cp/panel_하이펫 panel-title="반려동물 정보" step1=true }}
 		<!-- e: 사이드 패널 -->
 	</div>
-
-	<!-- footer -->
-	{{> layout/footer }}
-	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
