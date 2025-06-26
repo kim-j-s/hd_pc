@@ -154,6 +154,10 @@
 	& + [class^=list_]{
 		margin-top: var(--gap-5);
 	}
+
+	& + .form_box {
+		margin-top: var(--gap-11);
+	}
 }
 
 
@@ -306,6 +310,10 @@
 		.hd_btn {
 			min-width: 160px;
 		}
+	}
+
+	& + .banner_box {
+		margin-top: var(--gap-11);
 	}
 }
 
@@ -743,7 +751,14 @@
 			.btn_area {
 				width: 360px;
 				margin: var(--gap-5) auto 0;
-	
+
+				&:has(.hd_icon){ 
+					width: auto;
+					margin: 0;
+					.hd_btn {
+						flex: 0 0 auto;
+					}
+				}
 				.hd_btn {
 					flex: 1;
 				}
@@ -814,6 +829,10 @@
 				}
 			}
 		}
+	}
+
+	&.ty6 {
+		
 	}
 
 	& + .info_gray {
