@@ -1,9 +1,24 @@
 {{#> layout/default page-title="보험료확인 | 상품"}}
 
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="보험료확인" }}
+	{{> layout/header_pc h-prd="연금보험" }}
 	<div id="container" class="container">
 		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						든든한 노후를 위한 <strong>연금보험</strong>,<br>
+						이렇게 준비하세요
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+			
+			<!-- s: 디자인 수정 (현업요청) -->
 			<div class="bg_top_cover guarantee_ty2_top_container">
 				<div class="inner">
 					<p class="head_text">
@@ -32,9 +47,7 @@
 							<strong class="data">15년</strong>
 						</span>
 						<span class="i_data">
-							<!-- s: 25-05-16 수정 -->
 							<span class="text">납입주기</span>
-							<!-- e: 25-05-16 수정 -->
 							<strong class="data">월납</strong>
 						</span>
 						<span class="i_data grow">
@@ -46,22 +59,25 @@
 					<div class="modify_ba">{{> cp/button type="3" size="5" b-text="변경" btn-title="가입조건 변경 팝업열기"}}</div>
 				</div>
 			</div>
-			<!-- s: 25-05-13 -->
-			<div class="btn_area">
-				{{> cp/button type="3" size="3" b-text="예상환급금 보기" btn-title="전체 팝업"}} 
-				{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기" btn-title="전체 팝업"}}
-			</div>
+			<!-- e: 디자인 수정 (현업요청) -->
+			
 			<div class="checkbox_group_wrap">
 				{{> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="내 연금저축한도 조회에 동의해요" }}
 			</div>
-			<!-- e: 25-05-13 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="이대로 가입하기" }}
+				</div>
+			</div>
 		</div>
 		<!--content-->
-	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">{{> cp/button type="1" size="1" b-text="이대로 가입하기" }}</div>
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_연금 panel-title="가입자 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
+	
 </div>
 
 <!-- s: popup area -->
