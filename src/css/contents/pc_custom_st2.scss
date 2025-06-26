@@ -62,7 +62,6 @@
 
 .btn_area {
 	justify-content: flex-start;
-
 	.pack {
 		flex: 0 0 auto;
 		display: flex;
@@ -80,6 +79,18 @@
 	}
 	& + .content_top {
 		margin-top: var(--gap-11);
+	}
+	&.half {
+		width: calc(50% - 16px);
+		button {
+			flex: 1;
+		}
+	}
+	&.full {
+		width: 100%;
+		button {
+			flex: 1;
+		}
 	}
 }
 
@@ -340,6 +351,9 @@
 	.inp_checkbox{
 		flex: 1;
 	}
+	&.ty2 {
+		flex-wrap: wrap;
+	}
 }
 
 //임시
@@ -474,6 +488,9 @@
 // info_gray
 .info_gray {
 
+	& + .acd_item_ty2 {
+		margin-top: var(--gap-11);
+	}
 	& + .form_box {
 		margin-top: var(--gap-8);
 	}
@@ -608,6 +625,21 @@
 						width: 100px;
 					}
 				}
+			}
+		}
+		&.df_type_w_ty9 {//90 자동차 문서확인
+			padding-bottom: var(--gap-6);
+			border-bottom: 1px solid var(--color-divider-gray-light);
+			> dl {
+				&:nth-child(2n-1){
+					border-right: 0;
+				}
+				dt {
+					width: 90px;
+				}
+			}
+			+ .btn_area {
+				margin-top: var(--gap-6);
 			}
 		}
 	}
@@ -1314,15 +1346,15 @@
 	.form_group_wrap [class^=form_line] .label_tit {
 		.tooltip_wrap {
 			margin-left: var(--gap-2);
-			vertical-align: middle;
+			vertical-align: bottom;
 			.tooltip_head button .hd_icon {
-				top: calc(50% - 1px);
+				top: calc(50% - 3px);
 				width: 20px;
 				height: 20px;
 			}
-			.tooltip_panel {
-				top: calc(100% + 12px);
-			}
+			// .tooltip_panel {
+			// 	top: calc(100% + 12px);
+			// }
 		}
 	}
 	+ .form_box {

@@ -1,18 +1,17 @@
 {{#> layout/default page-title="자동차 피보험자 정보 | 상품"}}
-<!-- s: 25-05-19 팝업에서 페이지로 수정 -->
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="피보험자 정보" }}
+		{{> layout/header_pc h-prd="자동차보험" }}
+		
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-            특약 가입을 위한 <br>
-            <strong>사진을 등록</strong>해주세요
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">피보험자 정보</div>
+						<h2 class="p_title">
+              특약 가입을 위한 <strong>사진을 등록</strong>해주세요
+						</h2>
+					</div>
 				</div>
-				<!-- e: content_top -->
-<!-- e: 25-05-19 팝업에서 페이지로 수정 -->
         <ul class="list_ty3">
           <li>부적합한 사진(허위 및 해당 사진이 아닌 경우)으로 변경하실 경우, 특약은 무효가 되며 할인보험료를 환입하셔야 합니다.</li>
           <li>사진은 10MB이하의 JPG, JPEG, GIF, PNG 파일만 등록이 가능합니다.</li>
@@ -26,7 +25,7 @@
           </div>
 
           <div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-            <div class="btn_area">
+            <div class="btn_area center">
               {{> cp/button type="2" size="2" b-text="전계약 사진 불러오기" }}
             </div>
 
@@ -922,10 +921,8 @@
 							</ul>
 					
 							<div class="radio_group_wrap column">
-								<!-- s: 25-05-28 수정 -->
 								{{> cp/radio rd-class="lg" rd-id="radio02-1" name="radio01-2" labelname="지금 등록" checked=true }}
 								{{> cp/radio rd-class="lg" rd-id="radio02-2" name="radio01-2" labelname="나중에 등록" labelcont="보험시작일로부터 30일이내"}}
-								<!-- e: 25-05-28 수정 -->
 							</div>
 							<div class="space_list_ty2">
 								<div class="acd_item acd_item_ty2">
@@ -996,10 +993,8 @@
 							<!-- 중고차 신규 가입일 경우 -->
 							<h3 class="title_h3"><span class="disabled_on">선택</span> ECO 마일리지 사진등록</h3>
 							<div class="radio_group_wrap column">
-								<!-- s: 25-05-28 수정 -->
 								{{> cp/radio rd-class="lg" rd-id="radio03-1" name="radio01-3" labelname="지금 등록" checked=true }}
 								{{> cp/radio rd-class="lg" rd-id="radio03-2" name="radio01-3" labelname="나중에 등록" labelcont="보험시작일로부터 30일이내"}}
-								<!-- e: 25-05-28 수정 -->
 							</div>
 							
 							<div class="space_list_ty2">
@@ -1028,7 +1023,7 @@
 											</div>
 
 											<p class="text_sub">ECO 마일리지 특약 정산을 위한 계기판 사진과 주행거리를 등록해 주세요.</p>
-											{{> cp/checkbox id="checkbox100_1" label_class="chk_label_ty3" label_class="chk_label_ty3" label_class="chk_label_ty3" labelname="할인특약 제외" }}
+											{{> cp/checkbox id="checkbox100_1" label_class="chk_label_ty3" labelname="할인특약 제외" }}
 
 											<!-- s: 이미지 파일 붙는 영역 -->
 											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
@@ -1076,21 +1071,23 @@
             문자로 링크 받기 내용
           </div>
         </div>
-      </div>
-    </div>
-<!-- s: 25-05-19 팝업에서 페이지로 수정 -->
-		<!-- s: 하단 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-        {{> cp/button type="1" size="1" b-text="사진을 등록해 주세요" disabled=true }}
-        <!-- {{> cp/button type="1" size="1" b-text="보험료 재계산" }}
-        {{> cp/button type="1" size="1" b-text="다음" }} -->
-        <!-- {{> cp/button type="3" size="1" b-text="취소" }}
-        {{> cp/button type="1" size="1" b-text="적용" }} -->
-			</div> 
+        <!-- s: 하단 버튼 영역 -->
+        <div class="bottom_fix_wrap">
+          <div class="btn_area">
+            {{> cp/button type="3" size="1" b-text="이전" }}
+            {{> cp/button type="1" size="1" b-text="사진을 등록해 주세요" disabled=true }}
+            <!-- {{> cp/button type="1" size="1" b-text="보험료 재계산" }}
+            {{> cp/button type="1" size="1" b-text="다음" }} -->
+            <!-- {{> cp/button type="3" size="1" b-text="취소" }}
+            {{> cp/button type="1" size="1" b-text="적용" }} -->
+          </div> 
+        </div>
+        <!-- s: 하단 버튼 영역 -->
+			</div>
+			<!-- s: 사이드 패널 -->
+			{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+			<!-- e: 사이드 패널 -->
 		</div>
-		<!-- s: 하단 버튼 영역 -->
 	</div>
-<!-- e: 25-05-19 팝업에서 페이지로 수정 -->
  
 {{/ layout/default }}
