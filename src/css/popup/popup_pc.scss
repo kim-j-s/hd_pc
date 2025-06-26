@@ -71,8 +71,12 @@
 			transform: none;
 		}
 	}
-
 	&.full {
+		&.big {
+			.popup_container {
+				width: 800px;
+			}
+		}
 		.popup_container {
 			align-items: center;
 			// width: 734px;
