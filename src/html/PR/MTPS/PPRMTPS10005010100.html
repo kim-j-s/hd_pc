@@ -2,18 +2,18 @@
 
 <!-- s: 25-05-21 수정 -->
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="피보험자 정보" }}
+	{{> layout/header_pc h-prd="자동차보험" }}
+	
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					특약 가입을 위한 <br>
-					<strong>사진을 등록</strong>해주세요
-				</h2>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">피보험자 정보</div>
+					<h2 class="p_title">
+		  				특약 가입을 위한 <strong>사진을 등록</strong>해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
-
 			<ul class="list_ty3">
 				<li>부적합한 사진(허위 및 해당 사진이 아닌 경우)으로 변경하실 경우, 특약은 무효가 되며 할인보험료를 환입하셔야 합니다.</li>
 				<li>사진은 10MB이하의 JPG, JPEG, GIF, PNG 파일만 등록이 가능합니다.</li>
@@ -42,7 +42,7 @@
 							{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" msg3="문자를 받을 휴대폰 번호를 입력해주세요." }}
 						</div>
 					</div>
-					<div class="btn_area">
+					<div class="btn_area half">
 						<!-- {{> cp/button type="2" size="2" b-text="링크 받기"}} --><!-- 사진 등록 전 -->
 						{{> cp/button type="2" size="2" b-text="등록 사진 확인" popup="pop_type02" }}<!-- 사진 등록 후 -->
 					</div>
@@ -91,16 +91,19 @@
 					<!-- e: 25-06-18 -->
 				</div>
 			</div>
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="문자로 링크를 받으세요" }}
+				</div> 
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 		</div>
 	</div>
 
-	<!-- s: 하단 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="링크 받기" }}
-		</div> 
-	</div>
-	<!-- s: 하단 버튼 영역 -->
+	<!-- s: 사이드 패널 -->
+	{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+	<!-- e: 사이드 패널 -->
 </div>
-<!-- e: 25-05-21 수정 -->
 {{/ layout/default }}
