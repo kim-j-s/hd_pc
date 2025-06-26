@@ -54,87 +54,80 @@
 			<div class="divider_ty1"></div>
 			<div class="form_box">
 				<h3 class="title_h3">반려동물 사진</h3>
-				<div class="file_upload_wrap">
-					<div class="file_info_box">
-						<h3 class="title_h3">장애인증명서(복지카드) 사진 등록</h3>
-						<p class="info_text">
-							<strong class="point">사진을 등록하지 않으면 특약에 가입할 수 없어요.</strong><br>
-							서류(카드)가 선명하게 보이도록 정면에서 촬영해주세요.
-						</p>
-						<ul class="list_ty2">
-							<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요</li>
-						</ul>
-					</div>
+					<div class="file_upload_wrap">
+						<div class="file_info_box">
+							<h3 class="title_h3">앞모습 전체 사진 등록</h3>
+							<ul class="list_ty2">
+								<li>최근 3개월 이내의 사진을 올려주세요.</li>
+								<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요</li>
+							</ul>
+						</div>
 
-					<!-- s: 이미지 파일 붙는 영역 -->
-					<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-					<div class="file_attach_box">
-						<div class="file_thumbnail">
-							<img src="../../../images/common/img_certify_card_ex.png" alt="복지카드 예시 이미지" />
+						<!-- s: 이미지 파일 붙는 영역 -->
+						<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+						<div class="file_attach_box">
+							<div class="file_thumbnail">
+							<img src="../../../images/content/gipt/img_animal_certificate_before.png" alt="예시 이미지">
+							</div>
 						</div>
-					</div>
-					<!-- 
-						등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
-						등록 후 이미지일 시, active 클래스 추가
-						등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
-					-->
-					<!-- <div class="file_attach_box active">
-						<div class="file_thumbnail">
-							<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
-						</div>
-						<button type="button" class="btn_file_delete">
-							<span>등록한 이미지 삭제하기</span>
-						</button>
-					</div> -->
-					<!-- e: 이미지 파일 붙는 영역 -->
-
-					<!-- s: 이미지 파일 버튼 -->
-					<div class="btn_area center">
-						<!-- 등록 전 노출 -->
-						<div class="file_btn">
-							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-							<label for="file">
-								<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-									<i class="hd_icon carmeraSvg"></i>
-									사진 등록하기
-								</span>
-							</label>
-						</div>
-						<!-- 등록 후 노출 -->
-						<!-- <div class="file_btn">
-							<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-							<label for="file">
-								<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-									<i class="hd_icon carmeraSvg2"></i>
-									사진 변경하기
-								</span>
-							</label>
+						<!-- 
+							등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
+							등록 후 이미지일 시, active 클래스 추가
+							등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
+						-->
+						<!-- <div class="file_attach_box active">
+							<div class="file_thumbnail">
+								<img src="../../../images/temp/img_carmera_temp.png" alt="등록된 반려동물 이미지">
+							</div>
+							<button type="button" class="btn_file_delete">
+								<span>등록한 이미지 삭제하기</span>
+							</button>
 						</div> -->
+						<!-- e: 이미지 파일 붙는 영역 -->
+
+						<!-- s: 이미지 파일 버튼 -->
+						<div class="btn_area center">
+							<!-- 등록 전 노출 -->
+							<div class="file_btn">
+								<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+								<label for="file">
+									<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+										<i class="hd_icon carmeraSvg"></i>
+										사진 등록하기
+									</span>
+								</label>
+							</div>
+							<!-- 등록 후 노출 -->
+							<!-- <div class="file_btn">
+								<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+								<label for="file">
+									<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+										<i class="hd_icon carmeraSvg2"></i>
+										사진 변경하기
+									</span>
+								</label>
+							</div> -->
+						</div>
+						<!-- e: 이미지 파일 버튼 -->
 					</div>
-					<!-- e: 이미지 파일 버튼 -->
-				</div>
 			</div>
 
 			
 			<div class="divider_ty1"></div>
-			<h3 class="title_h3">할인 정보</h3>
-			<!-- s: 25-05-19 수정 -->
-			<!-- s: 25-06-19 수정 -->
-			<div class="checkbox_group_wrap column">
-				{{#> cp/checkbox labelname="동물보호관리시스템에 동물등록을 했어요.<br>(5% 할인)"  id="checkbox01-1" label_class="chk_label_ty3" }}
+			<h3 class="title_h3">할인 조건</h3>
+			<div class="checkbox_group_wrap">
+				{{#> cp/checkbox labelname="동물보호관리시스템에 동물등록을 했어요.(5% 할인)" id="checkbox01-1" label_class="chk_label_ty3" }}
 				<div class="chk_lby2">
 					{{> cp/linkButton bl_class="short_cut" bl_text="동물등록 우대 할인" role_b=true question_tit="동물등록 우대 할인" }} 
 				</div>
 				{{/ cp/checkbox }}
 				
-				{{#> cp/checkbox id="checkbox01-2" label_class="chk_label_ty3" labelname="오늘 기준 3년 전에 입양한 유기동물이에요.<br>(3% 할인)" }}
+				{{#> cp/checkbox id="checkbox01-2" label_class="chk_label_ty3" labelname="오늘 기준 3년 전에 입양한 유기동물이에요.(3% 할인)" }}
 				<div class="chk_lby2">
 					{{> cp/linkButton bl_class="short_cut" bl_text="유기동물 우대 할인" role_b=true question_tit="유기동물 우대 할인" }} 
 				</div>
 				{{/ cp/checkbox }}
 			</div>
-			<!-- e: 25-06-19 수정 -->
-			<!-- e: 25-05-19 수정 -->
 
 			<div class="checkbox_group_wrap column">
 				{{#> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="반려동물 정보를 정확히 입력했어요" }}
@@ -143,14 +136,21 @@
 						<li>
 							<strong>입력된 반려동물의 정보(품종/생년월일/성별/이름)가 정확한지 확인해주세요.<br>(동물등록증이 있다면 동물등록증에 등록된 정보와 일치하는지 확인해주세요.)</strong>
 						</li>
-						<!-- s: 25-06-05 수정 -->
-						
 						<li>제출한 사진 및 서류가 정확하지 않을 경우 추후 보상에 <strong class="point">불이익</strong>이 있거나, <strong class="point">보험료 추징</strong>이 발생할 수도 있습니다.</li>
-						<!-- e: 25-06-05 수정 -->
 					</ul>
 				</div>
 				{{/ cp/checkbox}}
 			</div>
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 		</div>
 
 
