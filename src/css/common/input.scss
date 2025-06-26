@@ -531,6 +531,7 @@
 	& + .info_gray.ty2,
 	& + .radio_group_wrap,
 	& + .checkbox_group_wrap,
+	& + .spacebox6,
 	& + .title_h3 {
 		// margin-top: var(--gap-8);
 		margin-top: var(--gap-11);
@@ -609,15 +610,11 @@
 
 		.input_text + .btn_link.short_cut,
 		.form_line,
-		.btn_area,
-		.form_group_wrap {
+		.btn_area {
 			margin-top: var(--gap-5);
 
 			& ~ .info_gray { 
 				margin-top: var(--gap-5);
-			}
-			& > .form_line {
-				margin-top: 0;
 			}
 		}
 		.inp_checkbox {
