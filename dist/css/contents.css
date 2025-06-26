@@ -1134,6 +1134,12 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty13 {
 	background-image: url(../images/content/bi/visual/bg_img_ltpn.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty14 {
+	background-image: url(../images/content/bi/visual/bg_img_gisf.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty15 {
+	background-image: url(../images/content/bi/visual/bg_img_gisf2.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
@@ -1247,6 +1253,12 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty18 {
 	background-image: url(../images/content/bi/visual/bg_exp_ty18.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty19 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty19.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty20 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty20.png);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details.grid3 .pb_details_inner {
 	grid-template-columns: repeat(3, 1fr);
@@ -3592,10 +3604,12 @@ ul + .form_group_wrap {
 	font-weight: 700;
 }
 .info_cont h2 + .table_wrap,
+.info_cont h2 + .info_gray,
 .info_cont h2 + h3,
 .info_cont h2 + ul,
 .info_cont h2 + ol,
 .info_cont .title_h2 + .table_wrap,
+.info_cont .title_h2 + .info_gray,
 .info_cont .title_h2 + h3,
 .info_cont .title_h2 + ul,
 .info_cont .title_h2 + ol {
@@ -3879,6 +3893,9 @@ ul + .form_group_wrap {
 }
 .info_gray.mg_ty2 {
 	margin-top: var(--gap-8);
+}
+.info_gray + h2 {
+	margin-top: var(--gap-9);
 }
 .btn_area + .acd_item {
 	margin-top: var(--gap-11);
@@ -4620,7 +4637,6 @@ ul + .form_group_wrap {
 /* 마이 */
 /* 배경색 있는 상단 컨텐츠 영역 */
 .bg_top_cover {
-	margin: -2.4rem -2.4rem 0 -2.4rem;
 	padding: var(--padding-8);
 	background-color: var(--color-surface-secondary-subtler);
 }
@@ -4638,6 +4654,9 @@ ul + .form_group_wrap {
 .bg_top_cover + .tag_item_wrap {
 	margin: 0 -2.4rem;
 	padding: 1.6rem 2.4rem;
+}
+.bg_top_cover + .checkbox_group_wrap {
+	margin-top: var(--gap-11);
 }
 /* 배경색 있는 상단 컨텐츠 영역 */
 /* 계약상세 */
@@ -5307,4 +5326,32 @@ ul + .form_group_wrap {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+/* 해외장기체류보험 - 실손의료보험 중지 및 환급 제도 */
+.title_h4 + .info_gray.ty3 {
+	margin-top: 1.2rem;
+}
+.info_gray.ty3 .tit {
+	font-size: var(--font-size-label-medium);
+}
+.info_gray.ty3 .txt {
+	font-size: var(--font-size-label-small);
+	color: var(--color-text-subtle);
+}
+.info_gray.ty3 .point {
+	padding: 0 var(--padding-1);
+	font-size: var(--font-size-button-large);
+}
+.info_gray.ty3 .list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: var(--gap-2);
+}
+.info_gray.ty3 .list + .list {
+	margin-top: var(--gap-5);
 }

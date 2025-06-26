@@ -57,132 +57,156 @@
 		</ul>
 
 		<!-- s: Full 팝업 -->
-		<div class="popup_wrap full active" id="pop_MPRLTPN11003020000" role="dialog" aria-hidden="false">
+		<div class="popup_wrap bottom active" id="pop_MPRLTPN11003020000" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_MPRLTPN11003020000');"></div>
 				<div class="popup_inner">
 					<div class="popup_head"><div class="popup_head_title">예상환급금</div></div>
+
 					<div class="popup_cont">
 						<div class="popup_content">
-							<div class="popup_content_top">
-								<div class="form_line">
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="기준이율 선택" onclick="openHDPopup(this,'pop_si_01');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="">최저보증이율</div>
-											<span class="si_stat">선택됨</span>
+							<div class="info_cont">
+								<h2 class="pop_title_h1">총 납입보험료 및 만기환급금 예상 금액</h2>
+								<div class="info_gray">
+									<dl>
+										<dt>총 보험료</dt>
+										<dd>24,000,000원</dd>
+									</dl>
+									<dl>
+										<dt>예상만기환급금</dt>
+										<dd>25,932,671원</dd>
+									</dl>
+									<dl>
+										<dt>환급률</dt>
+										<dd>108.05%</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="divider_ty1"></div>
+
+							<div class="info_cont">
+								<h2 class="pop_title_h1">예상 해약환급금 (기간내 해지시)</h2>
+								<div class="form_group_wrap">
+									<div class="form_line">
+										<div class="select_option_box">
+											<select name="" id="" title="기준이율 선택" class="selectbox">
+												<option value="" selected>최저보증이율</option>
+												<option value="">평균공시이율</option>
+												<option value="">공시이율</option>
+											</select>
 										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="table_wrap">
-								<table class="table table_num_type01">
-									<caption>
-										최저보증이율을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공
-									</caption>
-									<!-- <caption>평균공시이율(1.70%)을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공</caption> -->
-									<!-- <caption>공시이율(1.70%)을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공</caption> -->
-									<colgroup>
-										<col style="width: 20%" />
-										<col style="width: 30%" />
-										<col style="width: 30%" />
-										<col style="width: 20%" />
-									</colgroup>
-									<thead>
-										<tr>
-											<th scope="col">기간</th>
-											<th scope="col">납입보험료</th>
-											<th scope="col">해약환급금</th>
-											<th scope="col">환급률</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>3개월</td>
-											<td>600,000</td>
-											<td>569,681</td>
-											<td>94.95</td>
-										</tr>
-										<tr>
-											<td>6개월</td>
-											<td>1,200,000</td>
-											<td>1,141,159</td>
-											<td>95.1</td>
-										</tr>
-										<tr>
-											<td>9개월</td>
-											<td>1,800,000</td>
-											<td>1,714,436</td>
-											<td>95.25</td>
-										</tr>
-										<tr>
-											<td>1년</td>
-											<td>2,400,000</td>
-											<td>2,289,361</td>
-											<td>95.39</td>
-										</tr>
-										<tr>
-											<td>3년</td>
-											<td>7,200,000</td>
-											<td>6,954,382</td>
-											<td>96.59</td>
-										</tr>
-										<tr>
-											<td>5년</td>
-											<td>12,000,000</td>
-											<td>11,736,575</td>
-											<td>97.8</td>
-										</tr>
-										<tr>
-											<td>7년</td>
-											<td>16,800,000</td>
-											<td>16,568,045</td>
-											<td>98.62</td>
-										</tr>
-										<tr>
-											<td>10년</td>
-											<td>24,000,000</td>
-											<td>23,997,575</td>
-											<td>99.99</td>
-										</tr>
-										<tr>
-											<td>15년</td>
-											<td>24,000,000</td>
-											<td>24,178,305</td>
-											<td>100.74</td>
-										</tr>
-										<tr>
-											<td>20년</td>
-											<td>24,000,000</td>
-											<td>24,361,762</td>
-											<td>101.51</td>
-										</tr>
-										<tr>
-											<td>30년</td>
-											<td>24,000,000</td>
-											<td>24,737,023</td>
-											<td>103.07</td>
-										</tr>
-										<tr>
-											<td>40년</td>
-											<td>24,000,000</td>
-											<td>25,123,695</td>
-											<td>104.68</td>
-										</tr>
-										<tr>
-											<td>50년</td>
-											<td>24,000,000</td>
-											<td>25,522,125</td>
-											<td>106.34</td>
-										</tr>
-										<tr>
-											<td>NN년</td>
-											<td>24,000,000</td>
-											<td>25,932,671</td>
-											<td>108.05</td>
-										</tr>
-									</tbody>
-								</table>
+								<div class="table_wrap">
+									<table class="table table_num_type01">
+										<caption>
+											최저보증이율을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공
+										</caption>
+										<!-- <caption>평균공시이율(1.70%)을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공</caption> -->
+										<!-- <caption>공시이율(1.70%)을 적용했을 때 기간,납입보험료,해약환급금,환급률 제공</caption> -->
+										<colgroup>
+											<col style="width: 20%" />
+											<col style="width: 30%" />
+											<col style="width: 30%" />
+											<col style="width: 20%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">기간</th>
+												<th scope="col">납입보험료</th>
+												<th scope="col">해약환급금</th>
+												<th scope="col">환급률</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>3개월</td>
+												<td>600,000</td>
+												<td>569,681</td>
+												<td>94.95</td>
+											</tr>
+											<tr>
+												<td>6개월</td>
+												<td>1,200,000</td>
+												<td>1,141,159</td>
+												<td>95.1</td>
+											</tr>
+											<tr>
+												<td>9개월</td>
+												<td>1,800,000</td>
+												<td>1,714,436</td>
+												<td>95.25</td>
+											</tr>
+											<tr>
+												<td>1년</td>
+												<td>2,400,000</td>
+												<td>2,289,361</td>
+												<td>95.39</td>
+											</tr>
+											<tr>
+												<td>3년</td>
+												<td>7,200,000</td>
+												<td>6,954,382</td>
+												<td>96.59</td>
+											</tr>
+											<tr>
+												<td>5년</td>
+												<td>12,000,000</td>
+												<td>11,736,575</td>
+												<td>97.8</td>
+											</tr>
+											<tr>
+												<td>7년</td>
+												<td>16,800,000</td>
+												<td>16,568,045</td>
+												<td>98.62</td>
+											</tr>
+											<tr>
+												<td>10년</td>
+												<td>24,000,000</td>
+												<td>23,997,575</td>
+												<td>99.99</td>
+											</tr>
+											<tr>
+												<td>15년</td>
+												<td>24,000,000</td>
+												<td>24,178,305</td>
+												<td>100.74</td>
+											</tr>
+											<tr>
+												<td>20년</td>
+												<td>24,000,000</td>
+												<td>24,361,762</td>
+												<td>101.51</td>
+											</tr>
+											<tr>
+												<td>30년</td>
+												<td>24,000,000</td>
+												<td>24,737,023</td>
+												<td>103.07</td>
+											</tr>
+											<tr>
+												<td>40년</td>
+												<td>24,000,000</td>
+												<td>25,123,695</td>
+												<td>104.68</td>
+											</tr>
+											<tr>
+												<td>50년</td>
+												<td>24,000,000</td>
+												<td>25,522,125</td>
+												<td>106.34</td>
+											</tr>
+											<tr>
+												<td>NN년</td>
+												<td>24,000,000</td>
+												<td>25,932,671</td>
+												<td>108.05</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 
 							<!-- s: 25-05-07 수정 -->
@@ -223,7 +247,7 @@
 					<!-- s: 하단 고정 버튼 영역 -->
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">확인</span>
 							</button>
 						</div>

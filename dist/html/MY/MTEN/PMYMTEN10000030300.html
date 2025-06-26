@@ -580,44 +580,60 @@
 					</div>
 				</div>
 			</div>
-
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2">
-							<!-- s: 25-05-29 수정 -->
-							환급 보험료 <strong>확인</strong> 후<br />
-							<!-- e: 25-05-29 수정 -->
-							<strong>전자서명을 진행</strong>해주세요
-						</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>메뉴명</strong>
+							</h2>
+							<div class="sub_desc">환급 보험료 <strong>확인</strong> 후 <strong>전자서명을 진행</strong>해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
 
 					<div class="info_gray">
-						<dl>
-							<dt>환급받으실 금액</dt>
-							<dd>24,900원</dd>
-						</dl>
+						<div class="data_box df_type_w_ty1">
+							<dl>
+								<dt>환급받으실 금액</dt>
+								<dd>24,900원</dd>
+							</dl>
+						</div>
 					</div>
 
 					<!-- s: 현금환급 -->
-					<h2 class="pop_title_h1">환급계좌 입력</h2>
+					<h3 class="title_h3">환급계좌 입력</h3>
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">은행</div>
-							<div class="select_item select_item_case01" role="button" tabindex="0" title="은행 선택">
-								<div class="select_item_inner">
-									<div class="si_item" data-placeholder="은행 선택"></div>
-									<span class="si_stat">선택됨</span>
-								</div>
+							<div class="select_option_box">
+								<select name="" id="" title="은행 선택" class="selectbox">
+									<option value="" selected>선택 옵션값 1</option>
+									<option value="">선택 옵션값 2</option>
+								</select>
 							</div>
 						</div>
 						<div class="form_line">
 							<div class="label_tit">계좌번호</div>
 							<div class="input_text">
 								<div class="inp">
-									<input type="text" placeholder="계좌번호 입력" title="계좌번호 입력" />
+									<input type="tel" placeholder="계좌번호 입력" title="계좌번호 입력" />
 									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 								</div>
 							</div>
@@ -627,6 +643,19 @@
 						</div>
 					</div>
 					<!-- e: 현금환급 -->
+
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">전자서명</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 
 					<!-- s: 꼭 알아두세요 -->
 					<div class="bottom_fix_notice">
@@ -647,20 +676,9 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
-
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<!-- s: 25-05-29 수정 -->
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-						<span class="text">전자서명</span>
-					</button>
-					<!-- e: 25-05-29 수정 -->
-				</div>
-			</div>
 		</div>
 
 		<!-- s: popup area -->
-
 		<!-- s: 자동차 배서 메뉴 -->
 		<!-- s: 자동차 계약변경 (기획/디자인 미정) -->
 		<div class="popup_wrap full" id="pop_insChk" role="dialog" aria-hidden="true">
@@ -808,13 +826,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- e: 자동차 계약변경 -->
-		<!-- e: 자동차 배서 메뉴 -->
-
+		<!-- e: 자동차 계약변경 --><!-- e: 자동차 배서 메뉴 -->
 		<!-- e: popup area -->
 	</body>
 </html>
-
-<script>
-	$(document).ready(function () {});
-</script>
