@@ -1236,6 +1236,18 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty14 {
 	background-image: url(../images/content/bi/visual/bg_exp_ty14.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty15 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty15.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty16 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty16.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty17 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty17.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty18 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty18.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details.grid3 .pb_details_inner {
 	grid-template-columns: repeat(3, 1fr);
 }
