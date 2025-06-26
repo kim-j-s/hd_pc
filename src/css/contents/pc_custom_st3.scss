@@ -790,12 +790,13 @@
 		&.v_bg_ty1 { 
 			background-image: url(../images/content/guarantee/img_perpect.svg);
 		}  
-
 		
 		&.v_bg_ty2 { //풍수해·지진재해보험(주택용)
 			background-image: url(../images/content/guarantee/bg_img_gisf.svg);
 		}  
-		
+		&.v_bg_ty3 { //풍수해·지진재해보험(소상공인용)
+			background-image: url(../images/content/guarantee/bg_img_gisf2.svg);
+		} 
 		.bubble_msg {
 			position: relative;
 			flex: 1;

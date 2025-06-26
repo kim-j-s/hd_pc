@@ -1,440 +1,420 @@
 {{#> layout/default page-title="기초 정보 입력 | 다이렉트 풍수해·지진재해보험(소상공인)"}}
 <div id="wrap" class="wrap">
-{{> layout/header h-title="다이렉트 풍수해·지진재해보험(소상공인)" }}
+{{> layout/header_pc h-prd="풍수해∙지진재해보험(소상공인용)" }}
 
-	<form action="" class="bi_form">
-		<div class="bi_wrap">
-			<div class="stepper_wrap">
-				<div class="stepper" role="img">
-					<div class="pgs">
-						<span class="pgs_per" style="width: 0%;"><span class="motion home"></span></span>
-					</div>
-				</div>
-				<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
-				<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
-			</div>
-			
-			<div class="bi_stepper">
-				<div class="bi_top">
-					<!-- bit -->
-					<div class="bit">
-
-						<!-- s: 25-06-24 삭제 -->
-						<!-- 생년월일 -->
-						<!-- <div class="bit_inner active" data-pickitem="step1">
-							<p class="bit_inner_text">
-								고객님의 <span class="bold">생년월일</span>을 알려주세요.
-							</p>
-							<div class="bit_inner_sub_text">
-								법인사업자는 다이렉트 PC홈페이지에서 가입할 수 있습니다.<br/>
-								가입이 어려운 경우
-								{{> cp/button_question pop_id="pop_info" question_tit="가입제한 안내 팝업 열기" }}
-							</div>
-							<div class="bit_btn_scrollx">
-								<button type="button" class="btn_link short_cut sm rd_box">
-									<span class="text">보장내용 자세히 보기</span>
-								</button>
-							</div>
-						</div> -->
-						<!-- 생년월일 -->
-						<!-- e: 25-06-24 삭제 -->
-
-						<!-- s: 25-06-24 삭제 -->
-						<!-- 성별 -->
-						<!-- <div class="bit_inner active" data-pickitem="step2">
-							<p class="bit_inner_text">
-								고객님의 <span class="bold">성별</span>을 알려주세요
-							</p>
-						</div> -->
-						<!-- 성별 -->
-						<!-- e: 25-06-24 삭제 -->
-
-						<!-- 주택유형 -->
-						<div class="bit_inner" data-pickitem="step">
-							<p class="bit_inner_text">
-								<span class="bold">건물 형태를 선택</span>해주세요
-							</p>
-							<!-- s: 25-06-24 수정 -->
-							<div class="bit_inner_sub_text">
-								법인사업자는 다이렉트 PC홈페이지에서 가입할 수 있습니다.
-							</div>
-							<div class="bit_btn_scrollx">
-								<button type="button" class="btn_link short_cut sm rd_box" onclick="openHDPopup(this,'pop_type01');">
-									<span class="text">건물 형태 구분 안내</span>
-								</button>
-								<button type="button" class="btn_link short_cut sm rd_box">
-									<span class="text">보장내용 자세히 보기</span>
-								</button>
-							</div>
-							<!-- e: 25-06-24 수정 -->
-						</div>
-						<!-- 주택유형 -->
-
-						<!-- 소유 구분 -->
-						<div class="bit_inner" data-pickitem="step">
-							<!-- s: 25-06-24 수정 -->
-							<p class="bit_inner_text">								
-								<span class="bold">사업장 소유 여부를 선택</span>해주세요
-							</p>
-							<!-- e: 25-06-24 수정 -->
-						</div>
-						<!-- 소유 구분 -->
-
-						<!-- s: 25-06-24 추가 -->
-						<!-- 업종 선택 -->
-						<div class="bit_inner" data-pickitem="step">
-							<p class="bit_inner_text">								
-								<span class="bold">업종을 선택</span>해주세요
-							</p>
-						</div>
-						<!-- 업종 선택 -->
-						<!-- e: 25-06-24 추가 -->
-
-					</div>
-					<!-- bit -->
-
-					<!-- bit_history -->
-					<div class="bit_history">
-						<div class="bit_history_inner">
-							<!-- s: 25-06-24 수정 -->
-							<!-- <button type="button" class="selected_case step1 birth" title="생년월일 수정"></button>
-							<button type="button" class="selected_case step2 gender" title="성별 수정"></button> -->
-							<button type="button" class="selected_case step1 home" title="건물형태 수정"></button>
-							<button type="button" class="selected_case step2 person" title="명의정보 수정"></button>
-							<button type="button" class="selected_case step3 store" title="업종 수정"></button>
-							<!-- e: 25-06-24 수정 -->
-						</div>
-					</div>
-					<!-- bit_history -->
-
-				</div>
-
-
-				<div class="bi_opts_wrap">
-
-					<!-- s: 25-06-24 삭제 -->
-					<!-- 생년월일 -->
-					<!-- <div class="opts_area" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step1">
-						<div class="opts_area_item column">
-							<div class="birth_date_field" aria-live="polite"></div>
-							<div class="bi_keypad">
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">1</button>
-									<button type="button" class="keypad_btn">2</button>
-									<button type="button" class="keypad_btn">3</button>
-									<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
+	<div id="container" class="container">
+		<div class="content content_st1">
+				<div class="prd_bi_wrap">
+					<div class="prd_bi_wrap_l">
+						<div class="pbw_inner pi_bg_ty15">
+				
+							<div class="pi_top">
+								<!-- s: 설계 업데이트 시 반영 예정 -->
+								<h2 class="pt_title">
+									<small>건강정보 제공만 해도 할인</small>
+									자연재해로부터 내 사업장을 지켜주는<br>
+									<span class="bold">다이렉트 풍수해·지진재해보험(소상공인)</span>
+								</h2>
+								<!-- e: 설계 업데이트 시 반영 예정 -->
+								<div class="pt_btn_area">
+									<a href="javascript:void(0)" class="btn_link short_cut sm rd_box">
+										<span class="text">보장내용 자세히 보기</span>
+									</a>
 								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">4</button>
-									<button type="button" class="keypad_btn">5</button>
-									<button type="button" class="keypad_btn">6</button>
-									<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
-								</div>
-								<div class="bi_keypad_item">
-									<button type="button" class="keypad_btn">7</button>
-									<button type="button" class="keypad_btn">8</button>
-									<button type="button" class="keypad_btn">9</button>
-									<button type="button" class="keypad_btn">0</button>
+							</div>
+				
+							<div class="pi_bottom">
+								<!-- s: 설계 업데이트 시 반영 예정 -->
+								<h3 class="pb_title">건강보험 하나만 있어도 든든한 보장!</h3>
+								<!-- e: 설계 업데이트 시 반영 예정 -->
+								<div class="pb_cont">
+									<div class="pb_details">
+										<div class="pb_details_inner">
+											<div class="item item_ico_ty5">
+												<p class="item_exp">
+													보험료 매월 55% 이상 지원
+													<small class="item_sub_txt">행정안전 및 지자체에서 보험료 지원</small>
+												</p>
+											</div>
+											<div class="item item_ico_ty19">
+												<p class="item_exp">
+													자연재해로 인한 손해 보장
+													<small class="item_sub_txt">태풍, 호우, 홍수, 지진 등</small>
+												</p>
+											</div>
+											<div class="item item_ico_ty20">
+												<p class="item_exp">
+													잔존물 처리비용도 보장
+													<small class="item_sub_txt">잔존물 제거비용, 보존비용</small>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="pbc_banners">
+										<div class="item">
+											<a href="#">
+												<img src="../../../images/event/banner1.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+											</a>
+										</div>
+										<div class="item">
+											<a href="#">
+												<img src="../../../images/event/banner2.png" alt="혜택 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div> -->
-					<!-- 생년월일 -->
-
-					<!-- 성별 -->
-					<!-- <div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio11" name="radio1" />
-								<label for="radio11">
-									<span class="label_cont">남성</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio12" name="radio1" />
-								<label for="radio12">
-									<span class="label_cont">여성</span>
-								</label>
-							</div>
-						</div>
-					</div> -->
-					<!-- 성별 -->
-					<!-- e: 25-06-24 삭제 -->
-
-					<!-- 건물형태 -->
-					<!-- s: 25-06-24 수정 -->
-					<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
-					<!-- e: 25-06-24 수정 -->
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio21" name="radio2" />
-								<label for="radio21">
-									<span class="label_cont">일반</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio22" name="radio2" />
-								<label for="radio22">
-									<span class="label_cont">공장</span>
-								</label>
-							</div>
-						</div>
 					</div>
-					<!-- 건물형태 -->
 
-					<!-- 소유 구분 -->
-					<!-- s: 25-06-24 수정 -->
-					<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
-					<!-- e: 25-06-24 수정 -->
-						<div class="opts_area_item">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio31" name="radio1" />
-								<label for="radio11">
-									<span class="label_cont">자가 소유</span>
-								</label>
+					<div class="prd_bi_wrap_r">
+						<form action="" class="bi_form">
+							<div class="bi_wrap">
+								<div class="bi_wrap_header">
+									<h3 class="bi_wrap_tit">기본정보 입력</h3>
+								</div>
+								<div class="stepper_wrap">
+									<div class="stepper" role="img">
+										<div class="pgs">
+											<span class="pgs_per" style="width: 0%;"><span class="motion store"></span></span>
+										</div>
+									</div>
+									<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+									<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
+								</div>			
+								
+								<div class="bi_stepper">
+									<div class="bi_top">
+										<!-- bit -->
+										<div class="bit">	
+											<!-- 주택유형 -->
+											<div class="bit_inner" data-pickitem="step">
+												<p class="bit_inner_text">
+													<span class="bold">건물 형태를 선택</span>해주세요
+												</p>
+												<!-- s: 25-06-24 수정 -->
+												<div class="bit_inner_sub_text">
+													법인사업자는 다이렉트 PC홈페이지에서 가입할 수 있습니다.
+												</div>
+												<div class="bit_btn_scrollx">
+													<button type="button" class="btn_link short_cut sm rd_box" onclick="openHDPopup(this,'pop_type01');">
+														<span class="text">건물 형태 구분 안내</span>
+													</button>
+												</div>
+												<!-- e: 25-06-24 수정 -->
+											</div>
+											<!-- 주택유형 -->
+
+											<!-- 소유 구분 -->
+											<div class="bit_inner" data-pickitem="step">
+												<!-- s: 25-06-24 수정 -->
+												<p class="bit_inner_text">								
+													<span class="bold">사업장 소유 여부를 선택</span>해주세요
+												</p>
+												<!-- e: 25-06-24 수정 -->
+											</div>
+											<!-- 소유 구분 -->
+
+											<!-- s: 25-06-24 추가 -->
+											<!-- 업종 선택 -->
+											<div class="bit_inner" data-pickitem="step">
+												<p class="bit_inner_text">								
+													<span class="bold">업종을 선택</span>해주세요
+												</p>
+											</div>
+											<!-- 업종 선택 -->
+										</div>
+										<!-- bit -->
+
+										<!-- bit_history -->
+										<div class="bit_history">
+											<div class="bit_history_inner">        
+												<button type="button" class="selected_case step1 home" title="건물형태 수정"></button>
+												<button type="button" class="selected_case step2 person" title="명의정보 수정"></button>
+												<button type="button" class="selected_case step3 store" title="업종 수정"></button>
+											</div>
+										</div>
+										<!-- bit_history -->
+									</div>
+
+									<div class="bi_opts_wrap">
+										<!-- 건물형태 -->
+										<!-- s: 25-06-24 수정 -->
+										<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+										<!-- e: 25-06-24 수정 -->
+											<div class="opts_area_item">
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio21" name="radio2" />
+													<label for="radio21">
+														<span class="label_cont">일반</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio22" name="radio2" />
+													<label for="radio22">
+														<span class="label_cont">공장</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<!-- 건물형태 -->
+
+										<!-- 소유 구분 -->
+										<!-- s: 25-06-24 수정 -->
+										<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
+										<!-- e: 25-06-24 수정 -->
+											<div class="opts_area_item">
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio31" name="radio1" />
+													<label for="radio11">
+														<span class="label_cont">자가 소유</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio32" name="radio1" />
+													<label for="radio12">
+														<span class="label_cont">임차</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<!-- 소유 구분 -->
+
+										<!-- s: 25-06-24 추가 -->
+										<!-- 업종 선택 -->
+										<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+
+											<!-- s: 일반 선택 시 -->
+											<!-- <div class="opts_area_item">
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-1" name="radio4" />
+													<label for="radio4-1">
+														<span class="label_cont">휴게음식점</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-2" name="radio4" />
+													<label for="radio4-2">
+														<span class="label_cont">일반음식점</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-3" name="radio4" />
+													<label for="radio4-3">
+														<span class="label_cont">세탁소</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-4" name="radio4" />
+													<label for="radio4-4">
+														<span class="label_cont">의원</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-5" name="radio4" />
+													<label for="radio4-5">
+														<span class="label_cont">수리점</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-6" name="radio4" />
+													<label for="radio4-6">
+														<span class="label_cont">여관/여인숙/유스호스텔</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-7" name="radio4" />
+													<label for="radio4-7">
+														<span class="label_cont">시장</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-8" name="radio4" />
+													<label for="radio4-8">
+														<span class="label_cont">일반판매시설</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-9" name="radio4" />
+													<label for="radio4-9">
+														<span class="label_cont">소형판매시설</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-10" name="radio4" />
+													<label for="radio4-10">
+														<span class="label_cont">목욕장</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-11" name="radio4" />
+													<label for="radio4-11">
+														<span class="label_cont">컴퓨터게임장</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-12" name="radio4" />
+													<label for="radio4-12">
+														<span class="label_cont">유흥주점</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-13" name="radio4" />
+													<label for="radio4-13">
+														<span class="label_cont">창고시설</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio4-14" name="radio4" />
+													<label for="radio4-14">
+														<span class="label_cont">화장장</span>
+													</label>
+												</div>
+											</div> -->
+											<!-- e: 일반 선택 시 -->
+
+											<!-- s: 공장 선택 시 -->
+											<div class="opts_area_item">
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-1" name="radio5" />
+													<label for="radio5-1">
+														<span class="label_cont">금속기계기구</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-2" name="radio5" />
+													<label for="radio5-2">
+														<span class="label_cont">의약품제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-3" name="radio5" />
+													<label for="radio5-3">
+														<span class="label_cont">고무제품제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-4" name="radio5" />
+													<label for="radio5-4">
+														<span class="label_cont">유성도료제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-5" name="radio5" />
+													<label for="radio5-5">
+														<span class="label_cont">플라스틱제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-6" name="radio5" />
+													<label for="radio5-6">
+														<span class="label_cont">도자기제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-7" name="radio5" />
+													<label for="radio5-7">
+														<span class="label_cont">면방적</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-8" name="radio5" />
+													<label for="radio5-8">
+														<span class="label_cont">염색표백가공</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-9" name="radio5" />
+													<label for="radio5-9">
+														<span class="label_cont">직물재단 및 재봉</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-10" name="radio5" />
+													<label for="radio5-10">
+														<span class="label_cont">합판제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-11" name="radio5" />
+													<label for="radio5-11">
+														<span class="label_cont">목공</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-12" name="radio5" />
+													<label for="radio5-12">
+														<span class="label_cont">수산물가공처리</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-13" name="radio5" />
+													<label for="radio5-13">
+														<span class="label_cont">과자류제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-14" name="radio5" />
+													<label for="radio5-14">
+														<span class="label_cont">인쇄</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-15" name="radio5" />
+													<label for="radio5-15">
+														<span class="label_cont">지공</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-16" name="radio5" />
+													<label for="radio5-16">
+														<span class="label_cont">세탁</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-17" name="radio5" />
+													<label for="radio5-17">
+														<span class="label_cont">전기제품제조</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-18" name="radio5" />
+													<label for="radio5-18">
+														<span class="label_cont">제분</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-19" name="radio5" />
+													<label for="radio5-19">
+														<span class="label_cont">정맥</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-20" name="radio5" />
+													<label for="radio5-20">
+														<span class="label_cont">정미(도정업)</span>
+													</label>
+												</div>
+												<div class="inp_radio rd_btn_s1">
+													<input type="radio" id="radio5-21" name="radio5" />
+													<label for="radio5-21">
+														<span class="label_cont">종자선별</span>
+													</label>
+												</div>
+											</div>
+											<!-- e: 공장 선택 시 -->
+									</div>
+								</div>
+
 							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio32" name="radio1" />
-								<label for="radio12">
-									<span class="label_cont">임차</span>
-								</label>
-							</div>
-						</div>
+						</form>
 					</div>
-					<!-- 소유 구분 -->
 
-					<!-- s: 25-06-24 추가 -->
-					<!-- 업종 선택 -->
-					<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
-
-						<!-- s: 일반 선택 시 -->
-						<!-- <div class="opts_area_item column">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-1" name="radio4" />
-								<label for="radio4-1">
-									<span class="label_cont">휴게음식점</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-2" name="radio4" />
-								<label for="radio4-2">
-									<span class="label_cont">일반음식점</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-3" name="radio4" />
-								<label for="radio4-3">
-									<span class="label_cont">세탁소</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-4" name="radio4" />
-								<label for="radio4-4">
-									<span class="label_cont">의원</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-5" name="radio4" />
-								<label for="radio4-5">
-									<span class="label_cont">수리점</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-6" name="radio4" />
-								<label for="radio4-6">
-									<span class="label_cont">여관/여인숙/유스호스텔</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-7" name="radio4" />
-								<label for="radio4-7">
-									<span class="label_cont">시장</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-8" name="radio4" />
-								<label for="radio4-8">
-									<span class="label_cont">일반판매시설</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-9" name="radio4" />
-								<label for="radio4-9">
-									<span class="label_cont">소형판매시설</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-10" name="radio4" />
-								<label for="radio4-10">
-									<span class="label_cont">목욕장</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-11" name="radio4" />
-								<label for="radio4-11">
-									<span class="label_cont">컴퓨터게임장</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-12" name="radio4" />
-								<label for="radio4-12">
-									<span class="label_cont">유흥주점</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-13" name="radio4" />
-								<label for="radio4-13">
-									<span class="label_cont">창고시설</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio4-14" name="radio4" />
-								<label for="radio4-14">
-									<span class="label_cont">화장장</span>
-								</label>
-							</div>
-						</div> -->
-						<!-- e: 일반 선택 시 -->
-
-						<!-- s: 공장 선택 시 -->
-						<div class="opts_area_item column">
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-1" name="radio5" />
-								<label for="radio5-1">
-									<span class="label_cont">금속기계기구</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-2" name="radio5" />
-								<label for="radio5-2">
-									<span class="label_cont">의약품제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-3" name="radio5" />
-								<label for="radio5-3">
-									<span class="label_cont">고무제품제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-4" name="radio5" />
-								<label for="radio5-4">
-									<span class="label_cont">유성도료제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-5" name="radio5" />
-								<label for="radio5-5">
-									<span class="label_cont">플라스틱제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-6" name="radio5" />
-								<label for="radio5-6">
-									<span class="label_cont">도자기제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-7" name="radio5" />
-								<label for="radio5-7">
-									<span class="label_cont">면방적</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-8" name="radio5" />
-								<label for="radio5-8">
-									<span class="label_cont">염색표백가공</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-9" name="radio5" />
-								<label for="radio5-9">
-									<span class="label_cont">직물재단 및 재봉</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-10" name="radio5" />
-								<label for="radio5-10">
-									<span class="label_cont">합판제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-11" name="radio5" />
-								<label for="radio5-11">
-									<span class="label_cont">목공</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-12" name="radio5" />
-								<label for="radio5-12">
-									<span class="label_cont">수산물가공처리</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-13" name="radio5" />
-								<label for="radio5-13">
-									<span class="label_cont">과자류제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-14" name="radio5" />
-								<label for="radio5-14">
-									<span class="label_cont">인쇄</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-15" name="radio5" />
-								<label for="radio5-15">
-									<span class="label_cont">지공</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-16" name="radio5" />
-								<label for="radio5-16">
-									<span class="label_cont">세탁</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-17" name="radio5" />
-								<label for="radio5-17">
-									<span class="label_cont">전기제품제조</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-18" name="radio5" />
-								<label for="radio5-18">
-									<span class="label_cont">제분</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-19" name="radio5" />
-								<label for="radio5-19">
-									<span class="label_cont">정맥</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-20" name="radio5" />
-								<label for="radio5-20">
-									<span class="label_cont">정미(도정업)</span>
-								</label>
-							</div>
-							<div class="inp_radio rd_btn_s1">
-								<input type="radio" id="radio5-21" name="radio5" />
-								<label for="radio5-21">
-									<span class="label_cont">종자선별</span>
-								</label>
-							</div>
-						</div>
-						<!-- e: 공장 선택 시 -->
-						
-					</div>
-					<!-- 업종 선택 -->
-					<!-- e: 25-06-24 추가 -->
-					
 				</div>
-			</div>
 		</div>
-	</form>
+
+		{{> layout/aside_pc }}
+	</div>
 </div>
 
 <script>
@@ -448,7 +428,7 @@ $(document).ready(function() {
 <!-- s: popup area -->
 
 <!-- s: 중요 유의사항 Bottom 팝업 -->
-{{#> popup/popup_bottom popup-id="ex_popup_bottom" popup-title="가입 안내" popup-active="true"}}
+{{#> popup/popup_bottom popup-id="ex_popup_bottom" popup-title="가입 안내" popup-active=""}}
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: 25-06-24 수정 -->

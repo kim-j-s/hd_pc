@@ -1,156 +1,151 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험료 확인" }}
-
+	{{> layout/header_pc h-prd="풍수해·지진재해보험(소상공인용)" }}
 	<div id="container" class="container">
 		<div class="content">
-			<div class="guarantee_container detail_only">
-					<!-- s: guarantee_detail -->
-					<div class="guarantee_detail">
-						<div class="guarantee_detail_top">
-							<div class="gd_item">
-								<!-- s: 25-05-13 수정 -->
-								<!-- 삭제 <div class="rdo_box">
-									<input type="radio" name="d_r" id="d_r_01" aria-labelledby="d_rdo_01">
-									<label for="d_r_01"></label>
-								</div> -->
-								<!-- e: 25-05-13 수정 -->
-								<div class="gdi_content" aria-labelledby="d_rdo_01">
-									<div class="badge_wrap">
-										<span class="hd_badge outline solid_pastel c_info size_m">4개 보장</span>
-									</div>
-									<p class="head_text">
-										결제보험료(개인 부담분)
-										<span class="price">
-											<strong class="price_num">13,900</strong><span class="won">원</span>
-										</span>
-									</p>
-									<div class="gdi_info_list">
-										<dl>
-											<dt>정부부담분</dt>
-											<dd><strong class="point">12,700원</strong></dd>
-										</dl>
-										<dl>
-											<dt>지자체부담분</dt>
-											<dd><strong class="point">2,700원</strong></dd>
-										</dl>
-									</div>
-								</div>
-							</div>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<!-- s: 설계 업데이트 시 반영 예정 -->
+					<h2 class="p_title">
+						나를 지키는 첫 걸음,<br>
+						<strong>어디까지 보장</strong>받고 싶으세요?
+					</h2>
+					<!-- e: 설계 업데이트 시 반영 예정 -->
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
 
-							<div class="guarantee_detail_mini">
-								<div class="item_wrap">
-								<span class="i_data">
-									<span class="text">보험기간</span>
-									<strong class="data">2025.04.16~2026.04.16</strong>
-								</span>
-								<span class="i_data">
-									<span class="text">납입 방법</span>
-									<strong class="data">일시납</strong>
-								</span>
-								</div>
-							</div>
+			<div class="guarantee_view_wrap">
+				<div class="view_left">
+					<div class="v_top">
+						<div class="badge_wrap">
+							<span class="hd_badge outline solid_pastel c_info size_m">1개 보장</span>
 						</div>
-
-						<!-- 간편정보 -->
-						<div class="simple_info_wrap">
-							<div class="simple_info_item">
-								<ul class="sii_list">
-									<li>
-										<span class="sii_list_l">보험료</span>
-										<span class="sii_list_r">
-											<strong class="price">24,900원</strong>
-										</span>
-									</li>
-									<li>
-										<span class="sii_list_l">
-											<span class="text">
-												보험기간
-											</span>
-										</span>
-										<span class="sii_list_r">
-											<span class="text">
-												<strong class="bold">2025.04.16~2026.04.16</strong>
-											</span>
-											<span class="pipe">
-												<strong class="bold">일시납</strong>
-											</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- 간편정보 -->
-						 
-						<div class="gd_middle_ba btn_area center">
-							{{> cp/button type="3" size="3" b-text="계산 내역 문자로 받기" btn-title="전체 팝업"}}
-						</div>
-
-						<div class="coverage_item_wrap">
-							<ul class="coverage_item_list">
-								<li class="list">
-									<div class="item_title">건물</div>
-									<div class="sub_txt_area">
-										<!-- s: 25-05-02 수정 -->
-										{{> cp/linkButton bl_class="price_btn" bl_text="미가입" role_b=true question_tit="가입금액 변경" }}
-										<!-- e: 25-05-02 수정 -->
-									</div>
-								</li>
-								<li class="list">
-									<div class="item_title">기계/집기</div>
-									<div class="sub_txt_area">
-										<!-- s: 25-05-02 수정 -->
-										{{> cp/linkButton bl_class="price_btn" bl_text="3천만원" role_b=true question_tit="가입금액 변경" }}
-										<!-- e: 25-05-02 수정 -->
-									</div>
-								</li>
-								<li class="list">
-									<div class="item_title">재고자산</div>
-									<div class="sub_txt_area">
-										<!-- s: 25-05-02 수정 -->
-										{{> cp/linkButton bl_class="price_btn" bl_text="2천만원" role_b=true question_tit="가입금액 변경" }}
-										<!-- e: 25-05-02 수정 -->
-									</div>
-								</li>
-								<li class="list">
-									<div class="item_title">야외간판</div>
-									<div class="sub_txt_area">
-										<!-- s: 25-05-02 수정 -->
-										{{> cp/linkButton bl_class="price_btn" bl_text="미가입" role_b=true question_tit="가입금액 변경" }}
-										<!-- e: 25-05-02 수정 -->
-									</div>
-								</li>
-								<li class="list">
-									<div class="item_title">자기부담금</div>
-									<div class="sub_txt_area">
-										<!-- s: 25-05-02 수정 -->
-										{{> cp/linkButton bl_class="price_btn" bl_text="5십만원" role_b=true question_tit="가입금액 변경" }}
-										<!-- e: 25-05-02 수정 -->
-									</div>
-								</li>
-							</ul>
-						</div>
-
-						<!-- s: 꼭 알아두세요 -->
-						{{#> cp/notice dp-active=true }}
-							<ul class="list_ty1">
-								<li>보험개시일은 가입일로부터 7일 후 부터 개시되며 보험기간은 1년입니다.</li>
-								<li>첫날 24시에 시작하여 마지막 날 24시에 종료됩니다.</li>
-								<li>계약자 임차인인 경우 임대인 소유의 건물 담보 가입은 불가하며 사고 발생 시 임대인의 소상공인 해당 여부를 불문하고 보험금 지급이 제한됩니다.</li>
-							</ul>
-						{{/ cp/notice }}
-						<!-- e: 꼭 알아두세요 -->
-
 					</div>
-					<!-- e: guarantee_detail -->
-			</div>			
-		</div>
-	</div>
+					<div class="v_info">
+						<div class="title">결제보험료 (개인부담분)</div>
+						<div class="price">
+							<strong>12,200 </strong> 원
+						</div>
+						<div class="desc">description</div>
+					</div>
+				</div>
+				<div class="view_right v_bg_ty3">
+					<div class="bubble_msg">
+						<span>
+							문구는 최대 2줄 까지이며 <br>
+							25~50자 까지만 허용됩니다.
+						</span>
+					</div>
+				</div>
+			</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="이대로 가입할게요" }}
+			<div class="dc_info_box ty2">
+				<ul class="dc_list">
+					<li>
+						<span class="dc_l">정부부담분 <strong class="point">12,700원</strong></span>
+					</li>
+					<li>
+						<span class="dc_l">지자체부담분 <strong class="point">2,400원</strong></span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="guarantee_info"> 
+				<div class="item_right">
+					<ul class="list_ty4">
+						<li>
+							<span class="text">보헙기간</span>
+							<strong class="data">2025.04.16~2026.04.16</strong>
+						</li>
+						<li>
+							<span class="text">납입방법</span>
+							<strong class="data">일시납</strong>
+						</li>
+					</ul>
+					{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+				</div>
+			</div>
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="coverage_item_wrap">
+				<ul class="coverage_item_list">
+					<li class="list">
+						<div class="item_title">
+							{{> cp/ibs cid="checkbox03-1" sct="상해재활치료(연간 15회한, 급여 및 자동차보험적용)(급여적용)" cts="" }}
+						</div>
+						<div class="sub_txt_area">
+							<span class="price">미가입</span>
+						</div>
+					</li>
+					<li class="list">
+						<div class="item_title">기계/집기</div>
+						<div class="sub_txt_area">
+							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+								<option value="">5천만원</option>
+								<option value="">4천만원</option>
+								<option value="" selected>3천만원</option>
+							{{/ cp/selectbox_pc}}
+						</div>
+					</li>
+					<li class="list">
+						<div class="item_title">재고자산</div>
+						<div class="sub_txt_area">
+							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+								<option value="">5천만원</option>
+								<option value="">4천만원</option>
+								<option value="" selected>2천만원</option>
+							{{/ cp/selectbox_pc}}							
+						</div>
+					</li>
+					<li class="list">
+						<div class="item_title">야외간판</div>
+						<div class="sub_txt_area">
+							<!-- s: 25-05-02 수정 -->
+							{{> cp/linkButton bl_class="price_btn" bl_text="미가입" role_b=true question_tit="가입금액 변경" }}
+							<!-- e: 25-05-02 수정 -->
+						</div>
+					</li>
+					<li class="list">
+						<div class="item_title">자기부담금</div>
+						<div class="sub_txt_area">
+							{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+								<option value="">5천만원</option>
+								<option value="">4천만원</option>
+								<option value="" selected>십만원</option>
+							{{/ cp/selectbox_pc}}				
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+				<ul class="list_ty1">
+					<li>보험개시일은 가입일로부터 7일 후 부터 개시되며 보험기간은 1년입니다.</li>
+					<li>첫날 24시에 시작하여 마지막 날 24시에 종료됩니다.</li>
+					<li>계약자 임차인인 경우 임대인 소유의 건물 담보 가입은 불가하며 사고 발생 시 임대인의 소상공인 해당 여부를 불문하고 보험금 지급이 제한됩니다.</li>
+				</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_풍수해소상공인용 panel-title="기초 정보" panel-title2="건물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
 </div>
 
