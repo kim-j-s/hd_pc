@@ -185,6 +185,14 @@
 					</div>
 				</div>
 
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
+					</div> 
+				</div>
+				<!-- s: 하단 버튼 영역 -->
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active="active" }}
 					<ul class="list_ty1">
@@ -195,13 +203,6 @@
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
 
-				<!-- s: 하단 버튼 영역 -->
-				<div class="bottom_fix_wrap">
-					<div class="btn_area">
-						{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
-					</div> 
-				</div>
-				<!-- s: 하단 버튼 영역 -->
 			</div>
 			<!-- s: 사이드 패널 -->
 			{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
