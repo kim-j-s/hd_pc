@@ -464,6 +464,10 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + .banner_box {
+		margin-top: var(--gap-5);
+	}
+
 	.badge_wrap {
 		& + dl {
 			margin-top: 4px;
@@ -1224,9 +1228,11 @@
 	margin-top: 16px;
 	& + .bottom_fix_notice  {
 		padding-top: var(--gap-8);
-		& + .list_ty2 {
-			margin-top: var(--gap-5)
-		}
+	}
+}
+.bottom_fix_notice  {
+	& + .list_ty2 {
+		margin-top: var(--gap-5)
 	}
 }
 

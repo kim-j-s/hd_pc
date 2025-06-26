@@ -26,6 +26,9 @@
 				}
 				.bottom_fix_notice {
 					padding-top: var(--gap-11);
+					&.etc01 {
+						padding-top: 32px;
+					}
 				}
 				.file_attach_box {
 					.file_thumbnail {
