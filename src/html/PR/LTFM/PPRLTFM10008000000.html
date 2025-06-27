@@ -61,9 +61,7 @@
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
 					<div class="btn_area end">
 						<a href="javascript:void(0)" role="button" class="btn_link short_cut">
-							<!-- s: 25-05-14 수정 -->
 							<span class="text">이전 결제 정보 불러오기</span>
-							<!-- e: 25-05-14 수정 -->
 						</a>
 					</div>
 					
@@ -287,7 +285,7 @@
 				{{> cp/checkbox labelname="만기환급금 입금 계좌 동의" ag_more=true id="agree01"  label_class="chk_label_ty3" checkbox_class="rd_box" }}
 				{{> cp/checkbox labelname="자동이체 약관 동의" ag_more=true id="agree02"  label_class="chk_label_ty3" checkbox_class="rd_box" }}
 			</div>
-			</div>
+		</div>
 			
 
 			<div class="bottom_fix_wrap">
@@ -307,38 +305,6 @@
 </div>
 
 <!-- s: popup area -->
-<!-- s: 카드 할부 팝업 -->
-{{#> popup/popup_bottom popup-id="pop_type02" popup-title="카드 할부"}}
-<div class="popup_cont">
-	<div class="popup_content">
-		<div class="opt_select_list opt_case3">
-			<div role="button" tabindex="0" class="option"><span class="text">일시불</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 2</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 3</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 4</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 5</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 6</span></div>
-		</div>
-	</div>
-</div>
-{{/ popup/popup_bottom}}
-<!-- e: 카드 할부 팝업 -->
-<!-- s: 매월 자동이체일 팝업 -->
-{{#> popup/popup_bottom popup-id="pop_type03" popup-title="매월 자동이체일"}}
-<div class="popup_cont">
-	<div class="popup_content">
-		<div class="opt_select_list opt_case3">
-			<div role="button" tabindex="0" class="option"><span class="text">5일</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 2</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 3</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 4</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 5</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">항목 6</span></div>
-		</div>
-	</div>
-</div>
-{{/ popup/popup_bottom}}
-<!-- e: 매월 자동이체일 팝업 -->
 <!-- s: 현대카드 결제 혜택 안내 팝업 -->
 {{#> popup/popup_bottom popup-id="pop_type04" popup-title="현대카드 결제 혜택 안내" }}
 <div class="popup_cont">
