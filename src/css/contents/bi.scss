@@ -1140,6 +1140,9 @@
 .bit_inner_sub_text {
 
 	.tooltip_wrap {
-		
+		.tooltip_panel {
+			top: calc(100% + 32px);
+			max-width: 327px;
+		}
 	}
 }
