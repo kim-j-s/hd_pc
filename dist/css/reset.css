@@ -812,9 +812,8 @@ a:focus,
 button:focus,
 select:focus,
 input:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
-	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
+	outline: 0.3rem solid #000;
+	outline-offset: -0.2rem;
 }
 input:focus + label {
 	outline: none;

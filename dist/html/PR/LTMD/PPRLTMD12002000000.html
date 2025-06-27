@@ -107,19 +107,19 @@
 														<small class="item_sub_txt">굿앤굿어린이종합보험Q 함께 가입하면 </small>
 													</p>
 												</div>
-												<div class="item item_ico_ty2">
+												<div class="item item_ico_ty16">
 													<p class="item_exp">
 														급여/비급여 의료비 보장
 														<small class="item_sub_txt">통원, 입원, 처방조제, 3대 비급여</small>
 													</p>
 												</div>
-												<div class="item item_ico_ty3">
+												<div class="item item_ico_ty24">
 													<p class="item_exp">
 														의료 이용이 없으면 보험료 할인
 														<small class="item_sub_txt">비급여 이용 금액에 따른 할인 할증</small>
 													</p>
 												</div>
-												<div class="item item_ico_ty4">
+												<div class="item item_ico_ty25">
 													<p class="item_exp">
 														최대100세까지 보장
 														<small class="item_sub_txt">5년 만기 후 재가입 시</small>
@@ -153,7 +153,7 @@
 									<div class="stepper_wrap">
 										<div class="stepper" role="img">
 											<div class="pgs">
-												<span class="pgs_per" style="width: 0%"><span class="motion health"></span></span>
+												<span class="pgs_per" style="width: 0%"><span class="motion health_loss"></span></span>
 											</div>
 										</div>
 										<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
@@ -166,7 +166,25 @@
 											<div class="bit">
 												<!-- 피보험자 -->
 												<div class="bit_inner" data-pickitem="step1">
-													<p class="bit_inner_text"><span class="bold">보장받을 분</span>은 누구인가요?</p>
+													<p class="bit_inner_text"><span class="bold">보장 받으실 분</span>이 누구인가요?</p>
+													<div class="bit_inner_sub_text">
+														가입이 어려운 경우
+														<div class="tooltip_wrap">
+															<div class="tooltip_head">
+																<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
+															</div>
+															<div class="tooltip_panel" role="tooltip">
+																<div class="inner">
+																	<p class="inner_title" aria-describedby="title"></p>
+																	<div class="inner_contents">
+																		<p>추가안내 컨텐츠가 있을 경우, 제공하지 않으면 제거</p>
+																	</div>
+
+																	<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
 													<div class="bit_btn_scrollx">
 														<button type="button" class="btn_link short_cut sm rd_box">
 															<span class="text">최근 계산 내역</span>
@@ -176,39 +194,72 @@
 												<!-- 피보험자 -->
 
 												<!-- 생년월일 -->
-												<div class="bit_inner" data-pickitem="step2">
+												<div class="bit_inner active" data-pickitem="step2">
 													<!-- s: 계피동일 case -->
+
 													<p class="bit_inner_text">
-														고객님의 <span class="bold">생년월일</span>을<br />
-														알려주세요
+														고객님의<br />
+														<span class="bold">생년월일</span>을 알려주세요
 													</p>
 													<!-- e: 계피동일 case -->
 
 													<!-- s: 미성년 case -->
-													<!-- <p class="bit_inner_text">자녀분의
-																<span class="bold">생년월일</span>을<br/> 알려주세요
-															</p> -->
+
+													<!-- <p class="bit_inner_text">자녀분의<br />
+															<span class="bold">생년월일</span>을 알려주세요
+														</p> -->
 													<!-- e: 미성년 case -->
 
 													<!-- s: 태아 case -->
-													<!-- <p class="bit_inner_text">고객님(엄마)의<br/>
-																<span class="bold">출산예정일</span>을 알려주세요
-															</p> -->
+
+													<!-- <p class="bit_inner_text"><span class="bold">고객님(산모)</span>의<br/>
+															<span class="bold">출산예정일</span>을 알려주세요
+														</p> -->
 													<!-- e: 태아 case -->
 												</div>
 												<!-- 생년월일 -->
 
 												<!-- 성별 -->
 												<div class="bit_inner active" data-pickitem="step3">
-													<!-- s: 25-05-26 수정 -->
+													<!-- s: 계피동일 case -->
+
 													<p class="bit_inner_text">고객님의 <span class="bold">성별</span>을 알려주세요</p>
-													<!-- e: 25-05-26 수정 -->
+													<!-- e: 계피동일 case -->
+
+													<!-- s: 미성년 case -->
+
+													<!-- <p class="bit_inner_text">자녀분의
+															<span class="bold">성별</span>을 알려주세요
+														</p> -->
+													<!-- e: 미성년 case -->
+
+													<!-- s: 태아 case -->
+
+													<!-- <p class="bit_inner_text"><span class="bold">고객님(산모)</span>의<br/>
+															<span class="bold">생년월일</span>을 알려주세요
+														</p> -->
+													<!-- e: 태아 case -->
 												</div>
 												<!-- 성별 -->
 
 												<!-- 직업 -->
-												<div class="bit_inner active" data-pickitem="step4">
-													<p class="bit_inner_text"><span class="bold">어떤 일</span>을 하시나요?<br />이제 보험료를 알아볼게요</p>
+												<div class="bit_inner" data-pickitem="step4">
+													<!-- s: 계피동일,태아 case -->
+
+													<!-- <p class="bit_inner_text">
+															<span class="bold">하시는 일</span>을 알려주시면<br />
+															보험료를 알아볼게요
+														</p> -->
+													<!-- e: 계피동일,태아 case -->
+
+													<!-- s: 25-06-12 수정 -->
+													<!-- s: 미성년 case -->
+													<!-- <p class="bit_inner_text">
+															<span class="bold">자녀분의 직업을</span> 알려주세요<br />
+															이제 보험료를 알아볼게요
+														</p>-->
+													<!-- e: 미성년 case -->
+													<!-- e: 25-06-12 수정 -->
 												</div>
 												<!-- 직업 -->
 											</div>
@@ -217,13 +268,13 @@
 											<!-- bit_history -->
 											<div class="bit_history">
 												<div class="bit_history_inner">
-													<button type="button" class="selected_case step1 person" title="피보험자 수정"></button>
-													<button type="button" class="selected_case step2 birth" title="생년월일 수정"></button>
+													<button type="button" class="selected_case step1 person" title="피보험자 수정">1111</button>
+													<button type="button" class="selected_case step2 birth" title="생년월일 수정">1111</button>
 													<!-- s: 태아 case -->
 													<!-- <button type="button" class="selected_case step2 pregnant" title="출산예정일 수정">d</button> -->
 													<!-- e: 태아 case -->
-													<button type="button" class="selected_case step3 gender" title="성별 수정"></button>
-													<button type="button" class="selected_case step4 job" title="직업 수정"></button>
+													<button type="button" class="selected_case step3 gender" title="성별 수정">1111</button>
+													<button type="button" class="selected_case step4 job" title="직업 수정">1111</button>
 												</div>
 											</div>
 											<!-- bit_history -->
@@ -264,7 +315,7 @@
 											</div>
 
 											<!-- step2. 생년월일 -->
-											<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step3">
+											<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step2">
 												<div class="opts_area_item column">
 													<div class="input_text">
 														<div class="inp">
@@ -295,30 +346,30 @@
 
 											<!-- step3. 생년월일(태아 case) -->
 											<!-- <div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step3">
-														<div class="opts_area_item column">
-															<div class="birth_date_field" aria-live="polite"></div>
-															<div class="bi_keypad">
-																<div class="bi_keypad_item">
-																	<button type="button" class="keypad_btn">1</button>
-																	<button type="button" class="keypad_btn">2</button>
-																	<button type="button" class="keypad_btn">3</button>
-																	<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
-																</div>
-																<div class="bi_keypad_item">
-																	<button type="button" class="keypad_btn">4</button>
-																	<button type="button" class="keypad_btn">5</button>
-																	<button type="button" class="keypad_btn">6</button>
-																	<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
-																</div>
-																<div class="bi_keypad_item">
-																	<button type="button" class="keypad_btn">7</button>
-																	<button type="button" class="keypad_btn">8</button>
-																	<button type="button" class="keypad_btn">9</button>
-																	<button type="button" class="keypad_btn">0</button>
-																</div>
+													<div class="opts_area_item column">
+														<div class="birth_date_field" aria-live="polite"></div>
+														<div class="bi_keypad">
+															<div class="bi_keypad_item">
+																<button type="button" class="keypad_btn">1</button>
+																<button type="button" class="keypad_btn">2</button>
+																<button type="button" class="keypad_btn">3</button>
+																<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
+															</div>
+															<div class="bi_keypad_item">
+																<button type="button" class="keypad_btn">4</button>
+																<button type="button" class="keypad_btn">5</button>
+																<button type="button" class="keypad_btn">6</button>
+																<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
+															</div>
+															<div class="bi_keypad_item">
+																<button type="button" class="keypad_btn">7</button>
+																<button type="button" class="keypad_btn">8</button>
+																<button type="button" class="keypad_btn">9</button>
+																<button type="button" class="keypad_btn">0</button>
 															</div>
 														</div>
-													</div> -->
+													</div>
+												</div> -->
 
 											<!-- step4. 직업 -->
 											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
@@ -365,29 +416,29 @@
 													<!-- s: 25-06-12 수정 -->
 													<!-- s: 미성년 case -->
 													<!--<div class="inp_radio rd_btn_s1">
-																<input type="radio" id="radio41" name="radio4" />
-																<label for="radio41">
-																	<span class="label_cont">미취학 아동</span>
-																</label>
-															</div>
-															<div class="inp_radio rd_btn_s1">
-																<input type="radio" id="radio42" name="radio4" />
-																<label for="radio42">
-																	<span class="label_cont">초·중·고생</span>
-																</label>
-															</div>
-															<div class="inp_radio rd_btn_s1">
-																<input type="radio" id="radio43" name="radio4" />
-																<label for="radio43">
-																	<span class="label_cont">대학생 및 대학원생</span>
-																</label>
-															</div>
-															<button type="button" class="hd_btn direct_select_btn" title="자녀직업선택 팝업 오픈" onclick="openHDPopup(this,'pop_type02');">
-																<span class="text">기타</span>
-															</button>
-															<ul class="list_ty2">
-																<li>운동선수협회에 등록되어 있는 학교 운동선수의 경우 [기타]를 누르신 후 운동선수를 선택해 주세요.</li>
-															</ul>-->
+															<input type="radio" id="radio41" name="radio4" />
+															<label for="radio41">
+																<span class="label_cont">미취학 아동</span>
+															</label>
+														</div>
+														<div class="inp_radio rd_btn_s1">
+															<input type="radio" id="radio42" name="radio4" />
+															<label for="radio42">
+																<span class="label_cont">초·중·고생</span>
+															</label>
+														</div>
+														<div class="inp_radio rd_btn_s1">
+															<input type="radio" id="radio43" name="radio4" />
+															<label for="radio43">
+																<span class="label_cont">대학생 및 대학원생</span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn direct_select_btn" title="자녀직업선택 팝업 오픈" onclick="openHDPopup(this,'pop_type02');">
+															<span class="text">기타</span>
+														</button>
+														<ul class="list_ty2">
+															<li>운동선수협회에 등록되어 있는 학교 운동선수의 경우 [기타]를 누르신 후 운동선수를 선택해 주세요.</li>
+														</ul>-->
 													<!-- e: 미성년 case -->
 													<!-- e: 25-06-12 수정 -->
 												</div>

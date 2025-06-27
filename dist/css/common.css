@@ -645,7 +645,9 @@ strong {
 .process_info_area + .form_group_wrap,
 .process_info_area + .info_gray,
 .process_info_area + .table_wrap,
-.process_info_area + .space_list_ty2 {
+.process_info_area + .title_h3,
+.process_info_area + .space_list_ty2,
+.process_info_area + .space_list_ty4 {
 	margin-top: var(--gap-8);
 }
 .process_info_area.process_info_area_case02 + .info_gray {
@@ -733,7 +735,6 @@ strong {
 	position: absolute;
 	bottom: 1px;
 	left: 0;
-	z-index: -1;
 	width: 100%;
 	height: 0.2rem;
 	background-color: var(--color-background-gray-subtle);
@@ -1577,10 +1578,20 @@ strong {
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a > .text {
 	display: inline-block;
 	font-size: var(--font-size-navigation-depth-medium);
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a:hover,
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a:focus {
 	background-color: var(--color-button-tertiary-fill-hover);
+}
+.nld_cont .nld_cont_body_list .nl_dept2_list > .item a.ex_con > .text {
+	padding-right: 2rem;
+	background-image: url(../images/header/icon_gnb_link_ty1.png);
+}
+.nld_cont .nld_cont_body_list .nl_dept2_list > .item a.ex_con.active > .text {
+	color: var(--color-text-primary);
+	background-image: url(../images/header/icon_gnb_link_ty2.png);
 }
 .nl_dept1:has(*:hover) .nl_dept1_link::after,
 .nl_dept1:has(*:focus) .nl_dept1_link::after {
@@ -3360,6 +3371,7 @@ strong {
 .btn_area + .card_iutem_wrap {
 	margin-top: var(--gap-5);
 }
+.btn_area + .tab_wrap,
 .btn_area + .list_top_wrap,
 .btn_area + .title_h3 {
 	margin-top: var(--gap-8);
@@ -4834,26 +4846,28 @@ strong {
 /* datepicker */
 .ui-datepicker {
 	display: none;
+	position: fixed !important;
+	top: auto !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
 	z-index: 9000 !important;
-	width: 40.2rem;
-	padding: 0.8rem 0;
-	border-radius: var(--radius-xlarge2);
-	border: 1px solid var(--color-divider-gray-light, #e6e8ea);
-	background: var(--color-surface-white-subtle, #fff) !important;
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	width: 100%;
+	padding: 4.2rem 2rem 4rem 2rem;
+	border-radius: 3rem 3rem 0 0;
+	background: #ffffff !important;
 }
 .ui-datepicker:before {
 	content: "";
 }
 .ui-datepicker .ui-datepicker-calendar {
-	width: calc(100% - 3rem);
+	width: calc(100% - 0.4rem);
 	margin: 0 auto;
 }
 .ui-datepicker-header {
 	position: relative;
 	margin-bottom: var(--gap-4);
-	padding: 0 7.2rem;
+	padding: 0 4rem;
 }
 .ui-datepicker-header > a {
 	position: absolute;
@@ -4870,22 +4884,18 @@ strong {
 	background-size: 2rem auto;
 }
 .ui-datepicker-header > a.ui-datepicker-prev {
-	left: 2.4rem;
+	left: 0.8rem;
 	background-image: url(../images/icon/arrowLeft_ty1.svg);
 }
 .ui-datepicker-header > a.ui-datepicker-next {
-	right: 2.4rem;
+	right: 0.8rem;
 	background-image: url(../images/icon/arrowRight_ty4.svg);
 }
 .ui-datepicker-header .ui-datepicker-title {
-	padding: var(--padding-5) var(--padding-8);
 	font-weight: 700;
 	font-size: var(--font-size-heading-small);
 	line-height: 3.2rem;
 	text-align: center;
-}
-.ui-datepicker-header .ui-datepicker-title > span {
-	display: inline-block;
 }
 .ui-datepicker-header .ui-datepicker-title .ui-datepicker-month {
 	padding-left: 1.2rem;
@@ -4989,24 +4999,6 @@ strong {
 	color: var(--color-text-disabled);
 }
 /* 달력 바디 */
-/* 달력 하단 버튼 */
-.ui-datepicker-buttonpane.ui-widget-content {
-	padding: var(--padding-5, 12px) var(--padding-8, 24px) var(--padding-6, 16px) var(--padding-8, 24px);
-}
-.ui-datepicker-buttonpane.ui-widget-content .ui-datepicker-current {
-	display: none;
-}
-.ui-datepicker-buttonpane.ui-widget-content .ui-datepicker-close {
-	display: block;
-	width: 100%;
-	height: var(--button-size-large, 48px);
-	padding: 0px var(--padding-7);
-	font-size: var(--font-size-button-large);
-	text-align: center;
-	border-radius: var(--radius-medium2, 12px);
-	border: var(--border-width-static-regular, 1px) solid var(--color-button-tertiary-border, #b1b8be);
-}
-/* 달력 하단 버튼 */
 .modal_backdrop {
 	position: fixed;
 	z-index: 8000;
@@ -12777,7 +12769,7 @@ strong {
 	background-image: url(../images/icon/icon_call_check.svg);
 }
 .info_gray.ty2 {
-	background: var(--color-surface-information-subtler);
+	background-color: var(--color-surface-information-subtler);
 }
 .info_gray.ty3 {
 	background: var(--color-action-secondary);
@@ -13107,6 +13099,16 @@ strong {
 }
 .call_box .info_text + .info_gray {
 	margin-top: var(--gap-4);
+}
+.call_box .info_gray.ty2 .center_info .title_h4 {
+	padding-bottom: 0.8rem;
+}
+.call_box.call_box_space2 {
+	margin-top: var(--gap-5);
+}
+.call_box.call_box_icoadd .info_gray.ty2 .center_info {
+	padding-right: 3rem;
+	background: url(../images/icon/icon_tel.svg) no-repeat right center/2.4rem auto;
 }
 .function_item {
 	margin-top: var(--gap-2);
