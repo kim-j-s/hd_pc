@@ -1,6 +1,6 @@
 /* 배경색 있는 상단 컨텐츠 영역 */
 .bg_top_cover {
-	// margin: -24px -24px 0 -24px;
+	margin: -24px -24px 0 -24px;
 	padding: var(--padding-8);
 	background-color: var(--color-surface-secondary-subtler);
 	
@@ -19,9 +19,6 @@
 	& + .tag_item_wrap {
 		margin: 0 -24px;
 		padding: 16px 24px;
-	}
-	& + .checkbox_group_wrap {
-		margin-top: var(--gap-11);
 	}
 }
 /* 배경색 있는 상단 컨텐츠 영역 */

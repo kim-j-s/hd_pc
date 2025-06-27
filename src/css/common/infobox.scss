@@ -60,7 +60,7 @@
 	}
 	
 	&.ty2 {
-		background: var(--color-surface-information-subtler);
+		background-color: var(--color-surface-information-subtler);
 	}
 
 	&.ty3 {
@@ -414,6 +414,31 @@
 	.info_text + .info_gray {
 		margin-top: var(--gap-4);
 	}
+	.info_gray.ty2 {
+		.center_info {
+			.title_h4 {
+				padding-bottom: 8px;
+			}
+		}
+	}
+
+	&.call_box_space2 {
+		margin-top: var(--gap-5);
+	}
+
+	&.call_box_icoadd {		
+		.info_gray {
+			&.ty2 {
+				.center_info {
+					padding-right: 30px;
+					background: url(../images/icon/icon_tel.svg) no-repeat right center / 24px auto;
+				}
+			}
+		}
+	}
+
+
+
 }
 .function_item {
 	margin-top: var(--gap-2);
