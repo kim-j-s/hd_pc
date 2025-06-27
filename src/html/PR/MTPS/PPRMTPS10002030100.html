@@ -7,9 +7,68 @@
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
-					<h2 class="p_title">
-						선택된 <strong>자동차정보</strong>를 확인해주세요 
-					</h2>
+					<!-- bit -->
+					<div class="bit">
+		
+						<!-- 제조사 -->
+						<div class="bit_inner" data-pickitem="step1">
+							<p class="bit_inner_text">
+								<span class="bold">제조사</span>를 선택해 주세요
+							</p>
+							<!-- <div class="bit_btn_scrollx">
+								<button type="button" class="btn_link short_cut sm rd_box search_type">
+									<span class="text">차명 검색</span>
+								</button>
+							</div> -->
+						</div>
+						<!-- 제조사 -->
+
+						<!-- 자동차명 -->
+						<div class="bit_inner active" data-pickitem="step2">
+							<p class="bit_inner_text">
+								<span class="bold">자동차명</span>을 선택해 주세요
+							</p>
+							<!-- <div class="bit_btn_scrollx">
+								<button type="button" class="btn_link short_cut sm rd_box search_type">
+									<span class="text">차명 검색</span>
+								</button>
+							</div> -->
+							<!-- <div class="bit_btn_scrollx">
+								{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="본인이 아닌 다른 사람의 보험을 가입하는 방법" role_b=true }}
+							</div> -->
+						</div>
+						<!-- 자동차명 -->
+
+						<!-- 등록연도 -->
+						<div class="bit_inner active" data-pickitem="step3">
+							<p class="bit_inner_text">
+								<span class="bold">등록연도</span>를 선택해 주세요
+							</p>
+							<!-- <div class="bit_btn_scrollx">
+								<button type="button" class="btn_link short_cut sm rd_box">
+									<span class="text">차량연식/최초등록일 안내</span>
+								</button>
+							</div> -->
+						</div>
+						<!-- 등록연도 -->
+
+						<!-- 세부차명 -->
+						<div class="bit_inner active" data-pickitem="step4">
+							<p class="bit_inner_text">
+								<span class="bold">세부차명</span>을 선택해 주세요
+							</p>
+						</div>
+						<!-- 세부차명 -->
+
+						<!-- 세부형식 -->
+						<div class="bit_inner active" data-pickitem="step5">
+							<p class="bit_inner_text">
+								<span class="bold">세부형식</span>을 선택해 주세요
+							</p>
+						</div>
+						<!-- 세부형식 -->
+					</div>
+					<!-- bit -->
 				</div>
 				<div class="btn_area">
 					<!--TO-DO : (25-04-11 위서진) 추후 용어사전 팝업이 완성되면, popup id를 popup props에 적용해야함-->
@@ -20,92 +79,32 @@
 			<div class="plan_select_car">
 				<form action="" class="bi_form">
 					<div class="bi_wrap">
-						<div class="bi_top">
-							<!-- bit -->
-							<div class="bit">
-		
-								<!-- 제조사 -->
-								<div class="bit_inner" data-pickitem="step1">
-									<p class="bit_inner_text">
-										<span class="bold">제조사</span>를 선택해 주세요
-									</p>
-									<!-- <div class="bit_btn_scrollx">
-										<button type="button" class="btn_link short_cut sm rd_box search_type">
-											<span class="text">차명 검색</span>
-										</button>
-									</div> -->
+						<div class="">
+							<div class="stepper_wrap">
+								<div class="stepper" role="img">
+									<div class="pgs">
+										<span class="pgs_per" style="width: 0%;"><span class="motion car"></span></span>
+									</div>
 								</div>
-								<!-- 제조사 -->
-		
-								<!-- 자동차명 -->
-								<div class="bit_inner active" data-pickitem="step2">
-									<p class="bit_inner_text">
-										<span class="bold">자동차명</span>을 선택해 주세요
-									</p>
-									<!-- <div class="bit_btn_scrollx">
-										<button type="button" class="btn_link short_cut sm rd_box search_type">
-											<span class="text">차명 검색</span>
-										</button>
-									</div> -->
-									<!-- <div class="bit_btn_scrollx">
-										{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="본인이 아닌 다른 사람의 보험을 가입하는 방법" role_b=true }}
-									</div> -->
-								</div>
-								<!-- 자동차명 -->
-		
-								<!-- 등록연도 -->
-								<div class="bit_inner active" data-pickitem="step3">
-									<p class="bit_inner_text">
-										<span class="bold">등록연도</span>를 선택해 주세요
-									</p>
-									<!-- <div class="bit_btn_scrollx">
-										<button type="button" class="btn_link short_cut sm rd_box">
-											<span class="text">차량연식/최초등록일 안내</span>
-										</button>
-									</div> -->
-								</div>
-								<!-- 등록연도 -->
-		
-								<!-- 세부차명 -->
-								<div class="bit_inner active" data-pickitem="step4">
-									<p class="bit_inner_text">
-										<span class="bold">세부차명</span>을 선택해 주세요
-									</p>
-								</div>
-								<!-- 세부차명 -->
-		
-								<!-- 세부형식 -->
-								<div class="bit_inner active" data-pickitem="step5">
-									<p class="bit_inner_text">
-										<span class="bold">세부형식</span>을 선택해 주세요
-									</p>
-								</div>
-								<!-- 세부형식 -->
+								<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+								<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
 							</div>
-							<!-- bit -->
-		
-							<!-- bit_history -->
-							<div class="bit_history">
-								<div class="bit_history_inner">
-									<button type="button" class="selected_case step1 maker" title="제조사 수정">1</button>
-									<button type="button" class="selected_case step2 car" title="자동차명 수정">1</button>
-									<button type="button" class="selected_case step3 date" title="등록연도 수정">1</button>
-									<button type="button" class="selected_case step4 detail1" title="세부차명 수정">1</button>
-									<button type="button" class="selected_case step5 detail2" title="세부형식 수정">1</button>
+							<div class="bi_top">
+								<!-- bit_history -->
+								<div class="bit_history">
+									<div class="bit_history_inner">
+										<button type="button" class="selected_case step1 maker" title="제조사 수정">1</button>
+										<button type="button" class="selected_case step2 car" title="자동차명 수정">1</button>
+										<button type="button" class="selected_case step3 date" title="등록연도 수정">1</button>
+										<button type="button" class="selected_case step4 detail1" title="세부차명 수정">1</button>
+										<button type="button" class="selected_case step5 detail2" title="세부형식 수정">1</button>
+									</div>
 								</div>
+								<!-- bit_history -->
 							</div>
-							<!-- bit_history -->
 						</div>
 
-						<div class="stepper_wrap">
-							<div class="stepper" role="img">
-								<div class="pgs">
-									<span class="pgs_per" style="width: 0%;"><span class="motion car"></span></span>
-								</div>
-							</div>
-							<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
-							<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
-						</div>
+						
 						
 						<div class="bi_stepper">
 			
