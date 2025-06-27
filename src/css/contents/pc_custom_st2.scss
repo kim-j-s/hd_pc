@@ -147,11 +147,27 @@
 .banner_box {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
+	// justify-content: space-between;
 	gap: var(--gap-5) var(--gap-8);
+
+	// 1개일 시, 가운데 정렬
+	&:has(*:only-child){
+		justify-content: center;
+	}
+
+	&:not(:has(*:only-child)){
+		* {
+			width: calc(50% - 16px);
+		}
+	}
+	&:has(*:nth-child(3)) {
+		justify-content: flex-start;
+	}
 
 	> * {
 		flex: 0 1 calc(50% - 16px);
+		text-align: center;
 	}
 	
 	> img {
@@ -1413,3 +1429,5 @@
 		margin-top: var(--gap-11);
 	}
 }
+
+
