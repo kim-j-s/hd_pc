@@ -575,6 +575,14 @@
 		appearance: none;
 	}
 
+	&.sm {
+		.selectbox {
+			padding: 10px 40px 10px var(--padding-6);
+			font-size: var(--font-size-label-small);
+			border-radius: var(--radius-medium1);
+		}
+	}
+
 	& + .inp_checkbox {
 		margin-top: var(--gap-5);
 	}
@@ -1290,4 +1298,72 @@
 
 .break {
 	word-break: break-all;
+}
+
+
+
+// 자동차 차량정보 PC
+.car_step_layout {
+	.title_view_wrap {
+		.bit {
+			margin-top: 0;
+		}
+		.bit_inner {
+			.bit_inner_text {
+				display: block;
+				font-size: var(--font-size-heading-xxlarge);
+			}
+			&.active {
+				.bit_inner_text {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.bi_wrap {
+		min-height: auto;
+		padding: 0;
+		.layout_bg_box {
+			padding: var(--padding-6) var(--padding-8);
+			background-color: var(--color-surface-secondary-subtler);
+			border-radius: var(--radius-large2);
+	
+			.stepper_wrap {
+				width: 375px;
+				margin: 0 auto;
+			}
+		}
+	
+	}
+	.bi_stepper {
+		.bi_opts_wrap {
+			position: relative;
+			z-index: 1;
+			margin-top: var(--gap-8);
+		}
+		.opts_area {
+			flex-direction: column;
+			align-items: flex-start;
+			transition:none;
+			gap: var(--gap-8);
+
+			.autocomplete_wrap {
+				position: static;
+				z-index: 10;
+				width: 100%;
+				& + .opts_area {
+					margin-top: var(--gap-8);
+				}
+			}
+
+			.oai_filter {
+				justify-content: flex-end;
+			}
+			.opts_area_item {
+				margin-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
 }
