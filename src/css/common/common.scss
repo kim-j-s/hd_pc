@@ -789,7 +789,9 @@ strong {
 	+ .form_group_wrap,
 	+ .info_gray,
 	+ .table_wrap,
-	+ .space_list_ty2 {
+	+ .title_h3,
+	+ .space_list_ty2,
+	+ .space_list_ty4 {
 		margin-top: var(--gap-8);
 	}
 
@@ -901,7 +903,7 @@ strong {
 			position: absolute;
 			bottom: 1px;
 			left: 0;
-			z-index: -1;
+			// z-index: -1;
 			width: 100%;
 			height: 2px;
 			background-color: var(--color-background-gray-subtle);
