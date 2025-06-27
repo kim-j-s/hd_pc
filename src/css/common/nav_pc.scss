@@ -124,10 +124,24 @@
 					> .text {
 						display: inline-block;
 						font-size: var(--font-size-navigation-depth-medium);
+						background-repeat: no-repeat;
+						background-position: right center;
 					}
 					&:hover,
 					&:focus {
 						background-color: var(--color-button-tertiary-fill-hover);
+					}
+					&.ex_con {
+						> .text {
+							padding-right: 20px;
+							background-image: url(../images/header/icon_gnb_link_ty1.png);
+						}
+						&.active {
+							> .text {
+								color: var(--color-text-primary);
+								background-image: url(../images/header/icon_gnb_link_ty2.png);
+							}
+						}
 					}
 				}
 			}
