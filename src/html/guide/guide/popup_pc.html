@@ -11,10 +11,16 @@
 
 <div id="wrap" class="wrap">
 	<div id="container" class="container">
-		<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button>
-		<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button>
-		<button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button>
-		<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button>
+		<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button> -->
+		<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
+		<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
+		<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
+
+		{{> cp/button type="2" size="5" b-text="Full 팝업열기 (600px)" popup="pop_type01" }}
+		{{> cp/button type="2" size="5" b-text="Bottom 팝업열기(팝업중첩)" popup="pop_type04" }}
+		{{> cp/button type="2" size="5" b-text="Layer 팝업열기(팝업중첩)" popup="pop_type02" }}
+		{{> cp/button type="2" size="5" b-text="Layer 팝업열기" popup="pop_type03" }}
+
 	</div>
 </div>
 	
@@ -26,8 +32,8 @@
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
-				<button type="button" class="btn"><span>확인</span></button>
-				<button type="button" class="btn"><span>확인</span></button>
+				{{> cp/button type="3" size="1" b-text="취소" }}
+				{{> cp/button type="1" size="1" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_full}}
@@ -100,8 +106,10 @@
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
-				<button type="button" class="btn"><span>확인</span></button>
-				<button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button>
+				<!-- <button type="button" class="btn"><span>확인</span></button> -->
+				<!-- <button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
+				{{> cp/button type="3" size="1" b-text="취소" }}
+				{{> cp/button type="1" size="1" b-text="layer 팝업열기" popup="pop_type02" }}
 			</div>
 		</div>
 	{{/ popup/popup_bottom}}
@@ -181,7 +189,8 @@
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
-				<button type="button" class="btn"><span>확인</span></button>
+				<!-- <button type="button" class="btn"><span>확인</span></button> -->
+				{{> cp/button type="1" size="1" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_layer}}
@@ -194,7 +203,8 @@
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
-				<button type="button" class="btn"><span>확인</span></button>
+				<!-- <button type="button" class="btn"><span>확인</span></button> -->
+				{{> cp/button type="1" size="1" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_layer}}
