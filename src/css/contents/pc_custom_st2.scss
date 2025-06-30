@@ -246,6 +246,11 @@
 			& ~ .form_line {
 				margin-top: 0;
 			}
+			.tooltip_wrap {
+				.tooltip_panel {
+					max-width: 400px;
+				}
+			}
 		}
 	
 		> .list_ty2 {
@@ -300,7 +305,7 @@
 				.tooltip_panel {
 					width: auto;
 					.inner {
-						white-space: nowrap;
+						// white-space: nowrap;
 					}
 				}
 			}
