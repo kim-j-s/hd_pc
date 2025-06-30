@@ -21,8 +21,9 @@
 				{{#> cp/selectbox_pc s-title="관계 선택" s-class="ty2" }}
 					<option value="" selected>배우자</option>
 					<option value="">자녀</option>
-					<option value="">부모님</option>
-					<option value="">그 외 동반자</option>
+					<!-- s: 25-06-30 수정 -->
+					<option value="">부모님(배우자 부모님)</option>
+					<!-- e: 25-06-30 수정 -->
 				{{/ cp/selectbox_pc}}
 
 				<div class="form_group_wrap">
@@ -38,11 +39,7 @@
 					</div>
           <div class="form_line">
             <div class="label_tit">직업</div>
-						<!-- s: 25-06-10 수정 -->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="직업 검색" case1=true ad_title="직업 검색 팝업열기" disabled=true }}
-						 <!-- e: 25-06-16 수정 -->
-            <!-- e: 25-06-10 수정 -->
+							{{> cp/address ad_ph="직업 검색" case1=true ad_title="직업 검색 팝업열기" disabled=true }}
           </div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
@@ -74,12 +71,8 @@
 					</div>
           <div class="form_line">
             <div class="label_tit">직업</div>
-						<!-- s: 25-06-10 수정 -->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="직업 검색" case1=true  ad_title="직업검색 팝업열기" disabled=true }}
-						 <!-- e: 25-06-16 수정 -->
-						<!-- e: 25-06-10 수정 -->
-          </div>
+						{{> cp/address ad_ph="직업 검색" case1=true ad_title="직업검색 팝업열기"}}
+					</div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
             {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
@@ -111,12 +104,8 @@
 					</div>
           <div class="form_line">
             <div class="label_tit">직업</div>
-           	<!-- s: 25-06-10 수정 -->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="직업 검색" case1=true  ad_title="직업검색 팝업열기"}}
-						 <!-- e: 25-06-16 수정 -->
-						<!-- e: 25-06-10 수정 -->
-          </div>
+						{{> cp/address ad_ph="직업 검색" case1=true ad_title="직업검색 팝업열기"}}
+					</div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
             {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
@@ -147,15 +136,11 @@
 					</div>
           <div class="form_line">
             <div class="label_tit">직업</div>
-            <!-- s: 25-06-10 수정 -->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="직업 검색" case1=true  ad_title="직업검색 팝업열기"}}
-						 <!-- e: 25-06-16 수정 -->
-						<!-- e: 25-06-10 수정 -->
-          </div>
+						{{> cp/address ad_ph="직업 검색" case1=true ad_title="직업검색 팝업열기"}}
+					</div>
           <div class="form_line">
             <div class="label_tit">머무르는 목적</div>
-           {{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
+						{{#> cp/selectbox_pc s-title="머무르는 목적 선택" }}
 							<option value="" selected>목적 선택</option>
 							<option value="">동반가족</option>
 							<option value="">선택 옵션값 3</option>

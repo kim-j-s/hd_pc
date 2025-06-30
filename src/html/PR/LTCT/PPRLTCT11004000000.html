@@ -54,13 +54,9 @@
 							{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt2" name="radio_address" labelname="직장" }}
 						</div>
 						<!-- case: 입력 전-->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="주소를 입력해 주세요." case1=true}}
-						 <!-- e: 25-06-16 수정 -->
+						{{> cp/address ad_ph="주소를 입력해 주세요." case1=true}}
 						<!-- case: 입력 후-->
-						 <!-- s: 25-06-16 수정 -->
-						 {{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
-						 <!-- e: 25-06-16 수정 -->
+						{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
 					</div>
 					<div class="form_line full">
 						<div class="label_tit">직업</div>
@@ -81,24 +77,34 @@
 			<div class="form_box">
 				<h3 class="title_h3">필수 확인 사항</h3>
 				<div class="form_group_wrap">
+					<!-- s: 25-06-30 추가 -->
+					<div class="form_line">
+						<div class="label_tit">
+							자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
+							{{> cp/tooltip text="<p>이혼이나 사별 등으로 공동 친권자가 없을 경우 [아니요]를 눌러주세요. </p>" trigger-icon="popover_help"}}
+						</div>
+						<div class="radio_group_wrap" role="radiogroup">
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel04_01" name="receiveSel04" labelname="예" }}
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel04_02" name="receiveSel04" labelname="아니요" }}
+						</div>
+						<div class="form_line">
+							<div class="label_tit">공동 친권자 이름(배우자)</div>
+							{{> cp/text inp-title="공동 친권자 이름 입력" placeholder="성명을 입력해 주세요" }}
+						</div>
+					</div>
+					<!-- e: 25-06-30 추가 -->
 					<div class="form_line">
 						<div class="label_tit">보험증권 받는 방법을 선택해주세요.</div>
 						<div class="radio_group_wrap" role="radiogroup">
-							<!-- s: 25-05-29 수정 -->
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_01" name="receiveSel01" labelname="모바일" }}
-							<!-- e: 25-05-29 수정 -->
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_02" name="receiveSel01" labelname="이메일" }}
 						</div>
 					</div>
 					<div class="form_line">
-						<!-- s: 25-05-14 -->
 						<div class="label_tit box">
 							<div>전문금융소비자 여부를 확인해주세요.</div>
-							<!-- s: 25-05-15 -->
 							{{> cp/linkButton bl_class="short_cut sm" bl_text="구분 안내" question_tit="전문금융소비자" }}
-							<!-- e: 25-05-15 -->
 						</div>
-						<!-- e: 25-05-14 -->
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_01" name="receiveSel02" labelname="일반금융소비자" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="전문금융소비자" }}
@@ -109,12 +115,10 @@
 					</div>
 
 					<div class="form_line">
-						<!-- s: 25-05-14 -->
 						<div class="label_tit box">
 							<div>해외금융계좌 신고 대상자인가요?</div>
 							{{> cp/linkButton bl_class="short_cut sm" bl_text="대상자 안내" question_tit="해외금융계좌대상여부" }}
 						</div>
-						<!-- e: 25-05-14 -->
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
@@ -135,29 +139,23 @@
 			<div class="form_group_wrap">
 				<div class="column">
 					<div class="form_line">
-						<!-- s: 25-05-22 수정 -->
 						<div class="label_tit">
 							「소득세법」에서 규정한 장애인 전용보험전환특약 가입대상인가요? (피보험자가 「소득세법」에서 규정한 장애인인 경우 가입이 가능하며, 특약 가입 시 입증 서류가 필요합니다.)
 						</div>
-						<!-- e: 25-05-22 수정 -->
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype03_01" name="checktype03" labelname="예" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype03_02" name="checktype03" labelname="아니요" }}
 						</div>
 					</div>
 					<div class="form_line">
-						<!-- s: 25-05-19 수정 -->
 						<div class="label_tit">장애유형</div>
-						<!-- e: 25-05-19 수정 -->
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype04_01" name="checktype04" labelname="영구 장애" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype04_02" name="checktype04" labelname="한시 장애" }}
 						</div>
 					</div>
 					<div class="form_line">
-						<!-- s: 25-05-19 수정 -->
 						<div class="label_tit">장애기간</div>
-						<!-- e: 25-05-19 수정 -->
 						<div class="range_calrendar">
 							{{> cp/text cal=true placeholder="날짜 선택" }}
 							{{> cp/text cal=true placeholder="날짜 선택" }}
@@ -269,19 +267,15 @@
 			</div>
 			<!-- s: 하단 버튼 영역 -->
 
-			<!-- s: 25-05-07 수정 -->
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
-			<!-- s: 25-05-22 수정 -->
 			<ul class="list_ty1">
 				<li>입력하신 휴대폰/이메일로  보험계약서류(보험증권, 청약서, 약관 등)를 보내드립니다. 연락처 정보를 정확히 확인해주세요.</li>
 				<li>개인정보는 입력하신 정보로 업데이트되는 점 유의해주세요.</li>
 				<li>휴대폰번호 수정이 필요한 경우 고객정보 입력 단계에서 다시 입력해주세요.</li>
 			</ul>
-			<!-- e: 25-05-22 수정 -->
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 25-05-07 수정 -->
 		</div>
 
 		<!-- s: 사이드 패널 -->
