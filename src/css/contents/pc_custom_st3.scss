@@ -774,7 +774,7 @@
 	.view_left {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: center;
 		gap: var(--gap-6);
 
 		.v_top {
@@ -823,6 +823,9 @@
 		}  
 		&.v_bg_ty3 { //풍수해·지진재해보험(소상공인용)
 			background-image: url(../images/content/guarantee/bg_img_gisf2.svg);
+		} 
+		&.v_bg_ty4 { //실손의료비보험
+			background-image: url(../images/content/guarantee/bg_img_ltmd.svg);
 		} 
 		.bubble_msg {
 			position: relative;
