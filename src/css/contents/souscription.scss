@@ -128,12 +128,19 @@
 						}
 
 						button { 
+<<<<<<< HEAD
 							flex: 0 1 auto;
 						}
 					}
+=======
+							flex: 0 1 auto;							
+						}						
+					} 
+>>>>>>> 84acdbc9528fc9f457603c1dd498640de4864935
 				}
 
 				> .form_group_wrap { 
+					border: 1px solid red;
 					.row {
 						margin-top: var(--gap-5);
 					}
@@ -546,6 +553,24 @@ ul + .form_group_wrap {
 	}
 
 }
+
+/* 보험가입 진행 정보 */
+.pro_info_wrap {
+
+	.pro_info_item {
+		+ .pro_info_item {
+			margin-top: calc(var(--gap-7) + 1px);
+			padding-top: var(--gap-7);
+			border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		}
+	}
+	+ .info_gray {
+		margin-top: var(--gap-7);
+	}
+}
+
+/* 보험가입 진행 정보 */
+
 .text_info_lg {
 	font-size: var(--font-size-heading-medium);
 	text-align: center;

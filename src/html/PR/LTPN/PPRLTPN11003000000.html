@@ -13,8 +13,8 @@
 					</h2>
 				</div>
 				<div class="btn_area">
-					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
-					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+					{{> cp/button type="3" size="4" b-text="예상환급금 보기"}}
+					{{> cp/button type="3" size="4" b-text="계산 결과 문자로 받기"}}
 				</div>
 			</div>
 			
@@ -43,7 +43,7 @@
 				<div class="guarantee_detail">
 					<div class="item_wrap">
 						<span class="i_data">
-							<span class="text">보험 기간</span>
+							<span class="text">납입기간</span>
 							<strong class="data">15년</strong>
 						</span>
 						<span class="i_data">
@@ -61,9 +61,7 @@
 			</div>
 			<!-- e: 디자인 수정 (현업요청) -->
 			
-			<div class="checkbox_group_wrap">
-				{{> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="내 연금저축한도 조회에 동의해요" }}
-			</div>
+			{{> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="내 연금저축한도 조회에 동의해요" }}
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}

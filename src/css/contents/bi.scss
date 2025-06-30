@@ -417,6 +417,10 @@
 				}
 			}
 
+			&.full {
+				display: block;
+			}
+
 			&.gap_reset {
 				gap: 0;
 			}
@@ -946,6 +950,9 @@
 			&.pi_bg_ty16 { //골프
 				background-image: url(../images/content/bi/visual/bg_img_gipc2.png);
 			}
+			&.pi_bg_ty17 { //실손의료비보험(계약전환용)
+				background-image: url(../images/content/bi/visual/bg_img_ltsm.png);
+			}
 
   
 
@@ -1078,6 +1085,9 @@
 							}
 							&.item_ico_ty25 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty25.png);
+							}
+							&.item_ico_ty26 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty26.png);
 							}
 						}
 					}

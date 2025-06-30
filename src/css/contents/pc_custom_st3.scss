@@ -748,7 +748,15 @@
 				font-size: var(--font-size-body-small);
 			}
 		}
-		
+	}
+
+	&.border {
+		> .list {
+			& ~ .list {
+				padding-top: var(--padding-6);
+				border-top: 1px solid var(--color-divider-gray-light);
+			}
+		}
 	}
 }
 
@@ -827,6 +835,9 @@
 		&.v_bg_ty4 { //실손의료비보험
 			background-image: url(../images/content/guarantee/bg_img_ltmd.svg);
 		} 
+		&.v_bg_ty5 { //실손의료비보험(계약전환용)
+			background-image: url(../images/content/guarantee/bg_img_ltsm.svg);
+		}  
 		.bubble_msg {
 			position: relative;
 			flex: 1;
@@ -1140,6 +1151,7 @@
 						}
 						.item_desc {
 							display: block;
+							max-width: 254px;
 						}
 					}
 				}

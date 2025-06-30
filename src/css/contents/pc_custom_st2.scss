@@ -246,6 +246,11 @@
 			& ~ .form_line {
 				margin-top: 0;
 			}
+			.tooltip_wrap {
+				.tooltip_panel {
+					max-width: 400px;
+				}
+			}
 		}
 	
 		> .list_ty2 {
@@ -300,7 +305,7 @@
 				.tooltip_panel {
 					width: auto;
 					.inner {
-						white-space: nowrap;
+						// white-space: nowrap;
 					}
 				}
 			}
@@ -721,6 +726,30 @@
 								}
 								&:nth-child(2n) {
 									padding-left: var(--gap-8);
+								}
+
+								// 리스트 항목 중 하위속성 있을 경우
+								&.subitem_area {
+									display: block;
+									.title {
+										text-align: left;
+									}
+									.cont {
+										flex: none;
+									}
+									.subitem {
+										padding-top: 4px;
+										font-size: var(--font-size-body-xsmall);
+										color: var(--color-text-subtle);
+										line-height: 18px;
+									}
+									> div {
+										display: flex;
+										width: 100%;
+										margin-top: 0;
+										gap: var(--gap-4);
+										max-width: none;
+									}
 								}
 							}
 	
