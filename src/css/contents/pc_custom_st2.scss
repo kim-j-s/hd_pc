@@ -366,7 +366,102 @@
 	}
 }
 
+.notification {
 
+	.title_view_wrap + .checkbox_group_wrap {
+		justify-content: flex-end;
+		& >* {
+			flex-grow: 0;
+			min-width: 134px;
+		}
+	
+	}
+
+	.form_list {
+		>li {
+			> .form_group_wrap {
+				border-bottom: 1px solid var(--color-divider-gray-light);
+				padding-bottom: 40px;
+
+				>.form_line {
+					position: relative;
+				
+					> .label_tit {
+						margin-bottom: 0;
+
+						& + .info_gray.ty2 {
+							border-radius: 0;
+							background-color: #ffffff;
+							padding: 0;
+							margin-top: var(--gap-5);
+						}
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
+					}
+
+					//예,아니오 버튼이 있는 질문 스타일
+					&:has(.radio_group_wrap){
+
+						// background-color: yellow;
+						> .label_tit {
+							width: calc(100% - 312px);
+							min-height: 56px;
+
+							& + .info_gray.ty2 {
+								width: calc(100% - 312px);
+							}
+
+							&:has(+.info_gray){
+								min-height:fit-content;
+							}
+						}
+					}
+					
+					.info_gray.ty2 {
+						margin-top: var(--gap-5);
+						margin-bottom: 0;
+					}
+					
+					.radio_group_wrap {
+						width: 280px;
+						position: absolute;
+						top:0;
+						right:0;
+					}
+
+					.checkbox_group_wrap.ty2 {
+						margin-top: var(--gap-5);
+
+						.inp_checkbox {
+							flex-basis: calc(25% - 9px);
+						}
+
+						& + .form_group_wrap { 
+							margin-top: var(--gap-5);
+						}
+					}
+
+					.row {
+						width: 100%;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						gap:32px;
+
+						.form_line {
+							flex : 0 1 calc(50% - 16px);
+
+							// &:last-child { //마지막만 100%일 때(디자인팀 확인 후 삭제예정)
+							// 	flex-basis: 100%;
+							// }
+						}
+					}//.row
+				}//.form_line
+			}// li > .form_group_wrap
+		}
+	}
+}
 
 //checkbox
 .checkbox_group_wrap {
