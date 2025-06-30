@@ -827,6 +827,9 @@
 		&.v_bg_ty4 { //실손의료비보험
 			background-image: url(../images/content/guarantee/bg_img_ltmd.svg);
 		} 
+		&.v_bg_ty5 { //실손의료비보험(계약전환용)
+			background-image: url(../images/content/guarantee/bg_img_ltsm.svg);
+		}  
 		.bubble_msg {
 			position: relative;
 			flex: 1;
