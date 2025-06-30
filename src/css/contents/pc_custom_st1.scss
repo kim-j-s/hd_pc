@@ -142,6 +142,10 @@ body {
 				margin: var(--gap-7) 0;
 			}
 		}
+
+		& + .info_gray {
+			margin-top: 0;
+		}
 	}
 
 	.info_gray {

@@ -1,139 +1,141 @@
 <div class="side_panel">
-	<div class="info_cont">
-		<div class="tit_box">
-			<h3 class="pop_title_h3">{{panel-title}}</h3>
-			<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
-				<span class="text">수정</span>
-				<i class="hd_icon resetSvg"></i>
-			</button>
+	<div class="info_cont pro_info_wrap">
+		<div class="pro_info_item">
+			<div class="tit_box">
+				<h3 class="pop_title_h3">{{panel-title}}</h3>
+				<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
+					<span class="text">수정</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</div>
+			<div class="data_list">
+				<ul>
+					<li>
+						<dl>
+							<dt class="country">이름</dt>
+							<dd>김*대</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt class="date">주민등록번호</dt>
+							<dd>900101-1******</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="data_list">
-			<ul>
-				<li>
-					<dl>
-						<dt class="country">이름</dt>
-						<dd>김*대</dd>
-					</dl>
-				</li>
-				<li>
-					<dl>
-						<dt class="date">주민등록번호</dt>
-						<dd>900101-1******</dd>
-					</dl>
-				</li>
-			</ul>
-		</div>
+	</div>
 		
-		<div class="info_gray">
-			기획 정의중
-			{{!-- <div class="step_list">
-				
-			<div class="acd_item">
-				{{#> cp/accordion ac-title="차량정보" ac-active=true }}
-					{{> cp/text class="big" placeholder="자동차 소유(예정)자" inp-title="자동차 소유(예정)자 입력" }}
-				{{/ cp/accordion }}
-			</div>
-			<div class="acd_item">
-				{{#> cp/accordion ac-title="주민등록번호" }}
-				<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
-				<div class="comp_wrap birth active">
-					{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
-					<span class="dash">-</span>
-					{{> cp/keypad7 kp-class="big" case1=true kt="주민등록번호 뒤 7자리 입력"}}
-				</div>
-				{{/ cp/accordion }}
-			</div>
-			<div class="acd_item">
-				{{#> cp/accordion ac-title="휴대폰번호" }}
-				{{> cp/text class="phone big" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
-				{{/ cp/accordion }}
-			</div>
-			</div>
-			<ol class="step_list">
-			<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-				<li {{#if step1}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">1.차량정보</dt>
-						<dd>
-							<ul>
-								<li>
-									차량번호: <span>구매예정</span>
-								</li>
-								<li>
-									차량종류: <span>승용차</span>
-								</li>
-							</ul>
-							<div class="info">보험료를 확인 중이에요</div>
-						</dd>
-					</dl>
-					<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
-						<span class="sr-only">수정</span>
-						<i class="hd_icon resetSvg"></i>
-					</button>
-				</li>
-				<li {{#if step2}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">2.운전자정보</dt>
-						<dd>
-							<ul>
-								<li>
-									운전자범위: <span>부부 한정</span>
-								</li>
-								<li>
-									배우자생년월일: <span>2000.01.01</span>
-								</li>
-							</ul>
-							<div class="info">정보를 입력 중이에요</div>
-						</dd>
-					</dl>
-					<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
-						<span class="sr-only">수정</span>
-						<i class="hd_icon resetSvg"></i>
-					</button>
-				</li>
-				<li {{#if step3}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">3.보험료확인</dt>
-						<dd>
-							<ul>
-								<li>
-									확인: <span>가입내용 및 계약서류</span>
-								</li>
-							</ul>
-							<div class="info">내용을 확인 중이에요</div>
-						</dd>
-					</dl>
-					<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
-						<span class="sr-only">수정</span>
-						<i class="hd_icon resetSvg"></i>
-					</button>
-				</li>
-				<li {{#if step4}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">4.피보험자/계약자 정보</dt>
-						<dd>
-							<div class="info">정보를 입력 중이에요</div>
-						</dd>
-					</dl>
-				</li>
-				<li {{#if step5}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">5.청약내용 확인</dt>
-						<dd>
-							<div class="info">정보를 입력 중이에요</div>
-						</dd>
-					</dl>
-				</li>
-				<li {{#if step6}}class="active"{{/if}}>
-					<dl>
-						<dt class="title">6.결제</dt>
-						<dd>
-							<div class="info">정보를 입력 중이에요</div>
-						</dd>
-					</dl>
-				</li>
-			</ol> --}}
+	<div class="info_gray">
+		기획 정의중
+		{{!-- <div class="step_list">
+			
+		<div class="acd_item">
+			{{#> cp/accordion ac-title="차량정보" ac-active=true }}
+				{{> cp/text class="big" placeholder="자동차 소유(예정)자" inp-title="자동차 소유(예정)자 입력" }}
+			{{/ cp/accordion }}
 		</div>
+		<div class="acd_item">
+			{{#> cp/accordion ac-title="주민등록번호" }}
+			<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
+			<div class="comp_wrap birth active">
+				{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 kp-class="big" case1=true kt="주민등록번호 뒤 7자리 입력"}}
+			</div>
+			{{/ cp/accordion }}
+		</div>
+		<div class="acd_item">
+			{{#> cp/accordion ac-title="휴대폰번호" }}
+			{{> cp/text class="phone big" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+			{{/ cp/accordion }}
+		</div>
+		</div>
+		<ol class="step_list">
+		<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+			<li {{#if step1}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">1.차량정보</dt>
+					<dd>
+						<ul>
+							<li>
+								차량번호: <span>구매예정</span>
+							</li>
+							<li>
+								차량종류: <span>승용차</span>
+							</li>
+						</ul>
+						<div class="info">보험료를 확인 중이에요</div>
+					</dd>
+				</dl>
+				<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
+					<span class="sr-only">수정</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</li>
+			<li {{#if step2}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">2.운전자정보</dt>
+					<dd>
+						<ul>
+							<li>
+								운전자범위: <span>부부 한정</span>
+							</li>
+							<li>
+								배우자생년월일: <span>2000.01.01</span>
+							</li>
+						</ul>
+						<div class="info">정보를 입력 중이에요</div>
+					</dd>
+				</dl>
+				<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
+					<span class="sr-only">수정</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</li>
+			<li {{#if step3}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">3.보험료확인</dt>
+					<dd>
+						<ul>
+							<li>
+								확인: <span>가입내용 및 계약서류</span>
+							</li>
+						</ul>
+						<div class="info">내용을 확인 중이에요</div>
+					</dd>
+				</dl>
+				<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
+					<span class="sr-only">수정</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</li>
+			<li {{#if step4}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">4.피보험자/계약자 정보</dt>
+					<dd>
+						<div class="info">정보를 입력 중이에요</div>
+					</dd>
+				</dl>
+			</li>
+			<li {{#if step5}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">5.청약내용 확인</dt>
+					<dd>
+						<div class="info">정보를 입력 중이에요</div>
+					</dd>
+				</dl>
+			</li>
+			<li {{#if step6}}class="active"{{/if}}>
+				<dl>
+					<dt class="title">6.결제</dt>
+					<dd>
+						<div class="info">정보를 입력 중이에요</div>
+					</dd>
+				</dl>
+			</li>
+		</ol> --}}
 	</div>
 	
 	{{!-- <div class="panel_total">
