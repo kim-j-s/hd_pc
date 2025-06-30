@@ -2,7 +2,7 @@
 화면번호 : MPRGIPT30007000000
 경로 : 하이펫보험 > 계약자정보 입력
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -299,116 +299,118 @@
 
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont">
-						<div class="tit_box">
-							<h3 class="pop_title_h3">반려동물 정보</h3>
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-								<span class="text">수정</span>
-								<i class="hd_icon resetSvg"></i>
-							</button>
+					<div class="info_cont pro_info_wrap">
+						<div class="pro_info_item">
+							<div class="tit_box">
+								<h3 class="pop_title_h3">반려동물 정보</h3>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</div>
+							<div class="data_list">
+								<ul>
+									<li>
+										<dl>
+											<!-- 강아지일 경우 -->
+											<dt class="dog">품종</dt>
+											<!-- 고양이일 경우 -->
+											<!-- <dt class="cat">품종</dt>-->
+											<dd>샴</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="birth">생년월일</dt>
+											<dd>만3세(20230301)</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="gender">성별</dt>
+											<dd>남아</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div class="data_list">
-							<ul>
-								<li>
-									<dl>
-										<!-- 강아지일 경우 -->
-										<dt class="dog">품종</dt>
-										<!-- 고양이일 경우 -->
-										<!-- <dt class="cat">품종</dt>-->
-										<dd>샴</dd>
-									</dl>
-								</li>
-								<li>
-									<dl>
-										<dt class="birth">생년월일</dt>
-										<dd>만3세(20230301)</dd>
-									</dl>
-								</li>
-								<li>
-									<dl>
-										<dt class="gender">성별</dt>
-										<dd>남아</dd>
-									</dl>
-								</li>
-							</ul>
-						</div>
+					</div>
 
-						<div class="info_gray">
-							<ol class="step_list">
-								<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-								<li class="active">
-									<dl>
-										<dt class="title">1.보험료 계산 결과</dt>
-										<dd>
-											<ul>
-												<li>선택: <span>표준형, 월15,100원</span></li>
-												<li>보험기간: <span>2025.01.02~2026.01.02</span></li>
-												<li>의료비 보상비율: <span>70%</span></li>
-											</ul>
-											<div class="info">보험료를 확인 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">2.계약자 정보</dt>
-										<dd>
-											<ul>
-												<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-											</ul>
-											<div class="info">정보를 입력 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="계약자 정보 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">3.반려동물 정보</dt>
-										<dd>
-											<ul>
-												<li>이름: <span>뽀삐</span></li>
-												<li>할인: <span>동물등록</span></li>
-											</ul>
-											<div class="info">정보를 입력 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="반려동물 정보 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">4.가입 내용 확인</dt>
-										<dd>
-											<ul>
-												<li>확인: <span>가입내용 및 계약서류</span></li>
-											</ul>
-											<div class="info">내용을 확인 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">5.보험료 결제</dt>
-										<dd>
-											<div class="info">정보를 입력 중이에요</div>
-										</dd>
-									</dl>
-								</li>
-							</ol>
-						</div>
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li class="active">
+								<dl>
+									<dt class="title">1.보험료 계산 결과</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>표준형, 월15,100원</span></li>
+											<li>보험기간: <span>2025.01.02~2026.01.02</span></li>
+											<li>의료비 보상비율: <span>70%</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2.계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="계약자 정보 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3.반려동물 정보</dt>
+									<dd>
+										<ul>
+											<li>이름: <span>뽀삐</span></li>
+											<li>할인: <span>동물등록</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="반려동물 정보 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4.가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5.보험료 결제</dt>
+									<dd>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
