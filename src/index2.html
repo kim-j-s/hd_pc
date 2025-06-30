@@ -9660,7 +9660,7 @@
 
 			$('.set.ss').on('click', function(){
 				$('tr').each(function(){
-					if( !$(this).find('.complete').hasClass('chk') ) {
+					if( $(this).find('.complete').hasClass('ok') || !$(this).find('.complete').hasClass('chk')  ) {
 						$(this).addClass('dp_none');
 					}
 				});
