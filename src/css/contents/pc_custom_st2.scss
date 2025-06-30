@@ -505,6 +505,22 @@
 // info_gray
 .info_gray {
 
+	&.summary {
+		.title_h2 {
+			font-weight: 700;
+		}
+		[class^=title_h]{
+			& + .data_box {
+				margin-top: var(--gap-6);
+			}
+		}
+		.data_box {
+			> dl {
+				padding-top: var(--gap-3);
+			}
+		}
+	}
+
 	& + .acd_item_ty2 {
 		margin-top: var(--gap-11);
 	}
