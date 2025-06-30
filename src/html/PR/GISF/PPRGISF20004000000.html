@@ -1,6 +1,7 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc h-prd="풍수해·지진재해보험(소상공인용)" }}
+	
 	<div id="container" class="container">
 		<div class="content">
 			<div class="title_view_wrap">
@@ -113,7 +114,10 @@
 						</div>
 						<div class="detail_price">
 							<div class="sub_txt_area">
-								미가입
+								{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+								<option value="" selected>미가입</option>
+								<option value="">5십만원</option>
+								{{/ cp/selectbox_pc}}
 							</div>
 						</div>
 					</li>

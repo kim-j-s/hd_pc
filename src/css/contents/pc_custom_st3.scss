@@ -583,7 +583,8 @@
 		}
 	}
 
-	& + .inp_checkbox {
+	& + .inp_checkbox,
+	& + .input_text {
 		margin-top: var(--gap-5);
 	}
 

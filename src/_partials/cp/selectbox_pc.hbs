@@ -1,5 +1,5 @@
 <div class="select_option_box{{#if s-class}} {{s-class}}{{/if}}">
-	<select name="" id="" title="{{s-title}}" class="selectbox">
+	<select name="" id="" title="{{s-title}}" class="selectbox" {{#if disabled}}disabled{{/if}}>
 		{{> @partial-block }}
 	</select>
 </div>

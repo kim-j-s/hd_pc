@@ -290,6 +290,7 @@
 		}
 	
 		.row {
+			align-items: flex-start;
 			margin-top: 0;
 			.form_line {
 				margin-top: 0;
@@ -305,7 +306,7 @@
 				.tooltip_panel {
 					width: auto;
 					.inner {
-						// white-space: nowrap;
+						white-space: nowrap;
 					}
 				}
 			}
