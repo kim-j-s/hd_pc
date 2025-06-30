@@ -20,7 +20,11 @@
         <div class="form_group_wrap">
           <div class="form_line">
             <div class="label_tit">보험사</div>
-            {{> cp/selectitem si_ph="선택" si_title="보험사 선택" si_popup="pop_type01"}}
+            {{#> cp/selectbox_pc s-title="보험사 선택" }}
+              <option value="" selected>선택</option>
+              <option value="" >보험사1</option>
+              <option value="">보험사2</option>
+            {{/ cp/selectbox_pc}}
           </div>
           <div class="form_line">
             <div class="label_tit">가입 건수</div>
@@ -38,7 +42,11 @@
         <div class="form_group_wrap">
           <div class="form_line">
             <div class="label_tit">보험사</div>
-            {{> cp/selectitem si_ph="선택" si_title="보험사 선택" si_popup="pop_type01"}}
+            {{#> cp/selectbox_pc s-title="보험사 선택" }}
+              <option value="" selected>선택</option>
+              <option value="" >보험사1</option>
+              <option value="">보험사2</option>
+            {{/ cp/selectbox_pc}}
           </div>
           <div class="form_line">
             <div class="label_tit">가입 건수</div>
