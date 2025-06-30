@@ -13,8 +13,8 @@
 					</h2>
 				</div>
 				<div class="btn_area">
-					{{> cp/button type="3" size="3" b-text="모든 플랜 확인"}}
-					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+					{{> cp/button type="3" size="4" b-text="모든 플랜 확인"}}
+					{{> cp/button type="3" size="4" b-text="계산 결과 문자로 받기"}}
 				</div>
 			</div>
 
@@ -110,7 +110,17 @@
 										</div>
 									</div>
 									<div class="detail_price">
-										<span class="point">1억1천만원</span>
+										{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+											<option value="" selected>1억1천만원</option>
+											<option value="">1억2천만원</option>
+											<option value="">1억3천만원</option>
+											<option value="">1억4천만원</option>
+											<option value="">1억5천만원</option>
+											<option value="">1억6천만원</option>
+											<option value="">1억7천만원</option>
+											<option value="">1억8천만원</option>
+											<option value="">1억9천만원</option>
+										{{/ cp/selectbox_pc}}
 									</div>
 								</li>
 								<li class="list">
@@ -123,7 +133,16 @@
 										</div>
 									</div>
 									<div class="detail_price">
-										<span class="point">2천만원</span>
+										{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+											<option value="" selected>2천만원</option>
+											<option value="">3천만원</option>
+											<option value="">4천만원</option>
+											<option value="">5천만원</option>
+											<option value="">6천만원</option>
+											<option value="">7천만원</option>
+											<option value="">8천만원</option>
+											<option value="">9천만원</option>
+										{{/ cp/selectbox_pc}}
 									</div>
 								</li>
 								<li class="list">

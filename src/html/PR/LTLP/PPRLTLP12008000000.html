@@ -1,20 +1,25 @@
 
 {{#> layout/default page-title="가입 전 알릴 사항 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="가입 전 알릴 사항" }}
+	{{> layout/header_pc h-prd="굿앤굿우리펫보험" }}
 
-	<div id="container" class="container">
+	<div id="container" class="container notification">
 		<div class="content">
 			<!-- s: content_top -->
-			<!-- s: 25-05-19 수정 -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					<strong>가입 전 반려동물에 대해<br>알려주세요</strong>
-				</h2>
-				<p class="title_sub">사실 그대로 알려주셔야 향후 보상처리에 불이익이 없어요.</p>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">가입 전 알릴 사항</div>
+					<h2 class="p_title">
+						향후 보험금 지급에 문제가 없도록 <strong>꼭 사실대로</strong> 알려주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: 25-05-19 수정 -->
 			<!-- e: content_top -->
+
+			<div class="checkbox_group_wrap">
+				{{> cp/checkbox checkbox_class="rd_check_btn sm" id="checkbox_all" label_class="chk_label_ty5" labelname="모두 아니요" }}
+			</div>
+
 			<ol class="form_list">
 				<li>
 					<div class="form_group_wrap">
@@ -48,8 +53,7 @@
 							<div class="label_tit">
 								과거부터 현재까지 아래의 병으로 진단되거나 증상이 있거나 의심 소견을 받은 적이 있나요?
 							</div>
-							<div class="info_gray">
-								<!-- s: 25-05-19 수정 -->
+							<div class="info_gray ty2">
 								<ol class="number_list">									
 									<!-- s: 강아지 case -->
 									<li>내장질환 : 심장질환, 만성신부전증, 간기능부전, 담도계질환, 간문맥전신단락증(PSS), 만성췌장염, 췌장분비부전(EPI), 거대식도질환, 비뇨기계결석, 기관협착(기관허탈)</li>
@@ -71,7 +75,6 @@
 									<li>기타질환 : 악성종양(암), 모낭충증, 심장사상충감염, 외이염, 알러지, 아토피, 치주질환, 고양이 코로나바이러스 감염증, 고양이 칼리시바이러스 감염증, 고양이 바이러스성 비기관지염</li>
 									<!-- e: 고양이 case -->
 								</ol>
-								<!-- e: 25-05-19 수정 -->
 							</div>
 							<div class="radio_group_wrap" role="radiogroup">
 								{{> cp/radio rd-class="rd_btn" rd-id="notification03_01" name="notification03" labelname="예" }}
@@ -84,13 +87,10 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">
-								현재 계속해서 복용(사용)하고 있는 의약품*이 있나요?
-								<div class="star_list">
-									<!-- s: 25-06-05 수정 -->
-									
-									<span>심장사상충, 벼룩, 진드기 등의 <span class="point">예방약 및 영양제는 제외</span></span>
-									<!-- e: 25-06-05 수정 -->
-								</div>
+								현재 계속해서 복용(사용)하고 있는 의약품<span class="point">*</span>이 있나요?
+							</div>
+							<div class="info_gray ty2">
+								<p class="info_text"><span class="point">*</span>심장사상충, 벼룩, 진드기 등의 <strong class="point">예방약 및 영양제는 제외</strong></p>
 							</div>
 							<div class="radio_group_wrap" role="radiogroup">
 								{{> cp/radio rd-class="rd_btn" rd-id="notification04_01" name="notification04" labelname="예" }}
@@ -148,13 +148,11 @@
 							<div class="label_tit">
 								반려동물이 현재 일상적인 관리나 예방접종을 받고 있는 동물병원이 있나요?
 							</div>
-							<div class="info_gray">
+							<div class="info_gray ty2">
 								<p class="info_text">동물병원이 아닌 가정에서 예방접종 및 진료/처치 등을 직접 해서 동물병원 기록이 없는 경우 가입이 거절될 수 있습니다.</p>
 							</div>
 							<div class="radio_group_wrap" role="radiogroup">
-								<!-- s: 25-05-19 수정 -->
 								{{> cp/radio rd-class="rd_btn" rd-id="notification08_01" name="notification08" labelname="예" }}
-								<!-- e: 25-05-19 수정 -->
 								{{> cp/radio rd-class="rd_btn" rd-id="notification08_02" name="notification08" labelname="아니요" checked=true }}
 							</div>
 						</div>
@@ -166,51 +164,43 @@
 							<div class="label_tit">
 								병원정보 입력
 							</div>
-							
-							<div class="form_group_wrap">
 								<div class="row">
 									<div class="form_line grow">
 										<div class="label_tit">
 											시/도
 										</div>
-										<!-- s: 25-05-19 수정 -->
 										{{> cp/selectitem si_ph="선택" si_title="시/도 선택"}}
-										<!-- e: 25-05-19 수정 -->
 									</div>
 									<div class="form_line grow">
 										<div class="label_tit">
 											군/구
 										</div>
-										<!-- s: 25-05-19 수정 -->
 										{{> cp/selectitem si_ph="선택" si_title="군/구 선택"}}
-										<!-- e: 25-05-19 수정 -->
 									</div>
 								</div>
 								<div class="form_line">
 									<div class="label_tit">동물병원명</div>
 									{{> cp/text placeholder="병원명 입력" inp-title="동물병원명 입력" }}
 								</div>
-							</div>
 						</div>
 					</div>
 				</li>
 			</ol>
-			<!-- s: 꼭 알아두세요 -->
-			{{#> cp/notice dp-active=true }}
-			<ul class="list_ty1">
-				<li>위 질문들에 대해 사실대로 알리지 않거나 사실과 다르게 알린 경우에는 보험 가입이 거절될 수 있으며, 특히 그 내용이 ‘중요한 사항’에 해당하는 경우 회사는 보험약관에 따라 이 보험계약을 일방적으로 해지할 수 있고, 이미 보험사고가 발생했더라도 보험금 지급을 거절하는 등 보장이 제한될 수 있습니다.</li>
-			</ul>
-			{{/ cp/notice }}
-			<!-- e: 꼭 알아두세요 -->
-		</div>
-	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="중요 사항을 확인 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="중요 사항을 확인 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+				</div>
+			</div>
 		</div>
-	</div>
+	
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_굿앤굿우리펫보험 step1=true panel-title="반려동물 정보" panel-title2="가입자 정보" }}
+		<!-- e: 사이드 패널 -->
+	
+	</div>	
 </div>
 
 <!-- s: popup area -->

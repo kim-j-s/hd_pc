@@ -1,6 +1,7 @@
 {{#> layout/default page-title="건물/주택 정보 | 상품"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc h-prd="풍수해·지진재해보험(주택용)" }}
+
 	<div id="container" class="container">
 		<div class="content">
 			<div class="title_view_wrap">
@@ -38,10 +39,6 @@
 						<div class="label_tit">총 지상 층수{{> cp/tooltip text="<p>총 층수 기준 : 피보험자가 거주하는 아파트의 라인, 동과 상관없이 아파트의 총 층수</p>" trigger-icon="popover_help"}}</div>
 						<div class="row"> 
 							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="1" r-text="층" inp-title="층수 입력" }}
-							<div class="radio_comb origin" role="radiogroup">	
-								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_1" name="radio_g1" labelname="지상" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_2" name="radio_g1" labelname="지하" }}
-							</div>
 						</div>
 					</div>
 				</div>
@@ -58,7 +55,6 @@
 			</div>
 			<!-- s: 하단 버튼 영역 -->
 
-			<!-- s: 25-05-07 수정 -->
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
@@ -70,7 +66,6 @@
 			</ul>
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 25-05-07 수정 -->
 		</div>
 
 		<!-- s: 사이드 패널 -->
@@ -80,9 +75,5 @@
 </div>
 
 <!-- s: popup area -->
-
-
-
-
 <!-- e: popup area -->
 {{/ layout/default }}

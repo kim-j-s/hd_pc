@@ -128,13 +128,13 @@
 						}
 
 						button { 
-							flex: 0 1 auto;							
-						}						
-					} 
+							flex: 0 1 auto;
+						}
+					}
 				}
 
 				> .form_group_wrap { 
-					border: 1px solid red;
+					// border: 1px solid red;
 					.row {
 						margin-top: var(--gap-5);
 					}

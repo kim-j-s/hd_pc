@@ -417,6 +417,10 @@
 		& + .form_group_wrap {
 			margin-top: var(--gap-8);
 		}
+		
+		& + .radio_group_wrap_ty2 {
+			margin-top: var(--gap-11);
+		}
 
 		input[type=checkbox] {
 			top: 24px;
@@ -472,6 +476,28 @@
 						min-height: 80px;
 
 						span {
+							&:before {
+								top: calc(50% - 10px);
+							}
+						}
+					}
+				}
+			}
+		}
+		&.sm {
+			input[type='checkbox'] {
+				& + .chk_label {
+					&.chk_label_ty5 {
+						display: flex;
+						align-items: center;
+						min-height: var(--size-height-6);
+						padding: var(--padding-3) var(--padding-4);
+
+						span {
+							&.label_cont {
+								font-size: var(--font-size-button-medium);
+
+							}
 							&:before {
 								top: calc(50% - 10px);
 							}
@@ -539,7 +565,10 @@
 	& + .checkbox_group_wrap {
 		margin-top: var(--gap-8);
 	}
-
+	
+	& + .form_list {
+		margin-top: var(--gap-9);
+	} 
 	& + .car_type_option {
 		margin-top: var(--gap-11);
 	}
