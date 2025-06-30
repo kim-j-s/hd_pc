@@ -128,19 +128,13 @@
 						}
 
 						button { 
-<<<<<<< HEAD
 							flex: 0 1 auto;
 						}
 					}
-=======
-							flex: 0 1 auto;							
-						}						
-					} 
->>>>>>> 84acdbc9528fc9f457603c1dd498640de4864935
 				}
 
 				> .form_group_wrap { 
-					border: 1px solid red;
+					// border: 1px solid red;
 					.row {
 						margin-top: var(--gap-5);
 					}
