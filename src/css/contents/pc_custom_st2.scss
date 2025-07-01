@@ -246,13 +246,6 @@
 			& ~ .form_line {
 				margin-top: 0;
 			}
-			.tooltip_wrap {
-				.tooltip_panel {
-					// max-width: 400px;
-					max-width: 327px;
-					min-width: 120px;
-				}
-			}
 		}
 	
 		> .list_ty2 {
@@ -483,7 +476,29 @@
 }
 
 
-
+// tooltip 재선언
+.tooltip_wrap {
+	.tooltip_panel {
+		max-width: 327px;
+		min-width: 120px;
+	}
+	&.al_left {
+		.tooltip_panel {
+			left: -16px;
+		}
+	}
+	&.al_center {
+		.tooltip_panel {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&.al_right {
+		.tooltip_panel {
+			right: -16px;
+		}
+	}
+}
 
 
 // file 관련
@@ -532,14 +547,6 @@
 		margin: 0 auto;
 	}
 }
-
-//tooltip
-// .tooltip_wrap {
-// 	.tooltip_panel {
-// 		width: max-content;
-// 		max-width: 836px;
-// 	}
-// }
 
 // tab 관련
 .tab_wrap {
