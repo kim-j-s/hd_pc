@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -61,7 +61,6 @@
 			</div>
 			<div class="tooltip_panel" role="tooltip">
 				<div class="inner">
-					<p class="inner_title" aria-describedby="title"></p>
 					<div class="inner_contents">
 						<p>툴팁샘플입니다.</p>
 					</div>
@@ -72,15 +71,73 @@
 		</div>
 
 		<div class="guide_discription">[툴팁내용 1줄일 때]</div>
+
 		<div>
-			텍스트 텍스트 텍스트 텍스트텍스트<br />텍스트텍스트텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
+			기본 정렬 기본 정렬 기본 정렬 <br />
+			기본 정렬 기본 정렬
 			<div class="tooltip_wrap">
 				<div class="tooltip_head">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
+						<div class="inner_contents">
+							<p>내용을 text속성으로 넣었습니다.</p>
+						</div>
+
+						<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			기본 하단 왼쪽 정렬 기본 하단 왼쪽 정렬 기본 하단 왼쪽 정렬 <br />
+			기본 하단 왼쪽 정렬 기본 하단 왼쪽 정렬
+			<div class="tooltip_wrap al_left">
+				<div class="tooltip_head">
+					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
+				</div>
+				<div class="tooltip_panel" role="tooltip">
+					<div class="inner">
+						<div class="inner_contents">
+							<p>내용을 text속성으로 넣었습니다.</p>
+						</div>
+
+						<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			기본 하단 중앙 정렬 기본 하단 중앙 정렬 기본 하단 중앙 정렬 <br />
+			기본 하단 중앙 정렬 기본 하단 중앙 정렬
+			<div class="tooltip_wrap al_center">
+				<div class="tooltip_head">
+					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
+				</div>
+				<div class="tooltip_panel" role="tooltip">
+					<div class="inner">
+						<div class="inner_contents">
+							<p>내용을 text속성으로 넣었습니다.</p>
+						</div>
+
+						<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			기본 하단 오른쪽 정렬 기본 하단 오른쪽 정렬 기본 하단 오른쪽 정렬 <br />
+			기본 하단 오른쪽 정렬 기본 하단 오른쪽 정렬
+			<div class="tooltip_wrap al_right">
+				<div class="tooltip_head">
+					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
+				</div>
+				<div class="tooltip_panel" role="tooltip">
+					<div class="inner">
 						<div class="inner_contents">
 							<p>내용을 text속성으로 넣었습니다.</p>
 						</div>
@@ -99,7 +156,6 @@
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title">팝업타이틀</p>
 						<div class="inner_contents">
 							<p>내용을 partial로 넣었습니다.</p>
 							<p>
@@ -130,7 +186,6 @@
 					</div>
 					<div class="tooltip_panel" role="tooltip">
 						<div class="inner">
-							<p class="inner_title" aria-describedby="title">팝업타이틀</p>
 							<div class="inner_contents">
 								<p>내용을 partial로 넣었습니다.</p>
 								<p>
@@ -160,13 +215,12 @@
 				텍스트 텍스트 텍스트 텍스트텍스트<br />
 				텍스트텍스트텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트
 			</span>
-			<div class="tooltip_wrap">
+			<div class="tooltip_wrap al_right">
 				<div class="tooltip_head top">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">
 							<p>position이 top일 때 팝업</p>
 							<p>내용을 text속성으로 넣었습니다.</p>
@@ -181,20 +235,19 @@
 		<br /><br />
 
 		<div>
-			<div class="tooltip_wrap">
+			<div class="tooltip_wrap al_left">
 				<div class="tooltip_head top">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">test</div>
 
 						<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
 					</div>
 				</div>
 			</div>
-			텍스트 텍스트 텍스트 텍스트텍스트<br />
+			왼쪽 끝 왼쪽 끝 왼쪽 끝 왼쪽 끝 왼쪽 끝 왼쪽 끝<br />
 			텍스트텍스트텍스트텍스트 텍스트텍스트
 			<div class="tooltip_wrap">
 				<div class="tooltip_head top">
@@ -202,7 +255,6 @@
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">
 							<p>position이 top일 때 팝업</p>
 							<p>내용을 partial로 넣었습니다.</p>
@@ -212,14 +264,13 @@
 					</div>
 				</div>
 			</div>
-			텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트 텍스트텍스트
-			<div class="tooltip_wrap">
+			텍스트텍스트 텍스트텍스트 텍스트텍스트 우측정렬 우측정렬 우측정렬 우측정렬 우측정렬 우측정렬 우측정렬
+			<div class="tooltip_wrap al_right">
 				<div class="tooltip_head top">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">
 							<p>position이 top일 때 팝업</p>
 							<p>내용을 partial로 넣었습니다.</p>
@@ -233,13 +284,12 @@
 
 		<div class="guide_h4">타이틀 내부 툴팁</div>
 		<div class="title_has_tooltip title_h5">
-			<div class="tooltip_wrap">
+			<div class="tooltip_wrap al_left">
 				<div class="tooltip_head top">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">테스트</div>
 
 						<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
@@ -253,7 +303,6 @@
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title"></p>
 						<div class="inner_contents">
 							<p class="tooltip_title">특정용도 차량</p>
 							<p class="tooltip_desc">특정한 용도에 사용되는 자동차로서 이동진료차, 이동도서관차, 채혈차, 방송중계차, 혈액수송차, 검사측정차, 현금수송차, 방역차, 소독차, 이동우편차, 영화촬영차, 이동판매차, 충전차, 배전차, 발전차등 이와 유사한 형태로 사용되는 자동차 (단, 관련 장비가 차체에 부착된 경우에만 해당되며, 화물차에 장비를 싣고 다니는 경우에는 해당되지 않습니다.)</p>
@@ -264,13 +313,12 @@
 				</div>
 			</div>
 			교습용 차량입니까?
-			<div class="tooltip_wrap">
+			<div class="tooltip_wrap al_right">
 				<div class="tooltip_head">
 					<button type="button" class="open trigger_btn" aria-expanded="false"><i class="hd_icon popover_help"></i><span class="blind">툴팁 열기</span></button>
 				</div>
 				<div class="tooltip_panel" role="tooltip">
 					<div class="inner">
-						<p class="inner_title" aria-describedby="title">교습용 차량</p>
 						<div class="inner_contents">
 							<p class="tooltip_desc">차량이 인가된 자동차학원 또는 자동차학원 대표자가 소유하면서, 운전교습 및 도로주행교육 및 시험에 사용되는 자동차</p>
 						</div>
