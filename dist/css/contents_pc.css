@@ -740,6 +740,11 @@ body {
 .info_gray .data_box > dl dd {
 	text-align: left;
 }
+.info_gray .data_box > dl.footer_dl {
+	width: 100%;
+	padding: var(--gap-6) 0 0 0;
+	margin-top: var(--gap-6);
+}
 .info_gray .data_box.df_type_w_ty1 > dl dt {
 	width: 10rem;
 }
@@ -923,6 +928,12 @@ body {
 .container .card_item_wrap.ty3 .card_item .item_top .title_info .main_title {
 	padding-right: 0;
 	background: none;
+}
+.container .card_item_wrap.ty3 .card_item .card_list_ty1 > li > *:last-child {
+	text-align: left;
+}
+.container .card_item_wrap.ty3 + .info_summary {
+	margin-top: var(--gap-8);
 }
 .card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label,
 .card_item_wrap .card_item .item_inner > .inp_radio .chk_label {
