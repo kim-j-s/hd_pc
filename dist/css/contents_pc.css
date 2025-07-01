@@ -491,19 +491,27 @@ body {
 .notification .form_list > li > .form_group_wrap > .form_line > .label_tit + .row {
 	margin-top: var(--gap-5);
 }
+.notification .form_list > li > .form_group_wrap > .form_line > .label_tit + .row,
+.notification .form_list > li > .form_group_wrap > .form_line > .label_tit + .form_group_wrap {
+	border: 1px solid red;
+}
 .notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) {
-	padding-right: 31.2rem;
+	background-color: yellow;
 }
 .notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) > .label_tit {
 	display: table-cell;
 	vertical-align: middle;
 	height: 5.6rem;
+	padding-right: 31.2rem;
 }
 .notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) > .label_tit .num {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
 	padding-right: 0.4rem;
+}
+.notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) .info_gray.ty2 {
+	padding-right: 31.2rem;
 }
 .notification .form_list > li > .form_group_wrap > .form_line .info_gray.ty2 {
 	margin-top: var(--gap-5);
@@ -518,15 +526,12 @@ body {
 	top: 0;
 	right: 0;
 }
-.notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap.ty2 {
+.notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap {
 	margin-top: var(--gap-5);
 }
-.notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap.ty2 .inp_checkbox {
+.notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap .inp_checkbox {
 	-ms-flex-preferred-size: calc(25% - 0.9rem);
 	flex-basis: calc(25% - 0.9rem);
-}
-.notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap.ty2 + .form_group_wrap {
-	margin-top: var(--gap-5);
 }
 .notification .form_list > li > .form_group_wrap > .form_line .row {
 	width: 100%;
@@ -541,6 +546,9 @@ body {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 1 calc(50% - 1.6rem);
 	flex: 0 1 calc(50% - 1.6rem);
+}
+.notification .form_list > li > .form_group_wrap > .form_line .form_group_wrap {
+	display: block;
 }
 .checkbox_group_wrap {
 	gap: var(--gap-8);
