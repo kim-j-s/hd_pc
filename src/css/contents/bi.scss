@@ -141,7 +141,6 @@
 							animation: bounce 0.8s linear infinite;
 						}
 						
-						
 						&::after {
 							content: '';
 							position: absolute;
@@ -655,6 +654,11 @@
 	&.insurance {
 		background-image: url(../images/content/bi/icon_stepper_insurance.svg);
 	}
+	//풍수해지진재해(소상공인)
+	&.stamp {
+		background-image: url(../images/content/bi/icon_stepper_stamp.svg);
+	}
+	
 	
 	
 	
@@ -1154,6 +1158,10 @@
 	position: static;
 	overflow: initial;
 	margin-top: auto;
+
+	.form_group_wrap {
+		width: 100%;
+	}
 }
 
 .bi_opts_wrap .opts_area.active {

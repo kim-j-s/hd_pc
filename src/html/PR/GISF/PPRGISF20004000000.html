@@ -124,7 +124,7 @@
 					<li class="list">
 						<div class="detail_list">
 							<div class="item_inner">
-								{{> cp/ibs cid="checkbox01-4" sct="자기부담금" checked=true disabled=true}}
+								{{> cp/ibs cid="checkbox01-4" sct="자기부담금" checked=true disabled=true popup="ex_popup_bottom"}}
 							</div>
 						</div>
 						<div class="detail_price">
@@ -168,6 +168,24 @@
 </div>
 
 <!-- s: popup area -->
+<!-- s: 자기부담금 팝업 -->
+{{#> popup/popup_layer popup-id="ex_popup_bottom" popup-title="자기부담금이란?"}}
+<div class="popup_cont">
+	<div class="popup_content">
+		<div class="info_cont">
+			<ul class="list_ty3">
+				<li>보험 사고 발생 시 보상받는 보험금에서 공제되는 금액이에요</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_layer}}
+<!-- e: 자기부담금 팝업 -->
 
 <!-- e: popup area -->
 {{/ layout/default }}

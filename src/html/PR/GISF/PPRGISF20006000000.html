@@ -1,6 +1,6 @@
 {{#> layout/default page-title="가입 전 알릴 사항 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="가입 전 알릴 사항" }}
+	{{> layout/header_pc h-prd="풍수해·지진재해보험(소상공인용)" }}
 
 	<div id="container" class="container">
 		<div class="content">
@@ -57,23 +57,18 @@
 				</li>
 			</ol>
 
-			<!-- s: 25-05-07 수정 -->
-			<!-- s: 꼭 알아두세요 -->
-			{{#> cp/notice dp-active=true }}
-			<ul class="list_depth">
-				<li>소상공인 확인 체크리스트는 청약서의 일부를 구성하여, 약관상 중요한 사항에 해당하며 만약 아래 질문들에 대하여 사실대로 알리지 않거나 사실과 다르게 알린 경우에는 보험가입이 거절될 수 있으며, 이미 보험사고가 발생하였더라도 보험금 지급을 거절하는 등 보장이 제한될 수 있습니다.</li>
-			</ul>
-			{{/ cp/notice }}
-			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 25-05-07 수정 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="중요 사항을 확인 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+				</div>
+			</div>
 		</div>
-	</div>
 
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="중요 사항을 확인 중이에요" disabled=true }}
-			<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
-		</div>
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_풍수해소상공인용 panel-title="기초 정보" panel-title2="건물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
 	</div>
 </div>
 
