@@ -12,41 +12,41 @@
             </h2>
           </div>
         </div>
-		<div class="info_summary payment">
-			<div class="summary_top">
-				<div class="s_title">결제하실 금액</div>
-			</div>
-			<div class="summery_inner center">
-				<div class="total_wrap">
-					<div class="value">
-						<div class="val_price">768,693<span class="text">원</span></div>
+			<div class="info_summary payment">
+				<div class="summary_top">
+					<div class="s_title">결제하실 금액</div>
+				</div>
+				<div class="summery_inner center">
+					<div class="total_wrap">
+						<div class="value">
+							<div class="val_price">768,693<span class="text">원</span></div>
+						</div>
+					</div>
+					<div class="detail_wrap">
+						<div class="dt_table">
+							<dl>
+								<dt>총 보험료</dt>
+								<dd><strong>995,543 원</strong></dd>
+							</dl>
+							<dl>
+								<dt>전계약 마일리지 환급금</dt>
+								<dd>-186,850 원</dd>
+							</dl>
+							<dl class="sm">
+								<dt>환급금 사용여부</dt>
+								<dd>{{> cp/checkbox id="switch_check9" chk_class="right" label_class="switch_check" role="switch" aria-checked="false" }}</dd>
+							</dl>
+							<dl>
+								<dt>블루/기아멤버스 포인트</dt>
+								<dd>-30,000 원</dd>
+							</dl>
+							<dl>
+								<dt>하이헬스 챌린지 포인트</dt>
+								<dd>-10,000 원</dd>
+							</dl>
+						</div>
 					</div>
 				</div>
-				<div class="detail_wrap">
-					<div class="dt_table">
-						<dl>
-							<dt>총 보험료</dt>
-							<dd><strong>995,543 원</strong></dd>
-						</dl>
-						<dl>
-							<dt>전계약 마일리지 환급금</dt>
-							<dd>-186,850 원</dd>
-						</dl>
-						<dl class="sm">
-							<dt>환급금 사용여부</dt>
-							<dd>{{> cp/checkbox id="switch_check9" chk_class="right" label_class="switch_check" role="switch" aria-checked="false" }}</dd>
-						</dl>
-						<dl>
-							<dt>블루/기아멤버스 포인트</dt>
-							<dd>-30,000 원</dd>
-						</dl>
-						<dl>
-							<dt>하이헬스 챌린지 포인트</dt>
-							<dd>-10,000 원</dd>
-						</dl>
-					</div>
-				</div>
-			</div>
 			</div>
 
 			<div class="banner_box ty3">
@@ -99,7 +99,12 @@
 								<div>카드 할부</div>
 								{{> cp/linkButton bl_class="short_cut sm" bl_text="무이자할부 안내" question_tit="무이자할부 안내" }}
 							</div>
-							{{> cp/selectitem si_item="일시불" si_title="카드 할부 선택" si_popup="pop_type02"}}
+							<!-- s: 25-07-01 수정 -->
+							{{#> cp/selectbox_pc s-title="카드 할부 선택" }}
+								<option value="" selected>일시불</option>
+								<option value="">2개월</option>
+							{{/ cp/selectbox_pc}}
+							<!-- e: 25-07-01 수정 -->
 							<ul class="list_ty2">
 								<li>계약자 명의의 국내발급 카드로만 결제가 가능합니다. (법인, 가족카드 불가)</li>
 							</ul>
@@ -123,15 +128,19 @@
 								<!-- e: 신한카드 선택 시, 노출 -->
 							</div>
 						</div>
+						<!-- s: 25-07-01 수정 -->
 						<!-- s: 블루/기아멤버스 -->
-						<div class="form_line">
+						<div class="form_line full_half">
 							<div class="label_tit">
 								블루/기아멤버스 포인트 선택
 							</div>
-							{{> cp/selectitem si_ph="블루/기아멤버스 포인트 선택" si_title="블루/기아멤버스 포인트 선택" si_item="현대 블루멤버스 포인트" si_popup="pop_type03" }}
+							{{#> cp/selectbox_pc s-title="블루/기아멤버스 포인트 선택" }}
+								<option value="" selected>블루/기아멤버스 포인트 선택</option>
+								<option value="">기아 멤버스 포인트</option>
+							{{/ cp/selectbox_pc}}
 						</div>
 						<!-- s: 현대 블루멤버스 -->
-						<div class="form_line">
+						<div class="form_line full_half">
 							<div class="label_tit">현대 블루멤버스 카드번호</div>
 							<div class="comp_wrap card">
 								{{> cp/text type="tel" minlength="4" maxlength="4" placeholder="4자리" inp-title="카드 첫번째 4자리 입력" no_del="flase" }}
@@ -148,7 +157,7 @@
 						</div>
 						<!-- e: 현대 블루멤버스 -->
 						<!-- s: 기아 멤버스 -->
-						<div class="form_line">
+						<div class="form_line full_half">
 							<div class="label_tit">기아 멤버스 카드번호</div>
 							<div class="comp_wrap card">
 								{{> cp/text type="tel" minlength="4" maxlength="4" placeholder="4자리" inp-title="카드 첫번째 4자리 입력" no_del="flase" }}
@@ -172,7 +181,7 @@
 							<div class="label_tit">사용 포인트</div>
 							{{> cp/text type="tel" class="price" r-text="P" inp-title="사용 포인트 입력"}}
 						</div>
-						<div class="form_line full_half">
+						<div class="form_line">
 							<div class="label_tit">카드 비밀번호</div>
 							<div class="comp_wrap">
 								{{> cp/keypad4 case1="숫자 4자리 입력" kt="카드 비밀번호 숫자 4자리 입력" }}
@@ -184,6 +193,7 @@
 						<li>비밀번호 3회 오류 시 블루멤버스 고객센터(080-600-6000)로 연락하시어 비밀번호 재설정 후 결제 진행이 가능합니다.</li>
 					</ul>
 					<!-- e: 블루/기아멤버스 -->
+					<!-- e: 25-07-01 수정 -->
 				</div>
 
 				<!-- 간편결제 -->
@@ -313,43 +323,42 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 			
-            <div class="divider_ty1"></div>
+			<div class="divider_ty1"></div>
 			<div class="btn_area end">
 				<a href="javascript:void(0)" role="button" class="btn_link short_cut">
 					<span class="text">이전 계좌정보 불러오기</span>
 				</a>
 			</div>
 			<h3 class="title_h3">ECO 마일리지 환급 계좌</h3>
-			<!-- s: 이체 선택 시 -->		
+			<!-- s: 즉시이체 선택 시 -->		
 			{{> cp/checkbox checkbox_class="rd_box" id="checkbox04-9" label_class="chk_label_ty3" labelname="결제 계좌와 동일합니다" }}		
-			<!-- e: 이체 선택 시 -->
+			<!-- e: 즉시이체 선택 시 -->
 			<div class="form_group_wrap">
 				<div class="form_line">
 					<div class="label_tit">은행</div>
-                    {{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" }}
-                </div>
-                <div class="form_line">
-                    <div class="label_tit">계좌번호</div>
-                    {{> cp/text placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
-                    <ul class="list_ty2">
-                        <li><strong>김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
-                        <li><strong>해당 계약 만기시 환급 받을 계좌정보를 입력해주세요.</strong></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="checkbox_group_wrap column">
-                {{#> cp/checkbox checkbox_class="rd_box" id="checkbox04-21" label_class="chk_label_ty2" labelname="마일리지 환급금 지급방법 안내<br>(갱신계약 대체보험료로 사용하지 않은 경우)" }}
-                <div class="chk_lby">
-                    <ul class="list_ty2">
-                        <li><strong class="point">카드 납입 체결계약 - 카드 부분취소 지급</strong></li>
-                        <li><strong>현금 납입 체결계약 - 계좌 환급 지급</strong></li>
-                    </ul>
-                </div>
-                {{/ cp/checkbox}}
-            </div>
+							{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" }}
+					</div>
+					<div class="form_line">
+							<div class="label_tit">계좌번호</div>
+							{{> cp/text placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
+							<ul class="list_ty2">
+									<li><strong>김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
+									<li><strong>해당 계약 만기시 환급 받을 계좌정보를 입력해주세요.</strong></li>
+							</ul>
+					</div>
+			</div>
+			<div class="checkbox_group_wrap column">
+					{{#> cp/checkbox checkbox_class="rd_box" id="checkbox04-21" label_class="chk_label_ty2" labelname="마일리지 환급금 지급방법 안내<br>(갱신계약 대체보험료로 사용하지 않은 경우)" }}
+					<div class="chk_lby">
+							<ul class="list_ty2">
+									<li><strong class="point">카드 납입 체결계약 - 카드 부분취소 지급</strong></li>
+									<li><strong>현금 납입 체결계약 - 계좌 환급 지급</strong></li>
+							</ul>
+					</div>
+					{{/ cp/checkbox}}
+			</div>
 			<div class="divider_ty1"></div>
 			<div class="btn_area end">
 				<a href="javascript:void(0)" role="button" class="btn_link short_cut">

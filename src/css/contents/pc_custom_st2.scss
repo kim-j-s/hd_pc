@@ -99,20 +99,7 @@
 
 	&.price_btn {
 		padding-right: 22px;
-		background: none;
-		border-radius:0;
-	}
-}
-.price_btn {
-	&:after {
-		content:'';
-		position: absolute;
-		top: 0;
-		right : 0;
-		width: 20px;
-		height: 20px;
-		background: url(../images/icon/arrowRight_ty6.svg) no-repeat right center/20px auto;
-		transform: rotate(90deg);
+		border-radius: 0;
 	}
 }
 
@@ -147,23 +134,23 @@
 .banner_box {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	// justify-content: space-between;
+	// justify-content: center;
+	justify-content: space-between;
 	gap: var(--gap-5) var(--gap-8);
 
 	// 1개일 시, 가운데 정렬
-	&:has(*:only-child){
-		justify-content: center;
-	}
+	// &:has(*:only-child){
+	// 	justify-content: center;
+	// }
 
-	&:not(:has(*:only-child)){
-		* {
-			width: calc(50% - 16px);
-		}
-	}
-	&:has(*:nth-child(3)) {
-		justify-content: flex-start;
-	}
+	// &:not(:has(*:only-child)){
+	// 	* {
+	// 		width: calc(50% - 16px);
+	// 	}
+	// }
+	// &:has(*:nth-child(3)) {
+	// 	justify-content: flex-start;
+	// }
 
 	> * {
 		flex: 0 1 calc(50% - 16px);
@@ -246,13 +233,6 @@
 			& ~ .form_line {
 				margin-top: 0;
 			}
-			.tooltip_wrap {
-				.tooltip_panel {
-					// max-width: 400px;
-					max-width: 327px;
-					min-width: 120px;
-				}
-			}
 		}
 	
 		> .list_ty2 {
@@ -303,16 +283,16 @@
 			gap: var(--gap-8);
 		}
 	
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					width: auto;
-					.inner {
-						white-space: nowrap;
-					}
-				}
-			}
-		}
+		// .label_tit {
+		// 	.tooltip_wrap {
+		// 		.tooltip_panel {
+		// 			width: auto;
+		// 			.inner {
+		// 				white-space: nowrap;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	
 		& + .banner_box,
 		& + .file_attach_box {
@@ -488,7 +468,29 @@
 }
 
 
-
+// tooltip 재선언
+.tooltip_wrap {
+	.tooltip_panel {
+		max-width: 327px;
+		min-width: 120px;
+	}
+	&.al_left {
+		.tooltip_panel {
+			left: -16px;
+		}
+	}
+	&.al_center {
+		.tooltip_panel {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&.al_right {
+		.tooltip_panel {
+			right: -16px;
+		}
+	}
+}
 
 
 // file 관련
@@ -537,14 +539,6 @@
 		margin: 0 auto;
 	}
 }
-
-//tooltip
-// .tooltip_wrap {
-// 	.tooltip_panel {
-// 		width: max-content;
-// 		max-width: 836px;
-// 	}
-// }
 
 // tab 관련
 .tab_wrap {
