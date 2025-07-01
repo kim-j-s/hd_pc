@@ -680,6 +680,12 @@
 			dd {
 				text-align: left;
 			}
+
+			&.footer_dl {
+				width: 100%;
+				padding: var(--gap-6) 0 0 0;
+				margin-top: var(--gap-6);
+			}
 		}
 		&.df_type_w_ty1 {//100
 			> dl {
@@ -776,6 +782,8 @@
 				margin-top: var(--gap-6);
 			}
 		}
+
+		
 	}
 }
 
@@ -967,6 +975,17 @@
 						}
 					}
 				}
+
+				.card_list_ty1  {
+					& > li {
+						&>*:last-child {
+							text-align: left;
+						}	
+					}
+				}				
+			}
+			& + .info_summary {
+				margin-top: var(--gap-8);
 			}
 		}
 	}
