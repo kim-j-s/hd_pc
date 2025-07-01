@@ -241,7 +241,7 @@
 		}
 		&.full {
 			flex-direction: column;
-		}&
+		} &
 		.form_line {
 			& ~ .form_line {
 				margin-top: 0;
@@ -372,7 +372,7 @@
 
 	.title_view_wrap + .checkbox_group_wrap {
 		justify-content: flex-end;
-		& >* {
+		& > * {
 			flex-grow: 0;
 			min-width: 134px;
 		}
@@ -387,13 +387,14 @@
 
 				>.form_line {
 					position: relative;
+					padding-right: 312px;
 				
 					> .label_tit {
 						margin-bottom: 0;
 
 						& + .info_gray.ty2 {
 							border-radius: 0;
-							background-color: #ffffff;
+							background-color: #fff;
 							padding: 0;
 							margin-top: var(--gap-5);
 						}
@@ -408,16 +409,25 @@
 
 						// background-color: yellow;
 						> .label_tit {
-							width: calc(100% - 312px);
-							min-height: 56px;
-
-							& + .info_gray.ty2 {
-								width: calc(100% - 312px);
+							// width: calc(100% - 312px);
+							// display: flex;
+							// align-items: center;
+							display: table-cell;
+							vertical-align: middle;
+							height: 56px;
+							.num {
+								flex: none;
+								padding-right: 4px;
 							}
 
-							&:has(+.info_gray){
-								min-height:fit-content;
-							}
+							// & + .info_gray.ty2 {
+							// 	width: calc(100% - 312px);
+							// }
+
+							// &:has(+.info_gray){
+							// 	min-height: fit-content;
+							// 	background-color: red;
+							// }
 						}
 					}
 					
@@ -429,8 +439,8 @@
 					.radio_group_wrap {
 						width: 280px;
 						position: absolute;
-						top:0;
-						right:0;
+						top: 0;
+						right: 0;
 					}
 
 					.checkbox_group_wrap.ty2 {
@@ -449,7 +459,7 @@
 						width: 100%;
 						justify-content: space-between;
 						flex-wrap: wrap;
-						gap:32px;
+						gap: 32px;
 
 						.form_line {
 							flex : 0 1 calc(50% - 16px);
@@ -531,13 +541,14 @@
 		margin: 0 auto;
 	}
 }
+
 //tooltip
-.tooltip_wrap {
-	.tooltip_panel {
-		width: max-content;
-		max-width: 836px;
-	}
-}
+// .tooltip_wrap {
+// 	.tooltip_panel {
+// 		width: max-content;
+// 		max-width: 836px;
+// 	}
+// }
 
 // tab 관련
 .tab_wrap {
