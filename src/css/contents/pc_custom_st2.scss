@@ -303,16 +303,16 @@
 			gap: var(--gap-8);
 		}
 	
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					width: auto;
-					.inner {
-						white-space: nowrap;
-					}
-				}
-			}
-		}
+		// .label_tit {
+		// 	.tooltip_wrap {
+		// 		.tooltip_panel {
+		// 			width: auto;
+		// 			.inner {
+		// 				white-space: nowrap;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	
 		& + .banner_box,
 		& + .file_attach_box {
