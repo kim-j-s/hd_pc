@@ -228,15 +228,10 @@
 		}
 		&.full {
 			flex-direction: column;
-		}&
+		} &
 		.form_line {
 			& ~ .form_line {
 				margin-top: 0;
-			}
-			.tooltip_wrap {
-				.tooltip_panel {
-					max-width: 400px;
-				}
 			}
 		}
 	
@@ -261,7 +256,7 @@
 			.label_tit {
 				.tooltip_wrap {
 					.tooltip_panel {
-						max-width: 836 px;
+						max-width: 836px;
 					}
 				}
 			}
@@ -288,16 +283,16 @@
 			gap: var(--gap-8);
 		}
 	
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					width: auto;
-					.inner {
-						white-space: nowrap;
-					}
-				}
-			}
-		}
+		// .label_tit {
+		// 	.tooltip_wrap {
+		// 		.tooltip_panel {
+		// 			width: auto;
+		// 			.inner {
+		// 				white-space: nowrap;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	
 		& + .banner_box,
 		& + .file_attach_box {
@@ -357,7 +352,7 @@
 
 	.title_view_wrap + .checkbox_group_wrap {
 		justify-content: flex-end;
-		& >* {
+		& > * {
 			flex-grow: 0;
 			min-width: 134px;
 		}
@@ -378,7 +373,7 @@
 
 						& + .info_gray.ty2 {
 							border-radius: 0;
-							background-color: #ffffff;
+							background-color: #fff;
 							padding: 0;
 							margin-top: var(--gap-5);
 						}
@@ -390,18 +385,15 @@
 
 					//예,아니오 버튼이 있는 질문 스타일
 					&:has(.radio_group_wrap){
-
+						padding-right: 312px;
 						// background-color: yellow;
 						> .label_tit {
-							width: calc(100% - 312px);
-							min-height: 56px;
-
-							& + .info_gray.ty2 {
-								width: calc(100% - 312px);
-							}
-
-							&:has(+.info_gray){
-								min-height:fit-content;
+							display: table-cell;
+							vertical-align: middle;
+							height: 56px;
+							.num {
+								flex: none;
+								padding-right: 4px;
 							}
 						}
 					}
@@ -409,13 +401,17 @@
 					.info_gray.ty2 {
 						margin-top: var(--gap-5);
 						margin-bottom: 0;
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
 					}
 					
 					.radio_group_wrap {
 						width: 280px;
 						position: absolute;
-						top:0;
-						right:0;
+						top: 0;
+						right: 0;
 					}
 
 					.checkbox_group_wrap.ty2 {
@@ -434,7 +430,7 @@
 						width: 100%;
 						justify-content: space-between;
 						flex-wrap: wrap;
-						gap:32px;
+						gap: 32px;
 
 						.form_line {
 							flex : 0 1 calc(50% - 16px);
@@ -467,7 +463,29 @@
 }
 
 
-
+// tooltip 재선언
+.tooltip_wrap {
+	.tooltip_panel {
+		max-width: 327px;
+		min-width: 120px;
+	}
+	&.al_left {
+		.tooltip_panel {
+			left: -16px;
+		}
+	}
+	&.al_center {
+		.tooltip_panel {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&.al_right {
+		.tooltip_panel {
+			right: -16px;
+		}
+	}
+}
 
 
 // file 관련
@@ -514,13 +532,6 @@
 		width: 440px;
 		height: 276px;
 		margin: 0 auto;
-	}
-}
-//tooltip
-.tooltip_wrap {
-	.tooltip_panel {
-		width: max-content;
-		max-width: 836px;
 	}
 }
 
