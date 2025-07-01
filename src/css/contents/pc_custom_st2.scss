@@ -348,6 +348,7 @@
 	}
 }
 
+//가입 전 알릴사항 화면용 그룹 클래스
 .notification {
 
 	.title_view_wrap + .checkbox_group_wrap {
@@ -381,12 +382,15 @@
 						& + .row {
 							margin-top: var(--gap-5);
 						}
+
+						& + .row, & + .form_group_wrap {
+							border: 1px solid red;
+						}
 					}
 
 					//예,아니오 버튼이 있는 질문 스타일
 					&:has(.radio_group_wrap){
-						
-						// background-color: yellow;
+						background-color: yellow;
 						> .label_tit {
 							display: table-cell;
 							vertical-align: middle;
@@ -419,15 +423,11 @@
 						right: 0;
 					}
 
-					.checkbox_group_wrap.ty2 {
+					.checkbox_group_wrap {
 						margin-top: var(--gap-5);
 
 						.inp_checkbox {
 							flex-basis: calc(25% - 9px);
-						}
-
-						& + .form_group_wrap { 
-							margin-top: var(--gap-5);
 						}
 					}
 
@@ -439,14 +439,19 @@
 
 						.form_line {
 							flex : 0 1 calc(50% - 16px);
-
-							// &:last-child { //마지막만 100%일 때(디자인팀 확인 후 삭제예정)
-							// 	flex-basis: 100%;
-							// }
 						}
 					}//.row
+
+					.form_group_wrap {
+						display: block;
+
+					}
+
 				}//.form_line
 			}// li > .form_group_wrap
+
+			
+
 		}
 	}
 }
