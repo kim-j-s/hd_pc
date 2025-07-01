@@ -852,6 +852,9 @@
 .selected_case.insurance {
 	background-image: url(../images/content/bi/icon_stepper_insurance.svg);
 }
+.selected_case.stamp {
+	background-image: url(../images/content/bi/icon_stepper_stamp.svg);
+}
 .selected_case:empty {
 	width: 0;
 	padding: 0.9rem 0;
@@ -1149,6 +1152,9 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty17 {
 	background-image: url(../images/content/bi/visual/bg_img_ltsm.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty18 {
+	background-image: url(../images/content/bi/visual/bg_img_ltwf.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
@@ -1287,6 +1293,9 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty26 {
 	background-image: url(../images/content/bi/visual/bg_exp_ty26.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty27 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty27.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details.grid3 .pb_details_inner {
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -1337,6 +1346,9 @@
 	position: static;
 	overflow: initial;
 	margin-top: auto;
+}
+.bi_opts_wrap .opts_area .opts_area_item .form_group_wrap {
+	width: 100%;
 }
 .bi_opts_wrap .opts_area.active {
 	height: 0;
@@ -1454,8 +1466,12 @@
 .input_form_box .input_item_wrap {
 	overflow: hidden;
 	border-radius: 1.6rem;
-	-webkit-box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
-	box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	-webkit-box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
 }
 .input_form_box .input_item_wrap .acd_item {
 	position: relative;
@@ -1469,8 +1485,12 @@
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	-webkit-box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
-	box-shadow: 0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	-webkit-box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
+	box-shadow:
+		0 0 0.2rem 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0 0.4rem 0.8rem 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08));
 }
 .input_form_box .input_item_wrap .acd_item ~ .acd_item {
 	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
@@ -5096,7 +5116,9 @@ ul + .form_group_wrap {
 	-webkit-transition: -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	transition: -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 }
 .is_diagnosis_service .service_visual .inner .visual_msg .msg_step1.effect {
 	color: var(--color-text-disabled);
@@ -5119,10 +5141,19 @@ ul + .form_group_wrap {
 	border-radius: var(--radius-large2) var(--radius-large2) 0 var(--radius-large2);
 	-webkit-transform-origin: top;
 	transform-origin: top;
-	-webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), opacity 0.5s ease-in-out;
-	transition: transform 0.8s cubic-bezier(0, -0.25, 0, 1.25), opacity 0.5s ease-in-out, -webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	-webkit-transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		opacity 0.5s ease-in-out;
+	transition:
+		transform 0.8s cubic-bezier(0, -0.25, 0, 1.25),
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.8s cubic-bezier(0, -0.25, 0, 1.25);
 	-webkit-transition-delay: 2s;
 	transition-delay: 2s;
 	opacity: 0;

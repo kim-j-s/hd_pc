@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -162,6 +162,14 @@
 										<div class="bi_top">
 											<!-- bit -->
 											<div class="bit">
+												<!-- s: 25-07-01 수정 -->
+												<!-- 사업자 형태 -->
+												<div class="bit_inner" data-pickitem="step">
+													<p class="bit_inner_text"><span class="bold">사업자 형태를 선택</span>해주세요</p>
+												</div>
+												<!-- 사업자 형태 -->
+												<!-- e: 25-07-01 수정 -->
+
 												<!-- 주택유형 -->
 												<div class="bit_inner" data-pickitem="step">
 													<p class="bit_inner_text"><span class="bold">건물 형태를 선택</span>해주세요</p>
@@ -190,24 +198,56 @@
 													<p class="bit_inner_text"><span class="bold">업종을 선택</span>해주세요</p>
 												</div>
 												<!-- 업종 선택 -->
+
+												<!-- s: 25-07-01 수정 -->
+												<!-- 법인 정보 입력 -->
+												<div class="bit_inner" data-pickitem="step">
+													<p class="bit_inner_text"><span class="bold">법인 정보를</span> 입력해주세요</p>
+												</div>
+												<!-- 법인 정보 입력 -->
+												<!-- e: 25-07-01 수정 -->
 											</div>
 											<!-- bit -->
 
 											<!-- bit_history -->
 											<div class="bit_history">
 												<div class="bit_history_inner">
-													<button type="button" class="selected_case step1 home" title="건물형태 수정"></button>
-													<button type="button" class="selected_case step2 person" title="명의정보 수정"></button>
-													<button type="button" class="selected_case step3 store" title="업종 수정"></button>
+													<!-- s: 25-07-01 수정 -->
+													<button type="button" class="selected_case step1 stamp" title="사업자형태 수정">1</button>
+													<!-- e: 25-07-01 수정 -->
+													<button type="button" class="selected_case step2 home" title="건물형태 수정">1</button>
+													<button type="button" class="selected_case step3 person" title="명의정보 수정">1</button>
+													<button type="button" class="selected_case step4 store" title="업종 수정">1</button>
 												</div>
 											</div>
 											<!-- bit_history -->
 										</div>
 
 										<div class="bi_opts_wrap">
+											<!-- s: 25-07-01 수정 -->
+											<!-- 사업자형태 -->
+											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+												<div class="opts_area_item">
+													<div class="inp_radio rd_btn_s1">
+														<input type="radio" id="radio000" name="radio2" />
+														<label for="radio000">
+															<span class="label_cont">개인</span>
+														</label>
+													</div>
+													<div class="inp_radio rd_btn_s1">
+														<input type="radio" id="radio001" name="radio2" />
+														<label for="radio001">
+															<span class="label_cont">법인</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<!-- 사업자형태 -->
+											<!-- e: 25-07-01 수정 -->
+
 											<!-- 건물형태 -->
 											<!-- s: 25-06-24 수정 -->
-											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
 												<!-- e: 25-06-24 수정 -->
 												<div class="opts_area_item">
 													<div class="inp_radio rd_btn_s1">
@@ -228,7 +268,7 @@
 
 											<!-- 소유 구분 -->
 											<!-- s: 25-06-24 수정 -->
-											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
+											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
 												<!-- e: 25-06-24 수정 -->
 												<div class="opts_area_item">
 													<div class="inp_radio rd_btn_s1">
@@ -249,7 +289,7 @@
 
 											<!-- s: 25-06-24 추가 -->
 											<!-- 업종 선택 -->
-											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
 												<!-- s: 일반 선택 시 -->
 												<!-- <div class="opts_area_item">
 															<div class="inp_radio rd_btn_s1">
@@ -470,6 +510,54 @@
 												</div>
 												<!-- e: 공장 선택 시 -->
 											</div>
+											<!-- 업종 선택 -->
+
+											<!-- s: 25-07-01 수정 -->
+											<!-- 법인 정보 입력 -->
+											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step5">
+												<div class="opts_area_item">
+													<div class="form_group_wrap full">
+														<div class="form_line">
+															<div class="label_tit">법인명</div>
+															<div class="input_text">
+																<div class="inp">
+																	<input type="text" placeholder="입력" title="법인명 입력" />
+																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																</div>
+															</div>
+														</div>
+														<div class="form_line">
+															<div class="label_tit">사업자번호</div>
+															<div class="comp_wrap business">
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="tel" placeholder="3자리" minlength="3" maxlength="3" title="사업자번호 첫번째 3자리 입력" />
+																	</div>
+																</div>
+																<span class="dash">-</span>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="tel" placeholder="2자리" minlength="2" maxlength="2" title="사업자번호 두번째 2자리 입력" />
+																	</div>
+																</div>
+																<span class="dash">-</span>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="tel" placeholder="5자리" minlength="5" maxlength="5" title="사업자번호 3번째 5자리 입력" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="btn_area">
+														<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1 full">
+															<span class="text">공동인증서 인증</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<!-- 법인 정보 입력 -->
+											<!-- e: 25-07-01 수정 -->
 										</div>
 									</div>
 								</div>
@@ -505,7 +593,7 @@
 		<!-- s: popup area -->
 
 		<!-- s: 중요 유의사항 Bottom 팝업 -->
-		<div class="popup_wrap bottom" id="ex_popup_bottom" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="popup_wrap bottom active" id="ex_popup_bottom" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('ex_popup_bottom');"></div>
 				<div class="popup_inner">
@@ -525,6 +613,10 @@
 											</ul>
 										</li>
 										<li>지하소재물건 및 옥외 간판(건물 벽체와 분리된 입간판)의 경우 가입이 제외됩니다.</li>
+										<!-- s: 25-07-01 수정 -->
+										<!-- 요기요 제휴 링크 유입 시 -->
+										<!-- <li>옥외 간판(건물 벽체와 분리된 입간판)의 경우 가입이 제외됩니다.</li> -->
+										<!-- e: 25-07-01 수정 -->
 									</ul>
 								</div>
 								<h2>풍수해보험 보장 개시 안내</h2>
