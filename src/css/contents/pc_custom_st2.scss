@@ -434,6 +434,10 @@
 					.info_gray.ty2 {
 						margin-top: var(--gap-5);
 						margin-bottom: 0;
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
 					}
 					
 					.radio_group_wrap {
