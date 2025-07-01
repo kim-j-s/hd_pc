@@ -17,8 +17,17 @@
 			</div>
 			<!-- e: popup_content_top -->
 
-			{{> cp/selectitem si_ph="대분류" si_item="선택" si_title="이웃 업종 대분류 선택 팝업 호출" si_popup="pop_type02"}}
-			{{> cp/selectitem si_ph="중분류" si_title="이웃 업종 중분류 선택 팝업 호출" si_popup="pop_type03"}}
+
+			{{#> cp/selectbox_pc s-title="대분류 선택" s-class="select_item" }}
+				<option value="" selected>대분류 선택</option>
+				<option value="">선택 옵션값 2</option>
+			{{/ cp/selectbox_pc}}
+
+			{{#> cp/selectbox_pc s-title="중분류 선택" s-class="select_item" }}
+				<option value="" selected>중분류 선택</option>
+				<option value="">선택 옵션값 2</option>
+			{{/ cp/selectbox_pc}}
+			
 			<div class="info_gray">
 				<h3 class="title_h3">업종 설명</h3>
 				<p class="info_text">음식류를 조리, 판매하는 곳으로서 음주행위가 허용되지 않는 곳 / 다방, 제과점, 건강원, 방앗간, 아이스크림전문점, 커피전문점 등 / 고속도로 휴게소 : 음식점 면적이 90% 이상인 경우 / 선식가게 : 조리 및 가공 작업이 있을 경우.</p>
@@ -76,45 +85,14 @@
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="확인" disabled=true}}
+			{{> cp/button type="1" size="2" b-text="확인" disabled=true}}
 		</div>
 	</div>
 	{{/ popup/popup_full}}
 	<!-- e: full 팝업 -->
 
 	<!-- s: popup area -->
-	<!-- s: 대분류 선택 팝업 -->
-	{{#> popup/popup_bottom popup-id="pop_type02" popup-title="대분류 선택"}}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<div class="opt_select_list opt_case3">
-				<div role="button" tabindex="0" class="option"><span class="text">근린생활시설</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 2</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 3</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 4</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 5</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 6</span></div>
-			</div>
-		</div>
-	</div>
-	{{/ popup/popup_bottom}}
-	<!-- e: 대분류 선택 팝업 -->
-	<!-- s: 중분류 선택 팝업 -->
-	{{#> popup/popup_bottom popup-id="pop_type03" popup-title="중분류 선택"}}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<div class="opt_select_list opt_case3">
-				<div role="button" tabindex="0" class="option"><span class="text">휴게음식점</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 2</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 3</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 4</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 5</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">항목 6</span></div>
-			</div>
-		</div>
-	</div>
-	{{/ popup/popup_bottom}}
-	<!-- e: 중분류 선택 팝업 -->
+
 	<!-- e: popup area -->
 
 {{/ layout/default }}

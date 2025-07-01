@@ -2,6 +2,122 @@
 <div id="wrap" class="wrap">
 	{{> layout/header_pc h-prd="사업장화재보험" }}
 	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">사업장 정보</div>
+					<h2 class="p_title">
+						가입하시는 <strong>사업장 정보를 입력</strong>하고 <strong>보험료</strong>를 <strong>확인</strong>하세요
+					</h2>
+				</div>
+			</div>
+
+			<div class="form_box">
+				<h3 class="title_h3">사업장 정보</h3>
+				<div class="form_group_wrap">
+					<div class="form_line full">
+						<div class="label_tit">담보물 소재지</div>
+						<!-- s: 25-06-16 수정 -->
+						<!-- 주소 입력 전
+						{{> cp/address ad_ph="주소 검색" case1=true }} -->
+            {{> cp/address ad_ph="주소 검색" case2=true }}
+						<!-- e: 25-06-16 수정 -->
+					</div>
+					<div class="form_line full">
+						<div class="label_tit">건물구조</div>
+						<!-- s: 25-06-16 수정 -->
+						<!-- 건물 구조 선택 전
+						{{> cp/address ad_ph="건물 구조 선택" case1=true }} -->						
+            {{> cp/address ad_ph="건물 구조 선택" case3=true }}
+						<!-- e: 25-06-16 수정 -->
+					</div>
+					
+					<div class="form_line">
+						<div class="label_tit">사업장 면적</div>
+						<div class="row balance">
+							{{> cp/text type="tel" placeholder="숫자만 입력" value="68.77" r-text="㎡" inp-title="제곱미터 입력" }}
+							{{> cp/text type="tel" placeholder="숫자만 입력" r-text="평" inp-title="평수 면적" readonly=true }}
+						</div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">건축 년도 {{> cp/tooltip text="<p>완공 후 20년 이상인 경우, 급배수설비누출로인한손해(주택)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
+						{{> cp/text placeholder="플레이스홀더" inp-title="건축년도 입력" }}
+					</div>
+					<div class="form_line">
+						<div class="label_tit">사업장 층수(저층~)</div>
+						<div class="row"> 
+							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="1" r-text="층" inp-title="층수 입력" }}
+							<div class="radio_comb origin" role="radiogroup">	
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_1" name="radio_g1" labelname="지상" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_2" name="radio_g1" labelname="지하"}}
+							</div>
+						</div>
+					</div>
+					<div class="form_line">
+						<div class="label_tit">사업장 층수(~고층)</div>
+						<div class="row"> 
+							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="1" r-text="층" inp-title="층수 입력" }}
+							<div class="radio_comb origin" role="radiogroup">	
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_1" name="radio_g2" labelname="지상" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_2" name="radio_g2" labelname="지하" }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="divider_ty1"></div>
+			<div class="form_box">
+				<h3 class="title_h3">동일 건물 이웃 업종 입력</h3>
+				<div class="space_list_ty5">
+					<div class="table_wrap">						
+						<table class="table">
+							<caption>가입업종, 일반음식점 제공</caption>
+							<colgroup>
+								<col style="width:30%;">
+								<col style="width:70%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">가입업종</th>
+									<td colspan="3">일반음식점</td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="3">이웃업종</th>
+									<td>세탁소(드라이클리닝)</td>
+								</tr>
+								<tr>
+									<td>수리점(자동차수리점 제외)</td>
+								</tr>
+								<tr>
+									<td>체력단련시설, 종합오락운동시설, 기타운동시설</td>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="3" b-text="이웃 업종 추가/삭제"}}
+					</div>
+					<ul class="list_ty3">
+						<li>사업장과 동일한 방화구역 내에 있는 이웃 사업장의 업종을 모두 선택해주세요.(같은 업종이 여러 개일 경우 하나만 선택).</li>
+						<li><strong class="point">동일 방화구역 내</strong> 이웃사업장의 업종에 따라 적용되는 보험료율이 달라질 수 있습니다.</li>
+					</ul>
+					<div class="checkbox_group_wrap column">
+						{{> cp/checkbox checkbox_class="rd_box" id="checkbox08-1-12" label_class="chk_label_ty3" labelname="<strong class='ess ess_t1'>필수</strong> 피보험자가 원동기장치 자전거(개인형 이동장치 포함) 운전 중에 발생한 상해사고는 보험에서 보상되지 않습니다." }}
+					</div>
+				</div>
+			</div>
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="보험료를 확인할게요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+		</div>
+
 		<!-- s: 사이드 패널 -->
 		{{> cp/panel_사업장화재 panel-title="기초 정보" panel-title2="건물 정보" step1=true }}
 		<!-- e: 사이드 패널 -->
