@@ -248,7 +248,9 @@
 			}
 			.tooltip_wrap {
 				.tooltip_panel {
-					max-width: 400px;
+					// max-width: 400px;
+					max-width: 327px;
+					min-width: 120px;
 				}
 			}
 		}
@@ -274,7 +276,7 @@
 			.label_tit {
 				.tooltip_wrap {
 					.tooltip_panel {
-						max-width: 836 px;
+						max-width: 836px;
 					}
 				}
 			}
