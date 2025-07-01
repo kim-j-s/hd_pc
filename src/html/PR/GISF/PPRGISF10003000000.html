@@ -18,15 +18,11 @@
 				<div class="form_group_wrap">
 					<div class="form_line full">
 						<div class="label_tit">담보물 소재지</div>
-						<!-- s: 25-06-16 수정 -->
 						{{> cp/address ad_ph="주소 검색" case2=true}}
-						<!-- e: 25-06-16 수정 -->
 					</div>
 					<div class="form_line full">
 						<div class="label_tit">건물 구조</div>
-						<!-- s: 25-06-16 수정 -->
 						{{> cp/address ad_ph="건물 구조 선택" case3=true}}
-						<!-- e: 25-06-16 수정 -->
 					</div>
 					<div class="form_line">
 						<div class="label_tit">주택면적</div>
@@ -36,7 +32,9 @@
 						</div>
 					</div>
 					<div class="form_line">
-						<div class="label_tit">총 지상 층수{{> cp/tooltip text="<p>총 층수 기준 : 피보험자가 거주하는 아파트의 라인, 동과 상관없이 아파트의 총 층수</p>" trigger-icon="popover_help"}}</div>
+						<!-- s: 25-07-01 수정 -->
+						<div class="label_tit">총 지상 층수{{> cp/tooltip text="<p>총 층수 기준 : 피보험자가 거주하는 아파트의 라인, 동과 <br>상관없이 아파트의 총 층수</p>" trigger-icon="popover_help"}}</div>
+						<!-- e: 25-07-01 수정 -->
 						<div class="row"> 
 							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="1" r-text="층" inp-title="층수 입력" }}
 						</div>
