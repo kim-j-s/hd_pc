@@ -11,25 +11,51 @@
 			<div class="data_list">
 				<ul>
 						<li>
+							<dl>
+								<dt class="country">체류국가</dt>
+								<dd>멕시코</dd>
+							</dl>
+						</li>
+						<li>
 								<dl>
 										<dt class="date">기간</dt>
 										<dd>2025.05.20 11시~2025.05.24 23시</dd>
 								</dl>
 						</li>
-						<!-- s: 단독(성인/미성년자녀) -->
+						<!-- s: 다수 피보험자일 경우 삭제 -->
 						<li>
 								<dl>
 										<dt class="birth">생년월일</dt>
 										<dd>19790101</dd>
 								</dl>
 						</li>
+						<!-- e: 다수 피보험자일 경우 삭제 -->
+						<!-- s: 다수 피보험자일 경우 -->
+						<li>
+								<dl>
+										<dt class="person">여행자</dt>
+										<dd>19790101(남성) 외 3명</dd>
+								</dl>
+						</li>
+						<!-- e: 다수 피보험자일 경우 -->
 						<li>
 								<dl>
 										<dt class="gender">성별</dt>
 										<dd>남성</dd>
 								</dl>
 						</li>
-						<!-- e: 단독(성인/미성년자녀) -->
+						<li>
+								<dl>
+										<dt class="work">체류목적</dt>
+										<dd>업무(주재원)</dd>
+								</dl>
+						</li>
+						<li>
+								<dl>
+										<dt class="job">회사</dt>
+										<dd>사무직 종사자</dd>
+								</dl>
+						</li>						
 				</ul>
 			</div>
 		</div>
@@ -62,27 +88,26 @@
 				<dl>
 					<dt class="title">2.피보험자/계약자 정보</dt>
 					<dd>
-						<!-- s: CASE1-1. 성인단독 -->
 						<ul>
-							<li>
-								입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
-							</li>
-						</ul>
-						<div class="info">정보를 입력 중이에요</div>
-						<!-- e: CASE1-1. 성인단독 -->
-						<!-- s: 미성년자단독, 피보험자다수 -->
-						<ul>
-							<!-- s: CASE1-2. 미성년자단독 -->
 							<li>
 								계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
 							</li>
 							<li>
-								피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span>
+								피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span>
 							</li>
-							<!-- e: CASE1-2. 미성년자단독 -->
+							<!-- s: CASE 피보험자/계약자가 동일인 일 경우 -->
+							<li>
+								입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span>
+							</li>
+							<!-- s: CASE 피보험자/계약자가 동일인 일 경우 -->							
 						</ul>
-						<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
-						<!-- e: 미성년자단독, 피보험자다수 -->
+						<div class="info">정보를 입력 중이에요</div>
+						<!-- s: CASE 계약자 정보 입력 후 -->
+						<ul>
+							<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+						</ul>
+						<div class="info">피보험자 정보를 입력 중이에요</div>
+						<!-- e: CASE 계약자 정보 입력 후 -->
 					</dd>
 				</dl>
 				<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
