@@ -2,16 +2,16 @@
 @import "popup/popup_common.scss";
 
 /* popup_full */
-@import "popup/popup_full.scss";
+@import "popup/popup_wrap_type4.scss";
 
 /* popup_layer */
-@import "popup/popup_layer.scss";
-
-/* popup_bottom */
-@import "popup/popup_bottom.scss";
+@import "popup/popup_wrap_type1.scss";
 
 /* popup_confirm(alert) */
-@import "popup/popup_confirm.scss";
+@import "popup/popup_wrap_type2.scss";
+
+/* popup_bottom */
+@import "popup/popup_wrap_type3.scss";
 
 /* toast */
 @import "popup/toast.scss";

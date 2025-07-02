@@ -1,9 +1,9 @@
 {{#> layout/default_pc page-title="dept1 > dept2 > dept3 >"}}
 <style lang="scss">
 	.popup_wrap {
-		&.layer {
+		&.popup_wrap_type1 {
 			.popup_container {
-				width: 800px;
+				/* width: 800px; */
 			}
 		}
 	}
@@ -17,6 +17,7 @@
 		<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
 
 		{{> cp/button type="2" size="5" b-text="Full 팝업열기 (600px)" popup="pop_type01" }}
+		{{> cp/button type="2" size="5" b-text="Full 팝업열기 (800px)" popup="pop_type05" }}
 		{{> cp/button type="2" size="5" b-text="Bottom 팝업열기(팝업중첩)" popup="pop_type04" }}
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기(팝업중첩)" popup="pop_type02" }}
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기" popup="pop_type03" }}
@@ -32,12 +33,25 @@
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
-				{{> cp/button type="3" size="1" b-text="취소" }}
-				{{> cp/button type="1" size="1" b-text="확인" }}
+				{{> cp/button type="3" size="2" b-text="취소" }}
+				{{> cp/button type="1" size="2" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_full}}
 	<!-- Full 팝업 -->
+	{{#> popup/popup_full popup-class="popup_wrap_type5" popup-id="pop_type05" popup-title="팝업 타이틀" }}
+	<div class="popup_cont">
+		팝업내용입니다<br>
+		내용
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="3" size="2" b-text="취소" }}
+			{{> cp/button type="1" size="2" b-text="확인" }}
+		</div>
+	</div>
+{{/ popup/popup_full}}
+<!-- Full 팝업 -->
 
 	<!-- Bottom 팝업 -->
 	{{#> popup/popup_bottom popup-id="pop_type04" popup-title="팝업 타이틀" }}
@@ -108,8 +122,8 @@
 			<div class="btn_area">
 				<!-- <button type="button" class="btn"><span>확인</span></button> -->
 				<!-- <button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
-				{{> cp/button type="3" size="1" b-text="취소" }}
-				{{> cp/button type="1" size="1" b-text="layer 팝업열기" popup="pop_type02" }}
+				{{> cp/button type="3" size="2" b-text="취소" }}
+				{{> cp/button type="1" size="2" b-text="layer 팝업열기" popup="pop_type02" }}
 			</div>
 		</div>
 	{{/ popup/popup_bottom}}
@@ -190,7 +204,7 @@
 		<div class="popup_bottom">
 			<div class="btn_area">
 				<!-- <button type="button" class="btn"><span>확인</span></button> -->
-				{{> cp/button type="1" size="1" b-text="확인" }}
+				{{> cp/button type="1" size="2" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_layer}}
@@ -204,7 +218,7 @@
 		<div class="popup_bottom">
 			<div class="btn_area">
 				<!-- <button type="button" class="btn"><span>확인</span></button> -->
-				{{> cp/button type="1" size="1" b-text="확인" }}
+				{{> cp/button type="1" size="2" b-text="확인" }}
 			</div>
 		</div>
 	{{/ popup/popup_layer}}

@@ -1,6 +1,8 @@
 /* popup */
+/* s: 추후 삭제 예정 */
 .popup_wrap {
 	padding: 80px 0;
+
 	.popup_container {
 		.popup_inner {
 			padding-bottom: 8px;
@@ -42,6 +44,7 @@
 					}
 				}
 			}
+
 			.popup_bottom {
 				padding: var(--padding-5) var(--padding-8) var(--padding-6);
 				.btn_area {
@@ -141,6 +144,183 @@
 	&.bottom,
 	&.layer,
 	&.confirm {
+		&.active {
+			.popup_container {
+				.popup_inner {
+					.popup_head {
+						min-height: 64px;
+						padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
+					}
+					.popup_close {
+						top: 18px;
+						right: 16px;
+						width: 32px;
+						height: 32px;
+					}
+				}
+			}
+		}
+	}
+}
+/* e: 추후 삭제 예정 */
+
+
+.popup_wrap {
+	padding: 80px 0;
+
+	.popup_container {
+		.popup_inner {
+			padding-bottom: 8px;
+			
+			// 버튼 없을 시
+			&:not(:has(.popup_wrap_type3)){
+				padding-bottom: 32px;
+			}
+
+			.popup_cont {
+				.popup_content {
+					.popup_content_top {
+						& + .info_gray {
+							margin-top: var(--gap-8);
+						}
+					}
+				}
+
+				.tab_wrap {
+					.tab_wrap_list_ty1 {
+						margin: 0 -24px;
+					}
+				}
+				.bottom_fix_notice {
+					padding-top: var(--gap-11);
+					&.etc01 {
+						padding-top: 32px;
+					}
+				}
+				.file_attach_box {
+					.file_thumbnail {
+						height: 180px;
+					}
+				}
+
+				.text_sub {
+					& + .file_attach_box {
+						margin-top: var(--gap-5);
+					}
+				}
+			}
+
+			.popup_wrap_type3 {
+				padding: var(--padding-5) var(--padding-8) var(--padding-6);
+				.btn_area {
+					align-items: center;
+					justify-content: center;
+					.hd_btn {
+						flex: 0 0 auto;
+						min-width: 160px;
+					}
+
+					.inp_checkbox {
+						& + .hd_btn_s_4 {
+							min-width: 64px;
+						}
+					}
+
+					& + .btn_area {
+						margin-top: var(--padding-9);
+					}
+				}
+			}
+		}
+	}
+
+	&.active {
+		.popup_container {
+			transform: none;
+		}
+	}
+
+	//layer
+	&.popup_wrap_type1 {
+		.popup_container {
+			transform: none;
+			width: 440px;
+			padding: 0;
+
+			.popup_inner {
+			}
+		}
+	}
+	//confirm
+	&.popup_wrap_type2 {
+		.popup_container {
+			.popup_inner {
+				width: 440px;
+			}
+		}
+	}
+	//bottom
+	&.popup_wrap_type3 {
+		.popup_container {
+			align-items: center;
+			width: 440px;
+			transform: none;
+
+			.popup_inner {
+				border-radius: var(--radius-xlarge2);
+				.popup_head {
+					padding-top: var(--padding-7);
+				}
+				.popup_bottom {
+					.btn_area {
+						.hd_btn {
+							flex: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	//full
+	&.popup_wrap_type4 {
+		
+		&.popup_wrap_type5 {
+			.popup_container {
+				width: 800px;
+			}
+		}
+		.popup_container {
+			align-items: center;
+			// width: 734px;
+			width: 600px;
+			transform: none;
+			
+			.popup_inner {
+				height: auto;
+				max-height: 100%;
+				padding-bottom: var(--padding-6);
+				border-radius: var(--radius-xlarge2);
+			
+				// 버튼 없을 시
+				&:not(:has(.popup_wrap_type3)){
+					padding-bottom: 32px;
+				}
+
+				.popup_cont {
+					padding-bottom: var(--gap-12);
+				}
+			}
+		}
+	}
+	//full + big
+	&.popup_wrap_type5 {
+
+	}
+
+	&.popup_wrap_type1,
+	&.popup_wrap_type2,
+	&.popup_wrap_type3,
+	&.popup_wrap_type4 {
 		&.active {
 			.popup_container {
 				.popup_inner {
