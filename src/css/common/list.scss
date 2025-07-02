@@ -276,22 +276,25 @@
 }
 
 //search_list_type2(tab_wrap내부에서 사용할 때)
+// PC용으로 다시 재수정
 .popup_cont.search_list_type2 {
-	position:relative;
+	position: relative;
 	// max-height: calc(100% - 55px);
-	overflow-y: hidden !important;
+	// overflow-y: hidden !important;
 	// padding: 0 24px 64px !important;
 	
 	.tab_wrap{
-		position:absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 64px;
-		display: flex;
-		flex-direction: column;
+		// position:absolute;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// bottom: 64px;
+		// display: flex;
+		// flex-direction: column;
+		margin: 0 -24px;
 
 		.tab_wrap_list_ty1 {
+			position: sticky;
 			margin : 0 0 32px;
 		}
 
@@ -354,6 +357,7 @@
 		}
 	}	
 }
+// PC용으로 다시 재수정
 
 
 
