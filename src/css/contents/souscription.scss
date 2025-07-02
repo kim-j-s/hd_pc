@@ -128,13 +128,13 @@
 						}
 
 						button { 
-							flex: 0 1 auto;
-						}
-					}
+							flex: 0 1 auto;							
+						}						
+					} 
 				}
 
 				> .form_group_wrap { 
-
+					
 					.row {
 						margin-top: var(--gap-5);
 					}
@@ -151,7 +151,7 @@
 				& + .form_card_wrap {
 					margin-top: var(--gap-5);
 				}
-				
+
 				.checkbox_group_wrap {
 					& + .checkbox_group_wrap {
 						margin-top: var(--gap-5);

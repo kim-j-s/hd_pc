@@ -8,7 +8,7 @@
 	justify-content: space-between;
 	gap: var(--gap-3); 
 	flex-wrap: wrap;
-
+	
 	& ~ .btn_area,
 	& + .list_ty2,
 	& + .card_item_wrap,
@@ -947,7 +947,7 @@
 	vertical-align: top;
 	.hd_icon {
 		&.popover_help,
-		&.arrowRightSvg_ty4 {
+		&.arrowRightSvg {
 			width: inherit;
 			height: inherit;
 		}
@@ -975,7 +975,7 @@
 	width: 32px;
 	height: 32px;
 	background: url(../images/icon/close_ty1.svg) no-repeat center / 16px auto;
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
 	border-radius: 100%;
 }
 
