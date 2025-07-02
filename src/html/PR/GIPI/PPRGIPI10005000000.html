@@ -1,0 +1,56 @@
+{{#> layout/default page-title="가입 전 알릴 사항 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="개인정보보호배상책임보험(II)" }}
+
+	<div id="container" class="container">
+		<div class="content notification">
+			<!-- s: content_top -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">가입 전 알릴 사항</div>
+					<h2 class="p_title">
+						아래에 <strong>해당하는 항목</strong>이 있으신가요?
+					</h2>
+					<div class="sub_desc">
+						향후 보험금 지급에 문제가 없도록 꼭 사실대로 알려주세요.
+					</div>
+				</div>
+			</div>
+			<!-- e: content_top -->
+
+			<ol class="form_list">				
+				<li>
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="label_tit">
+								최근 5년 이내에 개인정보 유출 사고를 경험한 사실이 있습니까?
+							</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="notification01_01" name="notification01" labelname="예" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="notification01_02" name="notification01" labelname="아니오" }}
+							</div>
+						</div>
+					</div>
+				</li>
+			</ol>
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="해당 여부를 확인 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 확인했어요" }} -->
+				</div>
+			</div>
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_개인정보보호배상책임보험 step1=true panel-title="가입자 정보" panel-title2="추가 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+	
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
