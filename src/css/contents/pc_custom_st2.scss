@@ -99,20 +99,7 @@
 
 	&.price_btn {
 		padding-right: 22px;
-		background: none;
-		border-radius:0;
-	}
-}
-.price_btn {
-	&:after {
-		content:'';
-		position: absolute;
-		top: 0;
-		right : 0;
-		width: 20px;
-		height: 20px;
-		background: url(../images/icon/arrowRight_ty6.svg) no-repeat right center/20px auto;
-		transform: rotate(90deg);
+		border-radius: 0;
 	}
 }
 
@@ -147,23 +134,23 @@
 .banner_box {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-	// justify-content: space-between;
+	// justify-content: center;
+	justify-content: space-between;
 	gap: var(--gap-5) var(--gap-8);
 
 	// 1개일 시, 가운데 정렬
-	&:has(*:only-child){
-		justify-content: center;
-	}
+	// &:has(*:only-child){
+	// 	justify-content: center;
+	// }
 
-	&:not(:has(*:only-child)){
-		* {
-			width: calc(50% - 16px);
-		}
-	}
-	&:has(*:nth-child(3)) {
-		justify-content: flex-start;
-	}
+	// &:not(:has(*:only-child)){
+	// 	* {
+	// 		width: calc(50% - 16px);
+	// 	}
+	// }
+	// &:has(*:nth-child(3)) {
+	// 	justify-content: flex-start;
+	// }
 
 	> * {
 		flex: 0 1 calc(50% - 16px);
@@ -241,15 +228,10 @@
 		}
 		&.full {
 			flex-direction: column;
-		}&
+		} &
 		.form_line {
 			& ~ .form_line {
 				margin-top: 0;
-			}
-			.tooltip_wrap {
-				.tooltip_panel {
-					max-width: 400px;
-				}
 			}
 		}
 	
@@ -274,7 +256,7 @@
 			.label_tit {
 				.tooltip_wrap {
 					.tooltip_panel {
-						max-width: 836 px;
+						max-width: 836px;
 					}
 				}
 			}
@@ -301,16 +283,16 @@
 			gap: var(--gap-8);
 		}
 	
-		.label_tit {
-			.tooltip_wrap {
-				.tooltip_panel {
-					width: auto;
-					.inner {
-						white-space: nowrap;
-					}
-				}
-			}
-		}
+		// .label_tit {
+		// 	.tooltip_wrap {
+		// 		.tooltip_panel {
+		// 			width: auto;
+		// 			.inner {
+		// 				white-space: nowrap;
+		// 			}
+		// 		}
+		// 	}
+		// }
 	
 		& + .banner_box,
 		& + .file_attach_box {
@@ -366,11 +348,12 @@
 	}
 }
 
+//가입 전 알릴사항 화면용 그룹 클래스
 .notification {
 
 	.title_view_wrap + .checkbox_group_wrap {
 		justify-content: flex-end;
-		& >* {
+		& > * {
 			flex-grow: 0;
 			min-width: 134px;
 		}
@@ -391,7 +374,7 @@
 
 						& + .info_gray.ty2 {
 							border-radius: 0;
-							background-color: #ffffff;
+							background-color: #fff;
 							padding: 0;
 							margin-top: var(--gap-5);
 						}
@@ -399,66 +382,74 @@
 						& + .row {
 							margin-top: var(--gap-5);
 						}
+
+						& + .row, & + .form_group_wrap {
+							// border: 1px solid red;
+						}
 					}
 
 					//예,아니오 버튼이 있는 질문 스타일
 					&:has(.radio_group_wrap){
-
 						// background-color: yellow;
 						> .label_tit {
-							width: calc(100% - 312px);
-							min-height: 56px;
+							display: table-cell;
+							vertical-align: middle;
+							height: 56px;
+							padding-right: 312px;
 
-							& + .info_gray.ty2 {
-								width: calc(100% - 312px);
+							.num {
+								flex: none;
+								padding-right: 4px;
 							}
-
-							&:has(+.info_gray){
-								min-height:fit-content;
-							}
+						}
+						.info_gray.ty2 {
+							padding-right: 312px;
 						}
 					}
 					
 					.info_gray.ty2 {
 						margin-top: var(--gap-5);
 						margin-bottom: 0;
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
 					}
 					
 					.radio_group_wrap {
 						width: 280px;
 						position: absolute;
-						top:0;
-						right:0;
+						top: 0;
+						right: 0;
 					}
 
-					.checkbox_group_wrap.ty2 {
+					.checkbox_group_wrap {
 						margin-top: var(--gap-5);
 
 						.inp_checkbox {
 							flex-basis: calc(25% - 9px);
 						}
+					}
 
-						& + .form_group_wrap { 
-							margin-top: var(--gap-5);
-						}
+					.form_group_wrap {
+						display: block;
 					}
 
 					.row {
 						width: 100%;
+						display: flex !important;
 						justify-content: space-between;
 						flex-wrap: wrap;
-						gap:32px;
+						gap: 32px;
 
 						.form_line {
 							flex : 0 1 calc(50% - 16px);
-
-							// &:last-child { //마지막만 100%일 때(디자인팀 확인 후 삭제예정)
-							// 	flex-basis: 100%;
-							// }
 						}
 					}//.row
+
 				}//.form_line
 			}// li > .form_group_wrap
+
 		}
 	}
 }
@@ -480,7 +471,29 @@
 }
 
 
-
+// tooltip 재선언
+.tooltip_wrap {
+	.tooltip_panel {
+		max-width: 327px;
+		min-width: 120px;
+	}
+	&.al_left {
+		.tooltip_panel {
+			left: -16px;
+		}
+	}
+	&.al_center {
+		.tooltip_panel {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&.al_right {
+		.tooltip_panel {
+			right: -16px;
+		}
+	}
+}
 
 
 // file 관련
@@ -527,13 +540,6 @@
 		width: 440px;
 		height: 276px;
 		margin: 0 auto;
-	}
-}
-//tooltip
-.tooltip_wrap {
-	.tooltip_panel {
-		width: max-content;
-		max-width: 836px;
 	}
 }
 

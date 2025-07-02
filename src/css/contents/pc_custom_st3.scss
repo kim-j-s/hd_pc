@@ -583,6 +583,16 @@
 		}
 	}
 
+	&.md {
+		.selectbox {
+			padding: 12.5px 40px 12.5px var(--padding-6);
+			font-size: var(--font-size-label-medium);
+			border-radius: var(--radius-medium2);
+			background-size: 16px auto;
+		}
+	}
+
+
 	& + .inp_checkbox,
 	& + .input_text {
 		margin-top: var(--gap-5);
@@ -838,6 +848,9 @@
 		} 
 		&.v_bg_ty5 { //실손의료비보험(계약전환용)
 			background-image: url(../images/content/guarantee/bg_img_ltsm.svg);
+		}  
+		&.v_bg_ty6 { //사업장화재보험
+			background-image: url(../images/content/guarantee/bg_img_ltwf.png);
 		}  
 		.bubble_msg {
 			position: relative;

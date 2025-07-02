@@ -1,0 +1,25 @@
+{{#> layout/default no-sp=true page-title="보험료 확인 | 상품"}}
+
+<!-- s: Bottom 팝업 -->
+{{#> popup/popup_bottom popup-id="pop_type01" popup-title="보장 상세 안내" popup-active=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<p class="title_sub">화재손해(집기비품)</p>
+		
+		{{#> cp/notice dp-title="보장내용을 확인해 보세요" }}
+			<ul class="list_depth">
+				<li>
+					직업상의 필요에서 사용 또는 소지되는 것으로 점포나 사무소에 소재하는 것으로 일반적으로 건물에 고정되어 있지 않고 쉽게 움직임이 가능한 책상, 컴퓨터, 복사기 등
+				</li>
+			</ul>
+		{{/ cp/notice }}
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_bottom}}
+<!-- e: Bottom 팝업 -->
+{{/ layout/default }}

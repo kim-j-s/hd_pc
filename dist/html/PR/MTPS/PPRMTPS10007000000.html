@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -209,12 +209,15 @@
 											<span class="text">무이자할부 안내</span>
 										</a>
 									</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="카드 할부 선택" onclick="openHDPopup(this,'pop_type02');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="">일시불</div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<!-- s: 25-07-01 수정 -->
+									<div class="select_option_box">
+										<select name="" id="" title="카드 할부 선택" class="selectbox">
+											<option value="" selected hidden>카드 할부 선택</option>
+											<option value="" selected>일시불</option>
+											<option value="">2개월</option>
+										</select>
 									</div>
+									<!-- e: 25-07-01 수정 -->
 									<ul class="list_ty2">
 										<li>계약자 명의의 국내발급 카드로만 결제가 가능합니다. (법인, 가족카드 불가)</li>
 									</ul>
@@ -267,18 +270,20 @@
 										<!-- e: 신한카드 선택 시, 노출 -->
 									</div>
 								</div>
+								<!-- s: 25-07-01 수정 -->
 								<!-- s: 블루/기아멤버스 -->
-								<div class="form_line">
+								<div class="form_line full_half">
 									<div class="label_tit">블루/기아멤버스 포인트 선택</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="블루/기아멤버스 포인트 선택" onclick="openHDPopup(this,'pop_type03');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="블루/기아멤버스 포인트 선택">현대 블루멤버스 포인트</div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="블루/기아멤버스 포인트 선택" class="selectbox">
+											<option value="" selected hidden>블루/기아멤버스 포인트 선택</option>
+											<option value="" selected>블루/기아멤버스 포인트 선택</option>
+											<option value="">기아 멤버스 포인트</option>
+										</select>
 									</div>
 								</div>
 								<!-- s: 현대 블루멤버스 -->
-								<div class="form_line">
+								<div class="form_line full_half">
 									<div class="label_tit">현대 블루멤버스 카드번호</div>
 									<div class="comp_wrap card">
 										<div class="input_text">
@@ -314,7 +319,7 @@
 								</div>
 								<!-- e: 현대 블루멤버스 -->
 								<!-- s: 기아 멤버스 -->
-								<div class="form_line">
+								<div class="form_line full_half">
 									<div class="label_tit">기아 멤버스 카드번호</div>
 									<div class="comp_wrap card">
 										<div class="input_text">
@@ -369,7 +374,7 @@
 										<div class="int_txt right">P</div>
 									</div>
 								</div>
-								<div class="form_line full_half">
+								<div class="form_line">
 									<div class="label_tit">카드 비밀번호</div>
 									<div class="comp_wrap">
 										<div class="comp_wrap_keypad_call form_key" role="button" tabindex="0" title="카드 비밀번호 숫자 4자리 입력">
@@ -386,6 +391,7 @@
 								<li>비밀번호 3회 오류 시 블루멤버스 고객센터(080-600-6000)로 연락하시어 비밀번호 재설정 후 결제 진행이 가능합니다.</li>
 							</ul>
 							<!-- e: 블루/기아멤버스 -->
+							<!-- e: 25-07-01 수정 -->
 						</div>
 
 						<!-- 간편결제 -->
@@ -573,14 +579,14 @@
 						</a>
 					</div>
 					<h3 class="title_h3">ECO 마일리지 환급 계좌</h3>
-					<!-- s: 이체 선택 시 -->
+					<!-- s: 즉시이체 선택 시 -->
 					<div class="inp_checkbox rd_box">
 						<input type="checkbox" id="checkbox04-9" />
 						<label for="checkbox04-9" class="chk_label chk_label_ty3">
 							<span class="label_cont">결제 계좌와 동일합니다</span>
 						</label>
 					</div>
-					<!-- e: 이체 선택 시 -->
+					<!-- e: 즉시이체 선택 시 -->
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">은행</div>

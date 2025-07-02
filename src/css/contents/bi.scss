@@ -141,7 +141,6 @@
 							animation: bounce 0.8s linear infinite;
 						}
 						
-						
 						&::after {
 							content: '';
 							position: absolute;
@@ -655,6 +654,11 @@
 	&.insurance {
 		background-image: url(../images/content/bi/icon_stepper_insurance.svg);
 	}
+	//풍수해지진재해(소상공인)
+	&.stamp {
+		background-image: url(../images/content/bi/icon_stepper_stamp.svg);
+	}
+	
 	
 	
 	
@@ -953,6 +957,9 @@
 			&.pi_bg_ty17 { //실손의료비보험(계약전환용)
 				background-image: url(../images/content/bi/visual/bg_img_ltsm.png);
 			}
+			&.pi_bg_ty18 { //사업장화재보험
+				background-image: url(../images/content/bi/visual/bg_img_ltwf.png);
+			}
 
   
 
@@ -1089,6 +1096,9 @@
 							&.item_ico_ty26 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty26.png);
 							}
+							&.item_ico_ty27 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty27.png);
+							}
 						}
 					}
 
@@ -1154,6 +1164,10 @@
 	position: static;
 	overflow: initial;
 	margin-top: auto;
+
+	.form_group_wrap {
+		width: 100%;
+	}
 }
 
 .bi_opts_wrap .opts_area.active {

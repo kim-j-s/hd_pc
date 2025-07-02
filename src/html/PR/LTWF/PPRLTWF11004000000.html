@@ -1,0 +1,782 @@
+
+{{#> layout/default page-title="보험료 확인 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="사업장화재보험" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						센스있는 사장님의 현명한 선택<br>
+						<strong>다이렉트 H사업장화재보험</strong>
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="3" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+			
+			<div class="guarantee_view_wrap">
+				<div class="view_left">
+					<div class="v_top">
+						<div class="badge_wrap">
+							<span class="hd_badge outline solid_pastel c_info size_m">16개 보장</span>
+						</div>
+					</div>
+					<div class="v_info">
+						<div class="title">월 보험료(1년 만기)</div>
+						<div class="price">
+							<strong>40,580</strong> 원
+						</div>
+					</div>
+				</div>
+				<div class="view_right v_bg_ty6">
+					<div class="bubble_msg">
+						<span>
+							예상치 못한 질병, 상해 의료비<br>
+							부담을 줄이세요 
+						</span> 
+					</div>
+				</div>
+			</div>
+			
+			<div class="guarantee_info"> 
+				<div class="item_right">
+					<ul class="list_ty4">
+						<li>
+							<span class="text">보험/납입 기간</span>
+							<strong class="data">3년</strong>
+						</li>
+						<li>
+							<span class="text">납입방법</span>
+							<strong class="data">월납</strong>
+						</li>
+					</ul>
+					{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+				</div>
+			</div>
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="acc_group">
+				<div class="space_list_ty2">
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="화재손해" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-1" sct="화재손해(건물)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1억원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-2" sct="화재손해(내부시설)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="">1천만원</option>
+										<option value="">2천만원</option>
+										<option value="" selected>3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-3" sct="화재손해(집기비품)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-4" sct="화재손해(상품/반제품)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1천만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-5" sct="건물복구비용지원(화재)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="">1천만원</option>
+										<option value="" selected>2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox01-6" sct="시설수리비용지원(화재)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>3백만원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+						</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="배상책임" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox02-1" sct="화재배상책임Ⅱ" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택" }}
+										<option value="" selected>1억원</option>
+										<option value="">2천만원</option>
+										<option value="">3천만원</option>
+										<option value="">4천만원</option>
+										<option value="">5천만원</option>
+									{{/ cp/selectbox_pc}}
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox02-2" sct="시설소유·관리자배상책임(화재배상제외)" }}
+									</div>									
+								</div>
+								<div class="detail_price">미가입</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox02-3" sct="음식물배상책임" }}
+									</div>									
+								</div>
+								<div class="detail_price">미가입</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox02-4" sct="가스사고배상책" }}
+									</div>									
+								</div>
+								<div class="detail_price">미가입</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox02-5" sct="건물복구비용지원(화재)" }}
+									</div>									
+								</div>
+								<div class="detail_price">미가입</div>
+							</li>
+						</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="재물손해" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-1" sct="풍수재손해(비특수건물)" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1억원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-2" sct="항공기·차량손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1억5천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-3" sct="붕괴ㆍ침강ㆍ사태손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1억5천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-4" sct="구내폭발파열손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1억5천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-5" sct="급배수설비누출로인한손해(일반)" }}
+									</div>									
+								</div>
+								<div class="detail_price">미가입</div>
+							</li> 
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-6" sct="냉동ㆍ냉장물손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-7" sct="위조지폐손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">5백만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-8" sct="도난손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1천만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-9" sct="유리손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1백만원</span>
+								</div>
+							</li>
+							<li class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs cid="checkbox03-10" sct="점포휴업손해" checked=true }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">1천만원</span>
+								</div>
+							</li>
+						</ul>
+						{{/ cp/accordion }}
+					</div>
+				</div>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+			
+		
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+				<ul class="list_ty4">
+					<li>화재배상책임Ⅱ, 재난배상책임 담보는 종업원을 담보하지 않습니다.</li>
+					<li>풍수재손해(비특수건물) 담보는 자연재해위험등급 침수/강풍 4급 이내 건물만 가입 가능하며, 지진이 보상되지 않습니다.</li>
+					<li>배상책임보장특약(학원및교습소배상책임보장, 이미용사배상책임보장 ,시설소유관리자배상책임보장 등)은 피보험시설 내에 설치된 엘리베이터로 생긴 재물 손해에 대한 배상책임은 보상하지 않습니다.</li>
+					<li>점포휴업손해 담보의 약정복구기간은 1개월입니다.</li>
+					<li>화재손해 담보 가입금액 한도
+						<ul class="list_depth_ty2 subtle">
+							<li>유흥주점, 단란주점, 노래연습장, 오락실/PC방 업종 : 화재손해 담보 가입금액의 합계 8억까지 가입 가능</li>
+							<li>세탁소 업종 : 화재손해 담보 가입금액의 합계 5억까지 가입 가능</li>
+						</ul>
+					</li>
+				</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_사업장화재 panel-title="기초 정보" panel-title2="건물 정보" step1=true }}
+		<!-- e: 사이드 패널 -->
+	</div>	
+</div>
+
+<!-- s: popup area -->
+
+<!-- s: 가스사고배상책임 팝업 -->
+{{#> popup/popup_full popup-id="pop01"  popup-title="추가 정보 입력"  }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">가스사고배상책임</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">사용 업종</div>
+					{{#> cp/selectbox_pc s-title="사용 업종 선택" }}
+						<option value="" selected>선택</option>
+						<option value="">선택2</option>
+					{{/ cp/selectbox_pc}}
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">가스 종류</div>
+					<div class="radio_group_wrap" role="radiogroup">
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_1_01" name="pop01_select_g_1" labelname="LPG(액화가스)" }}
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_1_02" name="pop01_select_g_1" labelname="LNG(도시가스)" }}
+					</div>
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">가입관리코드 의무 여부</div>
+					<div class="radio_group_wrap" role="radiogroup">
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_2_01" name="pop01_select_g_2" labelname="예" }}
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_2_02" name="pop01_select_g_2" labelname="아니요" checked=true }}
+					</div>
+				</div>
+
+				<!-- s: 25-06-10 수정(추가)-->
+				<div class="form_line">
+					<div class="form_group_wrap">
+						<div class="form_line">						
+							{{#> cp/selectbox_pc s-class="md" s-title="고유번호(가입관리코드) 선택" }}
+								<option value="" selected>고유번호(가입관리코드)</option>
+								<option value="">상호(목적물 시설명)</option>
+							{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line">
+							{{> cp/text class="inp_mi" placeholder="고유번호(가입관리코드) 입력" inp-title="입력" }}
+							<!-- s: 상호(목적물 시설명) -->
+							<!-- {{> cp/text class="inp_mi" placeholder="상호(목적물 시설명) 입력" inp-title="입력" }} -->
+							<!-- e: 상호(목적물 시설명) -->
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="2" size="2" b-text="조회"}}
+					</div>
+				</div>
+				<!-- e: 25-06-10 수정(추가)-->
+			</div>
+		</div>
+
+		<!-- s: 25-06-10 수정(추가)-->
+		<!-- 조회 결과 -->
+		<div class="divider_ty1"></div>
+		<h3 class="title_h3">조회 결과</h3>
+		<div class="card_item_wrap">
+			<div class="card_item">
+				<div class="item_inner">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="card_chk1_1" name="name1" aria-labelledby="card_chk1_1_cont">
+						<label for="card_chk1_1" class="chk_label"></label>
+						<i></i>
+					</div>
+					<div class="inner_cont">
+						<div class="item_top" id="card_chk1_1_cont">
+							<div class="title_info">
+								<div class="sub_title">도시가스회사</div>
+								<div class="main_title">D-GAS000000010001</div>
+							</div>
+						</div>
+	
+						<ul class="card_list_ty1">
+							<li>
+								<div class="title">상호</div>
+								<div class="cont">코원에너지서비스(주)</div>
+							</li>
+							<li>
+								<div class="title">업태</div>
+								<div class="cont">전기가스 외</div>
+							</li>
+							<li>
+								<div class="title">가스종류</div>
+								<div class="cont">LNG</div>
+							</li>
+							<li>
+								<div class="title">주소</div>
+								<div class="cont">서울특별시 강남구 수서동 ****</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e: 25-06-10 수정(추가)-->
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="1" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 가스사고배상책임 팝업 -->
+
+<!-- s: popup area -->
+
+<!-- s: 음식물배상책임 팝업 -->
+{{#> popup/popup_full popup-id="pop02" popup-title="추가 정보 입력" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">음식물배상책임</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">음식점 업종</div>
+					{{#> cp/selectbox_pc s-title="음식점 업종 선택" }}
+						<option value="" selected>선택</option>
+						<option value="">선택2</option>
+					{{/ cp/selectbox_pc}}
+
+					<ul class="list_ty2">
+						<li>회 센터, 스시 부페, 횟집(초장집), 건설현장급식소, 도시락전문업 및 출장 부페 는 가입 불가합니다.</li>
+						<li>학교, 회사, 결혼예식장, 병원 등으로 일정한 구내시설에서 단체급식이 행해지는 곳은 가입 불가합니다.</li>
+						<li>연간매출액 3.3㎡ 당 300만원 미만, 연간매출액 2천만원 미만 또는 100억원 초과 업종은 가입 불가합니다.</li>
+						<li>연간매출액을 정확히 입력해주세요. 향후 보상 시 실제 확인된 매출액과 차이가 발생하는 경우, 보험료 추징 및 보험금 지급 시 비례 보상 등의 문제가 발생할 수 있습니다.</li>
+						<li>보상한도액 : [대인] 1인당 3천만원, 1사고당 1억원 [대물] 1사고당 1백만원, 연간 1천만원 한도 [자기부담금] 10만원</li>
+					</ul>
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">연간매출액(직전 년도 기준)</div>
+					{{> cp/text type="tel" class="price" r-text="천원" inp-title="금액입력" placeholder="숫자만 입력"}}
+					<ul class="list_ty2">
+						<li>
+							연간매출액 2천만원 미만, 100억원 초과 업종은 가입 불가합니다.
+						</li>
+						<li>
+							연간매출액을 정확히 입력해주세요. 향후 보상 시 실제 확인된 매출액과 차이가 발생하는 경우, 보험료 추징 및 보험금 지급 시 비례 보상 등의 문제가 발생할 수 있습니다.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 음식물배상책임 팝업 -->
+
+<!-- s: 음식물배상책임 하위 팝업02 -->
+{{#> popup/popup_layer popup-id="pop02_alert"}}
+<div class="popup_cont">
+	<div class="popup_content">
+			<div class="msg_icon mi_info"></div>
+			<p class="pl_txt1">다음과 같은 경우 음식물배상책임 담보에 가입하실 수 없습니다</p>
+			<ul class="list_ty4">
+				<li>연간 매출액이 2천만원 이하이거나, 100억을 초과하는 경우</li>
+				<li>평당 매출액 300만원 이하인 경우</li>
+			</ul>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_layer}}
+<!-- e: 음식물배상책임 하위 팝업02 -->
+
+
+
+<!-- s: 시설소유·관리자배상책임(재난배상책임 제외) 팝업 -->
+{{#> popup/popup_full popup-id="pop03" popup-title="추가 정보 입력" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">시설소유·관리자배상책임(재난배상책임 제외)</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">실제 영위 업종</div>
+					{{#> cp/selectbox_pc s-title="실제 영위 업종" }}
+						<option value="" selected>선택</option>
+						<option value="">선택2</option>
+					{{/ cp/selectbox_pc}}
+					<ul class="list_ty2">
+						<li> 어린이놀이시설은 별도 가입이 필요합니다.</li>
+						<li>전문 주점이란? 캬바레, 싸롱, 디스코텍, 록까페, 단란주점 등</li>
+					</ul>
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">사용 면적</div>
+					{{> cp/text type="tel" class="price" r-text="m²" inp-title="면적 입력" placeholder="숫자만 입력"}}
+					<ul class="list_ty2">
+						<li>
+							'승강기/세차기/광고판'으로 인한 배상책임사고시 보장되지 않습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 시설소유·관리자배상책임(재난배상책임 제외) 팝업 -->
+
+
+
+
+
+
+<!-- s: 시설소유·관리자배상책임(화재배상책임 제외) 팝업 -->
+{{#> popup/popup_full popup-id="pop04" popup-title="추가 정보 입력" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">시설소유·관리자배상책임(화재배상책임 제외)</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">실제 영위 업종</div>
+					{{#> cp/selectbox_pc s-title="실제 영위 업종" }}
+						<option value="" selected>선택</option>
+						<option value="">선택2</option>
+					{{/ cp/selectbox_pc}}
+					<ul class="list_ty2">
+						<li> 어린이놀이시설은 별도 가입이 필요합니다.</li>
+						<li>전문 주점이란? 캬바레, 싸롱, 디스코텍, 록까페, 단란주점 등</li>
+					</ul>
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">사용 면적</div>
+					{{> cp/text type="tel" class="price" r-text="m²" inp-title="면적 입력" placeholder="숫자만 입력"}}
+					<ul class="list_ty2">
+						<li>
+							'승강기/세차기/광고판'으로 인한 배상책임사고시 보장되지 않습니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="1" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 시설소유·관리자배상책임(화재배상책임 제외) 팝업 -->
+
+
+
+
+
+<!-- s: 학원 교습소배상책임(화재배상책임 제외) 팝업 -->
+{{#> popup/popup_full popup-id="pop05" popup-title="추가 정보 입력" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">학원 교습소배상책임(화재배상책임 제외)</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">가입 대상</div>
+					{{#> cp/selectbox_pc s-title="가입 대상 선택" }}
+						<option value="" selected>선택</option>
+						<option value="">선택2</option>
+					{{/ cp/selectbox_pc}}          
+				</div>
+
+				<div class="form_line">
+					<div class="label_tit">학생 인원수</div>
+					{{> cp/text type="tel" class="price" r-text="명" inp-title="학생 인원수 입력" placeholder="숫자만 입력"}}
+					<ul class="list_ty2">
+						<li>'승강기/세차기/광고판'으로 인한 배상책임사고시 보장되지 않습니다.</li>
+						<li>학생수는 10명 이상만 가입 가능합니다.</li>
+						<li>기숙사형 학원은 가입 불가합니다.</li>              
+					</ul>
+				</div>
+
+				<!-- s: 25-06-10 수정(추가)-->
+
+				<div class="form_line">
+					<div class="label_tit">가입관리코드 의무 여부</div>
+					<div class="radio_group_wrap" role="radiogroup">
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_2_01" name="pop01_select_g_2" labelname="예" }}
+						{{> cp/radio rd-class="rd_btn" rd-id="pop01_select_g_2_02" name="pop01_select_g_2" labelname="아니요" checked=true }}
+					</div>
+				</div>
+
+				<div class="form_line">
+					<div class="form_group_wrap">
+						<div class="form_line">						
+							{{#> cp/selectbox_pc s-class="md" s-title="고유번호(가입관리코드) 선택" }}
+								<option value="" selected>고유번호(가입관리코드)</option>
+								<option value="">상호(목적물 시설명)</option>
+							{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line">
+							{{> cp/text class="inp_mi" placeholder="고유번호(가입관리코드) 입력" inp-title="입력" }}
+							<!-- s: 상호(목적물 시설명) -->
+							<!-- {{> cp/text class="inp_mi" placeholder="상호(목적물 시설명) 입력" inp-title="입력" }} -->
+							<!-- e: 상호(목적물 시설명) -->
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="2" size="2" b-text="조회"}}
+					</div>
+				</div>
+				<!-- e: 25-06-10 수정(추가)-->
+			</div>
+		</div>
+
+		<!-- s: 25-06-10 수정(추가)-->
+		<!-- 조회 결과 -->
+		<div class="divider_ty1"></div>
+		<h3 class="title_h3">조회 결과</h3>
+		<div class="card_item_wrap">
+			<div class="card_item">
+				<div class="item_inner">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="card_chk1_1" name="name1" aria-labelledby="card_chk1_1_cont">
+						<label for="card_chk1_1" class="chk_label"></label>
+						<i></i>
+					</div>
+					<div class="inner_cont">
+						<div class="item_top" id="card_chk1_1_cont">
+							<div class="title_info">
+								<div class="main_title">D-GAS000000010001</div>
+							</div>
+						</div>
+	
+						<ul class="card_list_ty1">
+							<li>
+								<div class="title">학원명</div>
+								<div class="cont">대치강안교육스터디학원</div>
+							</li>
+							<li>
+								<div class="title">학원등록번호</div>
+								<div class="cont">08202314241</div>
+							</li>
+							<li>
+								<div class="title">개원일자</div>
+								<div class="cont">2023.02.03</div>
+							</li>
+							<li>
+								<div class="title">주소</div>
+								<div class="cont">서울특별시 강남구 영동대로 ****</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e: 25-06-10 수정(추가)-->
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 학원 교습소배상책임(화재배상책임 제외) 팝업 -->
+
+
+
+
+
+<!-- s: 의약품배상책임 팝업 -->
+{{#> popup/popup_full popup-id="pop06" popup-title="추가 정보 입력" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<div class="form_box">			
+			<div class="title_h3">의약품배상책임</div>
+			<div class="form_group_wrap">
+				<div class="form_line">
+					<div class="label_tit">약사 인원수</div>
+					{{> cp/text type="tel" class="price" r-text="명" inp-title="약사 인원수 입력" placeholder="숫자만 입력"}}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" disabled=true}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 의약품배상책임 팝업 -->
+
+<!-- e: popup area -->
+{{/ layout/default }}
