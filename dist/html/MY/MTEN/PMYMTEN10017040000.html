@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -579,54 +579,43 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<!-- s: 25-06-04 수정 -->
-
-						<h2 class="title_h2">
-							자녀(태아)정보 <strong>입력</strong> 및<br />
-							확인 방법을 <strong>선택</strong>해주세요
-						</h2>
-						<!-- e: 25-06-04 수정 -->
-						<div class="btn_area basic">
-							<!-- s: 25-05-21 -->
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="자녀 할인특약 자세히보기 팝업 열기">
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>효도하는 자녀 할인특약 가입</strong>
+							</h2>
+							<div class="sub_desc">자녀(태아)정보 <strong>입력</strong> 및 확인 방법을 <strong>선택</strong>해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" title="자녀 할인특약 자세히보기 팝업 열기">
 								<span class="text">자세히 보기</span>
 								<i class="hd_icon arrowRightSvg"></i>
 							</button>
-							<!-- e: 25-05-21 -->
 						</div>
 					</div>
-					<!-- e: content_top -->
 					<div class="space_list_ty4">
-						<!-- s: 기가입 고객 -->
-						<!-- s: 25-06-04 삭제 -->
-						<!--<div class="item">
-										<div class="info_gray">
-												<dl>
-														<dt>특약가입일</dt>
-														<dd>2025.04.30</dd>
-												</dl>
-												<dl>
-														<dt>자녀1</dt>
-														<dd>자녀ㅣ2023.01.01(만2세)</dd>
-												</dl>
-												<dl>
-														<dt>자녀2</dt>
-														<dd>자녀ㅣ2024.12.30(만1세)</dd>
-												</dl>
-										</div>
-									</div>-->
-						<!-- e: 25-06-04 삭제 -->
-						<!-- e: 기가입 고객 -->
 						<div class="item">
 							<div class="title_h3">자녀정보</div>
-							<!-- s: 25-06-04 수정 -->
 							<div class="form_group_wrap">
 								<div class="form_line">
-									<div class="label_tit">자녀 구분(피보험자의 가장 어린 자녀 기준)</div>
+									<div class="label_tit">자녀 구분<strong class="point">(피보험자의 가장 어린 자녀 기준)</strong></div>
 									<div class="radio_group_wrap" role="radiogroup">
 										<div class="inp_radio rd_btn">
 											<input type="radio" id="f1_g1_rb01" name="f1_g1" />
@@ -662,7 +651,7 @@
 								</div>
 
 								<!-- s: 자녀구분에서 자녀(만 12세 이하)를 선택하면 노출 -->
-								<div class="form_line">
+								<div class="form_line full_half">
 									<div class="label_tit">변경 기준일</div>
 									<div class="input_text calendar">
 										<div class="inp">
@@ -714,11 +703,10 @@
 								</div>
 								<!-- e: 태아선택 -->
 							</div>
-							<!-- e: 25-06-04 수정 -->
 						</div>
 						<div class="item">
 							<h3 class="title_h3">자녀정보 확인 방법</h3>
-							<div class="radio_group_wrap" role="radiogroup">
+							<div class="radio_group_wrap column" role="radiogroup">
 								<div class="inp_radio sm">
 									<input type="radio" id="f2_g1_rb01" name="f2_g1" />
 									<label for="f2_g1_rb01">
@@ -728,7 +716,7 @@
 								<div class="inp_radio sm">
 									<input type="radio" id="f2_g1_rb02" name="f2_g1" />
 									<label for="f2_g1_rb02">
-										<span class="label_cont">가족관계 입증서류 제출<br />(가족관계증명서, 주민등록등본 등)</span>
+										<span class="label_cont">가족관계 입증서류 제출(가족관계증명서, 주민등록등본 등)</span>
 									</label>
 								</div>
 								<div class="inp_radio sm">
@@ -745,7 +733,7 @@
 						<!-- s: 가족관계 입증서류 제출 선택시 표출 -->
 						<div class="item">
 							<h3 class="title_h3">자녀 정보 입력</h3>
-							<div class="form_group_wrap">
+							<div class="form_group_wrap full_half">
 								<div class="form_line">
 									<div class="label_tit">자녀 생년월일</div>
 									<div class="row balance">
@@ -755,7 +743,6 @@
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 										</div>
-										<!-- s: 25-06-04 수정 -->
 										<div class="input_text price fix_w_case01 fit">
 											<div class="int_txt left">만</div>
 											<div class="inp">
@@ -763,7 +750,6 @@
 											</div>
 											<div class="int_txt right">세</div>
 										</div>
-										<!-- e: 25-06-04 수정 -->
 									</div>
 								</div>
 							</div>
@@ -792,69 +778,65 @@
 										</div>
 									</div>
 								</div>
-								<!-- s: 25-05-27 수정 -->
-								<!-- s: 25-06-04 수정 -->
-								<div class="info_gray">
-									<h3 class="title_h3">기명피보험자에게 가족관계증명서 간편 조회를 요청할까요?</h3>
-									<p class="info_text">알림톡(문자)로 받은 링크로 가족관계증명서 간편조회를 이용해 자녀 정보를 입력할 수 있어요.</p>
-								</div>
-								<!-- e: 25-06-04 수정 -->
-								<!-- e: 25-05-27 수정 -->
-								<div class="btn_area">
-									<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2">
-										<span class="text">알림톡(문자)으로 요청</span>
-									</button>
-								</div>
+							</div>
+							<div class="info_gray">
+								<h3 class="title_h3">기명피보험자에게 가족관계증명서 간편 조회를 요청할까요?</h3>
+								<p class="info_text">알림톡(문자)로 받은 링크로 가족관계증명서 간편조회를 이용해 자녀 정보를 입력할 수 있어요.</p>
+							</div>
+							<div class="btn_area center">
+								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+									<span class="text">알림톡(문자)으로 요청</span>
+								</button>
 							</div>
 						</div>
 						<!-- e: 가족관계증명서 간편조회 선택시 표출 -->
 						<!-- s: 현대해상 가입 정보 확인, 가족관계증명서 간편조회(조회 후) -->
 						<div class="item">
 							<h3 class="title_h3">자녀 정보 확인</h3>
-							<!-- s: 25-05-27 수정 -->
-							<!-- s: 추가서류가 필요한 경우 표출 -->
-							<!-- 삭제 <div class="invalid_msg">
-													<div class="icon"><i class="hd_icon icon_errorSvg"></i></div>
-													<div>할인특약 가입을 위해 피보험자정보 확인 단계에서 가족관계 입증서류(가족관계증명서, 주민등록등본 등) 중 1매를 등록해 주세요.</div>
-											</div> -->
-							<!-- e: 25-05-27 수정 -->
-							<!-- e: 추가서류가 필요한 경우 표출 -->
 							<div class="info_gray">
-								<dl>
-									<dt>생년월일</dt>
-									<dd>2025.01.01</dd>
-								</dl>
-								<dl>
-									<dt>만나이</dt>
-									<dd>만 0세</dd>
-								</dl>
+								<div class="data_box">
+									<dl>
+										<dt>생년월일</dt>
+										<dd>2025.01.01</dd>
+									</dl>
+									<dl>
+										<dt>만나이</dt>
+										<dd>만 0세</dd>
+									</dl>
+								</div>
 							</div>
 							<ul class="list_ty2">
-								<!-- s: 25-05-27 수정 -->
-								<!-- s: 25-06-04 수정 -->
-
 								<li>
 									자녀가 여러 명인 경우 가장 막내의 정보가 노출됩니다.<br />
 									<strong class="point">할인특약 가입을 위해 다음 단계에서 가족관계 입증서류(가족관계증명서, 주민등록등본 등) 중 1매를 등록해 주세요.</strong>
 								</li>
-								<!-- e: 25-06-04 수정 -->
-								<!-- e: 25-05-27 수정 -->
 							</ul>
 						</div>
 						<!-- e: 현대해상 가입 정보 확인, 가족관계증명서 간편조회(조회 후) -->
 					</div>
-				</div>
-			</div>
 
-			<!-- s: 하단 버튼 영역 -->
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" onclick="openHDPopup(this,'pop_type01');">
-						<span class="text">다음</span>
-					</button>
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" disabled>
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 				</div>
 			</div>
-			<!-- s: 하단 버튼 영역 -->
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 		<!-- s: popup area -->
 		<!-- s: 자동차 배서 메뉴 -->

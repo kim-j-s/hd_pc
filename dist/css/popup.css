@@ -63,7 +63,7 @@
 	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	max-height: 100%;
 	background-color: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -289,7 +289,7 @@
 	width: calc(100vw - 8.6rem);
 }
 /* popup_full */
-.popup_wrap.popup_wrap_type4.popup_wrap_type5 .popup_container {
+.popup_wrap.popup_wrap_type4.big .popup_container {
 	width: 80rem;
 }
 .popup_wrap.popup_wrap_type4.active .popup_container {
@@ -329,7 +329,7 @@
 .popup_wrap.popup_wrap_type1 .popup_container {
 	-webkit-transform: none;
 	transform: none;
-	width: 44rem;
+	width: 28rem;
 	opacity: 0;
 }
 .popup_wrap.popup_wrap_type1 .popup_container .popup_inner {
@@ -337,7 +337,7 @@
 	max-height: 100%;
 }
 .popup_wrap.popup_wrap_type1 .popup_container .popup_inner .popup_cont {
-	padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
+	padding-top: var(--padding-5);
 }
 /* popup_confirm(alert) */
 .popup_wrap.popup_wrap_type2.active .popup_container {
@@ -357,19 +357,15 @@
 	justify-content: center;
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
+	width: 28rem;
 }
 .popup_wrap.popup_wrap_type2 .popup_container .popup_inner {
 	max-height: calc(100% - 2rem);
 	height: auto;
 	width: 44rem;
 }
-.popup_wrap.popup_wrap_type2 .popup_container .popup_inner .popup_head {
-	min-height: 3.2rem;
-	padding: 1.4rem 3.6rem 1.4rem 1.6rem;
-}
 .popup_wrap.popup_wrap_type2 .popup_container .popup_inner .popup_cont {
-	padding: 1.2rem 2.4rem 1.6rem;
-	margin-top: var(--gap-2);
+	padding-top: var(--padding-5);
 	text-align: center;
 }
 .popup_wrap.popup_wrap_type2 .popup_container .popup_inner .popup_cont .info_confirm {
@@ -426,21 +422,13 @@
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner {
 	max-height: calc(100% - 2rem);
 	height: auto;
-}
-.popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_head {
-	-webkit-box-flex: 0;
-	-ms-flex: none;
-	flex: none;
-	min-height: 4.3rem;
-	margin-bottom: var(--gap-2);
-	padding: 0 var(--padding-8) var(--padding-6);
-	padding-top: var(--padding-7);
+	padding-top: var(--padding-2);
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_head .popup_head_title {
 	padding-right: 4rem;
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont {
-	padding: 0px var(--gap-7) var(--gap-4);
+	padding-top: var(--padding-2);
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont .bottom_fix_notice {
 	padding-top: 3.2rem;

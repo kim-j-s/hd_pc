@@ -26,24 +26,26 @@
 						<col style="width:40%;">
 					</colgroup>
 					<tbody>
+						<!-- s: 25-07-03 수정 -->
 						<tr>
-							<th scope="row" rowspan="2">대체 전 차량번호<br/>18루**22</td>
+							<th scope="row" rowspan="2">대체 전 차량번호<br/>18루**22</th>
 							<td>최초 주행거리</td>
-							<td>143,987km</td>
+							<td class="txt_right">143,987km</td>
 						</tr>
 						<tr>
 							<td><span class="point">최종 주행거리</span></td>
-							<td><span class="point">입력예정</span></td>
+							<td class="txt_right"><span class="point">입력예정</span></td>
 						</tr>
 						<tr>
-							<th scope="row" rowspan="2">대체 후 차량번호<br/>29머**62</td>
+							<th scope="row" rowspan="2">대체 후 차량번호<br/>29머**62</th>
 							<td><span class="point">최초 주행거리</span></td>
-							<td><span class="point">입력예정</span></td>
+							<td class="txt_right"><span class="point">입력예정</span></td>
 						</tr>
 						<tr>
 							<td>최종 주행거리</td>
-							<td>만기 시 등록</td>
+							<td class="txt_right">만기 시 등록</td>
 						</tr>
+						<!-- e: 25-07-03 수정 -->
 					</tbody>
 				</table>
 			</div>
@@ -275,7 +277,9 @@
 						<div class="radio_group_wrap column">
 							{{> cp/radio rd-class="lg" rd-id="radio01-1" name="radio01-1" labelname="신차 자동등록" labelcont="(책임개시일 기준 5Km, 사진첨부 불필요)" }}
 							{{> cp/radio rd-class="lg" rd-id="radio01-2" name="radio01-1" labelname="지금 등록" checked=true }}
-							{{> cp/radio rd-class="lg" rd-id="radio01-3" name="radio01-1" labelname="나중에 등록" labelcont="보험시작일로부터 30일이내"}}
+							<!-- s: 25-07-03 수정 -->
+							<!-- {{> cp/radio rd-class="lg" rd-id="radio01-3" name="radio01-1" labelname="나중에 등록" labelcont="보험시작일로부터 30일이내"}} -->
+							<!-- e: 25-07-03 수정 -->
 						</div>
 
 						<div class="acd_item acd_item_ty2">
