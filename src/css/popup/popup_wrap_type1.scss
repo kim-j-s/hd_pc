@@ -9,22 +9,18 @@
 		}
 
 		.popup_container {
-			padding: 40px 48px;
+			transform: none;
+			width: 440px;
+			// padding: 40px 48px;
 			opacity: 0;
 
 			.popup_inner {
 				height: auto;
 				max-height: 100%;
-				border-radius: var(--radius-large2);
+				
 				.popup_cont {
 					padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
 				}
-
-				
-
-				// 
-
-
 			}
 		}
 	}
