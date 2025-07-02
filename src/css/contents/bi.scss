@@ -960,10 +960,12 @@
 			&.pi_bg_ty18 { //사업장화재보험
 				background-image: url(../images/content/bi/visual/bg_img_ltwf.png);
 			}
-			&.pi_bg_ty19 { //사업장화재보험
+			&.pi_bg_ty19 { //국내여행보험
 				background-image: url(../images/content/bi/visual/bg_img_gipc3.png);
 			}
-
+			&.pi_bg_ty20 { //개인정보보호배상책임보험(II)
+				background-image: url(../images/content/bi/visual/bg_img_gipi.png);
+			}
   
 
 			
@@ -1107,6 +1109,9 @@
 							}
 							&.item_ico_ty29 {
 								background-image: url(../images/content/bi/visual/bg_exp_ty29.png);
+							}
+							&.item_ico_ty30 {
+								background-image: url(../images/content/bi/visual/bg_exp_ty30.png);  
 							}
 						}
 					}

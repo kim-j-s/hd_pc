@@ -1,0 +1,88 @@
+{{#> layout/default page-title="보험가입정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="개인정보보호배상책임보험(II)" }}
+	
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">피보험자/계약자정보</div>
+					<h2 class="p_title">
+						<strong>계약자 정보를 입력</strong>해주세요
+					</h2>
+				</div>
+			</div>
+			
+			<div class="form_box">
+				<div class="form_group_wrap">
+					<div class="form_line">
+						<div class="label_tit">개인사업자·법인명</div>
+						{{> cp/text placeholder="사업자명 입력" inp-title="사업자명 입력" value="한국산업" readonly=true}}
+					</div>
+
+					<div class="form_line">
+						<div class="label_tit">사업자번호</div>
+						{{> cp/text placeholder="사업자번호 입력" inp-title="사업자번호 입력" value="123-45-67890" readonly=true}}
+					</div>
+
+					<div class="column">
+						<div class="form_line">
+							<div class="label_tit">연락처</div>
+							{{#> cp/selectbox_pc s-title="연락처 선택" }}
+								<option value="" selected>휴대폰</option>
+								<option value="">집</option>
+							{{/ cp/selectbox_pc}}
+							
+						</div>
+						<div class="form_line">
+							<div class="label_tit">이메일</div>
+							{{> cp/text type="email" inpclass="email_auto" inp-title="이메일 입력" placeholder="이메일 입력" }}
+						</div>
+					</div>
+					
+					 
+					<div class="form_line full">
+						<div class="label_tit">주소</div>
+						<div class="radio_group_wrap" role="radiogroup">
+							{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" }}
+							{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
+						</div>
+						{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
+					</div>
+        </div>
+    	</div>
+		
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active="active" }}
+			<ul class="list_ty1">
+				<li>입력한 정보로 개인정보도 함께 변경돼요.</li>
+				<li>보험계약서류를 보내드리니 정확하게 입력해주세요.</li>
+			</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_개인정보보호배상책임보험 step1=true panel-title="가입자 정보" panel-title2="추가 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+
+
+</div>
+
+<!-- s: popup area -->
+
+
+<!-- e: popup area -->
+{{/ layout/default }}
