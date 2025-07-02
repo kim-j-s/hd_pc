@@ -10,7 +10,7 @@
 
 		.popup_container {
 			transform: none;
-			width: 440px;
+			width: 280px;
 			// padding: 40px 48px;
 			opacity: 0;
 
@@ -19,7 +19,8 @@
 				max-height: 100%;
 				
 				.popup_cont {
-					padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
+					padding-top: var(--padding-5);
+					// padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
 				}
 			}
 		}
