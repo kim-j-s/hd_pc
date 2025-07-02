@@ -23,10 +23,16 @@
 							</div>
 						</div>
 						<div class="form_line_ty2">
-							{{> cp/selectitem si_class="select_item_case01_mi" si_ph="시·도 선택" si_title="선택" si_popup="pop_type01_1"}}
+							{{#> cp/selectbox_pc s-class="md" s-title="시·도 선택" }}
+								<option value="" selected>시·도 선택</option>
+								<option value="">선택 옵션값 2</option>
+							{{/ cp/selectbox_pc}}
 						</div>
 						<div class="form_line_ty2">
-							{{> cp/selectitem si_class="select_item_case01_mi" si_ph="시·군·구 선택" si_title="선택" si_popup="pop_type01_2"}}
+							{{#> cp/selectbox_pc s-class="md" s-title="시·군·구 선택" }}
+								<option value="" selected>시·군·구 선택</option>
+								<option value="">선택 옵션값 2</option>
+							{{/ cp/selectbox_pc}}
 						</div>
 						<div class="form_line_ty2">
 							{{> cp/text class="inp_mi" placeholder="상호명 (2글자 이상) 입력" inp-title="상호명 입력" minlength="2" }}
@@ -90,8 +96,8 @@
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="사업장을 선택해 주세요" disabled=true}}
-			<!-- {{> cp/button type="1" size="1" b-text="확인"}} -->
+			{{> cp/button type="1" size="2" b-text="사업장을 선택해 주세요" disabled=true}}
+			<!-- {{> cp/button type="1" size="2" b-text="확인"}} -->
 		</div>
 	</div>
 	{{/ popup/popup_full}}

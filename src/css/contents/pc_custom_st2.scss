@@ -384,13 +384,13 @@
 						}
 
 						& + .row, & + .form_group_wrap {
-							border: 1px solid red;
+							// border: 1px solid red;
 						}
 					}
 
 					//예,아니오 버튼이 있는 질문 스타일
 					&:has(.radio_group_wrap){
-						background-color: yellow;
+						// background-color: yellow;
 						> .label_tit {
 							display: table-cell;
 							vertical-align: middle;
@@ -431,8 +431,13 @@
 						}
 					}
 
+					.form_group_wrap {
+						display: block;
+					}
+
 					.row {
 						width: 100%;
+						display: flex !important;
 						justify-content: space-between;
 						flex-wrap: wrap;
 						gap: 32px;
@@ -442,15 +447,8 @@
 						}
 					}//.row
 
-					.form_group_wrap {
-						display: block;
-
-					}
-
 				}//.form_line
 			}// li > .form_group_wrap
-
-			
 
 		}
 	}
