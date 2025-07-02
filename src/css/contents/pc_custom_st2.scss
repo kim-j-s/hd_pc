@@ -260,6 +260,11 @@
 					}
 				}
 			}
+			.scp_list_r {
+				.radio_group_wrap {
+					width: auto;
+				}
+			}
 		}
 	
 		.c1 {
@@ -347,7 +352,15 @@
 		margin-top: var(--gap-8);
 	}
 }
-
+//select
+.selectitem_wrap {
+	> div {
+		flex: 1;
+	}
+	.hd_btn {
+		min-width: 100px;
+	}
+}
 //가입 전 알릴사항 화면용 그룹 클래스
 .notification {
 
@@ -812,9 +825,7 @@
 			+ .btn_area {
 				margin-top: var(--gap-6);
 			}
-		}
-
-		
+		}		
 	}
 }
 
@@ -1115,7 +1126,15 @@
 		margin-top: var(--gap-11);
 	}
 }
-
+//my-top
+.cd_top_wrap {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	.cd_top {
+		background: var(--color-surface-gray-subtler);
+	}
+}
 
 // calendar
 .ui-datepicker {
@@ -1621,4 +1640,40 @@
 	}
 }
 
+//contact_list
+.contact_list {
+	display: flex;
+	gap: 8px;
+	li {
+		flex: 1;
+		+ li {
+			margin: 0;
+			padding: 0 0 0 var(--padding-6);
+			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+			border-width: 0 0 0 1px;
+		}
+	}
+}
 
+.popup_content {
+	.bg_top_cover {
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		.info_gray {
+			& + .form_group_wrap {
+				margin-top: var(--gap-5);
+			}
+		}
+		& + .opt_select_list {
+			margin-top: var(--gap-8);
+		}
+	}
+}
+
+.fc_img_wrap {
+	.img {
+		margin: auto;
+		width: 440px;
+	}
+}
