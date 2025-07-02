@@ -44,10 +44,9 @@
 							{{/ cp/selectbox_pc}}
 						</div>
 						<!-- e: 대표업종이 온라인쇼핑몰이 아닌 경우 대표업종 항목 출력 -->
-						 
 					</div>
-
-					
+			
+					<div>
 						<div class="form_line">  
 							<div class="label_tit">이용자수</div>
 							{{> cp/text  type="tel" class="price" placeholder="1,000~100,000,000명 가능" r-text="명" inp-title="이용자수 입력"}}
@@ -55,14 +54,27 @@
 								<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
 							</ul>
 						</div>
-
-						<div class="form_line">
+						<div class="form_line">  
 							<div class="label_tit">연간매출액</div>
-							{{> cp/text  type="tel" class="price" placeholder="숫자만 입력" r-text="원" inp-title="연간매출액 입력"}}
+							{{> cp/text  type="tel" class="price" placeholder="1,000~100,000,000명 가능" r-text="명" inp-title="이용자수 입력"}}
 							<ul class="list_ty2">
-								<li>직전연도 대표업종 및 부수업종 매출액 합계</li>
+								<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
 							</ul>
-						</div> 
+						</div>
+					</div>
+				
+
+					<div class="form_line">
+						<div class="label_tit">연간매출액</div>
+						{{> cp/text  type="tel" class="price" placeholder="숫자만 입력" r-text="원" inp-title="연간매출액 입력"}}
+						<ul class="list_ty2">
+							<li>직전연도 대표업종 및 부수업종 매출액 합계</li>
+						</ul>
+					</div> 
+				
+
+				
+				
 					
 					
 					
