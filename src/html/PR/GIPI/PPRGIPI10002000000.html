@@ -1,0 +1,319 @@
+{{#> layout/default page-title="기본정보입력 | 개인정보보호배상책임보험(II)"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="개인정보보호배상책임보험(II)" }}
+
+	<div id="container" class="container">
+		<div class="content content_st1">
+			<div class="prd_bi_wrap">
+				<div class="prd_bi_wrap_l">
+					<div class="pbw_inner pi_bg_ty19">
+						<div class="pi_top">
+							<h2 class="pt_title">
+								<small>의무보험도 인터넷으로 간편하게 가입</small>
+								<span class="bold">개인정보유출로 인한 배상책임</span><br>
+								<span class="bold">현대해상</span>으로 대비하세요
+							</h2>
+							<div class="pt_btn_area">
+								<a href="javascript:void(0)" class="btn_link short_cut sm rd_box">
+									<span class="text">자세한 보장 내용이 궁금하다면</span>
+								</a>
+							</div>
+						</div>
+			
+						<div class="pi_bottom">
+							<h3 class="pb_title">법률상 배상책임손해부터 위기관리비용까지 보장돼요</h3>
+							<div class="pb_cont">
+								<div class="pb_details">
+									<div class="pb_details_inner">
+										<div class="item item_ico_ty30">
+											<p class="item_exp">
+												인터넷으로 간편하게
+												<small class="item_sub_txt">고객님이 직접 쉽게 가입 가능</small>
+											</p>
+										</div>  
+										<div class="item item_ico_ty27">
+											<p class="item_exp">
+												의무보험으로 필수가입
+												<small class="item_sub_txt">미가입 시 과태료(2천만원 이하) 부과</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty5">
+											<p class="item_exp">
+												위기관리비용 보장
+												<small class="item_sub_txt">컨설팅 및 실행비용도 보장</small>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="pbc_banners">
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner1.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner2.png" alt="혜택 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="prd_bi_wrap_r">
+					<form action="" class="bi_form">
+						<div class="bi_wrap">
+							<div class="bi_wrap_header">
+								<h3 class="bi_wrap_tit">기본정보 입력</h3>
+							</div>
+							<div class="stepper_wrap">
+								<div class="stepper" role="img">
+									<div class="pgs">
+										<span class="pgs_per" style="width: 0%;"><span class="motion travel_korea"></span></span>
+									</div>
+								</div>
+								<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+								<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
+							</div>			
+							
+							<div class="bi_stepper">
+								<div class="bi_top">
+									<!-- bit -->
+									<div class="bit">
+										<!-- 일정 -->
+										<div class="bit_inner" data-pickitem="step1">
+											<p class="bit_inner_text">
+												<span class="bold">고객님의 정보를 입력해주세요</span>
+											</p>
+										</div>
+										<!-- 일정 -->
+										
+										<!-- 생년월일 -->
+										<div class="bit_inner active" data-pickitem="step4">
+											
+											<p class="bit_inner_text">
+												여행가는 분의<br>
+												<span class="bold">생년월일</span>을 알려주세요
+												<small class="sub_txt">19~79세까지 가입하실 수 있어요.</small>
+											</p>
+										</div>
+										<!-- 생년월일 -->
+
+										<!-- 성별 -->
+										<div class="bit_inner active" data-pickitem="step5">
+											
+											<p class="bit_inner_text">
+												<span class="bold">성별</span>을 알려주세요<br>
+												보험료를 알아볼게요
+											</p>
+										</div>
+										<!-- 성별 -->
+
+									</div>
+									<!-- bit -->
+
+									<!-- bit_history -->
+									<div class="bit_history">
+										<div class="bit_history_inner">
+											<!-- s: 25-06-05 수정 -->
+											<button type="button" class="selected_case step1 date" title="기간 수정"></button>
+											<!-- s: 25-06-05 수정 -->
+											<button type="button" class="selected_case step2 birth" title="생년월일 수정"></button>
+											<button type="button" class="selected_case step3 gender" title="성별 수정"></button>
+										</div>
+									</div>
+									<!-- bit_history -->
+
+								</div>
+
+
+								<div class="bi_opts_wrap">
+									<!-- 기간 -->
+									<!-- s: 25-06-27 수정 -->
+									<div class="opts_area" data-pickitem="step1">										
+										<div class="opts_area_item gap_reset cta_add">
+											<div class="form_group_wrap full">
+												<div class="form_line">
+													<div class="row">
+														<div class="form_line">
+															<div class="label_tit">출발일</div>
+															{{> cp/text cal=true }}
+														</div>
+														<div class="form_line">
+															<div class="label_tit">출발시간</div>
+															{{#> cp/selectbox_pc s-title="출발시간 선택" }}
+																<option value="">00시</option>
+																<option value="">01시</option>
+																<option value="">02시</option>
+																<option value="">03시</option>
+																<option value="">04시</option>
+																<option value="">05시</option>
+																<option value="">06시</option>
+																<option value="">07시</option>
+																<option value="">08시</option>
+																<option value="">09시</option>
+																<option value="">10시</option>
+																<option value="">11시</option>
+																<option value="">12시</option>
+																<option value="">13시</option>
+																<option value="">14시</option>
+																<option value="">15시</option>
+																<option value="">16시</option>
+																<option value="">17시</option>
+																<option value="">18시</option>
+																<option value="">19시</option>
+																<option value="">20시</option>
+																<option value="">21시</option>
+																<option value="">22시</option>
+																<option value="">23시</option>
+															{{/ cp/selectbox_pc}}
+														</div>
+													</div>
+												</div>
+											</div>											
+											<div class="form_group_wrap full">
+												<div class="form_line">
+													<div class="row">
+														<div class="form_line">
+															<div class="label_tit">도착일</div>
+															{{> cp/text cal=true }}
+														</div>
+														<div class="form_line">
+															<div class="label_tit">도착시간</div>
+															{{#> cp/selectbox_pc s-title="도착시간 선택" }}
+																<option value="">00시</option>
+																<option value="">01시</option>
+																<option value="">02시</option>
+																<option value="">03시</option>
+																<option value="">04시</option>
+																<option value="">05시</option>
+																<option value="">06시</option>
+																<option value="">07시</option>
+																<option value="">08시</option>
+																<option value="">09시</option>
+																<option value="">10시</option>
+																<option value="">11시</option>
+																<option value="">12시</option>
+																<option value="">13시</option>
+																<option value="">14시</option>
+																<option value="">15시</option>
+																<option value="">16시</option>
+																<option value="">17시</option>
+																<option value="">18시</option>
+																<option value="">19시</option>
+																<option value="">20시</option>
+																<option value="">21시</option>
+																<option value="">22시</option>
+																<option value="">23시</option>
+															{{/ cp/selectbox_pc}}
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="opts_area_item_cta btn_area">
+												{{> cp/button type="1" size="1" class="full" b-text="일정을 입력했어요"}}
+											</div>
+
+										</div>
+									</div>
+									<!-- e: 25-06-27 수정 -->
+									<!-- 기간 -->
+
+									<!-- 생년월일 -->
+									<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step2">
+										<div class="opts_area_item column">
+											<div class="birth_date_field" aria-live="polite"></div>
+											<div class="bi_keypad">
+												<div class="bi_keypad_item">
+													<button type="button" class="keypad_btn">1</button>
+													<button type="button" class="keypad_btn">2</button>
+													<button type="button" class="keypad_btn">3</button>
+													<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
+												</div>
+												<div class="bi_keypad_item">
+													<button type="button" class="keypad_btn">4</button>
+													<button type="button" class="keypad_btn">5</button>
+													<button type="button" class="keypad_btn">6</button>
+													<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
+												</div>
+												<div class="bi_keypad_item">
+													<button type="button" class="keypad_btn">7</button>
+													<button type="button" class="keypad_btn">8</button>
+													<button type="button" class="keypad_btn">9</button>
+													<button type="button" class="keypad_btn">0</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 생년월일 -->
+
+									<!-- 성별 -->
+									<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+										<div class="opts_area_item">
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio31" name="radio3" />
+												<label for="radio41">
+													<span class="label_cont">남성</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn_s1">
+												<input type="radio" id="radio32" name="radio3" />
+												<label for="radio42">
+													<span class="label_cont">여성</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- 성별 -->
+								</div>
+							</div>
+
+
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+			
+		<!-- s: aside 영역 -->
+		{{> layout/aside_pc }}
+		<!-- e: aside 영역 -->
+	</div>
+</div>
+
+<script>
+$(document).ready(function() {
+  // $stepper.stepperInit();
+	$stepper.stepperInit(null, 0);
+});
+</script>
+
+
+<!-- s: popup area -->
+<!-- s: 유효성 체크 -->
+{{#> popup/popup_layer popup-id="pop_alert" popup-title="" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<p class="pl_txt1 pl_ico_ty_case1">
+			<!--연월일 숫자 유효성 체크-->
+			생년월일 방식을 다시 확인해주세요.
+			<!--제한 나이 유효성 체크-->
+			<!-- 0~79세까지 가입하실 수 있어요. -->
+		</p>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_layer}}
+<!-- e: 유효성 체크 -->	 
+<!-- e: popup area -->
+
+
+{{/ layout/default }}
