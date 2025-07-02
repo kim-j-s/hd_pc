@@ -41,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>가입정보 입력 | 상품 - 현대해상 다이렉트</title>
+		<title>자동차보험 계약변경 | 상품 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -579,208 +579,334 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2">ECO마일리지 특약<br /><strong>사진정보</strong>를 <strong>등록</strong>해주세요</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>ECO마일리지 사진 등록(대체)</strong>
+							</h2>
+							<div class="sub_desc">ECO마일리지 특약 <strong>사진정보</strong>를 <strong>등록</strong>해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
 
-					<div class="info_gray">
-						<dl>
-							<dt>자동차번호</dt>
-							<dd>18루**22</dd>
-						</dl>
-						<dl>
-							<dt>대체 이전 최초 주행거리</dt>
-							<dd>143,987km</dd>
-						</dl>
+					<div class="table_wrap">
+						<table class="table">
+							<caption>
+								대체 전,대체 후 최종,최초 주행거리 제공
+							</caption>
+							<colgroup>
+								<col style="width: 20%" />
+								<col style="width: 40%" />
+								<col style="width: 40%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" rowspan="2">대체 전 차량번호<br />18루**22</th>
+									<td>최초 주행거리</td>
+									<td>143,987km</td>
+								</tr>
+								<tr>
+									<td><span class="point">최종 주행거리</span></td>
+									<td><span class="point">입력예정</span></td>
+								</tr>
+								<tr>
+									<th scope="row" rowspan="2">대체 후 차량번호<br />29머**62</th>
+									<td><span class="point">최초 주행거리</span></td>
+									<td><span class="point">입력예정</span></td>
+								</tr>
+								<tr>
+									<td>최종 주행거리</td>
+									<td>만기 시 등록</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 
 					<div class="tab_wrap">
 						<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">직접 사진 등록</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">문자로 링크 받기</button></div>
 
 						<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-							<h3 class="title_h3"><span class="point">필수</span> 특약사진등록</h3>
-							<div class="space_list_ty2">
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">대체 이전 차량번호판 사진</span>
-												</span>
-												<!-- s: 등록한 이미지 있을 시 -->
-												<span class="preview" aria-hidden="true">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01.png" alt="등록한 차량번호판 장착 사진" />
-												</span>
-												<!-- e: 등록한 이미지 있을 시 -->
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<ul class="list_ty3">
-												<li>차량번호 사진을 등록해주세요.</li>
-											</ul>
-
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01_before.png" alt="등록 전 차량번호판 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 등록
+							<div class="form_box">
+								<h3 class="title_h3"><span class="point">필수</span> 특약사진등록</h3>
+								<div class="space_list_ty2">
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="badge_wrap">
+															<span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
 														</span>
-													</label>
-												</div>
-												<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg"></i>
-													<span class="text">사진 촬영</span>
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">대체 이전 계기판 사진</span>
+														<span class="title">대체 전 차량번호판 사진</span>
+													</span>
+													<!-- s: 등록한 이미지 있을 시 -->
+													<span class="preview" aria-hidden="true">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01.png" alt="등록한 차량번호판 장착 사진" />
+													</span>
+													<!-- e: 등록한 이미지 있을 시 -->
 												</span>
-											</span>
-											<span>상세보기</span>
-											<!-- s: 등록한 이미지 있을 시 -->
-											<!-- <span class="preview" aria-hidden="true">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 블랙박스 장착 사진">
-												</span> -->
-											<!-- e: 등록한 이미지 있을 시 -->
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<div class="form_group_wrap">
-												<div class="form_line">
-													<div class="label_tit">주행거리 기준일</div>
-													<div class="input_text calendar">
-														<div class="inp">
-															<input type="tel" class="inp_picker" value="2025.01.01" title="날짜를 입력해주세요" />
-															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
-														</div>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">차량번호 사진을 등록해주세요.</p>
+
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01_before.png" alt="등록 전 차량번호판 예시 이미지" />
 													</div>
 												</div>
-												<div class="form_line">
-													<div class="label_tit">주행거리</div>
-													<div class="input_text comma">
-														<div class="inp">
-															<input type="tel" placeholder="숫자만" title="주행거리 입력" />
-															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-														</div>
-														<div class="int_txt right">km</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 등록
+															</span>
+														</label>
 													</div>
 												</div>
 											</div>
-
-											<!-- s: 25-05-23 수정 -->
-											<p class="text_sub">계기판 사진과 주행거리를 등록해주세요.</p>
-											<!-- e: 25-05-23 수정 -->
-
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_100_before.png" alt="등록 전 계기판 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 등록
-														</span>
-													</label>
-												</div>
-												<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg"></i>
-													<span class="text">사진 촬영</span>
-												</button>
-											</div>
-
-											<ul class="list_ty2">
-												<li>주행거리 기준일과 계기판의 주행거리를 입력해주세요.</li>
-												<li>운행거리 증빙을 위한 계기판 사진은 ODO(총 운행거리 사진)만 인정되며 리셋된 트립 사진은 인정되지 않습니다.</li>
-											</ul>
 										</div>
 									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">대체 이후 차량번호판 사진</span>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">대체 전 계기판 사진</span>
+													</span>
 												</span>
+												<span>상세보기</span>
 												<!-- s: 등록한 이미지 있을 시 -->
 												<!-- <span class="preview" aria-hidden="true">
-														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01.png" alt="등록한 차량번호판 장착 사진">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 계기판 사진">
 													</span> -->
 												<!-- e: 등록한 이미지 있을 시 -->
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<ul class="list_ty3">
-												<li>차량번호 사진을 등록해주세요.</li>
-											</ul>
-
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01_before.png" alt="등록 전 차량번호판 예시 이미지" />
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">계기판 사진과 주행거리를 등록해주세요.</p>
+												<div class="form_group_wrap">
+													<div class="form_line">
+														<div class="label_tit">주행거리 기준일</div>
+														<div class="input_text calendar">
+															<div class="inp">
+																<input type="tel" class="inp_picker" value="2025.01.01" disabled title="날짜를 입력해주세요" />
+																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
+															</div>
+														</div>
+													</div>
+													<div class="form_line">
+														<div class="label_tit">주행거리</div>
+														<div class="input_text comma">
+															<div class="inp">
+																<input type="tel" placeholder="숫자만" title="주행거리 입력" />
+																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+															</div>
+															<div class="int_txt right">km</div>
+														</div>
+													</div>
 												</div>
-											</div>
 
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 등록
-														</span>
-													</label>
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_100_before.png" alt="등록 전 계기판 이미지" />
+													</div>
 												</div>
-												<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg"></i>
-													<span class="text">사진 촬영</span>
-												</button>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 등록
+															</span>
+														</label>
+													</div>
+												</div>
+
+												<ul class="list_ty2">
+													<li>운행거리 증빙을 위한 계기판 사진은 ODO(총 운행거리 사진)만 인정되며 리셋된 트립 사진은 인정되지 않습니다.</li>
+												</ul>
 											</div>
 										</div>
 									</div>
+
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">대체 후 차량번호판 사진</span>
+													</span>
+													<!-- s: 등록한 이미지 있을 시 -->
+													<!-- <span class="preview" aria-hidden="true">
+															<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01.png" alt="등록한 차량번호판 장착 사진">
+														</span> -->
+													<!-- e: 등록한 이미지 있을 시 -->
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">차량번호 사진을 등록해주세요.</p>
+
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01_before.png" alt="등록 전 차량번호판 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 등록
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- s: case(1) 신차가 아닌 경우 -->
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">대체 후 계기판 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+												<!-- s: 등록한 이미지 있을 시 -->
+												<!-- <span class="preview" aria-hidden="true">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 계기판 사진">
+													</span> -->
+												<!-- e: 등록한 이미지 있을 시 -->
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">계기판 사진과 주행거리를 등록해주세요.</p>
+												<div class="form_group_wrap">
+													<div class="form_line">
+														<div class="label_tit">주행거리 기준일</div>
+														<div class="input_text calendar">
+															<div class="inp">
+																<input type="tel" class="inp_picker" value="2025.01.01" disabled title="날짜를 입력해주세요" />
+																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
+															</div>
+														</div>
+													</div>
+													<div class="form_line">
+														<div class="label_tit">주행거리</div>
+														<div class="input_text comma">
+															<div class="inp">
+																<input type="tel" placeholder="숫자만" title="주행거리 입력" />
+																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+															</div>
+															<div class="int_txt right">km</div>
+														</div>
+													</div>
+												</div>
+
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_100_before.png" alt="등록 전 계기판 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 등록
+															</span>
+														</label>
+													</div>
+												</div>
+
+												<ul class="list_ty2">
+													<li>운행거리 증빙을 위한 계기판 사진은 ODO(총 운행거리 사진)만 인정되며 리셋된 트립 사진은 인정되지 않습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- e: case(1) 신차가 아닌 경우 -->
 								</div>
+							</div>
+							<!--//form_box-->
+
+							<!-- s: case(2) 신차일 경우 -->
+							<div class="form_box">
+								<h3 class="title_h3"><span class="disabled_on">선택</span> ECO 마일리지 사진등록</h3>
+								<p class="text_sub">ECO마일리지 할인특약 가입을 위한 계기판 사진을 지금 등록하시겠습니까?</p>
+								<div class="radio_group_wrap column">
+									<div class="inp_radio lg">
+										<input type="radio" id="radio01-1" name="radio01-1" />
+										<label for="radio01-1">
+											<span class="label_cont">신차 자동등록<span class="sub_g_txt">(책임개시일 기준 5Km, 사진첨부 불필요)</span></span>
+										</label>
+									</div>
+									<div class="inp_radio lg">
+										<input type="radio" id="radio01-2" name="radio01-1" checked />
+										<label for="radio01-2">
+											<span class="label_cont">지금 등록</span>
+										</label>
+									</div>
+									<div class="inp_radio lg">
+										<input type="radio" id="radio01-3" name="radio01-1" />
+										<label for="radio01-3">
+											<span class="label_cont">나중에 등록<span class="sub_g_txt">보험시작일로부터 30일이내</span></span>
+										</label>
+									</div>
+								</div>
+
 								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true">
 											<span class="picture_info_top">
 												<span class="status">
-													<span class="title">대체 이후 계기판 사진</span>
+													<span class="title">대체 후 계기판 사진</span>
 												</span>
 											</span>
 											<span>상세보기</span>
@@ -792,13 +918,14 @@
 										</button>
 									</div>
 									<div class="acd_cont">
-										<div class="inner">
+										<div class="inner" style="display: block">
+											<p class="text_sub">계기판 사진과 주행거리를 등록해주세요.</p>
 											<div class="form_group_wrap">
 												<div class="form_line">
 													<div class="label_tit">주행거리 기준일</div>
 													<div class="input_text calendar">
 														<div class="inp">
-															<input type="tel" class="inp_picker" value="2025.01.01" title="날짜를 입력해주세요" />
+															<input type="tel" class="inp_picker" value="2025.01.01" disabled title="날짜를 입력해주세요" />
 															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 														</div>
 													</div>
@@ -814,10 +941,6 @@
 													</div>
 												</div>
 											</div>
-
-											<!-- s: 25-05-23 수정 -->
-											<p class="text_sub">계기판 사진과 주행거리를 등록해주세요.</p>
-											<!-- e: 25-05-23 수정 -->
 
 											<!-- s: 이미지 파일 붙는 영역 -->
 											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
@@ -837,20 +960,16 @@
 														</span>
 													</label>
 												</div>
-												<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg"></i>
-													<span class="text">사진 촬영</span>
-												</button>
 											</div>
 
 											<ul class="list_ty2">
-												<li>주행거리 기준일과 계기판의 주행거리를 입력해주세요.</li>
 												<li>운행거리 증빙을 위한 계기판 사진은 ODO(총 운행거리 사진)만 인정되며 리셋된 트립 사진은 인정되지 않습니다.</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!-- e: case(2) 신차일 경우 -->
 
 							<!-- s: 꼭 알아두세요 -->
 							<div class="bottom_fix_notice">
@@ -873,7 +992,7 @@
 						</div>
 
 						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-							<div class="info_gray">
+							<div class="info_gray ty2">
 								<p class="info_text">문자 내 링크를 통해 계약변경에 필요한 사진을 등록하실 수 있습니다.</p>
 							</div>
 
@@ -901,10 +1020,10 @@
 									<span class="text">등록 사진 확인</span>
 								</button>
 							</div>
+
 							<!-- s: 조회성공시  -->
 							<div class="divider_ty1"></div>
 							<h3 class="title_h3">조회결과</h3>
-							<!-- s: 25-05-23 수정 -->
 							<div class="space_list_ty2">
 								<div class="picture_info_item">
 									<span class="picture_info_top">
@@ -938,28 +1057,101 @@
 									</span>
 								</div>
 							</div>
-							<!-- e: 25-05-23 수정 -->
 							<!-- e: 조회성공시  -->
 						</div>
 					</div>
-					<!-- // content -->
-				</div>
 
-				<!-- // container -->
-			</div>
-
-			<!-- s: 하단 버튼 영역 -->
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" onclick="openHDPopup(this,'pop_type01');">
-						<span class="text">다음</span>
-					</button>
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 				</div>
+				<!-- // content -->
 			</div>
-			<!-- s: 하단 버튼 영역 -->
+			<!-- // container -->
+
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->
+
+		<!-- s: 조회실패 -->
+		<div class="popup_wrap popup_wrap_type2" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head"><div class="popup_head_title">조회실패</div></div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<ul class="list_depth">
+								<!-- s: 대체 이전 차량번호 -->
+								<li>대체 이전 계약상 차량번호와 전산판독된 차량번호가 일치하지 않습니다. 차량번호판 사진을 정확히 촬영하신 후 재등록해주세요.</li>
+								<!-- e: 대체 이전 차량번호 -->
+								<!-- s: 대체 이후 차량번호 -->
+								<li>대체 이후 계약상 차량번호와 전산판독된 차량번호가 일치하지 않습니다. 차량번호판 사진을 정확히 촬영하신 후 재등록해주세요.</li>
+								<!-- e: 대체 이후 차량번호 -->
+								<!-- s: 대체 이전 계기판 -->
+								<li>대체 이전 입력하신 주행거리와 전산판독된 계기판 주행거리가 일치하지 않습니다. 계기판 사진을 정확히 촬영하신 후 재등록 해주세요.</li>
+								<!-- e: 대체 이전 계기판 -->
+								<!-- s: 대체 이후 계기판 -->
+								<li>대체 이후 입력하신 주행거리와 전산판독된 계기판 주행거리가 일치하지 않습니다. 계기판 사진을 정확히 촬영하신 후 재등록 해주세요.</li>
+								<!-- e: 대체 이후 계기판 -->
+								<li>지속적으로 전산판독에 실패할 경우 대표콜센터 (1588-5656)로 연락주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 조회실패 -->
+		<!-- s: 문자등록 조회실패 -->
+		<div class="popup_wrap popup_wrap_type2" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
+				<div class="popup_inner">
+					<div class="popup_head"></div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<p class="info_text">등록된 사진이 없습니다. 사진을 첨부하신 후 [등록 사진 확인] 버튼을 다시 눌러주세요.</p>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 문자등록 조회실패 -->
 
 		<!-- s: 자동차 배서 메뉴 -->
 		<!-- s: 자동차 계약변경 (기획/디자인 미정) -->
@@ -1119,68 +1311,7 @@
 		</div>
 		<!-- e: 자동차 계약변경 -->
 		<!-- e: 자동차 배서 메뉴 -->
-		<!-- s: 조회실패 -->
-		<div class="popup_wrap popup_wrap_type2" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">조회실패</div></div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<ul class="list_depth">
-								<!-- s: 대체 이전 차량번호 -->
-								<li>대체 이전 계약상 차량번호와 전산판독된 차량번호가 일치하지 않습니다. 차량번호판 사진을 정확히 촬영하신 후 재등록해주세요.</li>
-								<!-- e: 대체 이전 차량번호 -->
-								<!-- s: 대체 이후 차량번호 -->
-								<li>대체 이후 계약상 차량번호와 전산판독된 차량번호가 일치하지 않습니다. 차량번호판 사진을 정확히 촬영하신 후 재등록해주세요.</li>
-								<!-- e: 대체 이후 차량번호 -->
-								<!-- s: 대체 이전 계기판 -->
-								<li>대체 이전 입력하신 주행거리와 전산판독된 계기판 주행거리가 일치하지 않습니다. 계기판 사진을 정확히 촬영하신 후 재등록 해주세요.</li>
-								<!-- e: 대체 이전 계기판 -->
-								<!-- s: 대체 이후 계기판 -->
-								<li>대체 이후 입력하신 주행거리와 전산판독된 계기판 주행거리가 일치하지 않습니다. 계기판 사진을 정확히 촬영하신 후 재등록 해주세요.</li>
-								<!-- e: 대체 이후 계기판 -->
-								<li>지속적으로 전산판독에 실패할 경우 대표콜센터 (1588-5656)로 연락주시기 바랍니다.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 조회실패 -->
-		<!-- s: 문자등록 조회실패 -->
-		<div class="popup_wrap popup_wrap_type2" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<p class="info_text">등록된 사진이 없습니다. 사진을 첨부하신 후 [등록 사진 확인] 버튼을 다시 눌러주세요.</p>
-						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 문자등록 조회실패 -->
 		<!-- e: popup area -->
 	</body>
 </html>
