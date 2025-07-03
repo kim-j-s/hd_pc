@@ -237,6 +237,9 @@ body {
 	margin-top: var(--gap-2);
 	font-size: var(--font-size-label-small);
 }
+.hd_btn_s_2 {
+	min-width: 10rem;
+}
 .btn_area {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
@@ -275,6 +278,9 @@ body {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+}
+.btn_area.center + .btn_area.ty2 {
+	margin-top: var(--gap-5);
 }
 .btn_link {
 	-webkit-box-flex: 0;
@@ -381,6 +387,17 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+}
+.wrap .form_group_wrap.full .space_between {
+	gap: var(--gap-5);
+}
+.wrap .form_group_wrap.full .space_between .contractNum {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.wrap .form_group_wrap.full .space_between button {
+	min-width: 10rem;
 }
 .wrap .form_group_wrap .form_line ~ .form_line {
 	margin-top: 0;
@@ -676,6 +693,7 @@ body {
 	position: relative;
 	z-index: 1;
 }
+.list_ty3 + .space_list_ty4,
 .list_ty3 + .file_attach_box {
 	margin-top: var(--gap-8);
 }
@@ -825,6 +843,9 @@ body {
 .info_gray .data_box.df_type_w_ty9 + .btn_area {
 	margin-top: var(--gap-6);
 }
+.container .card_item_wrap .card_item .space_between .info_text + .radio_group_wrap {
+	margin: 0;
+}
 .container .card_item_wrap .card_item .item_inner .inner_cont * {
 	/* 데이터 리스트 좌우배치 */
 }
@@ -898,13 +919,13 @@ body {
 	width: 10rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty2 > li .title {
-	width: 15rem;
+	width: 13rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty3 > li:nth-child(2n) .title {
 	width: 10rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty4 > li:nth-child(2n) .title {
-	width: 15rem;
+	width: 13rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty5 > li .title {
 	width: 10rem;
@@ -916,16 +937,16 @@ body {
 	width: 10rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty6 > li:nth-child(2n) .title {
-	width: 15rem;
+	width: 13rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty7 > li .title {
-	width: 15rem;
+	width: 13rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty7 > li:nth-child(2n) .title {
 	width: 5rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty8 > li .title {
-	width: 15rem;
+	width: 13rem;
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1.df_type_w_ty8 > li:nth-child(2n) .title {
 	width: 10rem;
@@ -1636,6 +1657,13 @@ body {
 .info_summary .summery_inner .detail_wrap .dt_table > dl.sm dd .inp_checkbox input[type="checkbox"].right + .switch_check {
 	min-height: 2rem;
 }
+.info_summary .summery_inner .detail_wrap .dt_table > dl.big dt,
+.info_summary .summery_inner .detail_wrap .dt_table > dl.big dd {
+	font-size: var(--font-size-body-large);
+}
+.info_summary .summery_inner .detail_wrap .dt_table.ty2 dd {
+	text-align: right;
+}
 .info_summary .summery_inner + .dc_info_box {
 	margin-top: var(--gap-6);
 }
@@ -1992,6 +2020,18 @@ body {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+.select_option_box .selectbox:disabled {
+	border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+	background: var(--color-input-surface-disabled);
+}
+.select_option_box .selectbox.default {
+	color: var(--color-text-disabled);
+	border: var(--border-width-static-regular) solid var(--color-input-border);
+}
+.select_option_box .selectbox.default:disabled {
+	color: var(--color-text-disabled-on);
+	border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
 }
 .select_option_box.sm .selectbox {
 	padding: 1rem 4rem 1rem var(--padding-6);
@@ -2576,6 +2616,9 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: var(--gap-4);
+}
+.radio_group_wrap.car_type_option .inp_radio + .inp_radio {
+	margin-top: var(--gap-4);
 }
 .popup_wrap.full .title_h4.space1 {
 	margin-bottom: 1.6rem;

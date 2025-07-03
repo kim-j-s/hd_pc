@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -579,39 +579,60 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2">
-							<strong>전자서명 대상계약</strong>을<br />
-							조회해주세요
-						</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>계약체결 전자서명(피보험자)</strong>
+								<!-- <strong>계약체결 전자서명(계약자)</strong> -->
+							</h2>
+							<div class="sub_desc"><strong>전자서명 대상계약</strong>을 조회해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
-
 					<ul class="list_ty3">
 						<li>설계(계약)번호 조회 후 대상건 선택이 가능합니다.</li>
 						<li>고객센터를 통해 안내받으신 설계(계약)번호를 입력해주세요.</li>
 					</ul>
 
-					<div class="form_group_wrap">
+					<div class="form_group_wrap full">
 						<div class="form_line">
 							<div class="label_tit">설계(계약)번호</div>
-							<div class="comp_wrap contractNum">
-								<div class="int_txt">M</div>
-								<div class="input_text grow">
-									<div class="inp">
-										<input type="tel" placeholder="11자리 입력" minlength="11" maxlength="11" title="계약(설계)번호 앞 열한자리 입력" />
+							<div class="space_between">
+								<div class="comp_wrap contractNum">
+									<div class="int_txt">M</div>
+									<div class="input_text grow inp_mi">
+										<div class="inp">
+											<input type="tel" placeholder="11자리 입력" minlength="11" maxlength="11" title="계약(설계)번호 앞 열한자리 입력" />
+										</div>
+									</div>
+									<span class="dash">-</span>
+									<div class="input_text inp_mi">
+										<div class="inp">
+											<input type="tel" placeholder="000" minlength="3" maxlength="3" title="계약(설계)번호 뒤 세자리 입력" />
+										</div>
 									</div>
 								</div>
-								<span class="dash">-</span>
-								<div class="input_text">
-									<div class="inp">
-										<input type="tel" placeholder="000" minlength="3" maxlength="3" title="계약(설계)번호 뒤 세자리 입력" />
-									</div>
-								</div>
-								<button type="button" class="btn btn_search" title="검색"></button>
+								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+									<span class="text">조회</span>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -628,7 +649,10 @@
 												<span class="hd_badge outline solid_pastel c_info size_m">서명 미완료</span>
 											</div>
 											<div class="title_info">
-												<div class="main_title">M2025249162500000 Hicar개인용(CM)</div>
+												<div class="main_title">
+													M2025249162500000<br />
+													(Hicar개인용(CM))
+												</div>
 											</div>
 										</div>
 									</div>
@@ -698,6 +722,15 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
+
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->
