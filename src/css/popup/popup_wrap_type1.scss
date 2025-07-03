@@ -17,11 +17,38 @@
 			.popup_inner {
 				height: auto;
 				max-height: 100%;
+				padding-bottom: 0;
+				border-radius: var(--radius-large2);
+
+				& > .popup_close {
+					top: 12px;
+					right: 16px;
+				}
+
+				.popup_head {
+					min-height: 56px;
+					padding: 15px var(--padding-6) 14px;
+				}
 				
 				.popup_cont {
 					padding-top: var(--padding-5);
+					padding-bottom: var(--padding-6);
 					// padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
+					
 				}
+
+				.popup_bottom {
+					.btn_area {
+						.hd_btn {
+							flex: 1;
+							 min-width: auto;
+						}
+					}
+				}
+			}
+
+			.pl_msg_top {
+				font-size: var(--font-size-heading-small);
 			}
 		}
 	}

@@ -1781,3 +1781,13 @@
 		}
 	}
 }
+
+.comp_wrap {
+	&.birth {
+		.form_key {
+			.pin_area {
+				height: var(--size-height-7);
+			}
+		}
+	}
+}

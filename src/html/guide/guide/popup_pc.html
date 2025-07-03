@@ -21,6 +21,7 @@
 		{{> cp/button type="2" size="5" b-text="Bottom 팝업열기(팝업중첩)" popup="pop_type04" }}
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기(팝업중첩)" popup="pop_type02" }}
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기" popup="pop_type03" }}
+		{{> cp/button type="2" size="5" b-text="Confirm 팝업열기" popup="pop_type06" }}
 
 	</div>
 </div>
@@ -39,7 +40,7 @@
 		</div>
 	{{/ popup/popup_full}}
 	<!-- Full 팝업 -->
-	{{#> popup/popup_full popup-class="popup_wrap_type5" popup-id="pop_type05" popup-title="팝업 타이틀" }}
+	{{#> popup/popup_full popup-class="big" popup-id="pop_type05" popup-title="팝업 타이틀" }}
 	<div class="popup_cont">
 		팝업내용입니다<br>
 		내용
@@ -222,5 +223,19 @@
 			</div>
 		</div>
 	{{/ popup/popup_layer}}
+
+	{{#> popup/popup_confirm popup-id="pop_type06" popup-title="팝업 타이틀" }}
+		<div class="popup_cont">
+			팝업내용입니다<br>
+			팝업내용입니다<br>
+			내용<br>
+		</div>
+		<div class="popup_bottom">
+			<div class="btn_area">
+				<!-- <button type="button" class="btn"><span>확인</span></button> -->
+				{{> cp/button type="1" size="2" b-text="확인" }}
+			</div>
+		</div>
+	{{/ popup/popup_confirm}}
 
 {{/ layout/default_pc }}	

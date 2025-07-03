@@ -11,6 +11,17 @@
 				transform: translateX(0);
 			}
 		}
+			
+		// 버튼 없을 시
+		// &:not(.popup_bottom){
+		// 	.popup_container {
+		// 		.popup_inner {
+		// 			.popup_cont {
+		// 				padding-bottom: 32px;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		.popup_container {
 			align-items: center;
@@ -20,11 +31,11 @@
 			// transition: transform 0.3s ease;
 
 			.popup_inner {
+				padding-bottom: var(--padding-6);
 				.popup_cont {
 					height: auto;
 					max-height: 100%;
-					padding-bottom: var(--padding-6);
-					// padding-bottom: var(--padding-12);
+					padding-bottom: var(--padding-12);
 
 					&.load_cont {
 						overflow: hidden;
@@ -32,15 +43,6 @@
 					}
 					&.pts_cont {
 						padding: 0;
-					}
-			
-					// 버튼 없을 시
-					&:not(:has(.popup_wrap_type3)){
-						padding-bottom: 32px;
-					}
-	
-					.popup_cont {
-						padding-bottom: var(--gap-12);
 					}
 				}
 			}
