@@ -90,6 +90,11 @@
 			flex: 1;
 		}
 	}
+	&.center {
+		& + .btn_area.ty2 {
+			margin-top: var(--gap-5);
+		}
+	}
 }
 
 .btn_link {
