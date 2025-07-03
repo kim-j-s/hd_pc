@@ -48,24 +48,24 @@
 			<div class="form_box">
 				<h3 class="title_h3">필수 확인 사항</h3>
 				<div class="form_group_wrap">
-					<div class="column">
-						<div class="form_line">
-							<div class="label_tit box">
-								<div>
-									자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요? 
-									{{> cp/tooltip text="<p>이혼이나 사별 등으로 공동 친권자가 없을 경우 [아니요]를 선택해주세요.</p>" trigger-icon="popover_help"}}
-								</div>
+					<!-- s: 25-07-03 수정 -->
+					<div class="form_line full_half">
+						<div class="label_tit box">
+							<div>
+								자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요? 
+								{{> cp/tooltip text="<p>이혼이나 사별 등으로 공동 친권자가 없을 경우 [아니요]를 선택해주세요.</p>" trigger-icon="popover_help"}}
 							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
-							</div>							
 						</div>
-						<div class="form_line">
-							<div class="label_tit">공동 친권자 성명(배우자)</div>
-							{{> cp/text placeholder="공동 친권자 성명(배우자)" inp-title="공동 친권자 성명 입력" }}
-						</div>						
+						<div class="radio_group_wrap" role="radiogroup">
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
+						</div>							
 					</div>
+					<div class="form_line full_half">
+						<div class="label_tit">공동 친권자 성명(배우자)</div>
+						{{> cp/text placeholder="공동 친권자 성명(배우자)" inp-title="공동 친권자 성명 입력" }}
+					</div>	
+					<!-- e: 25-07-03 수정 -->
 
 					<div class="form_line">
 						<div class="label_tit">보험증권 받는 방법을 선택해주세요.</div>
@@ -74,6 +74,7 @@
 							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel01_02" name="receiveSel01" labelname="이메일" }}
 						</div>
 					</div>
+					
 
 					<div class="form_line">
 						<div class="label_tit box">

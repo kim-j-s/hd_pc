@@ -1677,3 +1677,21 @@
 		width: 440px;
 	}
 }
+
+.bi_stepper {
+	&.tab_case {
+		.bit {
+			height: auto;
+			margin-bottom: var(--gap-8);
+		}
+		.bit_inner {
+			position: relative;
+		}
+		.bi_opts_wrap {
+			margin-top: 0;
+			.bottom_fix_wrap {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
