@@ -351,6 +351,10 @@
 	& + .search_reult_list_container {
 		margin-top: var(--gap-8);
 	}
+
+	& + .info_gray.ty2:has(.insurance_policyBox){
+		margin-top: var(--gap-5);
+	}
 }
 //select
 .selectitem_wrap {
@@ -1773,6 +1777,16 @@
 			margin-top: 0;
 			.bottom_fix_wrap {
 				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+.comp_wrap {
+	&.birth {
+		.form_key {
+			.pin_area {
+				height: var(--size-height-7);
 			}
 		}
 	}
