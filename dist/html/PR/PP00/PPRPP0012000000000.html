@@ -66,10 +66,7 @@
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
 							<div class="popup_content_top">
-								<!-- s: 25-06-05 수정 -->
-
 								<h2 class="title_h2"><strong>상세 신고 내용</strong>을 입력해 주세요</h2>
-								<!-- e: 25-06-05 수정 -->
 							</div>
 							<!-- e: popup_content_top -->
 
@@ -78,7 +75,7 @@
 									<div class="form_group_wrap">
 										<div class="form_line">
 											<div class="label_tit">미국 거주자에 해당하는 경우 해당 유형을 선택해 주세요</div>
-											<!-- s: 25-06-09 수정 -->
+
 											<div class="radio_group_wrap_ty2 radio_group_resetable" role="radiogroup">
 												<div class="inp_radio rd_btn">
 													<input type="radio" id="radio_btn_g1" name="radio_g1" checked />
@@ -99,7 +96,6 @@
 													</label>
 												</div>
 											</div>
-											<!-- e: 25-06-09 수정 -->
 										</div>
 									</div>
 								</li>
@@ -179,15 +175,14 @@
 														</div>
 														<div class="form_line">
 															<div class="label_tit">납세자 번호 미입력 사유</div>
-															<div class="select_item select_item_case01" role="button" tabindex="0" title="납세자 번호 미입력 사유 호출" onclick="openHDPopup(this,'pop_type02');">
-																<div class="select_item_inner">
-																	<div class="si_item" data-placeholder="선택해주세요."></div>
-																	<span class="si_stat">선택됨</span>
-																</div>
+															<div class="select_option_box">
+																<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
+																	<option value="">미발급국가</option>
+																	<option value="">미요구국가</option>
+																	<option value="">미취득</option>
+																</select>
 															</div>
 														</div>
-														<!-- s: 25-06-13 추가 -->
-														<!-- s: 미입력 사유 미취득 선택시 노출 -->
 														<div class="form_line">
 															<div class="label_tit">미취득 사유 입력</div>
 															<div class="input_text">
@@ -197,8 +192,6 @@
 																</div>
 															</div>
 														</div>
-														<!-- e: 미입력 사유 미취득 선택시 노출 -->
-														<!-- s: 25-06-13 추가 -->
 													</div>
 													<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
 												</div>
@@ -225,14 +218,14 @@
 														</div>
 														<div class="form_line">
 															<div class="label_tit">납세자 번호 미입력 사유</div>
-															<div class="select_item select_item_case01" role="button" tabindex="0" title="납세자 번호 미입력 사유 호출" onclick="openHDPopup(this,'pop_type02');">
-																<div class="select_item_inner">
-																	<div class="si_item" data-placeholder="선택해주세요."></div>
-																	<span class="si_stat">선택됨</span>
-																</div>
+															<div class="select_option_box">
+																<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
+																	<option value="">미발급국가</option>
+																	<option value="">미요구국가</option>
+																	<option value="">미취득</option>
+																</select>
 															</div>
 														</div>
-														<!-- s: 25-06-13 추가 -->
 														<!-- s: 미입력 사유 미취득 선택시 노출 -->
 														<div class="form_line">
 															<div class="label_tit">미취득 사유 입력</div>
@@ -244,7 +237,6 @@
 															</div>
 														</div>
 														<!-- e: 미입력 사유 미취득 선택시 노출 -->
-														<!-- s: 25-06-13 추가 -->
 													</div>
 													<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
 												</div>
@@ -275,28 +267,6 @@
 			</div>
 		</div>
 		<!-- e: Full 팝업 -->
-
-		<!-- s: 납세자 번호 미입력 사유 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">납세자 번호 미입력 사유</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">미발급국가</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">미요구국가</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">미취득</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 납세자 번호 미입력 사유 팝업 -->
 
 		<!-- e: popup area -->
 	</body>

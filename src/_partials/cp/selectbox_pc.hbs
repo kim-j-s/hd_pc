@@ -1,6 +1,8 @@
 <div class="select_option_box{{#if s-class}} {{s-class}}{{/if}}">
 	<select name="" id="" title="{{s-title}}" class="selectbox" {{#if disabled}}disabled{{/if}}>
-		<option value="" selected hidden>{{#if s-ph}}{{s-ph}}{{else}}옵션 선택{{/if}}</option>
+		{{#if sb-ph}}
+		<option value="default" hidden>{{sb-ph}}</option>
+		{{/if}}
 		{{> @partial-block }}
 	</select>
 </div>

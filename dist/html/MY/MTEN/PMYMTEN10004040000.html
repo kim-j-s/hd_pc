@@ -579,65 +579,69 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<div class="content_ty1">
-						<!-- s: content_top -->
-						<div class="content_top">
-							<h2 class="title_h2">
-								추가 장착한 <strong>부속품 정보</strong>를<br />
-								입력해주세요
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>블랙박스/부속품 추가</strong>
 							</h2>
-
-							<div class="btn_area basic">
-								<!--TO-DO : (25-04-11 위서진) 추후 용어사전 팝업이 완성되면, popup id를 popup props에 적용해야함-->
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="용어사전 열기">
-									<span class="text">어려운 용어 설명을 보시려면</span>
-									<i class="hd_icon arrowRightSvg"></i>
-								</button>
-							</div>
+							<div class="sub_desc">추가 장착한 <strong>부속품 정보</strong>를 입력해주세요</div>
 						</div>
-						<!-- e: content_top -->
-
-						<div class="card_item_wrap">
-							<div class="card_item">
-								<div class="item_inner">
-									<div class="inner_cont">
-										<div class="item_top">
-											<div class="title_info">
-												<div class="sub_title space_between">기아 K7</div>
-												<div class="main_title">K7 Premier 3.0 GDI</div>
-											</div>
-
-											<div class="desc"><strong>5인승</strong>, 2999cc, 노블레스, 오토, 에어컨, P/S, ABS, ARI-D,IM</div>
-										</div>
-
-										<ul class="card_list_ty1">
-											<li class="result">
-												<div class="title">차량가액</div>
-												<div class="cont">
-													<p class="text_body_large">
-														<strong>
-															<span class="point">2,097만원</span>
-														</strong>
-													</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" title="용어사전 열기">
+								<span class="text">어려운 용어 설명을 보시려면</span>
+								<i class="hd_icon arrowRightSvg"></i>
+							</button>
 						</div>
 					</div>
 
+					<div class="info_summary">
+						<div class="summery_inner">
+							<div class="total_wrap">
+								<div class="tit">차량가액</div>
+								<div class="value">
+									<div class="val_price">2079<span class="text">만원</span></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="dc_info_box car_ty2">
+							<ul class="dc_list c1">
+								<li>
+									<span class="dc_l">기아 K7</span>
+								</li>
+								<li>
+									<span class="dc_l">K7 Premier 3.0 GDI</span>
+								</li>
+								<li>
+									<span class="dc_l">5인승, 2999cc, 노블레스, 오토, 에어컨, P/S, ABS, ARI-D,IM</span>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<!-- s: 블랙박스 영역 시작 -->
 					<!-- s: content_top -->
 					<div class="content_top">
 						<h3 class="title_h3">블랙박스</h3>
 					</div>
 					<!-- e: content_top -->
-
-					<div class="card_item_wrap">
+					<div class="card_item_wrap ty5">
 						<div class="card_item">
 							<div class="item_inner">
 								<div class="inp_checkbox">
@@ -669,24 +673,24 @@
 									<i></i>
 								</div>
 								<div class="inner_cont">
-									<div class="item_top" id="card_chk_opt1_2_cont">
-										<div class="title_info">
-											<div class="main_title">
-												블랙박스
-												<span class="badge_wrap">
-													<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
-												</span>
+									<div class="space_between">
+										<div class="item_top" id="card_chk_opt1_2_cont">
+											<div class="title_info">
+												<div class="main_title">
+													블랙박스
+													<span class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="result">
+												<span class="title">가입금액</span>
+												<strong class="price">100만원</strong>
 											</div>
 										</div>
 									</div>
-									<ul class="card_list_ty1">
-										<li class="result">
-											<div class="title">가입금액</div>
-											<div class="cont">
-												<strong class="point">200만원</strong>
-											</div>
-										</li>
-									</ul>
 								</div>
 							</div>
 							<div class="btn_area">
@@ -701,29 +705,29 @@
 						<div class="card_item selected disabled">
 							<div class="item_inner">
 								<div class="inp_checkbox">
-									<input type="checkbox" id="card_chk_opt1_3" name="name1" aria-labelledby="card_chk_opt1_3_cont" disabled checked />
-									<label for="card_chk_opt1_3" class="chk_label"></label>
+									<input type="checkbox" id="card_chk_opt1_2" name="name1" aria-labelledby="card_chk_opt1_2_cont" />
+									<label for="card_chk_opt1_2" class="chk_label"></label>
 									<i></i>
 								</div>
 								<div class="inner_cont">
-									<div class="item_top" id="card_chk_opt1_3_cont">
-										<div class="title_info">
-											<div class="main_title">
-												블랙박스
-												<span class="badge_wrap">
-													<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
-												</span>
+									<div class="space_between">
+										<div class="item_top" id="card_chk_opt1_2_cont">
+											<div class="title_info">
+												<div class="main_title">
+													블랙박스
+													<span class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="cont">
+											<div class="result">
+												<span class="title">가입금액</span>
+												<strong class="price">100만원</strong>
 											</div>
 										</div>
 									</div>
-									<ul class="card_list_ty1">
-										<li class="result">
-											<div class="title">가입금액</div>
-											<div class="cont">
-												<strong class="point">200만원</strong>
-											</div>
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
@@ -745,28 +749,28 @@
 
 					<div class="text_sub">기본 모델에 썬루프 등 추가 부속품을 장착하신 경우 입력해 주세요.</div>
 
-					<div class="card_item_wrap">
+					<div class="card_item_wrap ty5">
 						<div class="card_item">
 							<div class="item_inner">
 								<div class="inner_cont">
-									<div class="item_top">
-										<div class="title_info">
-											<div class="main_title">
-												전방충돌포함패키지(직접입력)
-												<div class="badge_wrap">
-													<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+									<div class="space_between">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">
+													전방충돌포함패키지(직접입력)
+													<div class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<ul class="card_list_ty1">
-										<li class="result">
-											<div class="title">가입금액</div>
-											<div class="cont">
-												<strong class="point">100만원</strong>
+										<div class="cont">
+											<div class="result">
+												<span class="title">가입금액</span>
+												<strong class="price">100만원</strong>
 											</div>
-										</li>
-									</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="btn_area">
@@ -782,49 +786,60 @@
 						<div class="card_item disabled">
 							<div class="item_inner">
 								<div class="inner_cont">
-									<div class="item_top">
-										<div class="title_info">
-											<div class="main_title">
-												Around View Monitor 패키지(직접입력)
-												<div class="badge_wrap">
-													<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+									<div class="space_between">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">
+													Around View Monitor 패키지(직접입력)
+													<div class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<ul class="card_list_ty1">
-										<li class="result">
-											<div class="title">가입금액</div>
-											<div class="cont">
-												<strong class="point">100만원</strong>
+										<div class="cont">
+											<div class="result">
+												<span class="title">가입금액</span>
+												<strong class="price">100만원</strong>
 											</div>
-										</li>
-									</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- e: 추가부속품 영역 끝 -->
+					<!-- s: 하단 버튼 영역 -->
+					<div class="info_gray">
+						<dl class="middle">
+							<dt>총 가량가액</dt>
+							<dd class="point">
+								<strong class="big">2,479만원</strong>
+							</dd>
+						</dl>
+					</div>
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 				</div>
 			</div>
 
-			<!-- s: 하단 버튼 영역 -->
-			<div class="bottom_fix_wrap">
-				<div class="total_price_display_ty1">
-					<p class="price_label">총 차량가액</p>
-					<p class="price_val">
-						<strong>
-							<span class="primary">2,179만원</span>
-						</strong>
-					</p>
-				</div>
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1 full" onclick="openHDPopup(this,'pop_type01');">
-						<span class="text">다음으로</span>
-					</button>
-				</div>
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
-			<!-- s: 하단 버튼 영역 -->
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->

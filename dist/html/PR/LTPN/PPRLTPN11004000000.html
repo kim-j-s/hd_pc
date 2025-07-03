@@ -110,36 +110,27 @@
 								</div>
 							</div>
 
+							<!-- s: 25-07-03 수정 -->
 							<!-- s: 신분증 정보 입력 영역 -->
-							<div class="column">
-								<div class="form_line">
-									<div class="label_tit">본인확인용 신분증</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="ci_ty01" name="ci_select" checked />
-											<label for="ci_ty01">
-												<span class="label_cont">주민등록증</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="ci_ty02" name="ci_select" />
-											<label for="ci_ty02">
-												<span class="label_cont">운전면허증</span>
-											</label>
-										</div>
-									</div>
 
-									<div class="form_line">
-										<div class="label_tit">면허증 번호</div>
-										<div class="input_text">
-											<div class="inp">
-												<input type="text" placeholder="12자리 숫자 입력" maxlength="12" title="면허증번호입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-											</div>
-										</div>
+							<div class="form_line full_half">
+								<div class="label_tit">본인확인용 신분증</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="ci_ty01" name="ci_select" checked />
+										<label for="ci_ty01">
+											<span class="label_cont">주민등록증</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="ci_ty02" name="ci_select" />
+										<label for="ci_ty02">
+											<span class="label_cont">운전면허증</span>
+										</label>
 									</div>
 								</div>
 							</div>
+
 							<div class="form_line">
 								<div class="label_tit">발급일</div>
 								<div class="input_text">
@@ -149,7 +140,20 @@
 									</div>
 								</div>
 							</div>
+
+							<!-- s: 운전면허증 선택 시에만 면허증 번호 입력항목 추가 출력 -->
+							<div class="form_line">
+								<div class="label_tit">면허증 번호</div>
+								<div class="input_text">
+									<div class="inp">
+										<input type="text" placeholder="12자리 숫자 입력" maxlength="12" title="면허증번호입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 운전면허증 선택 시에만 면허증 번호 입력항목 추가 출력 -->
 							<!-- e: 신분증 정보 입력 영역 -->
+							<!-- s: 25-07-03 수정 -->
 
 							<div class="form_line full">
 								<div class="label_tit">주소</div>

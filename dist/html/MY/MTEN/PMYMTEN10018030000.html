@@ -579,17 +579,31 @@
 					</div>
 				</div>
 			</div>
-
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2">
-							<strong>취소정보</strong> 와 <strong>보험료</strong>를<br />
-							확인해주세요
-						</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title"><strong>취소정보</strong> 와 <strong>보험료</strong>를 확인해주세요</h2>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
+
 					<h2 class="pop_title_h1">취소정보</h2>
 					<div class="table_wrap">
 						<table class="table">
@@ -597,8 +611,8 @@
 								자동차번호, 보험기간, 계약자, 피보험자, 결제수단, 환급 보험료 제공
 							</caption>
 							<colgroup>
-								<col style="width: 30%" />
-								<col style="width: 70%" />
+								<col style="width: 160px" />
+								<col style="width: auto" />
 							</colgroup>
 							<tbody>
 								<tr>
@@ -637,6 +651,17 @@
 						</div>
 					</div>
 
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+
 					<!-- s: 꼭 알아두세요 -->
 					<div class="bottom_fix_notice">
 						<div class="acd_item">
@@ -655,14 +680,14 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
-
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-						<span class="text">다음</span>
-					</button>
-				</div>
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->

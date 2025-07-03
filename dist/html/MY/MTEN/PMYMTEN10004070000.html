@@ -579,17 +579,33 @@
 					</div>
 				</div>
 			</div>
+			<div class="breadcrumb">
+				<div class="breadcrumb_inner">
+					<ul class="breadcrumb_inner_list">
+						<li><a href="#" class="bc_home">홈</a></li>
+						<li><span>dept1</span></li>
+						<li><span>dept2</span></li>
+						<li><span>dept3</span></li>
+						<li><span>dept4</span></li>
+					</ul>
+				</div>
+			</div>
 			<div id="container" class="container">
 				<div class="content">
-					<!-- s: content_top -->
-					<div class="content_top">
-						<h2 class="title_h2">
-							<strong>차량번호판, 블랙박스 장착 사진</strong>을<br />
-							<strong>등록</strong>해주세요
-						</h2>
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>블랙박스/부속품 추가</strong>
+							</h2>
+							<div class="sub_desc"><strong>차량번호판, 블랙박스 장착 사진</strong>을 <strong>등록</strong>해주세요</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
+								<i class="hd_icon iic"></i>
+								<span class="text">자동차 계약변경</span>
+							</button>
+						</div>
 					</div>
-					<!-- e: content_top -->
-
 					<div class="tab_wrap">
 						<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">직접 사진 등록</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">문자로 링크 받기</button></div>
 
@@ -663,7 +679,7 @@
 									<div class="acd_cont">
 										<div class="inner">
 											<ul class="list_ty3">
-												<li>차량번호 사진을 등록해주세요.</li>
+												<li>블랙박스 사진을 등록해주세요.</li>
 											</ul>
 
 											<!-- s: 이미지 파일 붙는 영역 -->
@@ -743,7 +759,7 @@
 				<span class="text">링크 받기</span>
 			
 			</button> -->
-								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2" onclick="openHDPopup(this,'pop_type02');">
+								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2 full" onclick="openHDPopup(this,'pop_type02');">
 									<span class="text">등록 사진 확인</span>
 								</button>
 							</div>
@@ -751,7 +767,6 @@
 							<div class="divider_ty1"></div>
 							<h3 class="title_h3">조회결과</h3>
 
-							<!-- s: 25-05-23 수정 -->
 							<div class="space_list_ty2">
 								<div class="picture_info_item">
 									<span class="picture_info_top">
@@ -784,7 +799,7 @@
 									</span>
 								</div>
 							</div>
-							<!-- e: 25-05-23 수정 -->
+
 							<!-- e: 조회성공시  -->
 
 							<!-- e: 25-05-19 문자 등록 조회 결과 추가 -->
@@ -792,20 +807,28 @@
 					</div>
 
 					<!-- // content -->
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" disabled>
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 				</div>
-
-				<!-- // container -->
 			</div>
-
-			<!-- s: 하단 버튼 영역 -->
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-						<span class="text">다음</span>
-					</button>
-				</div>
+			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
-			<!-- s: 하단 버튼 영역 -->
+			<div id="footer" class="footer">
+				<div id="footer" class="footer">footer</div>
+			</div>
+			<!-- footer -->
 		</div>
 
 		<!-- s: popup area -->
