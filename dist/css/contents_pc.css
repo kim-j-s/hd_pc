@@ -56,6 +56,9 @@ body {
 .wrap:has(.header_pc_nd) {
 	padding: 7.2rem 0 6.4rem 0;
 }
+.wrap:has(.header_pc_error) {
+	padding: 7.2rem 0 6.4rem 0;
+}
 .wrap .footer {
 	position: absolute;
 	left: 0;
@@ -463,6 +466,9 @@ body {
 }
 .form_group_wrap + .search_reult_list_container {
 	margin-top: var(--gap-8);
+}
+.form_group_wrap + .info_gray.ty2:has(.insurance_policyBox) {
+	margin-top: var(--gap-5);
 }
 .selectitem_wrap > div {
 	-webkit-box-flex: 1;
@@ -1358,13 +1364,13 @@ body {
 .bottom_fix_notice + .list_ty2 {
 	margin-top: var(--gap-5);
 }
-.popup_wrap.full p.bpop_sub_title {
+.popup_wrap p.bpop_sub_title {
 	font-size: var(--font-size-body-medium);
 }
-.popup_wrap.full p.bpop_sub_title + .form_group_wrap {
+.popup_wrap p.bpop_sub_title + .form_group_wrap {
 	margin-top: 1.6rem;
 }
-.popup_wrap.full .form_group_wrap + .title_h4 {
+.popup_wrap .form_group_wrap + .title_h4 {
 	margin: 4rem 0 1.6rem;
 }
 .popup_wrap.bottom .file_upload_wrap .file_attach_box,
@@ -1427,6 +1433,29 @@ body {
 .fc_img_wrap .img {
 	margin: auto;
 	width: 44rem;
+}
+.bi_stepper.tab_case .bit {
+	height: auto;
+	margin-bottom: var(--gap-8);
+}
+.bi_stepper.tab_case .bit_inner {
+	position: relative;
+}
+.bi_stepper.tab_case .bi_opts_wrap {
+	margin-top: 0;
+}
+.bi_stepper.tab_case .bi_opts_wrap .bottom_fix_wrap {
+	padding-bottom: 0;
+}
+.comp_wrap.birth .form_key .pin_area {
+	height: var(--size-height-7);
+}
+.agrdo_group_sub .ags_cont,
+.agrdo_group_sub .sep_cont,
+.sep_chk_box .ags_cont,
+.sep_chk_box .sep_cont {
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap-6);
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
@@ -1642,14 +1671,24 @@ body {
 	top: calc(50% - 2rem);
 	width: 4rem;
 	height: 4rem;
+	background-color: var(--color-surface-primary-subtler);
+	background-position: center;
+	background-size: 2.4rem auto;
+	background-repeat: no-repeat;
 	border-radius: var(--radius-medium1);
-	background: var(--color-surface-primary-subtler) url(../images/icon/icon_discount.svg) no-repeat center/2.4rem auto;
+	background-image: url(../images/icon/icon_discount.svg);
 }
 .dc_info_box.ty2 {
 	background-color: var(--color-surface-primary-subtler);
 }
 .dc_info_box.ty2:before {
 	background-color: var(--color-surface-white);
+}
+.dc_info_box.car_ty1:before {
+	background-image: url(../images/icon/icon_check_car.svg);
+}
+.dc_info_box.car_ty2:before {
+	background-image: url(../images/icon/icon_plus_car.svg);
 }
 .dc_info_box .dc_list {
 	display: -webkit-box;

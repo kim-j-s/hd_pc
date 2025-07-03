@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -89,6 +89,9 @@
 					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type03');">
 						<span class="text">Layer 팝업열기</span>
 					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type06');">
+						<span class="text">Confirm 팝업열기</span>
+					</button>
 				</div>
 			</div>
 
@@ -117,7 +120,7 @@
 				</div>
 			</div>
 			<!-- Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 popup_wrap_type5" id="pop_type05" role="dialog" aria-hidden="true">
+			<div class="popup_wrap popup_wrap_type4 big" id="pop_type05" role="dialog" aria-hidden="true">
 				<div class="popup_container">
 					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type05');"></div>
 					<div class="popup_inner">
@@ -307,6 +310,29 @@
 							</div>
 						</div>
 						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="popup_wrap popup_wrap_type2" id="pop_type06" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type06');"></div>
+					<div class="popup_inner">
+						<div class="popup_head"><div class="popup_head_title">팝업 타이틀</div></div>
+
+						<div class="popup_cont">
+							팝업내용입니다<br />
+							팝업내용입니다<br />
+							내용<br />
+						</div>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<!-- <button type="button" class="btn"><span>확인</span></button> -->
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type06');"><span class="blind">팝업 닫기</span></button>
 					</div>
 				</div>
 			</div>
