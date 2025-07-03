@@ -1,0 +1,69 @@
+{{#> layout/default no-sp=true page-title="본인인증"}}
+
+<!-- s: Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- s: popup_content_top -->
+		<div class="popup_content_top">
+			<h2 class="title_h2">
+				<!-- s: 25-06-04 수정 -->
+				<strong>본인인증 방법을 선택해주세요</strong>
+				<!-- e: 25-06-04 수정 -->
+			</h2>
+		</div>
+		<!-- e: popup_content_top -->
+		 
+		<ul class="cert_select_list">
+			<li>
+				<!-- s: 25-06-04 수정 -->
+				<button type="button" class="cert_select_item simple_pw">
+					<span class="text">
+						간편비밀번호
+						<!-- 간편비밀번호 발급된 경우 메시지 비노출 -->
+						<span class="tip_item bottom">
+							<span class="tip_item_cont">
+								6자리 간편비밀번호 발급받고 3초 만에 인증해보세요!
+							</span>
+						</span>
+						<!-- 간편비밀번호 발급된 경우 메시지 비노출 -->
+					</span>
+				</button>
+				<!-- e: 25-06-04 수정 -->
+			</li>
+			<li>
+				<button type="button" class="cert_select_item bio">
+					<span class="text">생체인증</span>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="cert_select_item phone">
+					<span class="text">휴대폰인증</span>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="cert_select_item kakao">
+					<span class="text">카카오인증</span>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="cert_select_item common_cert">
+					<span class="text">공동인증</span>
+				</button>
+			</li>
+			<li>
+				<button type="button" class="cert_select_item fin_cert">
+					<span class="text">금융인증</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+</div>
+{{/ popup/popup_full}}
+<!-- e: Full 팝업 -->
+
+{{/ layout/default }}
