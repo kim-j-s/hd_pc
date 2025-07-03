@@ -1791,3 +1791,13 @@
 		}
 	}
 }
+
+.agrdo_group_sub,
+.sep_chk_box {
+	.ags_cont,
+	.sep_cont {
+		grid-template-columns: repeat(4, 1fr);
+		gap:var(--gap-6);
+	}
+}
+
