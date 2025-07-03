@@ -15,69 +15,54 @@
 			
 			<div class="form_box">
 				<div class="form_group_wrap">
-					<div class="column">
-						<div class="form_line">
-							<div class="label_tit">보험기간</div>
-							<div class="range_calrendar">
-								{{> cp/text cal=true placeholder="2025.05.20" }}
-								{{> cp/text cal=true placeholder="2026.05.20" disabled=true }}
-							</div>
-						</div>
-						<div class="form_line">
-							<div class="label_tit">
-								대표업종이 온라인쇼핑몰인가요?
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-									{{> cp/radio rd-class="rd_btn" rd-id="checktype01_01" name="checktype01" labelname="예" }}
-									{{> cp/radio rd-class="rd_btn" rd-id="checktype01_02" name="checktype01" labelname="아니요" }}
-							</div>
-							<ul class="list_ty2">
-								<li>대표업종: 매출 비중이 가장 높은 업종</li>
-							</ul>
-						</div>
-						<!-- s: 대표업종이 온라인쇼핑몰이 아닌 경우 대표업종 항목 출력 -->
-						<div class="form_line">
-							<div class="label_tit">대표업종</div>
-							{{#> cp/selectbox_pc s-title="대표업종 선택" }}
-								<option value="" selected>업종 선택</option>
-								<option value="">선택 옵션값 2</option>
-							{{/ cp/selectbox_pc}}
-						</div>
-						<!-- e: 대표업종이 온라인쇼핑몰이 아닌 경우 대표업종 항목 출력 -->
-					</div>
-			
-					<div>
-						<div class="form_line">  
-							<div class="label_tit">이용자수</div>
-							{{> cp/text  type="tel" class="price" placeholder="1,000~100,000,000명 가능" r-text="명" inp-title="이용자수 입력"}}
-							<ul class="list_ty2">
-								<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
-							</ul>
-						</div>
-						<div class="form_line">  
-							<div class="label_tit">연간매출액</div>
-							{{> cp/text  type="tel" class="price" placeholder="1,000~100,000,000명 가능" r-text="명" inp-title="이용자수 입력"}}
-							<ul class="list_ty2">
-								<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
-							</ul>
+					
+					<div class="form_line full_half">
+						<div class="label_tit">보험기간</div>
+						<div class="range_calrendar">
+							{{> cp/text cal=true placeholder="2025.05.20" }}
+							{{> cp/text cal=true placeholder="2026.05.20" disabled=true }}
 						</div>
 					</div>
-				
-
-					<div class="form_line">
+					<div class="form_line full_half">
+						<div class="label_tit">
+							대표업종이 온라인쇼핑몰인가요?
+						</div>
+						<div class="radio_group_wrap" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="checktype01_01" name="checktype01" labelname="예" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="checktype01_02" name="checktype01" labelname="아니요" }}
+						</div>
+						<ul class="list_ty2">
+							<li>대표업종: 매출 비중이 가장 높은 업종</li>
+						</ul>
+					</div>
+					<!-- s: 대표업종이 온라인쇼핑몰이 아닌 경우 대표업종 항목 출력 -->
+					<div class="form_line full_half">
+						<div class="label_tit">대표업종</div>
+						{{#> cp/selectbox_pc s-title="대표업종 선택" }}
+							<option value="" selected>업종 선택</option>
+							<option value="">선택 옵션값 2</option>
+						{{/ cp/selectbox_pc}}
+					</div>
+					<!-- e: 대표업종이 온라인쇼핑몰이 아닌 경우 대표업종 항목 출력 -->
+					
+					<div class="form_line">  
+						<div class="label_tit">이용자수</div>
+						{{> cp/text  type="tel" class="price" placeholder="1,000~100,000,000명 가능" r-text="명" inp-title="이용자수 입력"}}
+						<ul class="list_ty2">
+							<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
+						</ul>
+					</div>
+					<div class="form_line">  
 						<div class="label_tit">연간매출액</div>
 						{{> cp/text  type="tel" class="price" placeholder="숫자만 입력" r-text="원" inp-title="연간매출액 입력"}}
 						<ul class="list_ty2">
-							<li>직전연도 대표업종 및 부수업종 매출액 합계</li>
+							<li>직전연도말 3개월(10~12월) 저장, 관리하고 있는 일일평균 이용자수</li>
 						</ul>
-					</div> 
-				
-
-				
-				
-					
-					
-					
+					</div>
+					<div class="form_line">
+						<div class="label_tit">사업자등록증상 상호</div>
+							{{> cp/text placeholder="상호명 입력" inp-title="상호명 입력"}}
+					</div> 	
 					 
 					<div class="form_line full">
 						<div class="label_tit">주소</div>
