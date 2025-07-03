@@ -27,7 +27,6 @@
 			background-image: url(../images/icon/icon_reset_ty2.svg);
 		}
 	}
-
 	&.short_cut {
 		padding-right: 20px;
 		font-size: var(--font-size-label-medium);
@@ -54,10 +53,9 @@
 	}
 
 
-
-
-
-
+}
+.hd_btn_s_2 {
+	min-width: 100px;
 }
 
 .btn_area {
@@ -228,6 +226,15 @@
 		}
 		&.full {
 			flex-direction: column;
+			.space_between {
+				gap: var(--gap-5);
+				.contractNum {
+					flex: 1;
+				}
+				button {
+					min-width: 100px;
+				}
+			}
 		} &
 		.form_line {
 			& ~ .form_line {
