@@ -161,6 +161,17 @@
 							}
 						}
 					}
+					&.big {
+						dt,
+						dd {
+							font-size: var(--font-size-body-large);
+						}
+					}
+				}
+				&.ty2 {
+					dd {
+						text-align: right;
+					}
 				}
 			}
 		}
