@@ -23,6 +23,9 @@
 		height: 72px;
 		background-color: var(--color-element-primary);
 	}
+	&.header_pc_error {
+		height: 72px;
+	}
 	.header_pc_inner {
 		display: inline-flex;
 		flex-direction: column;

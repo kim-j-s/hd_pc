@@ -1198,6 +1198,9 @@ strong {
 	height: 7.2rem;
 	background-color: var(--color-element-primary);
 }
+.header_pc.header_pc_error {
+	height: 7.2rem;
+}
 .header_pc .header_pc_inner {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
@@ -8297,6 +8300,12 @@ strong {
 .form_group_wrap .checkbox_group_wrap.column {
 	gap: 0;
 	width: 100%;
+}
+.form_group_wrap .radio_group_wrap + .form_group_wrap .label_tit {
+	padding-top: var(--gap-5);
+}
+.form_group_wrap .radio_group_wrap + .form_group_wrap.row {
+	margin-top: var(--gap-5);
 }
 .form_group_wrap .form_group_title {
 	display: inline-block;

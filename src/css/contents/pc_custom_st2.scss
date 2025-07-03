@@ -358,6 +358,10 @@
 	& + .search_reult_list_container {
 		margin-top: var(--gap-8);
 	}
+
+	& + .info_gray.ty2:has(.insurance_policyBox){
+		margin-top: var(--gap-5);
+	}
 }
 //select
 .selectitem_wrap {
@@ -1661,7 +1665,7 @@
 }
 
 // 변경할 가입조건 선택 팝업
-.popup_wrap.full {
+.popup_wrap {
 	p.bpop_sub_title {
 		font-size: var(--font-size-body-medium);
 		& + .form_group_wrap {
@@ -1784,3 +1788,23 @@
 		}
 	}
 }
+
+.comp_wrap {
+	&.birth {
+		.form_key {
+			.pin_area {
+				height: var(--size-height-7);
+			}
+		}
+	}
+}
+
+.agrdo_group_sub,
+.sep_chk_box {
+	.ags_cont,
+	.sep_cont {
+		grid-template-columns: repeat(4, 1fr);
+		gap:var(--gap-6);
+	}
+}
+

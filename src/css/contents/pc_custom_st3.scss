@@ -587,6 +587,18 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		&:disabled {
+			border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+			background: var(--color-input-surface-disabled);
+		}
+		&.default {
+			color: var(--color-text-disabled);
+			border: var(--border-width-static-regular) solid var(--color-input-border);
+			&:disabled {
+				color: var(--color-text-disabled-on);
+				border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+			}
+		}
 	}
 
 	&.sm {

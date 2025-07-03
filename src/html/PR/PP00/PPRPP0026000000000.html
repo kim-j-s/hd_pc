@@ -7,13 +7,10 @@
 		<div class="info_cont">
 			<p>담보 조정 결과를 확인하시고 진행해주세요.</p>
 			<div class="info_gray">
-				
-				
 				<p>다른 보험에 <strong class="point">중복 가입</strong>되거나 <strong class="point">한도가 초과</strong>된 담보가 있습니다.</p>
-				
 			</div>
 
-			<!-- s: 25-05-23 수정 -->
+			
 			<div class="space_wrap space_ty1">
 				<h2 class="pop_title_h1">가입이 가능한 담보(실손형 보장)</h2>
 				<p>아래 실손형 담보의 초과된 한도에 맞추어 조정한 금액을 확인하고, 가입금액을 줄여주세요.</p>
@@ -34,7 +31,14 @@
 							<tr>
 								<td>자동차사고변호사선임비용Ⅲ(특정사고경찰조사포함)(갱신형)담보 </td>
 								<td>
-									{{> cp/selectitem si_ph="미가입" si_title="가입금액 변경 선택" si_popup="pop_type01"}}
+									{{#> cp/selectbox_pc s-title="가입금액 변경 선택" s-ph="선택" }}
+										<option value="">1억원</option>
+										<option value="">9천만원</option>
+										<option value="">8천만원</option>
+										<option value="">7천만원</option>
+										<option value="">6천만원</option>
+										<option value="">미가입</option>
+									{{/ cp/selectbox_pc}}
 								</td>
 							</tr>
 							<tr>
@@ -49,10 +53,10 @@
 					</ul>
 				</div>
 			</div>
-			<!-- e: 25-05-23 수정 -->
+			
 
 			<!-- s: 한도 초과 담보 제외  Case -->
-			<!-- s: 25-05-23 수정 -->
+			
 			<div class="space_wrap space_ty1">
 				<h2 class="pop_title_h1">가입이 어려운 담보</h2>
 				<p>아래 담보는 가입금액 조정이 어려워 자동으로 제외되어 가입됩니다.</p>
@@ -81,11 +85,11 @@
 					</ul>
 				</div>
 			</div>
-			<!-- e: 25-05-23 수정 -->
+			
 			<!-- e: 한도 초과 담보 제외  Case -->
 
 			<!-- s: 중복가입 담보 제외  Case -->
-			<!-- s: 25-05-23 수정 -->
+			
 
 			<div class="space_wrap space_ty1">
 				<h2 class="pop_title_h1">중복 가입 된 담보</h2>
@@ -120,7 +124,7 @@
 					</table>
 				</div>
 			</div>
-			<!-- e: 25-05-23 수정 -->
+			
 			<!-- e: 중복가입 담보 제외  Case -->
 		</div>
 
@@ -162,12 +166,12 @@
 <div class="popup_cont">
 	<div class="popup_content">
 		<div class="opt_select_list opt_case3">
-			<div role="button" tabindex="0" class="option"><span class="text">1억원</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">9천만원</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">8천만원</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">7천만원</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">6천만원</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">미가입</span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
+			<div role="button" tabindex="0" class="option"><span class="text"></span></div>
 		</div>
 	</div>
 </div>
