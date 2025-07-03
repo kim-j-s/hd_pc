@@ -27,9 +27,7 @@
 				max-height: calc(100% - 20px);
 				height: auto;
 				// width: calc(100% - 96px);
-				width: 440px;
-
-				padding-bottom: var(--padding-6);
+				padding-bottom: 0;
 				border-radius: var(--radius-large2);
 
 				& > .popup_close {
@@ -90,7 +88,6 @@
 				}
 
 				.popup_bottom {
-					padding-bottom: 0;
 					.btn_area {
 						.hd_btn {
 							flex: 1;

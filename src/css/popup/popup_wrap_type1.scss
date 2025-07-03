@@ -17,7 +17,7 @@
 			.popup_inner {
 				height: auto;
 				max-height: 100%;
-				padding-bottom: var(--padding-6);
+				padding-bottom: 0;
 				border-radius: var(--radius-large2);
 
 				& > .popup_close {
@@ -38,7 +38,6 @@
 				}
 
 				.popup_bottom {
-					padding-bottom: 0;
 					.btn_area {
 						.hd_btn {
 							flex: 1;
