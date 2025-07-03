@@ -43,26 +43,26 @@
 			<div class="form_box">
 				<h3 class="title_h3">필수 확인 사항</h3>
 				<div class="form_group_wrap">
-					<div class="column">
-						<div class="form_line">
-							<div class="label_tit box">
-								<div>
-									자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
-									{{> cp/tooltip text="<p>이혼이나 사별 등으로 공동 친권자가 없을 경우 [아니요]를 선택해주세요.</p>" trigger-icon="popover_help"}}
-								</div>
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
+					<!-- s: 25-07-03 수정 -->
+					<div class="form_line full_half">
+						<div class="label_tit box">
+							<div>
+								자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
+								{{> cp/tooltip text="<p>이혼이나 사별 등으로 공동 친권자가 없을 경우 [아니요]를 선택해주세요.</p>" trigger-icon="popover_help"}}
 							</div>
 						</div>
-						<!-- s: “예”를 선택하면 배우자 이름 입력 필드 Show -->
-						<div class="form_line">
-							<div class="label_tit">공동 친권자 성명(배우자)</div>
-							{{> cp/text placeholder="공동 친권자 성명(배우자)" inp-title="성명을 입력해 주세요" }}
+						<div class="radio_group_wrap" role="radiogroup">
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
+							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
 						</div>
-						<!-- e: “예”를 선택하면 배우자 이름 입력 필드 Show -->
 					</div>
+					<!-- s: “예”를 선택하면 배우자 이름 입력 필드 Show -->
+					<div class="form_line full_half">
+						<div class="label_tit">공동 친권자 성명(배우자)</div>
+						{{> cp/text placeholder="공동 친권자 성명(배우자)" inp-title="성명을 입력해 주세요" }}
+					</div>
+					<!-- e: “예”를 선택하면 배우자 이름 입력 필드 Show -->
+					<!-- e: 25-07-03 수정 -->
 
 					<div class="form_line">
 						<div class="label_tit">보험증권 받는 방법을 선택해주세요.</div>
@@ -98,7 +98,7 @@
 							<li>해외금융계좌 신고제도에 따라 외국의 국적, 시민권, 영주권등을 보유하거나 외국에 납세의무를 지닌 경우 [예]를 선택해주세요.</li>
 						</ul>
 					</div>
-				</div>
+				</div>			
 
 				<div class="checkbox_group_wrap column">
 					{{> cp/checkbox checkbox_class="rd_box question" id="checkbox01-1" label_class="chk_label_ty3 check_hide"
