@@ -1,20 +1,23 @@
-{{#> layout/default page-title="자동차 변경(차량대체) | 마이페이지"}}
+{{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="자동차 변경(차량대체)" h-ins="pop_insChk"}}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					
-					<h2 class="title_h2">
-						<strong>자동차번호</strong> 또는<br>
-						<strong>차대번호</strong>를 입력해 주세요
-					</h2>
-					<div class="btn_area basic">
-						{{> cp/button type="3" size="5" b-text="보험만기일, 중고차, 신차 안내" rightIcon="arrowRightSvg" }}
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차 변경(차량대체)</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>자동차번호</strong> 또는 <strong>차대번호</strong>를 입력해 주세요
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+						{{> cp/button type="3" size="4" b-text="보험만기일/중고차/신차 안내" btn-title="도움말 열기" rightIcon="arrowRightSvg" }}
 					</div>
 				</div>
-				<!-- e: content_top -->
 				 
 				<div class="form_group_wrap">
 					<div class="form_line">
@@ -22,9 +25,9 @@
 						<div class="car_input_box">
 							<!-- 에러 메시지 시, error 클래스 추가 -->
 							 <!-- s: 25-06-12 수정 -->
-							 
+							 <!-- s: 25-06-09 수정 -->
 							 {{> cp/text class="car_number_input error" placeholder="123가**67" minlength="7" maxlength="17" inp-title="자동차 또는 차대번호 입력"}}
-							 
+							 <!-- e: 25-06-09 수정 -->
 								<!-- e: 25-06-12 수정 -->
 							<p class="msg_error">자동차 번호, 또는 차대번호를 입력해 주세요.</p>
 						</div>
@@ -36,16 +39,20 @@
 					{{> cp/radio rd-class="rd_btn_s1 icon_opt3" rd-id="radio_btn_g3" name="radio_g1" labelname="화물차<br><span>적재함이 있는 자동차, 밴형 및 픽업트럭</span>" }}
 					<!-- e: 25-04-18 수정 -->
 				</div>
-			</div>
-		</div>
 
-		<!-- s: 하단 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="승용차 차량번호로" class="full" }}
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전" }}
+							{{> cp/button type="1" size="1" b-text="승용차 차량번호로" }}
+						</div>
+					</div>
+					<!-- s: 하단 버튼 영역 -->
 			</div>
 		</div>
-		<!-- s: 하단 버튼 영역 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

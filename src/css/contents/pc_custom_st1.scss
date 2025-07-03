@@ -54,6 +54,9 @@ body {
 	&:has(.header_pc_nd) {
 		padding: 72px 0 64px 0;
 	}
+	&:has(.header_pc_error) {
+		padding: 72px 0 64px 0;
+	}
 
 
 

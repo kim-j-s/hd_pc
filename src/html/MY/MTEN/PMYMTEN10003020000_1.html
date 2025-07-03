@@ -1,3 +1,4 @@
+
 {{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
 		{{> layout/header_pc bc=true }}
@@ -7,8 +8,11 @@
 				<div class="title_view_wrap">
 					<div class="page_title">
 						<h2 class="p_title">
-							<strong>ECO마일리지 사진 등록(대체)</strong>
+							<strong>자동차 변경(차량대체)</strong>
 						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
 					</div>
 					<div class="btn_area">
 						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
@@ -31,11 +35,9 @@
 					</div>
 				</div>
 				<div class="space_list_ty2">
-					<!-- s: 25-07-03 수정 -->
 					<div class="btn_area center">
 						{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuId=100121" }}
 					</div>
-					<!-- e: 25-07-03 수정 -->
 				</div>
 				
 			</div>
@@ -45,8 +47,10 @@
 		<!-- footer -->
 	</div>
 
+	<!-- s: popup area -->
 	<!-- s: 자동차 배서 메뉴 -->
 	{{> pages/pop1 }}
 	<!-- e: 자동차 배서 메뉴 -->
+	<!-- e: popup area -->
 
 {{/ layout/default }}

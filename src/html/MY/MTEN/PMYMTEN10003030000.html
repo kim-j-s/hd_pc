@@ -1,37 +1,48 @@
-{{#> layout/default page-title="자동차 변경(차량대체) | 마이페이지"}}
+{{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc h-title="자동차 변경(차량대체)" h-ins="pop_insChk"}}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-                        
-						<strong>변경 기준일</strong>을 <strong>확인</strong>해주세요 
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차 변경(차량대체)</strong>
+						</h2>
+						<div class="sub_desc">
+							<strong>변경 기준일</strong>을 <strong>확인</strong>해주세요 
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
 				</div>
-				<!-- e: content_top -->
 
-				<div class="info_gray">
-					<dl>
-						<dt>자동차번호</dt>
-						<dd>18루**22</dd>
-					</dl>
-					<dl>
-						<dt>보험기간</dt>
-						<dd>2025.04.30~2025.05.02</dd>
-					</dl>
+		
+				<div class="info_gray ty_def">
+					<div class="data_box df_type_w_ty1">
+						<dl>
+							<dt>자동차번호</dt>
+							<dd>18루**22</dd>
+						</dl>
+						<dl>
+							<dt>보험기간</dt>
+							<dd>2025.04.30~2025.05.02</dd>
+						</dl>
+					</div>
 				</div>
 
 				<div class="form_group_wrap">
 					<div class="form_line">
 						<div class="label_tit">변경 기준일(00시)</div>
 						{{> cp/text cal=true value="2025.12.18" }}
+						<ul class="list_ty2">
+							<li>차량대체는 <span class="point">계약변경 확정시점</span>부터 보험종료일 24시까지 변경내용의 효력이 발생합니다. (대체전 차량의 양도/말소 여부를 꼭 확인해주세요)</li>
+						</ul>
 					</div>
-					<ul class="list_ty2">
-						<li>변경기준일의 00시부터 보험종료일 24시까지 변경내용의 효력이 발생합니다.</li>
-					</ul>
+					
+				</div>
+				
 					<div class="info_gray ty2">
 						<div class="insurance_policyBox">
 							<div class="insurance_date">
@@ -44,7 +55,6 @@
 
 										변경기간 적용 시, prograssCar() 호출 필요
 									-->
-									<!-- s: 25-06-04 수정 -->
 									<div class="progress_box_ty2" role="img" aria-label="변경기간 220일">
 										<i class="start">
 											<span class="spot">시작일</span>
@@ -64,23 +74,27 @@
 											</i>
 										</span>
 									</div>
-									<!-- e: 25-06-04 수정 -->
 									<!-- e: 진행영역 -->
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
+				
 
-		<!-- s: 하단 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="다음" disabled=true}}
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true}}
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
 			</div>
 		</div>
-		<!-- s: 하단 버튼 영역 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+		
 	</div>
 
 	<!-- s: popup area -->
