@@ -1129,6 +1129,88 @@
 	& + .info_gray {
 		margin-top: var(--gap-11);
 	}
+	// &.my_top_gray {
+	// 	.card_item {
+	// 		background: var(--color-surface-secondary-subtler);
+	// 		border: none;
+	// 		.item_inner {
+	// 			.inner_cont {
+	// 				display: flex;
+	// 				flex-direction: column-reverse;
+	// 				gap: var(--gap-6);
+	// 				.item_top {
+	// 					flex-direction: row;
+	// 					align-items: center;
+	// 					padding: var(--padding-5) var(--padding-5) var(--padding-5) 68px;
+	// 					min-height: 72px;
+	// 					background: var(--color-surface-white-subtle) url(../images/icon/icon_my_car_top.svg) no-repeat 16px center / 40px auto;
+	// 					border-radius: var(--radius-medium3);
+	// 					.title_info {
+	// 						flex-direction: row;
+	// 						> div {
+	// 							position: relative;
+	// 							padding-right: var(--padding-5);
+	// 							margin-right: var(--padding-5);
+	// 							&::after {
+	// 								position: absolute;
+	// 								top: 50%;
+	// 								right: 0;
+	// 								content: '';
+	// 								display: inline-block;
+	// 								width: 1px;
+	// 								height: var(--size-height-2);
+	// 								background: var(--color-divider-gray-light);
+	// 								transform: translateY(-50%);
+	// 							} 
+
+	// 						}
+	// 					}
+	// 					.desc {
+	// 						margin: 0;
+	// 					}
+	// 				}
+	// 				> * {
+	// 					& + .card_list_ty1 {
+	// 						border: none;
+	// 						margin: 0;
+	// 						padding: 0;
+	// 						> li {
+	// 							&:first-child {
+	// 								border: none;
+	// 								margin: 0;
+	// 								flex-direction: column;
+	// 								gap: var(--gap-6);
+	// 								&.result {
+	// 									align-items: baseline;
+	// 									gap: 0;
+	// 									> * {
+	// 										line-height: 1.5;
+	// 									}
+	// 									.text_body_large {
+	// 										line-height: 1.5;
+	// 									}
+	// 									.title {
+	// 										font-size: var(--font-size-body-medium);
+	// 										color: var(--color-text-basic);
+	// 									}
+	// 								}
+	// 							}
+	// 							> div.cont {
+	// 								.text_body_large {
+	// 									strong {
+	// 										span {
+	// 											font-size: var(--font-size-display-medium);
+	// 										}
+	// 									}
+	// 								}
+	// 							} 
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 //my-top
 .cd_top_wrap {
