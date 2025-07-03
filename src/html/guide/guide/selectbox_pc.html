@@ -2,37 +2,57 @@
 
 <div class="guide_h1">Select_box - PC 버전</div>
 
-<div class="guide_h4 pc">상태값 - disabled</div>
-{{#> cp/selectbox_pc s-title="selecttitle명 선택" disabled=true }}
-	<option value="" selected>선택 옵션값 1</option>
+<div class="guide_h4 pc">상태값 - placeholder 상태 - 선택 전</div>
+{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="선택해주세요." }}
+	<option value="">선택 옵션값 1</option>
+	<option value="">선택 옵션값 2</option>
+{{/ cp/selectbox_pc}}
+
+<div class="guide_h4 pc">상태값 - 선택 후 / 선택 되어진 상태</div>
+{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="선택해주세요." }}
+	<option value="">선택 옵션값 1</option>
+	<option value="">선택 옵션값 2</option>
+	<option value="" selected>선택 옵션값 3</option>
+	<option value="">선택 옵션값 4</option>
+{{/ cp/selectbox_pc}}
+
+<div class="guide_h4 pc">상태값 - 선택 전 - disabled</div>
+{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="선택해주세요." disabled=true }}
+	<option value="">선택 옵션값 1</option>
+	<option value="">선택 옵션값 2</option>
+{{/ cp/selectbox_pc}}
+
+<div class="guide_h4 pc">상태값 - 선택 후 / 선택 되어진 상태 - disabled</div>
+{{#> cp/selectbox_pc s-title="select title명 선택" disabled=true }}
+	<option value="">선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 
 <div class="guide_h4 pc">기본 Selectbox</div>
-{{#> cp/selectbox_pc s-title="selecttitle명 선택" }}
+{{#> cp/selectbox_pc s-title="select title명 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 
 <div class="guide_discription">size(md) - 48px</div>
-{{#> cp/selectbox_pc s-class="md" s-title="selecttitle명 선택" }}
+{{#> cp/selectbox_pc s-class="md" s-title="select title명 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 
 <div class="guide_discription">size(sm) - 40px</div>
-{{#> cp/selectbox_pc s-class="sm" s-title="selecttitle명 선택" }}
+{{#> cp/selectbox_pc s-class="sm" s-title="select title명 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 
 <div class="guide_h4 pc">Selectbox Case - Type2</div>
-{{#> cp/selectbox_pc s-class="ty2" s-title="selecttitle명 선택" }}
+{{#> cp/selectbox_pc s-class="ty2" s-title="select title명 선택" }}
 	<option value="" >선택 옵션값 1</option>
 	<option value="" selected>선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
 <div class="guide_discription">size (sm)</div>
-{{#> cp/selectbox_pc s-class="ty2 sm" s-title="selecttitle명 선택" }}
+{{#> cp/selectbox_pc s-class="ty2 sm" s-title="select title명 선택" }}
 	<option value="" selected>선택 옵션값 1</option>
 	<option value="">선택 옵션값 2</option>
 {{/ cp/selectbox_pc}}
@@ -53,13 +73,13 @@
 
 <div class="guide_h4 pc">search Case</div>
 				<div class="selectitem_wrap">
-					{{#> cp/selectbox_pc s-class="md" s-title="selecttitle명 선택" }}
+					{{#> cp/selectbox_pc s-class="md" s-title="select title명 선택" }}
 						<option value="" selected>계약자</option>
 						<option value="">피보험자</option>
 						<option value="">친권자</option>
 						<option value="">단체 피보험자</option>
 					{{/ cp/selectbox_pc}}
-					{{#> cp/selectbox_pc s-class="md" s-title="selecttitle명 선택" }}
+					{{#> cp/selectbox_pc s-class="md" s-title="select title명 선택" }}
 						<option value="" selected>유지</option>
 						<option value="">효력상실</option>
 						<option value="">만기</option>

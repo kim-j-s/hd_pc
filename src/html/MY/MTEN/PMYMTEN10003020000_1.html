@@ -1,0 +1,56 @@
+
+{{#> layout/default page-title="자동차보험 계약변경 | 마이페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc bc=true }}
+		<div id="container" class="container">
+			<div class="content">
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차 변경(차량대체)</strong>
+						</h2>
+						<div class="sub_desc">
+							대상 계약을 선택해주세요.
+						</div>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
+
+				<!-- 조회된 내역이 없을 경우 -->
+				<div class="process_info_area">
+					<div class="complete_info" aria-hidden="true">
+						<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
+					</div>
+					<h2 class="process_title">
+						<strong>사진등록 대상 계약이 없습니다.</strong>
+					</h2>
+					<div class="process_desc">
+						7일 이내 차량대체 여부 및 마일리지 특약 가입 여부를 확인해 주세요.<br />
+						또는 차량대체가 2회 이상인 경우 대표콜센터로 문의해 주세요.<br /><br />
+						하이플래너, 대리점 및 전화 상담직원을 통해 가입하신 고객님께서는 <br />
+						현대해상홈페이지(www.hi.co.kr) 또는 대표콜센터(1588-5656)를 통해 계약변경을 진행하실 수 있습니다.
+					</div>
+				</div>
+				<div class="space_list_ty2">
+					<div class="btn_area center">
+						{{> cp/linkButton bl_class="new_open new_open_rd_box" bl_text="현대해상 홈페이지로 이동" blank="true" href="https://hi.co.kr/serviceAction.do?menuId=100121" }}
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	<!-- s: 자동차 배서 메뉴 -->
+	{{> pages/pop1 }}
+	<!-- e: 자동차 배서 메뉴 -->
+	<!-- e: popup area -->
+
+{{/ layout/default }}

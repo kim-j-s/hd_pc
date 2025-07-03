@@ -161,6 +161,17 @@
 							}
 						}
 					}
+					&.big {
+						dt,
+						dd {
+							font-size: var(--font-size-body-large);
+						}
+					}
+				}
+				&.ty2 {
+					dd {
+						text-align: right;
+					}
 				}
 			}
 		}
@@ -587,6 +598,18 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+		&:disabled {
+			border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+			background: var(--color-input-surface-disabled);
+		}
+		&.default {
+			color: var(--color-text-disabled);
+			border: var(--border-width-static-regular) solid var(--color-input-border);
+			&:disabled {
+				color: var(--color-text-disabled-on);
+				border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+			}
+		}
 	}
 
 	&.sm {
@@ -1286,6 +1309,11 @@
 	gap: var(--gap-4);
 }
 
+.radio_group_wrap.car_type_option {
+	.inp_radio + .inp_radio {
+		margin-top: var(--gap-4);
+	}
+}
 
 // 변경할 가입조건 선택 팝업
 .popup_wrap.full {
