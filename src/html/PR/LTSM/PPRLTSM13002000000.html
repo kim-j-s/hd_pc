@@ -76,7 +76,7 @@
 								</div>
 
 								<!-- bi_stepper -->
-								<div class="bi_stepper">
+								<div class="bi_stepper tab_case">
 									<div class="bi_top">
 										<!-- bit -->
 										<div class="bit">	
@@ -114,18 +114,7 @@
 
 										<!-- 배우자/부모/자녀 탭 -->
 										<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-											<!-- s: 25-06-12 수정 -->
-											<div class="form_box">
-												<div class="form_group_wrap full">
-													<div class="form_line">
-														<div class="radio_group_wrap_ty2" role="radiogroup">
-															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt1" name="radio_gt1" labelname="배우자" }}
-															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt2" name="radio_gt1" labelname="부모" }}
-															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt3" name="radio_gt1" labelname="자녀(만 18세 이하)" }}
-															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt4" name="radio_gt1" labelname="자녀(만 19세 이상)" }}</div>
-													</div>
-												</div>
-											</div>
+											
 											<div class="form_box">
 												<div class="form_group_wrap full">
 													<h3 class="title_h3">피보험자(보장 받으실 분)</h3>
@@ -145,7 +134,6 @@
 													<div class="form_line">
 														<div class="label_tit">이름</div>
 														{{> cp/text placeholder="입력해주세요" inp-title="이름 입력" }}
-														{{> cp/linkButton bl_class="short_cut" bl_text="계약자 피보험자가 다를 때 가입 안내" pop_id="pop_03"}}
 													</div>						
 
 													<!-- s: 자녀(만 18세 이하) 선택 시 표시 -->
@@ -155,7 +143,11 @@
 															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt1" name="radio_gt1" labelname="미취학아동" }}
 															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt2" name="radio_gt1" labelname="초,중,고등학생" }}
 															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt3" name="radio_gt1" labelname="대학생 및 대학원생" }}
-															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt4" name="radio_gt1" labelname="기타" }}</div>
+															{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_gt4" name="radio_gt1" labelname="기타" }}
+														</div>
+														<ul class="list_ty2">
+															<li>운동선수협회에 등록되어 있는 학교 운동선수의 경우 [기타]를 누르신 후 운동선수를 선택해 주세요.</li>
+														</ul>
 													</div>
 												</div>
 												<!-- e: 자녀(만 18세 이하) 선택 시 표시 -->
@@ -184,7 +176,6 @@
 											</div>
 										</div>
 									</div>
-									
 
 									<div class="bi_opts_wrap">
 										<div class="opts_area">
