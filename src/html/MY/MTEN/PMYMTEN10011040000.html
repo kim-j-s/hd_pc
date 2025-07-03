@@ -39,7 +39,7 @@
 								<ul class="card_list_ty1 df_type_w_ty2">
 									<li>
 										<div class="title">안전운전 점수</div>
-										<div class="cont">86점</div>
+										<div class="cont point_b">86점</div>
 									</li>
 									<li>
 										<div class="title">특약가능여부</div>
@@ -51,7 +51,9 @@
 									</li>
 									<li>
 										<div class="title">월별 안전운전점수 할인 <br>추가 특약</div>
-										<div class="cont point_b">후환급</div>
+										<div class="cont">
+											{{> cp/linkButton bl_class="price_btn" bl_text="후환급" role_b=true question_tit="자세히보기" }}
+										</div>
 									</li>
 									<li>
 										<div class="title">70점 미만 월 횟수</div>
@@ -79,7 +81,7 @@
 								<ul class="card_list_ty1 df_type_w_ty2">
 									<li>
 										<div class="title">안전운전 점수</div>
-										<div class="cont">75점</div>
+										<div class="cont point_b">75점</div>
 									</li>
 									<li>
 										<div class="title">특약가능여부</div>
@@ -167,7 +169,7 @@
 				<div class="bottom_fix_wrap">
 					<div class="btn_area">
 						{{> cp/button type="3" size="1" b-text="이전"}}
-						{{> cp/button type="1" size="1" b-text="확인"}}
+						{{> cp/button type="1" size="1" b-text="다음"}}
 					</div>
 				</div>	
 			</div>
