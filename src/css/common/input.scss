@@ -586,10 +586,10 @@
 	& + [class^=list_ty],
 	& + .btn_area,
 	& + .table_wrap,
-	& + .opt_case4,
-	& + .info_gray.ty2:has(.insurance_policyBox){
+	& + .opt_case4 {
 		margin-top: var(--gap-5);
 	}
+
 	
 
 	[class^=form_line] {
