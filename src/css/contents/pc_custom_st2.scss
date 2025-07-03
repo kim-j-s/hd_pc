@@ -351,6 +351,10 @@
 	& + .search_reult_list_container {
 		margin-top: var(--gap-8);
 	}
+
+	& + .info_gray.ty2:has(.insurance_policyBox){
+		margin-top: var(--gap-5);
+	}
 }
 //select
 .selectitem_wrap {
