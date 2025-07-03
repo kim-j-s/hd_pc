@@ -1429,18 +1429,9 @@
  
 //폼 - 연락처
 .form_group_wrap {
-	.row {
-		&.phone_case {
-			.select_option_box {
-				min-width: 100px;
-				max-width: 102px;
-				& +  .input_text  {
-				margin-top: 0
-				}			
-			}
-			.input_text  {
-				flex: 1;  
-			}
+	.full_half {
+		.form_line.fix_w_case02 {
+			width: 102px;;
 		}
 	}
 }
