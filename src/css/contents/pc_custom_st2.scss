@@ -453,6 +453,12 @@
 						position: absolute;
 						top: 0;
 						right: 0;
+
+						& + .form_group_wrap {
+							.label_tit {
+								padding-top:0;
+							}
+						}
 					}
 
 					.checkbox_group_wrap {
