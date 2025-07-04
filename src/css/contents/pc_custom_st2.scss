@@ -1832,11 +1832,11 @@
 	}
 }
 
-//검색팝업
+//팝업 탭 스티키일 경우
 .popup_cont {
-	&.search_list_type2 {
-		.tab_wrap {
-			.tab_wrap_list_ty1 {
+	.tab_wrap {
+		.tab_wrap_list_ty1 {
+			&.sticky_fix {
 				.tab_btn {
 					margin-top: -16px;
 				}
