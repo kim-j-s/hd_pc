@@ -85,11 +85,13 @@
 								<h3 class="title_h3">예상 해약환급금 (기간내 해지시)</h3>
 								<div class="form_group_wrap">
 									<div class="form_line">
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="예상 해약환급금 선택" onclick="openHDPopup(this,'pop_type01');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="적용이율"></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="적용이율 선택" class="selectbox">
+												<option value="default" hidden>적용이율</option>
+												<option value="" selected>최저보증이율</option>
+												<option value="">평균공시이율(1.70%)</option>
+												<option value="">공시이율(1.70%)</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -179,7 +181,7 @@
 					<!-- s: 하단 고정 버튼 영역 -->
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">확인</span>
 							</button>
 						</div>

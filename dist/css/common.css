@@ -7681,6 +7681,13 @@ strong {
 	height: 5rem;
 	background: url(../images/icon/icon_reset.svg) no-repeat center right 1.6rem/2rem auto;
 }
+.input_text:has(.int_txt.right) input {
+	padding-right: 2.8rem;
+}
+.input_text:has(.int_txt.right) .del {
+	width: 2.8rem;
+	background-position: center right;
+}
 .input_text.phone {
 	width: 100%;
 }
@@ -8758,7 +8765,7 @@ strong {
 	right: 0;
 	width: 2.4rem;
 	height: 2.4rem;
-	background: url(../images/icon/arrowRight_ty5.svg) no-repeat center/2.4rem auto;
+	background: url(../images/icon/arrowRight_ty5.svg) no-repeat center/2rem auto;
 }
 .search_reult_list_container ul.search_reult_list li .item_inner {
 	width: 100%;
