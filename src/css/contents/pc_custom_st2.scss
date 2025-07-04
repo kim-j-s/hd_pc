@@ -260,7 +260,8 @@
 	
 		.full_half {
 			flex-basis: 100%;
-			> div {
+			> div,
+			> ul {
 				width: calc(50% - 16px);
 			}
 		}
@@ -394,6 +395,14 @@
 				min-width: 134px;
 			}
 		}
+	}
+
+	& > .checkbox_group_wrap:first-child {
+		justify-content: flex-end;
+			& > * {
+				flex-grow: 0;
+				min-width: 134px;
+			}
 	}
 
 
