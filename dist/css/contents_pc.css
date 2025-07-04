@@ -555,6 +555,9 @@ body {
 	top: 0;
 	right: 0;
 }
+.notification .form_list > li > .form_group_wrap > .form_line .radio_group_wrap:not(.column) + .form_group_wrap .label_tit {
+	padding-top: 0;
+}
 .notification .form_list > li > .form_group_wrap > .form_line .checkbox_group_wrap {
 	margin-top: var(--gap-5);
 }
@@ -1478,6 +1481,9 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--gap-6);
 }
+.popup_cont.search_list_type2 .tab_wrap .tab_wrap_list_ty1 .tab_btn {
+	margin-top: -1.6rem;
+}
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
 .info_summary {
@@ -1663,6 +1669,11 @@ body {
 }
 .info_summary .summery_inner .detail_wrap .dt_table.ty2 dd {
 	text-align: right;
+}
+.info_summary .summery_inner .detail_wrap .dt_table.ty2 dl.point dt,
+.info_summary .summery_inner .detail_wrap .dt_table.ty2 dl.point dd {
+	color: inherit;
+	font-weight: 700;
 }
 .info_summary .summery_inner + .dc_info_box {
 	margin-top: var(--gap-6);
@@ -2023,7 +2034,7 @@ body {
 }
 .select_option_box .selectbox:disabled {
 	border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
-	background: var(--color-input-surface-disabled);
+	background-color: var(--color-input-surface-disabled);
 }
 .select_option_box .selectbox.default {
 	color: var(--color-text-disabled);
@@ -2728,17 +2739,8 @@ body {
 	margin-top: 0;
 	padding-bottom: 0;
 }
-.form_group_wrap .row.phone_case .select_option_box {
-	min-width: 10rem;
-	max-width: 10.2rem;
-}
-.form_group_wrap .row.phone_case .select_option_box + .input_text {
-	margin-top: 0;
-}
-.form_group_wrap .row.phone_case .input_text {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+.form_group_wrap .full_half .form_line.fix_w_case02 {
+	width: 10.2rem;
 }
 /* PC용 component  */
 .form_key_pc {

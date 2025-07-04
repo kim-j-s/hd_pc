@@ -32,6 +32,12 @@
 
 			.popup_inner {
 				padding-bottom: var(--padding-6);
+			
+				// 버튼 없을 시
+				&:not(:has(.popup_bottom)){
+					padding-bottom: 32px;
+				}
+				
 				.popup_cont {
 					height: auto;
 					max-height: 100%;
