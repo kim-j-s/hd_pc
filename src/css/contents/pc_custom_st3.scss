@@ -172,6 +172,13 @@
 					dd {
 						text-align: right;
 					}
+					dl.point {
+						dt,
+						dd {
+							color: inherit;
+							font-weight: 700;
+						}
+					}
 				}
 			}
 		}
