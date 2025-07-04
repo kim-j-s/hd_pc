@@ -238,6 +238,7 @@
 			flex-direction: column;
 			.space_between {
 				gap: var(--gap-5);
+				.input_text,
 				.contractNum {
 					flex: 1;
 				}
@@ -260,7 +261,8 @@
 	
 		.full_half {
 			flex-basis: 100%;
-			> div {
+			> div,
+			> ul {
 				width: calc(50% - 16px);
 			}
 		}
@@ -396,6 +398,14 @@
 		}
 	}
 
+	& > .checkbox_group_wrap:first-child {
+		justify-content: flex-end;
+			& > * {
+				flex-grow: 0;
+				min-width: 134px;
+			}
+	}
+
 
 	.form_list {
 		>li {
@@ -527,6 +537,11 @@
 	}
 	&.ty2 {
 		flex-wrap: wrap;
+	}
+}
+.inp_checkbox {
+	& + .card_item_wrap {
+		margin-top: var(--gap-5);
 	}
 }
 
