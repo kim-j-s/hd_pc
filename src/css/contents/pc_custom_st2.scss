@@ -238,6 +238,7 @@
 			flex-direction: column;
 			.space_between {
 				gap: var(--gap-5);
+				.input_text,
 				.contractNum {
 					flex: 1;
 				}
@@ -527,6 +528,11 @@
 	}
 	&.ty2 {
 		flex-wrap: wrap;
+	}
+}
+.inp_checkbox {
+	& + .card_item_wrap {
+		margin-top: var(--gap-5);
 	}
 }
 
