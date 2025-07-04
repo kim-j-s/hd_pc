@@ -453,6 +453,12 @@
 						position: absolute;
 						top: 0;
 						right: 0;
+
+						& + .form_group_wrap {
+							.label_tit {
+								padding-top:0;
+							}
+						}
 					}
 
 					.checkbox_group_wrap {
@@ -1823,6 +1829,19 @@
 	.sep_cont {
 		grid-template-columns: repeat(4, 1fr);
 		gap:var(--gap-6);
+	}
+}
+
+//검색팝업
+.popup_cont {
+	&.search_list_type2 {
+		.tab_wrap {
+			.tab_wrap_list_ty1 {
+				.tab_btn {
+					margin-top: -16px;
+				}
+			}
+		}
 	}
 }
 
