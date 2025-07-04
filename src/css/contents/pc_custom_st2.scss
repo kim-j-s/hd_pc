@@ -90,6 +90,11 @@
 			flex: 1;
 		}
 	}
+	&.center {
+		& + .btn_area.ty2 {
+			margin-top: var(--gap-5);
+		}
+	}
 }
 
 .btn_link {
@@ -121,6 +126,11 @@
 		&.center {
 			justify-content: center;
 		}
+
+		// 1개일 시, 가운데 정렬
+		// &:has(.hd_btn:only-child){
+		// 	justify-content: center;
+		// }
 	}
 	.hd_btn {
 		min-width: 160px;
@@ -614,6 +624,7 @@
 
 // list
 .list_ty3 {
+	& + .space_list_ty4,
 	& + .file_attach_box {
 		margin-top: var(--gap-8);
 	}
@@ -847,6 +858,13 @@
 .container {
 	.card_item_wrap {
 		.card_item {
+			.space_between {
+				.info_text {
+					+ .radio_group_wrap {
+						margin: 0;
+					}
+				}
+			}
 			.item_inner {
 				.inner_cont {
 					* {
@@ -920,7 +938,7 @@
 							&.df_type_w_ty2 {
 								> li {
 									.title {
-										width: 150px;
+										width: 130px;
 									}
 								}
 							}
@@ -933,11 +951,11 @@
 									}
 								}
 							}
-							&.df_type_w_ty4 {//50,150
+							&.df_type_w_ty4 {//50,130
 								> li {
 									&:nth-child(2n) {
 										.title {
-											width: 150px;
+											width: 130px;
 										}
 									}
 								}
@@ -954,22 +972,22 @@
 									}
 								}
 							}
-							&.df_type_w_ty6 {//100,150
+							&.df_type_w_ty6 {//100,130
 								> li {
 									.title {
 										width: 100px;
 									}
 									&:nth-child(2n) {
 										.title {
-											width: 150px;
+											width: 130px;
 										}
 									}
 								}
 							}
-							&.df_type_w_ty7 {//150,50
+							&.df_type_w_ty7 {//130,50
 								> li {
 									.title {
-										width: 150px;
+										width: 130px;
 									}
 									&:nth-child(2n) {
 										.title {
@@ -978,10 +996,10 @@
 									}
 								}
 							}
-							&.df_type_w_ty8 {//150,100
+							&.df_type_w_ty8 {//130,100
 								> li {
 									.title {
-										width: 150px;
+										width: 130px;
 									}
 									&:nth-child(2n) {
 										.title {
