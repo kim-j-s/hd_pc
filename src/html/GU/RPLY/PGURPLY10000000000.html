@@ -1,0 +1,321 @@
+{{#> layout/default no-sp=true page-title="보험가입 리뷰 | 이용안내"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-title="보험가입 리뷰" bc=true }}
+	<div id="container" class="container">
+		<div class="content">
+      <div class="title_view_wrap">
+        <div class="page_title">
+          <div class="p_info">보험가입 리뷰</div>
+          <h2 class="p_title">
+            <strong>생생한 가입후기</strong>를 살펴보세요</h2>
+          </h2>
+        </div>
+      </div>
+
+			<div class="tab_wrap">
+				<div class="tab_wrap_list_ty1" role="tablist">
+          {{>cp/tab_btn tb-text="자동차보험" tb-id="01" tb-active=true}}
+          {{>cp/tab_btn tb-text="장기보험" tb-id="02"}}
+          {{>cp/tab_btn tb-text="일반보험" tb-id="03"}}
+        </div>
+
+				<!-- s: 탭(1) 자동차보험-->
+				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
+          <div class="space_list_ty2">
+            {{#> cp/selectbox_pc s-class="md" s-title="상품선택" }}
+              <option value="" selected>전체</option>
+              <option value="">자동차보험(개인)</option>
+              <option value="">자동차보험(법인)</option>
+              <option value="">이륜차보험</option>
+            {{/ cp/selectbox_pc}}
+          
+            <div class="review_acc_group">
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점5점" data-score="5">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                  </div>
+                  <div class="info_area">
+                    <!-- 뱃지 색상 정의(탭 별로 클래스 추가)
+                    * 자동차보험 : c_primary
+                    * 장기보험 : c_secondary
+                    * 일반보험 : c_warning
+                    -->
+                    <span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점2점" data-score="2">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점1점" data-score="1">
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <!-- 더보기 -->
+              <div class="btn_area center view_more">
+                {{> cp/button_more}}
+              </div>
+            </div><!--//review_acc_group-->
+          </div>
+        </div>
+        <!-- e: 탭(1) 자동차보험-->
+
+				<!-- s: 탭(2) 장기보험-->
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+          <div class="space_list_ty2">
+            {{#> cp/selectbox_pc s-class="md" s-title="상품선택" }}
+              <option value="" selected>전체</option>
+              <option value="">운전자보험(장기)</option>
+              <option value="">주택화재보험(장기)</option>
+              <option value="">건강보험</option>
+              <option value="">암보험</option>
+              <option value="">실손보험</option>
+              <option value="">연금보험(유)</option>
+              <option value="">어린이보험</option>
+              <option value="">어린이치아보험</option>
+              <option value="">우리펫보험</option>
+              <option value="">사업장화재보험</option>
+              <option value="">전환형실손</option>
+            {{/ cp/selectbox_pc}}
+            <div class="review_acc_group">
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점2점" data-score="2">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_secondary size_m c_tab02">운전자보험(3년이상)</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점4점" data-score="4">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_secondary size_m c_tab02">어린이치아보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점5점" data-score="5">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_secondary size_m c_tab02">우리펫보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <!-- 더보기 -->
+              <div class="btn_area center view_more">
+                {{> cp/button_more}}
+              </div>
+            </div><!--//review_acc_group-->
+          </div>
+        </div>
+				<!-- e: 탭(2) 장기보험-->
+
+				<!-- s: 탭(3) 일반보험-->
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+          <div class="space_list_ty2">
+            {{#> cp/selectbox_pc s-class="md" s-title="상품선택" }}
+              <option value="" selected>전체</option>
+              <option>해외여행보험</option>
+              <option>장기체류보험</option>
+              <option>국내여행보험</option>
+              <option>골프보험</option>
+              <option>하이펫보험</option>
+              <option>풍수해·지진재해보험(주택)</option>
+              <option>풍수해·지진재해보험(소상공인)</option>
+            {{/ cp/selectbox_pc}}
+            <div class="review_acc_group">
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점3점" data-score="3">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_warning size_m c_tab03">해외여행보험</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점1점" data-score="1">
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_warning size_m c_tab03">풍수해·지진재해보험(주택)</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <div class="review_acd_item">
+                <button type="button" class="acd_btn" aria-expanded="true"></button>
+                <div class="inner">
+                  <div class="review_star_item" aria-label="별점2점" data-score="2">
+                    <span class="star on"></span>
+                    <span class="star on"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                  </div>
+                  <div class="info_area">
+                    <span class="hd_badge outline solid_pastel c_warning size_m c_tab03">풍수해·지진재해보험(주택)</span>
+                    <span class="meta">김*대</span>
+                    <span class="meta">50대</span>
+                    <span class="meta">남성</span>
+                    <span class="meta">2025.01.01</span>
+                  </div>
+                  <div class="review_cont">
+                    리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.리뷰 내용 노출. 리뷰 내용 2줄까지 노출 길어지면 말줄임.
+                  </div>
+                </div>
+              </div>
+              <!-- 더보기 -->
+              <div class="btn_area center view_more">
+                {{> cp/button_more}}
+              </div>
+            </div><!--//review_acc_group-->
+          </div>
+        </div>
+				<!-- e: 탭(3) 일반보험-->
+			</div>
+			<!-- //tab_wrap -->
+		</div>
+		<!-- // content -->
+	</div>
+	<!-- // container -->
+
+  <!-- footer -->
+  {{> layout/footer }}
+  <!-- footer -->
+</div>
+
+<!-- s: popup area -->
+ 	<!-- s: 일반 보험 - 분류 선택 팝업 -->
+  {{#> popup/popup_bottom popup-id="pop_type03" popup-title="상품 선택"}}
+    <div class="popup_cont">
+     <div class="popup_content">
+       <div class="opt_select_list opt_case3">
+         
+      </div>
+      </div>
+    </div>
+  {{/ popup/popup_bottom}}
+  <!-- e: 일반 보험 - 분류 선택 팝업 -->
+<!-- e: popup area -->
+{{/ layout/default }}
+
+
