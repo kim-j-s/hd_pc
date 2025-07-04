@@ -92,7 +92,7 @@
 						<div class="summery_inner center">
 							<div class="total_wrap">
 								<div class="value">
-									<div class="val_price">768,693<span class="text">원</span></div>
+									<div class="val_price point">768,693<span class="text">원</span></div>
 								</div>
 							</div>
 							<div class="detail_wrap">
@@ -101,7 +101,7 @@
 										<dt>총 보험료</dt>
 										<dd><strong>995,543 원</strong></dd>
 									</dl>
-									<dl>
+									<dl class="point">
 										<dt>전계약 마일리지 환급금</dt>
 										<dd>-186,850 원</dd>
 									</dl>
@@ -116,6 +116,7 @@
 											</div>
 										</dd>
 									</dl>
+									<!-- s: 법인만 제외 -->
 									<dl>
 										<dt>블루/기아멤버스 포인트</dt>
 										<dd>-30,000 원</dd>
@@ -124,6 +125,7 @@
 										<dt>하이헬스 챌린지 포인트</dt>
 										<dd>-10,000 원</dd>
 									</dl>
+									<!-- e: 법인만 제외 -->
 								</div>
 							</div>
 						</div>
@@ -135,7 +137,13 @@
 						</a>
 					</div>
 					<div class="tab_wrap">
-						<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">신용카드</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">간편결제</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel03" id="tab03">즉시이체</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel04" id="tab04">가상계좌</button></div>
+						<div class="tab_wrap_list_ty1" role="tablist">
+							<button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">신용카드</button>
+							<!-- s: 법인만 제외 -->
+							<button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">간편결제</button>
+							<!-- e: 법인만 제외 -->
+							<button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel03" id="tab03">즉시이체</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel04" id="tab04">가상계좌</button>
+						</div>
 
 						<!-- 신용(앱)카드 -->
 						<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
@@ -220,6 +228,7 @@
 									</ul>
 								</div>
 							</div>
+							<!-- s: 법인만 제외 -->
 							<div class="divider_ty1"></div>
 							<h3 class="title_h3">제휴포인트 사용여부</h3>
 							<div class="form_group_wrap">
@@ -385,6 +394,7 @@
 								<li>비밀번호 3회 오류 시 블루멤버스 고객센터(080-600-6000)로 연락하시어 비밀번호 재설정 후 결제 진행이 가능합니다.</li>
 							</ul>
 							<!-- e: 블루/기아멤버스 -->
+							<!-- e: 법인만 제외 -->
 							<!-- s: 법인만 -->
 							<div class="divider_ty1"></div>
 							<h3 class="title_h3">카드인증 전자서명 동의</h3>
@@ -432,7 +442,7 @@
 							<!-- e: 법인만 -->
 						</div>
 
-						<!-- 간편결제 -->
+						<!-- 간편결제 - 법인만 제외 -->
 						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
 							<h3 class="title_h3">간편 결제 정보 입력</h3>
 							<div class="radio_group_wrap" role="radiogroup">

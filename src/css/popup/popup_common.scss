@@ -63,11 +63,6 @@
 			box-sizing: border-box;
 			padding-bottom: 8px;
 			border-radius: var(--radius-xlarge2);
-			
-			// 버튼 없을 시
-			&:not(:has(.popup_bottom)){
-				padding-bottom: 32px;
-			}
 
 			.popup_head {
 				// min-height: 52px;

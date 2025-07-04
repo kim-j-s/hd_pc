@@ -453,6 +453,12 @@
 						position: absolute;
 						top: 0;
 						right: 0;
+
+						& + .form_group_wrap {
+							.label_tit {
+								padding-top:0;
+							}
+						}
 					}
 
 					.checkbox_group_wrap {
@@ -1826,16 +1832,20 @@
 	}
 }
 
-//검색팝업
+//팝업 탭 스티키일 경우
 .popup_cont {
-	&.search_list_type2 {
-		.tab_wrap {
-			.tab_wrap_list_ty1 {
+	.tab_wrap {
+		.tab_wrap_list_ty1 {
+			&.sticky_fix {
 				.tab_btn {
 					margin-top: -16px;
 				}
 			}
 		}
 	}
+}
+
+.sns_box {
+	margin-bottom: 16px;
 }
 
