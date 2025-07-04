@@ -238,6 +238,7 @@
 			flex-direction: column;
 			.space_between {
 				gap: var(--gap-5);
+				.input_text,
 				.contractNum {
 					flex: 1;
 				}
@@ -536,6 +537,11 @@
 	}
 	&.ty2 {
 		flex-wrap: wrap;
+	}
+}
+.inp_checkbox {
+	& + .card_item_wrap {
+		margin-top: var(--gap-5);
 	}
 }
 
@@ -1842,17 +1848,34 @@
 }
 
 //팝업 탭 스티키일 경우
-.popup_cont {
-	.tab_wrap {
-		.tab_wrap_list_ty1 {
-			&.sticky_fix {
-				.tab_btn {
-					margin-top: -16px;
+.popup_wrap {
+	.popup_container  {
+		.popup_inner {
+			.popup_cont {
+				//직업검색
+				&.search_list_type2 {
+					padding-top:0;
+					.tab_wrap {
+						.tab_wrap_list_ty1 {
+							&.sticky_fix {
+								top: 0;
+							}
+						}
+					}
+				}
+
+				.tab_wrap {
+					.tab_wrap_list_ty1 {
+						&.sticky_fix {
+							top: -16px;
+						}
+					}
 				}
 			}
 		}
 	}
 }
+
 
 .sns_box {
 	margin-bottom: 16px;
