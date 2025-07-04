@@ -172,6 +172,13 @@
 					dd {
 						text-align: right;
 					}
+					dl.point {
+						dt,
+						dd {
+							color: inherit;
+							font-weight: 700;
+						}
+					}
 				}
 			}
 		}
@@ -600,7 +607,7 @@
 		appearance: none;
 		&:disabled {
 			border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
-			background: var(--color-input-surface-disabled);
+			background-color: var(--color-input-surface-disabled);
 		}
 		&.default {
 			color: var(--color-text-disabled);
@@ -1445,18 +1452,9 @@
  
 //폼 - 연락처
 .form_group_wrap {
-	.row {
-		&.phone_case {
-			.select_option_box {
-				min-width: 100px;
-				max-width: 102px;
-				& +  .input_text  {
-				margin-top: 0
-				}			
-			}
-			.input_text  {
-				flex: 1;  
-			}
+	.full_half {
+		.form_line.fix_w_case02 {
+			width: 102px;;
 		}
 	}
 }
