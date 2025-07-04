@@ -24,27 +24,38 @@
 						<div class="label_tit">사업자번호</div>
 						{{> cp/text placeholder="사업자번호 입력" inp-title="사업자번호 입력" value="123-45-67890" readonly=true}}
 					</div>
+
 					
 					<div class="form_line full_half">
 						<div class="label_tit">연락처</div>
-						<div class="row phone_case">
-							{{#> cp/selectbox_pc s-title="연락처 선택" }}
-								<option value="" selected>휴대폰</option>
-								<option value="">집</option>
-							{{/ cp/selectbox_pc}}
+						<div class="row">
+							<div class="form_line fix_w_case02">
+									{{#> cp/selectbox_pc s-title="연락처 선택" }} 
+											<option value="" selected>휴대폰</option>
+											<option value="">집</option>
+									{{/ cp/selectbox_pc}}
+							</div>
 							<!-- CASE2. 집 or 직장 선택 시 노출 -->
-							<!-- {{#> cp/selectbox_pc s-title="지역번호 선택" }}
-								<option value="" selected>02</option>
-								<option value=""></option>
-							{{/ cp/selectbox_pc}} -->
+							<!-- <div class="form_line fix_w_case02">
+								{{#> cp/selectbox_pc s-title="국번 선택 선택" }} 
+									<option value="" selected>02</option>
+									<option value="">031</option>
+									<option value="">032</option>
+									<option value="">053</option>
+								{{/ cp/selectbox_pc}}
+							</div> -->
 							<!-- CASE2. 집 or 직장 선택 시 노출 -->
-							{{> cp/text type="tel" placeholder="-없이 숫자만 입력" inp-title="휴대폰번호 입력" }}
+							<div class="form_line grow">
+									{{> cp/text type="tel" placeholder="-없이 숫자만 입력" inp-title="휴대폰번호 입력" }}
+							</div>
 						</div>
 					</div>
-					<div class="form_line full_half">
+					<div class="form_line ">
 						<div class="label_tit">이메일</div>
 						{{> cp/text type="email" inpclass="email_auto" inp-title="이메일 입력" placeholder="이메일 입력" }}
 					</div>
+			
+					
 					 
 					<div class="form_line full">
 						<div class="label_tit">주소</div>

@@ -1826,3 +1826,16 @@
 	}
 }
 
+//검색팝업
+.popup_cont {
+	&.search_list_type2 {
+		.tab_wrap {
+			.tab_wrap_list_ty1 {
+				.tab_btn {
+					margin-top: -16px;
+				}
+			}
+		}
+	}
+}
+

@@ -30,13 +30,19 @@
 				    {{> cp/text class="phone" type="tel" placeholder="-없이 숫자만 입력" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
                 </div>
                 <!-- e: 휴대폰 -->
+
                 <!-- s: 집 -->
-                <div class="row">
+                <div class="row phone_case">
                     <div class="form_line fix_w_case02">
-                        {{> cp/selectitem si_popup="pop_type01" si_ph="국번 선택" si_item="02" si_title="국번 선택" }}
+                        {{#> cp/selectbox_pc s-title="국번 선택 선택" }} 
+                            <option value="" selected>02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                            <option value="">053</option>
+                        {{/ cp/selectbox_pc}}
                     </div>
                     <div class="form_line grow">
-                        {{> cp/text type="tel" placeholder="-없이 숫자만 입력" maxlength="8" inp-title="집번호 입력" }}
+                        {{> cp/text type="tel" placeholder="-없이 숫자만 입력" inp-title="휴대폰번호 입력" }}
                     </div>
                 </div>
                 <!-- e: 집 -->
@@ -69,8 +75,8 @@
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="3" size="1" b-text="홈으로" }}
-		{{> cp/button type="1" size="1" b-text="계속 진행하기"}}
+		{{> cp/button type="3" size="2" b-text="홈으로" }}
+		{{> cp/button type="1" size="2" b-text="계속 진행하기"}}
 	</div>
 </div>
 {{/ popup/popup_full}}
