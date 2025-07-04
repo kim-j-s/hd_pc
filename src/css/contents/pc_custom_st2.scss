@@ -1849,33 +1849,34 @@
 
 //팝업 탭 스티키일 경우
 .popup_wrap {
-	.popup_container  {
+	.sticky_fix {
+		z-index: 11;
+	}
+
+	.popup_container {
 		.popup_inner {
 			.popup_cont {
-				//직업검색
+				// 직업검색
 				&.search_list_type2 {
-					padding-top:0;
+					padding-top: 0;
+
 					.tab_wrap {
-						.tab_wrap_list_ty1 {
-							&.sticky_fix {
-								top: 0;
-							}
+						.tab_wrap_list_ty1.sticky_fix {
+							top: 0;
 						}
 					}
 				}
 
 				.tab_wrap {
-					.tab_wrap_list_ty1 {
-						&.sticky_fix {
-							top: -16px;
-						}
+					.tab_wrap_list_ty1.sticky_fix,
+					.tab_scroll_box_ty1.sticky_fix {
+						top: -16px;
 					}
 				}
 			}
 		}
 	}
 }
-
 
 .sns_box {
 	margin-bottom: 16px;

@@ -3,9 +3,11 @@
 <!-- s: 안전운전 할인특약 할인율 bottom 팝업 -->
 {{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="안전운전 할인특약 할인율"}}
 <div class="popup_cont">
+	
 	<div class="popup_content">
 		<div class="tab_wrap">
-			<div class="tab_scroll_box_ty1">
+			<!-- s: 25-07-07 수정 -->
+			<div class="tab_scroll_box_ty1 sticky_fix">
 				<div class="tab_wrap_list_ty1 scroll" role="tablist">
 					{{>cp/tab_btn tb-text="커넥티드카" tb-id="01" tb-active=true}}
 					{{>cp/tab_btn tb-text="TMAP" tb-id="02"}}
@@ -13,6 +15,7 @@
 					{{>cp/tab_btn tb-text="커넥티드 블랙박스" tb-id="04"}}
 				</div>
 			</div>
+			<!-- e: 25-07-07 수정 -->
 			<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
 				<div class="info_cont">
 					<h2>특약상세정보</h2>
@@ -481,6 +484,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
