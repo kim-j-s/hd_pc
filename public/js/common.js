@@ -852,8 +852,8 @@ $(function(){
 	});
 
 
-	let $lastCalendarCallBtn = null;	
 	// 달력 호출
+	let $lastCalendarCallBtn = null;
 	$.datepicker.setDefaults({
 		dateFormat: 'yy.mm.dd',
 		prevText: '이전 달',
