@@ -852,8 +852,8 @@ $(function(){
 	});
 
 
-	let $lastCalendarCallBtn = null;	
 	// 달력 호출
+	let $lastCalendarCallBtn = null;
 	$.datepicker.setDefaults({
 		dateFormat: 'yy.mm.dd',
 		prevText: '이전 달',
@@ -876,15 +876,21 @@ $(function(){
 		// 닫기 버튼 추가
 
 		beforeShow: function () { 
-			// $("body").append('<div class="modal_backdrop"></div>');
+			$("body").addClass('modal_open');
 			setTimeout(function(){
-				$("body").addClass('modal_open');
-			},50);
+				// 이전/다음 버튼 tabindex 부여
+				const $dp = $("#ui-datepicker-div");
+				$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
+			}, 50);
 		},
-		onClose: function() { 
-			// setTimeout(function(){
-			// 	$('.modal_backdrop').remove();
-			// },200);
+		onChangeMonthYear: function(year, month, inst) {
+			// 월 변경 후에도 tabindex 재설정 필요
+			setTimeout(function() {
+				const $dp = $("#ui-datepicker-div");
+				$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
+			}, 0);
+		},
+		onClose: function() {
 			$("body").removeClass('modal_open');
 			// 호출했던 버튼으로 포커스 복귀
 			if ($lastCalendarCallBtn) {
@@ -894,17 +900,6 @@ $(function(){
 	});
 
 	$(".inp_picker").datepicker();
-
-
-	// $(".calendar_call").on("click", function (e) {
-	// 	e.preventDefault(); // 기본 동작 방지
-	// 	const $input = $(this).siblings(".inp_picker");
-	// 	$input.attr("readonly", true); // readonly 속성 추가	
-	// 	$input.datepicker("show");
-	// 	setTimeout(function(){
-	// 		$input.attr("readonly", false); // readonly 속성 제거
-	// 	}, 500);
-	// });
 
 	$(".calendar_call").on("click", function (e) {
 		e.preventDefault();

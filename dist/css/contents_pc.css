@@ -391,6 +391,7 @@ body {
 .wrap .form_group_wrap.full .space_between {
 	gap: var(--gap-5);
 }
+.wrap .form_group_wrap.full .space_between .input_text,
 .wrap .form_group_wrap.full .space_between .contractNum {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
@@ -409,7 +410,8 @@ body {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 }
-.wrap .form_group_wrap .full_half > div {
+.wrap .form_group_wrap .full_half > div,
+.wrap .form_group_wrap .full_half > ul {
 	width: calc(50% - 1.6rem);
 }
 .wrap .form_group_wrap .full {
@@ -503,6 +505,17 @@ body {
 }
 .notification .title_view_wrap + .checkbox_group_wrap > *,
 .notification .title_view_wrap + .btn_area > * {
+	-webkit-box-flex: 0;
+	-ms-flex-positive: 0;
+	flex-grow: 0;
+	min-width: 13.4rem;
+}
+.notification > .checkbox_group_wrap:first-child {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.notification > .checkbox_group_wrap:first-child > * {
 	-webkit-box-flex: 0;
 	-ms-flex-positive: 0;
 	flex-grow: 0;
@@ -624,6 +637,9 @@ body {
 .checkbox_group_wrap.ty2 {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+.inp_checkbox + .card_item_wrap {
+	margin-top: var(--gap-5);
 }
 .title_h4 + .form_group_wrap.ty3 {
 	margin-top: 1.6rem;
@@ -1481,8 +1497,17 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--gap-6);
 }
-.popup_cont.search_list_type2 .tab_wrap .tab_wrap_list_ty1 .tab_btn {
-	margin-top: -1.6rem;
+.popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 {
+	padding-top: 0;
+}
+.popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap .tab_wrap_list_ty1.sticky_fix {
+	top: 0;
+}
+.popup_wrap .popup_container .popup_inner .popup_cont .tab_wrap .tab_wrap_list_ty1.sticky_fix {
+	top: -1.6rem;
+}
+.sns_box {
+	margin-bottom: 1.6rem;
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/

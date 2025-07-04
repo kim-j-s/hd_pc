@@ -67,7 +67,7 @@
 					<div class="popup_head"><div class="popup_head_title">직업 검색</div></div>
 					<div class="popup_cont search_list_type2">
 						<div class="tab_wrap">
-							<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel01" id="tab01">검색어로 찾기</button> <button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel02" id="tab02">분류로 찾기</button></div>
+							<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel01" id="tab01">검색어로 찾기</button> <button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel02" id="tab02">분류로 찾기</button></div>
 
 							<!-- s: tab01. 검색어로 찾기 Tab 내용 -->
 							<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
@@ -156,27 +156,39 @@
 							<div class="tab_wrap_content has_scroll active" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
 								<div class="form_group_wrap">
 									<div class="form_line">
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="직업 대분류 선택" onclick="openHDPopup(this,'pop_type02');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="대분류를 선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="직업 대분류 선택" class="selectbox">
+												<option value="default" hidden>대분류</option>
+												<option value="">관리직(사무직)</option>
+												<option value="">전문가 및 관련 종사자</option>
+												<option value="">사무 종사자</option>
+												<option value="">서비스종사자</option>
+												<option value="">판매 종사자</option>
+												<option value="">농림어업 숙련 종사자</option>
+												<option value="">기능원 및 관련 기능 종사자</option>
+												<option value="">장치·기계조작 및 조립 종사자</option>
+												<option value="">단순노무종사자</option>
+												<option value="">군인</option>
+												<option value="">주부학생및기타비경제활동인구</option>
+											</select>
 										</div>
 									</div>
 									<div class="form_line">
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="직업 정분류 선택" onclick="openHDPopup(this,'pop_type02');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="중분류를 선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="직업 정분류 선택" class="selectbox" disabled>
+												<option value="default" hidden>중분류 선택</option>
+												<option value="">선택 옵션값 1</option>
+												<option value="">선택 옵션값 2</option>
+											</select>
 										</div>
 									</div>
 									<div class="form_line">
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="직업 소분류 선택" onclick="openHDPopup(this,'pop_type02');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="대분류를 선택해주세요."></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<div class="select_option_box">
+											<select name="" id="" title="직업 소분류 선택" class="selectbox" disabled>
+												<option value="default" hidden>소분류 선택</option>
+												<option value="">선택 옵션값 1</option>
+												<option value="">선택 옵션값 2</option>
+											</select>
 										</div>
 									</div>
 								</div>

@@ -70,9 +70,6 @@
 	padding-bottom: 0.8rem;
 	border-radius: var(--radius-xlarge2);
 }
-.popup_wrap .popup_container .popup_inner:not(:has(.popup_bottom)) {
-	padding-bottom: 3.2rem;
-}
 .popup_wrap .popup_container .popup_inner .popup_head {
 	min-height: 6.4rem;
 	padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
@@ -305,6 +302,9 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner {
 	padding-bottom: var(--padding-6);
 }
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.popup_bottom)) {
+	padding-bottom: 3.2rem;
+}
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont {
 	height: auto;
 	max-height: 100%;
@@ -455,6 +455,9 @@
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner {
 	max-height: calc(100% - 2rem);
 	height: auto;
+}
+.popup_wrap.popup_wrap_type3 .popup_container .popup_inner:not(:has(.popup_bottom)) {
+	padding-bottom: 3.2rem;
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_head .popup_head_title {
 	padding-right: 4rem;
