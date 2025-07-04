@@ -55,6 +55,7 @@
 			</div>
 			<!-- e: 25-07-04 추가 -->
 
+			<!-- s: 25-07-04 수정 -->
 			<div class="divider_ty1"></div>
 			<div class="form_box">
 				<h3 class="title_h3">필수 확인 사항</h3>
@@ -115,29 +116,33 @@
 						</ul>
 					</div>
 				</div>
+			</div>
 				
-				<!-- s: 25-07-04 추가 -->
-				<div class="divider_ty1"></div>
+			<div class="divider_ty1"></div>
+			<div class="form_box">
 				<!-- s: 장애인전용보험전환특약 가입대상여부 확인 -->
 				<h3 class="title_h3">장애인전용보험전환특약 대상 여부</h3>
 				<div class="form_group_wrap">
 					<div class="form_line full_half">
 						<div class="label_tit">
-							「소득세법」에서 규정한 장애인 전용보험전환특약 가입대상인가요? (피보험자가 「소득세법」에서 규정한 장애인인 경우 가입이 가능하며, 특약 가입 시 입증 서류가 필요합니다.)
+							「소득세법」에서 규정한 장애인 전용보험전환특약 가입대상인가요?
 						</div>
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype03_01" name="checktype03" labelname="예" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype03_02" name="checktype03" labelname="아니요" }}
 						</div>
+						<ul class="list_ty2">
+							<li>피보험자가 「소득세법」에서 규정한 장애인인 경우 가입이 가능하며, 특약 가입 시 입증 서류가 필요합니다. </li>
+						</ul>
 					</div>
-					<div class="form_line full_half">
+					<div class="form_line">
 						<div class="label_tit">장애유형</div>
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype04_01" name="checktype04" labelname="영구 장애" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype04_02" name="checktype04" labelname="한시 장애" }}
 						</div>
 					</div>
-					<div class="form_line full_half">
+					<div class="form_line">
 						<div class="label_tit">장애기간</div>
 						<div class="range_calrendar">
 							{{> cp/text cal=true placeholder="날짜 선택" }}
@@ -206,7 +211,6 @@
 					<!-- e: 이미지 파일 버튼 -->
 				</div>
 				<!-- e: 장애인전용보험전환특약 가입대상여부 확인 -->
-				<!-- e: 25-07-04 추가 -->
 
 				<div class="checkbox_group_wrap column">
 					{{> cp/checkbox checkbox_class="rd_box question" id="checkbox01-1" label_class="chk_label_ty3 check_hide"
@@ -238,17 +242,18 @@
 						</dl>
 					</div>
 				</div>
-
-				<!-- s: 하단 버튼 영역 -->
-				<div class="bottom_fix_wrap">
-					<div class="btn_area">
-						{{> cp/button type="3" size="1" b-text="이전" }}
-						{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
-						<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
-					</div>
-				</div>
-				<!-- s: 하단 버튼 영역 -->
 			</div>
+			<!-- e: 25-07-04 수정 -->
+
+			<!-- s: 하단 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
+				</div>
+			</div>
+			<!-- s: 하단 버튼 영역 -->
 
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active=true }}
