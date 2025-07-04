@@ -600,7 +600,7 @@
 		appearance: none;
 		&:disabled {
 			border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
-			background: var(--color-input-surface-disabled);
+			background-color: var(--color-input-surface-disabled);
 		}
 		&.default {
 			color: var(--color-text-disabled);
