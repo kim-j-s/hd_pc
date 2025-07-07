@@ -1,18 +1,26 @@
 {{#> layout/default page-title="계약조회 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="손비처리용보험료납입증명서" }}
+	{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<p class="text_sub">
-					발급할 계약을 선택해주세요.
-				</p>
-                <div class="selectitem_wrap">
-                    {{> cp/selectitem si_class="select_item_case01_mi" si_ph="선택해주세요." si_title="조회기간 선택" si_item="2024.03~2025.03" si_popup="pop_type01"}}
-                </div>
-                <div class="btn_area">
-                    {{> cp/button type="2" size="2" b-text="조회"}}
-                </div>
-                <div class="divider_ty1"></div>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>손비처리용보험료납입증명서</strong>
+						</h2>
+						<div class="sub_desc">
+							발급할 계약을 선택해주세요.
+						</div>
+					</div>
+				</div>
+
+				<div class="selectitem_wrap row_ty2">
+					{{> cp/selectitem si_class="select_item_case01_mi" si_ph="선택해주세요." si_title="조회기간 선택" si_item="2024.03~2025.03" si_popup="pop_type01"}}
+					{{> cp/button type="2" size="2" b-text="조회"}}
+				</div>
+			
+
+				<div class="divider_ty1"></div>
 				<div class="card_item_wrap ty3">
 					<div class="card_item">
 						<div class="item_inner">
@@ -20,12 +28,11 @@
 								<div role="button" class="card_link" tabindex="0">
 									<div class="item_top">
 										<div class="title_info">
-											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)
-                                            </div>
+											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)</div>
 										</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty5">
 									<li>
 										<div class="title">계약번호</div>
 										<div class="cont">L2021****123</div>
@@ -48,12 +55,11 @@
 								<div role="button" class="card_link" tabindex="0">
 									<div class="item_top">
 										<div class="title_info">
-											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)
-                                            </div>
+											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501) </div>
 										</div>
 									</div>
 								</div>
-								<ul class="card_list_ty1">
+								<ul class="card_list_ty1 df_type_w_ty5">
 									<li>
 										<div class="title">계약번호</div>
 										<div class="cont">L2021****123</div>
@@ -69,10 +75,6 @@
 								</ul>
 							</div>
 						</div>
-					</div>
-					
-					<div class="btn_area center view_more">
-						{{> cp/button_more}}
 					</div>
 				</div>
 
@@ -81,40 +83,46 @@
 					{{> cp/icon iconClass="exclamationSvg"}}
 
 					<p>발급 가능한 보험증권이 없어요</p>
-                    <p class="desc tac">
-                        혹시 계약자와 피보험자가 다른가요?<br>
-                        이 경우 피보험자는 보험증권을 발급할 수 없어요.
-                    </p>
+					<p class="desc tac">
+						혹시 계약자와 피보험자가 다른가요?<br>
+						이 경우 피보험자는 보험증권을 발급할 수 없어요.
+					</p>
 				</div>
 				<!-- e: 조회 내역이 없는 경우 -->
+
+				<!-- s: 조회 내역이 없는 경우에만 노출 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="홈으로"  }}
+					</div>
+				</div>
+				<!-- e: 조회 내역이 없는 경우에만 노출 -->
+
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active=true }}
 					<ul class="list_depth">
 						<li>이용대상 및 조건 
-                            <ul>
-                                <li>인터넷 가입 계약자만 이용할 수 있습니다.</li>
-                                <li>재물성 장기보험, 고용인(직원)이 피보험자인 장기보험에 해당해야 합산증명서, 월별 증명서를 발급할 수 있습니다.</li>
-                            </ul>
-                        </li>
+							<ul>
+								<li>인터넷 가입 계약자만 이용할 수 있습니다.</li>
+								<li>재물성 장기보험, 고용인(직원)이 피보험자인 장기보험에 해당해야 합산증명서, 월별 증명서를 발급할 수 있습니다.</li>
+							</ul>
+						</li>
 						<li>발급 시 유의사항
-                            <ul>
-                                <li>기타 보험료는 납입보험료 중 저축보험료를 제외한 부분으로 위험보장 및 사업비 재원이 되는 금액입니다.(법인인 경우 손금산입 대상 금액)</li>
-                                <li>팝업이 차단돼 있을 경우 증명서가 보이지 않을 수 있습니다. 팝업 차단을 해제하고 다시 발급해주세요.</li>
-                                <li>자세한 내용은 대표 고객센터(1588-5656, 평일 09:00~18:00)로 문의해주세요.</li>
-                            </ul>
-                        </li>
+								<ul>
+										<li>기타 보험료는 납입보험료 중 저축보험료를 제외한 부분으로 위험보장 및 사업비 재원이 되는 금액입니다.(법인인 경우 손금산입 대상 금액)</li>
+										<li>팝업이 차단돼 있을 경우 증명서가 보이지 않을 수 있습니다. 팝업 차단을 해제하고 다시 발급해주세요.</li>
+										<li>자세한 내용은 대표 고객센터(1588-5656, 평일 09:00~18:00)로 문의해주세요.</li>
+								</ul>
+						</li>
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
 			</div>
-		</div>
-		<!-- s: 조회 내역이 없는 경우에만 노출 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="홈으로"  }}
-			</div>
-		</div>
-		<!-- e: 조회 내역이 없는 경우에만 노출 -->
+		</div>		
+
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

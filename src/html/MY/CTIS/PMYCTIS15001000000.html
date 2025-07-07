@@ -2,15 +2,21 @@
 {{#> layout/default page-title="보험계약대출증명서 | 마이페이지"}}
 <!-- e: 25-05-19 수정 -->
 	<div id="wrap" class="wrap">
-		<!-- s: 25-05-19 수정 -->
-		{{> layout/header h-title="보험계약대출증명서" }}
-		<!-- e: 25-05-19 수정 -->
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: 25-06-25 추가 -->
-				<p class="text_sub">발급할 증명서를 선택해주세요</p>
-				<!-- e: 25-06-25 추가 -->
-				<ul class="opt_select_list opt_case5">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>보험계약대출증명서</strong>
+						</h2>
+						<div class="sub_desc">
+							발급할 증명서를 선택해주세요
+						</div>
+					</div>
+				</div>
+			
+				<ul class="opt_select_list opt_case5 grid">
 					<li>
 						<a href="#" class="option" title="페이지 이동">
 							<span class="opi_t1">거래내역증명서</span>
@@ -56,7 +62,9 @@
 			<!-- // container -->
 		</div>
 
-		
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
