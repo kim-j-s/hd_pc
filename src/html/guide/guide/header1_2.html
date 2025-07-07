@@ -8,24 +8,15 @@
 					<h2 class="title_h2">
 						<strong>헤더 1</strong>
 
-						<style>
-							.bxbx {
-								width: 20px;
-								height: 20px;
-							}
-						</style>
-
-						<div class="bxbx">
-							<lottie-player id="time_out_lottie" src="../../../json/time_logout.jso" background="transparent" speed="1"></lottie-player>
-						</div>
-
+						<br><br>
+						<p class="title_h2">타임아웃 동작</p>
 						<br><br>
 
 						<button id="playBtn">▶ 재생</button>
 						<button id="stopBtn">⏹ 초기화(정지)</button>
 
 						<script>
-							const lottie = document.getElementById('time_out_lottie');						
+							const lottie = document.getElementById('time_out_lottie');
 							document.getElementById('playBtn').addEventListener('click', () => {
 								lottie.play(); // 재생
 							});
