@@ -1,0 +1,111 @@
+{{#> layout/default no-sp=true page-title="제휴혜택 | 상품"}}
+
+
+<!-- s: Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="우수정비업체 검색"}}
+<div class="popup_cont search_list_type2">
+
+    <div class="selectitem_wrap">
+			<!-- s: 25-07-01 수정 -->
+			{{> cp/selectitem si_class="select_item_case01" si_ph="시/도 선택" si_title="시/도 선택" si_item="시/도 선택" si_popup="pop_type01_1"}}
+			{{> cp/selectitem si_class="select_item_case01" si_ph="시/군/구 선택" si_title="시/군/구 선택" si_item="시/군/구 선택" si_popup="pop_type01_2"}}
+			<!-- e: 25-07-01 수정 -->
+		</div>
+    <div class="search_inp_box">
+        {{> cp/text inp-search=true placeholder="엽체명을 입력해 주세요." inp-title="검색어 입력" }}	
+    </div>
+
+    <div class="search_result_count">
+        <p>검색결과 <strong class="point">2</strong>건</p>
+    </div>
+    <div class="search_reult_list_container">
+        <ul class="search_reult_list">
+            <li class="search_reult_list_item">
+                <a href="#">
+                    <strong>진양자동차공업사</strong>
+                    <div class="sub_text">
+                        서울 강남구 삼성동 **
+                    </div>
+                    <i class="sub_text">02-123-4567
+                    </i>
+                </a>
+            </li>
+            <li class="search_reult_list_item">
+                <a href="#">
+                    <strong>진양자동차공업사</strong>
+                    <div class="sub_text">
+                        서울 강남구 삼성동 **
+                    </div>
+                    <i class="sub_text">02-123-4567
+                    </i>
+                </a>
+            </li>
+            <li class="search_reult_list_item">
+                <a href="#">
+                    <strong>진양자동차공업사</strong>
+                    <div class="sub_text">
+                        서울 강남구 삼성동 **
+                    </div>
+                    <i class="sub_text">02-123-4567
+                    </i>
+                </a>
+            </li>
+            <li class="search_reult_list_item">
+                <div class="no_list_area">
+                    {{> cp/icon iconClass="exclamationSvg"}}
+                    <p>내역이 없어요</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: Full 팝업 -->
+
+<!-- s: popup area -->
+ 	<!-- s: 25-07-01 수정 -->
+	<!-- s: 시/도 선택 -->
+	{{#> popup/popup_bottom popup-id="pop_type01_1" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<div class="opt_select_list opt_case3">
+				<div role="button" tabindex="0" class="option"><span class="text">시/도 선택</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">서울</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">경기</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">강원</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">경님</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">경북</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">광주</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">대구</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">대전</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">부산</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">세종</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">울산</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">인천</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">전남</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">전북</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">제주</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">충남</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">충북</span></div>
+			</div>
+		</div>
+	</div>
+	{{/ popup/popup_bottom}}
+	<!-- e: 시/도 선택 -->
+	<!-- s: 시/군/구 선택 -->
+	{{#> popup/popup_bottom popup-id="pop_type01_2" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<div class="opt_select_list opt_case3">
+				<div role="button" tabindex="0" class="option"><span class="text">시/군/구 선택</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">강남구</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">강동구</span></div>
+				<div role="button" tabindex="0" class="option"><span class="text">강북구</span></div>
+			</div>
+		</div>
+	</div>
+	{{/ popup/popup_bottom}}
+	<!-- e: 시/도 선택 -->
+ 	<!-- e: 25-07-01 수정 -->
+<!-- e: popup area -->
+{{/ layout/default }}
