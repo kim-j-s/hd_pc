@@ -901,8 +901,8 @@
 		}  
 		.bubble_msg {
 			position: relative;
-			flex: 1;
-			margin-right: 161px;
+			flex: 1;  
+			margin-right: 156px;//161px;
 			padding: var(--padding-3) var(--padding-6);
 			background-color: var(--color-element-primary-lighter);
 			text-align: center;
@@ -1460,3 +1460,23 @@
 }
 
 
+//게시판형태_PC
+.view_wrap {
+	.view_cont + .btn_area {
+		margin-top: var(--gap-5);
+
+		& + .view_navigation {
+			margin-top: var(--gap-11);
+		}
+
+		& > .hd_btn {
+			min-width: 120px;
+		}
+	}
+}
+
+
+.vod_preview {
+	max-width: 560px;
+	margin: 0 auto;
+}

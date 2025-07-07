@@ -1,20 +1,22 @@
 {{#> layout/default no-sp=true page-title="공지사항 | 이용안내"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="공지사항" }}
+	{{> layout/header_pc h-title="공지사항" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
 
-      <!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					<strong>새로운 소식</strong>을 알려드려요
-        </h2>
-			</div>
-			<!-- e: content_top -->
-			<div class="space_list_ty5">
+      <div class="title_view_wrap">
+        <div class="page_title">
+          <div class="p_info">공지사항</div>
+          <h2 class="p_title">
+            <strong>새로운 소식</strong>을 알려드려요
+          </h2>
+        </div>
+      </div>
+
+      <div class="space_list_ty5">
 				<!-- 검색 영역-->
-				<div class="form_group_wrap">
+				<div class="form_group_wrap full">
 					<div class="form_line">
 						{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어 입력" }}
 					</div>
@@ -79,9 +81,15 @@
         </div>
 				<!--e: 공지사항 리스트 -->
 			</div>
+
+
+
 		</div>
 	</div>
 
+  <!-- footer -->
+  {{> layout/footer }}
+  <!-- footer -->
 </div>
 
 <!-- s: popup area -->

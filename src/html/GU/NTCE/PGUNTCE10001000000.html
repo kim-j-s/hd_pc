@@ -1,9 +1,19 @@
 {{#> layout/default no-sp=true page-title="공지사항 | 이용안내"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="공지사항" }}
+	{{> layout/header_pc h-title="공지사항" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
+
+      <div class="title_view_wrap">
+        <div class="page_title">
+          <div class="p_info">공지사항</div>
+          <h2 class="p_title">
+            <strong>새로운 소식</strong>을 알려드려요
+          </h2>
+        </div>
+      </div>
+
       <div class="view_wrap">
         <!-- 타이틀영역 -->
         <div class="view_title">
@@ -21,7 +31,9 @@
           <p>내용</p>
           <p>내용</p>
         </div>
-      
+        <div class="btn_area center">
+          {{> cp/button type="3" size="2" b-text="목록으로" }}
+        </div>
         <!-- 이전/다음글 목록 영역 -->
         <ul class="view_navigation">
           <!-- s: 25-06-16 수정 -->
@@ -42,11 +54,9 @@
 		</div>
 	</div>
 
-  <div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="목록" }}
-		</div>
-	</div>
+  <!-- footer -->
+  {{> layout/footer }}
+  <!-- footer -->
 </div>
 
 <!-- s: popup area -->
