@@ -59,14 +59,6 @@ body {
 .wrap:has(.header_pc_error) {
 	padding: 7.2rem 0 6.4rem 0;
 }
-.wrap .footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 21rem;
-	background-color: rgb(218, 249, 255);
-}
 .wrap .container {
 	overflow: inherit;
 	display: -webkit-box;
