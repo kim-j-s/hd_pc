@@ -660,6 +660,12 @@
 	}
 }
 
+.space_list_ty5 {
+	& + .search_result_count { 
+		margin-top: var(--gap-5);
+	}
+}
+
 
 // text
 .text_lg {
