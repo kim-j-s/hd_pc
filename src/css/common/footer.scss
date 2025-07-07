@@ -4,11 +4,114 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 210px;
+	height: 191px;
+	padding-top: var(--padding-7);
 	text-align: center;
-	background-color: rgb(218, 249, 255);
+	border-top: var(--border-width-variable-regular) solid var(--color-divider-gray-light);
 	> .inner {
 		display: inline-flex;
+		flex-direction: column;
 		width: 1188px;
 	}
+
+
+	.footer_top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.ft_left {
+			flex: 1 1 0;
+			display: flex;
+			align-items: center;
+		}
+
+		.ft_right {
+			flex: none;
+		}
+
+	}
+
+
+	.footer_bottom {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding-top: var(--gap-5);
+
+		.fb_left {
+			flex: 1 1 0;
+			text-align: left;
+
+			.fbl_top {
+				display: flex;
+				align-items: center;
+				gap: 0 var(--gap-4);
+				.ft_links_item {
+					> a {
+						display: block;
+						font-size: var(--font-size-button-medium);
+						padding: 0 var(--padding-1);
+					}
+				}
+
+			}
+
+			.fbl_bottom {
+				padding-top: var(--gap-4);
+				font-size: var(--font-size-body-xsmall);
+				color: var(--color-text-disabled-on);
+				address {
+					> span {
+						padding-right: 4px;
+					}
+				}
+			}
+			
+
+		}
+
+		.fb_right {
+			flex: none;
+			display: flex;
+			align-items: center;
+			gap: 0 20px;
+			
+
+			> a {
+				display: block;
+				background-repeat: no-repeat;
+				background-position: left center;
+				> .text {
+					display: block;
+					font-size: var(--font-size-body-xsmall);
+					color: var(--color-text-subtle);
+				}
+				&.fi_ty1 {
+					padding-left: 40px;
+					background-image: url(../images/footer/icon_fi_ty1.png);
+				}
+				&.fi_ty2 {
+					padding-left: 40px;
+					background-image: url(../images/footer/icon_fi_ty2.png);
+				}
+				&.fi_ty3 {
+					padding-left: 45px;
+					background-image: url(../images/footer/icon_fi_ty3.png);
+				}
+				&.fi_ty4 {
+					padding-left: 43px;
+					background-image: url(../images/footer/icon_fi_ty4.png);
+				}
+				&.fi_ty5 {
+					padding-left: 51px;
+					background-image: url(../images/footer/icon_fi_ty5.png);
+				}
+			}
+
+		}
+
+	}
+
+
 }
