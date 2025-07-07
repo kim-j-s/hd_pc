@@ -877,19 +877,19 @@ $(function(){
 
 		beforeShow: function () { 
 			$("body").addClass('modal_open');
-			setTimeout(function(){
-				// 이전/다음 버튼 tabindex 부여
-				const $dp = $("#ui-datepicker-div");
-				$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
-			}, 50);
+			// setTimeout(function(){
+			// 	// 이전/다음 버튼 tabindex 부여
+			// 	const $dp = $("#ui-datepicker-div");
+			// 	$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
+			// }, 50);
 		},
-		onChangeMonthYear: function(year, month, inst) {
-			// 월 변경 후에도 tabindex 재설정 필요
-			setTimeout(function() {
-				const $dp = $("#ui-datepicker-div");
-				$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
-			}, 0);
-		},
+		// onChangeMonthYear: function(year, month, inst) {
+		// 	// 월 변경 후에도 tabindex 재설정 필요
+		// 	setTimeout(function() {
+		// 		const $dp = $("#ui-datepicker-div");
+		// 		$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
+		// 	}, 0);
+		// },
 		onClose: function() {
 			$("body").removeClass('modal_open');
 			// 호출했던 버튼으로 포커스 복귀
@@ -911,23 +911,23 @@ $(function(){
 		$lastCalendarCallBtn = $btn;
 	
 		// readonly 잠시 설정 → 키보드 입력 방지
-		$input.attr("readonly", true);
-		$input.datepicker("show");
+		// $input.attr("readonly", true);
+		// $input.datepicker("show");
 	
 		// 0.5초 후 readonly 제거
-		setTimeout(function () {
-			$input.attr("readonly", false);
-		}, 500);
+		// setTimeout(function () {
+		// 	$input.attr("readonly", false);
+		// }, 500);
 	
 		// ✅ 달력 내부 포커스로 이동 (접근성 강화)
-		setTimeout(function () {
-			const $dp = $("#ui-datepicker-div");
-			// 날짜가 선택되어 있으면 해당 날짜에 포커스, 없으면 현재일
-			const $focusable = $dp.find(".ui-state-active, .ui-state-highlight, td a").first();
-			if ($focusable.length) {
-				$focusable.focus();
-			}
-		}, 10);
+		// setTimeout(function () {
+		// 	const $dp = $("#ui-datepicker-div");
+		// 	// 날짜가 선택되어 있으면 해당 날짜에 포커스, 없으면 현재일
+		// 	const $focusable = $dp.find(".ui-state-active, .ui-state-highlight, td a").first();
+		// 	if ($focusable.length) {
+		// 		$focusable.focus();
+		// 	}
+		// }, 10);
 	});
 	
 	// 달력 호출
