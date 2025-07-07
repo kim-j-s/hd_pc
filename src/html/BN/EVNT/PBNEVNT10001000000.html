@@ -1,10 +1,19 @@
 {{#> layout/default no-sp=true page-title="이벤트 | 혜택"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="진행중인 이벤트" }}
+  {{> layout/header_pc h-title="진행중인 이벤트" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
     
+      <div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>진행중인 이벤트</strong>
+					</h2>
+				</div>
+			</div>
+
+      <!-- 게시판 view -->
       <div class="view_wrap">
         <div class="view_title">
           <div class="title_info">
@@ -21,8 +30,11 @@
           <p>내용</p>
         </div>
 
+        <div class="btn_area center">
+          {{> cp/button type="3" size="2" b-text="목록으로" }}
+        </div>
+
         <ul class="view_navigation">
-           <!-- s: 25-06-16 수정 -->
           <li class="navigation_item">
             <span class="navigation_label">다음글</span>
             <i></i>
@@ -34,20 +46,15 @@
             <i></i>
             <a class="navigation_title" href="javascript:void(0);">아이나비 커넥티드 블랙박스 연계 할인특약 출시</a>
           </li>
-          <!-- e: 25-06-16 수정 -->
         </ul>
       </div>
 
 		</div>
 	</div>
 
-  <!-- s: 25-06-16 수정 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="목록" }}
-		</div>
-	</div>
-   <!-- e: 25-06-16 수정 -->
+  <!-- footer -->
+  {{> layout/footer }}
+  <!-- footer -->
 </div>
 
 <!-- s: popup area -->

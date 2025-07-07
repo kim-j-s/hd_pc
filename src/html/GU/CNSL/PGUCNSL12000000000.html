@@ -1,13 +1,19 @@
 {{#> layout/default no-sp=true page-title="고객정보입력 | 이용안내"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="이메일 상담신청" }}
+	{{> layout/header_pc h-title="이메일 상담신청" bc=true }}
 	<div id="container" class="container">
 		<div class="content">
 			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2"><strong>고객님, 무엇을 도와드릴까요?</strong></h2>
-				
-				<p class="text_sub">연락처를 남기시면<br>전문 상담사가 직접 연락드릴게요.</p>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">이메일 상담신청</div>
+					<h2 class="p_title">
+						<strong>무엇을 도와드릴까요?</strong>
+					</h2>
+					<div class="sub_desc">
+						연락처를 남기시면 전문 상담사가 직접 연락드릴게요.
+					</div>
+				</div>
 			</div>
 			<!-- e: content_top -->
 
@@ -57,11 +63,13 @@
         </div>
     	</div>	
 			<!-- e: 고객 정보 -->
+
+			<div class="divider_ty2"></div>
 			
 			<!-- s: 상담 요청 내용 -->
 			<div class="form_box">
 				<h3 class="title_h3">상담 요청 내용</h3>
-				<div class="form_group_wrap">
+				<div class="form_group_wrap full">
 					<div class="form_line">
 						<div class="label_tit">제목</div>
 						{{> cp/text inp-title="제목 입력" placeholder="제목 입력" }}
@@ -76,16 +84,20 @@
 				</ul>
     	</div>	
 			<!-- e: 상담 요청 내용 -->
+
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="상담신청" disabled=true }}
+				</div>
+			</div>
+			<!-- s: 하단 고정 버튼 영역 -->
 		</div>
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="상담신청" disabled=true }}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->

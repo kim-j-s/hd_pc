@@ -1,9 +1,22 @@
 {{#> layout/default no-sp=true page-title="기부하기 | 혜택"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="기부하기" }}
+	{{> layout/header_pc h-title="기부하기" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
+
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>기부하기</strong>
+					</h2>
+					<div class="sub_desc">
+						따뜻한 나눔에 함께 해주세요.<br/>
+						기부할 곳을 선택 후 <strong>자동차보험료를 계산하면</strong> 현대해상에서 <strong class="point">1인당 3천원</strong>을 기부해요
+					</div>
+				</div>
+			</div>
+
 			<div class="view_wrap">
 				<!-- 타이틀영역 -->
 				<div class="view_title">
@@ -31,11 +44,13 @@
 					</div>
 				</div>
 
+				<div class="btn_area center">
+					{{> cp/button type="1" size="2" b-text="보험료 계산하고 기부하기" }}
+				</div>
+
 			 	<!-- 내용 영역 -->
 				<div class="view_cont">
-					<div class="button_area">
-						{{> cp/button type="3" size="4" rightIcon="shareSvg" b-text="공유하기"}}
-					</div>				
+					
 					<div class="img_box no_img">
 						no Image
 					</div>
@@ -43,6 +58,10 @@
 					<p>내용</p>
 					<p>내용</p>
 				</div>
+
+				<div class="btn_area center">
+          {{> cp/button type="3" size="2" b-text="목록" }}
+        </div>
 			
 				<!-- 다른 목록 보기 -->
 				<ul class="card_list_wrap_ty3 view_navigation">
@@ -87,13 +106,9 @@
 
 		</div>
 	</div>
-
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="보험료 계산하고 기부하기" }}
-		</div>
-	</div>
-
+<!-- footer -->
+{{> layout/footer }}
+<!-- footer -->
 </div>
 
 <!-- s: popup area -->

@@ -1228,7 +1228,9 @@
 				}
 			
 				img {
-					filter: grayscale(100%);
+					filter: grayscale(50%);
+					opacity: 0.7;
+					mix-blend-mode: luminosity;
 				}
 			}
 
