@@ -51,6 +51,7 @@ body {
 	height: auto;
 	min-height: 100%;
 	padding: 120px 0 210px 0;
+	// transition: padding-top 0.3s;
 	&:has(.header_pc_nd) {
 		padding: 72px 0 64px 0;
 	}
