@@ -47,6 +47,10 @@
 		}
 	}
 
+
+	& + .search_result_count { 
+		margin-top: var(--gap-5);
+	}
 	& + .banner_box {
 		margin-top: var(--gap-8);
 	}

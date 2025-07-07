@@ -1,16 +1,21 @@
 {{#> layout/default no-sp=true page-title="전화 상담 안내 | 이용안내"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="전화 상담 안내" }}
+	{{> layout/header_pc h-title="전화 상담 안내" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
+
 			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					<strong>무엇을 도와드릴까요?</strong>
-				</h2>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">전화 상담 안내</div>
+					<h2 class="p_title">
+						<strong>무엇을 도와드릴까요?</strong>
+					</h2>
+				</div>
 			</div>
 			<!-- e: content_top -->
+			 
 			<div class="call_info_list">
 				<a href="javascript:void(0);" title="팝업 열기" class="item opt1" onclick="openHDPopup(this,'pop_type01');">
 					<div class="title">사고접수/고장출동</div>
@@ -51,6 +56,9 @@
 			</div>
 		</div>
 	</div>
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
