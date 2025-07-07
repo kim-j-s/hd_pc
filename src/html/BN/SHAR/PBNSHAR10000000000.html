@@ -1,17 +1,21 @@
 {{#> layout/default no-sp=true page-title="기부하기 | 혜택"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="기부하기" }}
+	{{> layout/header_pc h-title="기부하기" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
-
       <!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2"><strong>따뜻한 나눔에 함께</strong>해주세요</h2>
-        <div class="desc_area">
-          기부할 곳을 선택 후 자동차보험료를 계산하면<br/>현대해상에서 1인당 3천원을 기부해요
+			<div class="title_view_wrap">
+        <div class="page_title">
+          <h2 class="p_title">
+            <strong>기부하기</strong>
+          </h2>
+					<div class="sub_desc">
+						따뜻한 나눔에 함께 해주세요.<br/>
+						기부할 곳을 선택 후 <strong>자동차보험료를 계산하면</strong> 현대해상에서 <strong class="point">1인당 3천원</strong>을 기부해요
+					</div>
         </div>
-			</div>
+      </div>
 			<!-- e: content_top -->
 
 			<ul class="bg_list bg_list_case02">
@@ -36,7 +40,6 @@
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
 
 					<ul class="card_list_wrap_ty3">
-						<!-- s: 25-06-16 수정 -->
 						<li>
 							<div class="card_item donation">
 								<div class="item_inner" role="button" tabindex="0"	>
@@ -63,8 +66,7 @@
 									</div>
 								</div>
 								<div class="item_btn_wrap">
-									{{> cp/button type="3" size="2" rightIcon="shareSvg" noText=true }}
-									{{> cp/button type="2" size="2" b-text="보험료 계산하고 기부하기" class="stretch"}}
+									{{> cp/button type="2" size="2" b-text="보험료 계산하고 기부하기" }}
 								</div>
 							</div>
 						</li>
@@ -94,17 +96,14 @@
 									</div>
 								</div>
 								<div class="item_btn_wrap">
-									{{> cp/button type="3" size="2" rightIcon="shareSvg" noText=true }}
-									{{> cp/button type="2" size="2" b-text="보험료 계산하고 기부하기" class="stretch"}}
+									{{> cp/button type="2" size="2" b-text="보험료 계산하고 기부하기" }}
 								</div>
 							</div>
 						</li>
-						<!-- e: 25-06-16 수정 -->
 					</ul>
 				</div>
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanelex02">
 					<ul class="card_list_wrap_ty3">
-						<!-- s: 25-06-16 수정 -->
 						<li>
 							<div class="card_item donation small end">
 								<div class="item_inner" role="button" tabindex="0">
@@ -162,7 +161,6 @@
 								</div>
 							</div>
 						</li>
-						<!-- e: 25-06-16 수정 -->
 					</ul>
 					<div class="btn_area center view_more">
 						{{> cp/button_more}}
@@ -230,7 +228,7 @@
 
       <!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
-			<ul class="list_ty3">
+			<ul class="list_depth">
 				<li>이벤트 참여대상 및 연말정산 사항
           <ul class="list_ty2">
             <li>
@@ -262,6 +260,10 @@
 			<!-- e: 꼭 알아두세요 -->
 		</div>
 	</div>
+	
+  <!-- footer -->
+  {{> layout/footer }}
+  <!-- footer -->
 </div>
 
 <!-- s: popup area -->

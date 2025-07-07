@@ -339,6 +339,10 @@
 			margin-top: var(--gap-8);
 		}
 	}
+
+		& + .search_result_count {
+			margin-top: var(--gap-5);
+		}
 	}
 }
 
@@ -653,6 +657,12 @@
 .list_ty2 {
 	& + .file_attach_box {
 		margin-top: var(--gap-8);
+	}
+}
+
+.space_list_ty5 {
+	& + .search_result_count { 
+		margin-top: var(--gap-5);
 	}
 }
 
@@ -1882,3 +1892,93 @@
 	margin-bottom: 16px;
 }
 
+
+//bg_list
+.bg_list_case02 {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.card_item.donation {
+
+	.img_box {
+		width: auto;
+		> img { height: 111px;}
+	}
+
+	.item_inner {
+		display: flex;
+		flex-direction : row;
+
+		.inner_cont {
+			flex-grow: 1;
+		}
+
+	}
+
+	.item_btn_wrap {
+		justify-content: center;
+	}
+}
+
+.view_wrap {
+	.view_title + .btn_area {
+		margin-top: var(--gap-5);
+
+		& +.view_cont {
+			margin-top: var(--gap-8);
+		}
+	}
+}
+
+.card_list_wrap_ty2 {
+	
+&.event_list {
+		.card_item {
+
+		.img_box {
+			flex-shrink: 0;
+			width: 267px;
+		
+			&.no_img {
+				width: 267px;
+				height: 111px;
+			}
+		}
+
+		.item_inner{
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: var(--gap-3);
+
+			.inner_cont {
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+	&.row {
+		width: 100%;
+		display: flex !important;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 32px;
+
+		li {
+			flex : 0 1 calc(50% - 16px);
+
+			& ~ li {
+				margin-top: 0;
+			}
+		}
+
+		.inp_radio, .inp_checkbox {
+			width: 50%;
+			flex : 0 1 calc(50% - 16px);
+		}
+	}//.row
+
+}

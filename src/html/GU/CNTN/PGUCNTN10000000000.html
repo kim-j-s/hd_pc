@@ -1,9 +1,20 @@
 {{#> layout/default no-sp=true page-title="보험팁 | 고객센터"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험팁" }}
+	{{> layout/header_pc h-title="보험팁" bc=true }}
 
 	<div id="container" class="container">
 		<div class="content">
+
+			<!-- s: content_top -->
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>보험팁</strong>
+					</h2>
+				</div>
+			</div>
+			<!-- e: content_top -->
+
 			<div class="search_inp_box">{{> cp/text inp-search=true placeholder="엽체명을 입력해 주세요." inp-title="검색어 입력" }}</div>
 			<div class="tag_item_wrap">
 				<button type="button" class="tag_item size_m c_ty02 active"><span class="text">#보험료</span></button>
@@ -13,12 +24,86 @@
 
 			<div class="divider_ty1"></div>
 
-			{{> cp/selectitem si_class="select_item_case01_mi" si_ph="선택해주세요" si_title="연도 선택 팝업 호출" si_popup="pop_type01" si_item="전체" }}
+			<div class="form_group_wrap">
+				<div class="form_line">
+					{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="선택해주세요." }}
+						<option value="">전체</option>
+						<option value="">자동차</option>
+						<option value="">운전자</option>
+						<option value="">펫</option>
+						<option value="">재산/화재</option>
+						<option value="">어린이</option>
+						<option value="">건강</option>
+						<option value="">여행/레저</option>
+						<option value="">연금/저축</option>
+					{{/ cp/selectbox_pc}}
+				</div>
+			</div>
 
 			<div class="search_result_count">
 				<p>총 <strong class="point">7</strong>건</p>
 			</div>
-			<ul class="card_list_wrap_ty2">
+			<ul class="card_list_wrap_ty2 row">
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex01.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex02.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex01.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex02.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
 				<li>
 					<div class="card_item" role="button" tabindex="0">
 						<div class="item_inner">
@@ -60,29 +145,12 @@
 			<!-- e: 조회 내역이 없는 경우 -->
 		</div>
 	</div>
+
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
-
-<!-- s: 보험팁 - 분류 선택 팝업 -->
-{{#> popup/popup_bottom popup-id="pop_type01" popup-title="상품 선택"}}
-<div class="popup_cont">
- <div class="popup_content">
-	 <div class="opt_select_list opt_case3">
-		<div role="button" tabindex="0" class="option active"><span class="text">전체</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">자동차</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">운전자</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">펫</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">재산/화재</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">어린이</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">건강</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">여행/레저</span></div>
-		<div role="button" tabindex="0" class="option"><span class="text">연금/저축</span></div>
-	 </div>
-	</div>
-</div>
-{{/ popup/popup_bottom}}
-<!-- e: 보험팁 - 분류 선택 팝업 -->
-
 <!-- e: popup area -->
 {{/ layout/default }}
