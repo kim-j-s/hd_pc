@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -71,6 +71,7 @@
 							<span class="hpi_utils_items">
 								<a href="#">로그인</a>
 							</span>
+
 							<span class="hpi_utils_items">
 								<a href="https://www.hi.co.kr/serviceAction.do?menuId=100931" target="_blank" title="새창열림">상품공시</a>
 							</span>
@@ -623,12 +624,14 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">변경 기준일</div>
+							<!-- s: 25-07-07 수정 -->
 							<div class="input_text calendar">
 								<div class="inp">
-									<input type="tel" class="inp_picker" value="2025.12.18" title="날짜를 입력해주세요" />
+									<input type="tel" class="inp_picker" value="2025.12.18" disabled title="날짜를 입력해주세요" />
 									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 								</div>
 							</div>
+							<!-- e: 25-07-07 수정 -->
 
 							<div class="info_gray ty2">
 								<div class="insurance_policyBox">
@@ -688,7 +691,7 @@
 				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
 			<div id="footer" class="footer">
-				<div id="footer" class="footer">footer</div>
+				<div class="inner">footer</div>
 			</div>
 			<!-- footer -->
 		</div>

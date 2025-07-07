@@ -465,6 +465,9 @@ body {
 .wrap .form_group_wrap .c1 + .search_reult_list_container {
 	margin-top: var(--gap-8);
 }
+.wrap .form_group_wrap + .search_result_count {
+	margin-top: var(--gap-5);
+}
 .form_box > .btn_area {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
@@ -718,6 +721,9 @@ body {
 }
 .list_ty2 + .file_attach_box {
 	margin-top: var(--gap-8);
+}
+.space_list_ty5 + .search_result_count {
+	margin-top: var(--gap-5);
 }
 .text_lg {
 	font-size: var(--font-size-body-medium);
@@ -1497,17 +1503,115 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--gap-6);
 }
+.popup_wrap .sticky_fix {
+	z-index: 11;
+}
 .popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 {
 	padding-top: 0;
 }
 .popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 .tab_wrap .tab_wrap_list_ty1.sticky_fix {
 	top: 0;
 }
-.popup_wrap .popup_container .popup_inner .popup_cont .tab_wrap .tab_wrap_list_ty1.sticky_fix {
+.popup_wrap .popup_container .popup_inner .popup_cont .tab_wrap .tab_wrap_list_ty1.sticky_fix,
+.popup_wrap .popup_container .popup_inner .popup_cont .tab_wrap .tab_scroll_box_ty1.sticky_fix {
 	top: -1.6rem;
 }
 .sns_box {
 	margin-bottom: 1.6rem;
+}
+.bg_list_case02 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.card_item.donation .img_box {
+	width: auto;
+}
+.card_item.donation .img_box > img {
+	height: 11.1rem;
+}
+.card_item.donation .item_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+.card_item.donation .item_inner .inner_cont {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+.card_item.donation .item_btn_wrap {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.view_wrap .view_title + .btn_area {
+	margin-top: var(--gap-5);
+}
+.view_wrap .view_title + .btn_area + .view_cont {
+	margin-top: var(--gap-8);
+}
+.card_list_wrap_ty2.event_list .card_item .img_box {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 26.7rem;
+}
+.card_list_wrap_ty2.event_list .card_item .img_box.no_img {
+	width: 26.7rem;
+	height: 11.1rem;
+}
+.card_list_wrap_ty2.event_list .card_item .item_inner {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	gap: var(--gap-3);
+}
+.card_list_wrap_ty2.event_list .card_item .item_inner .inner_cont {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+.card_list_wrap_ty2.row {
+	width: 100%;
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 3.2rem;
+}
+.card_list_wrap_ty2.row li {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 calc(50% - 1.6rem);
+	flex: 0 1 calc(50% - 1.6rem);
+}
+.card_list_wrap_ty2.row li ~ li {
+	margin-top: 0;
+}
+.card_list_wrap_ty2.row .inp_radio,
+.card_list_wrap_ty2.row .inp_checkbox {
+	width: 50%;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 calc(50% - 1.6rem);
+	flex: 0 1 calc(50% - 1.6rem);
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
@@ -2326,7 +2430,7 @@ body {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	margin-right: 16.1rem;
+	margin-right: 15.6rem;
 	padding: var(--padding-3) var(--padding-6);
 	background-color: var(--color-element-primary-lighter);
 	text-align: center;
@@ -2766,6 +2870,19 @@ body {
 }
 .form_group_wrap .full_half .form_line.fix_w_case02 {
 	width: 10.2rem;
+}
+.view_wrap .view_cont + .btn_area {
+	margin-top: var(--gap-5);
+}
+.view_wrap .view_cont + .btn_area + .view_navigation {
+	margin-top: var(--gap-11);
+}
+.view_wrap .view_cont + .btn_area > .hd_btn {
+	min-width: 12rem;
+}
+.vod_preview {
+	max-width: 56rem;
+	margin: 0 auto;
 }
 /* PC용 component  */
 .form_key_pc {
