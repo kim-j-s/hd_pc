@@ -169,14 +169,15 @@
 		width: calc(50% - 16px);
 	}
 
-	& + .btn_area {
-		margin-top: 52px;
+	& + .checkbox_group_wrap {
+		margin-top: var(--gap-8);
 	}
 
 	& + [class^=list_]{
 		margin-top: var(--gap-5);
 	}
 
+	& + .btn_area,
 	& + .form_box {
 		margin-top: var(--gap-11);
 	}
