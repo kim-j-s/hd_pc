@@ -764,19 +764,27 @@
 		display: flex;
 		flex-flow: row wrap;
 
+		&:has(dl:nth-of-type(2)) {
+			dl:nth-of-type(odd) {
+				border-right: 1px solid var(--color-divider-gray-light);
+			}
+		}
+
 		> dl {
 			justify-content: flex-start;
 			margin: 0;
 			width: 50%;
 			padding-top: var(--gap-5);
 			gap: var(--gap-4);
+			border-right: none;
+
+
 			&:nth-child(-n+2){
 				padding-top: 0;
 			}
 
 			&:nth-child(2n-1){
 				padding-right: var(--gap-8);
-				border-right: 1px solid var(--color-divider-gray-light);
 			}
 
 			&:nth-child(2n){
