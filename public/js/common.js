@@ -646,6 +646,13 @@
 		$this.val(val);
 	});
 
+	// inp_only_num
+	$DOM.on('keyup', 'input[type="tel"]', function() {
+		const $this = $(this),
+					val = $this.val().replace(/[^0-9]/g, ''); // 숫자만 허용
+		$this.val(val);
+	});
+
 
 })();
 
