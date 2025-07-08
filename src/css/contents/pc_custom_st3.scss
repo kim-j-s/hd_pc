@@ -1355,6 +1355,8 @@
 	display: flex;
 	align-items: flex-end; 
 	gap: var(--gap-6);
+
+	.select_option_box,
 	.select_item  {
 		flex: 1;
 	}
