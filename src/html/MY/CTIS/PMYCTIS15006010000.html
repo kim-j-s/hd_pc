@@ -16,11 +16,11 @@
 				</div>
                 
         <div class="selectitem_wrap">
-          {{> cp/selectitem si_class="select_item_case01_mi si_ellipsis" si_ph="선택해주세요." si_title="조회계약 선택" si_item="L2008****123 무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)" si_popup="pop_type01"}} 
+          {{> cp/selectitem si_class="select_item_case01_mi si_ellipsis" si_ph="선택해주세요." si_title="조회계약 선택" si_item="L2008****123 무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)" }} 
           {{> cp/selectitem si_class="select_item_case01_mi" si_ph="선택해주세요." si_title="조회기간 선택" si_item="2024.03.19~2025.03.19" si_popup="pop_type02"}}
           
-          {{#> cp/selectbox_pc s-title="대상 선택" sb-ph="선택해주세요." }}
-            <option value="" selected>대상 전체</option>
+          {{#> cp/selectbox_pc s-title="대상 선택" s-class="md" sb-ph="선택해주세요." }}
+            <option value="" selected hidden>대상 전체</option>
             <option value="">전체</option>
             <option value="">상환</option>
             <option value="">이자</option>
@@ -196,16 +196,5 @@
 	</div>
 	{{/ popup/popup_bottom}}
 	<!-- e: 조회조건 - 대상 선택 -->
-<!-- s: selpop -->
-{{#> popup/popup_bottom popup-id="pop_type01" popup-title="자동차보험 재발행 사유"}}
-<div class="popup_cont">
-	<div class="popup_content">
-		<div class="opt_select_list opt_case3">
-			<div role="button" tabindex="0" class="option"><span class="text">계약 전체</span></div>
-			<div role="button" tabindex="0" class="option"><span class="text">L2008****123 무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)</span></div>
-		</div>
-	</div>
-</div>
-{{/ popup/popup_bottom}}
-<!-- e: selpop -->
+
 {{/ layout/default }}

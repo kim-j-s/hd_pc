@@ -383,9 +383,20 @@
 .selectitem_wrap {
 	> div {
 		flex: 1;
+		min-width: 0;   
 	}
 	.hd_btn {
 		min-width: 100px;
+	}
+
+	.select_item {
+		&.select_item_case01.si_ellipsis {
+			.select_item_inner  {
+				.si_item {
+					display: block;
+				}
+			}
+		}
 	}
 }
 //가입 전 알릴사항 화면용 그룹 클래스
