@@ -1,25 +1,32 @@
 {{#> layout/default no-sp=true page-title="로그인"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="" }}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 				<!-- s: content_top -->
 				<div class="content_top">
 					<h2 class="title_h2">
-						<!-- s: 25-06-04 수정 -->
 						<strong>로그인 방법을 선택해주세요</strong>
-						<!-- e: 25-06-04 수정 -->
 					</h2>
 					<div class="btn_area basic">
-						<!-- s: 25-06-04 수정 -->
 						{{> cp/linkButton bl_class="short_cut sm" bl_text="처음 오셨다면 회원가입부터 진행해볼까요?" }}
-						<!-- e: 25-06-04 수정 -->
+					</div>
+				</div>
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">피보험자/계약자정보</div>
+						<h2 class="p_title">
+							<strong>오토오아시스</strong>
+						</h2>
+						<div class="sub_desc">
+							{{> cp/linkButton bl_class="short_cut md" bl_text="처음 오셨다면 회원가입부터 진행해볼까요?" }}
+						</div>
 					</div>
 				</div>
 				<!-- e: content_top -->
-				<ul class="cert_select_list">
+				<ul class="cert_select_list grid_list_ty2">
 					<li>
-						<!-- s: 25-06-04 수정 -->
 						<button type="button" class="cert_select_item simple_pw">
 							<span class="text">
 								간편비밀번호
@@ -33,21 +40,15 @@
 							</span>
 						
 						</button>
-						<!-- e: 25-06-04 수정 -->
-					</li>
-					<li>
-						<button type="button" class="cert_select_item bio">
-							<span class="text">생체인증</span>
-						</button>
-					</li>
-					<li>
-						<button type="button" class="cert_select_item phone">
-							<span class="text">휴대폰인증</span>
-						</button>
 					</li>
 					<li>
 						<button type="button" class="cert_select_item kakao">
 							<span class="text">카카오인증</span>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="cert_select_item naver_cert">
+							<span class="text">네이버인증</span>
 						</button>
 					</li>
 					<li>
@@ -60,14 +61,27 @@
 							<span class="text">금융인증</span>
 						</button>
 					</li>
+					<li>
+						<button type="button" class="cert_select_item phone">
+							<span class="text">휴대폰인증</span>
+						</button>
+					</li>
 				</ul>
+
+				<div class="banner_box">
+					<a href="#">
+						<img src="../../../images/event/banner3.png" alt="편리한 간편비밀번호를 등록하세요 간단한 6자리 숫자 입력으로 빠른 로그인!">
+					</a>
+				</div>
 			</div>
 		</div>
 
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
-	 
 	<!-- e: popup area -->
 
 {{/ layout/default }}
