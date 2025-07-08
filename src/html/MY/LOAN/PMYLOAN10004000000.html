@@ -1,45 +1,54 @@
 {{#> layout/default page-title="보험계약대출 신청 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험계약대출 신청" }}
+	{{> layout/header no-header=true }}
+
 	<div id="container" class="container">
 		<div class="content">
-			<p class="text_sub">신청 정보를 확인해주세요.</p>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>보험계약 대출</strong>
+					</h2>
+					<div class="sub_desc">신청 정보를 확인해주세요.</div>
+				</div>
+			</div>
+
 			<div class="info_cont">
 				<div class="info_gray">
-					<dl>
-						<dt>대출신청금액</dt>
-						<dd><strong>12,000,000원</strong></dd>
-					</dl>
-					<dl>
-						<dt>기존 대출정산이자</dt>
-						<dd>1,000,000원</dd>
-					</dl>
-					<!-- s: 기대출정산이자, 예수금, 인지세 금액이 0원인 경우 미노출 -->
-					<dl>
-						<dt>예수금</dt>
-						<dd>500,000원</dd>
-					</dl>
-					<dl>
-						<dt>인지세</dt>
-						<dd>500,000원</dd>
-					</dl>
-					<!-- e: 기대출정산이자, 예수금, 인지세 금액이 0원인 경우 미노출 -->
-					<dl>
-						<dt>예상 월이자</dt>
-						<dd>85,270원</dd>
-					</dl>
-					<dl class="footer_dl">
-						<dt>실제 지급금액</dt>
-						<dd class="point">11,000,000원</dd>
-					</dl>
+					<div class="data_box df_type_w_ty6">
+						<dl>
+							<dt>대출신청금액</dt>
+							<dd><strong>12,000,000원</strong></dd>
+						</dl>
+						<dl>
+							<dt>기존 대출정산이자</dt>
+							<dd>1,000,000원</dd>
+						</dl>
+						<!-- s: 기대출정산이자, 예수금, 인지세 금액이 0원인 경우 미노출 -->
+						<dl>
+							<dt>예수금</dt>
+							<dd>500,000원</dd>
+						</dl>
+						<dl>
+							<dt>인지세</dt>
+							<dd>500,000원</dd>
+						</dl>
+						<!-- e: 기대출정산이자, 예수금, 인지세 금액이 0원인 경우 미노출 -->
+						<dl>
+							<dt>예상 월이자</dt>
+							<dd>85,270원</dd>
+						</dl>
+						<dl class="footer_dl">
+							<dt>실제 지급금액</dt>
+							<dd class="point">11,000,000원</dd>
+						</dl>
+					</div>
 				</div>
 
-				<div class="btn_area">
+				<div class="btn_area center">
 					{{> cp/button type="3" size="3" b-text="계약별 상세보기"}}
 				</div>
 			</div>
-			
-			
 
 			<div class="divider_ty1"></div>
 			<!-- s: 계좌이체정보 -->
@@ -48,8 +57,8 @@
 				<table class="table">
 					<caption>대출금 받을 계좌, 이자납입계좌, 이자납입일 제공</caption>
 					<colgroup>
-						<col style="width:35%;">
-						<col style="width:65%;">
+						<col style="width:160px;">
+						<col style="width:auto;">
 					</colgroup>
 					<tbody>
 						<tr>
@@ -69,17 +78,19 @@
 			</div>
 			<!-- e: 계좌이체정보 -->
 
-			
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="추가인증 후 전자서명하기" }}
+				</div>
+			</div>
+			<!-- e: 하단 고정 버튼 영역 -->
 		</div>
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="추가인증 후 전자서명하기" }}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
-
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 {{/ layout/default }}
