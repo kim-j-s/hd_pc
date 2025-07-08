@@ -469,6 +469,15 @@
 				}
 			}
 		}
+
+		&.no_link { 
+			li a {
+				cursor: default;
+				&::after {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&.no_data {
