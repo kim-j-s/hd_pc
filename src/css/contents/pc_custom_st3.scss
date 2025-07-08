@@ -194,6 +194,7 @@
 		border-top: 1px solid var(--color-divider-gray-light);
 	}
 
+	& + .tab_wrap,
 	& + .tag_item_wrap,
 	& + .banner_box {
 		margin-top: var(--gap-8);
