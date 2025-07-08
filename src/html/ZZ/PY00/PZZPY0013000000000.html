@@ -1,0 +1,137 @@
+{{#> layout/default page-title="보험료 결제 | 마이페이지"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc bc=true }}
+    
+    <div id="container" class="container">
+      <div class="content">
+        <div class="title_view_wrap">
+            <div class="page_title">
+                <h2 class="p_title">
+                    <strong>보험료 결제</strong>
+                </h2>
+                <div class="sub_desc">
+					보험료를 <strong>결제</strong> 및 <strong>전자서명</strong>을 <strong>진행</strong>해주세요
+				</div>
+			</div>
+		</div>
+            <!-- s: 해외여행자보험 기간연장 외 결제 -->
+			<div class="info_summary payment">
+				<div class="summary_top">
+					<div class="s_title">결제하실 금액</div>
+				</div>
+				<div class="summery_inner center">
+					<div class="total_wrap">
+						<div class="value">
+							<div class="val_price">22,700<span class="text">원</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- e: 해외여행자보험 기간연장 외 결제 -->
+            <!-- s: 해외여행자보험 기간연장 -->
+			<div class="info_summary payment">
+				<div class="summary_top">
+					<div class="s_title">결제하실 금액</div>
+				</div>
+				<div class="summery_inner center">
+					<div class="total_wrap">
+						<div class="value">
+							<div class="val_price">94,662<span class="text">원</span></div>
+						</div>
+					</div>
+					<div class="detail_wrap">
+						<div class="dt_table">
+							<dl>
+								<dt>변경 전 보험료</dt>
+								<dd>76,175원</dd>
+								<dt>변경 후 보험료</dt>
+								<dd>18,487원</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- e: 해외여행자보험 기간연장 -->
+			<!-- s: 간편정보 -->
+			<div class="simple_info_wrap">
+				<div class="simple_info_item">
+					<ul class="sii_list">
+						<li>
+							<span class="sii_list_l">결제하실 금액</span>
+							<span class="sii_list_r">
+								<strong class="price">768,693원</strong>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- e: 간편정보 -->
+		
+            <!-- s: 해외여행자보험 기간연장 외 결제 -->
+			<div class="tab_wrap">
+				<div class="tab_wrap_list_ty1" role="tablist">
+					{{>cp/tab_btn tb-text="신용카드" tb-id="01" tb-active=true}}
+					{{>cp/tab_btn tb-text="간편결제" tb-id="02"}}
+					{{>cp/tab_btn tb-text="즉시이체" tb-id="03"}}
+				</div>
+
+				<!-- 신용(앱)카드 -->
+				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
+           			{{> pay/card no_tit=true }}
+					<!-- s: 꼭 알아두세요 -->
+					<div class="acd_item acd_item_ty4">
+						{{#> cp/accordion ac-title="이용안내" ac-active=true }}
+							<ul class="list_depth">
+								<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
+								<li>신용카드사의 정책에 따라 최소 결제금액에 제한이 있을 수 있습니다.</li>
+								<li>최근 카드정보 불러오기는 이전 계약체결동의 내역에 따라 최근 결제이력을 자동으로 불러오는 기능입니다.</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+					<!-- e: 꼭 알아두세요 -->
+                </div>
+
+				<!-- 간편결제 -->
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+					{{> pay/pay_info no_tit=true }}
+				</div>
+				<!-- 즉시이체 -->
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
+            		{{> pay/bank1 no_tit=true }}
+					<!-- s: 꼭 알아두세요 -->
+					<div class="acd_item acd_item_ty4">
+						{{#> cp/accordion ac-title="이용안내" ac-active=true }}
+							<ul class="list_depth">
+								<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+					<!-- e: 꼭 알아두세요 -->	
+				</div>
+			</div>
+            <!-- e: 해외여행자보험 기간연장 외 결제 -->
+            <!-- s: 해외여행자보험 기간연장 -->
+            {{> pay/card prev_story=true no_tit=true installment=true }}
+            <!-- e: 해외여행자보험 기간연장 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="결제 정보를 입력해 주세요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="전자서명" }} 해외여행자보험 기간연장 외 상품 -->
+					<!-- {{> cp/button type="1" size="1" b-text="변경을 위해 전자서명 하기" }} 해외여행자보험 기간연장 -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+{{/ layout/default }}
+
+
+<script>
+	$(document).ready(function(){
+		});
+</script>
