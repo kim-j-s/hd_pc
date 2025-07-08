@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -84,7 +84,6 @@
 											<i></i>
 										</div>
 										<div class="inner_cont">
-											<!-- s: 25-04-29 수정 -->
 											<div role="button" class="card_link" tabindex="0" onclick="openHDPopup(this,'pop_type02');">
 												<div class="item_top" id="card_radio1_cont">
 													<div class="title_info">
@@ -92,14 +91,11 @@
 													</div>
 												</div>
 											</div>
-											<!-- e: 25-04-29 수정 -->
 											<ul class="card_list_ty1">
-												<!-- s: 25-05-26 수정 -->
 												<li class="result">
 													<div class="title">가입금액</div>
 													<div class="cont"><strong class="point">50만원</strong></div>
 												</li>
-												<!-- e: 25-05-26 수정 -->
 											</ul>
 										</div>
 									</div>
@@ -112,7 +108,6 @@
 											<i></i>
 										</div>
 										<div class="inner_cont">
-											<!-- s: 25-04-29 수정 -->
 											<div role="button" class="card_link" tabindex="0" onclick="openHDPopup(this,'pop_type02');">
 												<div class="item_top" id="card_radio2_cont">
 													<div class="title_info">
@@ -120,7 +115,6 @@
 													</div>
 												</div>
 											</div>
-											<!-- e: 25-04-29 수정 -->
 										</div>
 									</div>
 								</div>
@@ -132,7 +126,6 @@
 											<i></i>
 										</div>
 										<div class="inner_cont">
-											<!-- s: 25-04-29 수정 -->
 											<div role="button" class="card_link" aria-disabled="true" tabindex="0">
 												<div class="item_top" id="card_radio3_cont">
 													<div class="title_info">
@@ -140,7 +133,6 @@
 													</div>
 												</div>
 											</div>
-											<!-- e: 25-04-29 수정 -->
 										</div>
 									</div>
 								</div>
@@ -176,12 +168,18 @@
 								<div class="row">
 									<div class="form_line fix_w_case01">
 										<div class="label_tit">장착연도</div>
-										<div class="select_item select_item_case01" role="button" tabindex="0" title="장착연도 선택" onclick="openHDPopup(this,'select_option_ty1');">
-											<div class="select_item_inner">
-												<div class="si_item" data-placeholder="선택"></div>
-												<span class="si_stat">선택됨</span>
-											</div>
+										<!-- s: 25-07-08 수정 -->
+										<div class="select_option_box">
+											<select name="" id="" title="장착연도 선택" class="selectbox">
+												<option value="default" hidden>선택</option>
+												<option value="">2020</option>
+												<option value="">2020</option>
+												<option value="">2020</option>
+												<option value="">2020</option>
+												<option value="">2020</option>
+											</select>
 										</div>
+										<!-- e: 25-07-08 수정 -->
 									</div>
 									<div class="form_line grow">
 										<div class="label_tit">구입가격</div>

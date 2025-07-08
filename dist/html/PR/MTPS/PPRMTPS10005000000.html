@@ -1,7 +1,7 @@
 <!--
 경로 : 5.피보험자 정보 
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -111,12 +111,16 @@
 											</div>
 										</div>
 									</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="피보험자와 계약자 관계 선택" onclick="openHDPopup(this,'pop_type02');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="피보험자(자동차소유자)와 동일"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<!-- s: 25-07-08 수정 -->
+									<div class="select_option_box">
+										<select name="" id="" title="피보험자와 계약자 관계 선택" class="selectbox">
+											<option value="default" hidden>피보험자(자동차소유자)와 동일</option>
+											<option value="">배우자</option>
+											<option value="">자녀</option>
+											<option value="">부모(시부모/처부모포함)</option>
+										</select>
 									</div>
+									<!-- e: 25-07-08 수정 -->
 								</div>
 							</div>
 						</li>
@@ -499,29 +503,6 @@
 		</div>
 
 		<!-- s: popup area -->
-
-		<!-- s: selpop -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">피보험자와 계약자 과계</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">피보험자(자동차소유자)와 동일</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">배우자</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">자녀</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">부모(시부모/처부모포함)</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: selpop -->
 
 		<!-- e: popup area -->
 	</body>
