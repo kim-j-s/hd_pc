@@ -589,6 +589,14 @@
 			min-width: auto;
 		}
 	}
+	&.bg_right {
+		margin-bottom: 0;
+		align-items: flex-start;
+		min-height: 210px;
+		&.ty1 {
+			background: url(../images/content/gu/bg_top_ty1.png) no-repeat top right;
+		}
+	}
 }
 
 // select
