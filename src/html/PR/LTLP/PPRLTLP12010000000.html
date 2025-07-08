@@ -1,6 +1,6 @@
 {{#> layout/default page-title="보험료 결제 | 상품"}}
 <div id="wrap" class="wrap">
-    {{> layout/header_pc h-prd="보험료 결제" }}
+    {{> layout/header_pc h-prd="굿앤굿우리펫보험" }}
 
 	<div id="container" class="container">
 		<div class="content">
@@ -12,7 +12,6 @@
 					</h2>
 				</div>
 			</div>
-            <!-- s: 우리펫 -->
 			<div class="info_summary payment">
 				<div class="summary_top">
 					<div class="s_title">결제하실 금액</div>
@@ -42,7 +41,6 @@
 					</ul>
 				</div>
 			</div>
-            <!-- e: 우리펫 -->
 		
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
@@ -68,7 +66,7 @@
 					{{> pay/bank1 }}
 				</div></div>
 			<!-- 2회차 결제 -->
-			{{> pages/long_pay }}
+			{{> pay/long_pay }}
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
@@ -78,7 +76,7 @@
 			</div>
 		</div>
 		<!-- s: 사이드 패널 -->
-		{{> cp/panel_우리펫 step5=true panel-title="고객 정보" }}
+		{{> cp/panel_굿앤굿우리펫보험 step5=true panel-title="고객 정보" }}
 		<!-- e: 사이드 패널 -->
 	</div>
 

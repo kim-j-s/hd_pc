@@ -1,27 +1,28 @@
 {{#> layout/default page-title="보험계약대출 신청 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험계약대출 신청" }}
+	{{> layout/header_pc bc=true }}
+
 	<div id="container" class="container">
 		<div class="content">
 			<div class="content_top">
-				<div class="bg_top_cover">
-					<div class="info_gray bg_etc01">
-						<div class="acd_item acd_item_ty8">
-							<div class="acd_head active">
-								<button type="button" class="acd_btn" aria-expanded="false">
-									<span class="picture_info_top">
-										<dl>
-											<dt>실제지급금액</dt>
-											<dd>
-												<strong class="big">11,000,000원</strong>
-											</dd>
-										</dl>
-									</span>
-									<span>상세보기</span>
-								</button>
-							</div>
-							<div class="acd_cont">
-								<div class="inner" style="display: block;">
+				<div class="info_gray">
+					<div class="acd_item acd_item_ty8">
+						<div class="acd_head active">
+							<button type="button" class="acd_btn" aria-expanded="false">
+								<span class="picture_info_top">
+									<dl>
+										<dt>실제지급금액</dt>
+										<dd>
+											<strong class="big">11,000,000원</strong>
+										</dd>
+									</dl>
+								</span>
+								<span>상세보기</span>
+							</button>
+						</div>
+						<div class="acd_cont">
+							<div class="inner" style="display: block;">
+								<div class="data_box df_type_w_ty2">
 									<dl>
 										<dt>대출신청금액</dt>
 										<dd>12,000,000원</dd>
@@ -57,7 +58,7 @@
 
 			<div class="space_list_ty4">
 				<div class="form_group_wrap">
-					<div class="form_line">
+					<div class="form_line full">
 						<div class="label_tit">대출금 받을 계좌
 							{{#> cp/tooltip trigger-icon="popover_help" title="대출금 받을 계좌 안내"}}
 							<p>최근 2년 이내 이체 실적이 3회 이상인 계약자 본인명의 계좌만 선택할 수 있어요.</p>
@@ -68,7 +69,7 @@
 						<!-- {{> cp/text type="text" placeholder="입력해주세요" inp-title="대출금 받을 계좌 입력" value="국민은행 1234******1234" disabled=true }} -->
 						<!-- e: CASE. 계좌 디폴트 선택 시 - 대출금지급가능 계좌가 1개인 경우 -->
 					</div>
-					<div class="form_line">
+					<div class="form_line full">
 						<div class="label_tit">이자납입계좌
 							{{#> cp/tooltip trigger-icon="popover_help" title="이자납입계좌"}}
 							<p>본인명의 계좌만 등록할 수 있어요.</p>
@@ -84,16 +85,14 @@
 
 					<!-- s: 직접입력 선택 시 노출 -->
 					<div class="form_line">
-						<div class="form_line">
-							<div class="label_tit">은행</div>
-							{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" }}
-						</div>
-						<div class="form_line">
-							<div class="label_tit">계좌번호</div>
-							<div class="comp_wrap key_number">
-								{{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
-								{{> cp/button type="3" size="4" b-text="계좌확인" }}
-							</div>
+						<div class="label_tit">은행</div>
+						{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" }}
+					</div>
+					<div class="form_line">
+						<div class="label_tit">계좌번호</div>
+						<div class="comp_wrap key_number">
+							{{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
+							{{> cp/button type="3" size="4" b-text="계좌확인" }}
 						</div>
 					</div>
 					<!-- e: 직접입력 선택 시 노출 -->
@@ -114,7 +113,14 @@
 
 			</div>
 
-
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="다음" }}
+				</div>
+			</div>
+			<!-- e: 하단 고정 버튼 영역 -->
 
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active=true }}
@@ -142,13 +148,9 @@
 		</div>
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="다음" }}
-		</div>
-	</div>
-	<!-- e: 하단 고정 버튼 영역 -->
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 
 <!-- s: popup area -->
