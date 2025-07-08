@@ -194,6 +194,7 @@
 		border-top: 1px solid var(--color-divider-gray-light);
 	}
 
+	& + .form_group_wrap,
 	& + .tab_wrap,
 	& + .tag_item_wrap,
 	& + .banner_box {
