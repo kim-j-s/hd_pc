@@ -169,14 +169,15 @@
 		width: calc(50% - 16px);
 	}
 
-	& + .btn_area {
-		margin-top: 52px;
+	& + .checkbox_group_wrap {
+		margin-top: var(--gap-8);
 	}
 
 	& + [class^=list_]{
 		margin-top: var(--gap-5);
 	}
 
+	& + .btn_area,
 	& + .form_box {
 		margin-top: var(--gap-11);
 	}
@@ -246,7 +247,7 @@
 					min-width: 100px;
 				}
 			}
-		} &
+		}
 		.form_line {
 			& ~ .form_line {
 				margin-top: 0;
@@ -318,6 +319,7 @@
 		// 	}
 		// }
 	
+		& + .space_list_ty2,
 		& + .banner_box,
 		& + .file_attach_box {
 			margin-top: var(--gap-8);
@@ -888,6 +890,27 @@
 // card
 .container {
 	.card_item_wrap {
+		&.focusin {
+			.card_item {
+				.item_inner {
+					.inner_cont {
+						.card_list_ty1 {
+							> li {
+								&.result {
+									flex: none;
+									width: 100%;
+									margin-top: var(--gap-4);
+									padding: 0;
+								}
+							}
+						}
+						.card_cont {
+							margin-top: var(--gap-8);
+						}
+					}
+				}
+			}
+		}
 		.card_item {
 			.space_between {
 				.info_text {
@@ -1053,6 +1076,18 @@
 				margin: var(--gap-5) auto 0;
 				.hd_btn {
 					flex: 1;
+				}
+
+				&.basic {
+					width: auto;
+					margin: var(--gap-4) 0 0;
+					.hd_btn {
+						flex: none;
+					}
+
+					& + .basic {
+						margin-top: var(--gap-5);
+					}
 				}
 			}
 		}
@@ -2098,5 +2133,86 @@
 			}
 		}
 		
+	}
+}
+
+// 하단 고정 패널
+.wrap {
+	&.footer_fix{
+		&:has(.ft_fix) {
+			padding-bottom: 323px;
+
+			.footer {
+				bottom: 120px;
+			}
+		}
+	}
+}
+
+.bottom_panel {
+	&.ft_fix {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		box-shadow: 0px var(--shadow-y-minus2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+
+		> * {
+			max-width: 836px;
+			margin: 0 auto;
+		}
+
+		.bottom_panel_cont {
+			.total {
+				display: flex;
+				align-items: center;
+				gap: var(--gap-8);
+				min-height: 56px;
+
+				> dl {
+					flex: 1;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					gap: var(--gap-5);
+
+					dt {
+						position: relative;
+						padding-left: 72px;
+						font-size: var(--font-size-body-medium);
+
+						&:before {
+							position: absolute;
+							top: calc(50% - 28px);
+							left: 0;
+							content:'';
+							width: 56px;
+							height: 56px;
+							background-color: var(--color-surface-primary-subtler);
+							background-image: url(../images/icon/icon_discount.svg);
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: 32px;
+							border-radius: var(--radius-medium1);
+						}
+					}
+					dd {
+						font-size: var(--font-size-heading-large);
+					}
+				}
+
+				> .btn_area {
+					.hd_btn {
+						min-width: 121px;
+					}
+				}
+			}
+		}
+
+		&.active {
+			.bottom_panel_cont {
+			}
+		}
 	}
 }
