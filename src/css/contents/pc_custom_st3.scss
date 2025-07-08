@@ -1552,3 +1552,12 @@
 			}
 		}
 }
+
+.process_info_area {
+	& + .info_gray {
+		& + .btn_area {
+			margin-top: var(--gap-8);
+		}
+	}
+}
+
