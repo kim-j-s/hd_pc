@@ -2276,3 +2276,11 @@
 		margin-top: 0 !important;
 	}
 }
+
+.btn_link {
+	&.short_cut_icon_ty5 > .text dl dt {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-2);
+	}  
+}
