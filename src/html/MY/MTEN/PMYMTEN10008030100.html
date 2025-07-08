@@ -19,7 +19,12 @@
 				</div>		
 				<div class="form_line">
 					<div class="label_tit">피보험자와의 관계</div>
-					{{> cp/selectitem si_ph="선택해주세요." si_title="피보험자와의 관계 선택" si_item="선택해주세요." }}
+					<!-- s: 25-07-08 수정 -->
+					{{#> cp/selectbox_pc s-title="피보험자와의 관계 선택" sb-ph="선택해주세요." }}
+						<option value="">선택 옵션값 1</option>
+						<option value="">선택 옵션값 2</option>
+					{{/ cp/selectbox_pc}}
+					<!-- e: 25-07-08 수정 -->
 				</div>	
 			</div>
 		</div>
