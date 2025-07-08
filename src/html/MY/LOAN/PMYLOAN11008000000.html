@@ -1,9 +1,19 @@
 {{#> layout/default page-title="보험계약대출 상환 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	{{> layout/header h-title="보험계약대출 상환" }}
+	{{> layout/header_pc bc=true }}
 	<div id="container" class="container">
 		<div class="content">
-			<p class="text_sub">신청 정보를 확인해주세요.</p>
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<h2 class="p_title">
+						<strong>보험계약대출 상환</strong>
+					</h2>
+					<div class="sub_desc">
+						신청정보를 확인해주세요.
+					</div>
+				</div>
+			</div>
+			
 			<div class="info_cont">
 				<div class="info_gray">
 					<dl>
@@ -52,16 +62,18 @@
 			<!-- e: 계좌이체정보 -->
 
 			
+			<!-- s: 하단 고정 버튼 영역 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="전자서명하기" }}
+				</div>
+			</div>
+			<!-- s: 하단 고정 버튼 영역 -->
 		</div>
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="1" size="1" b-text="전자서명하기" }}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
-
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 </div>
 {{/ layout/default }}

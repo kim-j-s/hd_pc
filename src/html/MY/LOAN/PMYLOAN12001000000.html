@@ -1,6 +1,6 @@
 {{#> layout/default page-title="자동이체 신청/변경 | 마이페이지"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="자동이체 신청/변경" }}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 
@@ -89,13 +89,13 @@
 
 				<!-- s: 조회 내역이 없는 경우 -->
 				<div class="no_list_area">
-					{{> cp/icon iconClass="exclamationSvg"}}
+				{{> cp/icon iconClass="exclamationSvg"}}
 					<p>납입계좌 변경이 가능한 보험이 없어요</p>
-                    <p class="desc tac">
-                        혹시 급여이체로 납입하시나요?<br>
-                        이 경우는 아래 ‘꼭 알아두세요’를 참고해주세요.
-                    </p>
-                </div>
+					<p class="desc tac">
+							혹시 급여이체로 납입하시나요?<br>
+							이 경우는 아래 ‘꼭 알아두세요’를 참고해주세요.
+					</p>
+				</div>
 				<div class="btn_area">
 					<a href="javascript:void(0)" class="btn_link short_cut short_cut_icon short_cut_icon_ty5" title="보험계약대출 신청 페이지로 이동">
 						<span class="text">
@@ -120,10 +120,10 @@
 							<ul>
 								<li>보험계약대출 거래 계약자만 이용할 수 있습니다.</li>
 								<li>계약자 본인명의 계좌만 이용 가능합니다.
-                                    <ul>
-                                        <li>단, 평생계좌 등 일부 계좌는 이용 불가</li>
-                                    </ul>
-                                </li>
+									<ul>
+											<li>단, 평생계좌 등 일부 계좌는 이용 불가</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						<li>변경 시 유의사항
@@ -135,16 +135,18 @@
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
+
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="다음" }}
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<!-- s: 조회 내역이 없는 경우에만 노출 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="홈으로"  }}
-			</div>
-		</div>
-		<!-- e: 조회 내역이 없는 경우에만 노출 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 {{/ layout/default }}
