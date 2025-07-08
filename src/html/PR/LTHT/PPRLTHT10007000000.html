@@ -19,47 +19,22 @@
 				<div class="summery_inner">
 					<div class="total_wrap">
 						<div class="value">
-							<div class="val_price">23,250<span class="text">원</span></div>
+							<div class="val_price">22,700<span class="text">원</span></div>
 						</div>
 					</div>
 					<div class="detail_wrap">
 						<div class="dt_table">
-							<dl>
-								<dt>할인 전 보험료</dt>
-								<dd>23,900원</dd>
-								<dt>할인금액</dt>
-								<dd>-25,000원</dd>
-							</dl>
+                        <dl>
+                            <dt>할인 전 보험료</dt>
+                            <dd>23,900 원</dd>
+                            <dt>건강정보 고객 할인 <strong class="point">5%</strong></dt>
+                            <dd>-1,200 원</dd>
+                        </dl>
 						</div>
-					</div>
-				</div>
-			
-				<div class="dc_info_box">
-					<ul class="dc_list">
-						<li>
-							<span class="dc_l">건강정보 제공 할인 <strong class="point">5%</strong></span>
-						</li>
-						<li>
-							<span class="dc_l">건강등급 적용 할인 <strong class="point">3%</strong></span>
-						</li>
-					</ul>
+                    </div>
 				</div>
 			</div>
 			
-			<!-- s: 간편정보 -->
-			<div class="simple_info_wrap">
-				<div class="simple_info_item">
-					<ul class="sii_list">
-						<li>
-							<span class="sii_list_l">결제하실 금액</span>
-							<span class="sii_list_r">
-								<strong class="price">60,560원</strong>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- e: 간편정보 -->
 		
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
@@ -70,20 +45,21 @@
 
 				<!-- 신용(앱)카드 -->
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-					{{> pay/card no_tit=true }}                   
-					{{> pay/shot_benefit }}
+					{{> pay/card long=true }}
 				</div>	
 			
 				
 				<!-- 간편결제 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-					{{> pay/pay_info no_tit=true }}
+					{{> pay/pay_info }}
 				</div>
 				<!-- 즉시이체 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
-					{{> pay/bank1 no_tit=true }}					
+					{{> pay/bank1 }}					
 				</div>
 			</div>
+			<!-- 2회차 결제 -->
+			{{> pay/long_pay }}
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}

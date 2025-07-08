@@ -4,86 +4,69 @@
 -->
 {{#> layout/default page-title="보험료 결제 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-title="보험료 결제" }}
-
+    {{> layout/header_pc h-prd="하이펫보험" }}
 	<div id="container" class="container">
 		<div class="content">
-			<!-- s: content_top -->
-			<div class="content_top">
-				<h2 class="title_h2">
-					<!-- s: 25-06-09 -->
-					보험료를 <strong>결제하면<br>가입이 완료</strong>돼요
-					<!-- e: 25-06-09 -->
-				</h2>
+        	<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료 결제하기</div>
+					<h2 class="p_title">
+						보험료를 <strong>결제하여 가입이 완료</strong>해주세요
+					</h2>
+				</div>
 			</div>
-			<!-- e: content_top -->
-
-			<div class="bg_top_cover ty2">
-				<div class="info_gray bg_etc01">
-					<div class="total">
-						<dl>
-							<dt>결제하실 금액</dt>
-							<dd>
-								<strong class="big">47,500원</strong>
-							</dd>
-						</dl>
+			<div class="info_summary payment">
+				<div class="summary_top">
+					<div class="s_title">결제하실 금액</div>
+				</div>
+				<div class="summery_inner">
+					<div class="total_wrap">
+						<div class="value">
+							<div class="val_price">42,500원<span class="text">원</span></div>
+						</div>
 					</div>
-					<div class="info_top_cont">
+					<div class="detail_wrap">
+						<div class="dt_table">
 						<dl>
 							<dt>할인 전 보험료</dt>
 							<dd>50,000원</dd>
-						</dl>
-						<dl>
 							<dt>할인금액</dt>
-							<dd>-2,500원
-								<div class="sub_text">동물등록 할인(5%)</div>
-							</dd>
+							<dd>-7,500원</dd>
 						</dl>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<!-- s: 간편정보 -->
-			<div class="simple_info_wrap">
-				<div class="simple_info_item">
-					<ul class="sii_list">
+				<div class="dc_info_box">
+					<ul class="dc_list">
 						<li>
-							<span class="sii_list_l">결제하실 금액</span>
-							<span class="sii_list_r">
-								<strong class="price">47,500원</strong>
-							</span>
+							<span class="dc_l">동물등록할인 <strong class="point">5%</strong>, 유기동물입양할인 <strong class="point">3%</strong>, 다펫할인 <strong class="point">5%</strong></span>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<!-- e: 간편정보 -->
 		
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
-					<!-- s: 25-06-09 -->
 					{{>cp/tab_btn tb-text="신용카드" tb-id="01" tb-active=true}}
-					<!-- e: 25-06-09 -->
-					<!-- s: 25-05-12 탭순서 변경 -->
 					{{>cp/tab_btn tb-text="간편결제" tb-id="02"}}
 					{{>cp/tab_btn tb-text="즉시이체" tb-id="03"}}
-					<!-- e: 25-05-12 탭순서 변경 -->
 				</div>
 
 				<!-- 신용(앱)카드 -->
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-					{{> pay/ card long=true }}	
+					{{> pay/card no_tit=true }}
+					{{> pay/shot_benefit }}	
 				</div>	
 			
 				<!-- 간편결제 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-					{{> pay/pay_info }}
+					{{> pay/pay_info no_tit=true }}
 				</div>
 				<!-- 즉시이체 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
-					{{> pay/bank1 }}					
+					{{> pay/bank1 no_tit=true }}					
 				</div>
 			</div>
-			{{> pay/long_pay }}
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
