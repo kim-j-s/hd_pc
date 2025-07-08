@@ -144,7 +144,7 @@
 	flex-flow: row wrap;
 	// justify-content: center;
 	justify-content: space-between;
-	gap: var(--gap-5) var(--gap-8);
+	gap: var(--gap-8) var(--gap-8);
 
 	// 1개일 시, 가운데 정렬
 	// &:has(*:only-child){
