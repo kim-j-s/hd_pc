@@ -131,7 +131,19 @@
 					&:focus {
 						background-color: var(--color-button-tertiary-fill-hover);
 					}
-					&.ex_con {
+					// &.ex_con {
+					// 	> .text {
+					// 		padding-right: 20px;
+					// 		background-image: url(../images/header/icon_gnb_link_ty1.png);
+					// 	}
+					// 	&.active {
+					// 		> .text {
+					// 			color: var(--color-text-primary);
+					// 			background-image: url(../images/header/icon_gnb_link_ty2.png);
+					// 		}
+					// 	}
+					// }
+					&[target="_blank"] {
 						> .text {
 							padding-right: 20px;
 							background-image: url(../images/header/icon_gnb_link_ty1.png);

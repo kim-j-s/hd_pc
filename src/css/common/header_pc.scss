@@ -9,7 +9,8 @@
 	font-size: 0;
 	text-align: center;
 	background: var(--color-background-white);
-	transition: height 0.3s;
+	// transition: height 0.3s;
+	transition: top 0.3s;
 
 	&::after {
 		content: '';
@@ -293,11 +294,15 @@
 .sc_down {
 	.header_pc {
 		&:not(.header_pc_nd) {
-			.hpi_top {
-				padding-top: 0;
-				height: 0;
-			}
+			top: -48px;
+			// .hpi_top {
+			// 	padding-top: 0;
+			// 	height: 0;
+			// }
 		}
-	}	
+	}
+	.nld_cont {
+		// top: 72px;
+	}
 }
 /* 스크를 이벤트 관련 css */
