@@ -31,9 +31,11 @@ body {
 	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
+	z-index: 1;
 }
 .pageTop.active {
 	position: absolute;
+	bottom: 22.3rem;
 }
 .pageTop .pageTop_btn {
 	display: block;
@@ -49,7 +51,7 @@ body {
 	min-width: 118.8rem;
 	height: auto;
 	min-height: 100%;
-	padding: 12rem 0 20.4rem 0;
+	padding: 12rem 0 20.3rem 0;
 	/* 조건별 container 상단 간격 */
 	/* 조건별 container 상단 간격 */
 }
@@ -829,8 +831,14 @@ body {
 .info_gray .data_box.df_type_w_ty3 > dl:nth-child(2n) dt {
 	width: 10rem;
 }
+.info_gray .data_box.df_type_w_ty3 > dl.footer_dl dt {
+	width: 5rem;
+}
 .info_gray .data_box.df_type_w_ty4 > dl:nth-child(2n) dt {
 	width: 13rem;
+}
+.info_gray .data_box.df_type_w_ty4 > dl.footer_dl dt {
+	width: 5rem;
 }
 .info_gray .data_box.df_type_w_ty5 > dl dt {
 	width: 10rem;
@@ -838,11 +846,17 @@ body {
 .info_gray .data_box.df_type_w_ty5 > dl:nth-child(2n) dt {
 	width: 5rem;
 }
+.info_gray .data_box.df_type_w_ty5 > dl.footer_dl dt {
+	width: 10rem;
+}
 .info_gray .data_box.df_type_w_ty6 > dl dt {
 	width: 10rem;
 }
 .info_gray .data_box.df_type_w_ty6 > dl:nth-child(2n) dt {
 	width: 13rem;
+}
+.info_gray .data_box.df_type_w_ty6 > dl.footer_dl dt {
+	width: 10rem;
 }
 .info_gray .data_box.df_type_w_ty7 > dl dt {
 	width: 13rem;
@@ -850,11 +864,17 @@ body {
 .info_gray .data_box.df_type_w_ty7 > dl:nth-child(2n) dt {
 	width: 5rem;
 }
+.info_gray .data_box.df_type_w_ty7 > dl.footer_dl dt {
+	width: 13rem;
+}
 .info_gray .data_box.df_type_w_ty8 > dl dt {
 	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty8 > dl:nth-child(2n) dt {
 	width: 10rem;
+}
+.info_gray .data_box.df_type_w_ty8 > dl.footer_dl dt {
+	width: 13rem;
 }
 .info_gray .data_box.df_type_w_ty9 {
 	padding-bottom: var(--gap-6);
@@ -864,6 +884,9 @@ body {
 	border-right: 0;
 }
 .info_gray .data_box.df_type_w_ty9 > dl dt {
+	width: 9rem;
+}
+.info_gray .data_box.df_type_w_ty9 > dl.footer_dl dt {
 	width: 9rem;
 }
 .info_gray .data_box.df_type_w_ty9 + .btn_area {
@@ -1128,6 +1151,7 @@ body {
 .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link .text {
 	font-size: var(--font-size-body-large);
 }
+.card_item_wrap + .total_price_display_ty1,
 .card_item_wrap + .info_gray {
 	margin-top: var(--gap-11);
 }
@@ -1862,6 +1886,44 @@ body {
 .grid_list_ty2 li ~ li {
 	margin-top: 0 !important;
 }
+.item_info.ty2 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 0 var(--gap-8);
+}
+.item_info.ty2 ul {
+	width: calc(50% - 1.6rem);
+	margin-top: 0;
+}
+.item_info.ty2 ul:nth-child(2n-1) {
+	border-right: 1px solid var(--color-divider-gray-light);
+	padding-right: var(--gap-8);
+}
+.img_box.ty2 {
+	width: 100%;
+	background: var(--color-surface-gray-subtler);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 5rem 0;
+	border-radius: var(--radius-large2);
+}
+.img_box.ty2 img {
+	width: auto;
+}
 .btn_link.short_cut_icon_ty5 > .text dl dt {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1870,6 +1932,28 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	gap: var(--gap-2);
+}
+.total_price_display_ty1 {
+	height: auto;
+	margin: 0;
+	padding: var(--padding-8);
+	background-color: var(--color-surface-gray-subtler);
+	border-radius: var(--radius-large2);
+	border: none;
+}
+.total_price_display_ty1 .price_val {
+	font-size: var(--font-size-heading-medium);
+}
+.wrap .info_gray .middle {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	gap: var(--gap-4);
+}
+.wrap .info_gray .footer_dl {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
 }
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
@@ -2405,6 +2489,16 @@ body {
 }
 .title_view_wrap .btn_area .hd_btn {
 	min-width: auto;
+}
+.title_view_wrap.bg_right {
+	margin-bottom: 0;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	min-height: 21rem;
+}
+.title_view_wrap.bg_right.ty1 {
+	background: url(../images/content/gu/bg_top_ty1.png) no-repeat top right;
 }
 .select_option_box .selectbox {
 	width: 100%;
@@ -3210,6 +3304,9 @@ body {
 .item_info.ty2 ul:nth-child(2n-1) {
 	border-right: 1px solid var(--color-divider-gray-light);
 	padding-right: var(--gap-8);
+}
+.process_info_area + .info_gray + .btn_area {
+	margin-top: var(--gap-8);
 }
 /* PC용 component  */
 .form_key_pc {

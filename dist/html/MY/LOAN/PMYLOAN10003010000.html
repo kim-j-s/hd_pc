@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -665,11 +665,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="select_item select_item_case01" role="button" tabindex="0" title="계좌 선택" onclick="openHDPopup(this,'my_bank_select');">
-									<div class="select_item_inner">
-										<div class="si_item" data-placeholder="국민은행 1234******1234"></div>
-										<span class="si_stat">선택됨</span>
-									</div>
+								<div class="select_option_box">
+									<select name="" id="" title="대출금 받을 계좌 선택" class="selectbox">
+										<option value="" selected>국민은행 1234******1234</option>
+										<option value="">우리은행 1234******1234</option>
+									</select>
 								</div>
 								<!-- s: CASE. 계좌 디폴트 선택 시 - 대출금지급가능 계좌가 1개인 경우 -->
 								<!-- <div class="input_text">
@@ -724,11 +724,11 @@
 										</label>
 									</div>
 									<!-- 대출금지급가능 계좌 동일여부 체크 해제 시 -->
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="계좌 선택" onclick="openHDPopup(this,'my_bank_select');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="국민은행 1234******1234"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="이자납입계좌 선택" class="selectbox">
+											<option value="" selected>국민은행/12341234132/김현대</option>
+											<option value="">직접입력</option>
+										</select>
 									</div>
 									<!-- 대출금지급가능 계좌 동일여부 체크 해제 시 -->
 								</div>
@@ -759,7 +759,7 @@
 								</div>
 							</div>
 							<!-- e: 직접입력 선택 시 노출 -->
-							<div class="form_line">
+							<div class="form_line full">
 								<div class="label_tit">예금주</div>
 								<div class="input_text">
 									<div class="inp">
@@ -768,22 +768,24 @@
 									</div>
 								</div>
 							</div>
-							<div class="form_line">
+							<div class="form_line full_half">
 								<div class="label_tit">이자납입일</div>
-								<div class="select_item select_item_case01" role="button" tabindex="0" title="이자납입일 선택" onclick="openHDPopup(this,'bank_day_select');">
-									<div class="select_item_inner">
-										<div class="si_item" data-placeholder="이자납입일 선택">5일</div>
-										<span class="si_stat">선택됨</span>
-									</div>
+								<div class="select_option_box">
+									<select name="" id="" title="이자납입일 선택" class="selectbox">
+										<option value="" selected>5일</option>
+										<option value="">10일</option>
+										<option value="">20일</option>
+										<option value="">25일</option>
+									</select>
 								</div>
 							</div>
 						</div>
 
 						<div class="checkbox_group_wrap">
 							<div class="inp_checkbox rd_box">
-								<input type="checkbox" id="checkbox01-1" />
-								<label for="checkbox01-1" class="chk_label chk_label_ty3">
-									<span class="label_cont">등록한 연락처로 이자미납 안내문을 보내드려요.<br />우편으로도 받아보시겠어요?</span>
+								<input type="checkbox" id="checkbox01-2" />
+								<label for="checkbox01-2" class="chk_label chk_label_ty3">
+									<span class="label_cont">등록한 연락처로 이자미납 안내문을 보내드려요. 우편으로도 받아보시겠어요?</span>
 								</label>
 							</div>
 						</div>
@@ -866,23 +868,6 @@
 								<div class="ftr_sns_box">
 									<button type="button" class="ftr_sns_open">다이렉트 SNS</button>
 								</div>
-								<ul class="ftr_sns_list">
-									<li>
-										<a href="https://www.facebook.com/hi.co.kr" target="_blank" title="새창열기">공식페이스북</a>
-									</li>
-									<li>
-										<a href="https://blog.hi.co.kr" target="_blank" title="새창열기">공식블로그</a>
-									</li>
-									<li>
-										<a href="https://blog.naver.com/goodngoodblog" target="_blank" title="새창열기">어린이보험블로그</a>
-									</li>
-									<li>
-										<a href="https://blog.naver.com/direct_hi" target="_blank" title="새창열기">현대해상 다이렉트 블로그</a>
-									</li>
-									<li>
-										<a href="https://www.youtube.com/user/HicarHilife" target="_blank" title="새창열기">공식 유튜브</a>
-									</li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -952,44 +937,7 @@
 		</div>
 
 		<!-- s: popup area -->
-		<div class="popup_wrap popup_wrap_type3" id="my_bank_select" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('my_bank_select');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">계좌 선택</div></div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">국민은행/12341234132/김현대</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">직접입력</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('my_bank_select');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<div class="popup_wrap popup_wrap_type3" id="bank_day_select" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('bank_day_select');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">이자납입일</div></div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">5일</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">10일</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">20일</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">25일</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('bank_day_select');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
 		<!-- e: popup area -->
 	</body>
 </html>
