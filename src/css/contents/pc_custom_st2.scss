@@ -2308,3 +2308,22 @@
 
 	img { width: auto;}
 }
+
+.btn_link {
+	&.short_cut {
+		&.short_cut_icon {
+			&.short_cut_icon_ty5 {
+				& > .text  {
+					dl {
+						dt {
+							display: flex;
+							align-items: center;
+							gap: var(--gap-2);
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}

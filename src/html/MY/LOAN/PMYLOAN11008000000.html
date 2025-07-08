@@ -16,25 +16,27 @@
 			
 			<div class="info_cont">
 				<div class="info_gray">
-					<dl>
-						<dt>출금예정금액</dt>
-						<dd class="point">1,500,000원</dd>
-					</dl>
-					<dl>
-						<dt>원금상환금액</dt>
-						<dd class="point">100,000원</dd>
-					</dl>
-					<dl>
-						<dt>대출이자</dt>
-						<dd>100,000원</dd>
-					</dl>
-					<dl>
-						<dt>상환 후 대출잔액</dt>
-						<dd>4,500,000원</dd>
-					</dl>
+					<div class="data_box df_type_w_ty1">
+						<dl>
+							<dt>원금상환금액</dt>
+							<dd><strong>1,400,000원</strong></dd>
+						</dl>
+						<dl>
+							<dt>대출이자</dt>
+							<dd>100,000원</dd>
+						</dl>
+							<dl>
+							<dt>상환 후 대출잔액</dt>
+							<dd>4,500,000원</dd>
+						</dl>
+						<dl class="footer_dl">
+							<dt>상환 후 대출잔액</dt>
+							<dd class="point">4,500,000원</dd>
+						</dl>
+					</div>
 				</div>
 
-				<div class="btn_area">
+				<div class="btn_area center">
 					{{> cp/button type="3" size="3" b-text="계약별 상세보기"}}
 				</div>
 			</div>
@@ -48,8 +50,8 @@
 				<table class="table">
 					<caption>출금계좌 제공</caption>
 					<colgroup>
-						<col style="width:35%;">
-						<col style="width:65%;">
+						<col style="width:160px;">
+						<col style="width:auto;">
 					</colgroup>
 					<tbody>
 						<tr>
@@ -64,7 +66,8 @@
 			
 			<!-- s: 하단 고정 버튼 영역 -->
 			<div class="bottom_fix_wrap">
-				<div class="btn_area center">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
 					{{> cp/button type="1" size="1" b-text="전자서명하기" }}
 				</div>
 			</div>
