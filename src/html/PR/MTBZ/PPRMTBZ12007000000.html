@@ -36,33 +36,14 @@
 								<dt>환급금 사용여부</dt>
 								<dd>{{> cp/checkbox id="switch_check9" chk_class="right" label_class="switch_check" role="switch" aria-checked="false" }}</dd>
 							</dl>
-							<!-- s: 법인만 제외 -->
-							<dl>
-								<dt>블루/기아멤버스 포인트</dt>
-								<dd>-30,000 원</dd>
-							</dl>
-							<dl>
-								<dt>하이헬스 챌린지 포인트</dt>
-								<dd>-10,000 원</dd>
-							</dl>
-							<!-- e: 법인만 제외 -->
 						</div>
 					</div>
 				</div>
 			</div>
-
-
-			<div class="banner_box ty3">
-				<a href="#">
-					<img src="../../../images/event/banner4.png" alt="자동차보험료 결제혜택 최대 3만원 30만원 이상 결제시">
-				</a>
-			</div>
+			
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
 					{{>cp/tab_btn tb-text="신용카드" tb-id="01" tb-active=true}}
-					<!-- s: 법인만 제외 -->
-					{{>cp/tab_btn tb-text="간편결제" tb-id="02"}}
-					<!-- e: 법인만 제외 -->
 					{{>cp/tab_btn tb-text="즉시이체" tb-id="03"}}
 					{{>cp/tab_btn tb-text="가상계좌" tb-id="04"}}
 				</div>
@@ -70,16 +51,9 @@
 				<!-- 신용(앱)카드 -->
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
 					{{> pay/card }}
-					<!-- s: 법인만 제외 -->
-					{{> pay/car_benefit }}
-					<!-- e: 법인만 제외 -->
 					{{> pay/corporate }}
 				</div>
-
-				<!-- 간편결제 - 법인만 제외 -->
-				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-					{{> pay/pay_info }}
-				</div>
+				
 				<!-- 계좌이체 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
 					{{> pay/bank1 }}
@@ -88,8 +62,8 @@
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab04" id="tabPanel04">
 					{{> pay/bank2 }}
 				</div>
-
 			</div>
+			
 			{{> pay/car_pay }}
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
@@ -104,15 +78,12 @@
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 카드만 노출 -->
 		</div>
-		<!-- s: 사이드 패널 -->
-		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
-		<!-- e: 사이드 패널 -->
 	</div>
 
 </div>
 
 <!-- s: popup area -->
-{{> pay/car_pop }}
+
 <!-- e: popup area -->
 {{/ layout/default }}
 
