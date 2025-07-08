@@ -826,6 +826,12 @@
 						width: 100px;
 					}
 				}
+
+				&.footer_dl {
+					dt {
+						width: 50px;
+					}
+				}
 			}
 		}
 		&.df_type_w_ty4 {//50,130
@@ -833,6 +839,12 @@
 				&:nth-child(2n) {
 					dt{
 						width: 130px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 50px;
 					}
 				}
 			}
@@ -847,6 +859,12 @@
 						width: 50px;
 					}
 				}
+
+				&.footer_dl {
+					dt {
+						width: 100px;
+					}
+				}
 			}
 		}
 		&.df_type_w_ty6 {//100,130
@@ -857,6 +875,12 @@
 				&:nth-child(2n) {
 					dt {
 						width: 130px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 100px;
 					}
 				}
 			}
@@ -871,6 +895,12 @@
 						width: 50px;
 					}
 				}
+
+				&.footer_dl {
+					dt {
+						width: 130px;
+					}
+				}
 			}
 		}
 		&.df_type_w_ty8 {//130,100
@@ -881,6 +911,12 @@
 				&:nth-child(2n) {
 					dt {
 						width: 100px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 130px;
 					}
 				}
 			}
@@ -894,6 +930,12 @@
 				}
 				dt {
 					width: 90px;
+				}
+
+				&.footer_dl {
+					dt {
+						width: 90px;
+					}
 				}
 			}
 			+ .btn_area {
@@ -1236,6 +1278,7 @@
 		}
 	}
 
+	& + .total_price_display_ty1,
 	& + .info_gray {
 		margin-top: var(--gap-11);
 	}
@@ -2277,10 +2320,68 @@
 	}
 }
 
+.item_info.ty2 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0 var(--gap-8);
+
+	ul {
+			width: calc(50% - 16px);
+			margin-top: 0;
+
+			&:nth-child(2n-1){
+				border-right: 1px solid var(--color-divider-gray-light);
+				padding-right: var(--gap-8);
+			}
+		}
+}
+
+.img_box.ty2 {
+	width: 100%;
+	background: var(--color-surface-gray-subtler);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0;
+	border-radius: var(--radius-large2);
+
+	img { width: auto;}
+}
+
 .btn_link {
 	&.short_cut_icon_ty5 > .text dl dt {
 		display: flex;
 		align-items: center;
 		gap: var(--gap-2);
 	}  
+}
+
+
+// total 예외 Case (자동차)
+.total_price_display_ty1 {
+	height: auto;
+	margin: 0;
+	padding: var(--padding-8);
+	background-color: var(--color-surface-gray-subtler);
+	border-radius: var(--radius-large2);
+	border: none;
+
+	.price_val {
+		font-size: var(--font-size-heading-medium);
+	}
+}
+
+
+// page 내 case만 수정
+.wrap {
+	.info_gray {
+		.middle {
+			justify-content: flex-start;
+			gap: var(--gap-4);
+		}
+		.footer_dl {
+			justify-content: flex-start;
+		}
+	}
 }
