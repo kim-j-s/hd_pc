@@ -3,6 +3,13 @@
 		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>이자납입계좌 변경</strong>
+						</h2>
+					</div>
+				</div>
 
 				<!-- s: 계약 목록 -->
 				<div class="all_checking">
@@ -17,11 +24,9 @@
 								<i></i>
 							</div>
 							<div class="inner_cont">
-								<div role="button" class="card_link" tabindex="0">
-									<div class="item_top" id="card_chk1_cont">
-										<div class="title_info">
-											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)</div>
-										</div>
+								<div class="item_top" id="card_chk1_cont">
+									<div class="title_info">
+										<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)</div>
 									</div>
 								</div>
 								<ul class="card_list_ty1">
@@ -53,11 +58,9 @@
 									<i></i>
 							</div>
 							<div class="inner_cont">
-								<div role="button" class="card_link" tabindex="0">
-									<div class="item_top" id="card_chk2_cont">
-										<div class="title_info">
-											<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)</div>
-										</div>
+								<div class="item_top" id="card_chk2_cont">
+									<div class="title_info">
+										<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2301)</div>
 									</div>
 								</div>
 								<ul class="card_list_ty1">
@@ -87,6 +90,12 @@
 				</div>
 				<!-- e: 계약 목록 -->
 
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="다음" }}
+					</div>
+				</div>
+
 				<!-- s: 조회 내역이 없는 경우 -->
 				<div class="no_list_area">
 				{{> cp/icon iconClass="exclamationSvg"}}
@@ -96,6 +105,7 @@
 							이 경우는 아래 ‘꼭 알아두세요’를 참고해주세요.
 					</p>
 				</div>
+
 				<div class="btn_area">
 					<a href="javascript:void(0)" class="btn_link short_cut short_cut_icon short_cut_icon_ty5" title="보험계약대출 신청 페이지로 이동">
 						<span class="text">
@@ -111,7 +121,7 @@
 						</span>
 					</a>
 				</div>
-                <!-- e: 조회 내역이 없는 경우 -->
+        <!-- e: 조회 내역이 없는 경우 -->
 
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active=true }}
@@ -135,12 +145,6 @@
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
-
-				<div class="bottom_fix_wrap">
-					<div class="btn_area center">
-						{{> cp/button type="1" size="1" b-text="다음" }}
-					</div>
-				</div>
 			</div>
 		</div>
 
