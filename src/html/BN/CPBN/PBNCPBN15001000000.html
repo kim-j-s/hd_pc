@@ -6,10 +6,30 @@
 <div class="popup_cont search_list_type2">
 
     <div class="selectitem_wrap">
-			<!-- s: 25-07-01 수정 -->
-			{{> cp/selectitem si_class="select_item_case01" si_ph="시/도 선택" si_title="시/도 선택" si_item="시/도 선택" si_popup="pop_type01_1"}}
-			{{> cp/selectitem si_class="select_item_case01" si_ph="시/군/구 선택" si_title="시/군/구 선택" si_item="시/군/구 선택" si_popup="pop_type01_2"}}
-			<!-- e: 25-07-01 수정 -->
+			{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="시/도 선택" }}
+				<option value="">서울</option>
+				<option value="">경기</option>
+				<option value="">강원</option>
+				<option value="">경남</option>
+				<option value="">경북</option>
+				<option value="">광주</option>
+				<option value="">대구</option>
+				<option value="">대전</option>
+				<option value="">부산</option>
+				<option value="">세종</option>
+				<option value="">울산</option>
+				<option value="">인천</option>
+				<option value="">전남</option>
+				<option value="">전북</option>
+				<option value="">제주</option>
+				<option value="">충남</option>
+				<option value="">충북</option>
+			{{/ cp/selectbox_pc}}
+			{{#> cp/selectbox_pc s-title="select title명 선택" sb-ph="시/군/구 선택" }}
+			<option value="">강남구</option>
+			<option value="">강동구</option>
+			<option value="">강북구</option>
+			{{/ cp/selectbox_pc}}
 		</div>
     <div class="search_inp_box">
         {{> cp/text inp-search=true placeholder="엽체명을 입력해 주세요." inp-title="검색어 입력" }}	
@@ -19,9 +39,9 @@
         <p>검색결과 <strong class="point">2</strong>건</p>
     </div>
     <div class="search_reult_list_container">
-        <ul class="search_reult_list">
+        <ul class="search_reult_list no_link">
             <li class="search_reult_list_item">
-                <a href="#">
+                <a href="javascript:void(0)">
                     <strong>진양자동차공업사</strong>
                     <div class="sub_text">
                         서울 강남구 삼성동 **
@@ -31,7 +51,7 @@
                 </a>
             </li>
             <li class="search_reult_list_item">
-                <a href="#">
+                <a href="javascript:void(0)">
                     <strong>진양자동차공업사</strong>
                     <div class="sub_text">
                         서울 강남구 삼성동 **
@@ -41,7 +61,7 @@
                 </a>
             </li>
             <li class="search_reult_list_item">
-                <a href="#">
+                <a href="javascript:void(0)">
                     <strong>진양자동차공업사</strong>
                     <div class="sub_text">
                         서울 강남구 삼성동 **
@@ -63,49 +83,5 @@
 <!-- e: Full 팝업 -->
 
 <!-- s: popup area -->
- 	<!-- s: 25-07-01 수정 -->
-	<!-- s: 시/도 선택 -->
-	{{#> popup/popup_bottom popup-id="pop_type01_1" }}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<div class="opt_select_list opt_case3">
-				<div role="button" tabindex="0" class="option"><span class="text">시/도 선택</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">서울</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">경기</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">강원</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">경님</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">경북</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">광주</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">대구</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">대전</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">부산</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">세종</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">울산</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">인천</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">전남</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">전북</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">제주</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">충남</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">충북</span></div>
-			</div>
-		</div>
-	</div>
-	{{/ popup/popup_bottom}}
-	<!-- e: 시/도 선택 -->
-	<!-- s: 시/군/구 선택 -->
-	{{#> popup/popup_bottom popup-id="pop_type01_2" }}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<div class="opt_select_list opt_case3">
-				<div role="button" tabindex="0" class="option"><span class="text">시/군/구 선택</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">강남구</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">강동구</span></div>
-				<div role="button" tabindex="0" class="option"><span class="text">강북구</span></div>
-			</div>
-		</div>
-	</div>
-	{{/ popup/popup_bottom}}
-	<!-- e: 시/도 선택 -->
- 	<!-- e: 25-07-01 수정 -->
 <!-- e: popup area -->
 {{/ layout/default }}
