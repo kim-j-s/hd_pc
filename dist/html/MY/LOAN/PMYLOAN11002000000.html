@@ -825,25 +825,38 @@
 			</div>
 			<div id="container" class="container">
 				<div class="content">
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<h2 class="p_title">
+								<strong>보험계약대출 상환</strong>
+							</h2>
+						</div>
+					</div>
+
 					<div class="tab_wrap">
 						<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanelex01" id="tabex01">원금+이자상환</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelex02" id="tabex02">이자만 납입</button></div>
 						<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
 							<!-- s: form_box  -->
 							<div class="form_box">
+								<!-- s: CASE. 일괄 상환 신청 -->
 								<p class="text_sub">입력한 원금에 이자가 합산돼요.</p>
-								<div class="form_group_wrap">
-									<div class="info_gray">
-										<dl class="middle">
-											<dt>대출원금</dt>
-											<dd class="point">
-												<strong class="big">1,250만원</strong>
-											</dd>
-										</dl>
-									</div>
+								<!-- e: CASE. 일괄 상환 신청 -->
+
+								<!-- s: CASE. 계약별 상환 신청 -->
+								<!-- <p class="text_sub">선택한 계약의 원금과 이자가 합산됩니다.</p> -->
+								<!-- e: CASE. 계약별 상환 신청 -->
+
+								<div class="info_gray">
+									<dl class="middle">
+										<dt>대출원금</dt>
+										<dd class="point">
+											<strong class="big">1,250만원</strong>
+										</dd>
+									</dl>
 								</div>
 
 								<div class="form_group_wrap">
-									<div class="form_line">
+									<div class="form_line full">
 										<div class="label_tit">원금상환금액</div>
 										<div class="comp_wrap key_number">
 											<div class="input_text price">
@@ -882,174 +895,172 @@
 								</div>
 
 								<!-- s: 계약별로 직접 입력 -->
-								<div class="form_group_wrap space_list_ty2">
-									<div class="info_gray">
-										<dl>
-											<dt>계약별로 직접 입력</dt>
-											<dd>
-												<div class="inp_checkbox">
-													<input type="checkbox" id="switch_check3" role="switch" aria-checked="true" />
-													<label for="switch_check3" class="chk_label switch_check lg">
-														<span class="label_cont"></span>
-													</label>
-												</div>
-											</dd>
-										</dl>
-									</div>
-									<!-- s: 계약별로 직접 입력 선택인 경우 대출 가능 계약 목록 노출 -->
-									<div class="card_item_wrap focusin">
-										<div class="card_item">
-											<div class="item_inner">
-												<div class="inner_cont">
-													<div class="item_top">
-														<div class="title_info">
-															<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)</div>
-														</div>
-													</div>
-													<!-- s: card_list_ty1 -->
-													<ul class="card_list_ty1">
-														<li>
-															<div class="title">대출이율</div>
-															<div class="cont"><strong class="point">3.4%</strong></div>
-														</li>
-														<li>
-															<div class="title">대출원금</div>
-															<div class="cont">50만원</div>
-														</li>
-														<li>
-															<div class="title">대출이자</div>
-															<div class="cont">100,000원</div>
-														</li>
-														<li class="result">
-															<div class="title">원금+이자</div>
-															<div class="cont">
-																<strong class="point">600,000만원</strong>
-															</div>
-														</li>
-													</ul>
-													<!-- e: card_list_ty1 -->
-
-													<div class="card_cont">
-														<div class="form_group_wrap">
-															<div class="form_line">
-																<div class="label_tit">원금상환금액</div>
-																<div class="comp_wrap key_number">
-																	<div class="input_text price">
-																		<div class="inp">
-																			<input type="tel" placeholder="5만원 이상 입력" title="대출신청금액 입력" />
-																			<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																		</div>
-
-																		<div class="int_txt">만원</div>
-																	</div>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">전액</span>
-																	</button>
-																</div>
-																<div class="btn_area basic">
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">5만원</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">10만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">50만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">100만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-																		<span class="text">정정</span>
-																	</button>
-																</div>
-																<div class="btn_area basic">
-																	<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type01');" title="신용정보 집중 대상 대출 안내 팝업 오픈">
-																		<span class="text">이 대출은 신용정보 집중 대상이에요</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+								<div class="info_gray">
+									<dl>
+										<dt>계약별로 직접 입력</dt>
+										<dd>
+											<div class="inp_checkbox">
+												<input type="checkbox" id="switch_check3" role="switch" aria-checked="true" />
+												<label for="switch_check3" class="chk_label switch_check lg">
+													<span class="label_cont"></span>
+												</label>
 											</div>
-										</div>
-										<!-- s: CASE. 상환 신청 불가 -->
-										<div class="card_item disabled">
-											<div class="item_inner">
-												<div class="inner_cont">
-													<div class="item_top">
-														<div class="title_info">
-															<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)</div>
-														</div>
-													</div>
-													<!-- s: card_list_ty1 -->
-													<ul class="card_list_ty1">
-														<li>
-															<div class="title">대출이율</div>
-															<div class="cont"><strong class="point">3.4%</strong></div>
-														</li>
-														<li>
-															<div class="title">대출원금</div>
-															<div class="cont">50만원</div>
-														</li>
-														<li>
-															<div class="title">대출이자</div>
-															<div class="cont">100,000원</div>
-														</li>
-														<li class="result">
-															<div class="title">원금+이자</div>
-															<div class="cont">
-																<strong class="point">600,000만원</strong>
-															</div>
-														</li>
-													</ul>
-													<!-- e: card_list_ty1 -->
-
-													<div class="card_cont">
-														<div class="form_group_wrap">
-															<div class="form_line">
-																<div class="label_tit">원금상환금액</div>
-																<div class="comp_wrap key_number">
-																	<div class="input_text price">
-																		<div class="inp">
-																			<input type="tel" placeholder="5만원 이상 입력" disabled title="대출신청금액 입력" />
-																			<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																		</div>
-
-																		<div class="int_txt">만원</div>
-																	</div>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">전액</span>
-																	</button>
-																</div>
-																<div class="btn_area basic">
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">5만원</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">10만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">50만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">100만</span>
-																	</button>
-																	<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
-																		<span class="text">정정</span>
-																	</button>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- e: CASE. 상환 신청 불가 -->
-									</div>
-									<!-- e: 계약별로 직접 입력 선택인 경우 대출 계약 목록 노출 -->
+										</dd>
+									</dl>
 								</div>
+								<!-- s: 계약별로 직접 입력 선택인 경우 대출 가능 계약 목록 노출 -->
+								<div class="card_item_wrap focusin">
+									<div class="card_item">
+										<div class="item_inner">
+											<div class="inner_cont">
+												<div class="item_top">
+													<div class="title_info">
+														<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)</div>
+													</div>
+												</div>
+												<!-- s: card_list_ty1 -->
+												<ul class="card_list_ty1 df_type_w_ty1">
+													<li>
+														<div class="title">대출이율</div>
+														<div class="cont"><strong class="point">3.4%</strong></div>
+													</li>
+													<li>
+														<div class="title">대출원금</div>
+														<div class="cont">50만원</div>
+													</li>
+													<li>
+														<div class="title">대출이자</div>
+														<div class="cont">100,000원</div>
+													</li>
+													<li class="result">
+														<div class="title">원금+이자</div>
+														<div class="cont">
+															<strong class="point">600,000만원</strong>
+														</div>
+													</li>
+												</ul>
+												<!-- e: card_list_ty1 -->
+
+												<div class="card_cont">
+													<div class="form_group_wrap">
+														<div class="form_line full">
+															<div class="label_tit">원금상환금액</div>
+															<div class="comp_wrap key_number">
+																<div class="input_text price">
+																	<div class="inp">
+																		<input type="tel" placeholder="5만원 이상 입력" title="대출신청금액 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+
+																	<div class="int_txt">만원</div>
+																</div>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">전액</span>
+																</button>
+															</div>
+															<div class="btn_area basic">
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">5만원</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">10만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">50만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">100만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+																	<span class="text">정정</span>
+																</button>
+															</div>
+															<div class="btn_area basic">
+																<a href="javascript:void(0)" class="btn_link short_cut sm" role="button" onclick="openHDPopup(this,'pop_type01');" title="신용정보 집중 대상 대출 안내 팝업 오픈">
+																	<span class="text">이 대출은 신용정보 집중 대상이에요</span>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- s: CASE. 상환 신청 불가 -->
+									<div class="card_item disabled">
+										<div class="item_inner">
+											<div class="inner_cont">
+												<div class="item_top">
+													<div class="title_info">
+														<div class="main_title">무배당현대해상다이렉트실손의료비보장보험(계약전환용)(갱신형)(Hi2501)</div>
+													</div>
+												</div>
+												<!-- s: card_list_ty1 -->
+												<ul class="card_list_ty1 df_type_w_ty1">
+													<li>
+														<div class="title">대출이율</div>
+														<div class="cont"><strong class="point">3.4%</strong></div>
+													</li>
+													<li>
+														<div class="title">대출원금</div>
+														<div class="cont">50만원</div>
+													</li>
+													<li>
+														<div class="title">대출이자</div>
+														<div class="cont">100,000원</div>
+													</li>
+													<li class="result">
+														<div class="title">원금+이자</div>
+														<div class="cont">
+															<strong class="point">600,000만원</strong>
+														</div>
+													</li>
+												</ul>
+												<!-- e: card_list_ty1 -->
+
+												<div class="card_cont">
+													<div class="form_group_wrap">
+														<div class="form_line full">
+															<div class="label_tit">원금상환금액</div>
+															<div class="comp_wrap key_number">
+																<div class="input_text price">
+																	<div class="inp">
+																		<input type="tel" placeholder="5만원 이상 입력" disabled title="대출신청금액 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+
+																	<div class="int_txt">만원</div>
+																</div>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">전액</span>
+																</button>
+															</div>
+															<div class="btn_area basic">
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">5만원</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">10만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">50만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">100만</span>
+																</button>
+																<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" disabled>
+																	<span class="text">정정</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- e: CASE. 상환 신청 불가 -->
+								</div>
+								<!-- e: 계약별로 직접 입력 선택인 경우 대출 계약 목록 노출 -->
 								<!-- e: 계약별로 직접 입력 -->
 							</div>
 							<!-- e: form_box  -->
@@ -1071,12 +1082,12 @@
 									<div class="inp_checkbox">
 										<input type="checkbox" id="checkbox2" />
 										<label for="checkbox2" class="chk_label">
-											<span class="label_cont">총 <strong class="point">2</strong>건 전체 선택</span>
+											<span class="label_cont">전체 선택</span>
 										</label>
 									</div>
 								</div>
 								<!-- s: 계약별로 이자 납입 가능 계약 목록 노출 -->
-								<div class="card_item_wrap focusin">
+								<div class="card_item_wrap">
 									<div class="card_item">
 										<div class="item_inner">
 											<div class="inp_checkbox">
@@ -1108,8 +1119,8 @@
 												<!-- e: card_list_ty1 -->
 											</div>
 										</div>
-										<div class="btn_area basic">
-											<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type01');" title="신용정보 집중 대상 대출 안내 팝업 오픈">
+										<div class="btn_area basic ty1">
+											<a href="javascript:void(0)" class="btn_link short_cut sm" role="button" onclick="openHDPopup(this,'pop_type01');" title="신용정보 집중 대상 대출 안내 팝업 오픈">
 												<span class="text">이 대출은 신용정보 집중 대상이에요</span>
 											</a>
 										</div>
@@ -1118,7 +1129,7 @@
 									<div class="card_item disabled">
 										<div class="item_inner">
 											<div class="inp_checkbox">
-												<input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont" />
+												<input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont" disabled="true" />
 												<label for="card_chk1" class="chk_label"></label>
 												<i></i>
 											</div>
@@ -1163,48 +1174,6 @@
 						</div>
 					</div>
 
-					<!-- s: 하단 고정 버튼 영역 -->
-					<div class="bottom_fix_wrap bottom_panel">
-						<!-- s: 원금 + 이자에서만 노출 -->
-						<div class="btn_area center">
-							<a href="javascript:void(0)" class="btn_link short_cut bottom_panel_toggle">
-								<span class="text">펼치기</span>
-							</a>
-						</div>
-
-						<!-- e: 원금 + 이자에서만 노출 -->
-						<div class="bottom_panel_cont" id="bottom_panel_cont">
-							<div class="info_gray bg_etc01">
-								<div class="total">
-									<dl>
-										<dt>예상 출금금액(원금+이자)</dt>
-										<dd>
-											<strong class="big point">610,000원</strong>
-										</dd>
-									</dl>
-								</div>
-								<!-- s: 원금 + 이자에서만 노출 -->
-								<div class="info_top_cont item_hidden">
-									<dl>
-										<dt>원금상환금액</dt>
-										<dd>600,000원</dd>
-									</dl>
-									<dl>
-										<dt>대출이자</dt>
-										<dd>10,000원</dd>
-									</dl>
-								</div>
-								<!-- e: 원금 + 이자에서만 노출 -->
-							</div>
-						</div>
-						<div class="btn_area center">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-								<span class="text">다음</span>
-							</button>
-						</div>
-					</div>
-					<!-- e: 원금 + 이자 하단 고정 버튼 영역 -->
-
 					<!-- s: 꼭 알아두세요 -->
 					<div class="bottom_fix_notice">
 						<div class="acd_item">
@@ -1228,6 +1197,68 @@
 					<!-- e: 꼭 알아두세요 -->
 				</div>
 			</div>
+
+			<!-- s: 하단 고정 패널 영역 -->
+			<!-- s: 원금+이자상환 -->
+			<div class="bottom_fix_wrap bottom_panel ft_fix">
+				<div class="btn_area center">
+					<a href="javascript:void(0)" class="btn_link short_cut bottom_panel_toggle">
+						<span class="text">펼치기</span>
+					</a>
+				</div>
+				<div class="bottom_panel_cont" id="bottom_panel_cont">
+					<div class="total">
+						<dl>
+							<dt>예상 출금금액(원금+<strong class="point">이자</strong>)</dt>
+							<dd>
+								<strong class="big point">11,000,000원</strong>
+							</dd>
+						</dl>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<div class="item_hidden">
+						<div class="info_gray">
+							<div class="data_box df_type_w_ty5">
+								<dl>
+									<dt>원금상환금액</dt>
+									<dd>600,000원</dd>
+								</dl>
+								<dl>
+									<dt>대출이자</dt>
+									<dd>10,000원</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 원금+이자상환 -->
+
+			<!-- s: 이자만 납입 -->
+			<!-- <div class="bottom_fix_wrap bottom_panel ft_fix">
+					<div class="bottom_panel_cont" id="bottom_panel_cont">
+						<div class="total">
+							<dl> 
+								<dt>예상 출금금액</dt>
+								<dd>
+									<strong class="big point">100,000원</strong>
+								</dd>
+							</dl>
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								
+										<span class="text">다음</span>
+								
+								</button>				</div>
+						</div>
+					</div>
+				</div> -->
+			<!-- e: 이자만 납입 -->
+			<!-- e: 하단 고정 패널 영역 -->
 
 			<!-- footer -->
 			<div class="pageTop">
@@ -1255,8 +1286,25 @@
 						<div class="ft_right">
 							<div class="ftr_sns">
 								<div class="ftr_sns_box">
-									<button type="button" class="ftr_sns_open">다이렉트 SNS</button>
+									<button type="button" class="ftr_sns_open" title="다이렉트 SNS 목록보기"><span class="text">다이렉트 SNS</span></button>
 								</div>
+								<ul class="ftr_sns_list">
+									<li>
+										<a href="https://www.facebook.com/hi.co.kr" target="_blank" title="새창열기">공식페이스북</a>
+									</li>
+									<li>
+										<a href="https://blog.hi.co.kr" target="_blank" title="새창열기">공식블로그</a>
+									</li>
+									<li>
+										<a href="https://blog.naver.com/goodngoodblog" target="_blank" title="새창열기">어린이보험블로그</a>
+									</li>
+									<li>
+										<a href="https://blog.naver.com/direct_hi" target="_blank" title="새창열기">현대해상 다이렉트 블로그</a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/user/HicarHilife" target="_blank" title="새창열기">공식 유튜브</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
