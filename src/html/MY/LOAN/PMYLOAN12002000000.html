@@ -23,7 +23,7 @@
                     <span class="picture_info_top">
                         <span class="status">
                             <span class="badge_wrap">
-                                <span class="hd_badge outline solid_pastel c_primary size_m">5일</span>
+                                <span class="hd_badge outline solid_pastel c_primary size_m">10일</span>
                             </span>
                             <span class="title">국민은행 </span>
                             <span class="cont_text_sub">1234*****1234</span>
@@ -34,13 +34,14 @@
               </div>
               <div class="acd_cont">
                 <div class="inner">
-                  <div class="table_wrap type_mini">
+                  <div class="table_section">
+                    <div class="table_wrap">
                       <div class="title">무배당현대해상다이렉트H건강보험(Hi2301)</div>
-                      <table class="table table_ty_mini">
+                      <table class="table">
                           <caption>대출일, 대출잔액, 대출이율 제공</caption>
                           <colgroup>
-                              <col style="width:50%;">
-                              <col style="width:50%;">
+                              <col style="width:80px;">
+                              <col style="width:auto;">
                           </colgroup>
                           <tbody>				
                               <tr>
@@ -57,30 +58,31 @@
                               </tr>
                           </tbody>
                       </table>
-                  </div>
-                  <div class="table_wrap type_mini">
-                      <div class="title">무배당현대해상다이렉트H건강보험(Hi2301)</div>
-                      <table class="table table_ty_mini">
-                          <caption>대출일, 대출잔액, 대출이율 제공</caption>
-                          <colgroup>
-                              <col style="width:50%;">
-                              <col style="width:50%;">
-                          </colgroup>
-                          <tbody>				
-                              <tr>
-                                  <th scope="row">대출일</th>
-                                  <td>2025.01.01</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">대출잔액</th>
-                                  <td>4,500,000원</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">대출이율</th>
-                                  <td>4.50%</td>
-                              </tr>
-                          </tbody>
-                      </table>
+                    </div>
+                    <div class="table_wrap">
+                        <div class="title">무배당현대해상다이렉트H건강보험(Hi2301)</div>
+                        <table class="table">
+                            <caption>대출일, 대출잔액, 대출이율 제공</caption>
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>				
+                                <tr>
+                                    <th scope="row">대출일</th>
+                                    <td>2025.01.01</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">대출잔액</th>
+                                    <td>4,500,000원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">대출이율</th>
+                                    <td>4.50%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,7 +93,7 @@
                   <span class="picture_info_top">
                     <span class="status">
                       <span class="badge_wrap">
-                          <span class="hd_badge outline solid_pastel c_primary size_m">5일</span>
+                          <span class="hd_badge outline solid_pastel c_primary size_m">10일</span>
                       </span>
                       <span class="title">신한은행</span>
                       <span class="cont_text_sub">1234*****1234</span>
@@ -102,30 +104,33 @@
               </div>
                 <div class="acd_cont">
                     <div class="inner">
-                        <div class="table_wrap type_mini">
-                            <div class="title">무배당현대해상다이렉트H건강보험(Hi2301)</div>
-                            <table class="table table_ty_mini">
-                                <caption>대출일, 대출잔액, 대출이율 제공</caption>
-                                <colgroup>
-                                    <col style="width:50%;">
-                                    <col style="width:50%;">
-                                </colgroup>
-                                <tbody>				
-                                    <tr>
-                                        <th scope="row">대출일</th>
-                                        <td>2025.01.01</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">대출잔액</th>
-                                        <td>4,500,000원</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">대출이율</th>
-                                        <td>4.50%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                      <div class="table_section">
+                        <div class="table_wrap">
+                          <div class="title">무배당현대해상다이렉트H건강보험(Hi2301)</div>
+                          <table class="table">
+                              <caption>대출일, 대출잔액, 대출이율 제공</caption>
+                              <colgroup>
+                                  <col style="width:80px;">
+                                  <col style="width:auto;">
+                              </colgroup>
+                              <tbody>				
+                                  <tr>
+                                      <th scope="row">대출일</th>
+                                      <td>2025.01.01</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">대출잔액</th>
+                                      <td>4,500,000원</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">대출이율</th>
+                                      <td>4.50%</td>
+                                  </tr>
+                              </tbody>
+                          </table>
                         </div>
+                      </div>
+                        
                     </div>
                 </div>
             </div>
@@ -135,7 +140,10 @@
           <div class="form_group_wrap">
             <div class="form_line full">
               <div class="label_tit">계좌</div>
-              {{> cp/selectitem si_ph="국민은행/12341234132/김현대" si_title="계좌 선택" si_popup="my_bank_select"}}
+              {{#> cp/selectbox_pc s-title="변경 후 이자납입계좌 계좌 선택"}}
+                <option value="" selected>국민은행 1234****1234</option>
+                <option value="">우리은행 1234******1234</option>
+              {{/ cp/selectbox_pc}}             
             </div>
             <!-- s: 직접입력 선택 -->
             <div class="form_line">
@@ -155,8 +163,14 @@
             </div>
              <!-- e: 직접입력 선택 -->
             <div class="form_line">
-              <div class="label_tit">자동이체일</div>
-              {{> cp/selectitem si_ph="5일" si_title="자동이체일 선택" si_popup="bank_day_select" }}
+              <div class="label_tit">이자납입일</div>
+              {{#> cp/selectbox_pc s-title="이자납입일 선택"}}
+                <option value="" selected>5일</option>
+                <option value="">10일</option>
+                <option value="">20일</option>
+                <option value="">25일</option>
+              {{/ cp/selectbox_pc}}
+             
             </div>
           </div>	
         </div>

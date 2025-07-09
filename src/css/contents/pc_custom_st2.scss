@@ -1140,6 +1140,12 @@
 					flex: 1;
 				}
 
+				.short_cut.long {
+					width: auto;
+					flex: none;
+					margin:0 auto;
+				}
+
 				&.basic {
 					width: auto;
 					margin: var(--gap-4) 0 0;
@@ -2356,7 +2362,28 @@
 		align-items: center;
 		gap: var(--gap-2);
 	}  
+
+	//보험계약대출 체결·이행을 위한 개인(신용)정보 처리 상세 동의서
+	&.short_cut_icon_ty6 {
+		> .text {  
+			&::before {
+				background-image: url(../images/content/guarantee/icon_gtl_doc.svg);
+			}
+		}
+	}
 }
+.btn_area {
+	&.ty5 {
+		display: flex;
+		.btn_link {
+			flex:1;
+		}
+	}
+	.short_cut_icon_ty5 > .text dl dt {
+		display: block;
+	}	
+}
+
 
 
 // total 예외 Case (자동차)
