@@ -1160,6 +1160,9 @@
 						flex: none;
 					}
 
+					&.ty1 {
+						margin:var(--gap-5) 0 0 var(--padding-8);
+					}
 					& + .basic {
 						margin-top: var(--gap-5);
 					}
@@ -2268,7 +2271,7 @@
 							width: 56px;
 							height: 56px;
 							background-color: var(--color-surface-primary-subtler);
-							background-image: url(../images/icon/icon_discount.svg);
+							background-image: url(../images/icon/icon_price.svg);
 							background-position: center;
 							background-repeat: no-repeat;
 							background-size: 32px;

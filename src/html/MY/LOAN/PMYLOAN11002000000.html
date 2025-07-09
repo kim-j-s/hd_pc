@@ -114,7 +114,7 @@
                             {{> cp/button type="3" size="4" b-text="정정"}}
                           </div>
                           <div class="btn_area basic">
-                            {{> cp/linkButton bl_class="short_cut" bl_text="이 대출은 신용정보 집중 대상이에요" pop_id="pop_type01" question_tit="신용정보 집중 대상 대출 안내" }}
+                            {{> cp/linkButton bl_class="short_cut sm" bl_text="이 대출은 신용정보 집중 대상이에요" pop_id="pop_type01" question_tit="신용정보 집중 대상 대출 안내" }}
                           </div>
                         </div>
                       </div>
@@ -187,19 +187,21 @@
             <!-- s: form_box  -->
             <div class="form_box">
                 <div class="info_gray">
+                  <div class="data_box">
                     <dl class="middle">
-                        <dt>대출이자</dt>
-                        <dd class="point">
-                            <strong class="big">120,500원</strong>
-                        </dd>
+                      <dt>대출이자</dt>
+                      <dd class="point">
+                          <strong class="big">120,500원</strong>
+                      </dd>
                     </dl>
+                  </div>
                 </div>
 
                 <div class="all_checking">
-                    {{> cp/checkbox id="checkbox2" labelname="총 <strong class='point'>2</strong>건 전체 선택" }}
+                    {{> cp/checkbox id="checkbox2" labelname="전체 선택" }}
                 </div>
                 <!-- s: 계약별로 이자 납입 가능 계약 목록 노출 -->
-                <div class="card_item_wrap focusin">
+                <div class="card_item_wrap">
                     <div class="card_item">
                       <div class="item_inner">
                         <div class="inp_checkbox">
@@ -228,18 +230,18 @@
                               <div class="cont">100,000원</div>
                             </li>
                           </ul>
-                          <!-- e: card_list_ty1 -->
-                          <div class="btn_area basic">
-                            {{> cp/linkButton bl_class="short_cut" bl_text="이 대출은 신용정보 집중 대상이에요" pop_id="pop_type01" question_tit="신용정보 집중 대상 대출 안내" }}
-                          </div>
+                          <!-- e: card_list_ty1 -->                         
                         </div>
-                      </div>
+                      </div>        
+                      <div class="btn_area basic ty1">
+                        {{> cp/linkButton bl_class="short_cut sm" bl_text="이 대출은 신용정보 집중 대상이에요" pop_id="pop_type01" question_tit="신용정보 집중 대상 대출 안내" }}
+                      </div>       
                     </div>
                     <!-- s: CASE. 상환 신청 불가 -->
                     <div class="card_item disabled">
                       <div class="item_inner">
                         <div class="inp_checkbox">
-                          <input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont">
+                          <input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont" disabled=true>
                           <label for="card_chk1" class="chk_label"></label>
                           <i></i>
                         </div>
@@ -301,44 +303,63 @@
 		</div>
 	</div>
 
-  <!-- s: 하단 고정 버튼 영역 -->  
-  <div class="bottom_fix_wrap bottom_panel">
-    <!-- s: 원금 + 이자에서만 노출 -->
-    <div class="btn_area center">
-      {{> cp/linkButton bl_class="short_cut bottom_panel_toggle" aria-controls="bottom_panel_cont" bl_text="펼치기" }}
-    </div>
+  
+  <!-- s: 하단 고정 패널 영역 -->  
+  <!-- s: 원금+이자상환 -->
+	<div class="bottom_fix_wrap bottom_panel ft_fix">
+		<div class="btn_area center">
+			{{> cp/linkButton bl_class="short_cut bottom_panel_toggle" aria-controls="bottom_panel_cont" bl_text="펼치기" }}
+		</div>
+		<div class="bottom_panel_cont" id="bottom_panel_cont">
+			<div class="total">
+				<dl> 
+					<dt>예상 출금금액(원금+<strong class="point">이자</strong>)</dt>
+					<dd>
+						<strong class="big point">11,000,000원</strong>
+					</dd>
+				</dl>
+				<div class="btn_area">
+					{{> cp/button type="1" size="2" b-text="다음"}}
+				</div>
+			</div>
+			<div class="item_hidden">
+				<div class="info_gray">
+					<div class="data_box df_type_w_ty5">
+						<dl>
+							<dt>원금상환금액</dt>
+							<dd>600,000원</dd>
+						</dl>
+						<dl>
+							<dt>대출이자</dt>
+							<dd>10,000원</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+  <!-- e: 원금+이자상환 -->
 
-    <!-- e: 원금 + 이자에서만 노출 -->	
-    <div class="bottom_panel_cont" id="bottom_panel_cont">
-      <div class="info_gray bg_etc01">
-        <div class="total">
-          <dl> 
-            <dt>예상 출금금액(원금+이자)</dt>
-            <dd>
-              <strong class="big point">610,000원</strong>
-            </dd>
-          </dl> 
-        </div>
-        <!-- s: 원금 + 이자에서만 노출 -->
-        <div class="info_top_cont item_hidden">
-          <dl>
-            <dt>원금상환금액</dt>
-            <dd>600,000원</dd>
-          </dl>
-          <dl>
-            <dt>대출이자</dt>
-            <dd>10,000원</dd>
-          </dl>
-        </div>	
-         <!-- e: 원금 + 이자에서만 노출 -->		
-      </div>
-    </div>         
-    <div class="btn_area center">
-      {{> cp/button type="1" size="1" b-text="다음" onclick="console.log('버튼이 클릭되었습니다!')"}}
-    </div>
-  </div>
-  <!-- e: 원금 + 이자 하단 고정 버튼 영역 -->
+  <!-- s: 이자만 납입 -->
+  <!-- <div class="bottom_fix_wrap bottom_panel ft_fix">
+		<div class="bottom_panel_cont" id="bottom_panel_cont">
+			<div class="total">
+				<dl> 
+					<dt>예상 출금금액</dt>
+					<dd>
+						<strong class="big point">100,000원</strong>
+					</dd>
+				</dl>
+				<div class="btn_area">
+					{{> cp/button type="1" size="2" b-text="다음"}}
+				</div>
+			</div>
+		</div>
+	</div> -->
+  <!-- e: 이자만 납입 -->
+	<!-- e: 하단 고정 패널 영역 -->
 
+  
   <!-- footer -->
   {{> layout/footer }}
   <!-- footer -->
