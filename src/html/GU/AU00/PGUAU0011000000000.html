@@ -1,17 +1,19 @@
-{{#> layout/default no-sp=true page-title="간편비밀번호 발급/관리 | 이용안내"}}
+{{#> layout/default no-sp=true page-title="PIN인증 발급/관리 | 이용안내"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="타이틀" }}
+		{{> layout/header_pc bc=true h-title="타이틀" }}
 		<div id="container" class="container">
 			<div class="content">
 				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						<strong>
-							간편비밀번호를<br>
-							등록하거나 삭제할 수 있어요
-						</strong>
-					</h2>
-					<p class="text_sub">6자리 숫자로 간편하게 로그인, 인증해보세요.</p>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">인증센터</div>
+						<h2 class="p_title">
+							<strong>간편비밀번호 등록/관리</strong>
+						</h2>
+						<div class="sub_desc">
+							6자리 숫자로 간편하게 로그인, 인증해보세요.
+						</div>
+					</div>
 				</div>
 				<!-- e: content_top -->
 
@@ -45,6 +47,14 @@
 				</div>
 				
 				
+		<!-- s: 하단 고정 버튼 영역 -->
+		<div class="bottom_fix_wrap">
+			<div class="btn_area">
+				{{> cp/button type="3" size="1" b-text="삭제"}}
+				{{> cp/button type="1" size="1" b-text="등록"}}
+			</div>
+		</div>
+		<!-- s: 하단 고정 버튼 영역 -->
 				<!-- s: 꼭 알아두세요 -->
 				<!-- s: 25-05-20 수정 -->
 				{{#> cp/notice dp-active=true}}
@@ -62,19 +72,12 @@
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="3" size="1" b-text="삭제"}}
-				{{> cp/button type="1" size="1" b-text="등록"}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
-	 
 	<!-- e: popup area -->
 
 {{/ layout/default }}
