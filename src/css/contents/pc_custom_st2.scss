@@ -184,6 +184,10 @@
 	& + .form_box {
 		margin-top: var(--gap-11);
 	}
+
+	&.center {
+		justify-content: center;
+	}
 }
 
 

@@ -1,13 +1,21 @@
 {{#> layout/default no-sp=true page-title="회원가입 | 이용안내" }}
 	<div id="wrap" class="wrap">
-		{{> layout/header_pc bc=true h-title="회원가입" }}
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 				<!-- s: content_top -->
 				<div class="content_top">
 					<h2 class="title_h2">
-						<strong>회원가입을 위해</strong>을 위해<br> <strong>고객님의 정보</strong>를 입력해주세요
 					</h2>
+				</div>
+
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">회원가입</div>
+						<h2 class="p_title">
+							<strong>회원가입을 위해 고객님의 정보를 입력해주세요</strong>
+						</h2>
+					</div>
 				</div>
 				<!-- e: content_top -->
 
@@ -38,8 +46,16 @@
 
 				</div>
 				
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="다음"}}
+					</div>
+				</div>
+				<!-- s: 하단 고정 버튼 영역 -->
+
 				<!-- s: 꼭 알아두세요 -->
-				{{#> cp/notice }}
+				{{#> cp/notice dp-active=true }}
 					<ul class="list_depth">
 						<li>실명확인은 NICE 평가정보를 통해 진행됩니다.</li>
 						<li>
@@ -54,14 +70,6 @@
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
-
-					<!-- s: 하단 고정 버튼 영역 -->
-					<div class="bottom_fix_wrap">
-						<div class="btn_area">
-							{{> cp/button type="1" size="1" b-text="다음"}}
-						</div>
-					</div>
-					<!-- s: 하단 고정 버튼 영역 -->
 			</div>
 		</div>
 		<!-- footer -->
