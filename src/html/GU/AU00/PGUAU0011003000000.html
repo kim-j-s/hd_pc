@@ -4,14 +4,23 @@
 <!-- s: popup area -->
 
 <!-- s: PIN번호 등록/관리 팝업 -->
-{{#> popup/popup_bottom popup-id="pb1" popup-title="간편비밀번호를 입력해 주세요." popup-active=true}}
+{{#> popup/popup_full popup-id="pb1" popup-active=true}}
 <div class="popup_cont">
 	<div class="popup_content">
+		<!-- s: popup_content_top -->
+		<div class="popup_content_top">
+			<h2 class="title_h2">
+				<strong>간편비밀번호를 입력해주세요</strong>
+			</h2>
+			<div class="btn_area basic">
+				{{> cp/linkButton bl_class="short_cut sm" bl_text="다른 인증방법 선택" }}
+			</div>
+		</div>
+		<!-- e: popup_content_top -->
+		
 		<div class="pin_enter pass_join">
 			<!-- error시 .error 추가 -->
-			<!-- s: 25-05-20 수정 -->
-			<div class="form_key pin_type"> 
-				<!-- e: 25-05-20 수정 -->
+			<div class="form_key pin_type">
 				<div class="pin_area">
 					<strong class="ergAt dot_mark active"></strong>
 					<strong class="ergAt dot_mark active"></strong>
@@ -20,25 +29,26 @@
 					<strong class="ergAt dot_mark"></strong>
 					<strong class="ergAt dot_mark"></strong>
 				</div>
+				<button type="button" class="keyboard" title="보안키패드 열기">
+					<span class="sr-only">보안키패드 열기</span>
+					<i class="hd_icon keyboardSvg"></i>
+					<!-- <i class="hd_icon keyboardSvg on"></i> -->
+				</button>
 			</div>
 			<div class="pin_info">
-				<p class="info_message">생년월일, 같은 숫자 연속 3개 이상(예:111), 이어진 숫자 3자리 이상(예:123)은 등록할 수 없습니다.</p>
+				<p class="info_message">생년월일, 같은 숫자 연속 3개 이상(예 : 111) 이어진 숫자 3자리(예 : 123)은 등록 할 수 없습니다.</p>
 				<p class="pin_enter_error_msg">
 					<span class="text">간편비밀번호가 일치하지 않습니다.<br>간편비밀번호 입력을 확인해 주세요.</span>
 				</p>
 			</div>
 		</div>
-		<div class="simple_pw_area">
-
-			pin 자리
-
-		</div>
-
-
 
 	</div>
 </div>
-{{/ popup/popup_bottom}}
+<div class="popup_bottom">
+	<div class="btn_area">{{> cp/button type="1" size="2" b-text="확인"}}</div>
+</div>
+{{/ popup/popup_full}}
 <!-- e: PIN번호 등록/관리 팝업 -->
 
 <!-- e: popup area -->

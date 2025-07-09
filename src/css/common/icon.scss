@@ -343,6 +343,13 @@ $logo-numbers: "000", "002", "003", "004", "005", "007", "011", "012", "020", "0
 	@include getSvg("icon/icon_reset_ty2");
 }
 
+.keyboardSvg {
+	@include getSvg("icon/icon_keyboard");
+	&.on {
+		@include getSvg("icon/icon_keyboard_on");
+	}
+}
+
 
 
 .popover_help {

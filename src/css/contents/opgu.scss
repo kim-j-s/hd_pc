@@ -138,6 +138,11 @@
 	+ .btn_area {
 		margin-top: var(--gap-5);
 	}
+	&:has(.pin_enter_error_msg) {
+		+ .btn_area {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 .pin_enter_error_msg {
@@ -302,7 +307,7 @@
 .pin_info {
 	position: relative;
 	margin-top: 30px;
-	padding-bottom: 58px;
+	// padding-bottom: 58px;
 	.pin_enter_error_msg {
 		display: none;
 		position: absolute;
@@ -324,7 +329,20 @@
 				}
 			}
 		}
-	
+	}
+	.form_key {
+		&.pin_type {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			gap: var(--gap-3);
+			.pin_area {
+				padding: 0;
+			}
+			.keyboard {
+				display: flex;
+			}
+		}
 	}
 }
 .simple_pw_area {
