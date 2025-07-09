@@ -58,19 +58,28 @@
 		<!-- s: popup area -->
 
 		<!-- s: PIN번호 등록/관리 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pb1" role="dialog" aria-modal="true" aria-hidden="false">
+		<div class="popup_wrap popup_wrap_type4 active" id="pb1" role="dialog" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pb1');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">한번 더 입력해 주세요.</div></div>
-
+					<div class="popup_head"><div class="popup_head_title"></div></div>
 					<div class="popup_cont">
 						<div class="popup_content">
+							<!-- s: popup_content_top -->
+							<div class="popup_content_top">
+								<h2 class="title_h2">
+									<strong>간편비밀번호를 입력해주세요</strong>
+								</h2>
+								<div class="btn_area basic">
+									<a href="javascript:void(0)" class="btn_link short_cut sm">
+										<span class="text">다른 인증방법 선택</span>
+									</a>
+								</div>
+							</div>
+							<!-- e: popup_content_top -->
 							<div class="pin_enter pass_join">
 								<!-- error시 .error 추가 -->
-								<!-- s: 25-05-20 수정 -->
 								<div class="form_key pin_type error">
-									<!-- e: 25-05-20 수정 -->
 									<div class="pin_area">
 										<strong class="ergAt dot_mark active"></strong>
 										<strong class="ergAt dot_mark active"></strong>
@@ -79,15 +88,22 @@
 										<strong class="ergAt dot_mark"></strong>
 										<strong class="ergAt dot_mark"></strong>
 									</div>
+									<button type="button" class="keyboard" title="보안키패드 열기">
+										<span class="sr-only">보안키패드 열기</span>
+										<!-- <i class="hd_icon keyboardSvg"></i> -->
+										<i class="hd_icon keyboardSvg on"></i>
+									</button>
 								</div>
-								<div class="pin_info">
-									<p class="info_message">생년월일, 같은 숫자 연속 3개 이상(예:111), 이어진 숫자 3자리 이상(예:123)은 등록할 수 없습니다.</p>
-									<p class="pin_enter_error_msg">
-										<span class="text">간편비밀번호가 일치하지 않습니다.<br />간편비밀번호 입력을 확인해 주세요.</span>
-									</p>
-								</div>
+								<p class="pin_enter_error_msg">
+									<span class="text">PIN번호가 일치하지 않습니다. (1/5회)</span>
+								</p>
 							</div>
-							<div class="simple_pw_area">pin 자리</div>
+
+							<div class="btn_area center">
+								<a href="javascript:void(0)" class="btn_link short_cut">
+									<span class="text">간편비밀번호를 잊으셨나요?</span>
+								</a>
+							</div>
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('pb1');"><span class="blind">팝업 닫기</span></button>
