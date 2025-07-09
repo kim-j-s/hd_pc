@@ -604,7 +604,7 @@
 			&.short_cut_icon_ty4 {
 				> .text {
 					&::before {
-						background-image: url(../images/content/guarantee/icon_gtl_pet.svg);
+						background-image: url(../images/content/guarantee/icon_gtl_doc.svg);
 					}
 				}
 			}
@@ -633,7 +633,14 @@
 						background-image: url(../images/icon/icon_browser.svg);
 					}
 				}
-			}		
+			}
+			&.short_cut_icon_ty8 {
+				> .text {
+					&::before {
+						background-image: url(../images/icon/icon_shield_faq.svg);
+					}
+				}
+			}
 			
 			&.new_open_ty2 > .text {
 				background: url(../images/icon/icon_new_open.svg) no-repeat right center/ 16px auto;
