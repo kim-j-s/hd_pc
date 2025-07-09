@@ -1,0 +1,331 @@
+{{#> layout/default page-title="채용공고 | 고객지원"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc bc=true }}
+		<div id="container" class="container">
+			<div class="content">
+
+                <div class="title_view_wrap">
+                    <div class="page_title">
+                        <div class="p_info">채용공고</div>
+                        <h2 class="p_title">
+                            <strong>채용공고 타이틀 영역</strong>
+                        </h2>
+                    </div>
+                </div>
+				<div class="info_gray job_opening">
+                    <div class="img_item">
+						<!-- 이미지 첨부 전 -->
+                        <div class="img_box">
+							<span class="sr-only">첨부파일 이미지 영역</span>
+						</div>
+						<!-- 이미지 첨부 후 -->
+                        <div class="img_box">
+                            <img src="../../../images/content/cnsr/img_job_opening.png" alt="증명사진">
+                        </div>
+                        <ul class="list_ty4">
+                            <li>이미지 형식: jpg, gif</li>
+                            <li>최적 사이즈: 100x120px</li>
+                            <li>가능 용량: 10MB 미만</li>
+                        </ul>
+                        <div class="btn_area">
+                            <div class="file_btn">
+                                <input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+                                <label for="file">
+                                    <span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+                                        <i class="hd_icon carmeraSvg"></i>
+                                        사진 등록하기
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+					<div class="job_opening_cont">
+						<!-- 입력 -->
+						<div class="form_group_wrap full">
+							<div class="form_line">
+								<div class="label_tit">한글이름</div>
+								{{> cp/text placeholder="이름 입력" inp-title="이름 입력" }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">영문이름</div>
+								{{> cp/text placeholder="영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력" }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">생년월일</div>
+								{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" maxlength="8" inp-title="생년월일 입력" }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">성별</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="radio_gt1_01" name="radio_gt1" labelname="남성" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="radio_gt1_02" name="radio_gt1" labelname="여성" }}
+								</div>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">이메일</div>
+								{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
+							</div>
+						</div>
+						<!-- 출력 -->
+						<div class="form_group_wrap full">
+							<div class="form_line">
+								<div class="label_tit">한글이름</div>
+								<strong class="info_text">김*대</strong>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">영문이름</div>
+								<strong class="info_text">KIM HYUN DAI</strong>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">생년월일</div>
+								<strong class="info_text">19910101</strong>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">성별</div>
+								<strong class="info_text">여성</strong>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">이메일</div>
+								<strong class="info_text">Test*****@test.com</strong>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="중복확인"}}
+					</div>
+				</div>
+				<div class="divider_ty1"></div>
+				<div class="form_box">			
+					<div class="title_h3">학력사항</div>
+					<div class="form_group_wrap">
+						<div class="form_line full_half">
+							<div class="label_tit">휴대폰번호</div>
+								{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+						</div>
+						<div class="form_line full">
+							<div class="label_tit">주소</div>
+							{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
+						</div>
+						<div class="form_line full">
+							<div class="label_tit">응시분야</div>
+							<div class="row_ty2">
+								{{#> cp/selectbox_pc s-title="1지망 선택" }} 
+									<option value="">1지망</option>
+								{{/ cp/selectbox_pc}}
+								{{#> cp/selectbox_pc s-title="2지망 선택" }} 
+									<option value="">2지망</option>
+								{{/ cp/selectbox_pc}}
+							</div>
+						</div>
+						<div class="form_line full_half">
+							<div class="label_tit">희망근무지</div>
+							{{#> cp/selectbox_pc s-title="희망근무지 선택" }} 
+								<option value="">희망근무지</option>
+							{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line full">
+							<div class="label_tit">장애여부</div>
+							<div class="row_ty2">
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="radio_gt2_01" name="radio_gt2" labelname="아니요" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="radio_gt2_02" name="radio_gt2" labelname="예" }}
+								</div>
+								{{> cp/text inp-title="장애 입력" placeholder="장애 입력" readonly=true }}
+							</div>
+						</div>
+						<div class="form_line full_half">
+							<div class="label_tit">보훈여부</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt3_01" name="radio_gt3" labelname="아니요" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt3_02" name="radio_gt3" labelname="예" }}
+							</div>
+						</div>
+						<div class="form_line full">
+							<div class="label_tit">지원경로</div>
+							<div class="row_ty2">
+								{{#> cp/selectbox_pc s-title="지원경로 선택" }} 
+									<option value="">지원경로</option>
+								{{/ cp/selectbox_pc}}
+								{{> cp/text inp-title="지원경로 입력" placeholder="지원경로 입력" }}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="divider_ty1"></div>
+				<div class="form_box">			
+					<div class="title_h3">학력사항</div>
+					<div class="form_group_wrap">
+						<div class="form_line full">
+							<div class="label_tit">최종학력</div>
+							<div class="radio_group_wrap full" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt4_01" name="radio_gt4" labelname="고등학교" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt4_02" name="radio_gt4" labelname="대학(2,3년제)" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt4_03" name="radio_gt4" labelname="대학교" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt4_04" name="radio_gt4" labelname="대학원" }}
+							</div>
+						</div>
+						<!-- 고등학교 -->
+						<div class="form_line full">
+							<div class="label_tit">고등학교 정보</div>
+							<div class="row_ty2">
+								{{#> cp/selectbox_pc s-title="고등학교 소재지 선택" }} 
+									<option value="">소재지 선택</option>
+								{{/ cp/selectbox_pc}}
+								{{> cp/text inp-title="고등학교명 입력" placeholder="고등학교명 입력" }}
+							</div>
+						</div>
+						<div class="form_line full_half">
+							<div class="label_tit">재학기간</div>
+							<div class="range_calrendar">
+								{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+								{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+							</div>
+						</div>
+						<!-- 대학(2,3년), 대학교, 대학원 -->
+						<div class="form_line full">
+							<div class="form_card_wrap">
+								<div class="form_card_case">
+									<h3 class="title_h4">대학(2,3년)</h3>
+									<div class="form_group_wrap">
+										<div class="form_line full">
+											<div class="label_tit">학교명</div>
+											<div class="row_ty2">
+												{{#> cp/selectbox_pc s-title="학교명 소재지 선택" }} 
+													<option value="">소재지 선택</option>
+												{{/ cp/selectbox_pc}}
+												{{> cp/text inp-search=true inp-title="학교명 입력" placeholder="학교명 입력" readonly=true }}
+											</div>
+											<div class="check_group_wrap">
+												{{> cp/checkbox id="checkbox1" labelname="야간" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">학교구분</div>
+											<div class="radio_group_wrap" role="radiogroup">
+												{{> cp/radio rd-class="rd_btn" rd-id="radio_gt5_01" name="radio_gt5" labelname="본교" }}
+												{{> cp/radio rd-class="rd_btn" rd-id="radio_gt5_02" name="radio_gt5" labelname="분교" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">재학기간</div>
+											<div class="range_calrendar">
+												{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+												{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+											</div>
+											<div class="check_group_wrap">
+												{{> cp/checkbox id="checkbox2" labelname="편입" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">졸업여부</div>
+											<div class="radio_group_wrap" role="radiogroup">
+												{{> cp/radio rd-class="rd_btn" rd-id="radio_gt6_01" name="radio_gt6" labelname="졸업" }}
+												{{> cp/radio rd-class="rd_btn" rd-id="radio_gt6_02" name="radio_gt6" labelname="졸업예정" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">전공명</div>
+											{{> cp/text inp-search=true placeholder="전공명 입력" inp-title="전공명 입력" readonly=true }}
+										</div>
+										<div class="form_line full">
+											<div class="label_tit">복수전공/부전공</div>
+											<div class="row_ty2">
+												{{> cp/text inp-search=true placeholder="복수전공 입력" inp-title="복수전공 입력" readonly=true }}
+												{{> cp/text inp-title="부전공 입력" placeholder="부전공 입력" readonly=true }}
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
+								</div>
+							</div>
+							<div class="btn_area center">
+							{{> cp/button type="3" size="3" b-text="항목 추가" rightIcon="plusSvg" btn-title="항목 추가" popup=""}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="divider_ty1"></div>
+				<div class="form_box">			
+					<div class="title_h3">경력사항</div>
+					<div class="form_group_wrap">
+						<div class="form_line full">
+							<div class="label_tit">경력사항 유무 여부</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt7_01" name="radio_gt7" labelname="있음" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt7_02" name="radio_gt7" labelname="없음" }}
+							</div>
+							<ul class="list_ty2">
+								<li>경력사항은 이전 경력 → 최근 경력순으로 최대 5개까지 입력할 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- 직장 -->
+						<div class="form_line full">
+							<div class="form_card_wrap">
+								<div class="form_card_case">
+									<h3 class="title_h4">직장</h3>
+									<div class="form_group_wrap">
+										<div class="form_line full_half">
+											<div class="label_tit">직장명</div>
+											{{> cp/text inp-title="직장명 입력" placeholder="직장명 입력" }}
+											<div class="check_group_wrap">
+												{{> cp/checkbox id="checkbox1" labelname="비정규직" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">근무기간</div>
+											<div class="range_calrendar">
+												{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+												{{> cp/text cal=true placeholder="YYYY.MM.DD" }}
+											</div>
+										</div>
+										<div class="form_line full">
+											<div class="label_tit">직위/직무</div>
+											<div class="row_ty2">
+												{{> cp/text placeholder="직위 입력" inp-title="직위 입력" }}
+												{{> cp/text inp-title="직무 입력" placeholder="직무 입력" }}
+											</div>
+										</div>
+										<div class="form_line full_half">
+											<div class="label_tit">평균급여</div>
+											{{> cp/text type="tel" class="price" r-text="만원" inp-title="숫자만 입력"}}
+										</div>
+									</div>
+									<button type="button" class="btn_rd_close"><span class="blind">카드 삭제</span></button>
+								</div>
+							</div>
+							<div class="btn_area center">
+							{{> cp/button type="3" size="3" b-text="항목 추가" rightIcon="plusSvg" btn-title="항목 추가" popup=""}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="divider_ty1"></div>
+				<div class="form_box">
+					<div class="title_h3">자기소개서<span class="msg_info">지원동기, 경력사항, 앞으로의 포부 중심으로 입력해 주세요.</span></div>
+					<div class="form_group_wrap">
+						<div class="form_line full">
+                    		{{> cp/textarea name="textarea" class="length_check" placeholder="최소 150자 이상, 최대 700자까지 입력 가능" counter_tp2=true textlength="700" }}
+						</div>
+					</div>
+				</div>
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="지원서 제출하기"}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+
+	 
+	<!-- e: popup area -->
+
+{{/ layout/default }}

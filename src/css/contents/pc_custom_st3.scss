@@ -594,7 +594,7 @@
 		align-items: flex-start;
 		min-height: 210px;
 		&.ty1 {
-			background: url(../images/content/gu/bg_top_ty1.png) no-repeat top right;
+			background: url(../images/content/cnsr/bg_top_ty1.png) no-repeat top right;
 		}
 	}
 }
@@ -1569,6 +1569,39 @@
 	}
 }
 
+.job_opening {
+	display: flex;
+	justify-content: space-around;
+	gap: var(--gap-6);
+	.img_item {
+		flex: 1.2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--gap-5);
+		.img_box {
+			overflow: hidden;
+			width: 178px;
+			height: 220px;
+			border-radius: var(--radius-medium3);
+			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+			background: var(--color-surface-white-subtle) url(../images/content/cnsr/bg_img_ex.svg) no-repeat center;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.job_opening_cont {
+		flex: 2;
+		padding-left: var(--gap-6);
+		border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+		.inp_radio.rd_btn input[type=radio] + label {
+			background:  var(--color-surface-white-subtle);
+		}
+	}
+}
 // 아코디언 안에 포함된 table 레이아웃
 .table_section {
 	display: flex;

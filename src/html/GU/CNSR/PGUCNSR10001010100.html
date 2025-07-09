@@ -1,0 +1,42 @@
+{{#> layout/default page-title="채용공고 | 고객지원"}}
+
+<!-- s: Bottom 팝업 -->
+{{#> popup/popup_bottom popup-id="PGUCNSR10001010100" popup-active=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<div class="popup_content_top txt_center">
+			<h3 class="title_h3 normal">
+				<strong>기본 입력 사항</strong>을 <br>다음과 같이 저장할게요
+			</h3>
+		</div>
+		<h4 class="title_h4">김현대(KIM HYUN DAI)</h4>
+        <div class="table_wrap">
+            <table class="table">
+                <caption>생년월일, 이메일 제공</caption>
+                <colgroup>
+                    <col style="width:35%;">
+                    <col style="width:65%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">생년월일</th>
+                        <td>19910101</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이메일</th>
+                        <td>Test_test@test.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+        {{> cp/button type="3" size="2" b-text="수정" }}
+        {{> cp/button type="1" size="2" b-text="확인" }}
+    </div>
+</div>
+{{/ popup/popup_bottom}}
+<!-- e: Bottom 팝업 -->
+{{/ layout/default }}

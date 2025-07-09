@@ -1,0 +1,49 @@
+{{#> layout/default page-title="채용공고 | 고객지원"}}
+
+<!-- s: Bottom 팝업 -->
+{{#> popup/popup_bottom popup-id="PGUCNSR10001010100" popup-active=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<div class="popup_content_top txt_center">
+			<h3 class="title_h3 normal">
+				아래 정보로 <br><strong>지원서를 제출할까요?</strong>
+
+			</h3>
+		</div>
+        <div class="table_wrap">
+            <table class="table">
+                <caption>이름, 휴대폰번호, 이메일 제공</caption>
+                <colgroup>
+                    <col style="width:35%;">
+                    <col style="width:65%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">이름</th>
+                        <td>김현대</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">휴대폰번호</th>
+                        <td>010-1234-1234</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이메일</th>
+                        <td>Test_test@test.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="info_gray">
+            <p class="info_text"><strong>제출 후 기본정보는 수정할 수 없습니다.<br>수정이 필요하다면 [취소]를 누르고 수정해주세요.</strong></p>
+        </div>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+        {{> cp/button type="3" size="2" b-text="취소" }}
+        {{> cp/button type="1" size="2" b-text="지원서 제출" }}
+    </div>
+</div>
+{{/ popup/popup_bottom}}
+<!-- e: Bottom 팝업 -->
+{{/ layout/default }}
