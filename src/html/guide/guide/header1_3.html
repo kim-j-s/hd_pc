@@ -1,0 +1,42 @@
+{{#> layout/default page-title="현재페이지 | 뎁스 페이지"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc bc=true corp_mode=true }}
+		<div id="container" class="container">
+			<div class="content">
+				<!-- s: content_top -->
+				<div class="content_top">
+					<h2 class="title_h2">
+						<strong>헤더 1</strong>
+					</h2>
+					<p class="text_sub">text_sub</p>
+				</div>
+				<!-- e: content_top -->
+				 
+				<div style="height:400px; background-color: #f8f8f8;"></div>
+				<div style="height:400px; background-color: #ddd;"></div>
+				
+				<!-- s: 꼭 알아두세요 -->
+				{{#> cp/notice }}
+					<ul class="list_depth">
+						<li>내용1</li>
+						<li>내용2</li>
+						<li>내용3</li>
+					</ul>
+				{{/ cp/notice }}
+				<!-- e: 꼭 알아두세요 -->
+
+				<!-- // content -->
+			</div>
+
+			<!-- // container -->
+		</div>
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	 
+	<!-- e: popup area -->
+
+{{/ layout/default }}
