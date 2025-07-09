@@ -1,6 +1,6 @@
 {{#> layout/default no-sp=true page-title="회원가입 | 이용안내" }}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="회원가입" no-nav=true }}
+		{{> layout/header_pc bc=true h-title="회원가입" }}
 		<div id="container" class="container">
 			<div class="content">
 				<!-- s: content_top -->
@@ -55,20 +55,18 @@
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
 
-				<!-- // content -->
-			</div>
-
-			<!-- // container -->
-		</div>
-
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="다음"}}
+					<!-- s: 하단 고정 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="1" size="1" b-text="다음"}}
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 영역 -->
 			</div>
 		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->

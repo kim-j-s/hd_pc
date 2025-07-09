@@ -1,16 +1,20 @@
 {{#> layout/default no-sp=true page-title="회원탈퇴"}}
 	<div id="wrap" class="wrap">
-		{{> layout/header h-title="회원탈퇴" }}
+		{{> layout/header_pc h-title="회원탈퇴" bc=true }}
 		<div id="container" class="container">
 			<div class="content">
 
 				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-						<!-- s: 25-06-04 수정 -->
-						<strong>이용할 수 있는 서비스가 많아요<br>회원탈퇴 전에 고려해주세요</strong>
-						<!-- e: 25-06-04 수정 -->
-					</h2>
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">회원탈퇴</div>
+						<h2 class="p_title">
+							<strong>이용할 수 있는 서비스가 많아요</strong>
+						</h2>
+						<div class="sub_desc">
+							회원탈퇴 전에 고려해주세요.
+						</div>
+					</div>
 				</div>
 				<!-- e: content_top -->
 
@@ -37,27 +41,24 @@
 					</li>
 				</ul>
 
-				
-				
-
-
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="3" size="1" b-text="취소"}}
+						{{> cp/button type="1" size="1" b-text="회원탈퇴"}}
+					</div>
+				</div>
+				<!-- s: 하단 고정 버튼 영역 -->
 			</div>
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="3" size="1" b-text="취소"}}
-				{{> cp/button type="1" size="1" b-text="회원탈퇴"}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-		
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
-	 
 	<!-- e: popup area -->
 
 {{/ layout/default }}
