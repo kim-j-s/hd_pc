@@ -58,10 +58,22 @@
 			display: flex;
 			padding: var(--padding-3) var(--padding-5);
 			.nld_cont_top_btn {
+				position: relative;
 				display: inline-block;
 				padding-left: 52px;
-				background-repeat: no-repeat;
-				background-position: left center;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 40px;
+					height: 40px;
+					border-radius: var(--radius-medium1);
+					background-repeat: no-repeat;
+					background-color: var(--color-surface-primary-subtler);
+					background-position: center center;
+				}
+
 				> .text {
 					display: block;
 					padding: 0 28px 0 0;
@@ -70,9 +82,36 @@
 					line-height: 40px;
 					background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center / 24px auto;
 				}
-				// &.nld_cont_top_btn_ty1 {
-					
-				// }
+				&.nld_cont_top_btn_ty1 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty1.png);
+					}
+				}
+				&.nld_cont_top_btn_ty2 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty2.png);
+					}
+				}
+				&.nld_cont_top_btn_ty3 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty3.png);
+					}
+				}
+				&.nld_cont_top_btn_ty4 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty4.png);
+					}
+				}
+				&.nld_cont_top_btn_ty5 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty5.png);
+					}
+				}
+				&.nld_cont_top_btn_ty6 {
+					&::before {
+						background-image: url(../images/header/icon_gnb_tit_ty6.png);
+					}
+				}
 			}
 		}
 
@@ -88,7 +127,7 @@
 		> li {
 			flex: none;
 			position: relative;
-			width: 246px;
+			// width: 246px;
 			+ li {
 				padding-left: 49px;
 				&::before {
@@ -103,6 +142,7 @@
 		}
 
 		.nl_dept2 {
+			width: 246px;
 			> .nl_dept2_tit {
 				display: block;
 				padding: 0 var(--padding-5);
@@ -111,6 +151,9 @@
 				+ .nl_dept2_list {
 					padding-top: var(--gap-3);
 				}
+			}
+			& + .nl_dept2 {
+				margin-top: var(--gap-7);
 			}
 		}
 
@@ -128,21 +171,10 @@
 						background-position: right center;
 					}
 					&:hover,
-					&:focus {
+					&:focus,
+					&.active {
 						background-color: var(--color-button-tertiary-fill-hover);
 					}
-					// &.ex_con {
-					// 	> .text {
-					// 		padding-right: 20px;
-					// 		background-image: url(../images/header/icon_gnb_link_ty1.png);
-					// 	}
-					// 	&.active {
-					// 		> .text {
-					// 			color: var(--color-text-primary);
-					// 			background-image: url(../images/header/icon_gnb_link_ty2.png);
-					// 		}
-					// 	}
-					// }
 					&[target="_blank"] {
 						> .text {
 							padding-right: 20px;

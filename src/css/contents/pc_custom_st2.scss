@@ -35,7 +35,9 @@
 	}
 
 	&.short_cut2 {
-		.short_cut2_tit {
+		.text {
+			text-align: left;
+			.short_cut2_tit {
 			display: inline-block;
 			padding-right: 18px;
 			font-size: var(--font-size-label-medium);
@@ -49,6 +51,7 @@
 			display: block;
 			margin-top: var(--gap-2);
 			font-size: var(--font-size-label-small);
+		}
 		}
 	}
 
@@ -180,6 +183,10 @@
 	& + .btn_area,
 	& + .form_box {
 		margin-top: var(--gap-11);
+	}
+
+	&.center {
+		justify-content: center;
 	}
 }
 
