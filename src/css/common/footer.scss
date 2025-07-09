@@ -58,6 +58,64 @@
 
 		.ft_right {
 			flex: none;
+
+			.ftr_sns {
+				position: relative;
+				width: 240px;
+				.ftr_sns_box {
+					.ftr_sns_open {
+						width: 100%;
+						min-height: 24px;
+						padding: 12px 44px 13px 16px;
+						color: var(--color-text-subtle);
+						word-break: break-all;
+						border: var(--border-width-static-regular) solid var(--color-input-border);
+						border-radius: var(--radius-medium2);
+						background: var(--color-input-surface) url(../images/icon/arrowDown_ty3.svg) no-repeat right 16px center/ 16px auto;
+						> .text {
+							display: block;
+							font-size: var(--font-size-label-medium);
+							color: var(--color-text-subtle);
+						}
+					}
+				}
+
+				.ftr_sns_list {
+					position: absolute; 
+					bottom: 100%;
+					left: 0;
+					width: 100%;
+					padding: var(--padding-6) var(--padding-5);
+					border-radius: var(--radius-small2);
+					border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+					background-color: var(--color-background-gray-subtler);
+					visibility: hidden;
+					opacity: 0;
+					transform-origin: bottom center;
+					transform: scaleY(0);
+					transition: 0.3s;
+					> li {
+						a {
+							display: block;
+							padding: var(--padding-5);
+							font-size: var(--font-size-body-medium);
+							color: var(--color-text-subtle);
+							text-align: left;
+							border-radius: var(--radius-medium2, 12px);
+							transition: background-color 0.3s;
+							&:hover,
+							&:focus {
+								background-color: var(--color-surface-gray-subtle);
+							}
+						}
+					}
+					&.active {
+						opacity: 1;
+						visibility: visible;
+						transform: scaleY(1);
+					}
+				}
+			}
 		}
 
 	}
