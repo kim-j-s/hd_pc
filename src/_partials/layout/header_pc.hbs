@@ -6,8 +6,8 @@
 		<div class="hpi_top">
 			<div class="hpi_change_area">
 				<div class="hpi_cm">
-					<a href="#" class="hpi_cm_btn active">개인</a>
-					<a href="#" class="hpi_cm_btn">법인</a>
+					<a href="#" class="hpi_cm_btn{{#if corp_mode}}{{else}} active{{/if}}">개인</a>
+					<a href="#" class="hpi_cm_btn{{#if corp_mode}} active{{/if}}">법인</a>
 				</div>
 			</div>
 			<div class="hpi_utils">
@@ -83,13 +83,13 @@
 			{{#unless h-prd}}
 			{{#unless hd-error}}
 			<nav id="gnb" class="hpi_gnb">
-				{{> layout/nav2}}
+				{{> layout/nav_pc}}
 			</nav>
 			{{/unless}}
 			{{/unless}}
 			{{#if gnbadd}}
 			<nav id="gnb" class="hpi_gnb">
-				{{> layout/nav2}}
+				{{> layout/nav_pc}}
 			</nav>
 			{{/if}}
 
