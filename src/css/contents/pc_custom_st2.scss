@@ -2216,10 +2216,12 @@
 .wrap {
 	&.footer_fix{
 		&:has(.ft_fix) {
-			padding-bottom: 323px;
+			// padding-bottom: 323px;
 
 			.footer {
-				bottom: 120px;
+				// bottom: 120px;
+				// position: sticky;
+				// bottom: 0;
 			}
 		}
 	}
@@ -2227,10 +2229,10 @@
 
 .bottom_panel {
 	&.ft_fix {
-		position: fixed;
+		position: sticky;
 		bottom: 0;
 		left: 0;
-		z-index: 100;
+		z-index: 10;
 		box-shadow: 0px var(--shadow-y-minus2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 
 		> * {
