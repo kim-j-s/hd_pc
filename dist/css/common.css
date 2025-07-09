@@ -1596,6 +1596,9 @@ strong {
 .nld_cont .nld_cont_body_list .nl_dept2 > .nl_dept2_tit + .nl_dept2_list {
 	padding-top: var(--gap-3);
 }
+.nld_cont .nld_cont_body_list .nl_dept2 + .nl_dept2 {
+	margin-top: var(--gap-7);
+}
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a {
 	display: block;
 	padding: var(--padding-3) var(--padding-5);
@@ -1610,7 +1613,8 @@ strong {
 	background-position: right center;
 }
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a:hover,
-.nld_cont .nld_cont_body_list .nl_dept2_list > .item a:focus {
+.nld_cont .nld_cont_body_list .nl_dept2_list > .item a:focus,
+.nld_cont .nld_cont_body_list .nl_dept2_list > .item a.active {
 	background-color: var(--color-button-tertiary-fill-hover);
 }
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a[target="_blank"] > .text {
