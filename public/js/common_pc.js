@@ -87,6 +87,49 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 
+	// footer sns 링크 팝업
+	$DOM.on('click', '.ftr_sns_open', function(e) {
+		const $snsTarget = $('.ftr_sns_list')
+		$snsTarget.toggleClass('active');
+		if ($snsTarget.hasClass('active')) {
+			$(this).attr('title', '다이렉트 SNS 목록닫기');
+		} else {
+			$(this).attr('title', '다이렉트 SNS 목록보기');
+		}
+	});
+
+	$('.ftr_sns_list')
+  .on('focusin', function () {
+    console.log('SNS 리스트에 포커스 들어옴');
+  })
+  .on('focusout', function () {
+    setTimeout(function () {
+      if (!$(document.activeElement).closest('.ftr_sns_list').length) {
+        console.log('SNS 리스트에서 포커스 빠져나감');
+				$('.ftr_sns_list').removeClass('active');
+				$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
+      }
+    }, 10);
+  });
+
+	//window click이벤트
+	$(window).on('click', function(e) {
+		var $target = $(e.target);
+		
+		// 팝업 영역 외 클릭 시 팝업 닫기
+		var $rml = $('.ftr_sns_list');
+		var $rmb = $('.ftr_sns_open');
+		if (!$target.closest($rml).length &&  !$target.closest($rmb).length) {
+			$('.ftr_sns_list').removeClass('active');
+			$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
+		}
+	});
+	// footer sns 링크 팝업
+
+
+	
+
+
 	
 
 	
