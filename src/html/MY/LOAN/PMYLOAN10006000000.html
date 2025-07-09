@@ -1,9 +1,6 @@
 {{#> layout/default page-title="보험계약대출 신청 | 마이페이지"}}
 <div id="wrap" class="wrap">
-	<!-- s: 25-06-02 수정 -->
-	{{> layout/header no-header=true }}
-	<!-- e: 25-06-02 수정 -->
-
+	{{> layout/header_pc bc=true }}
 	<div id="container" class="container">
 		<div class="content">
 			<div class="process_info_area">
@@ -11,7 +8,7 @@
 					<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
 				</div>
 				<h2 class="process_title">
-					<strong>보험계약대출</strong>이<br/>신청되지 않았어요
+					<strong>보험계약대출</strong>이 신청되지 않았어요
 				</h2>
 				<div class="process_desc">인터넷 연결 상태를 확인 후 다시 이용해주세요.</div>
 			</div>
@@ -47,16 +44,20 @@
 			<!-- e: 25-07-01 수정 -->
 
 		</div>
+
+		<!-- s: 하단 고정 버튼 영역 -->
+		<div class="bottom_fix_wrap">
+			<div class="btn_area">
+				{{> cp/button type="3" size="1" b-text="홈으로" }}
+				{{> cp/button type="1" size="1" b-text="대출거래내역 조회" }}
+			</div>
+		</div>
+		<!-- s: 하단 고정 버튼 영역 -->
 	</div>
 
-	<!-- s: 하단 고정 버튼 영역 -->
-	<div class="bottom_fix_wrap">
-		<div class="btn_area">
-			{{> cp/button type="3" size="1" b-text="홈으로" }}
-			{{> cp/button type="1" size="1" b-text="대출거래내역 조회" }}
-		</div>
-	</div>
-	<!-- s: 하단 고정 버튼 영역 -->
+	<!-- footer -->
+	{{> layout/footer }}
+	<!-- footer -->
 
 </div>
 {{/ layout/default }}
