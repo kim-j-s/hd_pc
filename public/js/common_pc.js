@@ -99,13 +99,12 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	$('.ftr_sns_list')
-  .on('focusin', function () {
-    console.log('SNS 리스트에 포커스 들어옴');
-  })
+  // .on('focusin', function () {
+  //   console.log('SNS 리스트에 포커스 들어옴');
+  // })
   .on('focusout', function () {
     setTimeout(function () {
       if (!$(document.activeElement).closest('.ftr_sns_list').length) {
-        console.log('SNS 리스트에서 포커스 빠져나감');
 				$('.ftr_sns_list').removeClass('active');
 				$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
       }
