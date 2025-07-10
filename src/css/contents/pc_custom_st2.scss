@@ -232,6 +232,14 @@
 	margin: var(--gap-11) 0;
 }
 
+//title
+[class^="title_h"] {
+	& + .text_sub {
+		& + .vision_setp {
+			margin-top: var(--gap-5);
+		}
+	}
+}
 
 // form 관련
 .wrap {
@@ -592,10 +600,12 @@
 }
 
 //임시
-.title_h4 + .form_group_wrap.ty3 {
-	margin-top: 16px;
+.title_h4 {
+	+ .my_info_flow,
+	+ .form_group_wrap.ty3 {
+		margin-top: var(--gap-5);
+	}
 }
-
 
 // tooltip 재선언
 .tooltip_wrap {
@@ -1552,6 +1562,11 @@
 
 
 .my_info_flow {
+	 > li .cont .tit {
+		+ .list_depth {
+			margin-top: var(--gap-5);
+		}
+	}
 	.frame_list {
 		.file_attach_box {
 			.file_thumbnail {
