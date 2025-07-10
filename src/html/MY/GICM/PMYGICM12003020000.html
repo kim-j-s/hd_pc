@@ -69,30 +69,34 @@
         </div>
 
         <!-- s: 결제방법이 실시간 계좌이체인 경우 -->
-        <h3 class="title_h3">환급계좌 입력</h3>
-        <div class="info_gray">
-          <p class="info_text">계약자 김현대님의 계좌만 이용할 수 있어요.</p>
-        </div>
-        <div class="form_group_wrap">
-          <div class="form_line">
-            <div class="label_tit">은행</div>
-            {{#> cp/selectbox_pc s-title="은행 선택" sb-ph="은행 선택" }}
-              <option value="">옵션 1</option>
-              <option value="">선택 옵션값 2</option>
-            {{/ cp/selectbox_pc}}
-          </div>
-          <div class="form_line">
-            <div class="label_tit">계좌번호</div>
-            <div class="comp_wrap key_number">
-                {{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
-                {{> cp/button type="3" size="4" b-text="계좌확인" }}
-            </div>
-          </div>
-          <div class="form_line">
-            <div class="label_tit">예금주</div>
-            {{> cp/text type="text" placeholder="[계좌확인]을 눌러 예금주 입력" inp-title="예금주 입력" readonly=true }}
-          </div>
-        </div>
+				<!-- s: 25-07-10 수정 -->
+				<div class="spacebox6">
+					<h3 class="title_h3">환급계좌 입력</h3>
+					<div class="info_gray">
+						<p class="info_text">계약자 김현대님의 계좌만 이용할 수 있어요.</p>
+					</div>
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="label_tit">은행</div>
+							{{#> cp/selectbox_pc s-title="은행 선택" sb-ph="은행 선택" }}
+								<option value="">옵션 1</option>
+								<option value="">선택 옵션값 2</option>
+							{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line">
+							<div class="label_tit">계좌번호</div>
+							<div class="comp_wrap key_number">
+									{{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
+									{{> cp/button type="3" size="4" b-text="계좌확인" }}
+							</div>
+						</div>
+						<div class="form_line">
+							<div class="label_tit">예금주</div>
+							{{> cp/text type="text" placeholder="[계좌확인]을 눌러 예금주 입력" inp-title="예금주 입력" readonly=true }}
+						</div>
+					</div>
+				</div>
+				<!-- e: 25-07-10 수정 -->
         <!-- e: 결제방법이 실시간 계좌이체인 경우 -->
         
         
@@ -125,6 +129,42 @@
 </div>
 
 <!-- s: popup area -->
+
+<!-- s: 25-07-10 수정 -->
+{{#> popup/popup_confirm popup-id="pop_type01" no-header=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- info Case -->
+		<div class="popup_confirm">
+			<p class="info_text">예금주 확인이 어려워요.<br>은행 및 계좌번호를 다시 입력해주세요.</p>
+		</div>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_confirm}}
+
+{{#> popup/popup_confirm popup-id="pop_type02" no-header=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- info Case -->
+		<div class="popup_confirm">
+			<p class="info_text">[계좌확인]을 눌러 진행해 주세요.</p>
+		</div>
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_confirm}}
+<!-- e: 25-07-10 수정 -->
+
+
 <!-- e: popup area -->
 
 {{/ layout/default }}
