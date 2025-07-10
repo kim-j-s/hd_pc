@@ -580,7 +580,6 @@
 	}
 
 	.btn_area {
-	
 		&:not(.column){
 			&:has(button.hd_btn_s_4, button.hd_btn_s_5){
 				gap: var(--gap-3);
@@ -1724,7 +1723,7 @@
 	border-radius: 24px;
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white);
-	padding: var(--padding-8, 24px) var(--padding-7, 20px);
+	padding: var(--padding-8) var(--padding-7);
 	counter-reset: number 0;
 
 	.step_divider {
@@ -1741,7 +1740,6 @@
 			top: 50%;
 		}
 
-		
 		&::after {
 			display: block;
 			content:'';
@@ -1768,7 +1766,7 @@
 
 	img {
 		max-width: 440px;
-		border-radius: var(--radius-medium1, 12px);
+		border-radius: var(--radius-medium1);
 	}
 
 	.desc {
@@ -1792,7 +1790,7 @@
 		content: 'STEP ' counter(number);
 	}
 
-	&:has(~ .install_img_box), 
+	&:has(~ .install_img_box),
 	& ~ & {
 		position: relative;
 
@@ -1801,7 +1799,6 @@
 		}
 	}
 }
-
 
 //qr코드
 .qr_code_box {
