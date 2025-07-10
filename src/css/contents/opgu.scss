@@ -300,6 +300,12 @@
 	& + .info_cont {
 		margin-top: var(--gap-8);
 	}
+	& + .process_info_area {
+		margin-top: var(--gap-4);
+		& + .bottom_fix_wrap {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 

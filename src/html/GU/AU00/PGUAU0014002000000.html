@@ -1,35 +1,36 @@
-{{#> layout/default no-sp=true page-title="공동인증서 등록/관리 | 인증센터"}}
+{{#> layout/default no-sp=true page-title="공동인증서 발급/관리 | 인증센터"}}
 	<div id="wrap" class="wrap">
-		<!-- s: 25-06-02 수정 -->
-		{{> layout/header no-header=true }}
-		<!-- e: 25-06-02 수정 -->
+		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
 			<div class="content">
+
 				<div class="process_info_area">
 					<div class="complete_info" aria-hidden="true">
 						<lottie-player src="../../../json/lottie_complete.jso" background="transparent" speed="1" autoplay></lottie-player>
 					</div>
 					<h2 class="process_title">
-						<strong>공동인증서 삭제되었습니다.</strong>
+						<strong>공동인증서를 해지했어요</strong>
 					</h2>
 				</div>
-			</div>
 
+				<!-- s: 하단 고정 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="3" size="1" b-text="홈으로"}}
+						{{> cp/button type="1" size="1" b-text="로그인"}}
+					</div>
+				</div>
+				<!-- s: 하단 고정 버튼 영역 -->
+			</div>
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-				{{> cp/button type="1" size="1" b-text="홈으로"}}
-			</div>
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
-
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
 	</div>
 
 	<!-- s: popup area -->
-	 
 	<!-- e: popup area -->
 
 {{/ layout/default }}
