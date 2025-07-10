@@ -1768,17 +1768,3 @@
 }
 
 
-.opts_area_btn {
-	flex: none;
-	position: relative;
-  width: calc(50% - 6px);
-	min-height: 72px;
-	padding: 0 var(--padding-6);
-	border: var(--border-width-static-regular) solid var(--color-button-tertiary-border-pc);
-	border-radius: var(--radius-medium3);
-	.text {
-		font-size: var(--font-size-button-large);
-		text-align: left;
-	}
-}
-
