@@ -97,6 +97,11 @@
 		& + .btn_area.ty2 {
 			margin-top: var(--gap-5);
 		}
+		&.equal {
+			.hd_btn {
+				min-width: 192px;
+			}
+		}
 	}
 }
 
@@ -668,7 +673,7 @@
 		& + .btn_area {
 			margin-top: var(--gap-8);
 		}
-	}
+	}	
 }
 
 .file_attach_box {
