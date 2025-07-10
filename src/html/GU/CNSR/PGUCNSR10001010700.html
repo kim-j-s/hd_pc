@@ -1,0 +1,49 @@
+{{#> layout/default page-title="채용공고 | 고객지원"}}
+
+    {{#> popup/popup_full popup-id="pop_type05" popup-title="전공 검색" popup-active=true }}
+        <div class="popup_cont">
+            <div class="form_group_wrap">
+                <div class="form_line">
+                    {{> cp/text inp-search=true inp-title="전공명 검색" placeholder="전공명 검색" }}
+                </div>
+                <ul class="list_ty2">
+                    <li>경영학과인 경우, ‘경영’으로 검색한 후 선택해주세요.</li>
+                    <li>검색 결과가 없는 경우, 아래 [직접 입력]을 선택한 후 입력해주세요</li>
+                </ul>
+            </div>
+            <h3 class="title_h3">전공명</h3>
+			<div class="search_reult_list_container no_tab">
+			<!-- 데이터가 없는 경우 no_data 클래스 추가
+			<div class="search_reult_list_container no_data">
+			-->
+				<ul class="search_reult_list">
+					<li class="search_reult_list_item"><a href="#"><span class="item_text">레저관광경영</span></a></li>
+					<li class="search_reult_list_item"><a href="#"><span class="item_text">유통경영</span></a></li>
+					<li class="search_reult_list_item"><a href="#"><span class="item_text">의료경영학</span></a></li>
+					<li class="search_reult_list_item"><a href="#"><span class="item_text">인터넷산업경영</span></a></li>
+					<li class="search_reult_list_item"><a href="#"><span class="item_text">병원경영</span></a></li>
+					<li class="search_reult_list_item data_no">
+						<div class="no_list_area">
+							{{> cp/icon iconClass="exclamationSvg"}}
+							<p>‘<strong class="point">경영</strong>’에 대한 검색 결과가 없어요.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+            <div class="form_group_wrap">
+                <div class="form_line">
+                    <div class="check_group_wrap">
+                        {{> cp/checkbox id="checkbox1" labelname="직접 입력" }}
+                    </div>
+                    {{> cp/text inp-title="전공명 직접 입력" placeholder="전공명 직접 입력" }}
+                </div>
+            </div>
+        </div>
+        <div class="popup_bottom">
+            <div class="btn_area">
+                {{> cp/button type="3" size="2" b-text="취소" }}
+                {{> cp/button type="1" size="2" b-text="확인" }}
+            </div>
+        </div>
+    {{/ popup/popup_full}}
+{{/ layout/default }}
