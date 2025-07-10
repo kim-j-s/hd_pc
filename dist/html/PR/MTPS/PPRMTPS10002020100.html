@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -60,7 +60,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title"></div></div>
+					<div class="popup_head">
+						<div class="popup_head_title"></div>
+					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
@@ -174,7 +176,7 @@
 													<div class="insurance_barbox">
 														<!-- s: 진행영역 -->
 														<div class="progress_box" role="img" aria-label="보험기간 365일">
-															<span id="plnIng" class="ing" style="margin-left: 35%">
+															<span id="plnIng" class="ing" style="margin-left: 0">
 																<span class="date" id="planCarTerm">
 																	<span id="plnInagDay">365일</span>
 																</span>
@@ -432,6 +434,8 @@
 						// console.log(marginLeft, barWidth, total, '/'+ barBoxWidth);
 
 						if (marginLeft <= 37) {
+							$bar.find(".start").addClass("left");
+						} else if (marginLeft == 0) {
 							$bar.find(".start").addClass("left");
 						}
 

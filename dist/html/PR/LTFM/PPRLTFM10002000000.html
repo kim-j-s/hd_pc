@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -249,86 +249,66 @@
 											<!-- 성별 -->
 											<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
 												<div class="opts_area_item">
-													<div class="inp_radio rd_btn_s1">
-														<input type="radio" id="radio11" name="radio1" />
-														<label for="radio11">
-															<span class="label_cont">남성</span>
-														</label>
-													</div>
-													<div class="inp_radio rd_btn_s1">
-														<input type="radio" id="radio12" name="radio1" />
-														<label for="radio12">
-															<span class="label_cont">여성</span>
-														</label>
-													</div>
+													<button type="button" class="opts_area_btn hd_btn">
+														<span class="text">남성</span>
+													</button>
+													<button type="button" class="opts_area_btn hd_btn">
+														<span class="text">여성</span>
+													</button>
 												</div>
 											</div>
 											<!-- 성별 -->
 
 											<!-- 주택유형 -->
 											<div class="opts_area" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+												<!-- s: 25-07-10 수정 -->
 												<div class="opts_area_item">
-													<div class="inp_radio rd_btn_s3 full">
-														<input type="radio" id="radio21" name="radio2" />
-														<label for="radio21">
-															<span class="label_cont">
-																아파트, 주상복합
-																<small class="sm_txt">5층 이상 공동 주택</small>
-															</span>
-														</label>
-													</div>
-													<div class="inp_radio rd_btn_s3 full">
-														<input type="radio" id="radio22" name="radio2" />
-														<label for="radio22">
-															<span class="label_cont">
-																연립, 다세대
-																<small class="sm_txt">소유권이 분리된 4층 이하의 공동 주택</small>
-															</span>
-														</label>
-													</div>
-													<div class="inp_radio rd_btn_s3 full">
-														<input type="radio" id="radio23" name="radio2" />
-														<label for="radio23">
-															<span class="label_cont">
-																단독, 다가구
-																<small class="sm_txt">소유권이 분리되지 않은 주택</small>
-															</span>
-														</label>
-													</div>
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															아파트, 주상복합
+															<small class="sm_txt">5층 이상 공동 주택</small>
+														</span>
+													</button>
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															연립, 다세대
+															<small class="sm_txt">소유권이 분리된 4층 이하의 공동 주택</small>
+														</span>
+													</button>
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															단독, 다가구
+															<small class="sm_txt">소유권이 분리되지 않은 주택</small>
+														</span>
+													</button>
 												</div>
+												<!-- e: 25-07-10 수정 -->
 											</div>
 											<!-- 주택유형 -->
 
 											<!-- 용도 -->
 											<div class="opts_area active" role="radiogroup" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
 												<div class="opts_area_item">
-													<div class="inp_radio rd_btn_s3">
-														<input type="radio" id="radio31" name="radio3" />
-														<label for="radio31">
-															<span class="label_cont">
-																자가 소유
-																<small class="sm_txt">실제 거주 중</small>
-															</span>
-														</label>
-													</div>
-													<div class="inp_radio rd_btn_s3">
-														<input type="radio" id="radio32" name="radio3" />
-														<label for="radio32">
-															<span class="label_cont">
-																임차인
-																<small class="sm_txt">전세 또는 월세로 거주</small>
-															</span>
-														</label>
-													</div>
-													<div class="inp_radio rd_btn_s3">
-														<input type="radio" id="radio33" name="radio3" />
-														<label for="radio33">
-															<span class="label_cont">
-																자가 소유
-																<small class="sm_txt">임차 중</small>
-															</span>
-														</label>
-													</div>
+													<!-- s: 25-07-10 수정 -->
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															자가 소유
+															<small class="sm_txt">실제 거주 중</small>
+														</span>
+													</button>
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															임차인
+															<small class="sm_txt">전세 또는 월세로 거주</small>
+														</span>
+													</button>
+													<button type="button" class="opts_area_btn hd_btn full">
+														<span class="text">
+															자가 소유
+															<small class="sm_txt">임차 중</small>
+														</span>
+													</button>
+													<!-- e: 25-07-10 수정 -->
 												</div>
 											</div>
 											<!-- 용도 -->
@@ -376,7 +356,9 @@
 			<div class="popup_container">
 				<div class="popup_dim"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title"></div></div>
+					<div class="popup_head">
+						<div class="popup_head_title"></div>
+					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<p class="pl_txt1">

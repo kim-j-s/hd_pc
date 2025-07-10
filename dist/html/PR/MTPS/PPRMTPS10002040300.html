@@ -2,7 +2,7 @@
 화면번호 : MPRMTPS10004010300
 경로 : 3.자동차 상세정보 > 	3-2.자동차 부품정보 입력 > 추가부속품 목록
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -60,14 +60,15 @@
 		</ul>
 
 		<!-- s: Bottom 팝업 -->
-		<!-- s: 25-04-22 수정 -->
+
 		<div class="popup_wrap popup_wrap_type3 active" id="pop_ty1" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_ty1');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">추가부속품 선택</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">추가부속품 선택</div>
+					</div>
 
-					<!-- e: 25-04-22 수정 -->
 					<div class="popup_cont search_list_type">
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
@@ -144,9 +145,8 @@
 									<!-- 목록 최하단 기타 항목 필수 -->
 									<li class="search_reult_list_item add_item">
 										<a href="#">
-											<!-- s: 25-04-30 수정 -->
 											<span class="item_text">직접입력</span>
-											<!-- e: 25-04-30 수정 -->
+
 											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" onclick="openHDPopup(this,'alert_d1');">
 												<span class="text">추가</span>
 												<i class="hd_icon plusSvg"></i>

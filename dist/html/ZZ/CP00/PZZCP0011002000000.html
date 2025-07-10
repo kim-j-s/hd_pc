@@ -2,7 +2,7 @@
 화면번호 : MPRGIPT30002010100
 경로 :  공통 > 	주소검색 (case 1: 최초 진입시 화면(도로명))
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -64,7 +64,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">주소 찾기</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">주소 찾기</div>
+					</div>
 					<div class="popup_cont search_list_type2">
 						<div class="tab_wrap">
 							<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">도로명</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">지번</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel03" id="tab03">건물명</button></div>
@@ -88,7 +90,7 @@
 										<span class="text">이전</span>
 									</a>
 								</div>
-								<!-- s: 25-04-22 수정 -->
+
 								<div class="search_reult_list_container">
 									<!-- 데이터가 없는 경우 no_data 클래스 추가
 									<div class="search_reult_list_container no_data">
@@ -111,7 +113,7 @@
 										</li>
 									</ul>
 								</div>
-								<!-- e: 25-04-22 수정 -->
+
 								<!-- e: 도로명 검색 결과 리스트 -->
 							</div>
 							<!-- e: tab01. 검색어로 찾기 Tab 내용 -->
@@ -215,7 +217,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">피보험자와 계약자 과계</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">피보험자와 계약자 과계</div>
+					</div>
 
 					<div class="popup_cont">
 						<div class="popup_content">

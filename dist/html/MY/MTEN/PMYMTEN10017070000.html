@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -998,18 +998,21 @@
 		</div>
 		<!-- s: popup area -->
 		<!-- s: 자동차 배서 메뉴 -->
-		<!-- s: 자동차 계약변경 (기획/디자인 미정) -->
-		<div class="popup_wrap popup_wrap_type4" id="pop_insChk" role="dialog" aria-hidden="true">
+		<!-- s: 자동차 계약변경 -->
+		<!-- s: 25-07-10 메뉴, 클래스 수정 -->
+		<div class="popup_wrap popup_wrap_type4 big" id="pop_insChk" role="dialog" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_insChk');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">자동차 계약변경</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">자동차 계약변경</div>
+					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="space_list_ty4">
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c01">자동차정보 변경</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">자동차번호 확정</span>
@@ -1029,14 +1032,13 @@
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">블랙박스/부속품 추가</span>
 											</div>
-											<!-- 25-07-01 수정 -->
 										</li>
 									</ul>
 								</div>
 
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c02">운전자정보 변경</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">단기운전자 확대특약 신청</span>
@@ -1062,7 +1064,7 @@
 
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c03">담보/특약 변경</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">담보/특약 변경</span>
@@ -1072,7 +1074,6 @@
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">스마트 안전운전(UBI) 할인 특약 가입</span>
 											</div>
-											<!-- 25-07-01 수정 -->
 										</li>
 										<li>
 											<div class="option" role="button" tabindex="0">
@@ -1089,7 +1090,7 @@
 
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c04">특약 사진등록</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">ECO마일리지 특약 사진등록(최초)</span>
@@ -1110,7 +1111,7 @@
 
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c05">계약취소/해지</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">자동차보험 개시전 취소</span>
@@ -1121,18 +1122,17 @@
 												<span class="opi_t1">자동차보험 양도/말소해지</span>
 											</div>
 										</li>
-										<li>
-											<div class="option" role="button" tabindex="0">
-												<span class="opi_t1">타임쉐어자동차보험 취소</span>
-											</div>
-										</li>
+										<!-- <li>
+														<div class="option" role="button" tabindex="0">
+															<span class="opi_t1">타임쉐어자동차보험 취소</span>
+														</div>
+													</li> -->
 									</ul>
 								</div>
 
-								<!-- s: 25-07-01 수정 -->
 								<div class="item">
 									<h3 class="title_h3 ico_ty ico_ty_c06">계약체결 전자서명</h3>
-									<ul class="opt_select_list opt_case5">
+									<ul class="opt_select_list opt_case5 grid">
 										<li>
 											<div class="option" role="button" tabindex="0">
 												<span class="opi_t1">계약체결 전자서명(피보험자)</span>
@@ -1145,7 +1145,6 @@
 										</li>
 									</ul>
 								</div>
-								<!-- e: 25-07-01 수정 -->
 							</div>
 						</div>
 					</div>
@@ -1153,6 +1152,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- e: 25-07-10 메뉴, 클래스 수정 -->
 		<!-- e: 자동차 계약변경 -->
 		<!-- e: 자동차 배서 메뉴 -->
 		<!-- e: popup area -->
