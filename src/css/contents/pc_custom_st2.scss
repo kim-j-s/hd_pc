@@ -1768,7 +1768,7 @@
 }
 
 //팝업 검색
-.popup_wrap.full{
+.popup_wrap.popup_wrap_type4 {
 	.popup_container  {
 		.popup_inner  {
 			.popup_cont {
@@ -1894,8 +1894,13 @@
 
 
 .popup_wrap {
-	&.bottom,
-	&.full {
+	&.popup_wrap_type3,
+	&.popup_wrap_type4  {
+		.popup_head:not( div.popup_head_title) {
+			+ .popup_cont {
+				padding-top: 0;
+			}
+		}
 		.file_upload_wrap {
 			.file_attach_box {
 				display: block;
