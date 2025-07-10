@@ -41,6 +41,8 @@
 	left: 0;
 	z-index: 10;
 	width: 100%;
+	max-height: calc(100vh - 220px);
+	// max-height: calc(100vh);
 	text-align: center;
 	border-radius: 0px 0px var(--radius-xxlarge) var(--radius-xlarge2);
 	background-color: var(--color-background-white);
@@ -49,6 +51,7 @@
 	transform-origin: top center;
 	transform: scaleY(0);
 	transition: 0.3s;
+	overflow: auto;
 	.nld_cont_inner {
 		display: inline-block;
 		width: 1188px;
@@ -248,46 +251,50 @@
 	display: flex;
 	align-items: center;
 	flex-flow: row wrap;
-	gap: var(--gap-8);
+	gap: var(--gap-3);
 	.item {
 		position: relative;
 		flex: none;
-		background-color: #fff;
+		display: inline-flex;
+		align-items: center;
+		border-radius: var(--radius-medium1);
+		background-color: var(--color-action-white);
 	}
 	.item_name {
 		display: block;
+		padding: 10px var(--padding-5, 16px) 9px var(--padding-5, 16px);
 		font-size: var(--font-size-button-medium);
+		
+	}
+	.item_fav_box {
+		position: relative;
+		padding-left: 1px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: var(--size-height-3);
+			border-left: var(--border-width-variable-regular) solid var(--color-divider-gray-light);
+			transform: translateY(-50%);
+		}
 	}
 	.item_bookmark {
-		position: absolute;
-		top: 50%;
-		right: 10px;
-		width: 12px;
-		height: 12px;
-		transform: translateY(-50%);
-
+		display: block;
+		cursor: pointer;
 		&[aria-checked="true"] {
 			> .text {
-				background-image: url(../images/icon/icon_star_on.svg);
+				background-image: url(../images/header/icon_fav_on.png);
 			}
 		}
-
 		> .text {
 			position: relative;
 			display: block;
-			width: 12px;
-			height: 12px;
+			width: 40px;
+			height: var(--size-height-6);
 			font-size: 0;
 			border: none;
-			background: url(../images/icon/icon_star.svg) no-repeat center center / 12px auto;
-			&::after {
-				content: '';
-				position: absolute;
-				top: -3px;
-				left: -3px;
-				width: 18px;
-				height: 18px;
-			}
+			background: url(../images/header/icon_fav_off.png) no-repeat center center / 12px auto;
 		}
 	}
 }

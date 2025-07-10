@@ -219,11 +219,6 @@
 			overflow: hidden;
 		}
 	}
-
-
-	&:focus {
-		outline: none;
-	}
 	&.error {
 		.si_item {
 			&::after {
