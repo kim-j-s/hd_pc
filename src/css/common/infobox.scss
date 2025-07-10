@@ -110,6 +110,7 @@
 	& + .inp_checkbox,
 	& + .card_item_wrap,
 	& + .list_ty2,
+	& + .call_box,
 	& + .checkbox_group_wrap.space1 {
 		margin-top: var(--gap-5);
 	}
@@ -405,6 +406,15 @@
 					height: 52px;
 					background: var(--color-divider-gray-light);
 				}
+			}
+		}
+	}
+	&:has(.form_group_wrap) {
+		padding: 32px var(--padding-card-small);
+		.form_group_wrap {
+			justify-content: center;
+			.comp_wrap {
+				background: var(--color-background-white);
 			}
 		}
 	}
