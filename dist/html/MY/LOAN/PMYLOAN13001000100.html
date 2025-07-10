@@ -60,10 +60,12 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">납입가능이자 조회</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">납입가능이자 조회</div>
+					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
-							<div class="select_item select_item_case01" role="button" tabindex="0" title="날짜 선택" onclick="openHDPopup(this,'pop_type02');">
+							<div class="select_item select_item_case01" role="button" tabindex="0" title="날짜 선택" onclick="openHDPopup(this,'pop_type02');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type02');">
 								<div class="select_item_inner">
 									<div class="si_item" data-placeholder="선택해주세요.">2024.03.19~2025.03.19</div>
 									<span class="si_stat">선택됨</span>
@@ -236,7 +238,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">조회조건</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">조회조건</div>
+					</div>
 
 					<div class="popup_cont">
 						<div class="popup_content">

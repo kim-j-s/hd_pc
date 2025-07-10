@@ -43,6 +43,9 @@
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>현대해상 다이렉트</title>
 
+		<script type="text/javascript" src="../../../js/common_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -54,28 +57,28 @@
 		<div class="guide_h1">카드 선택 가이드</div>
 
 		<div class="guide_discription">height 40</div>
-		<div class="select_item select_item_case01 select_item_case01_sm" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');">
+		<div class="select_item select_item_case01 select_item_case01_sm" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
 			<div class="select_item_inner">
 				<div class="si_item" data-placeholder="카드사 선택"></div>
 				<span class="si_stat">선택됨</span>
 			</div>
 		</div>
 		<div class="guide_h4">선택 버튼 - 카드사 선택 팝업 호출 - 선택 전</div>
-		<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');">
+		<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
 			<div class="select_item_inner">
 				<div class="si_item" data-placeholder="카드사 선택"></div>
 				<span class="si_stat">선택됨</span>
 			</div>
 		</div>
 		<div class="guide_h4">선택 버튼 - 카드사 선택 팝업 호출 - 선택 후</div>
-		<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');">
+		<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
 			<div class="select_item_inner">
 				<div class="si_item" data-placeholder="카드사 선택">현대카드</div>
 				<span class="si_stat">선택됨</span>
 			</div>
 		</div>
 		<div class="guide_h4">선택 버튼 - 카드사 선택 팝업 호출 - 오류</div>
-		<div class="select_item select_item_case01 error" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');">
+		<div class="select_item select_item_case01 error" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
 			<div class="select_item_inner">
 				<div class="si_item" data-placeholder="카드사 선택">현대카드</div>
 				<span class="si_stat">선택됨</span>
@@ -106,7 +109,9 @@
 					<div class="draggable" aria-hidden="true">
 						<div class="move"></div>
 					</div>
-					<div class="popup_head"><div class="popup_head_title">신용카드 선택</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">신용카드 선택</div>
+					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<ul class="select_list_ty_card">

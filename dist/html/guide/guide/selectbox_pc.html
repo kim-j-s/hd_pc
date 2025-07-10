@@ -43,6 +43,9 @@
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>selectbox - 현대해상 다이렉트</title>
 
+		<script type="text/javascript" src="../../../js/common_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -168,7 +171,7 @@
     	</button>
     	<span class="si_stat">선택됨</span>
     </div> -->
-		<!-- <div class="select_item select_item_case01" role="button" tabindex="0" title="선택 팝업 호출" onclick="openHDPopup(this,'pop_type01');">
+		<!-- <div class="select_item select_item_case01" role="button" tabindex="0" title="선택 팝업 호출" onclick="openHDPopup(this,'pop_type01');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type01');">
     	<div class="select_item_inner">
     		<div class="si_item" data-placeholder="선택해주세요."></div><span class="si_stat">선택됨</span>
     	</div>
@@ -181,7 +184,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">팝업 타이틀</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
+					</div>
 
 					<div class="popup_cont">
 						<div class="popup_content">

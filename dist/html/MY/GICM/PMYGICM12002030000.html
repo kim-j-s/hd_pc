@@ -864,12 +864,11 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">카드사</div>
-							<div class="select_option_box">
-								<select name="" id="" title="카드사 선택" class="selectbox">
-									<option value="">카드사 선택</option>
-									<option value="">현대</option>
-									<option value="">우리</option>
-								</select>
+							<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
+								<div class="select_item_inner">
+									<div class="si_item" data-placeholder="카드사 선택"></div>
+									<span class="si_stat">선택됨</span>
+								</div>
 							</div>
 							<!-- s: KB카드 선택 시 노출 -->
 							<div class="inp_checkbox">
@@ -1051,6 +1050,104 @@
 		</div>
 
 		<!-- s: popup area -->
+
+		<!-- s: 카드사 선택 팝업 -->
+		<div class="popup_wrap popup_wrap_type3" id="card_select" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('card_select');"></div>
+				<div class="popup_inner">
+					<div class="draggable" aria-hidden="true">
+						<div class="move"></div>
+					</div>
+					<div class="popup_head">
+						<div class="popup_head_title">신용카드 선택</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<ul class="select_list_ty_card">
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_367"></i>현대카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_appcard">앱카드<span class="sr_only">사용가능</span></span>
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_365"></i>삼성카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_381"></i>국민카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_366"></i>신한카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_361"></i>BC카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_371"></i>농협카드</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_368"></i>롯데카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_041"></i>우리카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_374"></i>하나카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_370"></i>씨티카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_900"></i>IBK카드</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_000"></i>기타</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('card_select');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 카드사 선택 팝업 -->
+
 		<!-- e: popup area -->
 	</body>
 </html>

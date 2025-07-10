@@ -183,6 +183,7 @@
 	--font-size-button-xsmall: 1.2rem;
 	--font-size-button-xlarge: 1.6rem;
 	--font-size-button-cta-bold: 1.8rem;
+	--font-size-button-cta-bold: 18px;
 	--font-size-button-small-bold: 1.2rem;
 	--font-size-button-medium-bold: 1.4rem;
 	--font-size-button-xsmall-bold: 1.2rem;
@@ -360,6 +361,8 @@
 	--color-button-icon-fill-hover: var(--color-light-alpha-black10);
 	--color-button-icon-fill-pressed: var(--color-light-alpha-black25);
 	--color-button-disabled-icon-fill: var(--color-light-gray-60);
+	--color-button-tertiary-border-pc: var(--color-light-gray-20);
+	--color-button-tertiary-border-pressed-pc: var(--color-light-primary-50);
 	--color-background-white: var(--color-light-gray-0);
 	--color-background-inverse: var(--color-light-gray-90);
 	--color-background-gray-subtler: var(--color-light-gray-5);
@@ -788,19 +791,25 @@ caption {
 a:focus,
 button:focus,
 select:focus,
+.select_item:focus,
+div:focus,
 input:focus {
-	outline: 0.3rem solid #000;
+	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	outline: 0.2rem solid #000;
 	outline-offset: -0.2rem;
 }
 input:focus + label {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
-	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	outline: 0.2rem solid #000;
+	outline-offset: -0.2rem;
 }
 .inp input:focus {
-	outline: none;
-	-webkit-box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
-	box-shadow: 0 0 0 0.3rem rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	outline: 0.2rem solid #000;
+	outline-offset: -0.2rem;
 }
 /* 모바일 디바이스 분기 */
 @media screen and (max-width: 375px) {

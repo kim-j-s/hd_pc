@@ -860,7 +860,7 @@ $(function(){
 
 
 	// 달력 호출
-	let $lastCalendarCallBtn = null;
+	// let $lastCalendarCallBtn = null;
 	$.datepicker.setDefaults({
 		dateFormat: 'yy.mm.dd',
 		prevText: '이전 달',
@@ -897,13 +897,13 @@ $(function(){
 		// 		$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
 		// 	}, 0);
 		// },
-		onClose: function() {
-			$("body").removeClass('modal_open');
-			// 호출했던 버튼으로 포커스 복귀
-			if ($lastCalendarCallBtn) {
-				$lastCalendarCallBtn.focus();
-			}
-		}
+		// onClose: function() {
+		// 	$("body").removeClass('modal_open');
+		// 	// 호출했던 버튼으로 포커스 복귀
+		// 	if ($lastCalendarCallBtn) {
+		// 		$lastCalendarCallBtn.focus();
+		// 	}
+		// }
 	});
 
 	$(".inp_picker").datepicker();
@@ -915,11 +915,11 @@ $(function(){
 		const $input = $btn.siblings(".inp_picker");
 	
 		// 포커스 복귀용으로 버튼 참조 저장
-		$lastCalendarCallBtn = $btn;
+		// $lastCalendarCallBtn = $btn;
 	
 		// readonly 잠시 설정 → 키보드 입력 방지
 		// $input.attr("readonly", true);
-		// $input.datepicker("show");
+		$input.datepicker("show");
 	
 		// 0.5초 후 readonly 제거
 		// setTimeout(function () {

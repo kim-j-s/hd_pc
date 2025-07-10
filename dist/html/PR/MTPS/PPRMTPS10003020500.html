@@ -64,7 +64,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">운전자 범위와 연령</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">운전자 범위와 연령</div>
+					</div>
 
 					<div class="popup_cont">
 						<div class="popup_content ty2">
@@ -109,7 +111,7 @@
 								<div class="form_line">
 									<div class="label_tit">나이</div>
 									<!-- s: 25-05-27 수정 -->
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="연령 선택 팝업 호출" onclick="openHDPopup(this,'select_option_ty1');">
+									<div class="select_item select_item_case01" role="button" tabindex="0" title="연령 선택 팝업 호출" onclick="openHDPopup(this,'select_option_ty1');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'select_option_ty1');">
 										<div class="select_item_inner">
 											<div class="si_item" data-placeholder="나이 선택"></div>
 											<span class="si_stat">선택됨</span>
@@ -143,7 +145,9 @@
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_option_ty1');"></div>
 				<div class="popup_inner">
-					<div class="popup_head"><div class="popup_head_title">연령선택</div></div>
+					<div class="popup_head">
+						<div class="popup_head_title">연령선택</div>
+					</div>
 
 					<div class="popup_cont">
 						<div class="opt_select_list opt_case3">

@@ -43,6 +43,9 @@
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>현대해상 다이렉트</title>
 
+		<script type="text/javascript" src="../../../js/common_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -401,10 +404,11 @@
 			</div>
 		</div>
 
+		<!-- s: 이용안내 -->
 		<div class="guide_h4">.acd_item_ty4</div>
 		<div class="acd_item acd_item_ty4">
 			<div class="acd_head">
-				<button type="button" class="acd_btn" aria-expanded="false"><span>샘플 타이틀</span></button>
+				<button type="button" class="acd_btn" aria-expanded="false"><span>이용안내</span></button>
 			</div>
 			<div class="acd_cont">
 				<div class="inner">
@@ -416,8 +420,53 @@
 				</div>
 			</div>
 		</div>
+		<!-- e: 이용안내 -->
+		<div class="guide_h4">.acd_item_ty6.ty2</div>
+		<div class="acd_item acd_item_ty6 ty2">
+			<div class="acd_head">
+				<button type="button" class="acd_btn" aria-expanded="true">
+					<div class="sii_list_l">다이렉트 보험료</div>
+					<strong class="sii_list_r">
+						<del>1,563,393원</del>
+						660,843원
+					</strong>
+				</button>
+			</div>
+			<div class="acd_cont">
+				<div class="inner">
+					<div class="info_gray bg_etc01">
+						<dl>
+							<dt>할인 받은 보험료</dt>
+							<dd>
+								<a href="javascript:void(0)" class="btn_link short_cut lg" title="페이지 이동">
+									<span class="text"><span>-686,850 </span>원 (<span>6개</span>)</span>
+								</a>
+							</dd>
+						</dl>
+						<div class="line2"></div>
+						<dl>
+							<dt>전계약 마일리지 환급금</dt>
+							<!-- s: 25-05-26 수정 -->
+							<dd><strong>-107,850원</strong></dd>
+							<!-- e: 25-05-26 수정 -->
+						</dl>
+					</div>
+				</div>
+				<div class="info_gray bg_etc01">
+					<div class="line1"></div>
+					<dl>
+						<dt>환급금 차감 사용시 납입 보험료</dt>
+						<dd class="point">
+							<!-- s: 25-05-26 수정 -->
+							<strong>768,693원</strong>
+							<!-- e: 25-05-26 수정 -->
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
 
-		<div class="guide_h4" style="background-color: red; color: #fff">.acd_item_ty7(사용안되고 있음, 확인필요 - 추후 미사용시 삭제예정)</div>
+		<div class="guide_h4">.acd_item_ty7</div>
 		<div class="guide_discription">acd_head와 acd_cont 안에 체크박스가 있는 Case</div>
 		<div class="acd_item acd_item_ty7">
 			<div class="acd_head active">
@@ -425,6 +474,43 @@
 					<input type="checkbox" id="aci03" />
 					<label for="aci03" class="chk_label chk_label_ty2">
 						<span class="label_cont">빠른 일상 생활 복귀! <span class="sub_g_txt">사고처리지원금 공탁금 50% 선지급 가능</span></span>
+					</label>
+				</div>
+				<button type="button" class="acd_btn" aria-expanded="true"><span>상세보기</span></button>
+			</div>
+			<div class="acd_cont">
+				<div class="inner" style="display: block">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="checkbox01-1" />
+						<label for="checkbox01-1" class="chk_label more_add">
+							<span class="label_cont">청약서류</span>
+						</label>
+						<button type="button" class="ag_more_btn" aria-label="청약서류 자세히 보기">자세히</button>
+					</div>
+					<div class="inp_checkbox">
+						<input type="checkbox" id="checkbox01-2" checked disabled />
+						<label for="checkbox01-2" class="chk_label more_add">
+							<span class="label_cont">상품설명서 주요 내용</span>
+						</label>
+						<button type="button" class="ag_more_btn" aria-label="상품설명서 주요 내용 자세히 보기">자세히</button>
+					</div>
+					<div class="inp_checkbox">
+						<input type="checkbox" id="checkbox01-3" />
+						<label for="checkbox01-3" class="chk_label more_add">
+							<span class="label_cont">보험 약관</span>
+						</label>
+						<button type="button" class="ag_more_btn" aria-label="보험 약관 자세히 보기">자세히</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="acd_item acd_item_ty7">
+			<div class="acd_head active">
+				<div class="inp_checkbox">
+					<input type="checkbox" id="aci_group" />
+					<label for="aci_group" class="chk_label chk_label_ty2">
+						<span class="label_cont">계약 주요 사항을 모두 확인해주세요.</span>
 					</label>
 				</div>
 				<button type="button" class="acd_btn" aria-expanded="true"><span>상세보기</span></button>
@@ -726,6 +812,42 @@
 			</div>
 		</div>
 
+		<div class="guide_h4">FAQ</div>
+		<div class="item_wrap_faq">
+			<div class="acd_item">
+				<div class="acd_head active">
+					<button type="button" class="acd_btn" aria-expanded="true">
+						<span class="sub_g_txt">혜택/기부</span>
+						<strong>연말정산시 기부금이 포함되나요?</strong>
+					</button>
+				</div>
+				<div class="acd_cont">
+					<div class="inner" style="display: block">현대해상 다이렉트는 직원 채용 시 연령제한을 두지 않으며, 성별이나 신체장애 등을 이유로 전형과정상 불공정한 대우를 하지 않습니다.</div>
+				</div>
+			</div>
+			<div class="acd_item">
+				<div class="acd_head">
+					<button type="button" class="acd_btn" aria-expanded="true">
+						<span class="sub_g_txt">혜택/기부</span>
+						<strong>연말정산시 기부금이 포함되나요?</strong>
+					</button>
+				</div>
+				<div class="acd_cont">
+					<div class="inner">현대해상 다이렉트는 직원 채용 시 연령제한을 두지 않으며, 성별이나 신체장애 등을 이유로 전형과정상 불공정한 대우를 하지 않습니다.</div>
+				</div>
+			</div>
+			<div class="acd_item">
+				<div class="acd_head">
+					<button type="button" class="acd_btn" aria-expanded="true">
+						<span class="sub_g_txt">혜택/기부</span>
+						<strong>연말정산시 기부금이 포함되나요?</strong>
+					</button>
+				</div>
+				<div class="acd_cont">
+					<div class="inner">현대해상 다이렉트는 직원 채용 시 연령제한을 두지 않으며, 성별이나 신체장애 등을 이유로 전형과정상 불공정한 대우를 하지 않습니다.</div>
+				</div>
+			</div>
+		</div>
 		<!-- <div class="guide_h4">각각 열리는 Type(1Depth 기준)</div>
     	<div class="guide_discription">Default (닫혀있는 Type)</div>
     	<div class="acd_item">

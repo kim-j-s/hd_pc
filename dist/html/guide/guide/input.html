@@ -43,6 +43,9 @@
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>현대해상 다이렉트</title>
 
+		<script type="text/javascript" src="../../../js/common_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -986,7 +989,7 @@
 			<div class="row">
 				<div class="form_line fix_w_case01">
 					<div class="label_tit">장착연도</div>
-					<div class="select_item select_item_case01" role="button" tabindex="0" title="장착연도 선택" onclick="openHDPopup(this,'select_option_ty1');">
+					<div class="select_item select_item_case01" role="button" tabindex="0" title="장착연도 선택" onclick="openHDPopup(this,'select_option_ty1');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'select_option_ty1');">
 						<div class="select_item_inner">
 							<div class="si_item" data-placeholder="선택"></div>
 							<span class="si_stat">선택됨</span>
@@ -1025,7 +1028,7 @@
 			</div>
 			<div class="form_line">
 				<div class="label_tit">자금출처</div>
-				<div class="select_item select_item_case01" role="button" tabindex="0" title="자금출처 선택" onclick="openHDPopup(this,'pop_type01');">
+				<div class="select_item select_item_case01" role="button" tabindex="0" title="자금출처 선택" onclick="openHDPopup(this,'pop_type01');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type01');">
 					<div class="select_item_inner">
 						<div class="si_item" data-placeholder="자금출처 선택"></div>
 						<span class="si_stat">선택됨</span>
