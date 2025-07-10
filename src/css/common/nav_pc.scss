@@ -56,7 +56,6 @@
 		text-align: left;		
 		.nld_cont_top {
 			display: flex;
-			padding: var(--padding-3) var(--padding-5);
 			.nld_cont_top_btn {
 				position: relative;
 				display: inline-block;
@@ -116,7 +115,7 @@
 		}
 
 		.nld_cont_body {
-			padding: var(--gap-6) 0 0 var(--padding-11);
+			padding: var(--gap-6) 0 0 var(--padding-10);
 		}
 	}
 
@@ -225,6 +224,74 @@
 		}
 	}
 }
+
+/* 즐겨찾기 */
+.nrs_wrap {
+	padding: var(--padding-9) 0 0 var(--padding-10);
+	.nrs_wrap_inner {
+		display: flex;
+		align-items: center;
+		gap: 0 var(--gap-8);
+		padding: var(--padding-8, 24px) var(--padding-7, 20px);
+		border-radius: var(--radius-large2);
+		background-color: var(--color-surface-secondary-subtler);
+		> .nrs_wrap_title {
+			flex: none;
+			font-weight: 700;
+			color: var(--color-text-subtle);
+			font-size: var(--font-size-heading-xsmall);
+		}
+	}
+}
+
+.nrs_items {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	gap: var(--gap-8);
+	.item {
+		position: relative;
+		flex: none;
+		background-color: #fff;
+	}
+	.item_name {
+		display: block;
+		font-size: var(--font-size-button-medium);
+	}
+	.item_bookmark {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		width: 12px;
+		height: 12px;
+		transform: translateY(-50%);
+
+		&[aria-checked="true"] {
+			> .text {
+				background-image: url(../images/icon/icon_star_on.svg);
+			}
+		}
+
+		> .text {
+			position: relative;
+			display: block;
+			width: 12px;
+			height: 12px;
+			font-size: 0;
+			border: none;
+			background: url(../images/icon/icon_star.svg) no-repeat center center / 12px auto;
+			&::after {
+				content: '';
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}
+/* 즐겨찾기 */
 
 
 .wrap {
