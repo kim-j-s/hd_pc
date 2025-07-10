@@ -57,7 +57,8 @@
 					{{> pay/pay_info no_tit=true }}
 				</div>
 				<!-- 즉시이체 -->
-				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">{{> pay/bank1 no_tit=true }}	
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
+					{{> pay/bank1 no_tit=true }}
 					<!-- s: 꼭 알아두세요 -->
 					<div class="acd_item acd_item_ty4">
 						{{#> cp/accordion ac-title="이용안내" ac-active=true }}
@@ -83,9 +84,15 @@
 
 <!-- s: popup area -->
 
-
 {{> pay/hd_card }}
 
+<!-- s: 은행/증권사 선택 팝업 -->
+{{> popup/bank_select popup-id="bank_select" popup-title="은행 선택" }}
+<!-- e: 은행/증권사 선택 팝업 -->
+
+<!-- s: 카드사 선택 팝업 -->
+{{> popup/card_select popup-id="card_select" popup-title="신용카드 선택" }}
+<!-- e: 카드사 선택 팝업 -->
 
 <!-- e: popup area -->
 

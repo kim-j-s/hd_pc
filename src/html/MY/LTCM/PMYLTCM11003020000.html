@@ -153,16 +153,15 @@
           <!-- s: 직접입력 선택 -->
           <div class="form_line">
             <div class="label_tit">은행</div>
-            {{#> cp/selectbox_pc s-title="은행 선택" }}
-              <option value="">선택 옵션값 1</option>
-              <option value="">선택 옵션값 2</option>
-            {{/ cp/selectbox_pc}}
+						<!-- s: 25-07-10 수정 -->
+						{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
+						<!-- e: 25-07-10 수정 -->
           </div>
           <div class="form_line">
             <div class="label_tit">계좌번호</div>
             <div class="comp_wrap key_number">
-                {{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
-                {{> cp/button type="3" size="4" b-text="계좌확인" }}
+							{{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
+							{{> cp/button type="3" size="4" b-text="계좌확인" }}
             </div>
           </div>
           <div class="form_line">
@@ -215,6 +214,11 @@
 </div>
 
 <!-- s: popup area -->
+<!-- s: 25-07-10 수정 -->
+<!-- s: 은행 선택 팝업 -->
+{{> popup/bank_only_select popup-id="bank_only_select" popup-title="은행 선택" }}
+<!-- e: 은행 선택 팝업 -->
+<!-- e: 25-07-10 수정 -->
 <!-- e: popup area -->
 
 {{/ layout/default }}

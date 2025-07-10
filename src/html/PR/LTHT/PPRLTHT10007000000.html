@@ -76,8 +76,16 @@
 </div>
 
 <!-- s: popup area -->
+ 
 {{> pay/hd_card }}
 
+<!-- s: 은행/증권사 선택 팝업 -->
+{{> popup/bank_select popup-id="bank_select" popup-title="은행 선택" }}
+<!-- e: 은행/증권사 선택 팝업 -->
+
+<!-- s: 카드사 선택 팝업 -->
+{{> popup/card_select popup-id="card_select" popup-title="신용카드 선택" }}
+<!-- e: 카드사 선택 팝업 -->
 
 <!-- e: popup area -->
 {{/ layout/default }}

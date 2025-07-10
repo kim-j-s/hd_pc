@@ -78,10 +78,9 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">은행</div>
-							{{#> cp/selectbox_pc s-title="은행 선택" sb-ph="은행 선택" }}
-								<option value="">옵션 1</option>
-								<option value="">선택 옵션값 2</option>
-							{{/ cp/selectbox_pc}}
+							<!-- s: 25-07-10 수정 -->
+							{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
+							<!-- e: 25-07-10 수정 -->
 						</div>
 						<div class="form_line">
 							<div class="label_tit">계좌번호</div>
@@ -162,7 +161,13 @@
 	</div>
 </div>
 {{/ popup/popup_confirm}}
+
+<!-- s: 은행/증권사 선택 팝업 -->
+{{> popup/bank_select popup-id="bank_select" popup-title="은행 선택" }}
+<!-- e: 은행/증권사 선택 팝업 -->
+
 <!-- e: 25-07-10 수정 -->
+
 
 
 <!-- e: popup area -->
