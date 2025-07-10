@@ -1,0 +1,75 @@
+{{#> layout/default page-title="채용공고 | 고객지원"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc bc=true }}
+		<div id="container" class="container">
+			<div class="content">
+
+                <div class="title_view_wrap">
+                    <div class="page_title">
+                        <div class="p_info">지원서 수정/확인</div>
+                        <h2 class="p_title">
+                            <strong>입사지원 진행현황을 확인해주세요</strong>
+                        </h2>
+                    </div>
+                </div>
+				<div class="card_item_wrap">
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inner_cont">
+                                <div class="item_top">
+                                    <div class="badge_wrap">
+                                        <span class="hd_badge outline solid_pastel c_secondary size_m">접수완료</span>
+                                    </div>
+                                    <div class="title_info">
+                                        <div class="main_title">
+                                            CM·플랫폼 상담직원 모집(25.3월)
+                                        </div>
+                                    </div>
+                                </div>
+								<ul class="card_list_ty1">
+									<li>
+										<div class="title">채용구분</div>
+										<div class="cont">신입/경력</div>
+									</li>
+									<li class="result">
+										<div class="title">접수기간</div>
+										<div class="cont">
+											2025.02.21~2025.03.06
+										</div>
+									</li>
+								</ul>
+                                <div class="btn_area center">
+                                    {{> cp/button type="3" size="2" b-text="지원서 삭제"}}
+                                    {{> cp/button type="1" size="2" b-text="지원서 수정"}}
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <!-- s: 꼭 알아두세요 -->
+                {{#> cp/notice dp-active=true }}
+                    <ul class="list_depth">
+                        <li>진행현황은 서류작성중/접수완료/접수종료/서류전형합격/서류전형불합격/최종합격/불합격으로 표기되며, ‘작성중/접수완료’ 단계에서만 입사지원서를 수정할 수 있습니다.</li>
+                        <li>채용 관련 자세한 사항은 FAQ를 확인하거나 채용 담당자(<a href="mailto:recruit3@hi.co.kr" class="underline" title="메일 보내기">recruit3@hi.co.kr</a>)에게 문의해주세요.</li>
+                    </ul>
+                {{/ cp/notice }}
+                <!-- e: 꼭 알아두세요 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="지원서 수정/확인 화면으로"}}
+					</div>
+				</div>			
+			</div>
+		</div>
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+
+	 
+	<!-- e: popup area -->
+
+{{/ layout/default }}

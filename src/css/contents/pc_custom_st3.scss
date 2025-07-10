@@ -302,7 +302,7 @@
 
 			.link {
 				padding-right: 20px;
-				background: url(../images/icon/arrowRight_ty3.svg) no-repeat right center / 16px auto;
+				background: url(../images/icon/arrowRight_ty4.svg) no-repeat right center / 16px auto;
 			}
 			.dc_l {
 				color: var(--color-text-subtle);
@@ -1336,7 +1336,7 @@
 }
 
 // 변경할 가입조건 선택 팝업
-.popup_wrap.full {
+.popup_wrap.popup_wrap_type3 {
 	.title_h4.space1 {
 		margin-bottom:16px;
 	}
@@ -1637,7 +1637,7 @@
 				margin: var(--gap-4);
 				width: 26px;
 				height: 5px;
-				background: url(../images/icon/arrowRight_ty3.svg) no-repeat center;
+				background: url(../images/icon/arrowRight_ty4.svg) no-repeat center;
 			}
 			&:nth-child(2) {
 				span {
