@@ -408,6 +408,15 @@
 			}
 		}
 	}
+	&:has(.form_group_wrap) {
+		padding: 32px var(--padding-card-small);
+		.form_group_wrap {
+			justify-content: center;
+			.comp_wrap {
+				background: var(--color-background-white);
+			}
+		}
+	}
 }
 
 .call_box {
