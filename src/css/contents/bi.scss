@@ -561,6 +561,47 @@
 		.text {
 			font-size: var(--font-size-button-large);
 			text-align: left;
+			.sm_txt {
+				display: block;
+				margin-top: var(--gap-2);
+				color: var(--color-text-subtle);
+				font-size: var(--font-size-body-small);
+			}
+		}
+
+		&.logo_add {
+			&::before {
+				content: "";
+				position: static;
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				margin-right: 12px;
+				border: none;
+				border-radius: var(--radius-small3);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 24px auto;
+				background-color: var(--color-surface-gray-subtler);
+			}
+			&.la_1::before {
+				background-image: url(../images/content/bi/icon_brand_hyundai.svg);
+			}
+			&.la_2::before {
+				background-image: url(../images/content/bi/icon_brand_kia.svg);
+			}
+			&.la_3::before {
+				background-image: url(../images/content/bi/icon_brand_renault.svg);
+			}
+			&.la_4::before {
+				background-image: url(../images/content/bi/icon_brand_gm.svg);
+			}
+			&.la_5::before {
+				background-image: url(../images/content/bi/icon_brand_kgm.svg);
+			}
+			&.la_6::before {
+			 	background-image: url(../images/content/bi/icon_brand_global.svg);
+			}
 		}
 	}
 	
