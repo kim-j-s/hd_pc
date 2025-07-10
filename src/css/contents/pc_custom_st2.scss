@@ -97,6 +97,11 @@
 		& + .btn_area.ty2 {
 			margin-top: var(--gap-5);
 		}
+		&.equal {
+			.hd_btn {
+				min-width: 192px;
+			}
+		}
 	}
 }
 
@@ -662,7 +667,6 @@
 			margin-top: var(--gap-8);
 		}
 	}
-
 
 	&_ty2 {
 		& + .btn_area {
