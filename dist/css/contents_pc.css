@@ -20,7 +20,7 @@ body {
 	display: block;
 	width: 100%;
 	height: 3rem;
-	font-size: 1.6rem;
+	font-size: var(--font-size-body-medium);
 	color: #ffffff;
 	text-align: center;
 	line-height: 3rem;
@@ -559,6 +559,7 @@ body {
 	min-width: 13.4rem;
 }
 .notification .form_list > li > .form_group_wrap {
+	display: block;
 	border-bottom: 1px solid var(--color-divider-gray-light);
 	padding-bottom: 4rem;
 }
@@ -1538,6 +1539,9 @@ body {
 .popup_wrap.popup_wrap_type3 .file_upload_wrap .file_info_box + .file_attach_box,
 .popup_wrap.popup_wrap_type4 .file_upload_wrap .file_info_box + .file_attach_box {
 	margin-top: var(--gap-5);
+}
+.popup_wrap .ag_group_wrap:not(.popup_wrap .ag_group_wrap:has(.ag_group_top, .ag_group_cont)) {
+	padding: var(--padding-8) var(--padding-7);
 }
 .title_sub + .img_area img {
 	margin: 0 auto;
@@ -3651,18 +3655,53 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	width: 100%;
 }
 .form_key_pc > input {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
+	min-width: 0;
+	height: calc(var(--size-height-8) - 0.2rem);
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-basic) !important;
+	text-align: center;
+	border: none;
+	background-color: var(--color-input-surface) !important;
+}
+.form_key_pc > input::-webkit-input-placeholder {
+	color: var(--color-text-disabled);
+	text-align: left;
+}
+.form_key_pc > input::-moz-placeholder {
+	color: var(--color-text-disabled);
+	text-align: left;
+}
+.form_key_pc > input:-ms-input-placeholder {
+	color: var(--color-text-disabled);
+	text-align: left;
+}
+.form_key_pc > input::-ms-input-placeholder {
+	color: var(--color-text-disabled);
+	text-align: left;
+}
+.form_key_pc > input::placeholder {
+	color: var(--color-text-disabled);
+	text-align: left;
+}
+.form_key_pc > input:-moz-read-only + span > input + label {
+	background-image: url(../images/icon/icon_keypad_on.png);
+}
+.form_key_pc > input:read-only + span > input + label {
+	background-image: url(../images/icon/icon_keypad_on.png);
 }
 .form_key_pc > span {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
 	display: block;
-	width: 2rem;
+	width: 4.8rem;
+	padding-left: 0.8rem;
 }
 .form_key_pc > span > input {
 	position: absolute;
@@ -3670,11 +3709,19 @@ body {
 }
 .form_key_pc > span > input + label {
 	display: block;
-	width: 2rem;
+	width: 100%;
 	height: 100%;
 	font-size: 0;
-	background-color: #ddd;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../images/icon/icon_keypad.png);
+	cursor: pointer;
 }
+/* 키패드 이미지 보정 */
+.kpd-group.number img {
+	max-width: none;
+}
+/* 키패드 이미지 보정 */
 /* breadcrumb */
 /* breadcrumb */
 .breadcrumb {
