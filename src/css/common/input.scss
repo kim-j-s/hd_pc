@@ -71,7 +71,7 @@
 		// height: var(--size-height-8);
 		height: calc(var(--size-height-8) - 2px);
 		padding: 3px 32px 3px 16px;
-		font-size: 16px;
+		font-size: var(--font-size-body-medium);
 		line-height: 24px;
 		appearance: none;               
 		box-sizing: border-box;
@@ -210,7 +210,7 @@
 				height: 54px;
 				width: 100%;
 				padding: 3px 16px;
-				font-size: 16px;
+				font-size: var(--font-size-body-medium);
 				line-height: 24px;
 				.file_name {
 					flex: 1;
@@ -288,18 +288,22 @@
 		}
 	}
 
+	// 카드번호 입력 필드
 	&.card {
+		gap: 8px;
+		padding: 0 calc(var(--padding-6) - 2px);
 		.comp_wrap_keypad_call {
-			.pin_area {
-				padding: 0;
-				&.default {
-					justify-content: center;
+			&.form_key_pc {
+				> input {
+					width: 59px;
 				}
 			}
 		}
 	}
+	// 카드번호 입력 필드
 
 	&.business {
+		gap: 8px;
 		.input_text {
 			flex: 1;
 			input {
@@ -310,7 +314,7 @@
 	}
 
 	.dash {
-		font-size: 16px;
+		font-size: var(--font-size-body-medium);
 	}
 
 	.input_text {
@@ -319,17 +323,14 @@
 		border: none;
 	}
 
-	/* comp_wrap 내부에서 보안키패드 호출 버튼 공통 사용요소 - 필요시 각 class별로 별도 설정 필요 */
-	.comp_wrap_keypad_call {
-		flex: 1 1 0;
-		.keypad_call {
-			display: block;
-			width: 100%;
-			&.active {
-				background-color: blue;
-			}
-		}
-	}
+	// comp_wrap 내부에서 보안키패드 호출 버튼 공통 사용요소 - 필요시 각 class별로 별도 설정 필요
+	// .comp_wrap_keypad_call {
+	// 	flex: 1 1 0;
+	// 	.keypad_call {
+	// 		display: block;
+	// 		width: 100%;
+	// 	}
+	// }
 
 	.input_text {
 		input {
@@ -354,11 +355,21 @@
 		padding: 3px;
 		display: flex;
 		align-items: center;
-		gap: 4px;
+		gap: 8px;
 		width: 100%;
 		& > .input_text {
-			width: calc(50% - 8px);
-			
+			// flex: none;
+			flex: 1 1 0;
+			// width: calc(50% - 8px);
+		}
+		& > .comp_wrap_keypad_call {
+			flex: none;
+			flex: 1 1 0;
+			// width: calc(50% - 8px);		
+			input {
+				flex: 1 1 0;
+				width: 0;
+			}	
 		}
 		input {
 			height: 48px;
@@ -385,7 +396,7 @@
 			.id_pass {
 				line-height: 48px;
 				width: 100%;
-				font-size: 16px;
+				font-size: var(--font-size-body-medium);
 				text-align: center;
 				background-color: var(--color-input-surface-disabled);
 				border-radius: 12px;
@@ -393,7 +404,7 @@
 			.id_pass2 {
 				line-height: 48px;
 				width: 100%;
-				font-size: 16px;
+				font-size: var(--font-size-body-medium);
 				text-align: center;
 				border-radius: 12px;
 			}
@@ -407,6 +418,14 @@
 			}
 		}
 	}
+
+	// 카드 비밀번호
+	&.card_pw {
+		padding-left: 12px;
+		padding-right: var(--padding-2);
+	}
+
+
 }
 
 // 금액
@@ -453,8 +472,8 @@
 }
 //카드
 .card {
-	padding: 0 16px;
 	width: 100%;
+	padding: 0 16px;
 	&.readonly,
 	&.disabled,
 	&.readonly .input_text,
@@ -463,6 +482,13 @@
 	&.disabled input {
 		background-color: var(--color-input-surface-disabled);
 	}
+
+	&.readonly .form_key_pc input,
+	&.disabled .form_key_pc input {
+		background-color: var(--color-input-surface-disabled) !important;
+	}
+
+
 	& > div {
 		flex: 1;
 	}
@@ -737,9 +763,9 @@
 				width: 100px;
 			}
 			&.fix_w_case02 {
-				margin-top: 0;
 				flex: none;
 				width: 100px;
+				margin-top: 0;
 			}
 		}
 
@@ -754,7 +780,9 @@
 		}
 
 		&.balance {
-			& > * { width: 50%;}
+			& > * { 
+				width: 50%;
+			}
 		}
 
 		& + .form_line {
@@ -832,7 +860,7 @@
 	}
 	&.rd_box {
 		padding: var(--padding-8) var(--padding-7);
-		border: var(--border-width-static-regular, 1px) solid var(--color-border-gray-light, #CDD1D5);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		border-radius: var(--radius-large2);
 	}
 }
