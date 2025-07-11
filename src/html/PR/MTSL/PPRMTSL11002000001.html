@@ -1,0 +1,128 @@
+{{#> layout/default page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">차량 정보</div>
+					<h2 class="p_title">
+						보험료를 계산 방법을 선택해주세요.
+					</h2>
+				</div>
+			</div>
+
+					
+			<div class="tab_wrap">
+				<div class="tab_wrap_list_ty1" role="tablist">
+					{{>cp/tab_btn tb-text="보유중인 자동차보험 갱신 <span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-id="ex01"}}
+					{{>cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-id="ex02"}}
+					{{>cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03" tb-active=true}}
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
+					tab inner 1
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanelex02">
+					tab inner 2
+				</div>
+				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex02">
+					<div class="title_item">
+						<div class="item">
+							<div class="title_h3 ct1">
+								<strong>최근 25일간 보험료를 계산한 내역이에요.</strong>
+							</div>
+							<p class="title_sub">
+								목록에서 선택해 이어서 진행할 수 있어요.
+							</p>
+						</div>
+					</div>
+
+					<div class="card_item_wrap">
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div role="button" class="card_link" tabindex="0">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">111너**11</div>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">설계일시</div>
+											<div class="cont">2020.01.01 00:00:00</div>
+										</li>
+										<li>
+											<div class="title">Step3</div>
+											<div class="cont">추가할인특약단계</div>
+										</li>
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">보험료</div>
+											<div class="cont">계산전</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div role="button" class="card_link" tabindex="0">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">111너**11</div>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">설계일시</div>
+											<div class="cont">2020.01.01 00:00:00</div>
+										</li>
+										<li>
+											<div class="title">Step3</div>
+											<div class="cont">추가할인특약단계</div>
+										</li>
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">보험료</div>
+											<div class="cont">계산전</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="no_list_area">
+						{{> cp/icon iconClass="exclamationSvg"}}
+						<p>최근 설계 내역이 없습니다.</p>
+					</div>
+				
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전"}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+ 
+{{/ layout/default }}
