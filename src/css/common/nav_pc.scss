@@ -163,7 +163,8 @@
 			> .item {
 				a {
 					display: block;
-					padding: var(--padding-3) var(--padding-5);
+					// padding: var(--padding-3) var(--padding-5);
+					padding: 2px var(--padding-5);
 					border-radius: var(--radius-small2);
 					transition: 0.3s;
 					> .text {
