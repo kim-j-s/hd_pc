@@ -154,12 +154,11 @@
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">카드사</div>
-									<div class="select_option_box">
-										<select name="" id="" title="카드사 선택" class="selectbox">
-											<option value="">카드사 선택</option>
-											<option value="">현대</option>
-											<option value="">우리</option>
-										</select>
+									<div class="select_item select_item_case01" role="button" tabindex="0" title="카드사 선택" onclick="openHDPopup(this,'card_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'card_select');">
+										<div class="select_item_inner">
+											<div class="si_item" data-placeholder="카드사 선택"></div>
+											<span class="si_stat">선택됨</span>
+										</div>
 									</div>
 									<!-- s: KB카드 선택 시 노출 -->
 									<div class="inp_checkbox">
@@ -383,11 +382,11 @@
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">은행</div>
-									<div class="select_option_box">
-										<select name="" id="" title="은행 선택" class="selectbox">
-											<option value="">은행 선택</option>
-											<option value="">우리</option>
-										</select>
+									<div class="select_item select_item_case01" role="button" tabindex="0" title="은행 선택" onclick="openHDPopup(this,'bank_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'bank_select');">
+										<div class="select_item_inner">
+											<div class="si_item" data-placeholder="은행 선택"></div>
+											<span class="si_stat">선택됨</span>
+										</div>
 									</div>
 								</div>
 								<div class="form_line">
@@ -439,11 +438,11 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">은행</div>
-							<div class="select_option_box">
-								<select name="" id="" title="은행 선택" class="selectbox">
-									<option value="">은행 선택</option>
-									<option value="">우리</option>
-								</select>
+							<div class="select_item select_item_case01" role="button" tabindex="0" title="은행 선택" onclick="openHDPopup(this,'bank_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'bank_select');">
+								<div class="select_item_inner">
+									<div class="si_item" data-placeholder="은행 선택"></div>
+									<span class="si_stat">선택됨</span>
+								</div>
 							</div>
 						</div>
 						<div class="form_line">
@@ -690,6 +689,441 @@
 				</div>
 			</div>
 		</div>
-		<!-- e: 현대카드 결제 혜택 안내 팝업 --><!-- e: popup area -->
+		<!-- e: 현대카드 결제 혜택 안내 팝업 -->
+		<!-- s: 은행/증권사 선택 팝업 -->
+		<div class="popup_wrap popup_wrap_type4" id="bank_select" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('bank_select');"></div>
+				<div class="popup_inner">
+					<div class="draggable" aria-hidden="true">
+						<div class="move"></div>
+					</div>
+					<div class="popup_head">
+						<div class="popup_head_title">은행 선택</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="tab_wrap">
+								<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">은행</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">증권사</button></div>
+								<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="은행선택탭" id="tabPanels01">
+									<ul class="select_list_ty_logo">
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_004"></i>국민은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_088"></i>신한은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_020"></i>우리은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_011"></i>농협은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_012"></i>지역농협</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_003"></i>기업은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_081"></i>KEB하나은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_005"></i>KEB하나은행<br />(구.외환은행)</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_027"></i>씨티은행(한미)</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_023"></i>SC은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_002"></i>산업은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_039"></i>경남은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_034"></i>광주은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_031"></i>대구은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_032"></i>부산은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_037"></i>전북은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_035"></i>제주은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_071"></i>우체국</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_007"></i>수협</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_045"></i>새마을금고</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_048"></i>신용협동조합</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_050"></i>상호저축은행</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_054"></i>HSBC</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_055"></i>도이치</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_089"></i>케이뱅크</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_090"></i>카카오뱅크</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_092"></i>토스뱅크</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_064"></i>산림조합중앙회</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_057"></i>JP모건</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+								<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="증권사선택탭" id="tabPanel02">
+									<ul class="select_list_ty_logo">
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_261"></i>교보증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_267"></i>대신증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_238"></i>대우증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_269"></i>동부증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_209"></i>동양증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_287"></i>메리츠증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_230"></i>미래에셋증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_290"></i>부국증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_240"></i>삼성증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_268"></i>솔로몬증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_291"></i>신영증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_278"></i>신한금융투자</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_247"></i>우리투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_280"></i>유진투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_265"></i>이트레이드증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_264"></i>키움증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_270"></i>하나대투증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_262"></i>하이투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_243"></i>한국투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_269"></i>한화증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_218"></i>현대증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_263"></i>HMC투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_292"></i>LIG투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_289"></i>NH농협증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_266"></i>SK증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_209"></i>유안타증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_218"></i>KB증권(구현대)</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_238"></i>미래에셋증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_247"></i>NH투자증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_278"></i>굿모닝신한증권</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_027"></i>씨티은행(한미)</span>
+											</button>
+										</li>
+										<li>
+											<button class="item">
+												<span class="text"><i class="hd_icon i_logo_054"></i>HSBC(홍콩상하이)</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('bank_select');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 은행/증권사 선택 팝업 -->
+
+		<!-- s: 카드사 선택 팝업 -->
+		<div class="popup_wrap popup_wrap_type3" id="card_select" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('card_select');"></div>
+				<div class="popup_inner">
+					<div class="draggable" aria-hidden="true">
+						<div class="move"></div>
+					</div>
+					<div class="popup_head">
+						<div class="popup_head_title">신용카드 선택</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<ul class="select_list_ty_card">
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_367"></i>현대카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_appcard">앱카드<span class="sr_only">사용가능</span></span>
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_365"></i>삼성카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_381"></i>국민카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_366"></i>신한카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_361"></i>BC카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_371"></i>농협카드</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_368"></i>롯데카드</span>
+										<span class="able_opt_wrap">
+											<span class="able_opt able_opt_point">포인트<span class="sr_only">사용가능</span></span>
+										</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_041"></i>우리카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_374"></i>하나카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_370"></i>씨티카드</span>
+									</button>
+								</li>
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_900"></i>IBK카드</span>
+									</button>
+								</li>
+
+								<li>
+									<button class="item">
+										<span class="text"><i class="hd_icon i_logo_000"></i>기타</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('card_select');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 카드사 선택 팝업 -->
+
+		<!-- e: popup area -->
 	</body>
 </html>

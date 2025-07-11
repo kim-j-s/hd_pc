@@ -108,7 +108,7 @@
 								<div class="form_line">
 									<div class="label_tit">나이</div>
 									<!-- s: 25-05-27 수정 -->
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="연령 선택 팝업 호출" onclick="openHDPopup(this,'select_option_ty1');">
+									<div class="select_item select_item_case01" role="button" tabindex="0" title="연령 선택 팝업 호출" onclick="openHDPopup(this,'select_option_ty1');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'select_option_ty1');">
 										<div class="select_item_inner">
 											<div class="si_item" data-placeholder="나이 선택"></div>
 											<span class="si_stat">선택됨</span>

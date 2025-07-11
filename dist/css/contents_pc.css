@@ -279,6 +279,9 @@ body {
 .btn_area.center + .btn_area.ty2 {
 	margin-top: var(--gap-5);
 }
+.btn_area.center.equal .hd_btn {
+	min-width: 19.2rem;
+}
 .btn_link {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 1 auto;
@@ -3556,7 +3559,8 @@ body {
 	border-radius: 2.4rem;
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white);
-	padding: var(--padding-8, 24px) var(--padding-7, 20px);
+	padding: var(--padding-8) var(--padding-7);
+	counter-reset: number 0;
 }
 .install_step .step_divider {
 	position: relative;
@@ -3568,6 +3572,8 @@ body {
 	width: 100%;
 	height: 1px;
 	background-color: var(--color-divider-gray-light);
+	position: absolute;
+	top: 50%;
 }
 .install_step .step_divider::after {
 	display: block;
@@ -3576,8 +3582,12 @@ body {
 	height: 3.2rem;
 	border: 1px solid var(--color-divider-gray-light);
 	margin: 0 auto;
-	border-radius: 999;
+	border-radius: 99.9rem;
 	background: var(--color-surface-white-subtle);
+	position: relative;
+	top: 0;
+	right: 0;
+	background: #ffffff url("../images/icon/arrowDown_ty4.svg") no-repeat center/1.6rem auto;
 }
 .install_img_box {
 	display: -webkit-box;
@@ -3593,7 +3603,11 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: var(--gap-8);
+	gap: var(--gap-5);
+}
+.install_img_box img {
+	max-width: 44rem;
+	border-radius: var(--radius-medium1);
 }
 .install_img_box .desc {
 	width: 100%;
@@ -3604,6 +3618,33 @@ body {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	margin-top: var(--gap-5);
+}
+.install_img_box::before {
+	display: none;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	border-radius: var(--radius-small2);
+	background: var(--color-element-gray);
+	color: #ffffff;
+	line-height: 2.4rem;
+	padding: 0 var(--gap-3);
+	font-size: var(--font-size-label-small);
+	counter-increment: number 1;
+	content: "STEP " counter(number);
+}
+.install_img_box:has(~ .install_img_box),
+.install_img_box ~ .install_img_box {
+	position: relative;
+}
+.install_img_box:has(~ .install_img_box)::before,
+.install_img_box ~ .install_img_box::before {
+	display: block;
+}
+.qr_code_box {
+	min-height: 9.6rem;
+	padding-right: 10rem;
+	background: url("../images/content/gu/install_qr.png") no-repeat right center/9.6rem auto;
 }
 /* PC용 component  */
 .form_key_pc {

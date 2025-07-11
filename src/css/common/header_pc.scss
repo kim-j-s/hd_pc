@@ -295,14 +295,10 @@
 	.header_pc {
 		&:not(.header_pc_nd) {
 			top: -48px;
-			// .hpi_top {
-			// 	padding-top: 0;
-			// 	height: 0;
-			// }
 		}
 	}
 	.nld_cont {
-		// top: 72px;
+		max-height: calc(100vh - 172px);
 	}
 }
 /* 스크를 이벤트 관련 css */
