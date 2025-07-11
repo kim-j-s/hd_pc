@@ -418,6 +418,14 @@
 			}
 		}
 	}
+
+	// 카드 비밀번호
+	&.card_pw {
+		padding-left: 12px;
+		padding-right: var(--padding-2);
+	}
+
+
 }
 
 // 금액

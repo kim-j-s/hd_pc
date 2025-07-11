@@ -19,7 +19,9 @@
 									<div class="form_group_wrap full">
 										<div class="form_line">
 											<div class="label_tit">법인카드 비밀번호 입력</div>
-											{{> cp/text placeholder="비밀번호 앞 2자리" minlength="2" maxlength="2" inp-title="법인카드 비밀번호 앞 2자리 입력" }}
+											<div class="comp_wrap card_pw">
+												{{> cp/keypad4 case1="비밀번호 앞 2자리" kt="법인카드 비밀번호 앞 2자리 입력" ktid="kp1" }}
+											</div>
 										</div>
 									</div>
 									<ul class="list_ty2">
