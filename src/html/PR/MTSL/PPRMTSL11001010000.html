@@ -1,0 +1,114 @@
+
+{{#> layout/default page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="자동차보험" }}
+	
+	<div id="container" class="container">
+		<div class="content content_st1">
+			<div class="prd_bi_wrap case1">
+				<div class="prd_bi_wrap_l">
+					<div class="pbw_inner pi_bg_ty3">
+						<div class="pi_top">
+							<h2 class="pt_title">
+								<small>자사 오프라인 대비 9.7% 저렴</small>
+								더 가벼운 <span class="bold">마음</span>으로<br>
+								가입하세요
+							</h2>
+							<div class="pt_btn_area">
+								<a href="javascript:void(0)" class="btn_link short_cut sm rd_box">
+									<span class="text">자세한 보장 내용이 궁금하다면</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="pi_bottom">
+							<h3 class="pb_title">내차 보험료 할인 받는 방법은?</h3>
+							<div class="pb_cont">
+								<div class="pb_details grid2">
+									<div class="pb_details_inner">
+										<div class="item item_ico_ty33">
+											<p class="item_exp">
+												커넥티드카 할인특약 <strong class="point">최대 7.1%</strong>
+												<small class="item_sub_txt">사고통보장치 장착 및 개통 시</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty34">
+											<p class="item_exp">
+												전방충돌 경고장치 할인 특약 <strong class="point">3.9%</strong>
+												<small class="item_sub_txt">장착 시</small>
+											</p>
+										</div>
+										<div class="item item_ico_ty35">
+											<p class="item_exp">
+												차선이탈 경고장치 할인 특약 <strong class="point">3.4%</strong>
+												<small class="item_sub_txt">장착 시</small>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="pbc_banners">
+									<div class="item">
+										<a href="#">
+											<img src="../../../images/event/banner4.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="prd_bi_wrap_r">
+					<div class="bi_wrap">
+						<div class="bi_wrap_header">
+							<h3 class="bi_wrap_tit">자동차 소유(예정)자 정보</h3>
+						</div>
+
+						<div class="bi_wrap_content">
+							<div class="form_group_wrap full">
+								<div class="form_line">
+									<div class="label_tit">이름</div>
+									{{> cp/text class="big" placeholder="이름을 입력하세요" inp-title="자동차 소유(예정)자 입력" }}
+								</div>
+								<div class="form_line">
+									<div class="label_tit">주민등록번호</div>
+									<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
+									<div class="comp_wrap birth active">
+										{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
+										<span class="dash">-</span>
+										{{> cp/keypad7 kp-class="big" case1=true kt="주민등록번호 뒤 7자리 입력"}}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 버튼 영역 -->
+						<div class="bottom_fix_wrap">
+							<div class="btn_area">
+								{{> cp/button type="1" size="1" b-text="내 보험료를 알아볼게요" disabled=true }}
+							</div>
+						</div>
+						<!-- e: 하단 버튼 영역 -->
+					</div>
+					<!-- s: 꼭 알아두세요 -->
+					{{#> cp/notice dp-active=true }}
+					<ul class="list_ty1">
+						<li>보험료 계산시 개인(신용)정보 동의 및 본인인증이 필요합니다.</li>
+						<li>가입 가능한 연령은 만 19세 이상입니다.</li>
+					</ul>
+					{{/ cp/notice }}
+					<!-- e: 꼭 알아두세요 -->
+				</div>
+			</div>
+		</div>
+			
+		<!-- s: aside 영역 -->
+		{{> layout/aside_pc }}
+		<!-- e: aside 영역 -->
+	</div>
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
