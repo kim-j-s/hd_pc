@@ -16,7 +16,7 @@
 	flex-direction: column;
 	height: 100%;
 	padding: 0 20px;
-	font-size: 16px;
+	font-size: var(--font-size-body-medium);
 	&_header {
 		flex: none;
 		h1 {
@@ -246,7 +246,7 @@
 						width: 100%;
 						min-height: 44px;
 						align-items: center;
-						font-size: 16px;
+						font-size: var(--font-size-body-medium);
 						line-height: 22px;
 						color: #1E2124;
 						word-break: break-all;

@@ -494,7 +494,7 @@
 						line-height: 24px;
 					}
 					.point {
-						// font-size: 16px;
+						// font-size: var(--font-size-body-medium);
 						// line-height: 24px;
 						font-size: var(--font-size-body-large);
 						&.sm {

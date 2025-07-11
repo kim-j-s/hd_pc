@@ -30,7 +30,7 @@
 	min-height: 694px;
 	padding: var(--padding-5) 24px 0;
 	padding-bottom: 1px;
-	font-size: 16px;
+	font-size: var(--font-size-body-medium);
 	overflow: hidden;
 
 	.bi_wrap_header {
@@ -826,7 +826,7 @@
 				background: #fff url(../images/content/bi/icon_del.svg) no-repeat center center;
 			}
 			&.keypad_btn_delall {
-				font-size: 16px;
+				font-size: var(--font-size-body-medium);
 			}
 		}
 

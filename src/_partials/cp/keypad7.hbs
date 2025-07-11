@@ -1,4 +1,13 @@
-<div class="comp_wrap_keypad_call form_key{{#if kp-class}} {{kp-class}}{{/if}}" role="button" tabindex="0" title="{{kt}}"{{#if disabled}} aria-disabled="true"{{/if}}>
+<div class="comp_wrap_keypad_call form_key_pc">
+	<input type="password" name="" id="" title="{{kt}}"{{#if case1}} placeholder="{{case1}}"{{/if}} maxlength="7">
+	<span>
+		<input type="checkbox" name="" id="{{ktid}}">
+		<label for="{{ktid}}">마우스입력기사용</label>
+	</span>
+</div>
+
+
+{{!-- <div class="comp_wrap_keypad_call form_key{{#if kp-class}} {{kp-class}}{{/if}}" role="button" tabindex="0" title="{{kt}}"{{#if disabled}} aria-disabled="true"{{/if}}>
 	<div class="pin_area{{#if case1}} default{{/if}}">
 		{{#if case1}}
 		뒷자리
@@ -23,4 +32,4 @@
 		{{/if}}
 		<input type="password" name="" id="" readonly="true" autocomplete="new-password" title="숫자 입력">
 	</div>
-</div>
+</div> --}}
