@@ -469,6 +469,7 @@
 	.form_list {
 		>li {
 			> .form_group_wrap {
+				display: block;
 				border-bottom: 1px solid var(--color-divider-gray-light);
 				padding-bottom: 40px;
 
