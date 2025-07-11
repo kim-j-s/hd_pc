@@ -13,6 +13,9 @@
 /* navigation */
 @import "common/nav_pc.scss";
 
+/* 전체메뉴 */
+@import "common/allmenu.scss";
+
 /* footer */
 @import "common/footer.scss";
 
