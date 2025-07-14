@@ -479,7 +479,7 @@
 		>li {
 			> .form_group_wrap {
 				display: block;
-				border-bottom: 1px solid var(--color-divider-gray-light);
+				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 				padding-bottom: 40px;
 
 				>.form_line {
@@ -819,7 +819,7 @@
 
 		&:has(dl:nth-of-type(2)) {
 			dl:nth-of-type(odd) {
-				border-right: 1px solid var(--color-divider-gray-light);
+				border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			}
 		}
 
@@ -977,7 +977,7 @@
 		
 		&.df_type_w_ty9 {//90 자동차 문서확인
 			padding-bottom: var(--gap-6);
-			border-bottom: 1px solid var(--color-divider-gray-light);
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			> dl {
 				&:nth-child(2n-1){
 					border-right: 0;
@@ -1041,7 +1041,7 @@
 						+ .card_list_ty1	{
 							display: flex;
 							flex-flow: row wrap;
-							border-top: 1px solid var(--color-divider-gray-light);
+							border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 							margin-top: var(--gap-5);
 							padding-top: 16px;
 	
@@ -1066,7 +1066,7 @@
 	
 								&:nth-child(2n-1){
 									padding-right: var(--gap-8);
-									border-right: 1px solid var(--color-divider-gray-light);
+									border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 								}
 								&:nth-child(2n) {
 									padding-left: var(--gap-8);
@@ -1542,10 +1542,13 @@
 .tag_item_wrap {
 	&.sticky {
 		position: sticky;
-		top:-16px;
+		top: -16px;
 		z-index: 10;
+		padding: 5px 0;
 		background-color: #fff;
-		padding:5px 0;
+	}
+	&.tag_item_wrap_po_etc1 {
+		top: 0;
 	}
 }
 .tag_item_move {
@@ -2279,7 +2282,7 @@
 
 			&:nth-child(2n-1){
 				padding-right: var(--gap-8);
-				border-right: 1px solid var(--color-divider-gray-light);
+				border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			}
 			&:nth-child(2n) {
 				padding-left: var(--gap-9);
@@ -2386,7 +2389,7 @@
 		content:'';
 		width: 1px;
 		height: calc(100% - 12px );
-		border-right: 1px solid var(--color-divider-gray-light);
+		border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		position: absolute;
 		left: 50%;
 	}
@@ -2427,7 +2430,7 @@
 			margin-top: 0;
 
 			&:nth-child(2n-1){
-				border-right: 1px solid var(--color-divider-gray-light);
+				border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 				padding-right: var(--gap-8);
 			}
 		}
