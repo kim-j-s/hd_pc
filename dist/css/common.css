@@ -1209,7 +1209,7 @@ strong {
 }
 .header_pc.header_pc_nd {
 	height: 7.2rem;
-	background-color: var(--color-element-primary);
+	background-color: var(--color-surface-primary);
 }
 .header_pc.header_pc_error {
 	height: 7.2rem;
@@ -1580,11 +1580,9 @@ strong {
 }
 .nld_cont .nld_cont_inner .nld_cont_top .nld_cont_top_btn > .text {
 	display: block;
-	padding: 0 2.8rem 0 0;
 	font-weight: 700;
 	font-size: var(--font-size-navigation-title-medium);
 	line-height: 4rem;
-	background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center/2.4rem auto;
 }
 .nld_cont .nld_cont_inner .nld_cont_top .nld_cont_top_btn.nld_cont_top_btn_ty1::before {
 	background-image: url(../images/header/icon_gnb_tit_ty1.png);
@@ -1798,6 +1796,76 @@ strong {
 .wrap:has(.nl_dept1 *:focus)::before {
 	opacity: 1;
 	visibility: visible;
+}
+/* 전체메뉴 */
+.all_menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: var(--color-background-white);
+}
+.am_header {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	text-align: center;
+	background-color: var(--color-surface-primary);
+}
+.am_header .am_header_inner {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 118.8rem;
+	padding: 2.1rem 0;
+}
+.am_content {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.am_content .amc_nav {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+.am_content .amc_nav .amc_nav_inner {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	gap: var(--gap-3);
+	width: 118.8rem;
+	padding: var(--padding-6, 16px) 0px var(--padding-8, 24px) 0px;
+}
+.am_content .amc_cont {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	overflow: auto;
+}
+.am_content .amc_cont .amc_cont_inner {
+	display: inline-block;
+	width: 118.8rem;
 }
 /* footer */
 /* Footer */
