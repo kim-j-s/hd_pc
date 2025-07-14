@@ -282,6 +282,9 @@ body {
 .btn_area.center.equal .hd_btn {
 	min-width: 19.2rem;
 }
+.btn_area.mg_ty1 {
+	margin: var(--gap-11);
+}
 .btn_link {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 1 auto;
@@ -447,6 +450,11 @@ body {
 .wrap .form_group_wrap .full .row_ty2 > div {
 	margin: 0;
 	width: calc(50% - 1.6rem);
+}
+.wrap .form_group_wrap .full .row_ty2.radio_group_wrap > div {
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
 }
 .wrap .form_group_wrap .c1 {
 	-ms-flex-preferred-size: 100%;

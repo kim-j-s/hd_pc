@@ -1269,6 +1269,9 @@
 	gap: 1.2rem;
 	width: 100%;
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner.discount_item_box {
+	padding: 0;
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item {
 	padding: var(--padding-3) 0 var(--padding-3) 4.4rem;
 	font-size: var(--font-size-body-small);
