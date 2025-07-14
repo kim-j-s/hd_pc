@@ -240,7 +240,7 @@
 			top: 0;
 			left: 20px;
 			width: calc(100% - 40px);
-			border-bottom: 1px solid var(--color-divider-gray-light);
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		}
 	}
 	& + &.active {
@@ -794,7 +794,7 @@
 						top: 50%;
 						left: -9px;
 						height: 12px;
-						border-left: 1px solid var(--color-divider-gray-light);
+						border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 						transform: translateY(-50%);
 					}
 				}

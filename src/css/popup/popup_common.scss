@@ -1,5 +1,6 @@
 /* Popup */
 .scroll_lock {
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -197,12 +198,8 @@
 				.pop_top {
 					&.sticky_fix {
 						padding: 0 var(--padding-8) var(--padding-6);
-						// padding: 16px 0;
 						margin: -16px -24px 0;
 						top: -16px;
-						.info_gray {
-							// margin:0 var(--padding-8);
-						}
 
 						& + * {
 							margin-top: -16px;
@@ -216,7 +213,6 @@
 			}
 
 			.popup_bottom {
-				// padding: var(--gap-4) var(--gap-layout-contents-margin) var(--gap-5) var(--gap-layout-contents-margin);
 				padding: var(--padding-5) var(--padding-8) var(--padding-6);
 
 				.bottom_fix_wrap {
