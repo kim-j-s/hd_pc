@@ -103,6 +103,9 @@
 			}
 		}
 	}
+	&.mg_ty1 {
+		margin: var(--gap-11);
+	}
 }
 
 .btn_link {
@@ -312,6 +315,11 @@
 				> div {
 					margin: 0;
 					width: calc(50% - 16px);
+				}
+				&.radio_group_wrap {
+					> div {
+						flex: auto;
+					}
 				}
 			}
 		}
