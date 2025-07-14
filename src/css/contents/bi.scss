@@ -1075,6 +1075,9 @@
 						grid-template-columns: repeat(2, 1fr);
 						gap: 12px;
 						width: 100%;
+						&.discount_item_box {
+							padding: 0;
+						}
 						.item {
 							padding: var(--padding-3) 0 var(--padding-3) 44px;
 							font-size: var(--font-size-body-small);
