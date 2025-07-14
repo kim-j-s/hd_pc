@@ -13,5 +13,10 @@
 			</ul>
 			{{/unless}}
 			{{> @partial-block }}
+			{{#unless no-pt}}
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			{{/unless}}
   </body>
 </html>
