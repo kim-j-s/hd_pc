@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -331,7 +331,6 @@
 																</li>
 															</ul>
 														</div>
-
 														<div class="nl_dept2">
 															<strong class="nl_dept2_tit">자동차보험 계약변경</strong>
 															<ul class="nl_dept2_list">
@@ -353,7 +352,6 @@
 															</ul>
 														</div>
 													</li>
-
 													<li>
 														<div class="nl_dept2">
 															<strong class="nl_dept2_tit">장기보험계약변경</strong>
@@ -387,7 +385,6 @@
 															</ul>
 														</div>
 													</li>
-
 													<li>
 														<div class="nl_dept2">
 															<strong class="nl_dept2_tit">보험증명서 발급</strong>
@@ -428,7 +425,6 @@
 															</ul>
 														</div>
 													</li>
-
 													<li>
 														<div class="nl_dept2">
 															<strong class="nl_dept2_tit">대출</strong>
@@ -803,763 +799,450 @@
 								<button type="button" class="hus_btn hsu_search"><span class="text">메뉴검색 팝업 열기</span></button>
 							</div>
 							<div class="item">
-								<button type="button" class="hus_btn hsu_menu_all"><span class="text">전체메뉴 보기</span></button>
-								<div class="all_menu">
-									<div class="am_header">
-										<div class="am_header_inner">
-											<h2 class="am_header_title">
-												<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
-											</h2>
-										</div>
-									</div>
-									<div class="am_content">
-										<div class="amc_nav">
-											<div class="amc_nav_inner">
-												<a href=""><span class="text">보험가입</span></a>
-												<a href=""><span class="text">계약관리</span></a>
-												<a href=""><span class="text">보상/청구</span></a>
-												<a href=""><span class="text">혜택/서비스</span></a>
-												<a href=""><span class="text">고객지원</span></a>
+								<button type="button" id="all_menu_open" class="hus_btn hsu_menu_all" onclick="openHDPopup(this,'all_menu');"><span class="text">전체메뉴 보기</span></button>
+								<div id="all_menu" class="all_menu event_pop_ele">
+									<div class="event_pop_ele_inner">
+										<div class="am_header">
+											<div class="am_header_inner">
+												<h2 class="am_header_title">
+													<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
+												</h2>
 											</div>
 										</div>
-										<div class="amc_cont">
-											<div class="amc_cont_inner">
-												<ul class="nav_list nav_list_am_type">
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty1"><span class="text">보험가입</span></a>
+										<div class="am_content">
+											<div class="am_content_inner">
+												<div class="amc_nav">
+													<div class="tag_item_wrap am_tag_item_wrap">
+														<a href="#a1" class="tag_item size_l c_ty02 active"><span class="text">보험가입</span></a>
+														<a href="#a2" class="tag_item size_l c_ty02"><span class="text">계약관리</span></a>
+														<a href="#a3" class="tag_item size_l c_ty02"><span class="text">보상/청구</span></a>
+														<a href="#a4" class="tag_item size_l c_ty02"><span class="text">혜택/서비스</span></a>
+														<a href="#a5" class="tag_item size_l c_ty02"><span class="text">고객지원</span></a>
+														<a href="#a6" class="tag_item size_l c_ty02"><span class="text">로그인/인증센터</span></a>
+													</div>
+												</div>
+												<div class="amc_cont">
+													<div class="amc_cont_left">
+														<ul class="nav_list nav_list_am_type">
+															<li class="nl_dept1" id="a1">
+																<div class="nld_cont">
+																	<div class="nld_cont_inner">
+																		<div class="nld_cont_top">
+																			<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty1"><span class="text">보험가입</span></a>
+																		</div>
+																		<div class="nld_cont_body">
+																			<ul class="nld_cont_body_list">
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">자동차</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">자동차보험(개인)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">자동차보험(법인)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">이륜차보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">타임쉐어 자동차보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">영업용 자동차보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">자동차 할인특약</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">ECO마일리지특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">커넥티드카할인특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">스마트안전운전(UBI)할인특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">첨단안전장치할인특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">효도하는자녀할인특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">블랙박스할인특약</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">걸음수할인특약</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">운전자</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">운전자보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">오토바이운전자보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">펫</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">우리펫보험(강아지)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">우리펫보험(고양이)</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">재산/화재</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">주택화재상해보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">사업장화재보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">풍수해·지진재해보험(주택용)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">풍수해·지진재해보험(소상공인)</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">어린이</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">어린이보험(0~15세)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">어린이보험(태아)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">어린이치아보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit"></strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">해외여행보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">해외장기체류보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">국내여행보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">골프보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">연금/저축</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">연금보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">저축보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">건강</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">건강보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">암보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">실손의료비보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">실손의료비보험(계약전환용)</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">전화가입상품</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">자동차보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">운전자보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">종합건강보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">어린이보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">암보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">치아보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">유병자건강보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">행복가득생활보장보험</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">굿앤굿우리펫보험</span></a>
+																							</li>
+																						</ul>
+																					</div>
+
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">보험진단</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">내 보험 진단받기</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
 																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">자동차</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차보험(개인)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">자동차보험(법인)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">이륜차보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">타임쉐어 자동차보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">영업용 자동차보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
+															</li>
 
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">자동차 할인특약</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">ECO마일리지특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">커넥티드카할인특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">스마트안전운전(UBI)할인특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">첨단안전장치할인특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">효도하는자녀할인특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">블랙박스할인특약</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">걸음수할인특약</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">운전자</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">운전자보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">오토바이운전자보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">펫</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">우리펫보험(강아지)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">우리펫보험(고양이)</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">재산/화재</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">주택화재상해보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">사업장화재보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">풍수해·지진재해보험(주택용)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">풍수해·지진재해보험(소상공인)</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">어린이</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">어린이보험(0~15세)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">어린이보험(태아)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">어린이치아보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit"></strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">해외여행보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">해외장기체류보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">국내여행보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">골프보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">연금/저축</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">연금보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">저축보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">건강</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">건강보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">암보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">실손의료비보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">실손의료비보험(계약전환용)</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">전화가입상품</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">운전자보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">종합건강보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">어린이보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">암보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">치아보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">유병자건강보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">행복가득생활보장보험</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">굿앤굿우리펫보험</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험진단</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">내 보험 진단받기</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
+															<li class="nl_dept1" id="a2">
+																<div class="nld_cont">
+																	<div class="nld_cont_inner">
+																		<div class="nld_cont_top">
+																			<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty2"><span class="text">계약관리</span></a>
+																		</div>
+																		<div class="nld_cont_body">
+																			<ul class="nld_cont_body_list">
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">보험계약 확인</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">계약조회</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">자동차보험 계약변경</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">자동차정보 변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">운전자정보 변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">담복/특약 변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">계약취소/해지</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">계약체결 전자서명</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">장기보험계약변경</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">자동이체 신청/변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">보험료 납입</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">환급금 지급계좌 신청/변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">계약해지</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">청약철회</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">일반보험계약변경</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">해외여행보험 기간연장</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">계약취소</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">보험증명서 발급</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">보험증권</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">모바일증권카드(자동차)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">소득공제용 보험료납입증명서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">손비처리용 보험료납입증명서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">자동차보험 가입증명서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 가입증명서(영문)</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">보험금지급 내역서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">보험계약대출 증명서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">적용요율등급 확인서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">교통사고 피해 확인서</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 영문 무사고증명서</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">대출</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">보험계약대출 신청</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">보험계약대출 상환</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">이자납입계좌 변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">보험계약대출 거래내역 조회</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">아파트담보대출 신청</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#" target="_blank" title="새창열림"><span class="text">임대아파트보증금담보대출 신청</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">고객정보 변경</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">내 정보 확인/변경</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">마케팅정보 활용동의/철회</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
 																</div>
-															</div>
-														</div>
-													</li>
+															</li>
 
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty2"><span class="text">계약관리</span></a>
+															<li class="nl_dept1" id="a6">
+																<div class="nld_cont">
+																	<div class="nld_cont_inner">
+																		<div class="nld_cont_top">
+																			<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty6"><span class="text">로그인/인증센터</span></a>
+																		</div>
+																		<div class="nld_cont_body">
+																			<ul class="nld_cont_body_list">
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">로그인</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">로그인</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">회원가입</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+
+																				<li>
+																					<div class="nl_dept2">
+																						<strong class="nl_dept2_tit">인증센터</strong>
+																						<ul class="nl_dept2_list">
+																							<li class="item">
+																								<a href="#"><span class="text">간편인증번호 등록/관리</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">금융인증서 등록/관리</span></a>
+																							</li>
+																							<li class="item">
+																								<a href="#"><span class="text">공동인증서 등록/관리</span></a>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
 																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험계약 확인</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">계약조회</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">자동차보험 계약변경</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차정보 변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">운전자정보 변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">담복/특약 변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">계약취소/해지</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">계약체결 전자서명</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">장기보험계약변경</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동이체 신청/변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보험료 납입</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">환급금 지급계좌 신청/변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">계약해지</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">청약철회</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">일반보험계약변경</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">해외여행보험 기간연장</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">계약취소</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험증명서 발급</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">보험증권</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">모바일증권카드(자동차)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">소득공제용 보험료납입증명서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">손비처리용 보험료납입증명서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">자동차보험 가입증명서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 가입증명서(영문)</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보험금지급 내역서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보험계약대출 증명서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">적용요율등급 확인서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">교통사고 피해 확인서</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 영문 무사고증명서</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">대출</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">보험계약대출 신청</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보험계약대출 상환</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">이자납입계좌 변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보험계약대출 거래내역 조회</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">아파트담보대출 신청</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">임대아파트보증금담보대출 신청</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">고객정보 변경</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">내 정보 확인/변경</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">마케팅정보 활용동의/철회</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty3"><span class="text">보상/청구</span></a>
-																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">사고접수</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차 사고 접수 안내/신청</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">고장출동</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차 고장출동 안내/신청</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">사고처리</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">자동차 사고처리 현황</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">과실비율</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">나의 과실비율 알아보기</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험금 청구</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">병원비 청구</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">휴대품손해 청구</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">재물/배상책임 청구</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">펫보험 청구</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#" target="_blank" title="새창열림"><span class="text">풍수해·지진재해보험청구</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">질병/상해/단체보험</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">질병/상해/단체보험 처리현황</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">재물/배상/휴대품</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">재물/배상/휴대품 처리현황</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty4"><span class="text">혜택/서비스</span></a>
-																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">카드혜택</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">결제혜택</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">포인트</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">무이자할부</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">제휴혜택</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">오토오아시스</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">스피드메이트</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">우수정비서비스</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">차방정</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험할인혜택</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">걷기할인</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">대중교통할인</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">이벤트</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">진행중인 이벤트</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">당첨자 확인</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">따뜻한 나눔</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">기부하기</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">기부결과</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보험팁</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">보험팁</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty5"><span class="text">고객지원</span></a>
-																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">상담신청</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">전화 상담 안내</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">챗봇 상담 신청</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">이메일 상담신청</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">알려드립니다</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">공지사항</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">다이렉트TV</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">고객의 소리</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">보험가입 리뷰</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">홈페이지 이용약관</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">온라인 플랫폼 서비스 이용약관</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">전자금융거래표준약관</span></a>
-																					</li>
-																				</ul>
-																			</div>
-
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">개인정보보호</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">개인정보처리방침</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">신용정보활용체제</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">고객권리안내문</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">전자금융거래 유의사항</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">상담직원 채용</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">채용공고</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">인사제도 안내</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">지원서 수정/확인</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">FAQ</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">입사지원</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">보안프로그램 설치안내</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">통합설치</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">공동인증</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">키보드 보안/방화벽</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">보안녹색인증창(EV-SSL)</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-
-													<li class="nl_dept1">
-														<div class="nld_cont">
-															<div class="nld_cont_inner">
-																<div class="nld_cont_top">
-																	<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty6"><span class="text">로그인/인증센터</span></a>
-																</div>
-																<div class="nld_cont_body">
-																	<ul class="nld_cont_body_list">
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">로그인</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">로그인</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">회원가입</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-
-																		<li>
-																			<div class="nl_dept2">
-																				<strong class="nl_dept2_tit">인증센터</strong>
-																				<ul class="nl_dept2_list">
-																					<li class="item">
-																						<a href="#"><span class="text">간편인증번호 등록/관리</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">금융인증서 등록/관리</span></a>
-																					</li>
-																					<li class="item">
-																						<a href="#"><span class="text">공동인증서 등록/관리</span></a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-												</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="amc_cont_right"></div>
+												</div>
 											</div>
 										</div>
+										<button type="button" class="popup_close" onclick="closeHDPopup('all_menu');"><span class="blind">팝업 닫기</span></button>
 									</div>
 								</div>
 							</div>
@@ -1851,9 +1534,6 @@
 			</div>
 
 			<!-- footer -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
 			<div id="footer" class="footer">
 				<div class="inner">
 					<div class="footer_top">
@@ -2181,5 +1861,9 @@
 		<!-- e: 문자등록 조회실패 -->
 		<!-- e: 25-05-19 -->
 		<!-- e: popup area -->
+
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+		</div>
 	</body>
 </html>

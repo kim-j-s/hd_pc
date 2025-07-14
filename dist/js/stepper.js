@@ -146,11 +146,11 @@ const $stepper = {
 			_targetArea = $(document);
 		}
 		
-		$(_targetArea).find('.opts_area_item input[type="radio"]').on('change', (e) => {
-			const _target = $(e.target);
+		$(_targetArea).find('.opts_area_item .opts_area_btn').on('click', (e) => {
+			const _target = $(e.currentTarget);
 			const _stepIdx = _target.closest('.opts_area').index();
-			const _selectedText = _target.next('label').find('.label_cont').text().trim();
-
+			const _selectedText = _target.find('span').text().trim();
+			
 			$stepper.setButtonText(_stepIdx, _selectedText);
 			
 			if(typeof $stepper.fnCallback == 'function') {

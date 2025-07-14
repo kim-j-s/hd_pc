@@ -2,6 +2,7 @@
 /* popup_common */
 /* Popup */
 .scroll_lock {
+	height: 100%;
 	overflow: hidden;
 }
 .popup_wrap {
