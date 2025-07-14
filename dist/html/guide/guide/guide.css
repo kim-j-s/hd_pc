@@ -6,7 +6,7 @@
 	height: auto;
 	overflow: initial;
 	padding: 2rem 2.4rem 10rem 2.4rem;
-	font-size: 1.6rem;
+	font-size: var(--font-size-body-medium);
 }
 /* .guide_wrap {
 	padding: 20px 20px 100px 20px;
@@ -72,7 +72,7 @@
 	margin: 1.6rem 0 1rem 0;
 	/* padding-left: 12px; */
 	padding-bottom: 1rem;
-	font-size: 1.6rem;
+	font-size: var(--font-size-body-medium);
 	line-height: 2.4rem;
 	border-bottom: 1px solid #000;
 }
@@ -112,7 +112,7 @@
 }
 
 .guide_text_smp {
-	font-size: 1.6rem;
+	font-size: var(--font-size-body-medium);
 	line-height: 2.4rem;
 }
 

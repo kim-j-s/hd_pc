@@ -819,7 +819,6 @@ a:focus,
 button:focus,
 select:focus,
 .select_item:focus,
-div:focus,
 input:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);

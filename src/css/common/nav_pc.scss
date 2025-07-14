@@ -55,7 +55,7 @@
 	.nld_cont_inner {
 		display: inline-block;
 		width: 1188px;
-		padding: var(--gap-8) 0px var(--gap-12) 0px;
+		padding: var(--gap-8) 0px;
 		text-align: left;		
 		.nld_cont_top {
 			display: flex;
@@ -78,11 +78,11 @@
 
 				> .text {
 					display: block;
-					padding: 0 28px 0 0;
+					// padding: 0 28px 0 0;
 					font-weight: 700;
 					font-size: var(--font-size-navigation-title-medium);
 					line-height: 40px;
-					background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center / 24px auto;
+					// background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center / 24px auto;
 				}
 				&.nld_cont_top_btn_ty1 {
 					&::before {
@@ -129,7 +129,6 @@
 		> li {
 			flex: none;
 			position: relative;
-			// width: 246px;
 			+ li {
 				padding-left: 49px;
 				&::before {
@@ -149,9 +148,9 @@
 				display: block;
 				padding: 0 var(--padding-5);
 				font-weight: 700;
-				font-size: var(--font-size-heading-xxsmall);
+				font-size: var(--font-size-heading-xsmall);
 				+ .nl_dept2_list {
-					padding-top: var(--gap-3);
+					padding-top: var(--gap-2);
 				}
 			}
 			& + .nl_dept2 {
@@ -163,12 +162,13 @@
 			> .item {
 				a {
 					display: block;
-					padding: var(--padding-3) var(--padding-5);
+					padding: var(--padding-2) var(--padding-5);
 					border-radius: var(--radius-small2);
 					transition: 0.3s;
 					> .text {
 						display: inline-block;
-						font-size: var(--font-size-navigation-depth-medium);
+						font-size: var(--font-size-navigation-depth-small);
+						color: var(--color-text-subtle);
 						background-repeat: no-repeat;
 						background-position: right center;
 					}
@@ -230,19 +230,19 @@
 
 /* 즐겨찾기 */
 .nrs_wrap {
-	padding: var(--padding-9) 0 0 var(--padding-10);
+	padding: var(--padding-8) 0 0 var(--padding-10);
 	.nrs_wrap_inner {
 		display: flex;
 		align-items: center;
 		gap: 0 var(--gap-8);
-		padding: var(--padding-8, 24px) var(--padding-7, 20px);
+		padding: var(--padding-6) var(--padding-7);
 		border-radius: var(--radius-large2);
 		background-color: var(--color-surface-secondary-subtler);
 		> .nrs_wrap_title {
 			flex: none;
 			font-weight: 700;
 			color: var(--color-text-subtle);
-			font-size: var(--font-size-heading-xsmall);
+			font-size: var(--font-size-heading-xxsmall);
 		}
 	}
 }
@@ -258,7 +258,7 @@
 		display: inline-flex;
 		align-items: center;
 		border-radius: var(--radius-medium1);
-		background-color: var(--color-action-white);
+		background-color: var(--color-element-inverse-static);
 	}
 	.item_name {
 		display: block;
