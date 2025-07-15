@@ -171,6 +171,12 @@
 						margin-top: var(--gap-8);
 					}
 				}
+				& > .text_sub {
+					font-size: var(--font-size-body-small);
+					& + .label_tit {
+						margin-top: var(--gap-3);
+					}
+				}
 			}
 
 			& + .form_group_wrap {
@@ -578,6 +584,7 @@ ul + .form_group_wrap {
 .pro_info_wrap {
 
 	.pro_info_item {
+		width: 100%;
 		+ .pro_info_item {
 			margin-top: calc(var(--gap-7) + 1px);
 			padding-top: var(--gap-7);

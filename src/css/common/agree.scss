@@ -81,7 +81,8 @@
 .ag_groups {
 
 	.ag_groups_top {
-		padding: 20px;
+		//padding: 20px;
+		padding: var(--padding-8) 20px;
 		border-radius: var(--radius-large2);
 		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		+ .ag_group_wrap {
@@ -114,6 +115,9 @@
 	.ag_group_cont {
 		padding: var(--gap-5) 0 var(--padding-8);
 		.info_gray {
+			&:first-child {
+				margin-top: 0;
+			}
 			&.agc_tig {
 				background-color: var(--color-input-surface-disabled);
 			}
@@ -210,11 +214,13 @@
 					top: 9px;
 					left: 0;
 					width: 2px;
-					border-radius: 50pc;
-					border-bottom: 1px solid #6D7882;
+					height: 2px;
+					border-radius: 50%;
+					background-color: var(--color-divider-gray-dark);
 				}
 				+ li {
-					margin-top: var(--gap-4);
+					//margin-top: var(--gap-4);
+					margin-top: var(--gap-5);
 				}
 				.agrdo_group {
 					display: flex;
@@ -226,6 +232,9 @@
 						// .radio_group_wrap {
 						// 	justify-content: end;
 						// }
+						.radio_group_wrap {
+							gap: var(--gap-3);
+						}
 					}
 				}
 			}

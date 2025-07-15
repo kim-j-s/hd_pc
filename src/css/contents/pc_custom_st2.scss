@@ -779,6 +779,9 @@
 	& + .form_box {
 		margin-top: var(--gap-8);
 	}
+	& + .table_wrap {
+		margin-top: var(--gap-7);
+	}
 
 	& + .banner_box {
 		margin-top: var(--gap-5);
@@ -790,6 +793,15 @@
 		}
 	}
 
+	&:has(.form_group_wrap) {
+		padding: 32px var(--padding-card-small);
+		.form_group_wrap {
+			justify-content: center;
+			.comp_wrap {
+				background: var(--color-background-white);
+			}
+		}
+	}
 	/* 
 	df_type 
 	레이아웃 구조 변경 클래스
@@ -1004,6 +1016,11 @@
 									width: 100%;
 									margin-top: var(--gap-4);
 									padding: 0;
+									.point {
+										&.sm {
+											font-size: var(--font-size-body-small);
+										}
+									}
 								}
 							}
 						}
@@ -1764,14 +1781,6 @@
 	}//opt_case5
 }
 
-.popup_content_top {
-	&.txt_center {
-		.status_icon {
-			margin-bottom: var(--gap-5)
-		}
-	}
-}
-
 
 .search_reult_list_container {
 	&.no_tab {
@@ -1885,22 +1894,6 @@
 	}
 }
 
-.popup_content {
-	.bg_top_cover {
-		margin: 0;
-		padding: 0;
-		background: transparent;
-		.info_gray {
-			& + .form_group_wrap {
-				margin-top: var(--gap-5);
-			}
-		}
-		& + .opt_select_list {
-			margin-top: var(--gap-8);
-		}
-	}
-}
-
 .fc_img_wrap {
 	.img {
 		margin: auto;
@@ -1928,11 +1921,46 @@
 
 .comp_wrap {
 	&.birth {
+		gap: 8px;
 		.form_key {
 			.pin_area {
 				height: var(--size-height-7);
 			}
 		}
+		& > .input_text {
+			// flex: none;
+			flex: 1 1 0;
+			// width: calc(50% - 8px);
+		}
+		& > .comp_wrap_keypad_call {
+			flex: none;
+			flex: 1 1 0;
+			// width: calc(50% - 8px);		
+			input {
+				flex: 1 1 0;
+				width: 0;
+			}	
+		}
+	}
+	&.card {
+		gap: 8px;
+		padding: 0 calc(var(--padding-6) - 2px);
+		.comp_wrap_keypad_call {
+			flex: 1;
+			&.form_key_pc {
+				> input {
+					width: 59px;
+				}
+			}
+		}
+	}
+	&.business {
+		gap: 8px;
+	}
+	// 카드 비밀번호
+	&.card_pw {
+		padding-left: 12px;
+		padding-right: var(--padding-2);
 	}
 }
 
@@ -1976,6 +2004,15 @@
 
 	.item_btn_wrap {
 		justify-content: center;
+	}
+	//.card_item.donation - small케이스
+	&.small {
+		//이벤트 종료 케이스(samll)
+		&.end {
+			img {
+				filter: grayscale(50%);
+			}
+		}
 	}
 }
 
@@ -2369,99 +2406,13 @@
 	}
 }
 
-
-
-
-
-//popup
-
-.popup_wrap {
-
-	&.popup_wrap_type3,
-	&.popup_wrap_type4  {
-		.popup_head:not( div.popup_head_title) {
-			+ .popup_cont {
-				padding-top: 0;
-			}
-		}
-		.file_upload_wrap {
-			.file_attach_box {
-				display: block;
-				margin: 0 auto;
-			}
-
-			.file_info_box {
-				& + .file_attach_box {
-					margin-top: var(--gap-5);
-				}
-			}
-		}
-	}
-	// Button
-	&:has(.hd_btn){
-		.btn_area:not(.basic) {
-			.btn_link,
-			.hd_btn {
-				flex: 1;
-			}
-		}
-	}
-	
-	//팝업 탭 스티키일 경우
-	.sticky_fix {
-		z-index: 11;
-	}
-
-	.popup_container {
-		.popup_inner {
-			.popup_cont {
-				// 직업검색
-				&.search_list_type2 {
-					padding-top: 0;
-
-					.tab_wrap {
-						.tab_wrap_list_ty1.sticky_fix {
-							top: 0;
-						}
-					}
-				}
-
-				.tab_wrap {
-					.tab_wrap_list_ty1.sticky_fix,
-					.tab_scroll_box_ty1.sticky_fix {
-						top: -16px;
-					}
-				}
-			}
-		}
-	}
-	// 변경할 가입조건 선택 팝업
-	p.bpop_sub_title {
-		font-size: var(--font-size-body-medium);
+.process_info_area {	
+	&.ico_type {
 		& + .form_group_wrap {
-			margin-top: 16px;
+			margin-top: var(--gap-11);
 		}
 	}
-
-	.form_group_wrap + .title_h4 {
-		margin: 40px 0 16px;
-	}
-	// 큰글씨 없는 약관 Case(border있는)
-	.ag_group_wrap {
-		&:not(&:has(.ag_group_top, .ag_group_cont)){
-			padding: var(--padding-8) var(--padding-7);
-		}
-	}
-	.popup_container{
-		.popup_inner {
-			.popup_cont {
-				.pop_top {
-					&.sticky_fix {
-						margin: 0 -24px;
-						top: 0;
-					}
-				}
-			}
-		}
-	} 
 }
+
+
+
