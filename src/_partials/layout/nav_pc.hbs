@@ -1,6 +1,6 @@
-<ul class="nav_list{{#if am_mode}} nav_list_am_type{{/if}}">
+<ul class="nav_list{{#if am_mode}} nav_list_am_type tag_item_move flex_poistion{{/if}}"{{#if am_mode}} data-tib-get="all_menu"{{/if}}>
 	{{!-- 보험가입 --}}
-	<li class="nl_dept1"{{#if am_mode}} id="a1"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link{{#if excase}} active{{/if}}"><span class="text">보험가입</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -176,28 +176,28 @@
 										<a href="#"{{#if excase}} class="active"{{/if}}><span class="text">자동차보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">운전자보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">운전자보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">종합건강보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">종합건강보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">어린이보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">어린이보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#"{{#if excase}} class="active"{{/if}} target="_blank" title="새창열림"><span class="text">암보험</span></a>
+										<a href="#" class="ex_con{{#if excase}} active{{/if}}" target="_blank" title="새창열림"><span class="text">암보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">치아보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">치아보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">유병자건강보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">유병자건강보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">행복가득생활보장보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">행복가득생활보장보험</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">굿앤굿우리펫보험</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">굿앤굿우리펫보험</span></a>
 									</li>
 								</ul>
 							</div>
@@ -225,7 +225,7 @@
 	{{!-- 보험가입 --}}
 	
 	{{!-- 계약관리 --}}
-	<li class="nl_dept1"{{#if am_mode}} id="a2"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">계약관리</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -305,7 +305,7 @@
 										<a href="#"><span class="text">보험증권</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">모바일증권카드(자동차)</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">모바일증권카드(자동차)</span></a>
 									</li>
 									<li class="item">
 										<a href="#"><span class="text">소득공제용 보험료납입증명서</span></a>
@@ -317,7 +317,7 @@
 										<a href="#"><span class="text">자동차보험 가입증명서</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 가입증명서(영문)</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">자동차보험 가입증명서(영문)</span></a>
 									</li>
 									<li class="item">
 										<a href="#"><span class="text">보험금지급 내역서</span></a>
@@ -326,13 +326,13 @@
 										<a href="#"><span class="text">보험계약대출 증명서</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">적용요율등급 확인서</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">적용요율등급 확인서</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">교통사고 피해 확인서</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">교통사고 피해 확인서</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">자동차보험 영문 무사고증명서</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">자동차보험 영문 무사고증명서</span></a>
 									</li>
 								</ul>
 							</div>							
@@ -354,10 +354,10 @@
 										<a href="#"><span class="text">보험계약대출 거래내역 조회</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">아파트담보대출 신청</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">아파트담보대출 신청</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">임대아파트보증금담보대출 신청</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">임대아파트보증금담보대출 신청</span></a>
 									</li>
 								</ul>
 							</div>
@@ -387,7 +387,7 @@
 
 	{{!-- 보상/청구 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1"{{#if am_mode}} id="a3"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">보상/청구</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -432,7 +432,7 @@
 								<strong class="nl_dept2_tit">과실비율</strong>
 								<ul class="nl_dept2_list">
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">나의 과실비율 알아보기</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">나의 과실비율 알아보기</span></a>
 									</li>
 								</ul>
 							</div>
@@ -444,19 +444,19 @@
 								<strong class="nl_dept2_tit">보험금 청구</strong>
 								<ul class="nl_dept2_list">
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">병원비 청구</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">병원비 청구</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">휴대품손해 청구</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">휴대품손해 청구</span></a>
 									</li>
 									<li class="item">
 										<a href="#"><span class="text">재물/배상책임 청구</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">펫보험 청구</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">펫보험 청구</span></a>
 									</li>
 									<li class="item">
-										<a href="#" target="_blank" title="새창열림"><span class="text">풍수해·지진재해보험청구</span></a>
+										<a href="#" class="ex_con" target="_blank" title="새창열림"><span class="text">풍수해·지진재해보험청구</span></a>
 									</li>
 								</ul>
 							</div>
@@ -496,7 +496,7 @@
 
 	{{!-- 혜택/서비스 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1"{{#if am_mode}} id="a4"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">혜택/서비스</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -607,7 +607,7 @@
 
 	{{!-- 고객지원 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1"{{#if am_mode}} id="a5"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">고객지원</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -742,7 +742,7 @@
 
 	{{!-- 로그인 --}}
 	{{#if am_mode}}
-	<li class="nl_dept1"{{#if am_mode}} id="a6"{{/if}}>
+	<li class="nl_dept1{{#if am_mode}} tag_move{{/if}}">
 		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">로그인</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
@@ -790,8 +790,4 @@
 	</li>
 	{{/if}}
 	{{!-- 로그인 --}}
-
-	
-
-
 </ul>

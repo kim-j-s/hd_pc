@@ -77,10 +77,13 @@
 		const $this = $(this);
 		const idx = $this.index();
 		const positionVal = null;
+		const $thisData = $this.closest('.tag_item_wrap').data('tib') ;
+		console.log('이벤트 idex : ' + idx + ' : ' + $thisData);
 
-		if($('.tag_item_move').length){
+		if($('.tag_item_move').length) {
 			const $target = $('.tag_item_move').find('.tag_move').eq(idx);
 			const targetPadding = parseFloat($target.css('padding-top'));
+			const targetMarginTop = parseFloat($target.css('margin-top'));
 			// const simpleHeight = $('.simple_info_wrap').height();
 			// const targetOffset = $target.position().top;
 			let summaryHeight = 0,
@@ -88,7 +91,7 @@
 			const targetOffset = $target.position().top;
 			const fix_h = $(this).closest('.sticky').height();
 			
-			// console.log($target + ' : ' + targetOffset);
+			console.log($target + ' : ? : ' + targetOffset);
 			// console.log(targetOffset , targetMargin);
 
 			if($('.simple_info_wrap.ty2').length){
@@ -98,23 +101,36 @@
 				summaryHeight = $('.info_summary').height();
 			}
 
-			$('.tag_item').removeClass('active');
+			$(this).closest('.tag_item_wrap').find('.tag_item').removeClass('active');
 			$this.addClass('active');
 
 			$this.closest('.popup_cont').animate({
 				scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
 			}, 500);
 
+			$this.closest('.am_content').animate({
+				scrollTop: targetOffset + targetPadding + targetMarginTop
+			}, 500, function(){
+				setTimeout(function() {
+					const $targetPanel = $('.tag_item_move .tag_move').eq(idx);
+
+					// 포커스 가능한 첫 요소 탐색
+					const $focusable = $targetPanel.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+
+					if ($focusable.length) {
+						$focusable.focus();
+					} else {
+						// 없다면 컨테이너 자체에 tabindex 부여 후 포커스 (예외 대응)
+						$targetPanel.attr('tabindex', '-1').focus();
+					}
+				}, 100);
+			});
+
 			if($('.btn_toggle').length){
-				posiionVal = targetOffset + targetPadding + simpleHeight + fix_h;
+				// posiionVal = targetOffset + targetPadding + simpleHeight + fix_h;
+				positionVal = targetOffset + targetPadding + simpleHeight + fix_h;
 			}
 		}
-
-		if( $this.hasClass('am_tag_item_wrap') ) {
-			console.log('전체메뉴');
-		}
-
-
 	});
 
   /* Tooltip */
