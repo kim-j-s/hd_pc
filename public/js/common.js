@@ -3,17 +3,6 @@
         $WIN = $(window),
         wHeight = $WIN.height();
 
-
-
-
-  /* 전체메뉴 열기 */
-	// $DOM.on('click', '.hsu_menu_all', function(){
-	// 	$('.all_menu').addClass('active');
-	// });
-
-
-
-
 	$(document).on('keydown', function(e) {
 		if (e.key === 'Enter') {
 			const focusedElement = document.activeElement; // 현재 포커스된 요소
@@ -36,18 +25,10 @@
       $head.addClass('active');
 			$this.attr('aria-expanded', 'true');
       $inner.slideDown();
-
-			// if($this.closest('.acd_item').parent().hasClass('input_item_wrap')){
-			// 	$this.closest('.acd_item').addClass('open')
-			// }
     }else {
 			$this.attr('aria-expanded', 'false');
       $head.removeClass('active');
       $inner.slideUp();
-
-			// if($this.closest('.acd_item').parent().hasClass('input_item_wrap')){
-			// 	$this.closest('.acd_item').removeClass('open')
-			// }
     }
   });
 
@@ -687,6 +668,26 @@
 		$this.val(val);
 	});
 
+	// 달력 날짜 입력 항목 focus 시 attr 추가 및 blur 시 자리수 정리 기능 추가
+	$DOM.on('focus', '.inp_picker', function() {
+		const $this = $(this);
+		let val = $this.val();
+		$this.attr('maxlength', '8'); // focus 시 maxlength 속성 추가
+		const raw = val.replace(/\D/g, ''); // 모든 숫자만 남김
+		if (raw.length === 8) {
+			$this.val(raw);
+		}
+	});
+	$DOM.on('blur', '.inp_picker', function () {
+		const $this = $(this);
+		let val = $this.val().replace(/\D/g, ''); // 숫자만 추출
+	
+		if (val.length === 8) {
+			const formatted = val.replace(/^(\d{4})(\d{2})(\d{2})$/, '$1.$2.$3');
+			$this.val(formatted);
+		}
+	});
+
 
 })();
 
@@ -760,7 +761,8 @@ function simpleInfo(){
 			// console.log('컨텐츠 스크롤 위치 : ' + scrollTop);
 			// console.log('팝업 컨텐츠 스크롤 위치 : ' + pop_scrollTop);
 
-			if (targetOffsetTop <= new_headHeight + 30 && !$targetChild.hasClass('active')) {
+			// if (targetOffsetTop <= new_headHeight + 30 && !$targetChild.hasClass('active')) {
+			if (targetOffsetTop <= new_headHeight && !$targetChild.hasClass('active')) {
 				// console.log('펴기');
 				$targetChild.addClass('active');
 
@@ -774,7 +776,8 @@ function simpleInfo(){
 					$('.tag_item_wrap.sticky').css('top', simpleHeight - 50).addClass('active');
 				}
 
-			} else if (targetOffsetTop > new_headHeight + 30 && $targetChild.hasClass('active')) {
+			// } else if (targetOffsetTop > new_headHeight + 30 && $targetChild.hasClass('active')) {
+			} else if (targetOffsetTop > new_headHeight && $targetChild.hasClass('active')) {
 				// console.log('접기');
 				$target.removeAttr('style').removeClass('active');
 				$targetChild.removeClass('active');
@@ -857,7 +860,7 @@ $(function(){
 	currentPlan();
 	fixedMenuPlay();
 
-	simpleInfo();
+// 	simpleInfo();
 	
 
 	//input disabled&readonly
@@ -1309,26 +1312,22 @@ $(function(){
 
 
 	/* 페이지 내 스크롤 이벤트 */
+	// 모바일 - MY Page - 보험진단 서비스 - 보험 진단 결과 페이지에서만 사용 중
 	$('.container').on('scroll', function(){
 		const $this = $(this),
 					scrollTop = $this.scrollTop();
-
 		if($('.anchor_wrap').length){
 			$('.anchor_move').each(function(idx){
 				const sectionOffset = $(this).offset().top,
 							anchorH = $('.anchor_wrap').innerHeight(),
 							headerH = $('.header').innerHeight(),
 							compareVal = scrollTop + sectionOffset - anchorH - headerH - 48;
-
-				// console.log(scrollTop, compareVal);
-
 				if(scrollTop > compareVal){
 					$('.anchor_wrap').find('.anchor_btn').removeClass('active');
 					$('.anchor_wrap').find('.anchor_btn').eq(idx).addClass('active');
 				}
 			})
 		}
-
 	});
 
 	// 범용 전체 팝업 내 스크롤 이벤트
