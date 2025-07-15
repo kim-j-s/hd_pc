@@ -11,18 +11,20 @@
 		<div class="am_content">
 			<div class="am_content_inner">
 				<div class="amc_nav">
-					<div class="tag_item_wrap am_tag_item_wrap">
-						<a href="#a1" class="tag_item size_l c_ty02 active"><span class="text">보험가입</span></a>
-						<a href="#a2" class="tag_item size_l c_ty02"><span class="text">계약관리</span></a>
-						<a href="#a3" class="tag_item size_l c_ty02"><span class="text">보상/청구</span></a>
-						<a href="#a4" class="tag_item size_l c_ty02"><span class="text">혜택/서비스</span></a>
-						<a href="#a5" class="tag_item size_l c_ty02"><span class="text">고객지원</span></a>
-						<a href="#a6" class="tag_item size_l c_ty02"><span class="text">로그인/인증센터</span></a>
+					<div class="am_tag_item_wrap tag_item_wrap" data-tib="all_menu">
+						<button type="button" class="tag_item size_l c_ty02 active"><span class="text">보험가입<span class="sr_only">바로가기</span></span></button>
+						<button type="button" class="tag_item size_l c_ty02"><span class="text">계약관리<span class="sr_only">바로가기</span></span></button>
+						{{#unless corp_mode}}
+						<button type="button" class="tag_item size_l c_ty02"><span class="text">보상/청구<span class="sr_only">바로가기</span></span></button>
+						<button type="button" class="tag_item size_l c_ty02"><span class="text">혜택/서비스<span class="sr_only">바로가기</span></span></button>
+						<button type="button" class="tag_item size_l c_ty02"><span class="text">고객지원<span class="sr_only">바로가기</span></span></button>
+						{{/unless}}
+						<button type="button" class="tag_item size_l c_ty02"><span class="text">로그인/인증센터<span class="sr_only">바로가기</span></span></button>
 					</div>
 				</div>
 				<div class="amc_cont">
 					<div class="amc_cont_left">
-						{{> layout/nav_pc am_mode=true corp_mode=true }}
+						{{> layout/nav_pc am_mode=true }}
 					</div>
 					<div class="amc_cont_right">
 					</div>

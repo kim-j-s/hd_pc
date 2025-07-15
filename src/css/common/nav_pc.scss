@@ -39,6 +39,9 @@
 		flex-direction: column;
 		padding-bottom: var(--gap-12);
 		.nl_dept1 {
+			&.tag_move {
+				padding-top: 0;
+			}
 			& ~ .nl_dept1 {
 				margin-top: var(--gap-9);
 				padding-top: calc(var(--gap-9) + 1px);
@@ -69,6 +72,7 @@
 	/* 전체메뉴 사용 */
 
 }
+
 
 .nld_cont {
 	position: absolute;
@@ -113,11 +117,9 @@
 
 				> .text {
 					display: block;
-					// padding: 0 28px 0 0;
 					font-weight: 700;
 					font-size: var(--font-size-navigation-title-medium);
 					line-height: 40px;
-					// background: url(../images/icon/arrowRight_ty5.svg) no-repeat right center / 24px auto;
 				}
 				&.nld_cont_top_btn_ty1 {
 					&::before {
@@ -212,7 +214,8 @@
 					&.active {
 						background-color: var(--color-button-tertiary-fill-hover);
 					}
-					&[target="_blank"] {
+					&[target="_blank"],
+					&.ex_con {
 						> .text {
 							padding-right: 20px;
 							background-image: url(../images/header/icon_gnb_link_ty1.png);
