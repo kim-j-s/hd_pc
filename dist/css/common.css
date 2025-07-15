@@ -1829,6 +1829,8 @@ strong {
 	visibility: visible;
 }
 /* 전체메뉴 */
+<<<<<<< HEAD
+=======
 .all_menu {
 	position: fixed;
 	top: 0;
@@ -1912,6 +1914,7 @@ strong {
 	text-align: left;
 	overflow-wrap: anywhere;
 }
+>>>>>>> d868bf1bfed474d8ad59ded51d104460e7484871
 /* footer */
 /* Footer */
 .footer {
