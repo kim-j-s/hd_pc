@@ -20,14 +20,15 @@
 		.acd_btn {
 			position: relative;
 			width: 100%;
-			padding: 16px 20px;
+			padding: calc(var(--padding-6) + 4px) var(--padding-7);
 			background-color: transparent;
 			
 			> span {
 				display: block;
 				padding-left: 24px;
 				font-size: var(--font-size-heading-xsmall);
-				background: url(../images/icon/point_circle.svg) no-repeat left 50% /20px auto;
+				color: var(--color-text-basic);
+				background: url(../images/icon/point_circle.svg) no-repeat left 50% /16px auto;
 			}
 
 			&:after {
@@ -51,7 +52,7 @@
 
 	.acd_cont {
 		.inner {
-			padding: 0 20px 20px;
+			padding: var(--gap-2) 20px 20px;
 			
 			.list_depth {
 				> li {

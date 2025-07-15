@@ -252,9 +252,13 @@
 	& + * {
 		margin-top: var(--gap-7);
 	}
+	& + .step_list_container,
+	& + .list_ty2,
 	& + .opt_select_wrap {
 		margin-top: var(--gap-5);
 	}
+	// MZZPY0014000000000
+	// & + .list_ty2 디자인 케이스
 
 	// margin-top 52
 	& + .title_h3 {
@@ -298,6 +302,7 @@
 	}
 
 	// margin-top 12
+	& + .text_sub_ty3,
 	& + .list_depth {
 		margin-top: var(--gap-4);
 	}
@@ -317,4 +322,10 @@
 	& + .title_h3 {
 		margin-top: var(--gap-8);
 	}
+}
+
+.text_sub_ty3 {
+	font-size: var(--font-size-body-medium);
+	line-height: 24px;
+	color: var(--color-text-basic);
 }
