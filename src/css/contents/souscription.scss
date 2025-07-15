@@ -578,6 +578,7 @@ ul + .form_group_wrap {
 .pro_info_wrap {
 
 	.pro_info_item {
+		width: 100%;
 		+ .pro_info_item {
 			margin-top: calc(var(--gap-7) + 1px);
 			padding-top: var(--gap-7);
