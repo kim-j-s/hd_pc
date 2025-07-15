@@ -56,7 +56,8 @@
 			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
-		<!-- s: popup area --><!-- s: Full 팝업 -->
+		<!-- s: popup area -->
+		<!-- s: Full 팝업 -->
 		<div class="popup_wrap popup_wrap_type4 active" id="pop_full" role="dialog" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_full');"></div>
@@ -78,22 +79,10 @@
 									</dl>
 								</div>
 							</div>
+
 							<h2 class="pop_title_h1">부가담보</h2>
-							<!-- s: 25-06-18 -->
-							<!-- <div class="btn_area basic">
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="부가담보 추천 팝업 열기">
-										
-												<span class="text">부가담보 선택이 어려워 추천이 필요하다면?</span>
-										<i class="hd_icon arrowRightSvg"></i>
-										</button>			</div> -->
-							<!-- e: 25-06-18 -->
 							<div class="tab_wrap">
-								<div class="tab_wrap_list_ty1 tip_box" role="tablist">
-									<!-- s: 25-06-18 -->
-									<!-- <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelcontract01" id="tabcontract01">추천</button> -->
-									<!-- <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelcontract02" id="tabcontract02">자기신체</button> -->
-									<button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanelcontract03" id="tabcontract03">자기차량</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelcontract04" id="tabcontract04">보장확대</button>
-								</div>
+								<div class="tab_wrap_list_ty1 tip_box" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanelcontract03" id="tabcontract03">자기차량</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanelcontract04" id="tabcontract04">보장확대</button></div>
 								<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelcontract03">
 									<h3 class="pop_title_h2">내 차에 대한 보장을 확대하는 특약</h3>
 									<ul class="special_contract_list">
@@ -101,7 +90,7 @@
 											<div class="check_flex_box">
 												<div class="check_box">
 													<div class="inp_checkbox">
-														<input type="checkbox" id="agreement01-10" />
+														<input type="checkbox" id="agreement01-10" checked />
 														<label for="agreement01-10" class="chk_label">
 															<span class="label_cont">자기차량손해 보장 확대</span>
 														</label>
@@ -114,10 +103,10 @@
 											</div>
 										</li>
 										<li>
-											<div class="check_flex_box disabled">
+											<div class="check_flex_box">
 												<div class="check_box">
 													<div class="inp_checkbox">
-														<input type="checkbox" id="agreement02-11" checked disabled />
+														<input type="checkbox" id="agreement02-11" />
 														<label for="agreement02-11" class="chk_label">
 															<span class="label_cont">전기자동차 배터리 신품가액보상 특약</span>
 														</label>
@@ -154,7 +143,7 @@
 											<div class="check_flex_box">
 												<div class="check_box">
 													<div class="inp_checkbox">
-														<input type="checkbox" id="agreement01-18" />
+														<input type="checkbox" id="agreement01-18" checked />
 														<label for="agreement01-18" class="chk_label">
 															<span class="label_cont">견인 서비스 추가특약(중형화물, 승합)</span>
 														</label>
@@ -172,7 +161,7 @@
 													<div class="inp_checkbox">
 														<input type="checkbox" id="agreement01-18" />
 														<label for="agreement01-18" class="chk_label">
-															<span class="label_cont">견인 서비스 확장 추가특약 I</span>
+															<span class="label_cont">긴급견인서비스 확장추가특별약관I</span>
 														</label>
 													</div>
 												</div>
@@ -186,7 +175,7 @@
 											<div class="check_flex_box">
 												<div class="check_box">
 													<div class="inp_checkbox">
-														<input type="checkbox" id="agreement01-15" />
+														<input type="checkbox" id="agreement01-15" checked disabled />
 														<label for="agreement01-15" class="chk_label">
 															<span class="label_cont">대물배상가입금액확장담보특약</span>
 														</label>
@@ -239,7 +228,7 @@
 															<span class="label_cont"
 																>분할납부
 																<span class="badge_wrap">
-																	<span class="hd_badge outline solid_pastel c_info size_m">추가정보입력</span>
+																	<span class="hd_badge outline solid_pastel c_info size_m">추가정보</span>
 																</span></span
 															>
 														</label>
@@ -258,12 +247,12 @@
 					<!-- s: 하단 고정 버튼 영역 -->
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">확인</span>
 							</button>
 						</div>
 					</div>
-					<!-- s: 하단 고정 버튼 영역 -->
+					<!-- e: 하단 고정 버튼 영역 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -361,15 +350,11 @@
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="info_cont">
-								<h2>가입대상</h2>
-								<ul class="list_depth">
-									<li>전기자동차(화물자동차)</li>
-									<li>자기차량손해 또는 자기차량손해 보장 확대 특약 가입자</li>
-								</ul>
-								<h2>보상내용</h2>
-								<p>자차사고로 배터리 수리 시 신품 보상(감가상각 미적용)</p>
-								<h2>특이사항</h2>
-								<p>특약 미가입 시 배터리 등 중요한 부품의 신품 교환 시 연식에 따른 감가상각 금액은 고객 부담</p>
+								<h2>보상책임</h2>
+								<p>
+									사고로 전기차 배터리 수리 시 중요한 부품으로서 감가상각하지 않고 신품으로 보상<br />
+									단, 새 부분품을 포함한 수리비용이 보험가액보다 많은 경우에는 보험가액을 한도로 보상
+								</p>
 							</div>
 						</div>
 					</div>
@@ -403,7 +388,9 @@
 									<li>자기차량손해 또는 자기차량손해 보장 확대 특약 가입자</li>
 								</ul>
 								<h2>보상내용</h2>
-								<p>자차 전손 사고로 수리 시 차량가액의 130%까지 보상<br />단, 실제 수리를 하지 않는 경우에는 차량가액 한도 보상</p>
+								<p>자차사고로 배터리 수리 시 신품 보상(감가상각 미적용)</p>
+								<h2>특이사항</h2>
+								<p>특약 미가입 시 배터리 등 중요한 부품의 신품 교환 시 연식에 따른 감가상각 금액은 고객 부담</p>
 							</div>
 						</div>
 					</div>
@@ -450,13 +437,13 @@
 		</div>
 		<!-- e: 대물배상가입금액확장담보특약 Bottom 팝업 -->
 
-		<!-- s: 견인 서비스 확장 추가특약 I Bottom 팝업 -->
+		<!-- s: 긴급견인서비스 확장추가특별약관I Bottom 팝업 -->
 		<div class="popup_wrap popup_wrap_type3" id="pop_type18" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type18');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title">견인 서비스 확장 추가특약 I</div>
+						<div class="popup_head_title">긴급견인서비스 확장추가특별약관I</div>
 					</div>
 
 					<div class="popup_cont">
@@ -485,7 +472,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- e: 견인 서비스 확장 추가특약 I Bottom 팝업 -->
+		<!-- e: 긴급견인서비스 확장추가특별약관I Bottom 팝업 -->
 		<!-- s: 견인 서비스 추가특약(중형화물, 승합) Bottom 팝업 -->
 		<div class="popup_wrap popup_wrap_type3" id="pop_type19" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">

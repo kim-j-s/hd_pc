@@ -119,12 +119,6 @@
 					.tab_wrap {
 						margin: 0 -24px;
 						position: static;
-						.tab_wrap_list_ty1 {
-							position: sticky;
-							&.sticky_fix {
-								top: 16px;
-							}
-						}
 					}
 				}
 
@@ -197,6 +191,11 @@
 							font-size: inherit;
 							font-weight: 400;
 						}
+						&.txt_center {
+							.status_icon {
+								margin-bottom: var(--gap-5)
+							}
+						}
 					}
 
 					.list_ty3 + .title_h4 {
@@ -268,11 +267,24 @@
 						font-size: var(--font-size-body-medium);
 					}
 				}
+				
+				.bg_top_cover {
+					margin: 0;
+					padding: 0;
+					background: transparent;
+					.info_gray {
+						& + .form_group_wrap {
+							margin-top: var(--gap-5);
+						}
+					}
+					& + .opt_select_list {
+						margin-top: var(--gap-8);
+					}
+				}
 				.pop_top {
 					&.sticky_fix {
 						padding: 0 var(--padding-8) var(--padding-6);
 						margin: 0 -24px;
-						top: 0;
 					}
 				}
 

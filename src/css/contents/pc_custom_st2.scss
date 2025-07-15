@@ -1781,14 +1781,6 @@
 	}//opt_case5
 }
 
-.popup_content_top {
-	&.txt_center {
-		.status_icon {
-			margin-bottom: var(--gap-5)
-		}
-	}
-}
-
 
 .search_reult_list_container {
 	&.no_tab {
@@ -1898,22 +1890,6 @@
 			padding: 0 0 0 var(--padding-6);
 			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 			border-width: 0 0 0 1px;
-		}
-	}
-}
-
-.popup_content {
-	.bg_top_cover {
-		margin: 0;
-		padding: 0;
-		background: transparent;
-		.info_gray {
-			& + .form_group_wrap {
-				margin-top: var(--gap-5);
-			}
-		}
-		& + .opt_select_list {
-			margin-top: var(--gap-8);
 		}
 	}
 }
@@ -2125,8 +2101,8 @@
 		align-items: center;
 		gap: var(--gap-2);
 		background-repeat: no-repeat;
-		background-position: 6px center;
-		background-size: 24px auto;
+		background-position: 0 center;
+		background-size: 32px auto;
 		border-radius: var(--radius-large2);
 		padding: 0px 36px;
 		font-size: var(--font-size-body-medium);
@@ -2403,16 +2379,18 @@
 
 
 // total 예외 Case (자동차)
-.total_price_display_ty1 {
-	height: auto;
-	margin: 0;
-	padding: var(--padding-8);
-	background-color: var(--color-surface-gray-subtler);
-	border-radius: var(--radius-large2);
-	border: none;
-
-	.price_val {
-		font-size: var(--font-size-heading-medium);
+.wrap {
+	.total_price_display_ty1 {
+		height: auto;
+		margin: 0;
+		padding: var(--padding-8);
+		background-color: var(--color-surface-gray-subtler);
+		border-radius: var(--radius-large2);
+		border: none;
+	
+		.price_val {
+			font-size: var(--font-size-heading-medium);
+		}
 	}
 }
 

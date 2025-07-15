@@ -4893,7 +4893,7 @@ strong {
 	margin-top: var(--gap-4);
 }
 .tag_item_cont .card_list_wrap + .s_title {
-	margin-top: var(--gap-7);
+	margin-top: var(--gap-11);
 }
 /* button_tag */
 .keypad_wrap {
@@ -6435,6 +6435,21 @@ strong {
 }
 .card_list_wrap > li .card_wrap > dt .icon.dog {
 	background-image: url(../images/icon/icon_dog.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon.child_discount02 {
+	background-image: url(../images/icon/icon_child_discount02.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon.travel {
+	background-image: url(../images/icon/icon_travel.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon.saving {
+	background-image: url(../images/icon/icon_saving02.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon.health {
+	background-image: url(../images/icon/icon_health.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon.driver {
+	background-image: url(../images/icon/icon_driver.svg);
 }
 .card_list_wrap > li .card_wrap > dt .sub_text {
 	font-size: var(--font-size-body-small);
