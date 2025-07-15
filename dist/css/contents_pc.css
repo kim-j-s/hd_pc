@@ -282,6 +282,9 @@ body {
 .btn_area.center.equal .hd_btn {
 	min-width: 19.2rem;
 }
+.btn_area.mg_ty1 {
+	margin: var(--gap-11);
+}
 .btn_link {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 1 auto;
@@ -448,6 +451,11 @@ body {
 	margin: 0;
 	width: calc(50% - 1.6rem);
 }
+.wrap .form_group_wrap .full .row_ty2.radio_group_wrap > div {
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
+}
 .wrap .form_group_wrap .c1 {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
@@ -560,7 +568,7 @@ body {
 }
 .notification .form_list > li > .form_group_wrap {
 	display: block;
-	border-bottom: 1px solid var(--color-divider-gray-light);
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	padding-bottom: 4rem;
 }
 .notification .form_list > li > .form_group_wrap > .form_line {
@@ -823,7 +831,7 @@ body {
 	flex-flow: row wrap;
 }
 .info_gray .data_box:has(dl:nth-of-type(2)) dl:nth-of-type(odd) {
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .info_gray .data_box > dl {
 	-webkit-box-pack: start;
@@ -914,7 +922,7 @@ body {
 }
 .info_gray .data_box.df_type_w_ty9 {
 	padding-bottom: var(--gap-6);
-	border-bottom: 1px solid var(--color-divider-gray-light);
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .info_gray .data_box.df_type_w_ty9 > dl:nth-child(2n-1) {
 	border-right: 0;
@@ -953,7 +961,7 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	border-top: 1px solid var(--color-divider-gray-light);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	margin-top: var(--gap-5);
 	padding-top: 1.6rem;
 }
@@ -980,7 +988,7 @@ body {
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1 > li:nth-child(2n-1) {
 	padding-right: var(--gap-8);
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .container .card_item_wrap .card_item .item_inner .inner_cont * + .card_list_ty1 > li:nth-child(2n) {
 	padding-left: var(--gap-8);
@@ -1268,8 +1276,11 @@ body {
 	position: sticky;
 	top: -1.6rem;
 	z-index: 10;
-	background-color: #fff;
 	padding: 0.5rem 0;
+	background-color: #fff;
+}
+.tag_item_wrap.tag_item_wrap_po_etc1 {
+	top: 0;
 }
 .tag_item_move > .tag_move:first-child {
 	padding-top: var(--gap-8);
@@ -1839,7 +1850,7 @@ body {
 }
 .call_info_list_ty2 .call_info_desc > li:nth-child(2n-1) {
 	padding-right: var(--gap-8);
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .call_info_list_ty2 .call_info_desc > li:nth-child(2n) {
 	padding-left: var(--gap-9);
@@ -1924,7 +1935,7 @@ body {
 	content: "";
 	width: 1px;
 	height: calc(100% - 1.2rem);
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	position: absolute;
 	left: 50%;
 }
@@ -1964,7 +1975,7 @@ body {
 	margin-top: 0;
 }
 .item_info.ty2 ul:nth-child(2n-1) {
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	padding-right: var(--gap-8);
 }
 .img_box.ty2 {
@@ -2229,7 +2240,7 @@ body {
 .info_summary > .btn_area {
 	margin-top: var(--gap-6);
 	padding-top: var(--gap-6);
-	border-top: 1px solid var(--color-divider-gray-light);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .info_summary + .form_group_wrap,
 .info_summary + .tab_wrap,
@@ -2489,7 +2500,7 @@ body {
 .contact_list {
 	padding: var(--padding-8) var(--padding-7);
 	background: var(--color-surface-white);
-	border: 1px solid var(--color-divider-gray-light);
+	border: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	border-radius: var(--radius-large2);
 }
 .contact_list > .list {
@@ -2764,7 +2775,7 @@ body {
 }
 .coverage_item_list_ty3.border > .list ~ .list {
 	padding-top: var(--padding-6);
-	border-top: 1px solid var(--color-divider-gray-light);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 /* 보험료 확인 */
 .guarantee_view_wrap {
@@ -3382,7 +3393,7 @@ body {
 	margin-top: 0;
 }
 .item_info.ty2 ul:nth-child(2n-1) {
-	border-right: 1px solid var(--color-divider-gray-light);
+	border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	padding-right: var(--gap-8);
 }
 .process_info_area + .info_gray + .btn_area {
@@ -3584,7 +3595,7 @@ body {
 	content: "";
 	width: 3.2rem;
 	height: 3.2rem;
-	border: 1px solid var(--color-divider-gray-light);
+	border: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	margin: 0 auto;
 	border-radius: 99.9rem;
 	background: var(--color-surface-white-subtle);

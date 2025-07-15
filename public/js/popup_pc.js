@@ -114,7 +114,7 @@ function focusTrap($target){
 		}
 
 		//popup닫기
-		console.log("외부 영역 클릭 시 팝업 닫기");
+		// console.log("외부 영역 클릭 시 팝업 닫기");
 		$target.removeClass("active");
 
 		let $triggerEl = $("body");
@@ -179,14 +179,14 @@ function focusTrap($target){
 	// 개선 버젼 250714
 	$(window).on('click', function(e) {
 		var $target = $(e.target);
-		var $close_popup = $('.popup_inner, .event_pop_ele');
+		var $close_popup = $('.popup_inner, .event_pop_ele_inner');
 		if (!$target.closest($close_popup).length) {
-			const $popup = $target.closest('.popup_wrap, .event_pop_ele');
+			const $popup = $target.closest('.popup_wrap, .event_pop_ele_inner');
 			const targetPopupId = $popup.attr('id');
 			if (targetPopupId) {
 				closeHDPopup(targetPopupId);
 			}
 		}
-});
+	});
 
 	
