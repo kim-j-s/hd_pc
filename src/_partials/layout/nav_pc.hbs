@@ -1,7 +1,7 @@
-<ul class="nav_list">
+<ul class="nav_list{{#if am_mode}} nav_list_am_type{{/if}}">
 	{{!-- 보험가입 --}}
-	<li class="nl_dept1">
-		<a href="#" class="nl_dept1_link{{#if excase}} active{{/if}}"><span class="text">보험가입</span></a>
+	<li class="nl_dept1"{{#if am_mode}} id="a1"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link{{#if excase}} active{{/if}}"><span class="text">보험가입</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
 				<div class="nld_cont_top">
@@ -225,8 +225,8 @@
 	{{!-- 보험가입 --}}
 	
 	{{!-- 계약관리 --}}
-	<li class="nl_dept1">
-		<a href="#" class="nl_dept1_link"><span class="text">계약관리</span></a>
+	<li class="nl_dept1"{{#if am_mode}} id="a2"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">계약관리</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
 				<div class="nld_cont_top">
@@ -242,8 +242,7 @@
 										<a href="#"><span class="text">계약조회</span></a>
 									</li>
 								</ul>
-							</div>
-							
+							</div>							
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">자동차보험 계약변경</strong>
 								<ul class="nl_dept2_list">
@@ -265,7 +264,6 @@
 								</ul>
 							</div>
 						</li>
-
 						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">장기보험계약변경</strong>
@@ -298,10 +296,7 @@
 									</li>
 								</ul>
 							</div>
-							
-							
 						</li>
-
 						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">보험증명서 발급</strong>
@@ -342,7 +337,6 @@
 								</ul>
 							</div>							
 						</li>
-
 						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">대출</strong>
@@ -379,7 +373,6 @@
 								</ul>
 							</div>
 						</li>
-
 					</ul>
 				</div>
 
@@ -394,8 +387,8 @@
 
 	{{!-- 보상/청구 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1">
-		<a href="#" class="nl_dept1_link"><span class="text">보상/청구</span></a>
+	<li class="nl_dept1"{{#if am_mode}} id="a3"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">보상/청구</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
 				<div class="nld_cont_top">
@@ -503,8 +496,8 @@
 
 	{{!-- 혜택/서비스 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1">
-		<a href="#" class="nl_dept1_link"><span class="text">혜택/서비스</span></a>
+	<li class="nl_dept1"{{#if am_mode}} id="a4"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">혜택/서비스</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
 				<div class="nld_cont_top">
@@ -614,8 +607,8 @@
 
 	{{!-- 고객지원 --}}
 	{{#unless corp_mode}}
-	<li class="nl_dept1">
-		<a href="#" class="nl_dept1_link"><span class="text">고객지원</span></a>
+	<li class="nl_dept1"{{#if am_mode}} id="a5"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">고객지원</span></a>{{/unless}}
 		<div class="nld_cont">
 			<div class="nld_cont_inner">
 				<div class="nld_cont_top">
@@ -746,4 +739,59 @@
 	</li>
 	{{/unless}}
 	{{!-- 고객지원 --}}
+
+	{{!-- 로그인 --}}
+	{{#if am_mode}}
+	<li class="nl_dept1"{{#if am_mode}} id="a6"{{/if}}>
+		{{#unless am_mode}}<a href="#" class="nl_dept1_link"><span class="text">로그인</span></a>{{/unless}}
+		<div class="nld_cont">
+			<div class="nld_cont_inner">
+				<div class="nld_cont_top">
+					<a href="#" class="nld_cont_top_btn nld_cont_top_btn_ty6"><span class="text">로그인/인증센터</span></a>
+				</div>
+				<div class="nld_cont_body">
+					<ul class="nld_cont_body_list">
+						<li>
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">로그인</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="#"><span class="text">로그인</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">회원가입</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">인증센터</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="#"><span class="text">간편인증번호 등록/관리</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">금융인증서 등록/관리</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">공동인증서 등록/관리</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		
+	</li>
+	{{/if}}
+	{{!-- 로그인 --}}
+
+	
+
+
 </ul>

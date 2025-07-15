@@ -38,7 +38,7 @@ function setTabindex($target){
 
 //팝업 내부에서 focus순환
 function focusTrap($target){
-	$target.find('.popup_inner').off('keydown.focusTraversal').on('keydown.focusTraversal', function(e) {
+	$target.find('.popup_inner, .event_pop_ele_inner').off('keydown.focusTraversal').on('keydown.focusTraversal', function(e) {
 		if (e.key === 'Tab') {
 			const focusableEle = $target.find('button, input, select, textarea, a, .popup_inner').filter(':not([disabled])'); // 포커스 가능한 요소들만
 			const firstEle = focusableEle.first();
@@ -114,6 +114,7 @@ function focusTrap($target){
 		}
 
 		//popup닫기
+		// console.log("외부 영역 클릭 시 팝업 닫기");
 		$target.removeClass("active");
 
 		let $triggerEl = $("body");
@@ -161,15 +162,29 @@ function focusTrap($target){
 
 
 	//window click이벤트
+	// $(window).on('click', function(e) {
+	// 	var $target = $(e.target);
+	// 	
+	// 	// 팝업 영역 외 클릭 시 팝업 닫기
+	// 	var $close_popup = $('.popup_inner');
+	// 	if (!$target.closest($close_popup).length) {
+	// 		const targetPopup = $target.closest('.popup_wrap').attr('id');
+	// 		if (targetPopup) {
+	// 			closeHDPopup(targetPopup);
+	// 		}
+	// 	}
+	// });
+
+
+	// 개선 버젼 250714
 	$(window).on('click', function(e) {
 		var $target = $(e.target);
-		
-		// 팝업 영역 외 클릭 시 팝업 닫기
-		var $close_popup = $('.popup_inner');
+		var $close_popup = $('.popup_inner, .event_pop_ele_inner');
 		if (!$target.closest($close_popup).length) {
-			const targetPopup = $target.closest('.popup_wrap').attr('id');
-			if (targetPopup) {
-				closeHDPopup(targetPopup);
+			const $popup = $target.closest('.popup_wrap, .event_pop_ele_inner');
+			const targetPopupId = $popup.attr('id');
+			if (targetPopupId) {
+				closeHDPopup(targetPopupId);
 			}
 		}
 	});

@@ -2,6 +2,8 @@
 <html lang="ko">
 	<head>
 	{{> layout/head_pc}}
+	<script type="text/javascript" src="../../../js/common_pc.js"></script>
+	<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 	</head>
   <body>
 			{{#unless no-skip}}
@@ -11,5 +13,10 @@
 			</ul>
 			{{/unless}}
 			{{> @partial-block }}
+			{{#unless no-pt}}
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
+			{{/unless}}
   </body>
 </html>
