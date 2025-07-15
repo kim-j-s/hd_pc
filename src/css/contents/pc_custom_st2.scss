@@ -2494,4 +2494,16 @@
 			padding: var(--padding-8) var(--padding-7);
 		}
 	}
+	.popup_container{
+		.popup_inner {
+			.popup_cont {
+				.pop_top {
+					&.sticky_fix {
+						margin: 0 -24px;
+						top: 0;
+					}
+				}
+			}
+		}
+	} 
 }
