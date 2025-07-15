@@ -304,6 +304,10 @@ strong {
 
 		& + .content_top {
 			margin-top: var(--gap-8);
+
+			& + .card_item_wrap {
+				margin-top: var(--gap-6);
+			}
 		}
 	}
 }
@@ -414,6 +418,7 @@ strong {
 	}
 	img {
 		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -786,10 +791,6 @@ strong {
 		&.ico_type04 {
 			background-image: url(../images/common/cert/icon_cert_common_cert.svg);
 		}
-
-		& + .form_group_wrap {
-			margin-top: var(--gap-11);
-		}
 	}
 
 	// margin-top 52
@@ -803,7 +804,8 @@ strong {
 	+ .table_wrap,
 	+ .title_h3,
 	+ .space_list_ty2,
-	+ .space_list_ty4 {
+	+ .space_list_ty4,
+	+ .info_cont {
 		margin-top: var(--gap-8);
 	}
 

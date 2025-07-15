@@ -85,6 +85,10 @@
 		align-items: center;
 		gap: 4px 8px;
 	}
+
+	& + .selectitem_wrap {
+		margin-top: var(--gap-8);
+	}
 }
 
 .tag_item_move {
@@ -107,7 +111,8 @@
 	}
 	.card_list_wrap {
 		& + .s_title {
-			margin-top: var(--gap-7);
+			//margin-top: var(--gap-7);
+			margin-top: var(--gap-11);
 		}
 	}
 }

@@ -73,6 +73,7 @@
 	})
 
 	/* tag_item click */
+	/*
 	$DOM.on('click', '.tag_item_wrap .tag_item', function(){
 		const $this = $(this);
 		const idx = $this.index();
@@ -108,6 +109,7 @@
 				scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
 			}, 500);
 
+			// PC 용
 			$this.closest('.am_content').animate({
 				scrollTop: targetOffset + targetPadding + targetMarginTop
 			}, 500, function(){
@@ -125,6 +127,7 @@
 					}
 				}, 100);
 			});
+			// PC 용
 
 			if($('.btn_toggle').length){
 				// posiionVal = targetOffset + targetPadding + simpleHeight + fix_h;
@@ -132,6 +135,73 @@
 			}
 		}
 	});
+	*/
+
+	/* tag_item click - 개선 */
+	$DOM.on('click', '.tag_item_wrap .tag_item', function() {
+    const $this = $(this);
+    const idx = $this.index();
+
+    // 클릭한 .tag_item_wrap의 data-tib 값 읽기
+    const tibValue = $this.closest('.tag_item_wrap').data('tib');
+    if (!tibValue) return;  // 없으면 중단
+
+    // 같은 data-tib-get 값을 가진 .tag_item_move 요소 찾기
+    const $targetWrap = $(`.tag_item_move[data-tib-get="${tibValue}"]`);
+    if ($targetWrap.length === 0) return; // 해당 영역 없으면 중단
+
+    const $target = $targetWrap.find('.tag_move').eq(idx);
+    if ($target.length === 0) return;
+
+    // 위치 계산
+    const targetPadding = parseFloat($target.css('padding-top')) || 0;
+    const targetMarginTop = parseFloat($target.css('margin-top')) || 0;
+    const targetOffset = $target.position().top || 0;
+
+    let summaryHeight = 0,
+        simpleHeight = 0;
+
+    if($('.simple_info_wrap.ty2').length){
+        simpleHeight = 102;
+    }
+    if($('.info_summary').length){
+        summaryHeight = $('.info_summary').height();
+    }
+
+    const fix_h = $this.closest('.sticky').height() || 0;
+
+    // 탭 active 클래스 변경
+    $this.closest('.tag_item_wrap').find('.tag_item').removeClass('active');
+    $this.addClass('active');
+
+    // 스크롤 애니메이션 (popup_cont 영역)
+    $this.closest('.popup_cont').animate({
+        scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
+    }, 500);
+
+    // PC 영역 스크롤 애니메이션
+    $this.closest('.am_content').animate({
+        scrollTop: targetOffset + targetPadding + targetMarginTop
+    }, 500, function() {
+        setTimeout(function() {
+            // 포커스 가능한 첫 요소 찾기
+            const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+            if ($focusable.length) {
+                $focusable.focus();
+            } else {
+                // 없으면 tabindex 부여 후 포커스
+                $target.attr('tabindex', '-1').focus();
+            }
+        }, 100);
+    });
+
+    // positionVal 용도로 쓰이는 부분
+    if($('.btn_toggle').length){
+        // positionVal = targetOffset + targetPadding + simpleHeight + fix_h;
+        // 필요하면 여기서 활용
+    }
+});
+
 
   /* Tooltip */
   $DOM.on('click', '.tooltip_wrap button', function(){
