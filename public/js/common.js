@@ -175,9 +175,21 @@
     $this.addClass('active');
 
     // 스크롤 애니메이션 (popup_cont 영역)
+		// PC 영역 스크롤 애니메이션
     $this.closest('.popup_cont').animate({
         scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
-    }, 500);
+			}, 500, function() {
+        setTimeout(function() {
+            // 포커스 가능한 첫 요소 찾기
+            const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+            if ($focusable.length) {
+                $focusable.focus();
+            } else {
+                // 없으면 tabindex 부여 후 포커스
+                $target.attr('tabindex', '-1').focus();
+            }
+        }, 100);
+    });
 
     // PC 영역 스크롤 애니메이션
     $this.closest('.am_content').animate({
