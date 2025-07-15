@@ -1,18 +1,6 @@
 /* Component */
 
 
-// Button
-.popup_wrap {
-	&:has(.hd_btn){
-		.btn_area:not(.basic) {
-			.btn_link,
-			.hd_btn {
-				flex: 1;
-			}
-		}
-	}
-}
-
 .hd_btn {
 	flex: 0 1 auto;
 	//icon
@@ -1784,54 +1772,6 @@
 	}
 }
 
-//팝업 검색
-.popup_wrap.popup_wrap_type4 {
-	.popup_container  {
-		.popup_inner  {
-			.popup_cont {
-				&.search_list_type2 {
-					padding-top:0; 
-					padding-bottom:0;
-					.tab_wrap {
-						position: static;
-						.tab_wrap_content {
-							padding: var(--padding-9) 0;
-							margin: 0 -24px 0;
-							max-height: 576px;
-							min-height: 576px;
-							overflow-y: auto;
-							&.has_scroll {
-								&.active {
-									display: block;
-								}
-							}
-							> * {
-								padding-left: 24px;
-								padding-right: 24px;
-							}
-							
-						}
-					}
-
-					.search_reult_list_container {
-						position: relative;
-						border-top: none;
-						&:after {
-							content: "";
-							width: calc(100% - (24px *2));
-							height: 1px;
-							background-color: var(--color-border-gray-light);
-							position: absolute;
-							top: 0;
-							left: 24px;
-						}
-					}
-				}
-			}		
-		}
-		
-	}
-}
 
 .search_reult_list_container {
 	&.no_tab {
@@ -1892,52 +1832,6 @@
 .bottom_fix_notice  {
 	& + .list_ty2 {
 		margin-top: var(--gap-5)
-	}
-}
-
-// 변경할 가입조건 선택 팝업
-.popup_wrap {
-	p.bpop_sub_title {
-		font-size: var(--font-size-body-medium);
-		& + .form_group_wrap {
-			margin-top: 16px;
-		}
-	}
-
-	.form_group_wrap + .title_h4 {
-		margin: 40px 0 16px;
-	}
-}
-
-
-.popup_wrap {
-	&.popup_wrap_type3,
-	&.popup_wrap_type4  {
-		.popup_head:not( div.popup_head_title) {
-			+ .popup_cont {
-				padding-top: 0;
-			}
-		}
-		.file_upload_wrap {
-			.file_attach_box {
-				display: block;
-				margin: 0 auto;
-			}
-
-			.file_info_box {
-				& + .file_attach_box {
-					margin-top: var(--gap-5);
-				}
-			}
-		}
-	}
-	
-
-	// 큰글씨 없는 약관 Case(border있는)
-	.ag_group_wrap {
-		&:not(&:has(.ag_group_top, .ag_group_cont)){
-			padding: var(--padding-8) var(--padding-7);
-		}
 	}
 }
 
@@ -2048,37 +1942,6 @@
 	.sep_cont {
 		grid-template-columns: repeat(4, 1fr);
 		gap:var(--gap-6);
-	}
-}
-
-//팝업 탭 스티키일 경우
-.popup_wrap {
-	.sticky_fix {
-		z-index: 11;
-	}
-
-	.popup_container {
-		.popup_inner {
-			.popup_cont {
-				// 직업검색
-				&.search_list_type2 {
-					padding-top: 0;
-
-					.tab_wrap {
-						.tab_wrap_list_ty1.sticky_fix {
-							top: 0;
-						}
-					}
-				}
-
-				.tab_wrap {
-					.tab_wrap_list_ty1.sticky_fix,
-					.tab_scroll_box_ty1.sticky_fix {
-						top: -16px;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -2502,6 +2365,133 @@
 		}
 		.footer_dl {
 			justify-content: flex-start;
+		}
+	}
+}
+
+
+
+
+
+//popup
+
+.popup_wrap {
+
+	&.popup_wrap_type3,
+	&.popup_wrap_type4  {
+		.popup_head:not( div.popup_head_title) {
+			+ .popup_cont {
+				padding-top: 0;
+			}
+		}
+		.file_upload_wrap {
+			.file_attach_box {
+				display: block;
+				margin: 0 auto;
+			}
+
+			.file_info_box {
+				& + .file_attach_box {
+					margin-top: var(--gap-5);
+				}
+			}
+		}
+		
+		//팝업 검색
+		.popup_cont {
+			&.search_list_type2 {
+				padding-top:0; 
+				padding-bottom:0;
+				.tab_wrap {
+					position: static;
+					.tab_wrap_content {
+						padding: var(--padding-9) 0;
+						margin: 0 -24px 0;
+						max-height: 576px;
+						min-height: 576px;
+						overflow-y: auto;
+						&.has_scroll {
+							&.active {
+								display: block;
+							}
+						}
+						> * {
+							padding-left: 24px;
+							padding-right: 24px;
+						}
+						
+					}
+				}
+
+				.search_reult_list_container {
+					position: relative;
+					border-top: none;
+					&:after {
+						content: "";
+						width: calc(100% - (24px *2));
+						height: 1px;
+						background-color: var(--color-border-gray-light);
+						position: absolute;
+						top: 0;
+						left: 24px;
+					}
+				}
+			}
+		}		
+	}
+	// Button
+	&:has(.hd_btn){
+		.btn_area:not(.basic) {
+			.btn_link,
+			.hd_btn {
+				flex: 1;
+			}
+		}
+	}
+	
+	//팝업 탭 스티키일 경우
+	.sticky_fix {
+		z-index: 11;
+	}
+
+	.popup_container {
+		.popup_inner {
+			.popup_cont {
+				// 직업검색
+				&.search_list_type2 {
+					padding-top: 0;
+
+					.tab_wrap {
+						.tab_wrap_list_ty1.sticky_fix {
+							top: 0;
+						}
+					}
+				}
+
+				.tab_wrap {
+					.tab_wrap_list_ty1.sticky_fix,
+					.tab_scroll_box_ty1.sticky_fix {
+						top: -16px;
+					}
+				}
+			}
+		}
+	}
+	// 변경할 가입조건 선택 팝업
+	p.bpop_sub_title {
+		font-size: var(--font-size-body-medium);
+		& + .form_group_wrap {
+			margin-top: 16px;
+		}
+	}
+
+	.form_group_wrap + .title_h4 {
+		margin: 40px 0 16px;
+	}
+	// 큰글씨 없는 약관 Case(border있는)
+	.ag_group_wrap {
+		&:not(&:has(.ag_group_top, .ag_group_cont)){
+			padding: var(--padding-8) var(--padding-7);
 		}
 	}
 }
