@@ -201,6 +201,7 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + .form_box,
 	& + .info_gray,
 	& + .content_top {
 		margin-top: var(--gap-11);
