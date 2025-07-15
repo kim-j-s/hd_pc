@@ -1,0 +1,27 @@
+
+{{#> layout/default page-title="보험료 확인 | 상품"}}
+<!-- s: popup area -->
+		
+	<!-- s: 전기자동차 배터리 신품가액 보상 특약 제외 안내 팝업 -->
+	{{#> popup/popup_bottom popup-id="pop_type07" popup-active=true popup-title="전기자동차 배터리 신품가액 보상 특약 제외 안내" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<div class="info_cont">
+				<h2>‘전기자동차 배터리 신품가액 보상 특약’ 제외를 선택하셨습니다.</h2>
+				<ul class="list_depth">
+					<li>이 경우 사고로 배터리 등 중요부품이 파손된 경우 신품으로 교체해 드리지 않고, 차량 연식에 따른 표준 감가율을 반영하여 <span class="point">신품가격과 감가상각 이후의 부품가격의 차액을 고객님이 부담</span>하셔야 합니다. (특약 가입 시 새 부분품을 포함한 수리비용은 보험가액을 한도로 보상합니다.)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="3" size="2" b-text="특약 미가입"}}
+			{{> cp/button type="1" size="2" b-text="특약 가입"}}
+		</div>
+	</div>
+	{{/ popup/popup_bottom}} 
+	<!-- e: 전기자동차 배터리 신품가액 보상 특약 제외 안내 팝업 -->
+		
+<!-- e: popup area -->
+{{/ layout/default }}
