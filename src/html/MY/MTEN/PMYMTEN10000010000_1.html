@@ -2,12 +2,26 @@
 	<div id="wrap" class="wrap">
 		<!-- s: 25-06-02 수정 -->
 		<!-- s: 25-06-11 수정 -->
-		{{> layout/header_pc h-ins="pop_insChk" }}
+		<!-- s: 25-07-15 수정 -->
+		{{> layout/header_pc bc=true h-ins="pop_insChk" }}
+		<!-- e: 25-07-15 수정 -->
 		<!-- e: 25-06-11 수정 -->
 		<!-- e: 25-06-02 수정 -->
 
 		<div id="container" class="container">
 			<div class="content">
+				<!-- s: 25-07-15 추가 -->
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<h2 class="p_title">
+							<strong>자동차보험선택</strong>
+						</h2>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
+					</div>
+				</div>
+				<!-- e: 25-07-15 추가 -->
 
 				<div class="process_info_area">
 					<div class="complete_info" aria-hidden="true">
@@ -55,17 +69,26 @@
 						 <!-- e: 25-06-16 수정 -->
 					</div>
 				</div>
+
+				<!-- s: 25-07-15 추가 -->
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="1" size="1" b-text="홈으로"}}
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
+				<!-- e: 25-07-15 추가 -->
 			</div>
 			<!-- // container -->
 		</div>
 
-		<!-- s: 하단 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area center">
-				{{> cp/button type="1" size="1" b-text="홈으로"}}
-			</div>
-		</div>
-		<!-- s: 하단 버튼 영역 -->
+		<!-- s: 25-07-15 추가 -->
+		<!-- footer -->
+		{{> layout/footer }}
+		<!-- footer -->
+		<!-- e: 25-07-15 추가 -->
+
 	</div>
 
 	<!-- s: popup area -->
