@@ -5,7 +5,7 @@
 @import "common/commonpage.scss";
 
 /* header */
-@import "common/header.scss";
+/* @import "common/header.scss"; */
 
 /* header_pc */
 @import "common/header_pc.scss";
@@ -15,6 +15,9 @@
 
 /* 전체메뉴 */
 @import "common/allmenu.scss";
+
+/* 전체메뉴 검색*/
+@import "common/allmenu_sch.scss";
 
 /* footer */
 @import "common/footer.scss";
