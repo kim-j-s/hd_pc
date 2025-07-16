@@ -501,7 +501,6 @@ body {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	margin-top: var(--gap-5);
 }
 .form_box > .btn_area .hd_btn {
 	min-width: 16rem;
@@ -1464,12 +1463,6 @@ body {
 .opt_select_list.opt_case5.grid > li:nth-of-type(-n + 2) {
 	border-top: 1px solid var(--color-divider-gray-light);
 }
-<<<<<<< HEAD
-.popup_content_top.txt_center .status_icon {
-	margin-bottom: var(--gap-5);
-}
-=======
->>>>>>> d9bcefd4a5cf6fdd339ede388e05d23821a966ff
 .search_reult_list_container.no_tab {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
