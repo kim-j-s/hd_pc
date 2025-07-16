@@ -727,6 +727,11 @@
 				margin-top: 0;
 			}
 		}
+		.info_gray {
+			&.ty2 {
+				margin-top: var(--gap-5);
+			}
+		}
 	}
 
 	> .form_line_ty2 {
