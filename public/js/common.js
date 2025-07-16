@@ -12,6 +12,13 @@
 	});
 
 
+	$DOM.on('click', '.hsu_search', function(){
+		$('.all_menu_search_wrap').toggleClass('active');
+	});
+
+	
+
+
   /* Accordion */   
   $DOM.on('click', '.acd_item .acd_head .acd_btn', function(){
     const $this = $(this),

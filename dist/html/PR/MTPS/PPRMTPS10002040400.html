@@ -52,76 +52,77 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">블랙박스 정보 입력</div>
-					</div>
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">블랙박스 정보 입력</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: 수정모드 진입시 버튼 출력 -->
-							<div class="etc_btn_area right">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" onclick="openHDPopup(this,'alert_d1');">
-									<span class="text">삭제</span>
-									<i class="hd_icon deleteSvg"></i>
-								</button>
-							</div>
-							<!-- e: 수정모드 진입시 버튼 출력 -->
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">세부명칭</div>
-									<div class="input_text">
-										<div class="inp">
-											<input type="text" placeholder="추가부품명 입력" title="세부명칭 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-									</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: 수정모드 진입시 버튼 출력 -->
+								<div class="etc_btn_area right">
+									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" onclick="openHDPopup(this,'alert_d1');">
+										<span class="text">삭제</span>
+										<i class="hd_icon deleteSvg"></i>
+									</button>
 								</div>
-								<div class="row">
-									<div class="form_line fix_w_case01">
-										<div class="label_tit">장착연도</div>
-										<!-- s: 25-07-08 수정 -->
-										<div class="select_option_box">
-											<select name="" id="" title="장착연도 선택" class="selectbox">
-												<option value="default" hidden>선택</option>
-												<option value="">2020</option>
-												<option value="">2020</option>
-												<option value="">2020</option>
-												<option value="">2020</option>
-												<option value="">2020</option>
-											</select>
-										</div>
-										<!-- e: 25-07-08 수정 -->
-									</div>
-									<div class="form_line grow">
-										<div class="label_tit">구입가격</div>
-										<div class="input_text price">
+								<!-- e: 수정모드 진입시 버튼 출력 -->
+								<div class="form_group_wrap">
+									<div class="form_line">
+										<div class="label_tit">세부명칭</div>
+										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="숫자만" title="구입가격 입력" />
+												<input type="text" placeholder="추가부품명 입력" title="세부명칭 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
-											<div class="int_txt right">만원</div>
 										</div>
 									</div>
-								</div>
-								<div class="total_price_display_ty1">
-									<p class="price_label">현재가격</p>
-									<p class="price_val">
-										<strong>
-											<span class="primary">2,179만원</span>
-										</strong>
-									</p>
-								</div>
-								<!-- <div class="form_line"><div class="input_text price big">
+									<div class="row">
+										<div class="form_line fix_w_case01">
+											<div class="label_tit">장착연도</div>
+											<!-- s: 25-07-08 수정 -->
+											<div class="select_option_box">
+												<select name="" id="" title="장착연도 선택" class="selectbox">
+													<option value="default" hidden>선택</option>
+													<option value="">2020</option>
+													<option value="">2020</option>
+													<option value="">2020</option>
+													<option value="">2020</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+											<!-- e: 25-07-08 수정 -->
+										</div>
+										<div class="form_line grow">
+											<div class="label_tit">구입가격</div>
+											<div class="input_text price">
+												<div class="inp">
+													<input type="tel" placeholder="숫자만" title="구입가격 입력" />
+													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												</div>
+												<div class="int_txt right">만원</div>
+											</div>
+										</div>
+									</div>
+									<div class="total_price_display_ty1">
+										<p class="price_label">현재가격</p>
+										<p class="price_val">
+											<strong>
+												<span class="primary">2,179만원</span>
+											</strong>
+										</p>
+									</div>
+									<!-- <div class="form_line"><div class="input_text price big">
 						  <div class="int_txt left">현재가격</div>
 						  <div class="inp">
 						    <input 
@@ -145,164 +146,165 @@
 							
 						</div>
 						</div> -->
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-								<span class="text">세부명칭을 입력 중이에요</span>
-							</button>
-							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+									<span class="text">세부명칭을 입력 중이에요</span>
+								</button>
+								<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
 						
 								<span class="text">장착연도를 선택 중이에요</span>
 						
 						</button> -->
-							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 						
 								<span class="text">부품정보 저장하기</span>
 						
 						</button> -->
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- s: 첨단안전장치만 있는 Case -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">차선이탈 경고장치 정보 입력</div>
-					</div>
+			<!-- s: 첨단안전장치만 있는 Case -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">차선이탈 경고장치 정보 입력</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: 수정모드 진입시 버튼 출력 -->
-							<div class="etc_btn_area right">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'alert_d1');">
-									<span class="text">삭제</span>
-									<i class="hd_icon deleteSvg"></i>
-								</button>
-							</div>
-							<!-- e: 수정모드 진입시 버튼 출력 -->
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">세부명칭</div>
-									<div class="input_text">
-										<div class="inp">
-											<input type="text" placeholder="추가부품명 입력" title="세부명칭 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-									</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: 수정모드 진입시 버튼 출력 -->
+								<div class="etc_btn_area right">
+									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'alert_d1');">
+										<span class="text">삭제</span>
+										<i class="hd_icon deleteSvg"></i>
+									</button>
 								</div>
-								<div class="row">
-									<div class="form_line grow">
-										<div class="label_tit">구입가격</div>
-										<div class="input_text price">
+								<!-- e: 수정모드 진입시 버튼 출력 -->
+								<div class="form_group_wrap">
+									<div class="form_line">
+										<div class="label_tit">세부명칭</div>
+										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="숫자만" title="구입가격 입력" />
+												<input type="text" placeholder="추가부품명 입력" title="세부명칭 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
-											<div class="int_txt right">만원</div>
 										</div>
 									</div>
-								</div>
-								<div class="total_price_display_ty1">
-									<p class="price_label">현재가격</p>
-									<p class="price_val">
-										<strong>
-											<span class="primary">2,179만원</span>
-										</strong>
-									</p>
+									<div class="row">
+										<div class="form_line grow">
+											<div class="label_tit">구입가격</div>
+											<div class="input_text price">
+												<div class="inp">
+													<input type="tel" placeholder="숫자만" title="구입가격 입력" />
+													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												</div>
+												<div class="int_txt right">만원</div>
+											</div>
+										</div>
+									</div>
+									<div class="total_price_display_ty1">
+										<p class="price_label">현재가격</p>
+										<p class="price_val">
+											<strong>
+												<span class="primary">2,179만원</span>
+											</strong>
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-								<span class="text">구매가격을 입력 중이에요</span>
-							</button>
-							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+									<span class="text">구매가격을 입력 중이에요</span>
+								</button>
+								<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 						
 								<span class="text">부품정보 저장하기</span>
 						
 						</button> -->
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 첨단안전장치만 있는 Case -->
-		<!-- e: Bottom 팝업 -->
-
-		<!-- s: popup area -->
-		<!-- s: select popup(장착연도 선택) -->
-		<div class="popup_wrap popup_wrap_type3" id="select_option_ty1" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_option_ty1');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">장착연도 선택</div>
-					</div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_option_ty1');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: select popup(장착연도 선택) -->
+			<!-- e: 첨단안전장치만 있는 Case -->
+			<!-- e: Bottom 팝업 -->
 
-		<!-- s: Layer 팝업('삭제' 버튼 클릭시) -->
-		<div class="popup_wrap popup_wrap_type1" id="alert_d1" role="dialog">
-			<div class="popup_container">
-				<div class="popup_dim"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title"></div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- [추가부속품명]자리에 해당 부속품명 표시 -->
-							[추가 부속품명]을 삭제하시겠습니까?
+			<!-- s: popup area -->
+			<!-- s: select popup(장착연도 선택) -->
+			<div class="popup_wrap popup_wrap_type3" id="select_option_ty1" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_option_ty1');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">장착연도 선택</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<span class="text">아니오</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">예</span>
-							</button>
+
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">2020</span></div>
+								</div>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('select_option_ty1');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('alert_d1');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Layer 팝업('삭제' 버튼 클릭시) -->
-		<!-- e: popup area -->
+			<!-- e: select popup(장착연도 선택) -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- s: Layer 팝업('삭제' 버튼 클릭시) -->
+			<div class="popup_wrap popup_wrap_type1" id="alert_d1" role="dialog">
+				<div class="popup_container">
+					<div class="popup_dim"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title"></div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- [추가부속품명]자리에 해당 부속품명 표시 -->
+								[추가 부속품명]을 삭제하시겠습니까?
+							</div>
+						</div>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">아니오</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">예</span>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('alert_d1');"><span class="blind">팝업 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<!-- e: Layer 팝업('삭제' 버튼 클릭시) -->
+			<!-- e: popup area -->
+
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

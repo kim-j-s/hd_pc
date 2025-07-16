@@ -52,66 +52,68 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title"></div>
-					</div>
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title"></div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="popup_content_top txt_center">
-								<h3 class="title_h3 normal"><strong>기본 입력 사항</strong>을 <br />다음과 같이 저장할게요</h3>
-							</div>
-							<h4 class="title_h4">김현대(KIM HYUN DAI)</h4>
-							<div class="table_wrap">
-								<table class="table">
-									<caption>
-										생년월일, 이메일 제공
-									</caption>
-									<colgroup>
-										<col style="width: 35%" />
-										<col style="width: 65%" />
-									</colgroup>
-									<tbody>
-										<tr>
-											<th scope="row">생년월일</th>
-											<td>19910101</td>
-										</tr>
-										<tr>
-											<th scope="row">이메일</th>
-											<td>Test_test@test.com</td>
-										</tr>
-									</tbody>
-								</table>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="popup_content_top txt_center">
+									<h3 class="title_h3 normal"><strong>기본 입력 사항</strong>을 <br />다음과 같이 저장할게요</h3>
+								</div>
+								<h4 class="title_h4">김현대(KIM HYUN DAI)</h4>
+								<div class="table_wrap">
+									<table class="table">
+										<caption>
+											생년월일, 이메일 제공
+										</caption>
+										<colgroup>
+											<col style="width: 35%" />
+											<col style="width: 65%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row">생년월일</th>
+												<td>19910101</td>
+											</tr>
+											<tr>
+												<th scope="row">이메일</th>
+												<td>Test_test@test.com</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<span class="text">수정</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">수정</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Bottom 팝업 -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: Bottom 팝업 -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

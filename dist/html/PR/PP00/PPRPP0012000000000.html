@@ -52,230 +52,232 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
-		<!-- s: popup area -->
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
+			<!-- s: popup area -->
 
-		<!-- s: Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">해외 금융계좌 신고</div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: popup_content_top -->
-							<div class="popup_content_top">
-								<h2 class="title_h2"><strong>상세 신고 내용</strong>을 입력해 주세요</h2>
+			<!-- s: Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">해외 금융계좌 신고</div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: popup_content_top -->
+								<div class="popup_content_top">
+									<h2 class="title_h2"><strong>상세 신고 내용</strong>을 입력해 주세요</h2>
+								</div>
+								<!-- e: popup_content_top -->
+
+								<ul class="form_list">
+									<li>
+										<div class="form_group_wrap">
+											<div class="form_line">
+												<div class="label_tit">미국 거주자에 해당하는 경우 해당 유형을 선택해 주세요</div>
+
+												<div class="radio_group_wrap_ty2 radio_group_resetable" role="radiogroup">
+													<div class="inp_radio rd_btn">
+														<input type="radio" id="radio_btn_g1" name="radio_g1" checked />
+														<label for="radio_btn_g1">
+															<span class="label_cont">시민권자<br />(이중국적자 포함)</span>
+														</label>
+													</div>
+													<div class="inp_radio rd_btn">
+														<input type="radio" id="radio_btn_g2" name="radio_g1" />
+														<label for="radio_btn_g2">
+															<span class="label_cont">영주권자</span>
+														</label>
+													</div>
+													<div class="inp_radio rd_btn">
+														<input type="radio" id="radio_btn_g3" name="radio_g1" />
+														<label for="radio_btn_g3">
+															<span class="label_cont">세법상 거주자</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="form_group_wrap">
+											<div class="form_line">
+												<div class="label_tit">기타 국가 거주 여부를 확인해 주세요</div>
+												<div class="checkbox_group_wrap">
+													<div class="inp_checkbox">
+														<input type="checkbox" id="checkbox02-1-12" />
+														<label for="checkbox02-1-12" class="chk_label chk_label_ty3">
+															<span class="label_cont">조세 목적상 한국, 미국 이외의 국가에 거주 중입니다.</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="form_group_wrap">
+											<div class="form_line">
+												<div class="label_tit">거주 정보를 입력해 주세요</div>
+												<div class="form_group_wrap">
+													<div class="form_line">
+														<div class="label_tit">영문이름</div>
+														<div class="row">
+															<div class="input_text grow">
+																<div class="inp">
+																	<input type="text" placeholder="이름" maxlength="8" title="이름 입력" />
+																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																</div>
+															</div>
+															<div class="input_text grow">
+																<div class="inp">
+																	<input type="text" placeholder="성" maxlength="8" title="성 입력" />
+																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form_line">
+														<div class="label_tit">거주지 영문 주소</div>
+														<div class="textarea_wrap">
+															<textarea name="textarea1" rows="5" placeholder="해외 거주 주소지" title="해외 거주 주소지 입력"></textarea>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- s: 미국거주 Case -->
+									<li>
+										<div class="form_group_wrap">
+											<div class="form_line">
+												<div class="label_tit">조세 목적상 거주 국가 정보를 입력해 주세요</div>
+												<div class="form_card_wrap">
+													<div class="form_card_case">
+														<h3 class="title_h4">국가 정보</h3>
+														<div class="form_group_wrap">
+															<div class="form_line">
+																<div class="label_tit">국가</div>
+																<div class="input_text search">
+																	<div class="inp">
+																		<input type="search" class="autocomplete_input" placeholder="국가검색" value="미국" readonly title="국가검색 팝업열기" autocomplete="off" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+																	</div>
+																</div>
+															</div>
+															<div class="form_line">
+																<div class="label_tit">납세자 번호</div>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="text" placeholder="숫자만 입력" minlength="15" maxlength="15" title="납세자 번호 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+																</div>
+															</div>
+															<div class="form_line">
+																<div class="label_tit">납세자 번호 미입력 사유</div>
+																<div class="select_option_box">
+																	<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
+																		<option value="">미발급국가</option>
+																		<option value="">미요구국가</option>
+																		<option value="">미취득</option>
+																	</select>
+																</div>
+															</div>
+															<div class="form_line">
+																<div class="label_tit">미취득 사유 입력</div>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="text" placeholder="입력" title="미취득 사유 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
+													</div>
+													<div class="form_card_case">
+														<h3 class="title_h4">국가 정보</h3>
+														<div class="form_group_wrap">
+															<div class="form_line">
+																<div class="label_tit">국가</div>
+																<div class="input_text search">
+																	<div class="inp">
+																		<input type="search" class="autocomplete_input" placeholder="국가검색" title="국가검색 팝업열기" autocomplete="off" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+																	</div>
+																</div>
+															</div>
+															<div class="form_line">
+																<div class="label_tit">납세자 번호</div>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="text" placeholder="숫자만 입력" minlength="15" maxlength="15" title="납세자 번호 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+																</div>
+															</div>
+															<div class="form_line">
+																<div class="label_tit">납세자 번호 미입력 사유</div>
+																<div class="select_option_box">
+																	<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
+																		<option value="">미발급국가</option>
+																		<option value="">미요구국가</option>
+																		<option value="">미취득</option>
+																	</select>
+																</div>
+															</div>
+															<!-- s: 미입력 사유 미취득 선택시 노출 -->
+															<div class="form_line">
+																<div class="label_tit">미취득 사유 입력</div>
+																<div class="input_text">
+																	<div class="inp">
+																		<input type="text" placeholder="입력" title="미취득 사유 입력" />
+																		<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+																	</div>
+																</div>
+															</div>
+															<!-- e: 미입력 사유 미취득 선택시 노출 -->
+														</div>
+														<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="btn_area center basic">
+											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+												<span class="text">거주 국가 추가</span>
+												<i class="hd_icon registerSvg"></i>
+											</button>
+										</div>
+									</li>
+									<!-- e: 미국거주 Case -->
+								</ul>
+								<!-- // popup_content -->
 							</div>
-							<!-- e: popup_content_top -->
-
-							<ul class="form_list">
-								<li>
-									<div class="form_group_wrap">
-										<div class="form_line">
-											<div class="label_tit">미국 거주자에 해당하는 경우 해당 유형을 선택해 주세요</div>
-
-											<div class="radio_group_wrap_ty2 radio_group_resetable" role="radiogroup">
-												<div class="inp_radio rd_btn">
-													<input type="radio" id="radio_btn_g1" name="radio_g1" checked />
-													<label for="radio_btn_g1">
-														<span class="label_cont">시민권자<br />(이중국적자 포함)</span>
-													</label>
-												</div>
-												<div class="inp_radio rd_btn">
-													<input type="radio" id="radio_btn_g2" name="radio_g1" />
-													<label for="radio_btn_g2">
-														<span class="label_cont">영주권자</span>
-													</label>
-												</div>
-												<div class="inp_radio rd_btn">
-													<input type="radio" id="radio_btn_g3" name="radio_g1" />
-													<label for="radio_btn_g3">
-														<span class="label_cont">세법상 거주자</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="form_group_wrap">
-										<div class="form_line">
-											<div class="label_tit">기타 국가 거주 여부를 확인해 주세요</div>
-											<div class="checkbox_group_wrap">
-												<div class="inp_checkbox">
-													<input type="checkbox" id="checkbox02-1-12" />
-													<label for="checkbox02-1-12" class="chk_label chk_label_ty3">
-														<span class="label_cont">조세 목적상 한국, 미국 이외의 국가에 거주 중입니다.</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="form_group_wrap">
-										<div class="form_line">
-											<div class="label_tit">거주 정보를 입력해 주세요</div>
-											<div class="form_group_wrap">
-												<div class="form_line">
-													<div class="label_tit">영문이름</div>
-													<div class="row">
-														<div class="input_text grow">
-															<div class="inp">
-																<input type="text" placeholder="이름" maxlength="8" title="이름 입력" />
-																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-															</div>
-														</div>
-														<div class="input_text grow">
-															<div class="inp">
-																<input type="text" placeholder="성" maxlength="8" title="성 입력" />
-																<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="form_line">
-													<div class="label_tit">거주지 영문 주소</div>
-													<div class="textarea_wrap">
-														<textarea name="textarea1" rows="5" placeholder="해외 거주 주소지" title="해외 거주 주소지 입력"></textarea>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<!-- s: 미국거주 Case -->
-								<li>
-									<div class="form_group_wrap">
-										<div class="form_line">
-											<div class="label_tit">조세 목적상 거주 국가 정보를 입력해 주세요</div>
-											<div class="form_card_wrap">
-												<div class="form_card_case">
-													<h3 class="title_h4">국가 정보</h3>
-													<div class="form_group_wrap">
-														<div class="form_line">
-															<div class="label_tit">국가</div>
-															<div class="input_text search">
-																<div class="inp">
-																	<input type="search" class="autocomplete_input" placeholder="국가검색" value="미국" readonly title="국가검색 팝업열기" autocomplete="off" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-																</div>
-															</div>
-														</div>
-														<div class="form_line">
-															<div class="label_tit">납세자 번호</div>
-															<div class="input_text">
-																<div class="inp">
-																	<input type="text" placeholder="숫자만 입력" minlength="15" maxlength="15" title="납세자 번호 입력" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																</div>
-															</div>
-														</div>
-														<div class="form_line">
-															<div class="label_tit">납세자 번호 미입력 사유</div>
-															<div class="select_option_box">
-																<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
-																	<option value="">미발급국가</option>
-																	<option value="">미요구국가</option>
-																	<option value="">미취득</option>
-																</select>
-															</div>
-														</div>
-														<div class="form_line">
-															<div class="label_tit">미취득 사유 입력</div>
-															<div class="input_text">
-																<div class="inp">
-																	<input type="text" placeholder="입력" title="미취득 사유 입력" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																</div>
-															</div>
-														</div>
-													</div>
-													<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
-												</div>
-												<div class="form_card_case">
-													<h3 class="title_h4">국가 정보</h3>
-													<div class="form_group_wrap">
-														<div class="form_line">
-															<div class="label_tit">국가</div>
-															<div class="input_text search">
-																<div class="inp">
-																	<input type="search" class="autocomplete_input" placeholder="국가검색" title="국가검색 팝업열기" autocomplete="off" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-																</div>
-															</div>
-														</div>
-														<div class="form_line">
-															<div class="label_tit">납세자 번호</div>
-															<div class="input_text">
-																<div class="inp">
-																	<input type="text" placeholder="숫자만 입력" minlength="15" maxlength="15" title="납세자 번호 입력" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																</div>
-															</div>
-														</div>
-														<div class="form_line">
-															<div class="label_tit">납세자 번호 미입력 사유</div>
-															<div class="select_option_box">
-																<select name="" id="" title="납세자 번호 미입력 사유 선택" class="selectbox">
-																	<option value="">미발급국가</option>
-																	<option value="">미요구국가</option>
-																	<option value="">미취득</option>
-																</select>
-															</div>
-														</div>
-														<!-- s: 미입력 사유 미취득 선택시 노출 -->
-														<div class="form_line">
-															<div class="label_tit">미취득 사유 입력</div>
-															<div class="input_text">
-																<div class="inp">
-																	<input type="text" placeholder="입력" title="미취득 사유 입력" />
-																	<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-																</div>
-															</div>
-														</div>
-														<!-- e: 미입력 사유 미취득 선택시 노출 -->
-													</div>
-													<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="btn_area center basic">
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-											<span class="text">거주 국가 추가</span>
-											<i class="hd_icon registerSvg"></i>
-										</button>
-									</div>
-								</li>
-								<!-- e: 미국거주 Case -->
-							</ul>
-							<!-- // popup_content -->
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">입력 완료</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">입력 완료</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Full 팝업 -->
+			<!-- e: Full 팝업 -->
 
-		<!-- e: popup area -->
+			<!-- e: popup area -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

@@ -52,160 +52,162 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: popup area -->
-		<!-- s: 전문금융소비자 정보 Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type03" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">보험 심사 안내</div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="process_info_area">
-								<div class="complete_info" aria-hidden="true">
-									<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
-								</div>
-								<h2 class="process_title">
-									<strong>고객님 죄송합니다</strong>
-								</h2>
-								<div class="process_desc">
-									인터넷으로 보험료 계산/가입이 어렵습니다.<br />
-									연락처를 남기시면 상담원이 직접 연락드리겠습니다.
-								</div>
-							</div>
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">연락처</div>
-									<div class="radio_group_wrap_ty2" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="sel01_01" name="sel01" />
-											<label for="sel01_01">
-												<span class="label_cont">휴대폰</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="sel01_02" name="sel01" />
-											<label for="sel01_02">
-												<span class="label_cont">집</span>
-											</label>
-										</div>
+			<!-- s: popup area -->
+			<!-- s: 전문금융소비자 정보 Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type03" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">보험 심사 안내</div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="process_info_area">
+									<div class="complete_info" aria-hidden="true">
+										<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
 									</div>
-									<!-- s: 휴대폰 -->
+									<h2 class="process_title">
+										<strong>고객님 죄송합니다</strong>
+									</h2>
+									<div class="process_desc">
+										인터넷으로 보험료 계산/가입이 어렵습니다.<br />
+										연락처를 남기시면 상담원이 직접 연락드리겠습니다.
+									</div>
+								</div>
+								<div class="form_group_wrap">
 									<div class="form_line">
-										<div class="input_text phone">
-											<div class="int_txt left">010</div>
-											<div class="inp">
-												<input type="tel" placeholder="-없이 숫자만 입력" maxlength="8" title="휴대폰번호 입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										<div class="label_tit">연락처</div>
+										<div class="radio_group_wrap_ty2" role="radiogroup">
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="sel01_01" name="sel01" />
+												<label for="sel01_01">
+													<span class="label_cont">휴대폰</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="sel01_02" name="sel01" />
+												<label for="sel01_02">
+													<span class="label_cont">집</span>
+												</label>
 											</div>
 										</div>
-									</div>
-									<!-- e: 휴대폰 -->
-
-									<!-- s: 집 -->
-									<div class="row phone_case">
-										<div class="form_line fix_w_case02">
-											<div class="select_option_box">
-												<select name="" id="" title="국번 선택 선택" class="selectbox">
-													<option value="" selected>02</option>
-													<option value="">031</option>
-													<option value="">032</option>
-													<option value="">053</option>
-												</select>
-											</div>
-										</div>
-										<div class="form_line grow">
-											<div class="input_text">
+										<!-- s: 휴대폰 -->
+										<div class="form_line">
+											<div class="input_text phone">
+												<div class="int_txt left">010</div>
 												<div class="inp">
-													<input type="tel" placeholder="-없이 숫자만 입력" title="휴대폰번호 입력" />
+													<input type="tel" placeholder="-없이 숫자만 입력" maxlength="8" title="휴대폰번호 입력" />
 													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 												</div>
 											</div>
 										</div>
+										<!-- e: 휴대폰 -->
+
+										<!-- s: 집 -->
+										<div class="row phone_case">
+											<div class="form_line fix_w_case02">
+												<div class="select_option_box">
+													<select name="" id="" title="국번 선택 선택" class="selectbox">
+														<option value="" selected>02</option>
+														<option value="">031</option>
+														<option value="">032</option>
+														<option value="">053</option>
+													</select>
+												</div>
+											</div>
+											<div class="form_line grow">
+												<div class="input_text">
+													<div class="inp">
+														<input type="tel" placeholder="-없이 숫자만 입력" title="휴대폰번호 입력" />
+														<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- e: 집 -->
 									</div>
-									<!-- e: 집 -->
-								</div>
-								<div class="form_line">
-									<div class="checkbox_group_wrap column">
-										<div class="inp_checkbox rd_box">
-											<input type="checkbox" id="checkbox01-01" />
-											<label for="checkbox01-01" class="chk_label chk_label_ty3">
-												<span class="label_cont">수집·이용 동의<span class="sub_g_txt">상담전화 신청을 위한 연락처 수집·이용에 동의합니다. 수집정보는 상담 목적 외 용도로 이용되지 않습니다.</span></span>
-											</label>
+									<div class="form_line">
+										<div class="checkbox_group_wrap column">
+											<div class="inp_checkbox rd_box">
+												<input type="checkbox" id="checkbox01-01" />
+												<label for="checkbox01-01" class="chk_label chk_label_ty3">
+													<span class="label_cont">수집·이용 동의<span class="sub_g_txt">상담전화 신청을 위한 연락처 수집·이용에 동의합니다. 수집정보는 상담 목적 외 용도로 이용되지 않습니다.</span></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form_line">
+										<div class="btn_area">
+											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+												<span class="text">상담전화 신청</span>
+											</button>
 										</div>
 									</div>
 								</div>
-								<div class="form_line">
-									<div class="btn_area">
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-											<span class="text">상담전화 신청</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="info_gray ty2">
-								<div class="center_info">
-									<h4 class="title_h4">현대해상 다이렉트 고객센터</h4>
-									<div class="line1">
-										<div class="line1_item">
-											<strong class="tel">1899-6782</strong>
-										</div>
-										<div class="line1_item">
-											<span class="cit">평일 9시~ 18시</span>
+								<div class="info_gray ty2">
+									<div class="center_info">
+										<h4 class="title_h4">현대해상 다이렉트 고객센터</h4>
+										<div class="line1">
+											<div class="line1_item">
+												<strong class="tel">1899-6782</strong>
+											</div>
+											<div class="line1_item">
+												<span class="cit">평일 9시~ 18시</span>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<span class="text">홈으로</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">계속 진행하기</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">홈으로</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">계속 진행하기</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 전문금융소비자 정보 Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">국번 선택</div>
-					</div>
+			<!-- e: 전문금융소비자 정보 Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type3" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">국번 선택</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">02</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">031</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">032</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">053</span></div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">02</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">031</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">032</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">053</span></div>
+								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: popup area -->
+			<!-- e: popup area -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

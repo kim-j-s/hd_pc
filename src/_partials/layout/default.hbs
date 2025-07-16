@@ -6,10 +6,11 @@
 	<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 	</head>
   <body>
+		<div id="wrap" class="wrap">
 			{{#unless no-skip}}
 			<ul id="skipNavi" class="skipNavi">
 				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#container">본문바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
 			</ul>
 			{{/unless}}
 			{{> @partial-block }}
@@ -18,5 +19,6 @@
 				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
 			{{/unless}}
+		</div>
   </body>
 </html>

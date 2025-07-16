@@ -52,663 +52,668 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">전계약 사진</div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: 25-06-02 수정 -->
-							<div class="space_list_ty2">
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head active">
-										<button type="button" class="acd_btn" aria-expanded="true">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">차량번호판 사진</span>
-												</span>
-												<!-- s: 등록한 이미지 있을 시 -->
-												<!-- <span class="preview" aria-hidden="true">
+			<!-- s: Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">전계약 사진</div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: 25-06-02 수정 -->
+								<div class="space_list_ty2">
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head active">
+											<button type="button" class="acd_btn" aria-expanded="true">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">차량번호판 사진</span>
+													</span>
+													<!-- s: 등록한 이미지 있을 시 -->
+													<!-- <span class="preview" aria-hidden="true">
 														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_01.png" alt="등록한 차량번호판 장착 사진">
 													</span> -->
-												<!-- e: 등록한 이미지 있을 시 -->
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner" style="display: block">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<!-- 사진 1개 전계약 이미지가 있는 경우 -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<div class="swiper">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<img src="../../../images/temp/img_carmera_temp.png" alt="등록한 차량번호판 이미지" />
-															</div>
-															<div class="swiper-slide">
-																<img src="../../../images/temp/img_certify_card_temp.png" alt="등록한 차량번호판 이미지" />
-															</div>
-															<div class="swiper-slide">
-																<img src="../../../images/temp/img_carmera_temp.png" alt="등록한 차량번호판 이미지" />
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-pagination sp_ty1"></div>
-												<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
-												<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-											<!-- 사진 1개 전계약 이미지가 있는 경우 -->
-
-											<!-- 전계약에 등록된 사진이 없을 경우 -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<div class="no_list_area">
-														<i class="hd_icon exclamationSvg"></i>
-														<p>전계약에 등록된 사진이 없습니다.</p>
-													</div>
-												</div>
-											</div>
-											<!-- 전계약에 등록된 사진이 없을 경우 -->
+													<!-- e: 등록한 이미지 있을 시 -->
+												</span>
+												<span>상세보기</span>
+											</button>
 										</div>
-									</div>
-								</div>
-
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="badge_wrap">
-														<span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
-													</span>
-													<span class="title">블랙박스 장착 사진</span>
-												</span>
-												<!-- s: 등록한 이미지 있을 시 -->
-												<span class="preview" aria-hidden="true">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 블랙박스 장착 사진" />
-												</span>
-												<!-- e: 등록한 이미지 있을 시 -->
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<div class="swiper">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 블랙박스 장착 이미지" />
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-pagination sp_ty1"></div>
-												<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
-												<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															<!-- s: 25-06-02 수정 -->
-															사진 선택
-															<!-- e: 25-06-02 수정 -->
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- 선택완료인 경우 & 사진2개인경우 -->
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="badge_wrap">
-														<span class="hd_badge outline solid_pastel c_primary size_m">선택완료</span>
-													</span>
-													<span class="title">차선이탈 경고장치 장착 사진</span>
-												</span>
-												<!-- s: 등록한 이미지 있을 시 -->
-												<div class="preview_item">
-													<span class="preview" aria-hidden="true">
-														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="선택한 차선이탈 경고장치 장착 사진" />
-													</span>
-													<span class="preview" aria-hidden="true">
-														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="선택한 차선이탈 경고장치 장착 사진" />
-													</span>
-												</div>
-												<!-- e: 등록한 이미지 있을 시 -->
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_03_before.png" alt="등록 전 차선이탈 경고장치 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															<!-- s: 25-06-02 수정 -->
-															사진 선택
-															<!-- e: 25-06-02 수정 -->
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- 선택완료인 경우 & 사진2개인경우 -->
-
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">전방충돌 경고장치 장착 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_04_before.png" alt="등록 전 전방충돌 경고장치 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">후측방충돌 경고장치 장착 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_05_before.png" alt="등록 전 후측방충돌 경고장치 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">HUD(Head Up Display) 장착 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_06_before.png" alt="등록 전 HUD(Head Up Display) 장착 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">AVM(Around View Monitor) 장착 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_07_before.png" alt="등록 전 AVM(Around View Monitor) 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">SCC(Smart Cruise Control) 장착 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_08_before.png" alt="등록 전 SCC(Smart Cruise Control) 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- 사진 2개 전계약 이미지가 있는 경우 -->
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">가족관계 입증 서류 사진</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<div class="space_list_ty5">
-												<div>
-													<p class="title_h5">가족관계 입증 서류</p>
-													<!-- s: 이미지 파일 붙는 영역 -->
-													<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-													<div class="file_attach_box">
-														<div class="file_thumbnail">
-															<div class="swiper">
-																<div class="swiper-wrapper">
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_carmera_temp.png" alt="가족관계 입증 서류 이미지" />
-																	</div>
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_certify_card_temp.png" alt="가족관계 입증 서류 이미지" />
-																	</div>
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_carmera_temp.png" alt="가족관계 입증 서류 이미지" />
-																	</div>
+										<div class="acd_cont">
+											<div class="inner" style="display: block">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<!-- 사진 1개 전계약 이미지가 있는 경우 -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<div class="swiper">
+															<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																	<img src="../../../images/temp/img_carmera_temp.png" alt="등록한 차량번호판 이미지" />
+																</div>
+																<div class="swiper-slide">
+																	<img src="../../../images/temp/img_certify_card_temp.png" alt="등록한 차량번호판 이미지" />
+																</div>
+																<div class="swiper-slide">
+																	<img src="../../../images/temp/img_carmera_temp.png" alt="등록한 차량번호판 이미지" />
 																</div>
 															</div>
 														</div>
-														<div class="swiper-pagination sp_ty1"></div>
-														<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
-														<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
 													</div>
+													<div class="swiper-pagination sp_ty1"></div>
+													<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
+													<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
+												</div>
 
-													<div class="btn_area center">
-														<div class="file_btn">
-															<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-															<label for="file">
-																<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-																	<i class="hd_icon pictureSvg"></i>
-																	사진 선택
-																</span>
-															</label>
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+												<!-- 사진 1개 전계약 이미지가 있는 경우 -->
+
+												<!-- 전계약에 등록된 사진이 없을 경우 -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<div class="no_list_area">
+															<i class="hd_icon exclamationSvg"></i>
+															<p>전계약에 등록된 사진이 없습니다.</p>
 														</div>
 													</div>
 												</div>
+												<!-- 전계약에 등록된 사진이 없을 경우 -->
+											</div>
+										</div>
+									</div>
 
-												<div>
-													<p class="title_h5">임신확인서</p>
-													<div class="file_attach_box">
-														<div class="file_thumbnail">
-															<div class="swiper">
-																<div class="swiper-wrapper">
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_carmera_temp.png" alt="임신확인서 이미지" />
-																	</div>
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_certify_card_temp.png" alt="임신확인서 이미지" />
-																	</div>
-																	<div class="swiper-slide">
-																		<img src="../../../images/temp/img_carmera_temp.png" alt="임신확인서 이미지" />
-																	</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="badge_wrap">
+															<span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
+														</span>
+														<span class="title">블랙박스 장착 사진</span>
+													</span>
+													<!-- s: 등록한 이미지 있을 시 -->
+													<span class="preview" aria-hidden="true">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 블랙박스 장착 사진" />
+													</span>
+													<!-- e: 등록한 이미지 있을 시 -->
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<div class="swiper">
+															<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																	<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="등록한 블랙박스 장착 이미지" />
 																</div>
 															</div>
 														</div>
-														<div class="swiper-pagination sp_ty1"></div>
-														<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
-														<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
 													</div>
+													<div class="swiper-pagination sp_ty1"></div>
+													<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
+													<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
+												</div>
 
-													<div class="btn_area center">
-														<div class="file_btn">
-															<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-															<label for="file">
-																<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-																	<i class="hd_icon pictureSvg"></i>
-																	사진 선택
-																</span>
-															</label>
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																<!-- s: 25-06-02 수정 -->
+																사진 선택
+																<!-- e: 25-06-02 수정 -->
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 선택완료인 경우 & 사진2개인경우 -->
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="badge_wrap">
+															<span class="hd_badge outline solid_pastel c_primary size_m">선택완료</span>
+														</span>
+														<span class="title">차선이탈 경고장치 장착 사진</span>
+													</span>
+													<!-- s: 등록한 이미지 있을 시 -->
+													<div class="preview_item">
+														<span class="preview" aria-hidden="true">
+															<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="선택한 차선이탈 경고장치 장착 사진" />
+														</span>
+														<span class="preview" aria-hidden="true">
+															<img src="../../../images/content/mtps/img_MPRMTPS10005010000_02.png" alt="선택한 차선이탈 경고장치 장착 사진" />
+														</span>
+													</div>
+													<!-- e: 등록한 이미지 있을 시 -->
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_03_before.png" alt="등록 전 차선이탈 경고장치 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																<!-- s: 25-06-02 수정 -->
+																사진 선택
+																<!-- e: 25-06-02 수정 -->
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 선택완료인 경우 & 사진2개인경우 -->
+
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">전방충돌 경고장치 장착 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_04_before.png" alt="등록 전 전방충돌 경고장치 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">후측방충돌 경고장치 장착 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_05_before.png" alt="등록 전 후측방충돌 경고장치 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">HUD(Head Up Display) 장착 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_06_before.png" alt="등록 전 HUD(Head Up Display) 장착 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">AVM(Around View Monitor) 장착 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_07_before.png" alt="등록 전 AVM(Around View Monitor) 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">SCC(Smart Cruise Control) 장착 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_08_before.png" alt="등록 전 SCC(Smart Cruise Control) 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 사진 2개 전계약 이미지가 있는 경우 -->
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">가족관계 입증 서류 사진</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<div class="space_list_ty5">
+													<div>
+														<p class="title_h5">가족관계 입증 서류</p>
+														<!-- s: 이미지 파일 붙는 영역 -->
+														<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+														<div class="file_attach_box">
+															<div class="file_thumbnail">
+																<div class="swiper">
+																	<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_carmera_temp.png" alt="가족관계 입증 서류 이미지" />
+																		</div>
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_certify_card_temp.png" alt="가족관계 입증 서류 이미지" />
+																		</div>
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_carmera_temp.png" alt="가족관계 입증 서류 이미지" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="swiper-pagination sp_ty1"></div>
+															<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
+															<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
 														</div>
-													</div>
 
-													<!-- 전계약에 등록된 사진이 없을 경우 -->
-													<div class="file_attach_box">
-														<div class="file_thumbnail">
-															<div class="no_list_area">
-																<i class="hd_icon exclamationSvg"></i>
-																<p>전계약에 등록된 사진이 없습니다.</p>
+														<div class="btn_area center">
+															<div class="file_btn">
+																<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+																<label for="file">
+																	<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																		<i class="hd_icon pictureSvg"></i>
+																		사진 선택
+																	</span>
+																</label>
 															</div>
 														</div>
 													</div>
-													<!-- 전계약에 등록된 사진이 없을 경우 -->
+
+													<div>
+														<p class="title_h5">임신확인서</p>
+														<div class="file_attach_box">
+															<div class="file_thumbnail">
+																<div class="swiper">
+																	<div class="swiper-wrapper">
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_carmera_temp.png" alt="임신확인서 이미지" />
+																		</div>
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_certify_card_temp.png" alt="임신확인서 이미지" />
+																		</div>
+																		<div class="swiper-slide">
+																			<img src="../../../images/temp/img_carmera_temp.png" alt="임신확인서 이미지" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="swiper-pagination sp_ty1"></div>
+															<button class="swiper_button sbc_04 sbs_02 swiper_button_left"></button>
+															<button class="swiper_button sbc_04 sbs_02 swiper_button_right"></button>
+														</div>
+
+														<div class="btn_area center">
+															<div class="file_btn">
+																<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+																<label for="file">
+																	<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																		<i class="hd_icon pictureSvg"></i>
+																		사진 선택
+																	</span>
+																</label>
+															</div>
+														</div>
+
+														<!-- 전계약에 등록된 사진이 없을 경우 -->
+														<div class="file_attach_box">
+															<div class="file_thumbnail">
+																<div class="no_list_area">
+																	<i class="hd_icon exclamationSvg"></i>
+																	<p>전계약에 등록된 사진이 없습니다.</p>
+																</div>
+															</div>
+														</div>
+														<!-- 전계약에 등록된 사진이 없을 경우 -->
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- 사진 2개 전계약 이미지가 있는 경우 -->
+									<!-- 사진 2개 전계약 이미지가 있는 경우 -->
 
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">커넥티드카 가입확인서 사진</span>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">커넥티드카 가입확인서 사진</span>
+													</span>
 												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<p class="text_sub">커넥티드카 할인특약 가입을 위한 사진을 등록해 주세요.</p>
-											<div class="inp_checkbox">
-												<input type="checkbox" id="checkbox1-10" />
-												<label for="checkbox1-10" class="chk_label chk_label_ty3">
-													<span class="label_cont">할인특약 제외</span>
-												</label>
-											</div>
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_10_before.png" alt="등록 전 커넥티드카 가입확인서 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															<!-- s: 25-06-02 수정 -->
-															사진 선택
-															<!-- e: 25-06-02 수정 -->
-														</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">커넥티드카 할인특약 가입을 위한 사진을 등록해 주세요.</p>
+												<div class="inp_checkbox">
+													<input type="checkbox" id="checkbox1-10" />
+													<label for="checkbox1-10" class="chk_label chk_label_ty3">
+														<span class="label_cont">할인특약 제외</span>
 													</label>
 												</div>
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_10_before.png" alt="등록 전 커넥티드카 가입확인서 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																<!-- s: 25-06-02 수정 -->
+																사진 선택
+																<!-- e: 25-06-02 수정 -->
+															</span>
+														</label>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">교통안전교육 수료(이수) 증</span>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">교통안전교육 수료(이수) 증</span>
+													</span>
 												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<p class="text_sub">안전교육 할인특약 가입을 위한 사진을 등록해 주세요.</p>
-											<div class="inp_checkbox">
-												<input type="checkbox" id="checkbox1-11" />
-												<label for="checkbox1-11" class="chk_label chk_label_ty3">
-													<span class="label_cont">할인특약 제외</span>
-												</label>
-											</div>
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_11_before.png" alt="등록 전 교통안전교육 수료(이수) 증 예시 이미지" />
-												</div>
-											</div>
-
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<p class="text_sub">안전교육 할인특약 가입을 위한 사진을 등록해 주세요.</p>
+												<div class="inp_checkbox">
+													<input type="checkbox" id="checkbox1-11" />
+													<label for="checkbox1-11" class="chk_label chk_label_ty3">
+														<span class="label_cont">할인특약 제외</span>
 													</label>
 												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">장애인등록증, 국가유공자확인서 중 택1</span>
-												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_12_before.png" alt="등록 전 장애인등록증, 국가유공자확인서 중 예시 이미지" />
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_11_before.png" alt="등록 전 교통안전교육 수료(이수) 증 예시 이미지" />
+													</div>
 												</div>
-											</div>
 
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="acd_item acd_item_ty2">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false">
-											<span class="picture_info_top">
-												<span class="status">
-													<span class="title">어린이 통학버스 신고증명서</span>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">장애인등록증, 국가유공자확인서 중 택1</span>
+													</span>
 												</span>
-											</span>
-											<span>상세보기</span>
-										</button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/mtps/img_MPRMTPS10005010000_13_before.png" alt="등록 전 어린이 통학버스 신고증명서 예시 이미지" />
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_12_before.png" alt="등록 전 장애인등록증, 국가유공자확인서 중 예시 이미지" />
+													</div>
+												</div>
+
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
 												</div>
 											</div>
+										</div>
+									</div>
+									<div class="acd_item acd_item_ty2">
+										<div class="acd_head">
+											<button type="button" class="acd_btn" aria-expanded="false">
+												<span class="picture_info_top">
+													<span class="status">
+														<span class="title">어린이 통학버스 신고증명서</span>
+													</span>
+												</span>
+												<span>상세보기</span>
+											</button>
+										</div>
+										<div class="acd_cont">
+											<div class="inner">
+												<!-- s: 이미지 파일 붙는 영역 -->
+												<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+												<div class="file_attach_box">
+													<div class="file_thumbnail">
+														<img src="../../../images/content/mtps/img_MPRMTPS10005010000_13_before.png" alt="등록 전 어린이 통학버스 신고증명서 예시 이미지" />
+													</div>
+												</div>
 
-											<div class="btn_area center">
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-															<i class="hd_icon pictureSvg"></i>
-															사진 선택
-														</span>
-													</label>
+												<div class="btn_area center">
+													<div class="file_btn">
+														<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+														<label for="file">
+															<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+																<i class="hd_icon pictureSvg"></i>
+																사진 선택
+															</span>
+														</label>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								<!-- e: 25-06-02 수정 -->
 							</div>
-							<!-- e: 25-06-02 수정 -->
 						</div>
-					</div>
 
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
-								<span class="text">취소</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-								<span class="text">적용</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<!-- s: 25-07-15 수정 -->
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">취소</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">적용</span>
+								</button>
+								<!-- e: 25-07-15 수정 -->
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Full 팝업 -->
+			<!-- e: Full 팝업 -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>
+
 <script>
 	$(document).ready(function () {
 		$(".file_attach_box").each(function (idx) {
