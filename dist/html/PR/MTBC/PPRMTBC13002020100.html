@@ -52,48 +52,50 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
-		<!-- s: popup area -->
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">가입기간 설정 안내</div>
-					</div>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
+			<!-- s: popup area -->
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">가입기간 설정 안내</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="info_cont">
-								<p>
-									「유상운송 배달 및 비유상운송 배달」 용도의 경우에만 보험기간 1년 미만으로 선택가능하며, <strong>「가정용 및 기타」 용도의 경우 보험기간 1년으로만 진행 가능합니다.</strong><br />
-									계속 진행하시겠습니까?
-								</p>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="info_cont">
+									<p>
+										「유상운송 배달 및 비유상운송 배달」 용도의 경우에만 보험기간 1년 미만으로 선택가능하며, <strong>「가정용 및 기타」 용도의 경우 보험기간 1년으로만 진행 가능합니다.</strong><br />
+										계속 진행하시겠습니까?
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<span class="text">아니오</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">예</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">아니오</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">예</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Bottom 팝업 -->
-		<!-- e: popup area -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: Bottom 팝업 -->
+			<!-- e: popup area -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

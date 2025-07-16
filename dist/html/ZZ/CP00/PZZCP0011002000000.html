@@ -56,192 +56,194 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">주소 찾기</div>
-					</div>
-					<div class="popup_cont search_list_type2">
-						<div class="tab_wrap">
-							<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">도로명</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">지번</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel03" id="tab03">건물명</button></div>
+			<!-- s: Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">주소 찾기</div>
+						</div>
+						<div class="popup_cont search_list_type2">
+							<div class="tab_wrap">
+								<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">도로명</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">지번</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel03" id="tab03">건물명</button></div>
 
-							<!-- s: tab01. 도로명 찾기 Tab 내용 -->
-							<div class="tab_wrap_content has_scroll active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-								<div class="search_inp_box">
-									<div class="input_text search">
-										<div class="inp">
-											<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+								<!-- s: tab01. 도로명 찾기 Tab 내용 -->
+								<div class="tab_wrap_content has_scroll active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
+									<div class="search_inp_box">
+										<div class="input_text search">
+											<div class="inp">
+												<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+											</div>
 										</div>
+										<p class="info_message">도로 + 건물번(예: 세종로 178)</p>
 									</div>
-									<p class="info_message">도로 + 건물번(예: 세종로 178)</p>
-								</div>
 
-								<!-- s: 도로명 검색 결과 리스트 -->
-								<div class="title_h3 search_head_tit">
-									<strong>도로명/건물명</strong>
-									<a href="javascript:void(0)" class="btn_link prev_btn" title="이전 선택지로 이동">
-										<span class="text">이전</span>
-									</a>
-								</div>
+									<!-- s: 도로명 검색 결과 리스트 -->
+									<div class="title_h3 search_head_tit">
+										<strong>도로명/건물명</strong>
+										<a href="javascript:void(0)" class="btn_link prev_btn" title="이전 선택지로 이동">
+											<span class="text">이전</span>
+										</a>
+									</div>
 
-								<div class="search_reult_list_container">
-									<!-- 데이터가 없는 경우 no_data 클래스 추가
+									<div class="search_reult_list_container">
+										<!-- 데이터가 없는 경우 no_data 클래스 추가
 									<div class="search_reult_list_container no_data">
 									-->
-									<ul class="search_reult_list">
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">세종대로</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">세종대로21길</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">세종대로23길</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<div class="no_list_area">
-												<i class="hd_icon exclamationSvg"></i>
-												<p>내역이 없어요</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-
-								<!-- e: 도로명 검색 결과 리스트 -->
-							</div>
-							<!-- e: tab01. 검색어로 찾기 Tab 내용 -->
-
-							<!-- s: tab02. 지번 찾기 Tab 내용 -->
-							<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-								<!-- 검색어를 submit 했을 때 search_on클래스 추가, 검색어 클리어시에 search_on클래스 제거 -->
-								<div class="search_inp_box">
-									<div class="input_text search">
-										<div class="inp">
-											<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-										</div>
+										<ul class="search_reult_list">
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">세종대로</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">세종대로21길</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">세종대로23길</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<div class="no_list_area">
+													<i class="hd_icon exclamationSvg"></i>
+													<p>내역이 없어요</p>
+												</div>
+											</li>
+										</ul>
 									</div>
-									<p class="info_message">찾고 싶으신 동/면/읍/리 + 번지를 입력해 주세요. <br />(예: 당주동)</p>
-								</div>
 
-								<!-- s: 지번 검색 결과 리스트 -->
-								<div class="search_result_count">
-									<p>검색결과 <strong class="point">2,117</strong>건</p>
+									<!-- e: 도로명 검색 결과 리스트 -->
 								</div>
-								<div class="search_reult_list_container">
-									<ul class="search_reult_list">
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<div class="no_list_area">
-												<i class="hd_icon exclamationSvg"></i>
-												<p>내역이 없어요</p>
+								<!-- e: tab01. 검색어로 찾기 Tab 내용 -->
+
+								<!-- s: tab02. 지번 찾기 Tab 내용 -->
+								<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+									<!-- 검색어를 submit 했을 때 search_on클래스 추가, 검색어 클리어시에 search_on클래스 제거 -->
+									<div class="search_inp_box">
+										<div class="input_text search">
+											<div class="inp">
+												<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 											</div>
-										</li>
-									</ul>
-								</div>
-								<!-- e: 지번 검색 결과 리스트 -->
-							</div>
-							<!-- e: tab02. 지번 찾기 Tab 내용 -->
-
-							<!-- s: tab03. 건물명 찾기 Tab 내용 -->
-							<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
-								<!-- 검색어를 submit 했을 때 search_on클래스 추가, 검색어 클리어시에 search_on클래스 제거 -->
-								<div class="search_inp_box">
-									<div class="input_text search">
-										<div class="inp">
-											<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 										</div>
+										<p class="info_message">찾고 싶으신 동/면/읍/리 + 번지를 입력해 주세요. <br />(예: 당주동)</p>
 									</div>
-									<p class="info_message">찾고 싶으신 건물명 아파트명을 입력해 주세요.<br />(예: 현대해상빌딩)</p>
-								</div>
 
-								<!-- s: 도로명 검색 결과 리스트 -->
-								<div class="search_result_count">
-									<p>검색결과 <strong class="point">2,117</strong>건</p>
+									<!-- s: 지번 검색 결과 리스트 -->
+									<div class="search_result_count">
+										<p>검색결과 <strong class="point">2,117</strong>건</p>
+									</div>
+									<div class="search_reult_list_container">
+										<ul class="search_reult_list">
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<div class="no_list_area">
+													<i class="hd_icon exclamationSvg"></i>
+													<p>내역이 없어요</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- e: 지번 검색 결과 리스트 -->
 								</div>
-								<div class="search_reult_list_container">
-									<ul class="search_reult_list">
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
-										</li>
-										<li class="search_reult_list_item">
-											<div class="no_list_area">
-												<i class="hd_icon exclamationSvg"></i>
-												<p>내역이 없어요</p>
+								<!-- e: tab02. 지번 찾기 Tab 내용 -->
+
+								<!-- s: tab03. 건물명 찾기 Tab 내용 -->
+								<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanel03">
+									<!-- 검색어를 submit 했을 때 search_on클래스 추가, 검색어 클리어시에 search_on클래스 제거 -->
+									<div class="search_inp_box">
+										<div class="input_text search">
+											<div class="inp">
+												<input type="search" placeholder="입력해 주세요." title="검색어 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 											</div>
-										</li>
-									</ul>
+										</div>
+										<p class="info_message">찾고 싶으신 건물명 아파트명을 입력해 주세요.<br />(예: 현대해상빌딩)</p>
+									</div>
+
+									<!-- s: 도로명 검색 결과 리스트 -->
+									<div class="search_result_count">
+										<p>검색결과 <strong class="point">2,117</strong>건</p>
+									</div>
+									<div class="search_reult_list_container">
+										<ul class="search_reult_list">
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<a href="#"><span class="item_text">12345</span><span class="item_text">서울 종로구 당주동</span></a>
+											</li>
+											<li class="search_reult_list_item">
+												<div class="no_list_area">
+													<i class="hd_icon exclamationSvg"></i>
+													<p>내역이 없어요</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- e: 도로명 검색 결과 리스트 -->
 								</div>
-								<!-- e: 도로명 검색 결과 리스트 -->
-							</div>
-							<!-- e: tab03. 건물명 찾기 Tab 내용 -->
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: Full 팝업 -->
-
-		<!-- s: popup area -->
-		<!-- s: selpop -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">피보험자와 계약자 과계</div>
-					</div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">관리직(사무직)</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">직업1</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">직업2</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">직업3</span></div>
+								<!-- e: tab03. 건물명 찾기 Tab 내용 -->
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: selpop -->
+			<!-- e: Full 팝업 -->
 
-		<!-- e: popup area -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- s: popup area -->
+			<!-- s: selpop -->
+			<div class="popup_wrap popup_wrap_type3" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">피보험자와 계약자 과계</div>
+						</div>
+
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">관리직(사무직)</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">직업1</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">직업2</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">직업3</span></div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<!-- e: selpop -->
+
+			<!-- e: popup area -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

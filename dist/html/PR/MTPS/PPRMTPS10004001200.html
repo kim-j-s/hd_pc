@@ -57,49 +57,51 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
-		<!-- s: popup area -->
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">보험다모아 계산내역 확인</div>
-					</div>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
+			<!-- s: popup area -->
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">보험다모아 계산내역 확인</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="info_cont">
-								<div class="img_area">
-									<img src="" alt="이미지 영역" />
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="info_cont">
+									<div class="img_area">
+										<img src="" alt="이미지 영역" />
+									</div>
+									<ul class="list_depth">
+										<li>보험다모아에서 설계하신 차량의 자동차보험 계산내역을 바로 안내해 드립니다.</li>
+										<li>보험다모아에서는 표준화된 가입조건을 기준으로 보험료를 산출하였으므로, <strong>확인하신 보험료는 실제 보험료와 차이가 발생할 수 있습니다.</strong></li>
+										<li>또한 동일증권이 미반영된 설계이므로 동일증권 가입을 원하시면 차량정보 단계로 이동하셔서 설계를 수정해주시기 바랍니다.</li>
+									</ul>
 								</div>
-								<ul class="list_depth">
-									<li>보험다모아에서 설계하신 차량의 자동차보험 계산내역을 바로 안내해 드립니다.</li>
-									<li>보험다모아에서는 표준화된 가입조건을 기준으로 보험료를 산출하였으므로, <strong>확인하신 보험료는 실제 보험료와 차이가 발생할 수 있습니다.</strong></li>
-									<li>또한 동일증권이 미반영된 설계이므로 동일증권 가입을 원하시면 차량정보 단계로 이동하셔서 설계를 수정해주시기 바랍니다.</li>
-								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Bottom 팝업 -->
-		<!-- e: popup area -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: Bottom 팝업 -->
+			<!-- e: popup area -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

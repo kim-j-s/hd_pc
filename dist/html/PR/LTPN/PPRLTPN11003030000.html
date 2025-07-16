@@ -52,62 +52,64 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">연금저축한도 부족</div>
-					</div>
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">연금저축한도 부족</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<p class="bpop_sub_title">
-								연간저축금액이 연금저축 잔여 한도보다 많습니다.<br />
-								아래 잔여 한도에 맞게 금액을 조정해주세요.
-							</p>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<p class="bpop_sub_title">
+									연간저축금액이 연금저축 잔여 한도보다 많습니다.<br />
+									아래 잔여 한도에 맞게 금액을 조정해주세요.
+								</p>
 
-							<div class="info_cont">
-								<div class="info_gray">
-									<dl>
-										<dt>연간 한도</dt>
-										<dd>18,000,000원</dd>
-									</dl>
-									<dl>
-										<dt>연간저축금액</dt>
-										<dd>6,000,000원</dd>
-									</dl>
-									<dl>
-										<dt>잔여 한도</dt>
-										<dd><strong class="point">1,200,000원</strong></dd>
-									</dl>
+								<div class="info_cont">
+									<div class="info_gray">
+										<dl>
+											<dt>연간 한도</dt>
+											<dd>18,000,000원</dd>
+										</dl>
+										<dl>
+											<dt>연간저축금액</dt>
+											<dd>6,000,000원</dd>
+										</dl>
+										<dl>
+											<dt>잔여 한도</dt>
+											<dd><strong class="point">1,200,000원</strong></dd>
+										</dl>
+									</div>
+									<ul class="list_ty2">
+										<li>연금저축은 모든 금융기관의 연금계좌(연금저축계좌, 퇴직연금계좌)를 합산해 연간 1,800만원까지만 납입하실 수 있습니다.</li>
+									</ul>
 								</div>
-								<ul class="list_ty2">
-									<li>연금저축은 모든 금융기관의 연금계좌(연금저축계좌, 퇴직연금계좌)를 합산해 연간 1,800만원까지만 납입하실 수 있습니다.</li>
-								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area right">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">금액 변경하기</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area right">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">금액 변경하기</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Bottom 팝업 -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: Bottom 팝업 -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

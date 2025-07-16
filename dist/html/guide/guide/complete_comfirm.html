@@ -52,38 +52,40 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
-		<!-- s: popup_confirm -->
-		<div class="popup_wrap popup_wrap_type2 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head"></div>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
+			<!-- s: popup_confirm -->
+			<div class="popup_wrap popup_wrap_type2 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head"></div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<p class="info_text">popup_confirm 내용 입력<br />popup_confirm 내용 입력</p>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<p class="info_text">popup_confirm 내용 입력<br />popup_confirm 내용 입력</p>
+							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-								<span class="text">취소</span>
-							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+									<span class="text">취소</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- e: popup_confirm -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: popup_confirm -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

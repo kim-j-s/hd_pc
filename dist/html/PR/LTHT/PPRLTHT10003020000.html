@@ -52,92 +52,94 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: popup area -->
+			<!-- s: popup area -->
 
-		<!-- s: 가입조건 변경 팝업 -->
+			<!-- s: 가입조건 변경 팝업 -->
 
-		<div class="popup_wrap popup_wrap_type4 active" id="pb1" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pb1');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">변경할 가입조건 선택</div>
-					</div>
+			<div class="popup_wrap popup_wrap_type4 active" id="pb1" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pb1');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">변경할 가입조건 선택</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">보험/납입기간</div>
-									<div class="radio_group_wrap_ty3" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g1" name="radio_g1" />
-											<label for="radio_btn_g1">
-												<span class="label_cont">5년</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g2" name="radio_g1" />
-											<label for="radio_btn_g2">
-												<span class="label_cont">10년</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g3" name="radio_g1" />
-											<label for="radio_btn_g3">
-												<span class="label_cont">15년</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g4" name="radio_g1" checked />
-											<label for="radio_btn_g4">
-												<span class="label_cont">20년</span>
-											</label>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="form_group_wrap">
+									<div class="form_line">
+										<div class="label_tit">보험/납입기간</div>
+										<div class="radio_group_wrap_ty3" role="radiogroup">
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g1" name="radio_g1" />
+												<label for="radio_btn_g1">
+													<span class="label_cont">5년</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g2" name="radio_g1" />
+												<label for="radio_btn_g2">
+													<span class="label_cont">10년</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g3" name="radio_g1" />
+												<label for="radio_btn_g3">
+													<span class="label_cont">15년</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g4" name="radio_g1" checked />
+												<label for="radio_btn_g4">
+													<span class="label_cont">20년</span>
+												</label>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">납입방법</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio01-1" name="radio01" />
-											<label for="radio01-1">
-												<span class="label_cont">매월 보험료 내기</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio01-2" name="radio01" />
-											<label for="radio01-2">
-												<span class="label_cont">1년치 한꺼번에 내기</span>
-											</label>
+									<div class="form_line">
+										<div class="label_tit">납입방법</div>
+										<div class="radio_group_wrap" role="radiogroup">
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio01-1" name="radio01" />
+												<label for="radio01-1">
+													<span class="label_cont">매월 보험료 내기</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio01-2" name="radio01" />
+												<label for="radio01-2">
+													<span class="label_cont">1년치 한꺼번에 내기</span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pb1');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pb1');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 가입조건 변경 팝업 -->
+			<!-- e: 가입조건 변경 팝업 -->
 
-		<!-- e: popup area -->
+			<!-- e: popup area -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

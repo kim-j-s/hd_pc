@@ -52,240 +52,242 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type_full" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type_full');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title"></div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: popup_content_top -->
-							<div class="popup_content_top">
-								<h2 class="title_h2">
-									원하는 보장조건으로
-									<br />
-									<strong>변경</strong>해주세요
-								</h2>
-							</div>
-							<!-- e: popup_content_top -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type_full" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type_full');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title"></div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: popup_content_top -->
+								<div class="popup_content_top">
+									<h2 class="title_h2">
+										원하는 보장조건으로
+										<br />
+										<strong>변경</strong>해주세요
+									</h2>
+								</div>
+								<!-- e: popup_content_top -->
 
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">납입주기</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g1" name="radio_g1" checked />
-											<label for="radio_btn_g1">
-												<span class="label_cont">월납</span>
-											</label>
+								<div class="form_group_wrap">
+									<div class="form_line">
+										<div class="label_tit">납입주기</div>
+										<div class="radio_group_wrap" role="radiogroup">
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g1" name="radio_g1" checked />
+												<label for="radio_btn_g1">
+													<span class="label_cont">월납</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="radio_btn_g2" name="radio_g1" />
+												<label for="radio_btn_g2">
+													<span class="label_cont">연납</span>
+												</label>
+											</div>
 										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="radio_btn_g2" name="radio_g1" />
-											<label for="radio_btn_g2">
-												<span class="label_cont">연납</span>
-											</label>
+									</div>
+
+									<div class="form_line">
+										<div class="label_tit">보험료</div>
+										<div class="input_text price">
+											<div class="inp">
+												<input type="tel" title="금액입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+											</div>
+											<div class="int_txt right">만원</div>
+										</div>
+									</div>
+
+									<div class="selectitem_wrap row">
+										<div class="form_line grow">
+											<div class="label_tit">납입기간</div>
+											<div class="select_option_box">
+												<select name="" id="" title="납입기간 선택" class="selectbox">
+													<option value="" selected>5년</option>
+													<option value="">7년</option>
+													<option value="">10년</option>
+													<option value="">12년</option>
+													<option value="">15년</option>
+													<option value="">20년</option>
+												</select>
+											</div>
+										</div>
+										<div class="form_line grow">
+											<div class="label_tit">연금받는 기간</div>
+											<div class="select_option_box">
+												<select name="" id="" title="연금받는 기간 선택" class="selectbox">
+													<option value="" selected>5년</option>
+													<option value="">6년</option>
+													<option value="">7년</option>
+													<option value="">8년</option>
+													<option value="">9년</option>
+													<option value="">10년</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="selectitem_wrap row">
+										<div class="form_line grow">
+											<div class="label_tit">연금시작 나이</div>
+											<div class="select_option_box">
+												<select name="" id="" title="연금시작 나이 선택" class="selectbox">
+													<option value="" selected>45세</option>
+													<option value="">46세</option>
+													<option value="">47세</option>
+													<option value="">48세</option>
+													<option value="">49세</option>
+													<option value="">50세</option>
+												</select>
+											</div>
+										</div>
+										<div class="form_line grow">
+											<div class="label_tit">연금받는 주기</div>
+											<div class="select_option_box">
+												<select name="" id="" title="연금받는 주기 선택" class="selectbox">
+													<option value="" selected>매월</option>
+													<option value="">3개월</option>
+													<option value="">6개월</option>
+													<option value="">매년</option>
+												</select>
+											</div>
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">연금수령액 다시 계산하기</span>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type_full');"><span class="blind">팝업 닫기</span></button>
+					</div>
+				</div>
+			</div>
+			<!-- s: popup area -->
 
-								<div class="form_line">
-									<div class="label_tit">보험료</div>
-									<div class="input_text price">
-										<div class="inp">
-											<input type="tel" title="금액입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-										<div class="int_txt right">만원</div>
-									</div>
-								</div>
+			<!-- s: 납입기간 팝업 -->
+			<div class="popup_wrap popup_wrap_type3" id="select_pop_01" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">납입기간 선택</div>
+						</div>
 
-								<div class="selectitem_wrap row">
-									<div class="form_line grow">
-										<div class="label_tit">납입기간</div>
-										<div class="select_option_box">
-											<select name="" id="" title="납입기간 선택" class="selectbox">
-												<option value="" selected>5년</option>
-												<option value="">7년</option>
-												<option value="">10년</option>
-												<option value="">12년</option>
-												<option value="">15년</option>
-												<option value="">20년</option>
-											</select>
-										</div>
-									</div>
-									<div class="form_line grow">
-										<div class="label_tit">연금받는 기간</div>
-										<div class="select_option_box">
-											<select name="" id="" title="연금받는 기간 선택" class="selectbox">
-												<option value="" selected>5년</option>
-												<option value="">6년</option>
-												<option value="">7년</option>
-												<option value="">8년</option>
-												<option value="">9년</option>
-												<option value="">10년</option>
-											</select>
-										</div>
-									</div>
-								</div>
-
-								<div class="selectitem_wrap row">
-									<div class="form_line grow">
-										<div class="label_tit">연금시작 나이</div>
-										<div class="select_option_box">
-											<select name="" id="" title="연금시작 나이 선택" class="selectbox">
-												<option value="" selected>45세</option>
-												<option value="">46세</option>
-												<option value="">47세</option>
-												<option value="">48세</option>
-												<option value="">49세</option>
-												<option value="">50세</option>
-											</select>
-										</div>
-									</div>
-									<div class="form_line grow">
-										<div class="label_tit">연금받는 주기</div>
-										<div class="select_option_box">
-											<select name="" id="" title="연금받는 주기 선택" class="selectbox">
-												<option value="" selected>매월</option>
-												<option value="">3개월</option>
-												<option value="">6개월</option>
-												<option value="">매년</option>
-											</select>
-										</div>
-									</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">5년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">7년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">10년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">12년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">15년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">20년</span></div>
 								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">연금수령액 다시 계산하기</span>
-							</button>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- s: popup area -->
+			<!-- e: 납입기간 팝업 -->
 
-		<!-- s: 납입기간 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="select_pop_01" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">납입기간 선택</div>
-					</div>
+			<!-- s: 연금받는 기간 팝업 -->
+			<div class="popup_wrap popup_wrap_type3" id="select_pop_02" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_02');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">연금받는 기간 선택</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">5년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">7년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">10년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">12년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">15년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">20년</span></div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">5년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">6년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">7년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">8년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">9년</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">10년</span></div>
+								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_02');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 납입기간 팝업 -->
+			<!-- e: 연금받는 기간 팝업 -->
 
-		<!-- s: 연금받는 기간 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="select_pop_02" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_02');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">연금받는 기간 선택</div>
-					</div>
+			<!-- s: 연금시작 나이 팝업 -->
+			<div class="popup_wrap popup_wrap_type3" id="select_pop_03" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_03');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">연금시작 나이 선택</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">5년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">6년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">7년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">8년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">9년</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">10년</span></div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">45세</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">46세</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">47세</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">48세</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">49세</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">50세</span></div>
+								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_03');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_02');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 연금받는 기간 팝업 -->
+			<!-- e: 연금시작 나이 팝업 -->
 
-		<!-- s: 연금시작 나이 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="select_pop_03" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_03');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">연금시작 나이 선택</div>
-					</div>
+			<!-- s: 연금받는 주기 팝업 -->
+			<div class="popup_wrap popup_wrap_type3" id="select_pop_04" role="dialog" aria-modal="true" aria-hidden="true">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_04');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">연금받는 주기 선택</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">45세</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">46세</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">47세</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">48세</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">49세</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">50세</span></div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="opt_select_list opt_case3">
+									<div role="button" tabindex="0" class="option"><span class="text">매월</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">3개월</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">6개월</span></div>
+									<div role="button" tabindex="0" class="option"><span class="text">매년</span></div>
+								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_04');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_03');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 연금시작 나이 팝업 -->
+			<!-- e: 연금받는 주기 팝업 -->
 
-		<!-- s: 연금받는 주기 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="select_pop_04" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_pop_04');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">연금받는 주기 선택</div>
-					</div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text">매월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">3개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">6개월</span></div>
-								<div role="button" tabindex="0" class="option"><span class="text">매년</span></div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_pop_04');"><span class="blind">팝업 닫기</span></button>
-				</div>
+			<!-- e: popup area -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 			</div>
-		</div>
-		<!-- e: 연금받는 주기 팝업 -->
-
-		<!-- e: popup area -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

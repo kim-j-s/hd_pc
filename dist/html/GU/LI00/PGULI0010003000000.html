@@ -52,54 +52,55 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title"></div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: popup_content_top -->
-							<div class="popup_content_top">
-								<h2 class="title_h2">
-									<strong>6자리 간편비밀번호를 입력해주세요</strong>
-								</h2>
-								<div class="btn_area basic">
-									<a href="javascript:void(0)" class="btn_link short_cut sm">
-										<span class="text">다른 인증방법 선택</span>
-									</a>
-								</div>
-							</div>
-							<!-- e: popup_content_top -->
-
-							<div class="pin_enter">
-								<div class="form_key pin_type">
-									<div class="pin_area">
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
+			<!-- s: Full 팝업 -->
+			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title"></div>
+						</div>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: popup_content_top -->
+								<div class="popup_content_top">
+									<h2 class="title_h2">
+										<strong>6자리 간편비밀번호를 입력해주세요</strong>
+									</h2>
+									<div class="btn_area basic">
+										<a href="javascript:void(0)" class="btn_link short_cut sm">
+											<span class="text">다른 인증방법 선택</span>
+										</a>
 									</div>
-									<button type="button" class="keyboard" title="보안키패드 열기">
-										<span class="sr-only">보안키패드 열기</span>
-										<i class="hd_icon keyboardSvg"></i>
-										<!-- <i class="hd_icon keyboardSvg on"></i> -->
-									</button>
 								</div>
-							</div>
+								<!-- e: popup_content_top -->
 
-							<!-- s: pin 에러 시 유형 -->
-							<!-- <div class="pin_enter">
+								<div class="pin_enter">
+									<div class="form_key pin_type">
+										<div class="pin_area">
+											<strong class="ergAt dot_mark active"></strong>
+											<strong class="ergAt dot_mark active"></strong>
+											<strong class="ergAt dot_mark"></strong>
+											<strong class="ergAt dot_mark"></strong>
+											<strong class="ergAt dot_mark"></strong>
+											<strong class="ergAt dot_mark"></strong>
+										</div>
+										<button type="button" class="keyboard" title="보안키패드 열기">
+											<span class="sr-only">보안키패드 열기</span>
+											<i class="hd_icon keyboardSvg"></i>
+											<!-- <i class="hd_icon keyboardSvg on"></i> -->
+										</button>
+									</div>
+								</div>
+
+								<!-- s: pin 에러 시 유형 -->
+								<!-- <div class="pin_enter">
 									<div class="form_key pin_type error">
 										<div class="pin_area">
 											<strong class="ergAt dot_mark active"></strong>
@@ -118,23 +119,24 @@
 										<span class="text">등록된 간편비밀번호와 달라요. (1/5회)</span>
 									</p>
 								</div> -->
-							<!-- e: pin 에러 시 유형 -->
+								<!-- e: pin 에러 시 유형 -->
 
-							<div class="btn_area center">
-								<a href="javascript:void(0)" class="btn_link short_cut">
-									<span class="text">간편비밀번호를 잊으셨나요?</span>
-								</a>
+								<div class="btn_area center">
+									<a href="javascript:void(0)" class="btn_link short_cut">
+										<span class="text">간편비밀번호를 잊으셨나요?</span>
+									</a>
+								</div>
 							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Full 팝업 -->
+			<!-- e: Full 팝업 -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

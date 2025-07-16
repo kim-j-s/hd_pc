@@ -52,60 +52,62 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
-		<!-- s: popup area -->
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">긴급출동특약 자세히 보기</div>
-					</div>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
+			<!-- s: popup area -->
+			<!-- s: Bottom 팝업 -->
+			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">긴급출동특약 자세히 보기</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="info_cont">
-								<h3>하이카서비스</h3>
-								<h4>이용 가능한 서비스</h4>
-								<ul class="list_depth">
-									<li>긴급구난, 긴급견인, 비상급유, 배터리충전, 잠금장치 해제, 타이어 펑크수리/교체, 휴즈 교환</li>
-								</ul>
-								<h4>서비스 제공 횟수</h4>
-								<ul class="list_depth">
-									<li>1년 계약 : 6회</li>
-									<li>1년 미만~3개월 초과 계약 : 3회</li>
-									<li>3개월 이하 계약 : 1회</li>
-								</ul>
-								<ul class="list_ty2">
-									<li><strong>비상급유/긴급견인 서비스는 각 1일 1회만 이용가능</strong></li>
-								</ul>
-								<h4>가입대상</h4>
-								<ul class="list_depth">
-									<li>자동차관리법상 사용신고 대상인 이륜자동차</li>
-								</ul>
-								<p class="text_sub">모든 차종에 대해 도서, 산간지역 및 회사가 서비스 제공이 불가능하다고 판단되는 경우 서비스를 제공하지 않습니다. 자세한 사항은 약관을 참조해 주세요.</p>
+						<div class="popup_cont">
+							<div class="popup_content">
+								<div class="info_cont">
+									<h3>하이카서비스</h3>
+									<h4>이용 가능한 서비스</h4>
+									<ul class="list_depth">
+										<li>긴급구난, 긴급견인, 비상급유, 배터리충전, 잠금장치 해제, 타이어 펑크수리/교체, 휴즈 교환</li>
+									</ul>
+									<h4>서비스 제공 횟수</h4>
+									<ul class="list_depth">
+										<li>1년 계약 : 6회</li>
+										<li>1년 미만~3개월 초과 계약 : 3회</li>
+										<li>3개월 이하 계약 : 1회</li>
+									</ul>
+									<ul class="list_ty2">
+										<li><strong>비상급유/긴급견인 서비스는 각 1일 1회만 이용가능</strong></li>
+									</ul>
+									<h4>가입대상</h4>
+									<ul class="list_depth">
+										<li>자동차관리법상 사용신고 대상인 이륜자동차</li>
+									</ul>
+									<p class="text_sub">모든 차종에 대해 도서, 산간지역 및 회사가 서비스 제공이 불가능하다고 판단되는 경우 서비스를 제공하지 않습니다. 자세한 사항은 약관을 참조해 주세요.</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: Bottom 팝업 -->
-		<!-- e: popup area -->
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<!-- e: Bottom 팝업 -->
+			<!-- e: popup area -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>

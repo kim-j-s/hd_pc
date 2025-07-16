@@ -52,93 +52,95 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#container">본문바로가기</a></li>
-		</ul>
+		<div id="wrap" class="wrap">
+			<ul id="skipNavi" class="skipNavi">
+				<li><a href="#gnb">주메뉴바로가기</a></li>
+				<li><a href="#contents">본문바로가기</a></li>
+			</ul>
 
-		<!-- s: 25-05-09 수정 -->
+			<!-- s: 25-05-09 수정 -->
 
-		<div class="popup_wrap popup_wrap_type3 active" id="pb1" role="dialog" aria-modal="true" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pb1');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">건강검진 정보로 보험료가 줄어요</div>
-					</div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: 25-05-14 수정-->
-							<div class="popup_content_top">
-								<h3 class="title_h3 normal center">
-									최근 2년 이내의 건강검진정보를<br />
-									제공해주시면 가입 첫해 <strong>보험료의 5%를<br />할인받을 수 있어요.</strong>
-								</h3>
-							</div>
-
-							<div class="info_gray">
-								<ul class="list_depth">
-									<li>간편인증(카카오, 네이버, 공동인증)으로 건강검진 결과를 제출할 수 있어요.</li>
-									<li>건강정보를 분석하여 건강할수록 보험료를 추가로 할인해드려요.</li>
-									<li>계약 완료 후 사진으로 제출할 수 있어요.</li>
-								</ul>
-							</div>
-							<!-- e: 25-05-14 수정-->
+			<div class="popup_wrap popup_wrap_type3 active" id="pb1" role="dialog" aria-modal="true" aria-hidden="false">
+				<div class="popup_container">
+					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pb1');"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">건강검진 정보로 보험료가 줄어요</div>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area column">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">간편인증으로 제출하고 보험료 할인</span>
-							</button>
-							<button type="button" class="hd_btn normal">
-								<a class="text" href="#">나중에 등록</a>
-							</button>
+
+						<div class="popup_cont">
+							<div class="popup_content">
+								<!-- s: 25-05-14 수정-->
+								<div class="popup_content_top">
+									<h3 class="title_h3 normal center">
+										최근 2년 이내의 건강검진정보를<br />
+										제공해주시면 가입 첫해 <strong>보험료의 5%를<br />할인받을 수 있어요.</strong>
+									</h3>
+								</div>
+
+								<div class="info_gray">
+									<ul class="list_depth">
+										<li>간편인증(카카오, 네이버, 공동인증)으로 건강검진 결과를 제출할 수 있어요.</li>
+										<li>건강정보를 분석하여 건강할수록 보험료를 추가로 할인해드려요.</li>
+										<li>계약 완료 후 사진으로 제출할 수 있어요.</li>
+									</ul>
+								</div>
+								<!-- e: 25-05-14 수정-->
+							</div>
 						</div>
+						<div class="popup_bottom">
+							<div class="btn_area column">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">간편인증으로 제출하고 보험료 할인</span>
+								</button>
+								<button type="button" class="hd_btn normal">
+									<a class="text" href="#">나중에 등록</a>
+								</button>
+							</div>
+						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('pb1');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pb1');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- (추가)모바일 웹에서 제출 선택 시 노출 팝업 -->
+			<!-- (추가)모바일 웹에서 제출 선택 시 노출 팝업 -->
 
-		<div class="popup_wrap popup_wrap_type1" id="popup_alert" role="dialog">
-			<div class="popup_container">
-				<div class="popup_dim"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">현대해상 다이렉트 앱을 다운로드해주세요</div>
-					</div>
+			<div class="popup_wrap popup_wrap_type1" id="popup_alert" role="dialog">
+				<div class="popup_container">
+					<div class="popup_dim"></div>
+					<div class="popup_inner">
+						<div class="popup_head">
+							<div class="popup_head_title">현대해상 다이렉트 앱을 다운로드해주세요</div>
+						</div>
 
-					<div class="popup_cont">
-						<div class="popup_content info_alert_cont">
-							<div class="status_icon"><i class="hd_icon icon_info_ty2_Svg"></i></div>
+						<div class="popup_cont">
+							<div class="popup_content info_alert_cont">
+								<div class="status_icon"><i class="hd_icon icon_info_ty2_Svg"></i></div>
 
-							<div class="info_cont">
-								<p>국민건강보험공단 정책상 간편인증을 활용해 건강검진정보를 자동으로 불러오는 서비스는 다이렉트 앱에서 이용 가능해요.</p>
+								<div class="info_cont">
+									<p>국민건강보험공단 정책상 간편인증을 활용해 건강검진정보를 자동으로 불러오는 서비스는 다이렉트 앱에서 이용 가능해요.</p>
+								</div>
+
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+									<span class="text">현대해상 다이렉트 앱 다운로드</span>
+								</button>
 							</div>
-
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-								<span class="text">현대해상 다이렉트 앱 다운로드</span>
-							</button>
 						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
+						<div class="popup_bottom">
+							<div class="btn_area">
+								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+									<span class="text">확인</span>
+								</button>
+							</div>
 						</div>
+						<button type="button" class="popup_close" onclick="closeHDPopup('popup_alert');"><span class="blind">팝업 닫기</span></button>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('popup_alert');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-		</div>
-		<!-- e: 25-05-09 수정 -->
+			<!-- e: 25-05-09 수정 -->
 
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 		</div>
 	</body>
 </html>
