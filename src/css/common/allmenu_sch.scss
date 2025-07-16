@@ -19,4 +19,20 @@
 		margin: 0 auto; 
 		text-align: left;
 	}
+
+
+	.msp_wrap_cont {
+		.msp_in_cont {
+			margin-top: var(--gap-11);
+			& ~ .msp_in_cont {
+				margin-top: var(--gap-8);
+			}
+
+			.msp_slw_title {
+				padding-bottom: var(--gap-4);
+				font-size: var(--font-size-heading-xxsmall);
+				color: var(--color-text-bolder);
+			}
+		}
+	}
 }
