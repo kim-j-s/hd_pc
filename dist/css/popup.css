@@ -168,6 +168,9 @@
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content .list_ty3 + .title_h4 {
 	margin-top: var(--gap-9);
 }
+.popup_wrap .popup_container .popup_inner .popup_cont .popup_content .title_h3 + .text_sub {
+	margin-top: var(--gap-8);
+}
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content .tab_wrap .tab_wrap_list_ty1 {
 	margin: 0 -2.4rem;
 }
