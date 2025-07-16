@@ -311,6 +311,12 @@
 				}
 			}
 		}
+		.tit_full {
+			flex-basis: 100%;
+			> div:not(.label_tit) {				
+				width: calc(50% - 16px);
+			}
+		}
 
 	
 		.c1 {
