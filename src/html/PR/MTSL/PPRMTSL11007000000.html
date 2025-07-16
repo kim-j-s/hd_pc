@@ -8,7 +8,7 @@
           <div class="page_title">
             <div class="p_info">보험료 결제하기</div>
             <h2 class="p_title">
-				보험료를 <strong>결제하여 가입이 완료</strong>해주세요
+							보험료를 <strong>결제하여 가입이 완료</strong>해주세요
             </h2>
           </div>
         </div>
@@ -80,7 +80,7 @@
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
 					{{> cp/button type="1" size="1" b-text="결제 정보를 입력해 주세요" disabled=true }}
-					<!-- {{> cp/button type="1" size="1" b-text="보험료 결제하고 가입하기" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="가입을 위해 전자서명을 합니다" }} -->
 				</div>
 			</div>
 			<!-- s: 꼭 알아두세요 카드만 노출 -->
@@ -89,6 +89,10 @@
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 카드만 노출 -->
 		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차영업 step=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
 	</div>
 
 </div>
