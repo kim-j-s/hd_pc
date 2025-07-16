@@ -197,15 +197,17 @@
 	& + .form_group_wrap,
 	& + .tab_wrap,
 	& + .tag_item_wrap,
-	& + .banner_box {
+	& + .banner_box,
+	& + .info_gray {
 		margin-top: var(--gap-8);
 	}
 
 	& + .form_box,
-	& + .info_gray,
+	//& + .info_gray,
 	& + .content_top {
 		margin-top: var(--gap-11);
 	}
+	
 
 	// 보험료결제
 	&.payment {

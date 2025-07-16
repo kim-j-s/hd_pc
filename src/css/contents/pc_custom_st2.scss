@@ -311,6 +311,12 @@
 				}
 			}
 		}
+		.tit_full {
+			flex-basis: 100%;
+			> div:not(.label_tit) {				
+				width: calc(50% - 16px);
+			}
+		}
 
 	
 		.c1 {
@@ -384,7 +390,7 @@
 .form_box {
 	> .btn_area {
 		justify-content: center;
-		margin-top: var(--gap-5);
+		//margin-top: var(--gap-5);
 		.hd_btn {
 			min-width: 160px;
 		}
