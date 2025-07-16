@@ -1,0 +1,13 @@
+/* 개발 요청 생성 별도 wrap */
+.custom_wrap {
+	&.custom_wrap_ty1 {
+		margin-top: var(--gap-11);
+		.banner_box {
+			margin-top: var(--gap-11);
+		}
+		+ .btn_area {
+			margin-top: var(--gap-11);
+		}
+	}
+}
+/* 개발 요청 생성 별도 wrap */
