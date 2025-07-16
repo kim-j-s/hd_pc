@@ -1,6 +1,7 @@
 {{#> layout/default page-title="가입완료 | 상품"}}
 	<div id="wrap" class="wrap">
-    {{> layout/header no-header=true }}
+		{{> layout/header_pc h-prd="자동차보험" }}
+
 		<div id="container" class="container">
 			<div class="content">
 				<div class="process_info_area">
@@ -21,14 +22,16 @@
 
         <h3 class="title_h3">계약자 정보</h3>
         <div class="info_gray ty2">
-          <dl>
-            <dt>계약자 이름</dt>
-            <dd>김*수</dd>
-          </dl>
-          <dl>
-            <dt>주민등록번호</dt>
-            <dd>900101-1******</dd>
-          </dl>
+					<div class="data_box df_type_w_ty1">
+						<dl>
+							<dt>계약자 이름</dt>
+							<dd>김*수</dd>
+						</dl>
+						<dl>
+							<dt>주민등록번호</dt>
+							<dd>900101-1******</dd>
+						</dl>
+					</div>
         </div>
 
         <div class="form_group_wrap">
@@ -37,14 +40,15 @@
             {{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
           </div>
         </div>
+
+				<div class="bottom_fix_wrap">
+					<div class="btn_area center">
+						{{> cp/button type="3" size="1" b-text="문자전송 후 홈으로" }}
+						{{> cp/button type="1" size="1" b-text="문자전송 후 다른차량 갱신하기" }}
+					</div>
+				</div>
 			</div>
 		</div>
-
-    <div class="bottom_fix_wrap">
-      <div class="btn_area">
-        {{> cp/button type="1" size="1" b-text="문자전송" }}
-      </div>
-    </div>
 	</div>
 
 	<!-- s: popup area -->
