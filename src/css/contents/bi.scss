@@ -227,6 +227,7 @@
 
 	.bi_wrap_content {
 		flex: 1;
+		padding-bottom: var(--padding-5);
 		.form_group_wrap {
 			.column {
 				flex: 1;
@@ -724,6 +725,10 @@
 	&.stamp {
 		background-image: url(../images/content/bi/icon_stepper_stamp.svg);
 	}
+	//연료형태
+	&.fuel {
+		background-image: url(../images/content/bi/icon_stepper_fuel.svg);
+	}
 	
 	
 	
@@ -966,6 +971,7 @@
 		.pbw_inner {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			min-height: 694px;
 			padding: var(--padding-10) var(--padding-9) var(--padding-9) var(--padding-9);
 			border-radius: var(--radius-large2, 24px);
@@ -1036,10 +1042,12 @@
 			&.pi_bg_ty21 { //자동차보험(이륜차)
 				background-image: url(../images/content/bi/visual/bg_img_mtps2.png);
 			}
-			
+
 
 			.pi_top {
 				flex: none;
+				padding-bottom: var(--gap-9);
+
 				.pt_title {
 					> small {
 						display: block;
@@ -1056,7 +1064,6 @@
 
 			.pi_bottom {
 				margin-top: auto;
-				padding-top: var(--gap-9);
 
 				.pb_title {
 					font-weight: 700;
@@ -1096,7 +1103,7 @@
 								}
 							}
 
-							@for $i from 1 through 35 {
+							@for $i from 1 through 36 {
 								&.item_ico_ty#{$i} {
 									background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
 								}
