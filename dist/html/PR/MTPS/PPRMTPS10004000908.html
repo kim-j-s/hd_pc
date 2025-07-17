@@ -52,143 +52,141 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
-			<!-- s: popup area -->
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">분할납부</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="info_gray">
-									<dl class="middle">
-										<dt>총 보험료</dt>
-										<dd class="point">
-											<strong class="big">1,155,150원</strong>
-										</dd>
-									</dl>
-								</div>
-								<h3 class="title_h4">납부방법</h3>
-								<div class="radio_group_wrap_ty2" role="radiogroup">
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt1" name="radio_gt1" />
-										<label for="radio_btn_gt1">
-											<span class="label_cont">일시납</span>
-										</label>
-									</div>
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt2" name="radio_gt1" />
-										<label for="radio_btn_gt2">
-											<span class="label_cont">2회납(자동이체)</span>
-										</label>
-									</div>
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt3" name="radio_gt1" />
-										<label for="radio_btn_gt3">
-											<span class="label_cont">3회납(자동이체)</span>
-										</label>
-									</div>
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt4" name="radio_gt1" />
-										<label for="radio_btn_gt4">
-											<span class="label_cont">4회납(자동이체)</span>
-										</label>
-									</div>
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt5" name="radio_gt1" />
-										<label for="radio_btn_gt5">
-											<span class="label_cont">5회납(자동이체)</span>
-										</label>
-									</div>
-									<div class="inp_radio rd_btn">
-										<input type="radio" id="radio_btn_gt6" name="radio_gt1" />
-										<label for="radio_btn_gt6">
-											<span class="label_cont">6회납(자동이체)</span>
-										</label>
-									</div>
-								</div>
-
-								<div class="info_gray">
-									<p class="info_text"><strong>보험료 분납과 신용카드 할부는 다릅니다.</strong> 신용카드 할부를 이용하시고자 하는 경우에는 보험료 계산 화면에서 납입방법을 일시납으로 선택하신 후 보험료 결제 화면에 신용카드 입력 시 할부 개월 수를 선택해 주세요.</p>
-								</div>
-
-								<div class="table_wrap">
-									<table class="table">
-										<caption>
-											회차별 납부 안내 표
-										</caption>
-										<colgroup>
-											<col style="width: 30%" />
-											<col style="width: 35%" />
-											<col style="width: 35%" />
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col">회차</th>
-												<th scope="col">보험료</th>
-												<th scope="col">납부예정일</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>605,320</td>
-												<td>2025.01.01</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>202,650</td>
-												<td>2025.02.01</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<!-- s: 꼭 알아두세요 -->
-								<div class="bottom_fix_notice">
-									<div class="acd_item">
-										<div class="acd_head">
-											<button type="button" class="acd_btn" aria-expanded="false"><span>꼭 알아두세요</span></button>
-										</div>
-										<div class="acd_cont">
-											<div class="inner">
-												<ul class="list_depth">
-													<li>책임보험(대인Ⅰ, 대물)의 보험료는 1회차에 모두 납부하셔야 합니다.</li>
-													<li>연속 2회납 ~ 6회납의 분납 보험료는 자동이체로 납입이 가능합니다.</li>
-													<li>분납은 일시납보다 일정비율만큼 보험료가 할증되기 때문에 납입 시 보험료 확인이 필요합니다.</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- e: 꼭 알아두세요 -->
-							</div>
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
+		<!-- s: popup area -->
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">분할납부</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="info_gray">
+								<dl class="middle">
+									<dt>총 보험료</dt>
+									<dd class="point">
+										<strong class="big">1,155,150원</strong>
+									</dd>
+								</dl>
+							</div>
+							<h3 class="title_h4">납부방법</h3>
+							<div class="radio_group_wrap_ty2" role="radiogroup">
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt1" name="radio_gt1" />
+									<label for="radio_btn_gt1">
+										<span class="label_cont">일시납</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt2" name="radio_gt1" />
+									<label for="radio_btn_gt2">
+										<span class="label_cont">2회납(자동이체)</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt3" name="radio_gt1" />
+									<label for="radio_btn_gt3">
+										<span class="label_cont">3회납(자동이체)</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt4" name="radio_gt1" />
+									<label for="radio_btn_gt4">
+										<span class="label_cont">4회납(자동이체)</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt5" name="radio_gt1" />
+									<label for="radio_btn_gt5">
+										<span class="label_cont">5회납(자동이체)</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="radio_btn_gt6" name="radio_gt1" />
+									<label for="radio_btn_gt6">
+										<span class="label_cont">6회납(자동이체)</span>
+									</label>
+								</div>
+							</div>
+
+							<div class="info_gray">
+								<p class="info_text"><strong>보험료 분납과 신용카드 할부는 다릅니다.</strong> 신용카드 할부를 이용하시고자 하는 경우에는 보험료 계산 화면에서 납입방법을 일시납으로 선택하신 후 보험료 결제 화면에 신용카드 입력 시 할부 개월 수를 선택해 주세요.</p>
+							</div>
+
+							<div class="table_wrap">
+								<table class="table">
+									<caption>
+										회차별 납부 안내 표
+									</caption>
+									<colgroup>
+										<col style="width: 30%" />
+										<col style="width: 35%" />
+										<col style="width: 35%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">회차</th>
+											<th scope="col">보험료</th>
+											<th scope="col">납부예정일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>605,320</td>
+											<td>2025.01.01</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>202,650</td>
+											<td>2025.02.01</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- s: 꼭 알아두세요 -->
+							<div class="bottom_fix_notice">
+								<div class="acd_item">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>꼭 알아두세요</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<ul class="list_depth">
+												<li>책임보험(대인Ⅰ, 대물)의 보험료는 1회차에 모두 납부하셔야 합니다.</li>
+												<li>연속 2회납 ~ 6회납의 분납 보험료는 자동이체로 납입이 가능합니다.</li>
+												<li>분납은 일시납보다 일정비율만큼 보험료가 할증되기 때문에 납입 시 보험료 확인이 필요합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 꼭 알아두세요 -->
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
-			<!-- e: popup area -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		</div>
+		<!-- e: Bottom 팝업 -->
+		<!-- e: popup area -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

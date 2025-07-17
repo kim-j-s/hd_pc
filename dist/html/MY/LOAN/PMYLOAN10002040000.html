@@ -52,71 +52,69 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">이상금융거래 안내</div>
-						</div>
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="process_info_area">
-									<div class="complete_info" aria-hidden="true">
-										<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
-									</div>
-									<h2 class="process_title"><strong>이상금융거래</strong>일 수 있어<br /><strong>인터넷으로 신청할 수 없습니다</strong></h2>
+		<!-- s: Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">이상금융거래 안내</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="process_info_area">
+								<div class="complete_info" aria-hidden="true">
+									<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
 								</div>
+								<h2 class="process_title"><strong>이상금융거래</strong>일 수 있어<br /><strong>인터넷으로 신청할 수 없습니다</strong></h2>
+							</div>
 
-								<div class="info_gray">
-									<ul class="list_depth">
-										<!-- s: 25-06-26 수정 -->
-										<li>요청하신 거래는 대출콜센터(1668-5655)로 문의해주시면 본인확인 후 이용할 수 있어요.</li>
-										<!-- e: 25-06-26 수정 -->
-										<li>
-											이 외에도 <strong class="point">안내전화 받기에 동의</strong>하시면 빠른 시간 내 연락드릴게요.
-											<ul>
-												<li>안내전화 가능시간: 평일 09:00~18:00<br />(대출 외 환급 업무: 평일 09:00~16:30)</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-
-								<ul class="list_ty2">
-									<li>가능시간 외 신청 시 다음 영업일 오전 중에 안내전화를 받으실 수 있어요.</li>
+							<div class="info_gray">
+								<ul class="list_depth">
+									<!-- s: 25-06-26 수정 -->
+									<li>요청하신 거래는 대출콜센터(1668-5655)로 문의해주시면 본인확인 후 이용할 수 있어요.</li>
+									<!-- e: 25-06-26 수정 -->
+									<li>
+										이 외에도 <strong class="point">안내전화 받기에 동의</strong>하시면 빠른 시간 내 연락드릴게요.
+										<ul>
+											<li>안내전화 가능시간: 평일 09:00~18:00<br />(대출 외 환급 업무: 평일 09:00~16:30)</li>
+										</ul>
+									</li>
 								</ul>
 							</div>
-						</div>
 
-						<div class="popup_bottom">
-							<div class="info_gray icon_call">
-								<p class="title_sub"><span>안내전화를 받으시겠어요?</span></p>
-							</div>
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">동의 안함</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">동의</span>
-								</button>
-							</div>
+							<ul class="list_ty2">
+								<li>가능시간 외 신청 시 다음 영업일 오전 중에 안내전화를 받으실 수 있어요.</li>
+							</ul>
 						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
+
+					<div class="popup_bottom">
+						<div class="info_gray icon_call">
+							<p class="title_sub"><span>안내전화를 받으시겠어요?</span></p>
+						</div>
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">동의 안함</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">동의</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Full 팝업 -->
+		</div>
+		<!-- e: Full 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

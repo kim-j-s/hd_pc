@@ -52,112 +52,110 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">대출신청내역</div>
-						</div>
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="table_wrap">
-									<table class="table">
-										<caption>
-											실제 지급금액, 대출신청금액, 기존 대출정산이자, 예수금, 인지세, 누적대출금액, 잔여대출가능금액, 예상 월이자, 대출금 받을 계좌, 이자납입계좌, 예금주, 이자납입일 제공
-										</caption>
-										<colgroup>
-											<col style="width: 160px" />
-											<col style="width: auto" />
-										</colgroup>
-										<tbody>
-											<tr>
-												<th scope="row" class="point">실제 지급금액</th>
-												<td><strong class="point">11,000,000원</strong></td>
-											</tr>
-											<tr>
-												<th scope="row">대출신청금액</th>
-												<td><strong>12,000,000원</strong></td>
-											</tr>
-											<!-- s: 기대출정산이자, 예수금, 인지세가 0원인 경우 항목 비노출 -->
-											<tr>
-												<th scope="row">기존 대출정산이자</th>
-												<td>-1,000,000원</td>
-											</tr>
-											<tr>
-												<th scope="row">예수금</th>
-												<td>0원</td>
-											</tr>
-											<tr>
-												<th scope="row">인지세</th>
-												<td>0원</td>
-											</tr>
-											<!-- e: 기대출정산이자, 예수금, 인지세가 0원인 경우 항목 비노출 -->
-											<tr>
-												<th scope="row">누적대출금액</th>
-												<td>21,000,000원</td>
-											</tr>
-											<tr>
-												<th scope="row">잔여대출가능금액</th>
-												<td>1,000,000원</td>
-											</tr>
-											<tr>
-												<th scope="row">예상 월이자</th>
-												<td>85,270원</td>
-											</tr>
-											<tr>
-												<th scope="row">대출금 받을 계좌</th>
-												<td>국민은행 1234****1234</td>
-											</tr>
-											<tr>
-												<th scope="row">이자납입계좌</th>
-												<td>국민은행 1234****1234</td>
-											</tr>
-											<tr>
-												<th scope="row">예금주</th>
-												<td>김*대</td>
-											</tr>
-											<tr>
-												<th scope="row">이자납입일</th>
-												<td>매월 20일</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<div class="btn_area basic center">
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-										<span class="text">약정서 인쇄</span>
-									</button>
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-										<span class="text">약정서 이메일 발송</span>
-									</button>
-								</div>
+		<!-- s: Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">대출신청내역</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="table_wrap">
+								<table class="table">
+									<caption>
+										실제 지급금액, 대출신청금액, 기존 대출정산이자, 예수금, 인지세, 누적대출금액, 잔여대출가능금액, 예상 월이자, 대출금 받을 계좌, 이자납입계좌, 예금주, 이자납입일 제공
+									</caption>
+									<colgroup>
+										<col style="width: 160px" />
+										<col style="width: auto" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" class="point">실제 지급금액</th>
+											<td><strong class="point">11,000,000원</strong></td>
+										</tr>
+										<tr>
+											<th scope="row">대출신청금액</th>
+											<td><strong>12,000,000원</strong></td>
+										</tr>
+										<!-- s: 기대출정산이자, 예수금, 인지세가 0원인 경우 항목 비노출 -->
+										<tr>
+											<th scope="row">기존 대출정산이자</th>
+											<td>-1,000,000원</td>
+										</tr>
+										<tr>
+											<th scope="row">예수금</th>
+											<td>0원</td>
+										</tr>
+										<tr>
+											<th scope="row">인지세</th>
+											<td>0원</td>
+										</tr>
+										<!-- e: 기대출정산이자, 예수금, 인지세가 0원인 경우 항목 비노출 -->
+										<tr>
+											<th scope="row">누적대출금액</th>
+											<td>21,000,000원</td>
+										</tr>
+										<tr>
+											<th scope="row">잔여대출가능금액</th>
+											<td>1,000,000원</td>
+										</tr>
+										<tr>
+											<th scope="row">예상 월이자</th>
+											<td>85,270원</td>
+										</tr>
+										<tr>
+											<th scope="row">대출금 받을 계좌</th>
+											<td>국민은행 1234****1234</td>
+										</tr>
+										<tr>
+											<th scope="row">이자납입계좌</th>
+											<td>국민은행 1234****1234</td>
+										</tr>
+										<tr>
+											<th scope="row">예금주</th>
+											<td>김*대</td>
+										</tr>
+										<tr>
+											<th scope="row">이자납입일</th>
+											<td>매월 20일</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
+
+							<div class="btn_area basic center">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+									<span class="text">약정서 인쇄</span>
+								</button>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+									<span class="text">약정서 이메일 발송</span>
 								</button>
 							</div>
 						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Full 팝업 -->
+		</div>
+		<!-- e: Full 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

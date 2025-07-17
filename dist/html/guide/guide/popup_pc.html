@@ -52,23 +52,22 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
-			<style lang="scss">
-				.popup_wrap {
-					&.popup_wrap_type1 {
-						.popup_container {
-							/* width: 800px; */
-						}
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
+		<style lang="scss">
+			.popup_wrap {
+				&.popup_wrap_type1 {
+					.popup_container {
+						/* width: 800px; */
 					}
 				}
-			</style>
+			}
+		</style>
 
-			<div id="wrap" class="wrap">
-				<!-- <div id="header" class="header_pc">
+		<div id="wrap" class="wrap">
+			<!-- <div id="header" class="header_pc">
 				<div class="header_pc_inner"> 
 					<div class="hpi_top">
 						<div class="hpi_change_area">
@@ -1773,289 +1772,288 @@
 					</ul>
 				</div>
 			</div> -->
-				<div id="container" class="container">
-					<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button> -->
-					<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
-					<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
-					<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
+			<div id="container" class="container">
+				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button> -->
+				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
+				<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
+				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
 
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type01');">
-						<span class="text">Full 팝업열기 (600px)</span>
-					</button>
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type05');">
-						<span class="text">Full 팝업열기 (800px)</span>
-					</button>
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type04');">
-						<span class="text">Bottom 팝업열기(팝업중첩)</span>
-					</button>
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type02');">
-						<span class="text">Layer 팝업열기(팝업중첩)</span>
-					</button>
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type03');">
-						<span class="text">Layer 팝업열기</span>
-					</button>
-					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type06');">
-						<span class="text">Confirm 팝업열기</span>
-					</button>
-				</div>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type01');">
+					<span class="text">Full 팝업열기 (600px)</span>
+				</button>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type05');">
+					<span class="text">Full 팝업열기 (800px)</span>
+				</button>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type04');">
+					<span class="text">Bottom 팝업열기(팝업중첩)</span>
+				</button>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type02');">
+					<span class="text">Layer 팝업열기(팝업중첩)</span>
+				</button>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type03');">
+					<span class="text">Layer 팝업열기</span>
+				</button>
+				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type06');">
+					<span class="text">Confirm 팝업열기</span>
+				</button>
 			</div>
+		</div>
 
-			<!-- Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4" id="pop_type01" role="dialog" aria-hidden="true">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
-						</div>
-						<div class="popup_cont">
-							팝업내용입니다<br />
-							내용
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">취소</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<!-- Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4" id="pop_type01" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
 					</div>
-				</div>
-			</div>
-			<!-- Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 big" id="pop_type05" role="dialog" aria-hidden="true">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type05');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
-						</div>
-						<div class="popup_cont">
-							팝업내용입니다<br />
-							내용
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">취소</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type05');"><span class="blind">팝업 닫기</span></button>
+					<div class="popup_cont">
+						팝업내용입니다<br />
+						내용
 					</div>
-				</div>
-			</div>
-			<!-- Full 팝업 -->
-
-			<!-- Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3" id="pop_type04" role="dialog" aria-modal="true" aria-hidden="true">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type04');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
 						</div>
-
-						<div class="popup_cont">
-							팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용 팝업내용입니다<br />
-							내용
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<!-- <button type="button" class="btn"><span>확인</span></button> -->
-								<!-- <button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">취소</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="openHDPopup(this,'pop_type02');">
-									<span class="text">layer 팝업열기</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type04');"><span class="blind">팝업 닫기</span></button>
 					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- Layer 팝업 -->
-			<div class="popup_wrap popup_wrap_type1" id="pop_type02" role="dialog">
-				<div class="popup_container">
-					<div class="popup_dim"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
-						</div>
-						<div class="popup_cont">
-							팝업내용입니다
-							<br /><br /><br />
-							<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-							<br /><br /><br />
-
-							(팝업이 중첩된 상태에서 trigger를 falsy한 값으로 지정했을 때, prevPopup으로 포커스 이동)
-							<button type="button" class="btn popup_open" onclick="openHDPopup('','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-							<br /><br /><br />
-
-							(닫을 때 this가 아닌 다른 요소를 지정했을 때 - 아래의 input으로 포커스 설정한 예시)
-							<button type="button" class="btn popup_open" onclick="openHDPopup('#input01','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-							<br /><br /><br />
-							<label>텍스트 입력창</label>
-							<input type="text" id="input01" class="input_text" placeholder="입력하세요" />
-							<br /><br /><br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-							팝업내용입니다<br />
-							내용<br />
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<!-- <button type="button" class="btn"><span>확인</span></button> -->
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
+		</div>
+		<!-- Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 big" id="pop_type05" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type05');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
 					</div>
-				</div>
-			</div>
-			<div class="popup_wrap popup_wrap_type1" id="pop_type03" role="dialog">
-				<div class="popup_container">
-					<div class="popup_dim"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
-						</div>
-						<div class="popup_cont">
-							팝업내용입니다<br />
-							팝업내용입니다<br />
-							내용<br />
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<!-- <button type="button" class="btn"><span>확인</span></button> -->
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
+					<div class="popup_cont">
+						팝업내용입니다<br />
+						내용
 					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type05');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<div class="popup_wrap popup_wrap_type2" id="pop_type06" role="dialog" aria-modal="true" aria-hidden="true">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type06');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">팝업 타이틀</div>
-						</div>
+		</div>
+		<!-- Full 팝업 -->
 
-						<div class="popup_cont">
-							팝업내용입니다<br />
-							팝업내용입니다<br />
-							내용<br />
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<!-- <button type="button" class="btn"><span>확인</span></button> -->
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type06');"><span class="blind">팝업 닫기</span></button>
+		<!-- Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3" id="pop_type04" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type04');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
 					</div>
+
+					<div class="popup_cont">
+						팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용 팝업내용입니다<br />
+						내용
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<!-- <button type="button" class="btn"><span>확인</span></button> -->
+							<!-- <button type="button" class="btn popup_open" onclick="openPop(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="openHDPopup(this,'pop_type02');">
+								<span class="text">layer 팝업열기</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type04');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+		</div>
+		<!-- Layer 팝업 -->
+		<div class="popup_wrap popup_wrap_type1" id="pop_type02" role="dialog">
+			<div class="popup_container">
+				<div class="popup_dim"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
+					</div>
+					<div class="popup_cont">
+						팝업내용입니다
+						<br /><br /><br />
+						<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+						<br /><br /><br />
+
+						(팝업이 중첩된 상태에서 trigger를 falsy한 값으로 지정했을 때, prevPopup으로 포커스 이동)
+						<button type="button" class="btn popup_open" onclick="openHDPopup('','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+						<br /><br /><br />
+
+						(닫을 때 this가 아닌 다른 요소를 지정했을 때 - 아래의 input으로 포커스 설정한 예시)
+						<button type="button" class="btn popup_open" onclick="openHDPopup('#input01','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+						<br /><br /><br />
+						<label>텍스트 입력창</label>
+						<input type="text" id="input01" class="input_text" placeholder="입력하세요" />
+						<br /><br /><br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+						팝업내용입니다<br />
+						내용<br />
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<!-- <button type="button" class="btn"><span>확인</span></button> -->
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
+				</div>
 			</div>
+		</div>
+		<div class="popup_wrap popup_wrap_type1" id="pop_type03" role="dialog">
+			<div class="popup_container">
+				<div class="popup_dim"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
+					</div>
+					<div class="popup_cont">
+						팝업내용입니다<br />
+						팝업내용입니다<br />
+						내용<br />
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<!-- <button type="button" class="btn"><span>확인</span></button> -->
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="popup_wrap popup_wrap_type2" id="pop_type06" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type06');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">팝업 타이틀</div>
+					</div>
+
+					<div class="popup_cont">
+						팝업내용입니다<br />
+						팝업내용입니다<br />
+						내용<br />
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<!-- <button type="button" class="btn"><span>확인</span></button> -->
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type06');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

@@ -52,63 +52,61 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">이중출금 안내</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<!-- s: .popup_content_top -->
-								<div class="popup_content_top">
-									<ul class="list_ty3">
-										<li>대출이자가 자동이체로 빠져나갈 예정이에요.</li>
-										<li>지금 대출(상환) 시 이자가 이중출금되며, 이중출금된 금액은 <strong class="point">2일 (영업일 기준) 후 자동이체계좌로 돌려받아요.</strong></li>
-										<li>이 대출 건의 대출(상환)을 취소하려면 [취소]를 눌러주세요.</li>
-									</ul>
-								</div>
-								<!-- e: .popup_content_top -->
-
-								<div class="checkbox_group_wrap">
-									<div class="inp_checkbox rd_box">
-										<input type="checkbox" id="checkbox01-1" />
-										<label for="checkbox01-1" class="chk_label chk_label_ty3">
-											<span class="label_cont">이중출금 안내를 확인했어요.</span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">취소</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">다음</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">이중출금 안내</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<!-- s: .popup_content_top -->
+							<div class="popup_content_top">
+								<ul class="list_ty3">
+									<li>대출이자가 자동이체로 빠져나갈 예정이에요.</li>
+									<li>지금 대출(상환) 시 이자가 이중출금되며, 이중출금된 금액은 <strong class="point">2일 (영업일 기준) 후 자동이체계좌로 돌려받아요.</strong></li>
+									<li>이 대출 건의 대출(상환)을 취소하려면 [취소]를 눌러주세요.</li>
+								</ul>
+							</div>
+							<!-- e: .popup_content_top -->
+
+							<div class="checkbox_group_wrap">
+								<div class="inp_checkbox rd_box">
+									<input type="checkbox" id="checkbox01-1" />
+									<label for="checkbox01-1" class="chk_label chk_label_ty3">
+										<span class="label_cont">이중출금 안내를 확인했어요.</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">다음</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
+		</div>
+		<!-- e: Bottom 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

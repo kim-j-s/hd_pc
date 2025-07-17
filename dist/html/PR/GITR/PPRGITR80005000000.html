@@ -52,222 +52,221 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
-			<div id="wrap" class="wrap">
-				<div id="header" class="header_pc header_pc_nd">
-					<div class="header_pc_inner">
-						<div class="hpi_bottom">
-							<div class="hpi_l hpi_l_nd">
-								<h1 class="hpi_logo">
-									<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
-								</h1>
-								<strong class="hpi_l_prd_name">해외여행보험</strong>
-							</div>
+			<div id="header" class="header_pc header_pc_nd">
+				<div class="header_pc_inner">
+					<div class="hpi_bottom">
+						<div class="hpi_l hpi_l_nd">
+							<h1 class="hpi_logo">
+								<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
+							</h1>
+							<strong class="hpi_l_prd_name">해외여행보험</strong>
+						</div>
 
-							<div class="hpi_sub_utils">
-								<div class="item item_chatbot">
-									<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
-								</div>
-								<div class="item">
-									<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
-								</div>
+						<div class="hpi_sub_utils">
+							<div class="item item_chatbot">
+								<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
+							</div>
+							<div class="item">
+								<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div id="container" class="container">
-					<div class="content">
-						<!-- s: 피보험자 = 성인단독 Case -->
-						<div class="title_view_wrap">
-							<div class="page_title">
-								<div class="p_info">피보험자/계약자정보</div>
-								<h2 class="p_title"><strong>계약자 정보를 입력</strong>해주세요</h2>
-							</div>
+			<div id="container" class="container">
+				<div class="content">
+					<!-- s: 피보험자 = 성인단독 Case -->
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<div class="p_info">피보험자/계약자정보</div>
+							<h2 class="p_title"><strong>계약자 정보를 입력</strong>해주세요</h2>
 						</div>
-						<!-- e: 피보험자 = 성인단독 Case -->
-						<!-- s: 피보험자 = 미성년자 or 계피상이(동반자) Case -->
-						<div class="title_view_wrap">
-							<div class="page_title">
-								<div class="p_info">계약자정보</div>
-								<h2 class="p_title"><strong>계약자(보험료를 납입할 분) 정보를 입력</strong>해주세요</h2>
-							</div>
+					</div>
+					<!-- e: 피보험자 = 성인단독 Case -->
+					<!-- s: 피보험자 = 미성년자 or 계피상이(동반자) Case -->
+					<div class="title_view_wrap">
+						<div class="page_title">
+							<div class="p_info">계약자정보</div>
+							<h2 class="p_title"><strong>계약자(보험료를 납입할 분) 정보를 입력</strong>해주세요</h2>
 						</div>
-						<!-- e: 피보험자 = 미성년자 or 계피상이(동반자) Case -->
+					</div>
+					<!-- e: 피보험자 = 미성년자 or 계피상이(동반자) Case -->
 
-						<div class="form_box">
-							<h3 class="title_h3">기본 정보</h3>
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">휴대폰번호</div>
-									<div class="input_text phone">
-										<div class="int_txt left">010</div>
-										<div class="inp">
-											<input type="tel" placeholder="-없이 입력하세요" value="- 1234 - 5678" maxlength="8" readonly title="휴대폰번호" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-									</div>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">이메일</div>
-									<div class="input_text">
-										<div class="inp">
-											<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-									</div>
-								</div>
-								<div class="form_line full">
-									<div class="label_tit">주소</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="addSel01_01" name="addSel01" checked />
-											<label for="addSel01_01">
-												<span class="label_cont">집</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="addSel01_02" name="addSel01" />
-											<label for="addSel01_02">
-												<span class="label_cont">직장</span>
-											</label>
-										</div>
-									</div>
-									<div class="address_item address_item_case01" role="button" tabindex="0" title="주소검색 팝업열기">
-										<div class="address_item_inner">
-											<div class="ad_item active" data-placeholder="주소를 입력해 주세요.">
-												<span class="zip_code">03379</span>
-												<span>서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)</span>
-											</div>
-											<span class="ad_stat">입력됨</span>
-										</div>
-									</div>
-								</div>
-								<!-- s: 25-07-02 수정 -->
-								<div class="form_line full_half">
-									<div class="label_tit">영문이름</div>
-									<div class="input_text">
-										<div class="inp">
-											<input type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" title="영문이름 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-										</div>
-									</div>
-									<ul class="list_ty2">
-										<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
-									</ul>
-								</div>
-								<div class="form_line full_half">
-									<div class="label_tit">보험계약서류 받는 방법</div>
-									<div class="radio_group_wrap" role="radiogroup">
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="receiveSel01_01" name="receiveSel01" checked />
-											<label for="receiveSel01_01">
-												<span class="label_cont">모바일</span>
-											</label>
-										</div>
-										<div class="inp_radio rd_btn">
-											<input type="radio" id="receiveSel01_02" name="receiveSel01" />
-											<label for="receiveSel01_02">
-												<span class="label_cont">이메일</span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<!-- e: 25-07-02 수정 -->
-							</div>
-						</div>
-
-						<div class="divider_ty1"></div>
-						<!-- s: 계피동일 - 장애인전용보험전환특약 가입대상여부 확인 -->
-						<h3 class="title_h3">장애인전용보험전환특약 대상 여부</h3>
+					<div class="form_box">
+						<h3 class="title_h3">기본 정보</h3>
 						<div class="form_group_wrap">
-							<!-- s: 25-07-02 수정 -->
-							<div class="form_line full_half">
-								<div class="label_tit">「소득세법」에서 규정한 장애인 전용보험전환특약 가입대상인가요?</div>
+							<div class="form_line">
+								<div class="label_tit">휴대폰번호</div>
+								<div class="input_text phone">
+									<div class="int_txt left">010</div>
+									<div class="inp">
+										<input type="tel" placeholder="-없이 입력하세요" value="- 1234 - 5678" maxlength="8" readonly title="휴대폰번호" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">이메일</div>
+								<div class="input_text">
+									<div class="inp">
+										<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="form_line full">
+								<div class="label_tit">주소</div>
 								<div class="radio_group_wrap" role="radiogroup">
 									<div class="inp_radio rd_btn">
-										<input type="radio" id="checktype03_01" name="checktype03" />
-										<label for="checktype03_01">
-											<span class="label_cont">예</span>
+										<input type="radio" id="addSel01_01" name="addSel01" checked />
+										<label for="addSel01_01">
+											<span class="label_cont">집</span>
 										</label>
 									</div>
 									<div class="inp_radio rd_btn">
-										<input type="radio" id="checktype03_02" name="checktype03" />
-										<label for="checktype03_02">
-											<span class="label_cont">아니요</span>
+										<input type="radio" id="addSel01_02" name="addSel01" />
+										<label for="addSel01_02">
+											<span class="label_cont">직장</span>
 										</label>
+									</div>
+								</div>
+								<div class="address_item address_item_case01" role="button" tabindex="0" title="주소검색 팝업열기">
+									<div class="address_item_inner">
+										<div class="ad_item active" data-placeholder="주소를 입력해 주세요.">
+											<span class="zip_code">03379</span>
+											<span>서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)</span>
+										</div>
+										<span class="ad_stat">입력됨</span>
+									</div>
+								</div>
+							</div>
+							<!-- s: 25-07-02 수정 -->
+							<div class="form_line full_half">
+								<div class="label_tit">영문이름</div>
+								<div class="input_text">
+									<div class="inp">
+										<input type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" title="영문이름 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
 								</div>
 								<ul class="list_ty2">
-									<li>피보험자가 「소득세법」에서 규정한 장애인인 경우 가입이 가능하며, 특약 가입 시 입증 서류가 필요합니다.</li>
+									<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
 								</ul>
 							</div>
 							<div class="form_line full_half">
-								<div class="label_tit">장애유형</div>
+								<div class="label_tit">보험계약서류 받는 방법</div>
 								<div class="radio_group_wrap" role="radiogroup">
 									<div class="inp_radio rd_btn">
-										<input type="radio" id="checktype04_01" name="checktype04" />
-										<label for="checktype04_01">
-											<span class="label_cont">영구 장애</span>
+										<input type="radio" id="receiveSel01_01" name="receiveSel01" checked />
+										<label for="receiveSel01_01">
+											<span class="label_cont">모바일</span>
 										</label>
 									</div>
 									<div class="inp_radio rd_btn">
-										<input type="radio" id="checktype04_02" name="checktype04" />
-										<label for="checktype04_02">
-											<span class="label_cont">한시 장애</span>
+										<input type="radio" id="receiveSel01_02" name="receiveSel01" />
+										<label for="receiveSel01_02">
+											<span class="label_cont">이메일</span>
 										</label>
-									</div>
-								</div>
-							</div>
-							<div class="form_line full_half">
-								<div class="label_tit">장애기간</div>
-								<div class="range_calrendar">
-									<div class="input_text calendar">
-										<div class="inp">
-											<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
-										</div>
-									</div>
-									<div class="input_text calendar">
-										<div class="inp">
-											<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
-										</div>
 									</div>
 								</div>
 							</div>
 							<!-- e: 25-07-02 수정 -->
-							<!-- s: 25-07-14 수정 -->
-							<div class="form_line full">
-								<div class="file_upload_wrap">
-									<div class="file_info_box">
-										<h3 class="title_h3">장애인증명서(복지카드) 사진 등록</h3>
-										<p class="info_text">
-											<strong class="point">사진을 등록하지 않으면 특약에 가입할 수 없어요.</strong><br />
-											서류(카드)가 선명하게 보이도록 정면에서 촬영해주세요.
-										</p>
-										<ul class="list_ty2">
-											<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요</li>
-										</ul>
-									</div>
+						</div>
+					</div>
 
-									<!-- s: 이미지 파일 붙는 영역 -->
-									<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-									<div class="file_attach_box">
-										<div class="file_thumbnail">
-											<img src="../../../images/common/img_certify_card_ex.png" alt="복지카드 예시 이미지" />
-										</div>
+					<div class="divider_ty1"></div>
+					<!-- s: 계피동일 - 장애인전용보험전환특약 가입대상여부 확인 -->
+					<h3 class="title_h3">장애인전용보험전환특약 대상 여부</h3>
+					<div class="form_group_wrap">
+						<!-- s: 25-07-02 수정 -->
+						<div class="form_line full_half">
+							<div class="label_tit">「소득세법」에서 규정한 장애인 전용보험전환특약 가입대상인가요?</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="checktype03_01" name="checktype03" />
+									<label for="checktype03_01">
+										<span class="label_cont">예</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="checktype03_02" name="checktype03" />
+									<label for="checktype03_02">
+										<span class="label_cont">아니요</span>
+									</label>
+								</div>
+							</div>
+							<ul class="list_ty2">
+								<li>피보험자가 「소득세법」에서 규정한 장애인인 경우 가입이 가능하며, 특약 가입 시 입증 서류가 필요합니다.</li>
+							</ul>
+						</div>
+						<div class="form_line full_half">
+							<div class="label_tit">장애유형</div>
+							<div class="radio_group_wrap" role="radiogroup">
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="checktype04_01" name="checktype04" />
+									<label for="checktype04_01">
+										<span class="label_cont">영구 장애</span>
+									</label>
+								</div>
+								<div class="inp_radio rd_btn">
+									<input type="radio" id="checktype04_02" name="checktype04" />
+									<label for="checktype04_02">
+										<span class="label_cont">한시 장애</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form_line full_half">
+							<div class="label_tit">장애기간</div>
+							<div class="range_calrendar">
+								<div class="input_text calendar">
+									<div class="inp">
+										<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 									</div>
-									<!-- 
+								</div>
+								<div class="input_text calendar">
+									<div class="inp">
+										<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 25-07-02 수정 -->
+						<!-- s: 25-07-14 수정 -->
+						<div class="form_line full">
+							<div class="file_upload_wrap">
+								<div class="file_info_box">
+									<h3 class="title_h3">장애인증명서(복지카드) 사진 등록</h3>
+									<p class="info_text">
+										<strong class="point">사진을 등록하지 않으면 특약에 가입할 수 없어요.</strong><br />
+										서류(카드)가 선명하게 보이도록 정면에서 촬영해주세요.
+									</p>
+									<ul class="list_ty2">
+										<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요</li>
+									</ul>
+								</div>
+
+								<!-- s: 이미지 파일 붙는 영역 -->
+								<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+								<div class="file_attach_box">
+									<div class="file_thumbnail">
+										<img src="../../../images/common/img_certify_card_ex.png" alt="복지카드 예시 이미지" />
+									</div>
+								</div>
+								<!-- 
 										등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
 										등록 후 이미지일 시, active 클래스 추가
 										등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
 									-->
-									<!-- <div class="file_attach_box active">
+								<!-- <div class="file_attach_box active">
 										<div class="file_thumbnail">
 											<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
 										</div>
@@ -275,22 +274,22 @@
 											<span>등록한 이미지 삭제하기</span>
 										</button>
 									</div> -->
-									<!-- e: 이미지 파일 붙는 영역 -->
+								<!-- e: 이미지 파일 붙는 영역 -->
 
-									<!-- s: 이미지 파일 버튼 -->
-									<div class="btn_area center">
-										<!-- 등록 전 노출 -->
-										<div class="file_btn">
-											<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-											<label for="file">
-												<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg"></i>
-													사진 등록하기
-												</span>
-											</label>
-										</div>
-										<!-- 등록 후 노출 -->
-										<!-- <div class="file_btn">
+								<!-- s: 이미지 파일 버튼 -->
+								<div class="btn_area center">
+									<!-- 등록 전 노출 -->
+									<div class="file_btn">
+										<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+										<label for="file">
+											<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+												<i class="hd_icon carmeraSvg"></i>
+												사진 등록하기
+											</span>
+										</label>
+									</div>
+									<!-- 등록 후 노출 -->
+									<!-- <div class="file_btn">
 											<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 											<label for="file">
 												<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
@@ -299,207 +298,206 @@
 												</span>
 											</label>
 										</div> -->
-									</div>
-									<!-- e: 이미지 파일 버튼 -->
 								</div>
+								<!-- e: 이미지 파일 버튼 -->
 							</div>
-							<!-- e: 25-07-14 수정 -->
 						</div>
-						<!-- e: 계피동일 - 장애인전용보험전환특약 가입대상여부 확인 -->
+						<!-- e: 25-07-14 수정 -->
+					</div>
+					<!-- e: 계피동일 - 장애인전용보험전환특약 가입대상여부 확인 -->
 
-						<!-- s: 하단 버튼 영역 -->
-						<div class="bottom_fix_wrap">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
-									<span class="text">이전</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" disabled>
-									<span class="text">입력 중이에요</span>
-								</button>
-								<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
+								<span class="text">이전</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" disabled>
+								<span class="text">입력 중이에요</span>
+							</button>
+							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
 			
 					<span class="text">모두 입력했어요</span>
 			
 			</button> -->
-							</div>
 						</div>
-						<!-- s: 하단 버튼 영역 -->
-
-						<!-- s: 꼭 알아두세요 -->
-						<div class="bottom_fix_notice">
-							<div class="acd_item">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<ul class="list_depth">
-											<li>입력한 정보로 개인정보도 함께 변경돼요.</li>
-											<li>보험계약서류를 보내드리니 정확하게 입력해주세요.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- e: 꼭 알아두세요 -->
 					</div>
+					<!-- s: 하단 버튼 영역 -->
 
-					<!-- s: 사이드 패널 -->
-					<div class="side_panel">
-						<div class="info_cont pro_info_wrap">
-							<div class="pro_info_item">
-								<div class="tit_box">
-									<h3 class="pop_title_h3">여행자와 여행정보</h3>
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-										<span class="text">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</div>
-								<div class="data_list">
-									<ul>
-										<li>
-											<dl>
-												<dt class="date">기간</dt>
-												<dd>2025.05.20 11시~2025.05.24 23시</dd>
-											</dl>
-										</li>
-										<!-- s: 단독(성인/미성년자녀) -->
-										<li>
-											<dl>
-												<dt class="birth">생년월일</dt>
-												<dd>19790101</dd>
-											</dl>
-										</li>
-										<li>
-											<dl>
-												<dt class="gender">성별</dt>
-												<dd>남성</dd>
-											</dl>
-										</li>
-										<!-- e: 단독(성인/미성년자녀) -->
-										<!-- s: 피보험자다수 -->
-										<li>
-											<dl>
-												<dt class="person">여행자</dt>
-												<dd>19790101(남성) 외 3명</dd>
-											</dl>
-										</li>
-										<!-- e: 피보험자다수 -->
+					<!-- s: 꼭 알아두세요 -->
+					<div class="bottom_fix_notice">
+						<div class="acd_item">
+							<div class="acd_head active">
+								<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
+							</div>
+							<div class="acd_cont">
+								<div class="inner" style="display: block">
+									<ul class="list_depth">
+										<li>입력한 정보로 개인정보도 함께 변경돼요.</li>
+										<li>보험계약서류를 보내드리니 정확하게 입력해주세요.</li>
 									</ul>
 								</div>
 							</div>
 						</div>
+					</div>
+					<!-- e: 꼭 알아두세요 -->
+				</div>
 
-						<div class="info_gray">
-							<ol class="step_list">
-								<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-								<li class="active">
-									<dl>
-										<dt class="title">1.보험료 계산 결과</dt>
-										<dd>
-											<ul>
-												<li>선택: <span>표준형, 32,700원</span></li>
-												<li>할인: <span>다이렉트할인</span></li>
-											</ul>
-											<div class="info">보험료를 확인 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">2.피보험자/계약자 정보</dt>
-										<dd>
-											<!-- s: CASE1-1. 성인단독 -->
-											<ul>
-												<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-											</ul>
-											<div class="info">정보를 입력 중이에요</div>
-											<!-- e: CASE1-1. 성인단독 -->
-											<!-- s: 미성년자단독, 피보험자다수 -->
-											<ul>
-												<!-- s: CASE1-2. 미성년자단독 -->
-												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-												<li>피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span></li>
-												<!-- e: CASE1-2. 미성년자단독 -->
-												<!-- s: CASE1-3. 피보험자다수 -->
-												<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
-												<li>피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span></li>
-												<!-- e: CASE1-3. 피보험자다수 -->
-											</ul>
-											<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
-											<!-- e: 미성년자단독, 피보험자다수 -->
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">3.가입 내용 확인</dt>
-										<dd>
-											<ul>
-												<li>확인: <span>가입내용 및 계약서류</span></li>
-											</ul>
-											<div class="info">내용을 확인 중이에요</div>
-										</dd>
-									</dl>
-									<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
-										<span class="sr-only">수정</span>
-										<i class="hd_icon resetSvg"></i>
-									</button>
-								</li>
-								<li>
-									<dl>
-										<dt class="title">4.보험료 결제</dt>
-										<dd>
-											<div class="info">정보를 입력 중이에요</div>
-										</dd>
-									</dl>
-								</li>
-							</ol>
-						</div>
-
-						<div class="panel_total">
-							<div class="inner">
-								<div class="title">최종 보험료</div>
-								<div class="right">
-									<del>1,563,393원</del>
-									<span class="price">7,200원</span>
-								</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_cont pro_info_wrap">
+						<div class="pro_info_item">
+							<div class="tit_box">
+								<h3 class="pop_title_h3">여행자와 여행정보</h3>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
 							</div>
-						</div>
-
-						<div class="customer_info">
-							<div class="contact_list">
-								<div class="list">
-									<i class="icon call"></i>
-									<span class="info">
-										다이렉트 고객센터
-										<em>1899-6782</em>
-									</span>
-								</div>
+							<div class="data_list">
+								<ul>
+									<li>
+										<dl>
+											<dt class="date">기간</dt>
+											<dd>2025.05.20 11시~2025.05.24 23시</dd>
+										</dl>
+									</li>
+									<!-- s: 단독(성인/미성년자녀) -->
+									<li>
+										<dl>
+											<dt class="birth">생년월일</dt>
+											<dd>19790101</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="gender">성별</dt>
+											<dd>남성</dd>
+										</dl>
+									</li>
+									<!-- e: 단독(성인/미성년자녀) -->
+									<!-- s: 피보험자다수 -->
+									<li>
+										<dl>
+											<dt class="person">여행자</dt>
+											<dd>19790101(남성) 외 3명</dd>
+										</dl>
+									</li>
+									<!-- e: 피보험자다수 -->
+								</ul>
 							</div>
-							<ul class="list_depth_ty2">
-								<li>인터넷가입 보험료와 차이가 있어요</li>
-							</ul>
 						</div>
 					</div>
-					<!-- e: 사이드 패널 -->
+
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li class="active">
+								<dl>
+									<dt class="title">1.보험료 계산 결과</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>표준형, 32,700원</span></li>
+											<li>할인: <span>다이렉트할인</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dd>
+										<!-- s: CASE1-1. 성인단독 -->
+										<ul>
+											<li>입력: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+										<!-- e: CASE1-1. 성인단독 -->
+										<!-- s: 미성년자단독, 피보험자다수 -->
+										<ul>
+											<!-- s: CASE1-2. 미성년자단독 -->
+											<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+											<li>피보험자: <span>윤*성(190327-4******, YUN TAESUNG)</span></li>
+											<!-- e: CASE1-2. 미성년자단독 -->
+											<!-- s: CASE1-3. 피보험자다수 -->
+											<li>계약자: <span>김*대(790102-*******,남성), KIM H*** DAI</span></li>
+											<li>피보험자: <span>김*대(790102-*******,남성), KIM H*** DAI 외 1명</span></li>
+											<!-- e: CASE1-3. 피보험자다수 -->
+										</ul>
+										<div class="info"><strong>피보험자 정보를 입력</strong> 중이에요</div>
+										<!-- e: 미성년자단독, 피보험자다수 -->
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3.가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4.보험료 결제</dt>
+									<dd>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+						<ul class="list_depth_ty2">
+							<li>인터넷가입 보험료와 차이가 있어요</li>
+						</ul>
+					</div>
 				</div>
+				<!-- e: 사이드 패널 -->
 			</div>
+		</div>
 
-			<!-- s: popup area -->
+		<!-- s: popup area -->
 
-			<!-- e: popup area -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<!-- e: popup area -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>
