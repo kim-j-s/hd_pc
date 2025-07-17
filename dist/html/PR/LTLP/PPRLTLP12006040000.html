@@ -52,76 +52,75 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">입양증명서 등록</div>
-						</div>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">입양증명서 등록</div>
+					</div>
 
-						<div class="popup_cont">
-							<div class="popup_content">
-								<!-- s: 25-07-09 수정 -->
-								<p class="bpop_sub_title">동물보호관리시스템(<a href="http://www.animal.go.kr" target="_blank" title="새창열림" class="underline">www.animal.go.kr</a>) [구조동물 >동물보호센터] 메뉴에 등재된 보호센터(「동물보호법」에 따라 지정)에서 입양하신 경우 할인을 받을 수 있어요.</p>
-								<!-- e: 25-07-09 수정 -->
-								<div class="form_group_wrap">
-									<div class="form_line">
-										<div class="label_tit box">
-											<div>유기동물입양증명서</div>
-										</div>
-										<div class="file_upload_wrap">
-											<!-- s: 이미지 파일 붙는 영역 -->
-											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
-											<!-- s: 25-07-01 수정 -->
-											<div class="file_attach_box">
-												<div class="file_thumbnail">
-													<img src="../../../images/content/gipt/img_pet_adoption_dog.png" alt="강아지 입양증명서 예시 이미지" />
-													<!-- <img src="../../../images/content/gipt/img_pet_adoption_cat.png" alt="고양이 입양증명서 예시 이미지"> -->
-												</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<!-- s: 25-07-09 수정 -->
+							<p class="bpop_sub_title">동물보호관리시스템(<a href="http://www.animal.go.kr" target="_blank" title="새창열림" class="underline">www.animal.go.kr</a>) [구조동물 >동물보호센터] 메뉴에 등재된 보호센터(「동물보호법」에 따라 지정)에서 입양하신 경우 할인을 받을 수 있어요.</p>
+							<!-- e: 25-07-09 수정 -->
+							<div class="form_group_wrap">
+								<div class="form_line">
+									<div class="label_tit box">
+										<div>유기동물입양증명서</div>
+									</div>
+									<div class="file_upload_wrap">
+										<!-- s: 이미지 파일 붙는 영역 -->
+										<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
+										<!-- s: 25-07-01 수정 -->
+										<div class="file_attach_box">
+											<div class="file_thumbnail">
+												<img src="../../../images/content/gipt/img_pet_adoption_dog.png" alt="강아지 입양증명서 예시 이미지" />
+												<!-- <img src="../../../images/content/gipt/img_pet_adoption_cat.png" alt="고양이 입양증명서 예시 이미지"> -->
 											</div>
+										</div>
 
-											<!-- 
+										<!-- 
 												등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
 												등록 후 이미지일 시, active 클래스 추가
 												등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
 											-->
-											<!-- <div class="file_attach_box active">
+										<!-- <div class="file_attach_box active">
 												<div class="file_thumbnail">
 													<img src="../../../images/temp/img_carmera_temp.png" alt="입양증명서 이미지">
 												</div>
 											</div> -->
-											<!-- e: 이미지 파일 붙는 영역 -->
-											<!-- e: 25-07-01 수정 -->
+										<!-- e: 이미지 파일 붙는 영역 -->
+										<!-- e: 25-07-01 수정 -->
 
-											<ul class="list_ty2">
-												<li>
-													<strong><span class="point">입양한 지 만 3년이 넘은 경우에만</span> 할인</strong>받을 수 있어요.
-												</li>
+										<ul class="list_ty2">
+											<li>
+												<strong><span class="point">입양한 지 만 3년이 넘은 경우에만</span> 할인</strong>받을 수 있어요.
+											</li>
 
-												<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요.</li>
-											</ul>
+											<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있어요.</li>
+										</ul>
 
-											<!-- s: 이미지 파일 버튼 -->
-											<div class="btn_area center">
-												<!-- 등록 전 노출 -->
-												<div class="file_btn">
-													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
-													<label for="file">
-														<span class="hd_btn hd_btn_ty_2 hd_btn_s_2">
-															<i class="hd_icon carmeraSvg"></i>
-															사진 등록
-														</span>
-													</label>
-												</div>
-												<!-- 등록 후 노출 -->
-												<!-- <div class="file_btn">
+										<!-- s: 이미지 파일 버튼 -->
+										<div class="btn_area center">
+											<!-- 등록 전 노출 -->
+											<div class="file_btn">
+												<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png" />
+												<label for="file">
+													<span class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+														<i class="hd_icon carmeraSvg"></i>
+														사진 등록
+													</span>
+												</label>
+											</div>
+											<!-- 등록 후 노출 -->
+											<!-- <div class="file_btn">
 													<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 													<label for="file">
 														<span class="hd_btn hd_btn_ty_3 hd_btn_s_2">
@@ -130,33 +129,32 @@
 														</span>
 													</label>
 												</div> -->
-											</div>
-											<!-- e: 이미지 파일 버튼 -->
 										</div>
+										<!-- e: 이미지 파일 버튼 -->
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-									<span class="text">입력 중이에요</span>
-								</button>
-								<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+								<span class="text">입력 중이에요</span>
+							</button>
+							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 						
 								<span class="text">모두 입력했어요</span>
 						
 						</button> -->
-							</div>
 						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		</div>
+		<!-- e: Bottom 팝업 -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

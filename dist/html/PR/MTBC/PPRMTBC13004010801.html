@@ -52,88 +52,86 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
-			<!-- s: popup area -->
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">대인·대물 자기부담금 상세</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="info_cont">
-									<ul class="list_depth">
-										<li>이륜자동차의 사고로 대인배상 I 또는 대물배상에서 보험금이 지급되는 경우, 피보험자는 자기부담금을 보험회사로 납입하여야 합니다.</li>
-										<li>자기부담금을 설정함으로 인해 고객님은 보험료 절감효과를 누릴 수 있습니다.</li>
-									</ul>
-
-									<h3 class="title_h3">[사고 예시]</h3>
-									<div class="table_wrap">
-										<table class="table">
-											<caption>
-												구분, 보험사, 자기부담금 제공
-											</caption>
-											<colgroup>
-												<col style="width: 26%" />
-												<col style="width: 37%" />
-												<col style="width: 37%" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th scope="col">구분</th>
-													<th scope="col">보험사</th>
-													<th scope="col">자기부담금</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>대인</td>
-													<td>50만원</td>
-													<td>50만원</td>
-												</tr>
-												<tr>
-													<td>대물</td>
-													<td>50만원</td>
-													<td>50만원</td>
-												</tr>
-												<tr>
-													<td>대인+대물</td>
-													<td>100만원</td>
-													<td>100만원</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<ul class="list_ty2">
-										<li>*자기부담금은 대인, 대물 각각 적용됩니다.</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">확인</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
+		<!-- s: popup area -->
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">대인·대물 자기부담금 상세</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="info_cont">
+								<ul class="list_depth">
+									<li>이륜자동차의 사고로 대인배상 I 또는 대물배상에서 보험금이 지급되는 경우, 피보험자는 자기부담금을 보험회사로 납입하여야 합니다.</li>
+									<li>자기부담금을 설정함으로 인해 고객님은 보험료 절감효과를 누릴 수 있습니다.</li>
+								</ul>
+
+								<h3 class="title_h3">[사고 예시]</h3>
+								<div class="table_wrap">
+									<table class="table">
+										<caption>
+											구분, 보험사, 자기부담금 제공
+										</caption>
+										<colgroup>
+											<col style="width: 26%" />
+											<col style="width: 37%" />
+											<col style="width: 37%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">보험사</th>
+												<th scope="col">자기부담금</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>대인</td>
+												<td>50만원</td>
+												<td>50만원</td>
+											</tr>
+											<tr>
+												<td>대물</td>
+												<td>50만원</td>
+												<td>50만원</td>
+											</tr>
+											<tr>
+												<td>대인+대물</td>
+												<td>100만원</td>
+												<td>100만원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<ul class="list_ty2">
+									<li>*자기부담금은 대인, 대물 각각 적용됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
-			<!-- e: popup area -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		</div>
+		<!-- e: Bottom 팝업 -->
+		<!-- e: popup area -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

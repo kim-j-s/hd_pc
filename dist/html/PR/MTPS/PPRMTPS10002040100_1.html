@@ -56,157 +56,155 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title"></div>
-						</div>
-						<div class="popup_cont">
-							<div class="popup_content">
-								<!-- s: popup_content_top -->
-								<div class="popup_content_top">
-									<!-- s: 25-04-15 수정 -->
-									<h2 class="title_h2">
-										<strong>1234의 차량정보</strong>가<br />
-										조회되었습니다
-									</h2>
-									<!-- e: 25-04-15 수정 -->
-								</div>
-								<!-- e: popup_content_top -->
-
-								<p class="text_sub">일치하는 차량을 선택해주세요</p>
-
-								<!-- s: 25-04-15 수정 -->
-								<div class="card_item_wrap">
-									<div class="card_item">
-										<div class="item_inner">
-											<div class="inp_radio">
-												<input type="radio" id="card_radio1" name="name2" aria-labelledby="card_chk2_cont" />
-												<label for="card_radio1" class="chk_label"></label>
-												<i></i>
-											</div>
-											<div class="inner_cont" id="card_chk2_cont">
-												<ul class="card_list_ty1">
-													<li>
-														<div class="title">제조사</div>
-														<div class="cont">기아</div>
-													</li>
-													<li>
-														<div class="title">차명</div>
-														<div class="cont">K7 2.4GDI</div>
-													</li>
-													<li>
-														<div class="title">연식/배기량</div>
-														<div class="cont">
-															<span>2025</span>
-															년 /
-															<span>1,999</span>
-															cc
-														</div>
-													</li>
-													<li>
-														<div class="title">세부모델</div>
-														<div class="cont">5인승, 프레스티지</div>
-													</li>
-													<li>
-														<div class="title">기본부속품</div>
-														<div class="cont">오토, 에어컨, P/S, ABS, AIR-D, IM</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-
-									<div class="card_item">
-										<div class="item_inner">
-											<div class="inp_radio">
-												<input type="radio" id="card_radio2" name="name2" aria-labelledby="card_chk2_cont" />
-												<label for="card_radio2" class="chk_label"></label>
-												<i></i>
-											</div>
-											<div class="inner_cont" id="card_chk2_cont">
-												<ul class="card_list_ty1">
-													<li>
-														<div class="title">제조사</div>
-														<div class="cont">기아</div>
-													</li>
-													<li>
-														<div class="title">차명</div>
-														<div class="cont">K7 2.4GDI</div>
-													</li>
-													<li>
-														<div class="title">연식/배기량</div>
-														<div class="cont">
-															<span>2025</span>
-															년 /
-															<span>1,999</span>
-															cc
-														</div>
-													</li>
-													<li>
-														<div class="title">세부모델</div>
-														<div class="cont">5인승, 프레스티지</div>
-													</li>
-													<li>
-														<div class="title">기본부속품</div>
-														<div class="cont">오토, 에어컨, P/S, ABS, AIR-D, IM</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- e: 25-04-15 수정 -->
-
-								<div class="etc_area_ty1">
-									<p class="etc_title">차량 정보가 일치하지 않으면?</p>
-
-									<!-- s: 25-04-21 수정 -->
-									<!-- s: 25-04-15 수정 -->
-									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-										<span class="text">차량정보 직접 선택하기</span>
-									</button>
-									<!-- e: 25-04-15 수정 -->
-									<!-- e: 25-04-21 수정 -->
-								</div>
-							</div>
-						</div>
-
-						<div class="popup_bottom">
-							<!-- s: 체크박스 선택 후 표출될 버튼 케이스 -->
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">차량정보 일치해요</span>
-								</button>
-							</div>
-							<!-- e: 체크박스 선택 후 표출될 버튼 -->
-
-							<!-- s: 체크박스 선택 전 표출될 버튼 케이스 -->
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-									<span class="text">차량을 선택 중이에요</span>
-								</button>
-							</div>
-							<!-- e: 체크박스 선택 전 표출될 버튼 케이스 -->
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<!-- s: Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title"></div>
 					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<!-- s: popup_content_top -->
+							<div class="popup_content_top">
+								<!-- s: 25-04-15 수정 -->
+								<h2 class="title_h2">
+									<strong>1234의 차량정보</strong>가<br />
+									조회되었습니다
+								</h2>
+								<!-- e: 25-04-15 수정 -->
+							</div>
+							<!-- e: popup_content_top -->
+
+							<p class="text_sub">일치하는 차량을 선택해주세요</p>
+
+							<!-- s: 25-04-15 수정 -->
+							<div class="card_item_wrap">
+								<div class="card_item">
+									<div class="item_inner">
+										<div class="inp_radio">
+											<input type="radio" id="card_radio1" name="name2" aria-labelledby="card_chk2_cont" />
+											<label for="card_radio1" class="chk_label"></label>
+											<i></i>
+										</div>
+										<div class="inner_cont" id="card_chk2_cont">
+											<ul class="card_list_ty1">
+												<li>
+													<div class="title">제조사</div>
+													<div class="cont">기아</div>
+												</li>
+												<li>
+													<div class="title">차명</div>
+													<div class="cont">K7 2.4GDI</div>
+												</li>
+												<li>
+													<div class="title">연식/배기량</div>
+													<div class="cont">
+														<span>2025</span>
+														년 /
+														<span>1,999</span>
+														cc
+													</div>
+												</li>
+												<li>
+													<div class="title">세부모델</div>
+													<div class="cont">5인승, 프레스티지</div>
+												</li>
+												<li>
+													<div class="title">기본부속품</div>
+													<div class="cont">오토, 에어컨, P/S, ABS, AIR-D, IM</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="card_item">
+									<div class="item_inner">
+										<div class="inp_radio">
+											<input type="radio" id="card_radio2" name="name2" aria-labelledby="card_chk2_cont" />
+											<label for="card_radio2" class="chk_label"></label>
+											<i></i>
+										</div>
+										<div class="inner_cont" id="card_chk2_cont">
+											<ul class="card_list_ty1">
+												<li>
+													<div class="title">제조사</div>
+													<div class="cont">기아</div>
+												</li>
+												<li>
+													<div class="title">차명</div>
+													<div class="cont">K7 2.4GDI</div>
+												</li>
+												<li>
+													<div class="title">연식/배기량</div>
+													<div class="cont">
+														<span>2025</span>
+														년 /
+														<span>1,999</span>
+														cc
+													</div>
+												</li>
+												<li>
+													<div class="title">세부모델</div>
+													<div class="cont">5인승, 프레스티지</div>
+												</li>
+												<li>
+													<div class="title">기본부속품</div>
+													<div class="cont">오토, 에어컨, P/S, ABS, AIR-D, IM</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 25-04-15 수정 -->
+
+							<div class="etc_area_ty1">
+								<p class="etc_title">차량 정보가 일치하지 않으면?</p>
+
+								<!-- s: 25-04-21 수정 -->
+								<!-- s: 25-04-15 수정 -->
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+									<span class="text">차량정보 직접 선택하기</span>
+								</button>
+								<!-- e: 25-04-15 수정 -->
+								<!-- e: 25-04-21 수정 -->
+							</div>
+						</div>
+					</div>
+
+					<div class="popup_bottom">
+						<!-- s: 체크박스 선택 후 표출될 버튼 케이스 -->
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">차량정보 일치해요</span>
+							</button>
+						</div>
+						<!-- e: 체크박스 선택 후 표출될 버튼 -->
+
+						<!-- s: 체크박스 선택 전 표출될 버튼 케이스 -->
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+								<span class="text">차량을 선택 중이에요</span>
+							</button>
+						</div>
+						<!-- e: 체크박스 선택 전 표출될 버튼 케이스 -->
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Full 팝업 -->
+		</div>
+		<!-- e: Full 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>
