@@ -96,22 +96,49 @@
 						<h3 class="title_h3">연락처 정보</h3>
 						<div class="form_group_wrap">
 							<!-- <div class="form_line">
-									<div class="label_tit">이름</div>
+								<div class="label_tit">이름</div>
+								<div class="input_text">
+								  
+								  <div class="inp">
+								    <input 
+														type="text"
+								      
+								      
+													
+								      
+								      value="김현대"
+								      
+								      
+								      
+								      readonly
+								      title="이름 입력"
+											
+								      
+								    >
+								    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+								  </div>
+								  
+									
+								</div>
+							</div> -->
+							<!-- <div class="form_line">
+								<div class="label_tit">주민등록번호</div>
+								<div class="comp_wrap birth">
 									<div class="input_text">
 									  
 									  <div class="inp">
 									    <input 
-															type="text"
+													type="tel"
 									      
 									      
 														
+									      placeholder="앞자리"
 									      
-									      value="김현대"
+									      minlength="6"
+									      maxlength="6"
 									      
 									      
-									      
-									      readonly
-									      title="이름 입력"
+									      title="주민등록번호 앞자리 입력"
 												
 									      
 									    >
@@ -120,10 +147,8 @@
 									  
 										
 									</div>
-								</div> -->
-							<!-- <div class="form_line">
-									<div class="label_tit">주민등록번호</div>
-									<div class="comp_wrap birth">
+									<span class="dash">-</span>
+									<div class="id_pass_box">
 										<div class="input_text">
 										  
 										  <div class="inp">
@@ -132,52 +157,27 @@
 										      
 										      
 															
-										      placeholder="앞자리"
+										      placeholder="●"
 										      
-										      minlength="6"
-										      maxlength="6"
+										      minlength="1"
+										      maxlength="1"
 										      
 										      
-										      title="주민등록번호 앞자리 입력"
+										      title="주민등록번호 뒷1자리 입력"
 													
 										      
 										    >
-										    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										    
 										  </div>
 										  
 											
 										</div>
-										<span class="dash">-</span>
-										<div class="id_pass_box">
-											<div class="input_text">
-											  
-											  <div class="inp">
-											    <input 
-															type="tel"
-											      
-											      
-																
-											      placeholder="●"
-											      
-											      minlength="1"
-											      maxlength="1"
-											      
-											      
-											      title="주민등록번호 뒷1자리 입력"
-														
-											      
-											    >
-											    
-											  </div>
-											  
-												
-											</div>
-											<div class="id_pass">
-												●●●●●●
-											</div>
+										<div class="id_pass">
+											●●●●●●
 										</div>
 									</div>
-								</div> -->
+								</div>
+							</div> -->
 							<div class="form_line">
 								<div class="label_tit">휴대폰번호</div>
 								<div class="input_text phone">
@@ -234,36 +234,36 @@
 							</div>
 
 							<!-- <div class="form_line">
-									<div class="label_tit">보험계약서류 수령방법</div>
-									<div class="radio_group_wrap">
-										<div class="inp_radio rd_btn">
-											<input type="radio"
-												id="radio_btn_gt3"
-												name="radio_method1"
-												
-												checked
-												
-												
-											>
-											<label for="radio_btn_gt3">
-												<span class="label_cont">모바일</span>
-											</label>
+								<div class="label_tit">보험계약서류 수령방법</div>
+								<div class="radio_group_wrap">
+									<div class="inp_radio rd_btn">
+										<input type="radio"
+											id="radio_btn_gt3"
+											name="radio_method1"
 											
-										</div>							<div class="inp_radio rd_btn">
-											<input type="radio"
-												id="radio_btn_gt4"
-												name="radio_method1"
-												
-												
-												
-												
-											>
-											<label for="radio_btn_gt4">
-												<span class="label_cont">이메일</span>
-											</label>
+											checked
 											
-										</div>						</div>
-								</div> -->
+											
+										>
+										<label for="radio_btn_gt3">
+											<span class="label_cont">모바일</span>
+										</label>
+										
+									</div>							<div class="inp_radio rd_btn">
+										<input type="radio"
+											id="radio_btn_gt4"
+											name="radio_method1"
+											
+											
+											
+											
+										>
+										<label for="radio_btn_gt4">
+											<span class="label_cont">이메일</span>
+										</label>
+										
+									</div>						</div>
+							</div> -->
 						</div>
 					</div>
 
@@ -480,18 +480,18 @@
 									</div>
 								</div>
 								<!-- 
-										등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
-										등록 후 이미지일 시, active 클래스 추가
-										등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
-									-->
+									등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
+									등록 후 이미지일 시, active 클래스 추가
+									등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
+								-->
 								<!-- <div class="file_attach_box active">
-										<div class="file_thumbnail">
-											<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
-										</div>
-										<button type="button" class="btn_file_delete">
-											<span>등록한 이미지 삭제하기</span>
-										</button>
-									</div> -->
+									<div class="file_thumbnail">
+										<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
+									</div>
+									<button type="button" class="btn_file_delete">
+										<span>등록한 이미지 삭제하기</span>
+									</button>
+								</div> -->
 								<!-- e: 이미지 파일 붙는 영역 -->
 
 								<!-- s: 이미지 파일 버튼 -->
@@ -508,14 +508,14 @@
 									</div>
 									<!-- 등록 후 노출 -->
 									<!-- <div class="file_btn">
-											<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-											<label for="file">
-												<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg2"></i>
-													사진 변경하기
-												</span>
-											</label>
-										</div> -->
+										<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+										<label for="file">
+											<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+												<i class="hd_icon carmeraSvg2"></i>
+												사진 변경하기
+											</span>
+										</label>
+									</div> -->
 								</div>
 								<!-- e: 이미지 파일 버튼 -->
 							</div>
@@ -570,10 +570,10 @@
 								<span class="text">입력 중이에요</span>
 							</button>
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-			
-					<span class="text">모두 입력했어요</span>
-			
-			</button> -->
+		
+				<span class="text">모두 입력했어요</span>
+		
+		</button> -->
 						</div>
 					</div>
 					<!-- s: 하단 버튼 영역 -->

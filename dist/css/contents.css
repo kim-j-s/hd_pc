@@ -1224,6 +1224,9 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty20 {
 	background-image: url(../images/content/bi/visual/bg_img_gipi.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty21 {
+	background-image: url(../images/content/bi/visual/bg_img_mtps2.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
