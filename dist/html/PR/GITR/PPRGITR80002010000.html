@@ -451,19 +451,19 @@
 				});
 
 				/*
-							다음과 같이 세팅 후 $calendar.open 호출
-							1. year
-							2. month
-							3. minDate		// setDate 활용
-							4. maxDate		// setDate 활용
-			
-							------ <예시> ------
-							$calendar.set('year', _now.year);
-							$calendar.set('month', _now.month);
-							$calendar.set('minDate', $calendar.setDate('2025-02-05'));
-							$calendar.set('maxDate', $calendar.setDate(_max, 'date'));
-							-------------------
-						*/
+						다음과 같이 세팅 후 $calendar.open 호출
+						1. year
+						2. month
+						3. minDate		// setDate 활용
+						4. maxDate		// setDate 활용
+		
+						------ <예시> ------
+						$calendar.set('year', _now.year);
+						$calendar.set('month', _now.month);
+						$calendar.set('minDate', $calendar.setDate('2025-02-05'));
+						$calendar.set('maxDate', $calendar.setDate(_max, 'date'));
+						-------------------
+					*/
 
 				const _now = $calendar.setDate();
 				$calendar.set("year", _now.year);

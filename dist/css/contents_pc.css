@@ -61,6 +61,13 @@ body {
 .wrap:has(.header_pc_error) {
 	padding: 72px 0 64px 0;
 }
+.wrap.scroll_lock {
+	height: 100%;
+	overflow: hidden;
+}
+.wrap.scroll_lock .footer {
+	opacity: 0;
+}
 .wrap .container {
 	overflow: inherit;
 	display: -webkit-box;
@@ -663,6 +670,7 @@ body {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 1 calc(50% - 16px);
 	flex: 0 1 calc(50% - 16px);
+	margin-top: 0;
 }
 .notification .form_list:has(+ .divider_ty1) li:last-child .form_group_wrap {
 	padding-bottom: 0;
@@ -1130,18 +1138,7 @@ body {
 .container .card_item_wrap.ty3 + .info_summary {
 	margin-top: var(--gap-8);
 }
-.card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label,
-.card_item_wrap .card_item .item_inner > .inp_radio .chk_label {
-	width: 20px;
-	height: 20px;
-	margin-top: 3px;
-	padding-left: 0;
-}
-.card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label:before,
-.card_item_wrap .card_item .item_inner > .inp_radio .chk_label:before {
-	top: 0;
-}
-.card_item_wrap.ty5 .card_item .item_inner .cont .result {
+.container .card_item_wrap.ty5 .card_item .item_inner .cont .result {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1150,16 +1147,16 @@ body {
 	align-items: center;
 	gap: var(--gap-3);
 }
-.card_item_wrap.ty5 .card_item .item_inner .cont .result .title {
+.container .card_item_wrap.ty5 .card_item .item_inner .cont .result .title {
 	font-size: var(--font-size-body-small);
 	font-weight: 400;
 }
-.card_item_wrap.ty5 .card_item .item_inner .cont .result .price {
+.container .card_item_wrap.ty5 .card_item .item_inner .cont .result .price {
 	width: auto;
 	font-size: var(--font-size-body-large);
 	color: var(--color-text-primary-bold);
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1171,13 +1168,13 @@ body {
 	align-items: stretch;
 	gap: var(--gap-3);
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
 	width: 588px;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .title_info {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .title_info {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
@@ -1186,15 +1183,15 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .btn_area {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .btn_area {
 	margin: var(--gap-5) 0 0;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .btn_area .hd_btn {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_top .btn_area .hd_btn {
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
@@ -1209,7 +1206,7 @@ body {
 	align-items: center;
 	margin-top: 0;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1219,12 +1216,23 @@ body {
 	align-items: center;
 	height: 100%;
 }
-.card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link .text {
+.container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link .text {
 	font-size: var(--font-size-body-large);
 }
-.card_item_wrap + .total_price_display_ty1,
-.card_item_wrap + .info_gray {
+.container .card_item_wrap + .total_price_display_ty1,
+.container .card_item_wrap + .info_gray {
 	margin-top: var(--gap-11);
+}
+.card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label,
+.card_item_wrap .card_item .item_inner > .inp_radio .chk_label {
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+	padding-left: 0;
+}
+.card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label:before,
+.card_item_wrap .card_item .item_inner > .inp_radio .chk_label:before {
+	top: 0;
 }
 .cd_top_wrap {
 	margin: 0;

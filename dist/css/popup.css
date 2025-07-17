@@ -311,7 +311,7 @@
 	right: 16px;
 	width: 32px;
 	height: 32px;
-	background: url(../images/icon/close_ty1.svg) no-repeat center/24px auto;
+	background: url(../images/icon/close_ty1.svg) no-repeat center/32px auto;
 }
 .popup_wrap .popup_container .popup_inner .pl_txt1 {
 	font-size: var(--font-size-body-medium);

@@ -120,6 +120,10 @@
 			font-size: 0;
 			a {
 				display: block;
+				width: 160px;
+			}
+			> img {
+				width: 160px;
 			}
 		}
 		.hpi_l_prd_name {
@@ -170,6 +174,9 @@
 			}
 			&.hsu_search {
 				background-image: url(../images/header/bg_header_search.png);
+				&.active {
+					background-image: url(../images/header/bg_header_search_active.png);
+				}
 			}
 			&.hsu_menu_all {
 				background-image: url(../images/header/bg_header_menuall.png);

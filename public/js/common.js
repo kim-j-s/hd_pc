@@ -11,13 +11,22 @@
 		}
 	});
 
-
-	$DOM.on('click', '.hsu_search', function(){
-		$('.all_menu_search_wrap').toggleClass('active');
-	});
-
+	$DOM.on('click', '.hsu_search', function () {
+		// e.stopPropagation();
+		// 추후 알림, 장바구니 팝업 완료 시 사용
+		// $('.wrap').toggleClass('scroll_lock');
+		$(this).toggleClass('active');
+		const $wrap = $('.all_menu_search_wrap');
+		const $btn = $(this);
+		const $text = $btn.find('.text');
 	
-
+		$wrap.toggleClass('active');
+	
+		const isActive = $wrap.hasClass('active');
+	
+		$btn.attr('aria-expanded', isActive);
+		$text.text(isActive ? '메뉴검색 팝업 닫기' : '메뉴검색 팝업 열기');
+	});
 
   /* Accordion */   
   $DOM.on('click', '.acd_item .acd_head .acd_btn', function(){
@@ -44,7 +53,6 @@
 		const $this = $(this);
 		$this.parent('.review_acd_item').toggleClass('active');
 	});
-
 
 	/* 펼치기/접히기 */
 	$DOM.on('click', '.acd_item .btn_toggle', function(){
@@ -200,8 +208,7 @@
         // positionVal = targetOffset + targetPadding + simpleHeight + fix_h;
         // 필요하면 여기서 활용
     }
-});
-
+	});
 
   /* Tooltip */
   $DOM.on('click', '.tooltip_wrap button', function(){
@@ -253,7 +260,6 @@
 			})
 		}
 	})
-
 
   /* Input */
   $DOM.on('focus input', '.input_text .inp > input', function(){
@@ -389,7 +395,8 @@
     } else {
       $(this).closest('.chk_group_wrap').find('input[type=checkbox]:not(:disabled)').prop('checked', false);
     }
-  })
+  });
+
 	// 약관 동의
   	
 	
@@ -448,7 +455,6 @@
 		}
   });
 
-
 	/* Tab */
 	$DOM.on('click', '.tab_btn:not(.tab_btn_block)', function(){
 		const idx = $(this).index();
@@ -457,7 +463,6 @@
 		$(this).closest('.tab_wrap').children('.tab_wrap_content').removeClass('active');
 		$(this).closest('.tab_wrap').children('.tab_wrap_content').eq(idx).addClass('active');
 	});
-
 
 	// select_driver
 	$DOM.on('change', '.select_driver_range [class^="radio_group_wrap"] input[type="radio"]', function(){
@@ -640,8 +645,6 @@
 		}
 	});
 
-
-
 	let ri = $('.radio_group_resetable input');
 	let richecked = ri.filter(':checked').val();
 	$DOM.on('click', '.radio_group_resetable input[type="radio"]', function() {
@@ -653,7 +656,6 @@
 			richecked = $(this).val();
 		}
 	});
-
 
 	// 선택목록 active 처리
 	$DOM.on('click', '.opt_select_list.opt_case3 .option', function(e){
@@ -695,6 +697,35 @@
 		}
 	});
 
+	$DOM.on('click', '.ftr_sns_open', function (e) {
+		e.stopPropagation(); // ← window 클릭 방지 핵심
+
+		const $this = $(this);	
+		const $snsTarget = $('.ftr_sns_list');
+		$snsTarget.toggleClass('active');
+		
+		const isActive = $snsTarget.hasClass('active');
+		console.log('SNS 목록 : ' + isActive);
+		$this.attr('aria-expanded', isActive);
+		// $this.text(isActive ? '메뉴검색 팝업 닫기' : '메뉴검색 팝업 열기');
+		$this.attr('title', isActive ? '다이렉트 SNS 목록닫기' : '다이렉트 SNS 목록보기');
+		// return false; // 링크 기본동작 방지
+	});
+
+
+	$('.ftr_sns_list')
+  // .on('focusin', function () {
+  //   console.log('SNS 리스트에 포커스 들어옴');
+  // })
+  .on('focusout', function () {
+    setTimeout(function () {
+      if (!$(document.activeElement).closest('.ftr_sns_list').length) {
+				$('.ftr_sns_list').removeClass('active');
+				$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
+      }
+    }, 10);
+  });
+
 
 })();
 
@@ -726,9 +757,6 @@ function tabScroll(){
 		}, 200);
 	})
 }
-
-
-
 	
 // 간편정보 노출 방식
 function simpleInfo(){
@@ -1451,3 +1479,46 @@ $(function(){
 $(window).resize(function(){
 	// prograssBar();
 })
+
+//window click이벤트
+$(window).on('click', function(e) {
+	var $target = $(e.target);
+
+	// 범용 테스트
+	var $test_item = $('.test_item, .test_item2');
+	if (!$target.closest($test_item).length) {
+		$test_item.removeClass('active');
+	}
+	
+	// 팝업 영역 외 클릭 시 팝업 닫기
+	// var $rml = $('.ftr_sns_list');
+	// var $rmb = $('.ftr_sns_open');
+	// if (!$target.closest($rml).length &&  !$target.closest($rmb).length) {
+	// 	$('.ftr_sns_list').removeClass('active');
+	// 	$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
+	// }
+
+	// footer sns 링크 팝업 외부 클릭 시 닫기
+	if ( !$target.closest('.ftr_sns_list').length && !$target.closest('.ftr_sns_open').length ) {
+		// console.log('이거도 먹나요?');
+		$('.ftr_sns_list').removeClass('active');
+		$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
+	}
+
+	// 메뉴 검색 팝업 외부 클릭 시 닫기
+	var $asm = $('.hsu_search');
+	var $asm_text = $('.hsu_search .text');
+	var $asm_wrap = $('.all_menu_search_wrap');
+	if (!$target.closest($asm).length && !$target.closest($asm_wrap).length) {
+		// console.log('외부 클릭 감지:', $target);
+		$asm_wrap.removeClass('active');
+		$asm.attr('aria-expanded', false).removeClass('active');
+		$asm_text.text('메뉴검색 팝업 열기');
+		// $('.wrap').removeClass('scroll_lock');
+		
+		if(!$target.hasClass('hus_btn')) {
+			// 추후 알림, 장바구니 팝업 완료 시 사용
+			// $('.wrap').removeClass('scroll_lock');
+		}
+	}
+});
