@@ -863,7 +863,6 @@ strong {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 3px;
 }
 .trend.up {
 	color: var(--color-text-point);
@@ -1875,13 +1874,13 @@ strong {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	margin-top: var(--gap-11);
 	overflow: auto;
 }
 .all_menu_search_wrap .msp_wrap_cont .msp_in_cont {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
-	margin-top: var(--gap-11);
 }
 .all_menu_search_wrap .msp_wrap_cont .msp_in_cont ~ .msp_in_cont {
 	margin-top: var(--gap-8);
@@ -1921,7 +1920,6 @@ strong {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
-	margin-top: var(--gap-11);
 }
 .all_menu_search_wrap .msp_wrap_cont .search_reult_list_container {
 	-webkit-box-flex: 1;
@@ -5976,6 +5974,7 @@ strong {
 }
 .card_item_wrap .card_item .card_link[aria-disabled="true"] .item_top .title_info .main_title {
 	cursor: not-allowed;
+	background: none;
 }
 .card_item_wrap .card_item .item_top {
 	display: -webkit-box;
@@ -6054,6 +6053,9 @@ strong {
 }
 .card_item_wrap .card_item .item_top .title_info + .badge_wrap {
 	margin-top: var(--gap-2);
+}
+.card_item_wrap .card_item .item_top .title_info > .flex_start {
+	gap: var(--gap-3);
 }
 .card_item_wrap .card_item .item_top .text {
 	font-size: var(--font-size-label-large);
@@ -7425,26 +7427,20 @@ strong {
 /* graph */
 /* icon */
 .updown {
-	--trangle-width: 14px;
-	--trangle-height: 10px;
-	--increase: var(--color-text-point);
-	--decrease: #052b57;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	width: var(--trangle-width);
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 	font-size: 0;
 	line-height: 0;
-	border-left: calc(var(--trangle-width) / 2) solid transparent;
-	border-right: calc(var(--trangle-width) / 2) solid transparent;
 }
 .updown.increase {
-	border-bottom-color: var(--increase);
-	border-bottom: var(--trangle-height) solid;
+	background-image: url(../images/icon/stat_up.svg);
 }
 .updown.decrease {
-	border-top-color: var(--decrease);
-	border-top: var(--trangle-height) solid;
+	background-image: url(../images/icon/stat_down.svg);
 }
 .hd_icon {
 	display: inline-block;
@@ -7522,6 +7518,10 @@ strong {
 }
 .hd_icon.bmpSvg {
 	background-image: url(../images/icon/icon_png.svg);
+}
+.hd_icon.pm {
+	width: 20px;
+	height: 20px;
 }
 /**
 * 아이콘 에셋
@@ -7902,6 +7902,39 @@ strong {
 }
 .i_logo_900 {
 	background-image: url("../images/logo/i_logo_900.svg");
+}
+.i_logo_pm_f001 {
+	background-image: url("../images/logo/i_logo_pm_f001.svg");
+}
+.i_logo_pm_f002 {
+	background-image: url("../images/logo/i_logo_pm_f002.svg");
+}
+.i_logo_pm_f003 {
+	background-image: url("../images/logo/i_logo_pm_f003.svg");
+}
+.i_logo_pm_f004 {
+	background-image: url("../images/logo/i_logo_pm_f004.svg");
+}
+.i_logo_pm_f005 {
+	background-image: url("../images/logo/i_logo_pm_f005.svg");
+}
+.i_logo_pm_f006 {
+	background-image: url("../images/logo/i_logo_pm_f006.svg");
+}
+.i_logo_pm_f007 {
+	background-image: url("../images/logo/i_logo_pm_f007.svg");
+}
+.i_logo_pm_f008 {
+	background-image: url("../images/logo/i_logo_pm_f008.svg");
+}
+.i_logo_pm_f009 {
+	background-image: url("../images/logo/i_logo_pm_f009.svg");
+}
+.i_logo_pm_f010 {
+	background-image: url("../images/logo/i_logo_pm_f010.svg");
+}
+.i_logo_pm_f011 {
+	background-image: url("../images/logo/i_logo_pm_f011.svg");
 }
 /********
 * 기타 아이콘
@@ -9390,7 +9423,6 @@ strong {
 	width: 100%;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding-bottom: var(--gap-7);
 	/* 은행선택 로고 추가 후 수정 필요 */
 	/* 은행선택 로고 추가 후 수정 필요 */
 }
@@ -9432,9 +9464,6 @@ strong {
 	height: 32px;
 }
 /* 카드사 선택 목록 */
-.select_list_ty_card {
-	padding-bottom: var(--gap-7);
-}
 .select_list_ty_card > li + li {
 	margin-top: var(--gap-4);
 }
@@ -12114,13 +12143,14 @@ strong {
 	align-items: center;
 	font-size: var(--font-size-body-xsmall);
 	font-weight: 700;
+	color: var(--color-text-subtle);
 }
 .step_list_container > li .inner h3 {
 	font-size: var(--font-size-heading-xsmall);
 	font-weight: 700;
 	color: var(--color-text-bolder);
 }
-.step_list_container > li .inner h3 + .content {
+.step_list_container > li .inner h3 + .content.no_bullet {
 	margin-top: var(--gap-4);
 }
 .step_list_container > li + li {
