@@ -56,86 +56,84 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Bottom 팝업 -->
+		<!-- s: Bottom 팝업 -->
 
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">외제차의 차량가액 수정하시겠어요?</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="form_group_wrap">
-									<!-- s: 25-04-14 수정 -->
-									<div class="form_line">
-										<div class="label_tit">차량가액</div>
-										<!-- s: 25-04-21 수정 -->
-										<div class="input_text price">
-											<div class="inp">
-												<input type="tel" placeholder="금액을 입력하세요" title="금액입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-											</div>
-											<div class="int_txt right">만원</div>
-										</div>
-
-										<div class="msg_info">수정가능범위 : <strong>5,742~7,018</strong>만원</div>
-
-										<!-- e: 25-04-21 수정 -->
-									</div>
-									<!-- e: 25-04-14 수정 -->
-								</div>
-
-								<!-- s: 꼭 알아두세요 -->
-								<!-- s: 25-04-16 수정 -->
-								<div class="bottom_fix_notice">
-									<div class="acd_item">
-										<div class="acd_head active">
-											<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
-										</div>
-										<div class="acd_cont">
-											<div class="inner" style="display: block">
-												<ul class="list_ty1">
-													<li>외제차는 일정 범위 내에서 차량가액 수정이 가능합니다.</li>
-													<li>외제차는 고장출동서비스 중 잠금해제 서비스가 제공되지 않습니다.</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- e: 25-04-16 수정 -->
-								<!-- e: 꼭 알아두세요 -->
-							</div>
-						</div>
-
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-									<span class="text">취소</span>
-								</button>
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">차량가액 수정</span>
-								</button>
-							</div>
-						</div>
-
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">외제차의 차량가액 수정하시겠어요?</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="form_group_wrap">
+								<!-- s: 25-04-14 수정 -->
+								<div class="form_line">
+									<div class="label_tit">차량가액</div>
+									<!-- s: 25-04-21 수정 -->
+									<div class="input_text price">
+										<div class="inp">
+											<input type="tel" placeholder="금액을 입력하세요" title="금액입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+										<div class="int_txt right">만원</div>
+									</div>
+
+									<div class="msg_info">수정가능범위 : <strong>5,742~7,018</strong>만원</div>
+
+									<!-- e: 25-04-21 수정 -->
+								</div>
+								<!-- e: 25-04-14 수정 -->
+							</div>
+
+							<!-- s: 꼭 알아두세요 -->
+							<!-- s: 25-04-16 수정 -->
+							<div class="bottom_fix_notice">
+								<div class="acd_item">
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner" style="display: block">
+											<ul class="list_ty1">
+												<li>외제차는 일정 범위 내에서 차량가액 수정이 가능합니다.</li>
+												<li>외제차는 고장출동서비스 중 잠금해제 서비스가 제공되지 않습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 25-04-16 수정 -->
+							<!-- e: 꼭 알아두세요 -->
+						</div>
+					</div>
+
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">차량가액 수정</span>
+							</button>
+						</div>
+					</div>
+
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
+		</div>
+		<!-- e: Bottom 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

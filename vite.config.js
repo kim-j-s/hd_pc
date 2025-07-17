@@ -199,16 +199,16 @@ export default defineConfig({
           overrideBrowserslist: ['> 1%', 'last 2 versions', 'Firefox ESR'],
         }),
         // pxtorem 플러그인 추가 (build 시에만 적용)
-        ...(process.env.NODE_ENV === 'production'
-          ? [
-              pxtorem({
-                rootValue: 10, // 기준 root 폰트 크기
-                propList: ['*'], // 변환할 속성 목록
-                selectorBlackList: [], // 변환하지 않을 선택자 목록
-                minPixelValue: 2, // 변환할 최소 픽셀 값
-              }),
-            ]
-          : []), // 변경된 구간: build 시에만 pxtorem 적용
+        // ...(process.env.NODE_ENV === 'production'
+        //   ? [
+        //       pxtorem({
+        //         rootValue: 10, // 기준 root 폰트 크기
+        //         propList: ['*'], // 변환할 속성 목록
+        //         selectorBlackList: [], // 변환하지 않을 선택자 목록
+        //         minPixelValue: 2, // 변환할 최소 픽셀 값
+        //       }),
+        //     ]
+        //   : []), // 변경된 구간: build 시에만 pxtorem 적용
       ],
     },
   },

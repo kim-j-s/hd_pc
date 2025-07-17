@@ -52,98 +52,96 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">영문명과 국적을 입력해주세요</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="form_group_wrap space_list_ty5">
-									<div class="form_line">
-										<div class="label_tit">여권과 동일한 영문명</div>
-										<div class="input_text">
-											<div class="inp">
-												<input type="text" placeholder="영문으로 입력" title="영문명 입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-											</div>
-										</div>
-									</div>
-									<div class="form_line">
-										<div class="label_tit">국적 조회</div>
-										<div class="input_text search">
-											<div class="inp">
-												<input type="search" placeholder="국가명 검색" title="검색어 입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- s: 조회결과 -->
-								<div class="search_reult_list_container">
-									<ul class="search_reult_list">
-										<li class="search_reult_list_item">
-											<a href="#"
-												><span class="item_text">나미비아<br />Namibia</span></a
-											>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"
-												><span class="item_text">도미니카 공화국<br />Dominican Republic(the)</span></a
-											>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"
-												><span class="item_text">도미니카 연방<br />Dominica</span></a
-											>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"
-												><span class="item_text">미국<br />United States of America(the)</span></a
-											>
-										</li>
-										<li class="search_reult_list_item">
-											<a href="#"
-												><span class="item_text">미국령군소제도<br />United States Minor Outlying Islands (the)</span></a
-											>
-										</li>
-										<li class="search_reult_list_item">
-											<div class="no_list_area">
-												<i class="hd_icon exclamationSvg"></i>
-												<p>조회 결과가 없습니다.</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="btn_area center view_more">
-									<button type="button" class="btn btn_more_view">
-										<span class="text">
-											더보기 <span class="counter"><strong class="btn_more_view_now">1</strong> / 2</span>
-										</span>
-									</button>
-								</div>
-								<!-- e: 조회결과 -->
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">영문명과 국적을 입력해주세요</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="form_group_wrap space_list_ty5">
+								<div class="form_line">
+									<div class="label_tit">여권과 동일한 영문명</div>
+									<div class="input_text">
+										<div class="inp">
+											<input type="text" placeholder="영문으로 입력" title="영문명 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">국적 조회</div>
+									<div class="input_text search">
+										<div class="inp">
+											<input type="search" placeholder="국가명 검색" title="검색어 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- s: 조회결과 -->
+							<div class="search_reult_list_container">
+								<ul class="search_reult_list">
+									<li class="search_reult_list_item">
+										<a href="#"
+											><span class="item_text">나미비아<br />Namibia</span></a
+										>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"
+											><span class="item_text">도미니카 공화국<br />Dominican Republic(the)</span></a
+										>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"
+											><span class="item_text">도미니카 연방<br />Dominica</span></a
+										>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"
+											><span class="item_text">미국<br />United States of America(the)</span></a
+										>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"
+											><span class="item_text">미국령군소제도<br />United States Minor Outlying Islands (the)</span></a
+										>
+									</li>
+									<li class="search_reult_list_item">
+										<div class="no_list_area">
+											<i class="hd_icon exclamationSvg"></i>
+											<p>조회 결과가 없습니다.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="btn_area center view_more">
+								<button type="button" class="btn btn_more_view">
+									<span class="text">
+										더보기 <span class="counter"><strong class="btn_more_view_now">1</strong> / 2</span>
+									</span>
+								</button>
+							</div>
+							<!-- e: 조회결과 -->
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		</div>
+		<!-- e: Bottom 팝업 -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

@@ -126,69 +126,69 @@
 :root {
 	--number-0: 0px;
 	--number-1: 1px;
-	--number-2: 0.2rem;
-	--number-3: 0.4rem;
-	--number-4: 0.6rem;
-	--number-5: 0.8rem;
-	--number-6: 1rem;
-	--number-7: 1.2rem;
-	--number-8: 1.6rem;
-	--number-9: 2rem;
-	--number-10: 2.4rem;
-	--number-11: 2.8rem;
-	--number-12: 3.2rem;
-	--number-13: 3.6rem;
-	--number-14: 4rem;
-	--number-15: 4.4rem;
-	--number-16: 4.8rem;
-	--number-17: 5.2rem;
-	--number-18: 5.6rem;
-	--number-19: 6.4rem;
-	--number-20: 7.2rem;
-	--number-21: 8rem;
-	--number-22: 9.6rem;
-	--number-max: 100rem;
+	--number-2: 2px;
+	--number-3: 4px;
+	--number-4: 6px;
+	--number-5: 8px;
+	--number-6: 10px;
+	--number-7: 12px;
+	--number-8: 16px;
+	--number-9: 20px;
+	--number-10: 24px;
+	--number-11: 28px;
+	--number-12: 32px;
+	--number-13: 36px;
+	--number-14: 40px;
+	--number-15: 44px;
+	--number-16: 48px;
+	--number-17: 52px;
+	--number-18: 56px;
+	--number-19: 64px;
+	--number-20: 72px;
+	--number-21: 80px;
+	--number-22: 96px;
+	--number-max: 1000px;
 }
 :root {
-	--font-size-display-xlarge: 4.4rem;
-	--font-size-display-medium: 3.2rem;
-	--font-size-display-small: 2.8rem;
-	--font-size-display-large: 3.6rem;
-	--font-size-body-large: 1.8rem;
-	--font-size-body-medium: 1.6rem;
-	--font-size-body-small: 1.4rem;
-	--font-size-body-xsmall: 1.2rem;
-	--font-size-label-large: 1.6rem;
-	--font-size-label-medium: 1.4rem;
-	--font-size-label-small: 1.2rem;
-	--font-size-label-xsmall: 1rem;
-	--font-size-heading-large: 2.4rem;
-	--font-size-heading-medium: 2rem;
-	--font-size-heading-small: 1.8rem;
-	--font-size-heading-xsmall: 1.6rem;
-	--font-size-heading-xxsmall: 1.4rem;
-	--font-size-heading-xlarge: 2.8rem;
-	--font-size-heading-xxlarge: 3.2rem;
-	--font-size-navigation-title-medium: 2rem;
-	--font-size-navigation-title-small: 1.8rem;
-	--font-size-navigation-depth-medium-bold: 1.6rem;
-	--font-size-navigation-depth-medium: 1.6rem;
-	--font-size-navigation-depth-small-bold: 1.4rem;
-	--font-size-navigation-depth-small: 1.4rem;
-	--font-size-navigation-depth-xsmall: 1.2rem;
-	--font-size-button-cta: 1.8rem;
-	--font-size-button-large: 1.6rem;
-	--font-size-button-medium: 1.4rem;
-	--font-size-button-small: 1.2rem;
-	--font-size-button-xsmall: 1.2rem;
-	--font-size-button-xlarge: 1.6rem;
-	--font-size-button-cta-bold: 1.8rem;
+	--font-size-display-xlarge: 44px;
+	--font-size-display-medium: 32px;
+	--font-size-display-small: 28px;
+	--font-size-display-large: 36px;
+	--font-size-body-large: 18px;
+	--font-size-body-medium: 16px;
+	--font-size-body-small: 14px;
+	--font-size-body-xsmall: 12px;
+	--font-size-label-large: 16px;
+	--font-size-label-medium: 14px;
+	--font-size-label-small: 12px;
+	--font-size-label-xsmall: 10px;
+	--font-size-heading-large: 24px;
+	--font-size-heading-medium: 20px;
+	--font-size-heading-small: 18px;
+	--font-size-heading-xsmall: 16px;
+	--font-size-heading-xxsmall: 14px;
+	--font-size-heading-xlarge: 28px;
+	--font-size-heading-xxlarge: 32px;
+	--font-size-navigation-title-medium: 20px;
+	--font-size-navigation-title-small: 18px;
+	--font-size-navigation-depth-medium-bold: 16px;
+	--font-size-navigation-depth-medium: 16px;
+	--font-size-navigation-depth-small-bold: 14px;
+	--font-size-navigation-depth-small: 14px;
+	--font-size-navigation-depth-xsmall: 12px;
+	--font-size-button-cta: 18px;
+	--font-size-button-large: 16px;
+	--font-size-button-medium: 14px;
+	--font-size-button-small: 12px;
+	--font-size-button-xsmall: 12px;
+	--font-size-button-xlarge: 16px;
 	--font-size-button-cta-bold: 18px;
-	--font-size-button-small-bold: 1.2rem;
-	--font-size-button-medium-bold: 1.4rem;
-	--font-size-button-xsmall-bold: 1.2rem;
-	--font-size-button-large-bold: 1.6rem;
-	--font-size-button-xlarge-bold: 1.6rem;
+	--font-size-button-cta-bold: 18px;
+	--font-size-button-small-bold: 12px;
+	--font-size-button-medium-bold: 14px;
+	--font-size-button-xsmall-bold: 12px;
+	--font-size-button-large-bold: 16px;
+	--font-size-button-xlarge-bold: 16px;
 }
 :root {
 	--gap-layout-header-breadcrumb: var(--number-8);
@@ -461,19 +461,19 @@
 }
 :root {
 	--border-width-variable-regular: 1px;
-	--border-width-variable-medium: 0.2rem;
+	--border-width-variable-medium: 2px;
 	--border-width-static-regular: 1px;
-	--border-width-static-medium: 0.2rem;
+	--border-width-static-medium: 2px;
 }
 :root {
-	--shadow-y-3: 0.8rem;
-	--shadow-blur-3: 1.6rem;
-	--shadow-blur-4: 2.4rem;
-	--shadow-y-4: 1.6rem;
+	--shadow-y-3: 8px;
+	--shadow-blur-3: 16px;
+	--shadow-blur-4: 24px;
+	--shadow-y-4: 16px;
 	--shadow-y-1: 1px;
-	--shadow-y-2: 0.6rem;
-	--shadow-blur-2: 0.8rem;
-	--shadow-y-minus2: -0.6rem;
+	--shadow-y-2: 6px;
+	--shadow-blur-2: 8px;
+	--shadow-y-minus2: -6px;
 }
 :root {
 	--boolean: true;
@@ -730,7 +730,7 @@ input:-webkit-autofill:active {
 	-webkit-transition: background-color 5000s ease-in-out 0s;
 	transition: background-color 5000s ease-in-out 0s;
 	-webkit-transition: background-color 9999s ease-out;
-	-webkit-box-shadow: 0 0 0px 100rem white inset !important;
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -795,20 +795,20 @@ select:focus,
 input:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 0.2rem solid #000;
-	outline-offset: -0.2rem;
+	outline: 2px solid #000;
+	outline-offset: -2px;
 }
 input:focus + label {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 0.2rem solid #000;
-	outline-offset: -0.2rem;
+	outline: 2px solid #000;
+	outline-offset: -2px;
 }
 .inp input:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 0.2rem solid #000;
-	outline-offset: -0.2rem;
+	outline: 2px solid #000;
+	outline-offset: -2px;
 }
 /* 모바일 디바이스 분기 */
 @media screen and (max-width: 375px) {

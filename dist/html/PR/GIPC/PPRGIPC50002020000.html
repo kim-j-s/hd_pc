@@ -52,162 +52,160 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Full 팝업 -->
-			<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">장기체류 국가 선택</div>
-						</div>
-						<div class="popup_cont search_list_type2">
-							<div class="tab_wrap">
-								<!-- s: 25-07-04 수정 -->
-								<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">검색어로 찾기</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">초성으로 찾기</button></div>
-								<!-- e: 25-07-04 수정 -->
+		<!-- s: Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">장기체류 국가 선택</div>
+					</div>
+					<div class="popup_cont search_list_type2">
+						<div class="tab_wrap">
+							<!-- s: 25-07-04 수정 -->
+							<div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">검색어로 찾기</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">초성으로 찾기</button></div>
+							<!-- e: 25-07-04 수정 -->
 
-								<!-- s: tab01.검색어로 찾기 Tab 내용 -->
-								<div class="tab_wrap_content has_scroll active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-									<div class="search_inp_box">
-										<div class="input_text search">
-											<div class="inp">
-												<input type="search" placeholder="국가명 입력" title="검색어 입력" />
-												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-											</div>
+							<!-- s: tab01.검색어로 찾기 Tab 내용 -->
+							<div class="tab_wrap_content has_scroll active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
+								<div class="search_inp_box">
+									<div class="input_text search">
+										<div class="inp">
+											<input type="search" placeholder="국가명 입력" title="검색어 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 										</div>
 									</div>
+								</div>
 
-									<!-- s: 자주찾는 국가 추천 리스트 -->
-									<!-- 최초 진입 시 노출 -->
-									<div class="suggestion_list_wrap">
-										<div class="title_h3"><strong>자주 찾는 나라</strong></div>
-										<div class="item_wrap">
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">미국</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">중국</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">일본</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">러시아</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">아랍에미리트</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">캐나다</span></button>
-											<button type="button" class="tag_item size_m c_ty01"><span class="text">필리핀</span></button>
-										</div>
+								<!-- s: 자주찾는 국가 추천 리스트 -->
+								<!-- 최초 진입 시 노출 -->
+								<div class="suggestion_list_wrap">
+									<div class="title_h3"><strong>자주 찾는 나라</strong></div>
+									<div class="item_wrap">
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">미국</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">중국</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">일본</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">러시아</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">아랍에미리트</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">캐나다</span></button>
+										<button type="button" class="tag_item size_m c_ty01"><span class="text">필리핀</span></button>
 									</div>
-									<!-- 최초 진입 시 노출 -->
-									<!-- e: 자주찾는 국가 추천 리스트 -->
+								</div>
+								<!-- 최초 진입 시 노출 -->
+								<!-- e: 자주찾는 국가 추천 리스트 -->
 
-									<!-- s: 키워드 검색 결과 리스트 -->
-									<div class="search_result_count">
-										<p>검색결과 <strong class="point">5</strong>건</p>
-									</div>
-									<div class="search_reult_list_container">
-										<!-- 데이터가 없는 경우 no_data 클래스 추가
+								<!-- s: 키워드 검색 결과 리스트 -->
+								<div class="search_result_count">
+									<p>검색결과 <strong class="point">5</strong>건</p>
+								</div>
+								<div class="search_reult_list_container">
+									<!-- 데이터가 없는 경우 no_data 클래스 추가
 									<div class="search_reult_list_container no_data">
 									-->
-										<ul class="search_reult_list">
-											<!-- 검색시 스타일 예시 : 검색키워드 <i>태그로 강조 -->
-											<li class="search_reult_list_item">
-												<a href="#">
-													<span class="item_text"><i>가</i>나</span></a
-												>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#">
-													<span class="item_text"><i>가</i>봉</span></a
-												>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#">
-													<span class="item_text"><i>가</i>이아나공화국</span></a
-												>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"> <span class="item_text">마다<i>가</i>스카르</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"> <span class="item_text">불<i>가</i>리아</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<div class="no_list_area">
-													<i class="hd_icon exclamationSvg"></i>
-													<p>내역이 없어요</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<!-- e: 키워드 검색 결과 리스트 -->
+									<ul class="search_reult_list">
+										<!-- 검색시 스타일 예시 : 검색키워드 <i>태그로 강조 -->
+										<li class="search_reult_list_item">
+											<a href="#">
+												<span class="item_text"><i>가</i>나</span></a
+											>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#">
+												<span class="item_text"><i>가</i>봉</span></a
+											>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#">
+												<span class="item_text"><i>가</i>이아나공화국</span></a
+											>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"> <span class="item_text">마다<i>가</i>스카르</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"> <span class="item_text">불<i>가</i>리아</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<div class="no_list_area">
+												<i class="hd_icon exclamationSvg"></i>
+												<p>내역이 없어요</p>
+											</div>
+										</li>
+									</ul>
 								</div>
-								<!-- e: tab01.검색어로 찾기 Tab 내용 -->
-
-								<!-- s: tab02. 초성으로 찾기 Tab 내용 -->
-								<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
-									<div class="search_inp_box">
-										<!-- s: 초성 버튼 리스트 -->
-										<ul class="keypad_wrap search_letter_btn_list">
-											<button type="button" class="keypad_chip_item">ㄱ</button>
-											<button type="button" class="keypad_chip_item">ㄴ</button>
-											<button type="button" class="keypad_chip_item selected">ㄷ</button>
-											<button type="button" class="keypad_chip_item">ㄹ</button>
-											<button type="button" class="keypad_chip_item">ㅁ</button>
-											<button type="button" class="keypad_chip_item">ㅂ</button>
-											<button type="button" class="keypad_chip_item">ㅅ</button>
-											<button type="button" class="keypad_chip_item">ㅇ</button>
-											<button type="button" class="keypad_chip_item">ㅈ</button>
-											<button type="button" class="keypad_chip_item">ㅊ</button>
-											<button type="button" class="keypad_chip_item">ㅋ</button>
-											<button type="button" class="keypad_chip_item">ㅌ</button>
-											<button type="button" class="keypad_chip_item">ㅍ</button>
-											<button type="button" class="keypad_chip_item">ㅎ</button>
-										</ul>
-										<!-- e: 초성 버튼 리스트 -->
-									</div>
-
-									<!-- s: 키워드 검색 결과 리스트 -->
-									<div class="search_reult_list_container">
-										<ul class="search_reult_list">
-											<li class="search_reult_list_item">
-												<a href="#"><span class="item_text">대만</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"><span class="item_text">덴마크</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"><span class="item_text">도미니카공화국</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"><span class="item_text">도미니카연방</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<a href="#"><span class="item_text">독일</span></a>
-											</li>
-											<li class="search_reult_list_item">
-												<div class="no_list_area">
-													<i class="hd_icon exclamationSvg"></i>
-													<p>내역이 없어요</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<!-- e: 키워드 검색 결과 리스트 -->
-								</div>
-								<!-- e: tab02.초성으로로 찾기 Tab 내용 -->
+								<!-- e: 키워드 검색 결과 리스트 -->
 							</div>
+							<!-- e: tab01.검색어로 찾기 Tab 내용 -->
+
+							<!-- s: tab02. 초성으로 찾기 Tab 내용 -->
+							<div class="tab_wrap_content has_scroll" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
+								<div class="search_inp_box">
+									<!-- s: 초성 버튼 리스트 -->
+									<ul class="keypad_wrap search_letter_btn_list">
+										<button type="button" class="keypad_chip_item">ㄱ</button>
+										<button type="button" class="keypad_chip_item">ㄴ</button>
+										<button type="button" class="keypad_chip_item selected">ㄷ</button>
+										<button type="button" class="keypad_chip_item">ㄹ</button>
+										<button type="button" class="keypad_chip_item">ㅁ</button>
+										<button type="button" class="keypad_chip_item">ㅂ</button>
+										<button type="button" class="keypad_chip_item">ㅅ</button>
+										<button type="button" class="keypad_chip_item">ㅇ</button>
+										<button type="button" class="keypad_chip_item">ㅈ</button>
+										<button type="button" class="keypad_chip_item">ㅊ</button>
+										<button type="button" class="keypad_chip_item">ㅋ</button>
+										<button type="button" class="keypad_chip_item">ㅌ</button>
+										<button type="button" class="keypad_chip_item">ㅍ</button>
+										<button type="button" class="keypad_chip_item">ㅎ</button>
+									</ul>
+									<!-- e: 초성 버튼 리스트 -->
+								</div>
+
+								<!-- s: 키워드 검색 결과 리스트 -->
+								<div class="search_reult_list_container">
+									<ul class="search_reult_list">
+										<li class="search_reult_list_item">
+											<a href="#"><span class="item_text">대만</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"><span class="item_text">덴마크</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"><span class="item_text">도미니카공화국</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"><span class="item_text">도미니카연방</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<a href="#"><span class="item_text">독일</span></a>
+										</li>
+										<li class="search_reult_list_item">
+											<div class="no_list_area">
+												<i class="hd_icon exclamationSvg"></i>
+												<p>내역이 없어요</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- e: 키워드 검색 결과 리스트 -->
+							</div>
+							<!-- e: tab02.초성으로로 찾기 Tab 내용 -->
 						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Full 팝업 -->
+		</div>
+		<!-- e: Full 팝업 -->
 
-			<!-- s: popup area -->
-			<!-- e: popup area -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<!-- s: popup area -->
+		<!-- e: popup area -->
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>

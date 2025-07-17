@@ -52,70 +52,68 @@
 		<link rel="stylesheet" href="../../../css/popup.css" />
 	</head>
 	<body>
-		<div id="wrap" class="wrap">
-			<ul id="skipNavi" class="skipNavi">
-				<li><a href="#gnb">주메뉴바로가기</a></li>
-				<li><a href="#contents">본문바로가기</a></li>
-			</ul>
+		<ul id="skipNavi" class="skipNavi">
+			<li><a href="#gnb">주메뉴바로가기</a></li>
+			<li><a href="#contents">본문바로가기</a></li>
+		</ul>
 
-			<!-- s: Bottom 팝업 -->
-			<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
-				<div class="popup_container">
-					<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-					<div class="popup_inner">
-						<div class="popup_head">
-							<div class="popup_head_title">자기부담금 변경</div>
-						</div>
-
-						<div class="popup_cont">
-							<div class="popup_content">
-								<div class="opt_select_wrap">
-									<span class="opt_select_wrap_live" aria-live="polite"></span>
-									<div class="opt_select_inner" tabindex="0" aria-label="옵션 선택 영역">
-										<div class="opt_select opt_select_dmp" aria-hidden="true" tabindex="-1"></div>
-										<div class="opt_select opt_select_w1">
-											<input type="radio" name="r1" id="r1_s1" />
-											<label for="r1_s1">20만원</label>
-										</div>
-										<div class="opt_select opt_select_w1">
-											<input type="radio" name="r1" id="r1_s2" />
-											<label for="r1_s2">30만원</label>
-										</div>
-										<div class="opt_select opt_select_w1">
-											<input type="radio" name="r1" id="r1_s3" checked />
-											<label for="r1_s3">40만원</label>
-										</div>
-										<div class="opt_select opt_select_w1">
-											<input type="radio" name="r1" id="r1_s4" />
-											<label for="r1_s4">50만원</label>
-										</div>
-										<div class="opt_select opt_select_dmp" aria-hidden="true" tabindex="-1"></div>
-									</div>
-									<button type="button" class="swiper_button sbc_01 sbs_01 swiper_button_left" aria-label="이전 옵션"></button>
-									<button type="button" class="swiper_button sbc_01 sbs_01 swiper_button_right" aria-label="다음 옵션"></button>
-								</div>
-
-								<ul class="list_ty2">
-									<li>자기부담금이란? 보험 사고 발생 시 보상받는 보험금에서 공제되는 금액입니다.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="popup_bottom">
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-									<span class="text">자기부담금 변경</span>
-								</button>
-							</div>
-						</div>
-						<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+		<!-- s: Bottom 팝업 -->
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">자기부담금 변경</div>
 					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="opt_select_wrap">
+								<span class="opt_select_wrap_live" aria-live="polite"></span>
+								<div class="opt_select_inner" tabindex="0" aria-label="옵션 선택 영역">
+									<div class="opt_select opt_select_dmp" aria-hidden="true" tabindex="-1"></div>
+									<div class="opt_select opt_select_w1">
+										<input type="radio" name="r1" id="r1_s1" />
+										<label for="r1_s1">20만원</label>
+									</div>
+									<div class="opt_select opt_select_w1">
+										<input type="radio" name="r1" id="r1_s2" />
+										<label for="r1_s2">30만원</label>
+									</div>
+									<div class="opt_select opt_select_w1">
+										<input type="radio" name="r1" id="r1_s3" checked />
+										<label for="r1_s3">40만원</label>
+									</div>
+									<div class="opt_select opt_select_w1">
+										<input type="radio" name="r1" id="r1_s4" />
+										<label for="r1_s4">50만원</label>
+									</div>
+									<div class="opt_select opt_select_dmp" aria-hidden="true" tabindex="-1"></div>
+								</div>
+								<button type="button" class="swiper_button sbc_01 sbs_01 swiper_button_left" aria-label="이전 옵션"></button>
+								<button type="button" class="swiper_button sbc_01 sbs_01 swiper_button_right" aria-label="다음 옵션"></button>
+							</div>
+
+							<ul class="list_ty2">
+								<li>자기부담금이란? 보험 사고 발생 시 보상받는 보험금에서 공제되는 금액입니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">자기부담금 변경</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
-			<!-- e: Bottom 팝업 -->
+		</div>
+		<!-- e: Bottom 팝업 -->
 
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-			</div>
+		<div class="pageTop">
+			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
 		</div>
 	</body>
 </html>
