@@ -70,7 +70,9 @@
 					</p>
 				</div>
 				<div class="info_gray">
-					<p class="info_text">운전자 제한없음, 만24세이상 한정 운전 특약 이외의 운전자가 차량 운전 사고 발생 시 대인배상I(책임보험)을 제외한 나머지 보상은 받으실 수 없습니다.</p>
+					<!-- s: 25-07-17 수정 -->
+					<p class="info_text">운전자 제한없음, 만21세이상 한정 운전 특약 이외의 운전자가 차량 운전 사고 발생 시 대인배상I(책임보험)을 제외한 나머지 보상은 받으실 수 없습니다.</p>
+					<!-- e: 25-07-17 수정 -->
 				</div> 
 				<!-- e: 누구나 -->
 
@@ -78,12 +80,20 @@
 				<div class="bottom_fix_wrap">
 					<div class="btn_area">
 						{{> cp/button type="3" size="1" b-text="이전" }}
-						{{> cp/button type="1" size="1" b-text="선택 중이에요" disabled=true }}
+						<!-- s: 25-07-17 수정 -->
+						{{> cp/button type="1" size="1" b-text="운전범위를 선택 중이에요" disabled=true }}
+						<!-- e: 25-07-17 수정 -->
 						<!-- {{> cp/button type="1" size="1" b-text="보험료 확인하기" }} -->
 					</div>
 				</div>
 				<!-- e: 하단 고정 버튼 영역 -->
 			</div>
+
+			<!-- s: 25-07-17 수정 -->
+			<!-- s: 사이드 패널 -->
+			{{> cp/panel_자동차영업 step5=true panel-title="고객 정보" }}
+			<!-- e: 사이드 패널 -->
+			<!-- e: 25-07-17 수정 -->
 		</div>
 	</div>
 

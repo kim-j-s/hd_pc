@@ -48,19 +48,23 @@
 						{{> cp/checkbox checkbox_class="" id="checkbox01" label_class="chk_label_ty3" labelname="차량을 구매예정이신가요?" labelcont="자동차번호, 차대번호를 모르는 경우" }}
 					</div>
 	
-					<div class="radio_group_wrap column car_type_option" role="radiogroup">
+					<!-- s: 25-07-17 수정 -->
+					<!-- 삭제 <div class="radio_group_wrap column car_type_option" role="radiogroup">
 						{{> cp/radio rd-class="rd_btn_s1 icon_opt1" rd-id="radio_btn_g1" name="radio_g1" labelname="승용차<br><span>승차정원 10인 이하</span>" checked=true }}
 						{{> cp/radio rd-class="rd_btn_s1 icon_opt2" rd-id="radio_btn_g2" name="radio_g1" labelname="승합차<br><span>승차정원 11인 이상</span>" }}
 						{{> cp/radio rd-class="rd_btn_s1 icon_opt3" rd-id="radio_btn_g3" name="radio_g1" labelname="화물차<br><span>적재함이 있는 자동차, 밴형 및 픽업트럭</span>" }}
-					</div>
+					</div> -->
+					<!-- e: 25-07-17 수정 -->
 			
 					<!-- s: 하단 버튼 영역 -->
 					<div class="bottom_fix_wrap">
 						<div class="btn_area">
 							{{> cp/button type="3" size="1" b-text="이전"}}
 							<!-- {{> cp/button type="1" size="1" b-text="다음" disabled=true }} -->
-							{{> cp/button type="1" size="1" b-text="승용차로 알아볼게요" }}
-							<!-- {{> cp/button type="1" size="1" b-text="승용차 구매예정으로" }} -->
+							<!-- s: 25-07-17 수정 -->
+							{{> cp/button type="1" size="1" b-text="자동차번호를 입력 중이에요" disabled=true }}
+							<!-- {{> cp/button type="1" size="1" b-text="보험료 계산하기" }} -->
+							<!-- e: 25-07-17 수정 -->
 						</div>
 					</div>
 					<!-- e: 하단 버튼 영역 -->
