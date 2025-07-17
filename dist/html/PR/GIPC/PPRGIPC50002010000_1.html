@@ -264,10 +264,10 @@
 					<div class="popup_bottom">
 						<div class="btn_area">
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-						
-								<span class="text">도착일시를 선택 중이에요</span>
-						
-						</button> -->
+					
+							<span class="text">도착일시를 선택 중이에요</span>
+					
+					</button> -->
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 								<span class="text">선택했어요</span>
 							</button>
@@ -456,19 +456,19 @@
 				});
 
 				/*
-							다음과 같이 세팅 후 $calendar.open 호출
-							1. year
-							2. month
-							3. minDate		// setDate 활용
-							4. maxDate		// setDate 활용
-			
-							------ <예시> ------
-							$calendar.set('year', _now.year);
-							$calendar.set('month', _now.month);
-							$calendar.set('minDate', $calendar.setDate('2025-02-05'));
-							$calendar.set('maxDate', $calendar.setDate(_max, 'date'));
-							-------------------
-						*/
+						다음과 같이 세팅 후 $calendar.open 호출
+						1. year
+						2. month
+						3. minDate		// setDate 활용
+						4. maxDate		// setDate 활용
+		
+						------ <예시> ------
+						$calendar.set('year', _now.year);
+						$calendar.set('month', _now.month);
+						$calendar.set('minDate', $calendar.setDate('2025-02-05'));
+						$calendar.set('maxDate', $calendar.setDate(_max, 'date'));
+						-------------------
+					*/
 
 				const _now = $calendar.setDate();
 				$calendar.set("year", _now.year);

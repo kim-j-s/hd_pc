@@ -205,21 +205,88 @@
 								<ul class="list_ty2 full">
 									<li>계약자 명의의 국내발급 카드로만 결제가 가능합니다. (법인, 가족카드 불가)</li>
 								</ul>
-								<!-- s: 현대카드 선택 시, 노출 -->
-								<div class="form_line full">
-									<div class="checkbox_group_wrap column">
-										<div class="inp_checkbox rd_box question">
-											<input type="checkbox" id="checkbox01-01" />
-											<label for="checkbox01-01" class="chk_label chk_label_ty3 question">
-												<span class="label_cont">현대카드 M포인트 사용<span class="sub_g_txt">(1천원 이상 결제시, 3만 M포인트 한도)</span></span>
-											</label>
-
-											<button type="button" class="question_mark_btn" aria-expanded="false" onclick="openHDPopup(this,'pop_type04');"><i class="hd_icon arrowRightSvg"></i><span class="blind">팝업열기</span></button>
+							</div>
+							<!-- s: 카드 혜택 안내 배너 -->
+							<div class="banner_box">
+								<div class="bann_wrap bann_ty1 co_ty2">
+									<div class="inner">
+										<span class="logo"><i class="hd_icon i_logo_366"></i></span>
+										<div class="bann_cont">
+											<div class="title">신한카드로 결제해 보세요</div>
+											<div class="desc">신한카드로 결제하면 포인트 100% 사용가능</div>
 										</div>
 									</div>
 								</div>
-								<!-- e: 현대카드 선택 시, 노출 -->
+								<div class="bann_wrap bann_ty1">
+									<div class="inner">
+										<span class="logo"><i class="hd_icon i_logo_367"></i></span>
+										<div class="bann_cont">
+											<div class="title">현대카드로 결제해 보세요</div>
+											<div class="desc">M포인트 100% 사용가능 계속보험료 결제 가능</div>
+										</div>
+									</div>
+								</div>
+								<div class="bann_wrap bann_ty1 co_ty3">
+									<div class="inner">
+										<span class="logo"><i class="hd_icon i_logo_365"></i></span>
+										<div class="bann_cont">
+											<div class="title">삼성카드로 결제해 보세요</div>
+											<div class="desc">삼성카드로 결제하면 포인트 100% 사용가능</div>
+										</div>
+									</div>
+								</div>
 							</div>
+							<!-- e: 카드 혜택 안내 배너 -->
+							<!-- s: 25-07-17 -->
+							<!-- s: 해외여행 현대카드 제휴 접속시 노출 -->
+							<div class="checkbox_group_wrap column">
+								<div class="inp_checkbox rd_box question">
+									<input type="checkbox" id="checkbox01-01" />
+									<label for="checkbox01-01" class="chk_label chk_label_ty3">
+										<span class="label_cont"
+											>현대카드 M포인트 50% 사용<span class="sub_g_txt">카드승인액 한도 내 보유포인트 최대 50%까지 차감(승인시점 보유포인트).<br />문의: 현대카드 고객센터(1577-6000)</span></span
+										>
+									</label>
+								</div>
+							</div>
+							<!-- e: 해외여행 현대카드 제휴 접속시 노출 -->
+							<!-- s: 해외장기체류여행 현대카드 제휴 접속시 노출 -->
+							<div class="checkbox_group_wrap column">
+								<div class="inp_checkbox rd_box question">
+									<input type="checkbox" id="checkbox01-01" />
+									<label for="checkbox01-01" class="chk_label chk_label_ty3">
+										<span class="label_cont"
+											>현대카드 M포인트 20% 사용<span class="sub_g_txt">카드승인액 한도 내 보유포인트 최대 20%까지 차감(승인시점 보유포인트).<br />문의: 현대카드 고객센터(1577-6000)</span></span
+										>
+									</label>
+								</div>
+							</div>
+							<!-- e: 해외장기체류여행 현대카드 제휴 접속시 노출 -->
+							<!-- e: 25-07-17 -->
+							<!-- s: 신한카드 선택 시, 노출 -->
+							<div class="checkbox_group_wrap column">
+								<div class="inp_checkbox rd_box question">
+									<input type="checkbox" id="checkbox02-01" />
+									<label for="checkbox02-01" class="chk_label chk_label_ty3">
+										<span class="label_cont"
+											>신한카드 포인트 100% 사용<span class="sub_g_txt">포인트는 결제할 보험료 내에서 사용됩니다.<br />포인트는 1회차 보험료에 한해서만 사용됩니다.<br />문의: 신한카드 고객센터(1544-7000)</span></span
+										>
+									</label>
+								</div>
+							</div>
+							<!-- e: 신한카드 선택 시, 노출 -->
+							<!-- s: 삼성카드 선택 시, 노출 -->
+							<div class="checkbox_group_wrap column">
+								<div class="inp_checkbox rd_box question">
+									<input type="checkbox" id="checkbox03-01" />
+									<label for="checkbox03-01" class="chk_label chk_label_ty3">
+										<span class="label_cont"
+											>삼성카드 포인트 100% 사용<span class="sub_g_txt">포인트는 결제할 보험료 내에서 사용됩니다.<br />포인트는 1회차 보험료에 한해서만 사용됩니다.<br />문의: 신한카드 고객센터(1544-8700)</span></span
+										>
+									</label>
+								</div>
+							</div>
+							<!-- e: 삼성카드 선택 시, 노출 -->
 						</div>
 
 						<!-- 간편결제 -->
@@ -461,14 +528,9 @@
 							</dl>
 						</div>
 					</div>
+					<!-- s: 25-07-17 -->
 					<div class="checkbox_group_wrap">
-						<div class="inp_checkbox rd_box">
-							<input type="checkbox" id="agree01" />
-							<label for="agree01" class="chk_label chk_label_ty3 more_add">
-								<span class="label_cont">만기환급금 입금 계좌 동의</span>
-							</label>
-							<button type="button" class="ag_more_btn" aria-label="만기환급금 입금 계좌 동의 자세히 보기" aria-expanded="false" onclick="openHDPopup(this,'pop_type05');">자세히</button>
-						</div>
+						<!-- s: 25-06-18 수정 -->
 						<div class="inp_checkbox rd_box">
 							<input type="checkbox" id="agree02" />
 							<label for="agree02" class="chk_label chk_label_ty3 more_add">
@@ -476,7 +538,22 @@
 							</label>
 							<button type="button" class="ag_more_btn" aria-label="자동이체 약관 동의 자세히 보기" aria-expanded="false" onclick="openHDPopup(this,'pop_type06');">자세히</button>
 						</div>
+						<!-- e: 25-06-18 수정 -->
 					</div>
+					<div class="divider_ty1"></div>
+					<h3 class="title_h3">만기환급금 계좌정보 입력</h3>
+					<div class="checkbox_group_wrap">
+						<!-- s: 25-06-18 수정 -->
+						<div class="inp_checkbox rd_box">
+							<input type="checkbox" id="agree01" />
+							<label for="agree01" class="chk_label chk_label_ty3 more_add">
+								<span class="label_cont">만기환급금 입금 계좌 동의</span>
+							</label>
+							<button type="button" class="ag_more_btn" aria-label="만기환급금 입금 계좌 동의 자세히 보기" aria-expanded="false" onclick="openHDPopup(this,'pop_type05');">자세히</button>
+						</div>
+						<!-- e: 25-06-18 수정 -->
+					</div>
+					<!-- e: 25-07-17 -->
 					<div class="bottom_fix_wrap">
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
@@ -486,10 +563,10 @@
 								<span class="text">결제 정보를 입력해 주세요</span>
 							</button>
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-			
-					<span class="text">보험료 결제하고 가입하기</span>
-			
-			</button> -->
+		
+				<span class="text">보험료 결제하고 가입하기</span>
+		
+		</button> -->
 						</div>
 					</div>
 				</div>

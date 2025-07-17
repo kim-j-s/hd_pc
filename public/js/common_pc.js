@@ -43,7 +43,6 @@ $(function() {  // DOM이 준비되었을 때 실행
 		floatingItem();
 	});
 
-
 	// 헤더 이벤트 스크립트
 	let lastScrollTop = 0;
   $(window).on('scroll', function() {
@@ -72,7 +71,6 @@ $(function() {  // DOM이 준비되었을 때 실행
 		$(this).addClass('active');
 	});
 
-
 	// selectbox 스타일 처리 스크립트
 	$('.selectbox').each(function(index, element) {
 		const $this = $(element);
@@ -86,51 +84,9 @@ $(function() {  // DOM이 준비되었을 때 실행
 		}
 	});
 
-
-	// footer sns 링크 팝업
-	$DOM.on('click', '.ftr_sns_open', function(e) {
-		const $snsTarget = $('.ftr_sns_list')
-		$snsTarget.toggleClass('active');
-		if ($snsTarget.hasClass('active')) {
-			$(this).attr('title', '다이렉트 SNS 목록닫기');
-		} else {
-			$(this).attr('title', '다이렉트 SNS 목록보기');
-		}
-	});
-
-	$('.ftr_sns_list')
-  // .on('focusin', function () {
-  //   console.log('SNS 리스트에 포커스 들어옴');
-  // })
-  .on('focusout', function () {
-    setTimeout(function () {
-      if (!$(document.activeElement).closest('.ftr_sns_list').length) {
-				$('.ftr_sns_list').removeClass('active');
-				$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
-      }
-    }, 10);
-  });
-
-	//window click이벤트
-	$(window).on('click', function(e) {
-		var $target = $(e.target);
-		
-		// 팝업 영역 외 클릭 시 팝업 닫기
-		var $rml = $('.ftr_sns_list');
-		var $rmb = $('.ftr_sns_open');
-		if (!$target.closest($rml).length &&  !$target.closest($rmb).length) {
-			$('.ftr_sns_list').removeClass('active');
-			$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
-		}
-	});
-	// footer sns 링크 팝업
-
-
 	
 
-
 	
-
 	
 });
 
@@ -188,20 +144,4 @@ $(function(){
 // 		$target.find('.popup_inner').removeAttr('tabindex');
 // 	}
 	
-	$(window).on('click', function(e) {
-		var $target = $(e.target);
-		// console.log($target);
-		// 범용
-		var $test_item = $('.test_item, .test_item2');
-		if (!$target.closest($test_item).length) {
-			$test_item.removeClass('active');
-		}
-		
-		// // 팝업 영역 외 클릭 시 팝업 닫기
-		// var $close_popup = $('.popup_inner');
-		// if (!$target.closest($close_popup).length) {
-		// 	console.log('this : ', $target);
-		// 	$('#wrap').removeClass('scroll_lock');
-		// 	$target.closest('.popup_wrap').removeClass('active').find('.popup_inner').removeAttr('tabindex');
-		// }
-	});
+	

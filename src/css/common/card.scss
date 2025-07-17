@@ -374,6 +374,9 @@
 				& + .badge_wrap {
 					margin-top: var(--gap-2);
 				}
+				> .flex_start {
+					gap: var(--gap-3);
+				}
 			}
 			
 			.text {

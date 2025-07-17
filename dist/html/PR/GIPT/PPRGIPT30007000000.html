@@ -97,22 +97,49 @@
 					<div class="form_group_wrap">
 						<!-- s: 25-05-30 삭제 -->
 						<!-- <div class="form_line">
-								<div class="label_tit">이름</div>
+							<div class="label_tit">이름</div>
+							<div class="input_text">
+							  
+							  <div class="inp">
+							    <input 
+													type="text"
+							      
+							      
+												
+							      
+							      value="김현대"
+							      
+							      
+							      
+							      readonly
+							      title="이름 입력"
+										
+							      
+							    >
+							    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+							  </div>
+							  
+								
+							</div>
+						</div>
+						<div class="form_line">
+							<div class="label_tit">주민등록번호</div>
+							<div class="comp_wrap birth">
 								<div class="input_text">
 								  
 								  <div class="inp">
 								    <input 
-														type="text"
+												type="tel"
 								      
 								      
 													
-								      
-								      value="김현대"
-								      
-								      
+								      placeholder="앞자리"
+								      value="790101"
+								      minlength="6"
+								      maxlength="6"
 								      
 								      readonly
-								      title="이름 입력"
+								      title="주민등록번호 앞자리 입력"
 											
 								      
 								    >
@@ -121,10 +148,9 @@
 								  
 									
 								</div>
-							</div>
-							<div class="form_line">
-								<div class="label_tit">주민등록번호</div>
-								<div class="comp_wrap birth">
+								<span class="dash">-</span> -->
+						<!-- s: 25-05-02 수정 -->
+						<!-- <div class="id_pass_box read_only">
 									<div class="input_text">
 									  
 									  <div class="inp">
@@ -133,54 +159,28 @@
 									      
 									      
 														
-									      placeholder="앞자리"
-									      value="790101"
-									      minlength="6"
-									      maxlength="6"
+									      placeholder="●"
+									      value="1"
+									      minlength="1"
+									      maxlength="1"
 									      
 									      readonly
-									      title="주민등록번호 앞자리 입력"
+									      title="주민등록번호 뒷1자리 입력"
 												
 									      
 									    >
-									    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									    
 									  </div>
 									  
 										
 									</div>
-									<span class="dash">-</span> -->
-						<!-- s: 25-05-02 수정 -->
-						<!-- <div class="id_pass_box read_only">
-										<div class="input_text">
-										  
-										  <div class="inp">
-										    <input 
-														type="tel"
-										      
-										      
-															
-										      placeholder="●"
-										      value="1"
-										      minlength="1"
-										      maxlength="1"
-										      
-										      readonly
-										      title="주민등록번호 뒷1자리 입력"
-													
-										      
-										    >
-										    
-										  </div>
-										  
-											
-										</div>
-										<div class="id_pass">
-											●●●●●●
-										</div>
-									</div> -->
+									<div class="id_pass">
+										●●●●●●
+									</div>
+								</div> -->
 						<!-- e: 25-05-02 수정 -->
 						<!-- </div>
-							</div> -->
+						</div> -->
 						<!-- e: 25-05-30 삭제 -->
 
 						<div class="form_line">
@@ -337,18 +337,18 @@
 									</div>
 								</div>
 								<!-- 
-										등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
-										등록 후 이미지일 시, active 클래스 추가
-										등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
-									-->
+									등록 후 이미지 (등록 전/후 따라 alt값 변경 필요)
+									등록 후 이미지일 시, active 클래스 추가
+									등록된 이미지 삭제 시, .file_attach_box에 active 클래스 제거
+								-->
 								<!-- <div class="file_attach_box active">
-										<div class="file_thumbnail">
-											<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
-										</div>
-										<button type="button" class="btn_file_delete">
-											<span>등록한 이미지 삭제하기</span>
-										</button>
-									</div> -->
+									<div class="file_thumbnail">
+										<img src="../../../images/temp/img_certify_card_temp.png" alt="등록된 복지카드 이미지">
+									</div>
+									<button type="button" class="btn_file_delete">
+										<span>등록한 이미지 삭제하기</span>
+									</button>
+								</div> -->
 								<!-- e: 이미지 파일 붙는 영역 -->
 
 								<!-- s: 이미지 파일 버튼 -->
@@ -365,14 +365,14 @@
 									</div>
 									<!-- 등록 후 노출 -->
 									<!-- <div class="file_btn">
-											<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
-											<label for="file">
-												<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
-													<i class="hd_icon carmeraSvg2"></i>
-													사진 변경하기
-												</span>
-											</label>
-										</div> -->
+										<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
+										<label for="file">
+											<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+												<i class="hd_icon carmeraSvg2"></i>
+												사진 변경하기
+											</span>
+										</label>
+									</div> -->
 								</div>
 								<!-- e: 이미지 파일 버튼 -->
 							</div>
@@ -393,10 +393,10 @@
 								<span class="text">입력 중이에요</span>
 							</button>
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-			
-					<span class="text">모두 입력했어요</span>
-			
-			</button> -->
+		
+				<span class="text">모두 입력했어요</span>
+		
+		</button> -->
 						</div>
 					</div>
 					<!-- s: 하단 버튼 영역 -->
