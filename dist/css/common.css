@@ -1281,6 +1281,9 @@ strong {
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search {
 	background-image: url(../images/header/bg_header_search.png);
 }
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search.active {
+	background-image: url(../images/header/bg_header_search_active.png);
+}
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_menu_all {
 	background-image: url(../images/header/bg_header_menuall.png);
 }
@@ -1742,7 +1745,6 @@ strong {
 }
 .all_menu .event_pop_ele_inner {
 	height: 100%;
-	overflow: auto;
 }
 .all_menu .popup_close {
 	position: absolute;
@@ -1767,6 +1769,9 @@ strong {
 	display: inline-flex;
 	width: 1188px;
 	padding: 21px 0;
+}
+.am_header .am_header_inner .am_header_title > img {
+	width: 160px;
 }
 .am_content {
 	height: calc(100% - 72px);

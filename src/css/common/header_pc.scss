@@ -174,6 +174,9 @@
 			}
 			&.hsu_search {
 				background-image: url(../images/header/bg_header_search.png);
+				&.active {
+					background-image: url(../images/header/bg_header_search_active.png);
+				}
 			}
 			&.hsu_menu_all {
 				background-image: url(../images/header/bg_header_menuall.png);

@@ -13,7 +13,7 @@
 
 	.event_pop_ele_inner {
 		height: 100%;
-		overflow: auto;
+		// overflow: auto;
 	}
 
 	.popup_close {
@@ -37,6 +37,11 @@
 		display: inline-flex;		
 		width: 1188px;
 		padding: 21px 0;
+		.am_header_title {
+			> img {
+				width: 160px;
+			}
+		}
 	}
 }
 

@@ -12,8 +12,20 @@
 	});
 
 
-	$DOM.on('click', '.hsu_search', function(){
-		$('.all_menu_search_wrap').toggleClass('active');
+	$DOM.on('click', '.hsu_search', function () {
+		
+		$('.wrap').toggleClass('scroll_lock');
+		$(this).toggleClass('active');
+		const $wrap = $('.all_menu_search_wrap');
+		const $btn = $(this);
+		const $text = $btn.find('.text');
+	
+		$wrap.toggleClass('active');
+	
+		const isActive = $wrap.hasClass('active');
+	
+		$btn.attr('aria-expanded', isActive);
+		$text.text(isActive ? '메뉴검색 팝업 닫기' : '메뉴검색 팝업 열기');
 	});
 
 	
