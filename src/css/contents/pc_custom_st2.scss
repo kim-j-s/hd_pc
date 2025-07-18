@@ -1850,6 +1850,12 @@
 	}
 }
 
+.car_type_option {
+	& + .form_group_wrap {
+		margin-top: var(--gap-11);
+	}
+}
+
 //기초 정보 입력
 .bi_top {
 	.bit_btn_scrollx {
