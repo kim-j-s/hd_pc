@@ -3597,6 +3597,9 @@
 .form_box + .btn_area {
 	margin-top: var(--gap-5);
 }
+.form_box + .btn_area.center {
+	margin-top: var(--gap-11);
+}
 .form_box .car_title_h1 {
 	margin-bottom: 20px;
 	font-size: var(--font-size-heading-medium);
@@ -4036,6 +4039,7 @@ ul + .form_group_wrap {
 .info_cont + .checkbox_group_wrap {
 	margin-top: var(--gap-11);
 }
+.info_cont + .rd_box,
 .info_cont + .link_area,
 .info_cont + .form_group_wrap {
 	margin-top: var(--gap-5);
@@ -4076,9 +4080,6 @@ ul + .form_group_wrap {
 	margin-top: var(--gap-3);
 }
 /* 보험가입 진행 정보 */
-.pro_info_wrap .pro_info_item {
-	width: 100%;
-}
 .pro_info_wrap .pro_info_item + .pro_info_item {
 	margin-top: calc(var(--gap-7) + 1px);
 	padding-top: var(--gap-7);

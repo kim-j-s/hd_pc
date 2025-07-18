@@ -1219,6 +1219,93 @@ body {
 .container .card_item_wrap.ty6 .card_item .item_inner .inner_cont .item_cont .btn_link .text {
 	font-size: var(--font-size-body-large);
 }
+.container .card_item_wrap.ty7 .card_item {
+	position: relative;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-4);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .space_between {
+	width: 100%;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: var(--gap-4);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-4);
+	padding: 1px 0;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dt {
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: var(--font-size-body-small);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .hd_btn {
+	margin-left: auto;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .item_top {
+	padding-bottom: 33px;
+	gap: var(--gap-5);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .item_top + .cont {
+	border-left: 1px solid var(--color-divider-gray-light);
+	padding-left: var(--gap-8);
+	margin-left: var(--gap-8);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .cont {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 475px;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .cont .data_info_list dl dt {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 130px;
+}
+.container .card_item_wrap.ty7 .card_item .item_result {
+	position: absolute;
+	left: 48px;
+	bottom: 24px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 260px;
+}
+.container .card_item_wrap.ty7 .card_item .item_result .btn_area {
+	margin-top: 0;
+}
+.container .card_item_wrap.ty7 .card_item .item_result .msg_success {
+	margin-top: 0;
+}
 .container .card_item_wrap + .total_price_display_ty1,
 .container .card_item_wrap + .info_gray {
 	margin-top: var(--gap-11);
@@ -1233,6 +1320,31 @@ body {
 .card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label:before,
 .card_item_wrap .card_item .item_inner > .inp_radio .chk_label:before {
 	top: 0;
+}
+.card_item_wrap .card_item .card_list_ty1 > li.list_title {
+	padding-bottom: 16px;
+	max-width: 100%;
+}
+.card_item_wrap .card_item .card_list_ty1 > li.list_title .title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: var(--gap-2);
+	font-weight: 700;
+	font-size: var(--font-size-heading-small);
+	color: var(--color-text-bolder);
+}
+.card_item_wrap .card_item .card_list_ty1 > li.list_title .title .badge_wrap {
+	display: inline;
+	vertical-align: top;
+}
+.card_item_wrap .card_item .card_list_ty1 > li.list_title .title .title_tl {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
 }
 .cd_top_wrap {
 	margin: 0;
@@ -1346,6 +1458,9 @@ body {
 	-ms-flex: none;
 	flex: none;
 	width: 100%;
+}
+.checkbox_group_wrap + .all_checking {
+	margin-top: var(--gap-8);
 }
 .radio_group_wrap_ty5 {
 	display: -webkit-box;
@@ -1465,6 +1580,9 @@ body {
 }
 .link_flex_box.call::after {
 	content: "방법안내";
+}
+.car_type_option + .form_group_wrap {
+	margin-top: var(--gap-11);
 }
 .bi_top .bit_btn_scrollx {
 	-ms-flex-wrap: wrap;
