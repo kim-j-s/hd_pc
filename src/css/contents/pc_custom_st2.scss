@@ -1708,6 +1708,10 @@
 			}
 		}
 	}
+
+	& + .all_checking {
+		margin-top: var(--gap-8);
+	}
 }
 
 //자동차 

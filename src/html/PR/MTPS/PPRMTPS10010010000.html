@@ -6,7 +6,7 @@
 		<div class="content">
 			<div class="title_view_wrap">
 				<div class="page_title">
-					<div class="p_info">보험료 계산 차량 선택</div>
+					<div class="p_info">보험료 계산 차량 정보 입력</div>
 					<h2 class="p_title">
 						<strong>할인특약 조회동의</strong> 후 보험료를 계산할 <strong>자동차 정보를 <br>입력</strong>해주세요.
 					</h2>
@@ -14,6 +14,10 @@
 				<div class="btn_area">
 					{{> cp/button type="2" size="3"  b-text="1대씩 계산/가입"}}
 				</div>
+			</div>
+
+			<div class="checkbox_group_wrap column">
+				{{> cp/checkbox labelname="할인특약 조회동의" ag_more=true id="more_case2" checkbox_class="rd_box" label_class="chk_label_ty3" }}
 			</div>
 			
 			<div class="all_checking">
@@ -313,7 +317,7 @@
 		</div>
 
 		<!-- s: 사이드 패널 -->
-		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+		{{> cp/panel_자동차다수차량개인 step5=true panel-title="고객 정보" }}
 		<!-- e: 사이드 패널 -->
 	</div>
 </div>
