@@ -252,6 +252,7 @@
 
 
 <div class="guide_h4 pc">.card_item_wrap.ty7</div>
+<div class="guide_discription">할인특약 조회 전 + 정보 입력 전</div>
 <div class="container">
 	<div class="card_item_wrap ty7">
 		<div class="card_item">
@@ -272,32 +273,189 @@
 									</span>
 								</div>
 							</div>
+							<div class="data_info_list">
+								<dl>
+									<dt>보험기간</dt>
+									<dd>2025.01.01~2026.01.01</dd>
+								</dl>
+							</div>
 						</div>
 						<div class="cont">
 							<div class="data_info_list">
 								<dl>
 									<dt>차명</dt>
-									<dd>제네시스 G80 3.8</dd>
+									<dd>-</dd>
 								</dl>
 								<dl>
 									<dt>부속가액(총 차량가액)</dt>
-									<dd>250만원(9,800만원)</dd>
+									<dd>-</dd>
 								</dl>
 								<dl>
 									<dt>운전범위</dt>
-									<dd>본인만(만 43세 이상 한정)</dd>
+									<dd>-</dd>
 								</dl>
 								<dl>
 									<dt>할인특약</dt>
-									<dd>총 7개 특약</dd>
+									<dd>-</dd>
 								</dl>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="btn_area">
-				{{> cp/button type="3" size="2" b-text="삭제" }}
+			<div class="item_result">
+				<div class="btn_area basic">
+					{{> cp/button type="3" size="5" b-text="삭제" }}
+				</div>
+				<p class="msg_success">입력완료</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="guide_discription">할인특약 조회 후 + 정보 입력 전</div>
+<div class="container">
+	<div class="card_item_wrap ty7">
+		<div class="card_item">
+			<div class="item_inner">
+				<div class="inp_checkbox">
+					<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+					<label for="card_chk_opt1111_1" class="chk_label"></label>
+					<i></i>
+				</div>
+				<div class="inner_cont">
+					<div class="space_between">
+						<div class="item_top" id="card_chk_opt1111_1_cont">
+							<div class="title_info">
+								<div class="main_title">
+									111가1111(현대)
+									<span class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+									</span>
+								</div>
+							</div>
+							<div class="data_info_list">
+								<dl>
+									<dt>보험기간</dt>
+									<dd>2025.01.01~2026.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="data_info_list">
+								<dl>
+									<dt>차명</dt>
+									<dd>
+										제네시스 G80 3.8
+										{{> cp/button type="2" size="5" b-text="차량정보 입력" }}
+										<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+									</dd>
+								</dl>
+								<dl>
+									<dt>부속가액(총 차량가액)</dt>
+									<dd>
+										250만원(9,800만원)
+										{{> cp/button type="2" size="5" b-text="부속정보 입력" }}
+										<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+									</dd>
+								</dl>
+								<dl>
+									<dt>운전범위</dt>
+									<dd>
+										본인만(만 43세 이상 한정)
+										{{> cp/button type="2" size="5" b-text="운전범위 입력" }}
+										<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+									</dd>
+								</dl>
+								<dl>
+									<dt>할인특약</dt>
+									<dd>
+										총 7개 특약
+										{{> cp/button type="2" size="5" b-text="할인특약 입력" }}
+										<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item_result">
+				<div class="btn_area basic">
+					{{> cp/button type="3" size="5" b-text="삭제" }}
+				</div>
+				<p class="msg_success">입력완료</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="guide_discription">모든 정보 입력 완료</div>
+<div class="container">
+	<div class="card_item_wrap ty7">
+		<div class="card_item">
+			<div class="item_inner">
+				<div class="inp_checkbox">
+					<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+					<label for="card_chk_opt1111_1" class="chk_label"></label>
+					<i></i>
+				</div>
+				<div class="inner_cont">
+					<div class="space_between">
+						<div class="item_top" id="card_chk_opt1111_1_cont">
+							<div class="title_info">
+								<div class="main_title">
+									111가1111(현대)
+									<span class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+									</span>
+								</div>
+							</div>
+							<div class="data_info_list">
+								<dl>
+									<dt>보험기간</dt>
+									<dd>2025.01.01~2026.01.01</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="data_info_list">
+								<dl>
+									<dt>차명</dt>
+									<dd>
+										제네시스 G80 3.8
+										{{> cp/button type="3" size="5" b-text="수정" }}
+									</dd>
+								</dl>
+								<dl>
+									<dt>부속가액(총 차량가액)</dt>
+									<dd>
+										250만원(9,800만원)
+										{{> cp/button type="3" size="5" b-text="수정" }}
+									</dd>
+								</dl>
+								<dl>
+									<dt>운전범위</dt>
+									<dd>
+										본인만(만 43세 이상 한정)
+										{{> cp/button type="3" size="5" b-text="수정" }}
+									</dd>
+								</dl>
+								<dl>
+									<dt>할인특약</dt>
+									<dd>
+										총 7개 특약
+										{{> cp/button type="3" size="5" b-text="수정" }}
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item_result">
+				<div class="btn_area basic">
+					{{> cp/button type="3" size="5" b-text="삭제" }}
+				</div>
+				<p class="msg_success">입력완료</p>
 			</div>
 		</div>
 	</div>
