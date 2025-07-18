@@ -1414,6 +1414,23 @@
 				}
 			}
 		}
+		.card_list_ty1 {
+			& > li {
+				&.list_title {
+					padding-bottom: 16px;
+					.title {
+						text-align: left;
+						font-weight: 700;
+						font-size: var(--font-size-heading-small);
+						color: var(--color-text-bolder);
+						.badge_wrap {
+							display: inline;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
 	}
 	// &.my_top_gray {
 	// 	.card_item {
