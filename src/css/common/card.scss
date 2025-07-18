@@ -466,7 +466,7 @@
 			@include car-list-style($ul-border-radius: 0, $li-padding: 0 0 12px, $li-font-size: var(--font-size-body-small)) {
 				// ul.list-2에 대한 추가적인 스타일
 				// background-color: var(--color-primary);
-				> li {
+				> li:not(.list_title) {
 					display: flex;
 					align-items: flex-start;
 					justify-content: space-between;
@@ -477,7 +477,7 @@
 				}
 			}
 
-			> li {
+			> li:not(.list_title) {
 				> * {
 					&:first-child {
 						flex: none;

@@ -1448,14 +1448,23 @@
 			& > li {
 				&.list_title {
 					padding-bottom: 16px;
+					max-width: 100%;
+
 					.title {
-						text-align: left;
+						display: flex;
+						align-items: center;
+						gap: var(--gap-2);
 						font-weight: 700;
 						font-size: var(--font-size-heading-small);
 						color: var(--color-text-bolder);
+
 						.badge_wrap {
 							display: inline;
 							vertical-align: top;
+						}
+
+						.title_tl {
+							flex: none;
 						}
 					}
 				}
