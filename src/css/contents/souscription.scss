@@ -20,6 +20,9 @@
 	
 	& + .btn_area {
 		margin-top: var(--gap-5);
+		&.center {
+			margin-top: var(--gap-11);
+		}
 	}
 	.car_title_h1 {
 		margin-bottom: 20px;
