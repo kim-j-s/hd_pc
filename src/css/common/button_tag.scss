@@ -90,6 +90,13 @@
 	& + .selectitem_wrap {
 		margin-top: var(--gap-8);
 	}
+
+	// 좌표 설정
+	&.tag_item_wrap_po_etc1 {
+		top: 0;
+	}
+
+
 }
 
 .tag_item_move {
