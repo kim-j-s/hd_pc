@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8" />
@@ -54,7 +54,7 @@
 	<body>
 		<ul id="skipNavi" class="skipNavi">
 			<li><a href="#gnb">주메뉴바로가기</a></li>
-			<li><a href="#contents">본문바로가기</a></li>
+			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 		<div id="wrap" class="wrap">
 			<div id="header" class="header_pc">
@@ -1772,31 +1772,33 @@
 									</div>
 								</div>
 							</div>
+							<!-- s : 25-07-21 삭제 - 인풋박스 형태 유지+비활정화 상태로 변경 -->
 							<!-- 출력 -->
-							<div class="form_group_wrap full">
-								<div class="form_line">
-									<div class="label_tit">한글이름</div>
-									<strong class="info_text">김*대</strong>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">영문이름</div>
-									<strong class="info_text">KIM HYUN DAI</strong>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">생년월일</div>
-									<strong class="info_text">19910101</strong>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">성별</div>
-									<strong class="info_text">여성</strong>
-								</div>
-								<div class="form_line">
-									<div class="label_tit">이메일</div>
-									<strong class="info_text">Test*****@test.com</strong>
-								</div>
-							</div>
+							<!-- <div class="form_group_wrap full">
+									<div class="form_line">
+										<div class="label_tit">한글이름</div>
+										<strong class="info_text">김*대</strong>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">영문이름</div>
+										<strong class="info_text">KIM HYUN DAI</strong>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">생년월일</div>
+										<strong class="info_text">19910101</strong>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">성별</div>
+										<strong class="info_text">여성</strong>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">이메일</div>
+										<strong class="info_text">Test*****@test.com</strong>
+									</div>
+								</div> -->
 						</div>
 					</div>
+					<!-- 중복확인 후 버튼 미노출 -->
 					<div class="bottom_fix_wrap">
 						<div class="btn_area center">
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
@@ -2235,6 +2237,9 @@
 				</div>
 			</div>
 			<!-- footer -->
+			<div class="pageTop">
+				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			</div>
 			<div id="footer" class="footer">
 				<div class="inner">
 					<div class="footer_top">
@@ -2347,9 +2352,5 @@
 		<!-- s: popup area -->
 
 		<!-- e: popup area -->
-
-		<div class="pageTop">
-			<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
-		</div>
 	</body>
 </html>
