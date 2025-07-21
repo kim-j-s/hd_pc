@@ -1,17 +1,17 @@
 {{#> layout/default page-title="보험료 결제 | 자동차보험"}}
 <div id="wrap" class="wrap">
-    {{> layout/header_pc h-prd="자동차보험" }}
-    
-    <div id="container" class="container">
-      <div class="content">
-        <div class="title_view_wrap">
-          <div class="page_title">
-            <div class="p_info">보험료 결제하기</div>
-            <h2 class="p_title">
-							보험료를 <strong>결제하여 가입이 완료</strong>해주세요
-            </h2>
-          </div>
-        </div>
+	{{> layout/header_pc h-prd="자동차보험" }}
+	
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료 결제하기</div>
+					<h2 class="p_title">
+						보험료를 <strong>결제하여 가입이 완료</strong>해주세요
+					</h2>
+				</div>
+			</div>
 			<div class="info_summary payment">
 				<div class="summary_top">
 					<div class="s_title">결제하실 금액</div>
@@ -50,6 +50,7 @@
 					<img src="../../../images/event/banner4.png" alt="자동차보험료 결제혜택 최대 3만원 30만원 이상 결제시">
 				</a>
 			</div>
+			
 			<div class="tab_wrap">
 				<div class="tab_wrap_list_ty1" role="tablist">
 					{{>cp/tab_btn tb-text="신용카드" tb-id="01" tb-active=true}}
@@ -60,32 +61,34 @@
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
 					{{> pay/card corporate=true }}
 				</div>
+
 				<!-- 계좌이체 -->
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanel02">
 					{{> pay/bank1 }}
 				</div>
-			{{> pay/car_pay im_account=true }}
-			<div class="bottom_fix_wrap">
-				<div class="btn_area">
-					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="결제 정보를 입력해 주세요" disabled=true }}
-					<!-- {{> cp/button type="1" size="1" b-text="가입을 위해 전자서명을 합니다" }} -->
+
+				{{> pay/car_pay im_account=true }}
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="결제 정보를 입력해 주세요" disabled=true }}
+						<!-- {{> cp/button type="1" size="1" b-text="가입을 위해 전자서명을 합니다" }} -->
+					</div>
 				</div>
+
+				<!-- s: 꼭 알아두세요 카드만 노출 -->
+				{{#> cp/notice dp-active=true }}
+					{{> pay/card_info corporate=true }}
+				{{/ cp/notice }}
+				<!-- e: 꼭 알아두세요 카드만 노출 -->
 			</div>
-
-			<!-- s: 꼭 알아두세요 카드만 노출 -->
-			{{#> cp/notice dp-active=true }}
-				{{> pay/card_info corporate=true }}
-			{{/ cp/notice }}
-			<!-- e: 꼭 알아두세요 카드만 노출 -->
 		</div>
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
+
 	</div>
-	<!-- s: 사이드 패널 -->
-	{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
-	<!-- e: 사이드 패널 -->
-
 </div>
-
 <!-- s: popup area -->
 {{> pay/car_pop }}
 
