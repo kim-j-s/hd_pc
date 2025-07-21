@@ -464,7 +464,11 @@ strong {
 	width: 100%;
 	height: 100%;
 	background-image: url("../images/frame/bg_image_frame_tl.svg"), url("../images/frame/bg_image_frame_tr.svg"), url("../images/frame/bg_image_frame_bl.svg"), url("../images/frame/bg_image_frame_br.svg");
-	background-position: top 14px left 14px, top 14px right 14px, bottom 14px left 14px, bottom 14px right 14px;
+	background-position:
+		top 14px left 14px,
+		top 14px right 14px,
+		bottom 14px left 14px,
+		bottom 14px right 14px;
 	background-repeat: no-repeat;
 	background-size: 16px auto;
 }
@@ -1124,8 +1128,12 @@ strong {
 	width: 100%;
 	padding-top: 16px;
 	overflow: hidden;
-	-webkit-transition: height 0.3s, padding-top 0.3s;
-	transition: height 0.3s, padding-top 0.3s;
+	-webkit-transition:
+		height 0.3s,
+		padding-top 0.3s;
+	transition:
+		height 0.3s,
+		padding-top 0.3s;
 }
 .hpi_top .hpi_change_area {
 	-webkit-box-flex: 0;
@@ -1413,8 +1421,12 @@ strong {
 	left: 50%;
 	width: 0;
 	border-bottom: 3px solid var(--color-divider-gray-darker);
-	-webkit-transition: width 0.3s, left 0.3s;
-	transition: width 0.3s, left 0.3s;
+	-webkit-transition:
+		width 0.3s,
+		left 0.3s;
+	transition:
+		width 0.3s,
+		left 0.3s;
 	pointer-events: none;
 }
 .nav_list .nl_dept1_link > .text {
@@ -4630,8 +4642,12 @@ strong {
 	color: #fff;
 	text-align: center;
 	border-radius: 16px;
-	-webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.08);
-	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05), 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+	-webkit-box-shadow:
+		0 0 2px 0 rgba(0, 0, 0, 0.05),
+		0 4px 8px 0 rgba(0, 0, 0, 0.08);
+	box-shadow:
+		0 0 2px 0 rgba(0, 0, 0, 0.05),
+		0 4px 8px 0 rgba(0, 0, 0, 0.08);
 }
 .fixed_link_wrap .link_btn_box .btn_current > span {
 	font-weight: 700;
@@ -4649,18 +4665,31 @@ strong {
 	margin-right: -30px;
 	padding: 7px 60px 7px 8px;
 	background-color: var(--color-graphic-blue-darker);
-	-webkit-box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
-	box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+	-webkit-box-shadow:
+		0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)),
+		0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+	box-shadow:
+		0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)),
+		0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	border-radius: 150px 0 0 150px;
 	opacity: 0;
 	-webkit-transform-origin: right;
 	transform-origin: right;
 	-webkit-transform: translateX(24px) scale(0);
 	transform: translateX(24px) scale(0);
-	-webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+	-webkit-transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.5s ease-in-out;
+	transition:
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.5s ease-in-out;
+	transition:
+		transform 0.5s ease-in-out,
+		opacity 0.5s ease-in-out;
+	transition:
+		transform 0.5s ease-in-out,
+		opacity 0.5s ease-in-out,
+		-webkit-transform 0.5s ease-in-out;
 }
 .fixed_link_wrap .current_state.effect {
 	width: 100%;
@@ -5540,8 +5569,12 @@ strong {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 0 24px;
-	-webkit-box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow:
+		0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow:
+		0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .calendar_range_dp .drd_day {
 	-webkit-box-flex: 1;
@@ -6983,6 +7016,7 @@ strong {
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.chk_label_ty3 > .label_cont {
 	font-size: var(--font-size-label-large);
+	color: var(--color-text-basic);
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.chk_label_ty3 .sub_g_txt {
 	padding-top: 8px;
@@ -12420,7 +12454,9 @@ strong {
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
-	transition: transform 0.5s, -webkit-transform 0.5s;
+	transition:
+		transform 0.5s,
+		-webkit-transform 0.5s;
 }
 .splide_wrap.splide_wrap_ty1 .splide .splide__slide.effect .gd_item {
 	-webkit-transform: scale(1);
@@ -12533,8 +12569,12 @@ strong {
 .tab_wrap_list_ty2 .tab_btn.active {
 	border: var(--border-width-static-regular) solid var(--color-border-gray-dark);
 	background-color: var(--color-action-white);
-	-webkit-box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow:
+		0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow:
+		0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)),
+		0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .tab_wrap_content {
 	display: none;
@@ -13478,7 +13518,6 @@ strong {
 	background: var(--color-action-secondary);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
-.info_gray + .checkbox_group_wrap,
 .info_gray + .ag_groups,
 .info_gray + .ag_group_wrap,
 .info_gray + .chk_group_wrap {
@@ -13494,7 +13533,8 @@ strong {
 .info_gray + .select_driver_range,
 .info_gray + .banner_box.ty2,
 .info_gray + .all_checking,
-.info_gray + .text_sub_ty2 {
+.info_gray + .text_sub_ty2,
+.info_gray + .checkbox_group_wrap {
 	margin-top: var(--gap-8);
 }
 .info_gray + .tab_wrap {
