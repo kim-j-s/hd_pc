@@ -1440,6 +1440,7 @@ $(function(){
 					scrollTop: scrollY 
 				}, 400, function () {
 					scrolling = false;
+					console.log(scrollY, containerTop, targetTop);
 				});
 			}
 		});
@@ -1459,12 +1460,12 @@ $(function(){
 
 			const scrollYx = xtargetTop - xcontainerTop;
 
-			if (scrollYx < xtargetTop) {
+			if (scrollYx < xtargetTop + 64) {
 				$('body').css('background', 'blue');				
-				console.log(scrollYx, scrollTop);
+				// console.log(scrollYx - scrollTop);
 			} else {
 				$('body').css('background', 'red');
-				console.log(scrollYx, scrollTop);
+				// console.log(scrollYx, scrollTop);
 			}
 
 			/*
