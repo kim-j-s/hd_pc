@@ -90,6 +90,11 @@
 				min-width: 192px;
 			}
 		}
+		&.equal_ty2 {
+			.hd_btn {
+				min-width: 160px;
+			}
+		}
 	}
 	&.mg_ty1 {
 		margin: var(--gap-11);
