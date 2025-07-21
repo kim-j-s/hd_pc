@@ -36,13 +36,13 @@
 			& + li {
 				padding-left: 24px;
 				&::after {
+					content: '';
 					position: absolute;
-					left: 4px;
 					top: calc(50% - 8px);
-					content:'';
+					left: 4px;
 					width: 16px;
 					height: 16px;
-					background:url(../../../images/icon/arrowRight_ty4.svg) no-repeat center / 16px auto;
+					background:url(../images/icon/arrowRight_ty4.svg) no-repeat center / 16px auto;
 				}
 			}
 		}

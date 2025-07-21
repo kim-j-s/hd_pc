@@ -51,3 +51,20 @@
 		margin-top: var(--gap-8);
 	}
 }
+
+
+// 스크롤 이벤트 간격 정의용
+.pec_point_wrap {
+	&.ppw_space_1 {
+		.pec_point {
+			// padding-bottom: var(--gap-11);
+			&:last-child {
+				padding-bottom: 0;
+			}
+			// &:first-child {
+			// 	padding-top: 0;
+			// }
+		}
+	}
+
+}
