@@ -3,6 +3,7 @@
 /* layout  */
 /* Layout */
 body {
+	position: relative;
 	overflow: auto;
 }
 /* skipNavi */
