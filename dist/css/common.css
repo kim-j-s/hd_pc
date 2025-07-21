@@ -4912,6 +4912,9 @@ strong {
 .tag_item_wrap + .selectitem_wrap {
 	margin-top: var(--gap-8);
 }
+.tag_item_wrap.tag_item_wrap_po_etc1 {
+	top: 0;
+}
 .tag_item_move {
 	position: relative;
 }
@@ -12225,6 +12228,9 @@ strong {
 }
 .space_list_ty5 + .banner_box {
 	margin-top: var(--gap-8);
+}
+.pec_point_wrap.ppw_space_1 .pec_point:last-child {
+	padding-bottom: 0;
 }
 /* swiper */
 /* 예시 */
