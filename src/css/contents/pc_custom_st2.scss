@@ -168,6 +168,8 @@
 		width: calc(50% - 16px);
 	}
 
+
+	& + .btn_area,
 	& + .checkbox_group_wrap {
 		margin-top: var(--gap-8);
 	}
@@ -176,7 +178,6 @@
 		margin-top: var(--gap-5);
 	}
 
-	& + .btn_area,
 	& + .form_box {
 		margin-top: var(--gap-11);
 	}
@@ -1937,7 +1938,7 @@
 	.table {
 		td {
 			vertical-align: top;
-			padding: var(--padding-5);
+			// padding: var(--padding-5);
 		}
 	}
 }
