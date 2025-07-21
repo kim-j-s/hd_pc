@@ -752,7 +752,7 @@
 	margin-bottom: var(--gap-6);
 
 	.item {
-		.title_h3 {
+		[class^=title_h] {
 			&.ct1 {
 				font-weight: 400;
 				strong {
@@ -764,6 +764,12 @@
 			}
 		}
 	}
+
+	& + .info_gray {
+		&.summary {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 
@@ -773,6 +779,10 @@
 	&.summary {
 		.title_h2 {
 			font-weight: 700;
+
+			.badge_wrap {
+				display: inline;
+			}
 		}
 		[class^=title_h]{
 			& + .data_box {
@@ -782,6 +792,7 @@
 		.data_box {
 			> dl {
 				padding-top: var(--gap-3);
+				border: 0 !important;
 			}
 		}
 	}
@@ -1344,20 +1355,38 @@
 			.card_item {
 				position: relative;
 
+				&:has(.item_result){
+					.item_inner {
+						.inner_cont {
+							.item_top {
+								padding-bottom: 33px;
+							}
+						}
+					}
+				}
+
 				.item_inner {
 					.inner_cont {
 						display: flex;
 						gap: var(--gap-4);
 
 						.space_between {
-							width: 100%;
-							align-items: flex-start;
+							flex: 1;
+							align-items: stretch;
+
+							&:not(:has(dl)){
+								align-items: stretch;
+							}
 						}
 
 						.data_info_list {
 							display: flex;
 							flex-direction: column;
 							gap: var(--gap-4);
+
+							.hd_btn {
+								margin-left: auto;
+							}
 
 							dl {
 								display: flex;
@@ -1373,21 +1402,26 @@
 									display: flex;
 									font-size: var(--font-size-body-small);
 								
-									.hd_btn {
-										margin-left: auto;
-									}
 								}
 							}
 						}
 						 
 						.item_top {
-							padding-bottom: 33px;
 							gap: var(--gap-5);
 
 							& + .cont {
 								border-left: 1px solid var(--color-divider-gray-light);
 								padding-left: var(--gap-8);
 								margin-left: var(--gap-8);
+
+								&:not(:has(dl)) {
+									border-color: white;
+
+									.data_info_list {
+										height: 100%;
+										justify-content: center;
+									}
+								}
 							}
 						}
 
@@ -2549,6 +2583,12 @@
 	&.ico_type {
 		& + .form_group_wrap {
 			margin-top: var(--gap-11);
+		}
+	}
+
+	& + .table_wrap {
+		& + .btn_area {
+			margin-top: var(--gap-8);
 		}
 	}
 }

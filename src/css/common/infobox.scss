@@ -7,6 +7,13 @@
 	// & + &.ty2 {
 	// 	margin-top: var(--gap-11);
 	// }
+
+	// margin-top 16
+	& + & {
+		&.ty2 {
+			margin-top: var(--gap-5);
+		}
+	}
 	& + .text_sub,
 	& + [class^=list_ty] {
 		margin-top: var(--gap-5);

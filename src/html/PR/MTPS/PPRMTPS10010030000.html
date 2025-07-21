@@ -1,0 +1,276 @@
+<!--
+경로 : 5.피보험자 정보 
+-->
+{{#> layout/default page-title="자동차 피보험자 정보 | 상품"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc h-prd="자동차보험" }}
+		
+		<div id="container" class="container">
+			<div class="content">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">피보험자 정보</div>
+						<h2 class="p_title">
+							<strong>피보험자 정보</strong>와 <strong>소유자일치여부</strong>를 확인해주세요
+						</h2>
+					</div>
+				</div>
+								
+				<div class="form_box">
+					<!-- 피보험자 정보 입력 전 -->
+					<div class="info_gray">
+						<div class="data_box">
+							<dl>
+								<dt>피보험자 이름</dt>
+								<dd>김*대</dd>
+							</dl>
+							<dl>
+								<dt>주민등록번호</dt>
+								<dd>900101-1******</dd>
+							</dl>
+							<dl>
+								<dt>휴대폰번호</dt>
+								<dd>010-1234-5678</dd>
+							</dl>
+						</div>
+						<div class="btn_area center">
+							{{> cp/button type="3" size="4" b-text="피보험자정보 입력" }}
+						</div>
+					</div>
+
+					<!-- 피보험자 정보 입력 후 -->
+					<div class="info_gray">
+						<div class="data_box">
+							<dl>
+								<dt>피보험자 이름</dt>
+								<dd>김*대</dd>
+							</dl>
+							<dl>
+								<dt>이메일</dt>
+								<dd>abcd@hi.co.kr</dd>
+							</dl>
+							<dl>
+								<dt>주민등록번호</dt>
+								<dd>900101-1******</dd>
+							</dl>
+							<dl>
+								<dt>우편물수령지</dt>
+								<dd>자택(서울특별시 중구 명동2길 20)</dd>
+							</dl>
+							<dl>
+								<dt>휴대폰번호</dt>
+								<dd>010-1234-5678</dd>
+							</dl>
+							<dl>
+								<dt>보험증권 수령 방법</dt>
+								<dd>모바일</dd>
+							</dl>
+						</div>
+						<div class="btn_area center">
+							{{> cp/button type="3" size="4" b-text="수정" }}
+						</div>
+					</div>
+
+					<div class="info_gray ty2">
+						<p class="info_text">다수차량 산출시에는 <strong>피보험자와 계약자가 동일</strong>해야 합니다. 계약자 변경이 필요하신 경우 일반산출 기능을 이용해주세요</p>
+					</div>
+				</div>
+
+				<div class="divider_ty1"></div>
+			
+				<div class="all_checking">
+					{{> cp/checkbox id="checkbox1" labelname="총 <strong class='point'>4</strong>건 전체 선택" }}
+				</div>
+				<div class="card_item_wrap ty7">
+					<!-- 소유자일치 Case -->
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inp_checkbox">
+								<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+								<label for="card_chk_opt1111_1" class="chk_label"></label>
+								<i></i>
+							</div>
+							<div class="inner_cont">
+								<div class="space_between">
+									<div class="item_top" id="card_chk_opt1111_1_cont">
+										<div class="title_info">
+											<div class="main_title">
+												111가1111(현대)
+												<span class="badge_wrap">
+													<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+												</span>
+											</div>
+										</div>
+										<div class="data_info_list">
+											<dl>
+												<dt>보험기간</dt>
+												<dd>2025.01.01~2026.01.01</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="data_info_list">
+											<div class="data_info_list">
+												<dl>
+													<dt>소유자일치여부</dt>
+													<dd>일치</dd>
+												</dl>
+												<dl>
+													<dt>불일치사유</dt>
+													<dd>-</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 소유자 불일치 Case -->
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inp_checkbox">
+								<input type="checkbox" id="card_chk_opt1112_1" name="name1" aria-labelledby="card_chk_opt1112_1_cont" disabled />
+								<label for="card_chk_opt1112_1" class="chk_label"></label>
+								<i></i>
+							</div>
+							<div class="inner_cont">
+								<div class="space_between">
+									<div class="item_top" id="card_chk_opt1112_1_cont">
+										<div class="title_info">
+											<div class="main_title">
+												222나2222
+												<span class="badge_wrap">
+													<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+												</span>
+											</div>
+										</div>
+										<div class="data_info_list">
+											<dl>
+												<dt>보험기간</dt>
+												<dd>2025.01.01~2026.01.01</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="data_info_list">
+											<div class="data_info_list">
+												<dl>
+													<dt>소유자일치여부</dt>
+													<dd>불일치</dd>
+												</dl>
+												<dl>
+													<dt>할인특약</dt>
+													<dd>
+														-
+														{{> cp/button type="2" size="5" b-text="불일치사유입력" }}
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inp_checkbox">
+								<input type="checkbox" id="card_chk_opt1113_1" name="name1" aria-labelledby="card_chk_opt1113_1_cont" />
+								<label for="card_chk_opt1113_1" class="chk_label"></label>
+								<i></i>
+							</div>
+							<div class="inner_cont">
+								<div class="space_between">
+									<div class="item_top" id="card_chk_opt1113_1_cont">
+										<div class="title_info">
+											<div class="main_title">
+												ABCDEFG1234567890
+												<span class="badge_wrap">
+													<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+												</span>
+											</div>
+											<div class="data_info_list">
+												<dl>
+													<dt>보험기간</dt>
+													<dd>2025.01.01~2026.01.01</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="data_info_list">
+											<dl>
+												<dt>소유자일치여부</dt>
+												<dd>불일치</dd>
+											</dl>
+											<dl>
+												<dt>불일치사유</dt>
+												<dd>
+													리스 계약(질권설정)
+													{{> cp/button type="3" size="5" b-text="수정" }}
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card_item">
+						<div class="item_inner">
+							<div class="inp_checkbox">
+								<input type="checkbox" id="card_chk_opt1114_1" name="name1" aria-labelledby="card_chk_opt1114_1_cont" disabled />
+								<label for="card_chk_opt1114_1" class="chk_label"></label>
+								<i></i>
+							</div>
+							<div class="inner_cont">
+								<div class="space_between">
+									<div class="item_top" id="card_chk_opt1114_1_cont">
+										<div class="title_info">
+											<div class="main_title">
+												92구0890
+												<span class="badge_wrap">
+													<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+												</span>
+											</div>
+										</div>
+										<div class="data_info_list">
+											<dl>
+												<dt>보험기간</dt>
+												<dd>2025.01.01~2026.01.01</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="cont">
+										<div class="data_info_list">
+											{{> cp/button type="2" size="5" b-text="소유자일지여부 확인" }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
+					</div> 
+				</div>
+				<!-- e: 하단 버튼 영역 -->
+			</div>
+
+			<!-- s: 사이드 패널 -->
+			{{> cp/panel_자동차다수차량개인 step5=true panel-title="고객 정보" }}
+			<!-- e: 사이드 패널 -->
+		</div>
+	</div>
+
+	<!-- s: popup area -->
+		 
+	<!-- e: popup area -->
+{{/ layout/default }}
