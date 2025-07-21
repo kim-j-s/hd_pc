@@ -134,6 +134,7 @@
 	*/
 
 	/* tag_item click - 개선 */
+	/*
 	$DOM.on('click', '.tag_item_wrap .tag_item', function() {
     const $this = $(this);
     const idx = $this.index();
@@ -209,6 +210,7 @@
         // 필요하면 여기서 활용
     }
 	});
+	*/
 
   /* Tooltip */
   $DOM.on('click', '.tooltip_wrap button', function(){
@@ -567,6 +569,7 @@
 			$wrap.find('.sa_change').prop('checked', false);
 		}
 	}
+
 	// 수령지 일괄 선택
 
 	// $DOM.on('change', '.select_driver_range input[type="radio"]', function(){
@@ -609,6 +612,7 @@
 
 	// 위치 이벤트
 	let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
+	/*
 	$DOM.on('click', '.position_event_tab .tag_item', function () {
 		if (!pe) return;
 
@@ -644,6 +648,7 @@
 			pe = true; // 조건 미충족 시도라도 열어둠
 		}
 	});
+	*/
 
 	let ri = $('.radio_group_resetable input');
 	let richecked = ri.filter(':checked').val();
@@ -713,11 +718,7 @@
 	});
 
 
-	$('.ftr_sns_list')
-  // .on('focusin', function () {
-  //   console.log('SNS 리스트에 포커스 들어옴');
-  // })
-  .on('focusout', function () {
+	$('.ftr_sns_list').on('focusout', function () {
     setTimeout(function () {
       if (!$(document.activeElement).closest('.ftr_sns_list').length) {
 				$('.ftr_sns_list').removeClass('active');
@@ -1366,7 +1367,8 @@ $(function(){
 	});
 
 	// 범용 전체 팝업 내 스크롤 이벤트
-	$('.popup_cont').on('scroll', function(){
+	/*
+	$('.popup_cont').on('scroll', function() {
 
 		// 현재 스크롤 위치
 		if (!$('.position_event_wrap').length) return;
@@ -1401,8 +1403,123 @@ $(function(){
 			$tagItem.eq(activeIdx).addClass('active');
 		}
 	});
+	*/
 
 	// 500
+
+
+	// 개선 버젼
+	const $wraps = $('.position_event_wrap');
+	$wraps.each(function () {
+		const $wrap = $(this);
+		const $tabBtns = $wrap.find('.position_event_tab .tag_item');
+		const $contents = $wrap.find('.position_event_content .pec_point');
+		const $scrollArea = $wrap.find('.position_event_content');
+
+		let scrolling = false;
+
+		// 1. 탭 클릭 시 콘텐츠 위치로 스크롤
+		$tabBtns.on('click', function () {
+			const idx = $(this).index();
+			const $target = $contents.eq(idx);
+
+			if ($target.length) {
+				scrolling = true;
+				$tabBtns.removeClass('active');
+				$(this).addClass('active');
+
+				const containerTop = $scrollArea.offset().top;
+				const targetTop = $target.offset().top;
+				
+				console.log('위치 1 : ', containerTop);
+				console.log('위치 2 : ', targetTop);
+				// const scrollY = $scrollArea.scrollTop() + (targetTop - containerTop);
+				const scrollY = targetTop - containerTop;
+
+				$wrap.stop().animate({ 
+					scrollTop: scrollY 
+				}, 400, function () {
+					scrolling = false;
+				});
+			}
+		});
+
+		// 현재 스크롤 위치
+		
+		$wrap.on('scroll', function () {
+			const $this = $(this);
+			const scrollTop = $this.scrollTop();
+			// 팝업인체 바닥인지 조건
+
+			console.log('scrollTop : ', scrollTop);
+			const tp = $this.find('.position_event_content .pec_point').eq(1);
+
+			const xcontainerTop = $scrollArea.offset().top;
+			const xtargetTop = tp.offset().top;
+
+			const scrollYx = xtargetTop - xcontainerTop;
+
+			if (scrollYx < xtargetTop) {
+				$('body').css('background', 'blue');				
+				console.log(scrollYx, scrollTop);
+			} else {
+				$('body').css('background', 'red');
+				console.log(scrollYx, scrollTop);
+			}
+
+			/*
+			
+			if ( $this.closest('.popup_wrap').length ) {
+				// 팝업이면
+				// 기준 위치값 계산 요소
+				const $popupHead = $this.closest('.popup_wrap').find('.popup_head').outerHeight();
+				const $popupContent = $this.find('.popup_content');
+				const popupContTop = $popupContent.position().top;
+				// const $wrapHeight = $this.find('.tag_item_wrap').outerHeight();
+
+				// const baseOffset = popupContTop + $wrapHeight;
+				// const baseOffset = popupContTop - $wrapHeight;
+				const baseOffset = popupContTop;
+
+				console.log('기준 위치 1 : ', popupContTop);
+				// console.log('기준 위치 2 : ', $wrapHeight);
+
+				const $points = $this.find('.position_event_content .pec_point');
+				let activeIdx = -1;
+
+				const $tagItem = $this.find('.position_event_tab .tag_item');
+
+				$points.each(function (index) {
+					const pointTop = $(this).offset().top;
+					// const targetScroll = pointTop - baseOffset;
+					const targetScroll = Math.abs(baseOffset) + $popupHead;
+
+					console.log('포인트 위치 : ', pointTop);
+					// console.log('계산된 위치 : ', targetScroll);
+					console.log('scrollTop 위치 : ', scrollTop);
+
+					if (scrollTop >= targetScroll) {
+						activeIdx = index; // 조건을 만족하는 가장 마지막 인덱스를 저장
+					}
+				});
+
+				if (activeIdx !== -1) {
+					// console.log('현재 인덱스:', activeIdx);
+					$tagItem.removeClass('active');
+					$tagItem.eq(activeIdx).addClass('active');
+				}
+			} else {
+				// 바닥이면
+				console.log('바닥');
+
+			}
+				*/
+			
+		});	
+
+	});
+
+	// 개선 버젼
   
 
 
