@@ -32,6 +32,10 @@
 		align-items: flex-end;
 		justify-content: space-between;
 		gap: var(--gap-8);
+
+		&:has(.output_wrap){
+			align-items: stretch;
+		}
 		&.center {
 			align-items: center;
 		}
@@ -183,6 +187,27 @@
 			}
 		}
 
+		.output_wrap {
+			flex-basis: 50%;
+			padding-left: var(--gap-8);
+			margin-left: var(--gap-8);
+			border-left: 1px solid var(--color-divider-gray-light);
+
+			.tit {
+				font-size: var(--font-size-body-medium);
+			}
+			.count {
+				display: flex;
+				align-items: center;
+				gap: var(--gap-1);
+				font-size: var(--font-size-body-large);
+				font-weight: 700;
+				strong {
+					font-size: var(--font-size-display-medium);
+				}
+			}
+		}
+
 		& + .dc_info_box {
 			margin-top: var(--gap-6);
 		}
@@ -194,6 +219,7 @@
 		border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	}
 
+	& + .table_wrap,
 	& + .form_group_wrap,
 	& + .tab_wrap,
 	& + .tag_item_wrap,
@@ -912,9 +938,12 @@
 		&.v_bg_ty6 { //사업장화재보험
 			background-image: url(../images/content/guarantee/bg_img_ltwf.png);
 		}  
-		&.v_bg_ty6 { //개인정보보호배상책임보험(II)
+		&.v_bg_ty7 { //개인정보보호배상책임보험(II)
 			background-image: url(../images/content/guarantee/bg_img_gipi.png);
 		}  
+		&.v_bg_ty8 { //보험료 확인 (영업용 플랜)
+			background-image: url(../images/content/guarantee/bg_img_ltdr.png);
+		}
 		.bubble_msg {
 			position: relative;
 			flex: 1;  

@@ -90,6 +90,11 @@
 				min-width: 192px;
 			}
 		}
+		&.equal_ty2 {
+			.hd_btn {
+				min-width: 160px;
+			}
+		}
 	}
 	&.mg_ty1 {
 		margin: var(--gap-11);
@@ -168,6 +173,8 @@
 		width: calc(50% - 16px);
 	}
 
+
+	& + .btn_area,
 	& + .checkbox_group_wrap {
 		margin-top: var(--gap-8);
 	}
@@ -176,7 +183,6 @@
 		margin-top: var(--gap-5);
 	}
 
-	& + .btn_area,
 	& + .form_box {
 		margin-top: var(--gap-11);
 	}
@@ -1199,10 +1205,10 @@
 				}
 			}
 			.btn_area {
-				width: 360px;
+				// width: 360px;
 				margin: var(--gap-5) auto 0;
 				.hd_btn {
-					flex: 1;
+					// flex: 1;
 				}
 
 				.short_cut.long {
@@ -1937,7 +1943,7 @@
 	.table {
 		td {
 			vertical-align: top;
-			padding: var(--padding-5);
+			// padding: var(--padding-5);
 		}
 	}
 }

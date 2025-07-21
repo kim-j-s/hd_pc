@@ -28,6 +28,7 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + .banner_box,
 	& + .tab_wrap { 
 		margin-top: var(--gap-11);
 	}
@@ -163,6 +164,17 @@
 					}
 				}
 			}
+
+			.inp_checkbox {
+				text-align: left;
+				input[type=checkbox]{
+					& +  .chk_label {
+						&::before {
+							top: calc(50% - 10px);
+						}
+					}
+				}
+			}
 		}
 		th {
 			vertical-align: middle;
@@ -187,6 +199,22 @@
 				color: var(--color-text-primary-bold);
 				font-weight: 700;
 				background: var(--color-surface-primary-subtler);
+			}
+
+			.inp_checkbox {
+				input[type=checkbox]{
+					& +  .chk_label {
+						.label_cont {
+							color: var(--color-text-subtle);
+						}
+					}
+				}
+			}
+
+			.sub_t {
+				display: block;
+				font-size: var(--font-size-body-xsmall);
+				color: var(--color-text-primary-bold);
 			}
 		}
 
