@@ -361,6 +361,7 @@ ul + .form_group_wrap {
 		}
 	}
 	.pop_title_h1 {
+		& + .select_option_box,
 		& + .pop_title_h2,
 		& + h3,
 		& + .table_wrap,
@@ -970,6 +971,8 @@ ul + .form_group_wrap {
 .title_item {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	
 	button {
 		margin-top: 0;
 	}

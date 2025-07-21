@@ -7,13 +7,23 @@
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
 			<h2 class="title_h2">
-				여러 건의 <strong>실손형 담보/특약 가입</strong> 시 꼭 확인해주세요
+				<strong>여러 건의 실손형 담보/특약</strong> 가입 시 꼭 확인해주세요
 			</h2>
-			<p class="title_sub">
-				하나의 회사 또는 여러 보험회사에 동일한 위험을 담보하는 실손형 보험을 여러 건 가입하여도 총 보상 한도액 내에서 고객님에게 실제 발생한 손해를 계약별로 비례부담하여 보상하기 때문에 실제 발생한 손해를 초과하여 중복으로 보상받을 수 없음을 확인하세요.
-			</p>
 		</div>
 		<!-- e: popup_content_top -->
+
+		<div class="info_cont">
+			<div class="pop_title_h1">차량의 실손형 담보/특약 확인</div>
+
+			{{#> cp/selectbox_pc s-title="차량 선택" sb-ph="선택해주세요." }}
+				<option value="" selected>111가1111(쏘나타)</option>
+				<option value="">222나2222(그랜져)</option>
+			{{/ cp/selectbox_pc}}
+
+			<ul class="list_ty2">
+				<li>하나의 회사 또는 여러 보험회사에 동일한 위험을 담보하는 실손형 보험을 여러 건 가입하여도 총 보상 한도액 내에서 고객님에게 실제 발생한 손해를 계약별로 비례부담하여 보상하기 때문에 실제 발생한 손해를 초과하여 중복으로 보상받을 수 없음을 확인하세요.</li>
+			</ul>
+		</div>
 		
 		<div class="acd_item acd_item_ty2">
 			{{#> cp/accordion ac-title="예시 보기" cont-class="" ac-active=true }}
@@ -64,15 +74,11 @@
 					</tr>
 					<tr>
 						<td>무보험차상해</td>
-						<!-- s: 25-05-02 수정 -->
 						<td>{{> cp/linkButton bl_class="short_cut" bl_text="가입" role_b=true question_tit="중복가입 담보 자세히 보기" }}</td>
-						<!-- e: 25-05-02 수정 -->
 					</tr>
 					<tr>
 						<td>다른자동차운전</td>
-						<!-- s: 25-05-02 수정 -->
 						<td>{{> cp/linkButton bl_class="short_cut" bl_text="가입" role_b=true question_tit="중복가입 담보 자세히 보기" }}</td>
-						<!-- e: 25-05-02 수정 -->
 					</tr>
 					<tr>
 						<td>다른자동차손해</td>
