@@ -1,8 +1,10 @@
 .main_cont_wrap {
 
 	&.main_cont_wrap_ty2 {
+		padding-bottom: var(--gap-12);
 		background: var(--color-surface-secondary-subtler);
 	}
+
 	.mcw_cont {
 		position: relative;
 		display: flex;
@@ -23,6 +25,12 @@
 }
 
 
+.mcont_items_wrap {
+	.mcont_items {
+		padding-top: var(--gap-11);
+	}
+}
+
 
 
 /* 메인 상품별 아이콘 처리 */
@@ -35,18 +43,86 @@
 	}
 
 	.main_prd_cont {
-		display: flex;
-		flex-flow: row wrap;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		gap: var(--gap-5);
 
 		.mpc_item {
+			flex: 1 1 calc(50% - 8px);
 			position: relative;
 			display: block;
+			padding: var(--padding-8, 24px) 0px var(--padding-8, 24px) var(--padding-7, 20px);
+			border-radius: var(--radius-large2, 24px);
+			background-repeat: no-repeat;
+			transition: all 0.3s;
+			&:focus,
 			&:hover {
-				
+
+			}
+
+			&.mpc_item_ty1 {
+				padding-right: 159px;
+				border: var(--border-width-static-regular) solid var(--color-border-primary);
+				background-color: var(--color-action-primary-fill);
+				background-position: right center;
+				background-size: 160px 106px;
+				box-shadow: 0px 0px 0px 0px rgba(248, 99, 60, 0.20);
+				@for $i from 1 through 8 {
+					&.mit1_ic#{$i} {
+						background-image: url(../images/content/main/icon_mit1_ic#{$i}.png);
+					}
+				}
+			}
+			&.mpc_item_ty2 {
+				padding-right: 107px;
+				background-position: right 36px center;
+				background-color: var(--color-action-secondary-fill);
+				@for $i from 1 through 16 {
+					&.mit2_ic#{$i} {
+						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
+					}
+				}
+			}
+
+			.mpc_item_cont {
+				display: flex;
+				height: 118px;
+				flex-direction: column;
+				> .title {
+					font-weight: 700;
+					color: var(--color-text-bolder, #131416);
+					font-size: var(--font-size-heading-xsmall, 16px);
+				}
+				> .text {
+					padding-top: var(--gap-2);
+					color: var(--color-text-subtle, #464C53);
+					font-size: var(--font-size-body-small, 14px);
+				}
+				.fb_c {
+					padding-top: var(--gap-5);
+				}
 			}
 		}
 	}
-
 }
 /* 메인 상품별 아이콘 처리 */
+
+/* 메인 베너별 관리 */
+.main_banner {
+	&.main_banner_qr {
+		display: flex;
+		align-items: center;
+		height: 128px;
+		padding-left: 248px;
+		background: url(../images/content/main/bg_main_banner_qr.png) no-repeat;
+		.main_banner_qr_text {
+			color: var(--color-text-bolder, #131416);
+			font-size: var(--font-size-heading-medium, 20px);
+			strong {
+				display: block;
+				font-weight: 700;
+			}
+		}
+	}
+}
+/* 메인 베너별 관리 */
