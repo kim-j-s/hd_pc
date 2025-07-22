@@ -6,7 +6,7 @@ $(function() {  // DOM이 준비되었을 때 실행
 				$WIN = $(window),
 				$WRAP = $('.wrap'),
 				$FOOTER = $('.footer'),
-				$FLOATING_ITEM = $('.pageTop');
+				$FLOATING_ITEM = $('.quick_menu');
 	
 	// DOM과 윈도우 크기를 기준으로 필요한 값들을 초기화
 	let wHeight, sTop, wrapHeight, footerHeight;

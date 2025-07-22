@@ -28,23 +28,86 @@ body {
 }
 /* skipNavi */
 
-.pageTop {
+.quick_menu {
 	position: fixed;
-	right: 20px;
-	bottom: 20px;
+	left: calc(50% + 626px);
+	bottom: 64px;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-3) 0;
+	width: 56px;
 	&.active {
 		position: absolute;
-		bottom: 223px;
+		bottom: 267px;
 	}
+
+	.qm_item {
+		> a {
+			position: relative;
+			display: block;
+			padding-top: var(--size-height-8);
+			.text {
+				position: relative;
+				display: block;
+				padding-top: var(--gap-2);
+				font-size: var(--font-size-body-xsmall, 12px);
+				color: var(--color-text-subtle);
+				text-align: center;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: var(--size-height-8);
+				border-radius: var(--radius-max);
+				border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+				background: var(--color-element-inverse-static);
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			&.qm_btn_acc_report {
+				&::before {
+					border-color: var(--color-button-primary-fill);
+					background-color: var(--color-button-primary-fill);
+					background-image: url(../images/common/icon_qm_tel.png);
+				}				
+			}
+			&.qm_btn_bd_dispatch {
+				&::before {
+					border-color: var(--color-border-secondary-dark);
+					background-color: var(--color-border-secondary-dark);
+					background-image: url(../images/common/icon_qm_car.png);
+				}				
+			}
+			&.qm_btn_chatbot {
+				&::before {
+					background-image: url(../images/common/icon_qm_chatbot.png);
+				}
+			}
+			&.qm_btn_pagetop {
+				font-size: 0;
+				&::before {
+				background-image: url(../images/common/icon_qm_pagetop.png);					
+				}
+			}			
+		}
+	}
+
+
+
 	.pageTop_btn {
 		display: block;
 		width: 40px;
 		height: 40px;
 		font-size: 0;
 		border-radius: 50px;
-		background-color: blue;
 	}
+
+
+
 }
 
 .wrap {
