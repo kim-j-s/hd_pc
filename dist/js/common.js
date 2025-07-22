@@ -473,8 +473,17 @@
 		const idx = $(this).closest('.inp_radio').index() + 1;
 		let newClass = 'pick' + idx;
 
-		$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
-		$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newClass);
+		const $parent = $(this).closest('[class*="pick"]');
+
+		// 지정된 순으로
+		if($(this).closest('.select_driver_range').hasClass('direct')){
+			const newVal = $parent.attr('class');
+			$relGroup.removeAttr('class').addClass('relationship_box ' + newVal);
+		// 순차적으로
+		}else {
+			$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
+			$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newClass);
+		}
 	})
 
 	// 해제가능 radio group
@@ -611,7 +620,7 @@
 
 
 	// 위치 이벤트
-	let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
+	// let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
 	/*
 	$DOM.on('click', '.position_event_tab .tag_item', function () {
 		if (!pe) return;
@@ -1508,7 +1517,6 @@ $(function(){
 		});
 
 	});
-
 	// 개선 버젼
   
 

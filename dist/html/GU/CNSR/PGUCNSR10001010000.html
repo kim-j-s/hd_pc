@@ -1772,9 +1772,76 @@
 									</div>
 								</div>
 							</div>
-							<!-- s : 25-07-21 삭제 - 인풋박스 형태 유지+비활정화 상태로 변경 -->
+
 							<!-- 출력 -->
-							<!-- <div class="form_group_wrap full">
+							<!-- s: 25-07-22 수정 -->
+							<div class="form_group_wrap full">
+								<div class="form_line">
+									<div class="label_tit">한글이름</div>
+									<div class="input_text">
+										<div class="inp">
+											<input type="text" placeholder="한글이름 입력" value="김*대" disabled title="한글이름 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">영문이름</div>
+									<div class="input_text">
+										<div class="inp">
+											<input type="text" placeholder="영문이름 입력(예: KIM HYUN DAI)" value="KIM HYUN DAI" disabled title="영문이름 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">생년월일</div>
+									<div class="input_text birth_day grow">
+										<div class="inp">
+											<input type="tel" placeholder="8자리 숫자 입력" value="19910508" maxlength="8" disabled title="생년월일 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">성별</div>
+									<div class="radio_group_wrap half" role="radiogroup">
+										<div class="inp_radio rd_btn">
+											<input type="radio" id="radio_gt1_01" name="radio_gt1" checked disabled />
+											<label for="radio_gt1_01">
+												<span class="label_cont">남성</span>
+											</label>
+										</div>
+										<!-- <div class="inp_radio rd_btn">
+			<input type="radio"
+				id="radio_gt1_02"
+				name="radio_gt1"
+				
+				
+				
+				
+			>
+			<label for="radio_gt1_02">
+				<span class="label_cont">여성</span>
+			</label>
+			
+		</div> -->
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">이메일</div>
+									<div class="input_text">
+										<div class="inp">
+											<input type="email" class="email_auto" placeholder="이메일 입력" value="abc@mail.com" disabled title="이메일 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 25-07-22 수정 -->
+
+							<!-- s : 25-07-21 삭제 - 인풋박스 형태 유지+비활정화 상태로 변경 
+								 <div class="form_group_wrap full">
 									<div class="form_line">
 										<div class="label_tit">한글이름</div>
 										<strong class="info_text">김*대</strong>
@@ -2237,8 +2304,19 @@
 				</div>
 			</div>
 			<!-- footer -->
-			<div class="pageTop">
-				<a href="#skipNavi" class="pageTop_btn">페이지 최상단으로 이동</a>
+			<div class="quick_menu">
+				<div class="qm_item">
+					<a href="#" class="qm_btn qm_btn_acc_report"><span class="text">사고접수</span></a>
+				</div>
+				<div class="qm_item">
+					<a href="#" class="qm_btn qm_btn_bd_dispatch"><span class="text">고장출동</span></a>
+				</div>
+				<div class="qm_item">
+					<a href="#" class="qm_btn qm_btn_chatbot" target="_blank" title="새창열림"><span class="text">챗봇</span></a>
+				</div>
+				<div class="qm_item">
+					<a href="#skipNavi" class="qm_btn qm_btn_pagetop">페이지 최상단으로 이동</a>
+				</div>
 			</div>
 			<div id="footer" class="footer">
 				<div class="inner">
