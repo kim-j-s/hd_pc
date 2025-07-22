@@ -611,7 +611,7 @@
 
 
 	// 위치 이벤트
-	let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
+	// let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
 	/*
 	$DOM.on('click', '.position_event_tab .tag_item', function () {
 		if (!pe) return;
@@ -1508,7 +1508,6 @@ $(function(){
 		});
 
 	});
-
 	// 개선 버젼
   
 
