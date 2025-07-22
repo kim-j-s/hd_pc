@@ -28,13 +28,24 @@
 /* 메인 상품별 아이콘 처리 */
 .main_prd {
 	.main_prd_title {
+		padding-bottom: var(--gap-6);
 		font-weight: 700;
 		font-size: var(--font-size-heading-medium);
 		color: var(--color-text-bolder);
 	}
 
 	.main_prd_cont {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--gap-5);
 
+		.mpc_item {
+			position: relative;
+			display: block;
+			&:hover {
+				
+			}
+		}
 	}
 
 }
