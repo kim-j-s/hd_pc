@@ -66,9 +66,38 @@
 								{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
 							</div>
 						</div>
-						<!-- s : 25-07-21 삭제 - 인풋박스 형태 유지+비활정화 상태로 변경 -->
+
 						<!-- 출력 -->
-						<!-- <div class="form_group_wrap full">
+						<!-- s: 25-07-22 수정 -->
+						<div class="form_group_wrap full">
+							<div class="form_line">
+								<div class="label_tit">한글이름</div>
+								{{> cp/text placeholder="한글이름 입력" inp-title="한글이름 입력" value="김*대" disabled=true }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">영문이름</div>
+								{{> cp/text placeholder="영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력" value="KIM HYUN DAI" disabled=true }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">생년월일</div>
+								{{> cp/text class="birth_day grow" type="tel" placeholder="8자리 숫자 입력" maxlength="8" inp-title="생년월일 입력" value="19910508" disabled=true }}
+							</div>
+							<div class="form_line">
+								<div class="label_tit">성별</div>
+								<div class="radio_group_wrap half" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="radio_gt1_01" name="radio_gt1" labelname="남성" checked=true disabled=true }}
+									<!-- {{> cp/radio rd-class="rd_btn" rd-id="radio_gt1_02" name="radio_gt1" labelname="여성" }} -->
+								</div>
+							</div>
+							<div class="form_line">
+								<div class="label_tit">이메일</div>
+								{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" value="abc@mail.com" disabled=true }}
+							</div>
+						</div>
+						<!-- e: 25-07-22 수정 -->
+
+						<!-- s : 25-07-21 삭제 - 인풋박스 형태 유지+비활정화 상태로 변경 
+						 <div class="form_group_wrap full">
 							<div class="form_line">
 								<div class="label_tit">한글이름</div>
 								<strong class="info_text">김*대</strong>

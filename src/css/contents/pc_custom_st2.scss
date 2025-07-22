@@ -1992,9 +1992,11 @@
 
 // 운전자정보
 .relationship_box {
-	.rel_case1{
-		&:after {
-			top: 152px;
+	&:not(.motorcycle) {
+		.rel_case1{
+			&:after {
+				top: 152px;
+			}
 		}
 	}
 }
