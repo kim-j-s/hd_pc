@@ -1422,6 +1422,20 @@ $(function(){
 		$tabBtns.on('click', function () {
 			const idx = $(this).index();
 			const $target = $contents.eq(idx);
+			let expHeight = 0;
+
+			if ($wrap.find('.pew_exception').length) {
+				const $exception = $wrap.find('.pew_exception');
+				const exceptionHeight = $exception.outerHeight();
+
+				if( $wrap.find('.tag_item_wrap_po_etc1').length ) {
+					expHeight = exceptionHeight + 64; // 예외 높이 + 64px (추가 여백)
+				} else {
+					expHeight = exceptionHeight;
+				}
+			}
+
+			// console.log('예외 높이 : ', expHeight);
 
 			if ($target.length) {
 				scrolling = true;
@@ -1433,90 +1447,65 @@ $(function(){
 				
 				console.log('위치 1 : ', containerTop);
 				console.log('위치 2 : ', targetTop);
-				// const scrollY = $scrollArea.scrollTop() + (targetTop - containerTop);
-				const scrollY = targetTop - containerTop;
+				const scrollY = targetTop - containerTop + expHeight;
 
 				$wrap.stop().animate({ 
 					scrollTop: scrollY 
-				}, 400, function () {
+				}, 300, function () {
 					scrolling = false;
-					console.log(scrollY, containerTop, targetTop);
+					// console.log(scrollY, containerTop, targetTop);
+					// 포커스 가능한 첫 요소 탐색
+					const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+
+					if ($focusable.length) {
+						$focusable.focus();
+					} else {
+						// 없다면 컨테이너 자체에 tabindex 부여 후 포커스 (예외 대응)
+						$target.attr('tabindex', '-1').focus();
+					}
 				});
 			}
 		});
 
 		// 현재 스크롤 위치
-		
 		$wrap.on('scroll', function () {
+			if (scrolling) return;
 			const $this = $(this);
 			const scrollTop = $this.scrollTop();
 			// 팝업인체 바닥인지 조건
 
-			console.log('scrollTop : ', scrollTop);
-			const tp = $this.find('.position_event_content .pec_point').eq(1);
+			let expHeight = 0;
 
-			const xcontainerTop = $scrollArea.offset().top;
-			const xtargetTop = tp.offset().top;
+			if ($wrap.find('.pew_exception').length) {
+				const $exception = $wrap.find('.pew_exception');
+				const exceptionHeight = $exception.outerHeight();
 
-			const scrollYx = xtargetTop - xcontainerTop;
-
-			if (scrollYx < xtargetTop + 64) {
-				$('body').css('background', 'blue');				
-				// console.log(scrollYx - scrollTop);
-			} else {
-				$('body').css('background', 'red');
-				// console.log(scrollYx, scrollTop);
-			}
-
-			/*
-			
-			if ( $this.closest('.popup_wrap').length ) {
-				// 팝업이면
-				// 기준 위치값 계산 요소
-				const $popupHead = $this.closest('.popup_wrap').find('.popup_head').outerHeight();
-				const $popupContent = $this.find('.popup_content');
-				const popupContTop = $popupContent.position().top;
-				// const $wrapHeight = $this.find('.tag_item_wrap').outerHeight();
-
-				// const baseOffset = popupContTop + $wrapHeight;
-				// const baseOffset = popupContTop - $wrapHeight;
-				const baseOffset = popupContTop;
-
-				console.log('기준 위치 1 : ', popupContTop);
-				// console.log('기준 위치 2 : ', $wrapHeight);
-
-				const $points = $this.find('.position_event_content .pec_point');
-				let activeIdx = -1;
-
-				const $tagItem = $this.find('.position_event_tab .tag_item');
-
-				$points.each(function (index) {
-					const pointTop = $(this).offset().top;
-					// const targetScroll = pointTop - baseOffset;
-					const targetScroll = Math.abs(baseOffset) + $popupHead;
-
-					console.log('포인트 위치 : ', pointTop);
-					// console.log('계산된 위치 : ', targetScroll);
-					console.log('scrollTop 위치 : ', scrollTop);
-
-					if (scrollTop >= targetScroll) {
-						activeIdx = index; // 조건을 만족하는 가장 마지막 인덱스를 저장
-					}
-				});
-
-				if (activeIdx !== -1) {
-					// console.log('현재 인덱스:', activeIdx);
-					$tagItem.removeClass('active');
-					$tagItem.eq(activeIdx).addClass('active');
+				if( $wrap.find('.tag_item_wrap_po_etc1').length ) {
+					expHeight = exceptionHeight + 64; // 예외 높이 + 64px (추가 여백)
+				} else {
+					expHeight = exceptionHeight;
 				}
-			} else {
-				// 바닥이면
-				console.log('바닥');
-
 			}
-				*/
+
+			const $points = $this.find('.position_event_content .pec_point');
+			let activeIdx = -1;
+
+			$points.each(function (index) {
+				const targetTop = $(this).offset().top; // 가야하는곳
+				const containerTop = $scrollArea.offset().top;
+				const scrollY = targetTop - containerTop + expHeight;
+				if (scrollY < scrollTop + 10) {
+					activeIdx = index; // 조건을 만족하는 가장 마지막 인덱스를 저장
+				}
+			});
+
+			if (activeIdx !== -1) {
+				// console.log('현재 인덱스:', activeIdx);
+				$tabBtns.removeClass('active');
+				$tabBtns.eq(activeIdx).addClass('active');
+			}
 			
-		});	
+		});
 
 	});
 
