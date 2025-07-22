@@ -152,8 +152,9 @@
 				padding: 24px 20px;
 				
 				.item_inner {
-					.inp_radio {
+					[class^=inp_]{
 						.chk_label {
+							margin-top: 0;
 							&::before {
 								top: 1px;
 							}
