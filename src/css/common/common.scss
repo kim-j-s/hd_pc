@@ -286,8 +286,13 @@ strong {
 		}
 		.title_h2 + .desc_area {
 			margin-top: var(--gap-3);
+		}
+		.desc_area {
 			color: var(--color-text-subtle);
 			font-size: var(--font-size-body-small);
+			+ .title_h2 {
+				margin-top: var(--gap-2);
+			}
 		}
 
 		&.space_between {
@@ -420,6 +425,10 @@ strong {
 		display: block;
 		margin: 0 auto;
 	}
+
+	& + .btn_area {
+		margin-top: var(--gap-8);
+	}
 }
 
 //icon list
@@ -525,6 +534,10 @@ strong {
 
 	& + .btn_area {
 		margin-top: var(--gap-5);
+	}
+
+	& + .file_attach_box {
+		margin-top: 32px; // 임시값 추가
 	}
 
 	&.active {
@@ -641,9 +654,9 @@ strong {
 			right: 4px;
 		}
 
-		&[aria-disabled="true"]{
+		// &[aria-disabled="true"]{
 			// display: none;
-		}
+		// }
 	}
 }
 
