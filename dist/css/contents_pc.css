@@ -3954,11 +3954,11 @@ body {
 	padding-left: 24px;
 }
 .breadcrumb_inner_list > li + li::after {
-	position: absolute;
-	left: 4px;
-	top: calc(50% - 8px);
 	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: 4px;
 	width: 16px;
 	height: 16px;
-	background: url(../../../images/icon/arrowRight_ty4.svg) no-repeat center/16px auto;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center/16px auto;
 }
