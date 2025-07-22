@@ -95,6 +95,19 @@
 
 				}
 			}
+
+			// 이륜차보험(개인)
+			&.ty1 {
+				.tit {
+					margin-top: var(--gap-6);
+				}
+				.value  {
+					.btn_area {
+						margin-bottom: 12px;
+					}
+				}
+				
+			}
 		}
 
 		.detail_wrap {
@@ -243,6 +256,8 @@
 			margin-top: var(--gap-8);
 		}
 	}
+
+	
 }
 
 .dc_info_box {
@@ -280,6 +295,15 @@
 	&.car_ty2 {
 		&:before {
 			background-image: url(../images/icon/icon_plus_car.svg);
+		}
+	}
+	&.motorcycle {
+		&:before {
+			background-image: url(../images/icon/icon_motorcycle.svg);
+		}
+		.text {
+			font-size: var(--font-size-body-medium);
+			color: var(--color-text-basic);
 		}
 	}
 
