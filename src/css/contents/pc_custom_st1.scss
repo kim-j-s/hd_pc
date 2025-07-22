@@ -143,6 +143,11 @@ body {
 		width: 1188px;
 		margin: 0 auto;
 		padding: 0 0 var(--padding-12);
+		&.main_container {
+			display: block;
+			width: auto;
+			padding-bottom: 0;
+		}
 	
 		.content {
 			flex: none;

@@ -1,0 +1,41 @@
+.main_cont_wrap {
+
+	&.main_cont_wrap_ty2 {
+		background: var(--color-surface-secondary-subtler);
+	}
+	.mcw_cont {
+		position: relative;
+		display: flex;
+		gap: var(--gap-12);
+		width: 1188px;
+		margin: 0 auto;
+
+		.mc_l_cont {
+			flex: 1 1 0;
+		}
+
+		.mc_r_cont {
+			flex: none;
+			width: 288px;
+		}
+	}
+
+}
+
+
+
+
+/* 메인 상품별 아이콘 처리 */
+.main_prd {
+	.main_prd_title {
+		font-weight: 700;
+		font-size: var(--font-size-heading-medium);
+		color: var(--color-text-bolder);
+	}
+
+	.main_prd_cont {
+
+	}
+
+}
+/* 메인 상품별 아이콘 처리 */

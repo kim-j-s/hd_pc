@@ -8,6 +8,7 @@
 	padding-top: var(--padding-7);
 	text-align: center;
 	border-top: var(--border-width-variable-regular) solid var(--color-divider-gray-light);
+	background: var(--color-background-white);
 	> .inner {
 		display: inline-flex;
 		flex-direction: column;
