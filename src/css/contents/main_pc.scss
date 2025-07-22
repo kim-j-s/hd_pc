@@ -76,6 +76,7 @@
 			&.mpc_item_ty2 {
 				padding-right: 107px;
 				background-position: right 36px center;
+				border: var(--border-width-static-regular, 1px) solid var(--color-border-inverse, #FFF);
 				background-color: var(--color-action-secondary-fill);
 				@for $i from 1 through 16 {
 					&.mit2_ic#{$i} {
