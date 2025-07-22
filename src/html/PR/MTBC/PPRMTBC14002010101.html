@@ -1,0 +1,257 @@
+{{#> layout/default no-gnb=true page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="이륜차보험(법인)" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">차량 정보</div>
+					<h2 class="p_title">
+						보험료를 계산 방법을 선택해주세요.
+					</h2>
+				</div>
+			</div>
+					
+			<div class="tab_wrap">
+				<div class="tab_wrap_list_ty1" role="tablist">
+					{{>cp/tab_btn tb-text="보유중인 이륜차보험 갱신 <span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-id="ex01" tb-active=true}}
+					{{>cp/tab_btn tb-text="신규차량 또는 구매예정" tb-id="ex02"}}
+					{{>cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
+				</div>
+				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
+					<div class="title_item">
+						<div class="item">
+							<div class="title_h3 ct1">
+								<strong>어떤 자동차</strong>로 보험료를 계산할까요?
+							</div>
+						</div>
+						<div class="btn_area">
+							{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="계약 상태에 따른 가입 안내" btn-title="팝업 열기"}}
+						</div>
+					</div>
+						
+					<div class="card_item_wrap">
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div class="item_top">
+										<div class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_primary size_m">만기 D-4</span>
+										</div>
+										<div class="title_info">
+											<div class="main_title">
+												경북울릉가**30 <span class="info">(삼성)</span>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">계약자</div>
+											<div class="cont">김*대</div>
+										</li>
+										<li>
+											<div class="title">피보험자</div>
+											<div class="cont">김*대</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn_area center">
+								{{> cp/button type="2" size="3" b-text="보험료 계산" }}
+							</div>
+						</div>
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div class="item_top">
+										<div class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_warning size_m">만기경과</span>
+										</div>
+										<div class="title_info">
+											<div class="main_title">
+												부산해운대차**11 <span class="info hd">(현대)</span>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">계약자</div>
+											<div class="cont">김*대</div>
+										</li>
+										<li>
+											<div class="title">피보험자</div>
+											<div class="cont">김*대</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn_area center">
+								{{> cp/button type="3" size="3" b-text="보험료 계산(만기경과)" }}
+							</div>
+						</div>
+					</div>
+					<ul class="list_ty2">
+						<li>현재일 기준 보험료 계산이 가능한 계약만 조회됩니다.</li>
+					</ul>
+					<div class="btn_area center mg_ty1">
+						{{> cp/button type="3" size="3" b-text="타사계약 조회하기"}}
+					</div>
+					<!-- s: 보유차량 없을 경우 -->
+					<div class="no_list_area">
+						{{> cp/icon iconClass="exclamationSvg"}}
+						<p>현재 갱신이 가능한 자동차가 없습니다.</p>
+					</div>
+					<!-- e: 보유차량 없을 경우 -->
+				
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전"}}
+						</div>
+					</div>
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" id="tabPanelex02">
+					<div class="title_item">
+						<div class="item">
+							<div class="title_h3 ct1">
+								<strong>이륜차번호</strong> 또는 <strong>차대번호</strong>를 입력해주세요
+							</div>
+						</div>
+						<div class="btn_area">
+							{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="보험만기일/중고차/신차 안내" btn-title="팝업 열기" }}
+						</div>
+					</div>
+					<div class="form_group_wrap full">
+						<div class="form_line">
+							<div class="label_tit">이륜차번호 7~10자리, 차대번호 17자리</div>
+							<div class="car_input_box">
+								<!-- 에러 메시지 시, error 클래스 추가 -->
+								{{> cp/text class="car_number_input error" placeholder="123가**67" minlength="7" maxlength="17" inp-title="이륜차 또는 차대번호 입력"}}
+								<p class="msg_error">이륜차번호, 또는 차대번호를 입력해 주세요.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="checkbox_group_wrap column space2">
+						{{> cp/checkbox checkbox_class="" id="checkbox01" label_class="chk_label_ty3" labelname="차량을 구매예정이신가요?" labelcont="자동차번호, 차대번호를 모르는 경우" }}
+					</div>
+	
+					<!-- s: 하단 버튼 영역 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전"}}
+							<!-- {{> cp/button type="1" size="1" b-text="차량 종류를 선택 중이에요" }} -->
+							{{> cp/button type="1" size="1" b-text="이륜차로 알아볼게요" }}
+						</div>
+					</div>
+					<!-- e: 하단 버튼 영역 -->
+				</div>
+				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex03">
+					<div class="title_item">
+						<div class="item">
+							<div class="title_h3 ct1">
+								<strong>최근 25일간 보험료를 계산한 내역이에요.</strong>
+							</div>
+							<p class="title_sub">
+								목록에서 선택해 이어서 진행할 수 있어요.
+							</p>
+						</div>
+					</div>
+
+					<div class="card_item_wrap">
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div role="button" class="card_link" tabindex="0">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">111너**11</div>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">설계일시</div>
+											<div class="cont">2020.01.01 00:00:00</div>
+										</li>
+										<li>
+											<div class="title">Step3</div>
+											<div class="cont">추가할인특약단계</div>
+										</li>
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">보험료</div>
+											<div class="cont">계산전</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="card_item">
+							<div class="item_inner">
+								<div class="inner_cont">
+									<div role="button" class="card_link" tabindex="0">
+										<div class="item_top">
+											<div class="title_info">
+												<div class="main_title">111너**11</div>
+											</div>
+										</div>
+									</div>
+									<ul class="card_list_ty1">
+										<li>
+											<div class="title">설계일시</div>
+											<div class="cont">2020.01.01 00:00:00</div>
+										</li>
+										<li>
+											<div class="title">Step3</div>
+											<div class="cont">추가할인특약단계</div>
+										</li>
+										<li>
+											<div class="title">보험기간</div>
+											<div class="cont">2020.01.01 ~ 2021.01.01</div>
+										</li>
+										<li>
+											<div class="title">보험료</div>
+											<div class="cont">계산전</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 만기예정 차량이 없는 경우 -->
+					<div class="no_list_area">
+						{{> cp/icon iconClass="exclamationSvg"}}
+						<p>최근 설계 내역이 없습니다.</p>
+					</div>
+					<!-- e: 만기예정 차량이 없는 경우 -->
+					<div class="bottom_fix_wrap">
+						<div class="btn_area">
+							{{> cp/button type="3" size="1" b-text="이전"}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차이륜차개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
