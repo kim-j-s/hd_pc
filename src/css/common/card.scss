@@ -43,8 +43,8 @@
 		&.banner_box {
 			margin-top: var(--gap-8);
 		}
-		&.banner_box {
-			margin-top: var(--gap-8);
+		&.title_h3 {
+			margin-top: var(--gap-11);
 		}
 
 		&.btn_area {
@@ -168,10 +168,10 @@
 			align-items: flex-start;
 			
 
-			> .inp_checkbox,
-			> .inp_radio {
+			// > .inp_checkbox,
+			// > .inp_radio {
 				// margin-top: 3px;
-			}
+			// }
 
 			.inp_checkbox {
 				input {
@@ -179,11 +179,11 @@
 				}
 			}
 
-			&:not(:has(.item_top)){
-				.inp_radio {
-					// background-color: red;
-				}
-			}
+			// &:not(:has(.item_top)){
+			// 	.inp_radio {
+			// 		// background-color: red;
+			// 	}
+			// }
 
 			.inner_cont {
 				flex: 1;
@@ -251,6 +251,23 @@
 					&:before {
 						top: 3px;
 						z-index: 10;
+					}
+					// 현업 요청에 의한 클릭 영역 추가
+					&::after {
+						content: '';
+						position: absolute;
+						top: -5px;
+						left: -8px;
+						z-index: 1;
+						width: 36px;
+						height: 36px;
+						// background-color: rgba($color: #ddd, $alpha: 0.8);
+					}
+
+					&.chk_label_ty4 {
+						&:before {
+							top: 1px;
+						}
 					}
 				}
 				input:checked{
@@ -489,6 +506,11 @@
 					&:last-child {
 						text-align: right;
 						color: var(--color-text-basic);
+						.sub_ta_l {
+							display: block;
+							text-align: left;
+							word-break: break-all;
+						}
 					}
 				}
 
@@ -791,6 +813,41 @@
 
 		}//card_item
 	}//ty5
+	&.wrap_row2 {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--gap-3);
+		justify-content: space-around;
+		.card_item {
+			flex-basis: calc(50% - 4px);
+			~ .card_item {
+				margin-top: 0;
+			}
+		}
+	}
+	&.high_work {
+		.card_item {
+			padding: var(--padding-12) var(--padding-8) var(--padding-8); 
+			background-color: var(--color-surface-secondary-subtler);
+			border: 0;
+			background-repeat: no-repeat;
+			background-position: 24px 24px;
+			.title {
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-subtle);
+				+ .cont {
+					margin-top: var(--gap-2);
+					font-size: var(--font-size-body-medium);
+				}
+			}
+			&.ty1 {
+				background-image: url(../images/content/bn/icon_high_work1.svg);
+			}
+			&.ty2 {
+				background-image: url(../images/content/bn/icon_high_work2.svg);
+			}
+		}
+	}
 }
 
 
@@ -1202,7 +1259,7 @@
 			.item_inner {
 				display: flex;
 				flex-direction: row;
-				gap: var(--gap-3);
+				gap: var(--gap-4);
 			}
 	
 			.img_box {
