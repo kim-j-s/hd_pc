@@ -35,7 +35,7 @@
 		<script type="text/javascript" src="../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
-		<script type="text/javascript" src="../../../js/popup.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
@@ -43,8 +43,6 @@
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
 		<title>기초 정보 입력 | 자동차보험 - 현대해상 다이렉트</title>
 
-		<script type="text/javascript" src="../../../js/common_pc.js"></script>
-		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -180,17 +178,44 @@
 										<div class="bi_opts_wrap">
 											<!-- 제조사 -->
 											<div class="opts_area" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
-												<div class="autocomplete_wrap">
+												<!-- s: 25-07-23 수정 -->
+												<!-- <div class="autocomplete_wrap">
 													<div class="input_text search">
-														<div class="inp">
-															<input type="search" class="autocomplete_input" placeholder="ex) 그랜져" title="검색어를 입력하세요." autocomplete="off" />
-															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
-														</div>
+													  
+													  <div class="inp">
+													    <input 
+																		type="search"
+													      
+													      
+																		class="autocomplete_input"
+													      placeholder="ex) 그랜져"
+													      
+													      
+													      
+													      
+													      
+													      title="검색어를 입력하세요."
+																autocomplete="off"
+													      
+													    >
+													    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+													  </div>
+													  
+														
 													</div>
 													<div class="autocomplete_wrap_list">
 														<ul class="autocomplete_list"></ul>
 													</div>
+												</div> -->
+												<div class="search_inp_box">
+													<div class="input_text search">
+														<div class="inp">
+															<input type="search" placeholder="검색어를 입력하세요" title="검색어 입력" />
+															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+														</div>
+													</div>
 												</div>
+												<!-- e: 25-07-23 수정 -->
 												<!-- s: 25-07-03 수정 -->
 												<div class="opts_area_item">
 													<button type="button" class="opts_area_btn hd_btn logo_add la_1">
@@ -221,17 +246,16 @@
 
 											<!-- 자동차명 -->
 											<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
-												<div class="autocomplete_wrap">
+												<!-- s: 25-07-23 수정 -->
+												<div class="search_inp_box">
 													<div class="input_text search">
 														<div class="inp">
-															<input type="search" class="autocomplete_input" placeholder="ex) 그랜져" title="검색어를 입력하세요." autocomplete="off" />
+															<input type="search" placeholder="검색어를 입력하세요" title="검색어 입력" />
 															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 														</div>
 													</div>
-													<div class="autocomplete_wrap_list">
-														<ul class="autocomplete_list"></ul>
-													</div>
 												</div>
+												<!-- e: 25-07-23 수정 -->
 												<div class="opts_area_item">
 													<button type="button" class="opts_area_btn hd_btn">
 														<span class="text">EV3</span>

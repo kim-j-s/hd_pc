@@ -35,16 +35,14 @@
 		<script type="text/javascript" src="../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
-		<script type="text/javascript" src="../../../js/popup.js"></script>
+		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>보험료 확인 | 상품 - 현대해상 다이렉트</title>
+		<title>가입완료 | 상품 - 현대해상 다이렉트</title>
 
-		<script type="text/javascript" src="../../../js/common_pc.js"></script>
-		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
 		<link rel="stylesheet" href="../../../css/contents.css" />
@@ -53,109 +51,121 @@
 	</head>
 	<body>
 		<ul id="skipNavi" class="skipNavi">
-			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
+		<div id="wrap" class="wrap">
+			<div id="header" class="header_pc header_pc_nd">
+				<div class="header_pc_inner">
+					<div class="hpi_bottom">
+						<div class="hpi_l hpi_l_nd">
+							<h1 class="hpi_logo">
+								<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
+							</h1>
+							<strong class="hpi_l_prd_name">자동차보험</strong>
+						</div>
 
-		<!-- s: Full 팝업 -->
-		<div class="popup_wrap popup_wrap_type4 active" id="pop_full" role="dialog" aria-hidden="false">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_full');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title"></div>
-					</div>
-					<div class="popup_cont">
-						<div class="popup_content">
-							<!-- s: popup_content_top -->
-							<div class="popup_content_top">
-								<h2 class="title_h2">
-									김*대 고객님,<br />
-									<strong>이런 보장</strong>이 필요할 것 같아요
-								</h2>
+						<div class="hpi_sub_utils">
+							<div class="item item_chatbot">
+								<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
 							</div>
-							<!-- e: popup_content_top -->
-
-							<div class="card_item_wrap">
-								<div class="card_item">
-									<div class="item_inner">
-										<div class="inp_checkbox">
-											<input type="checkbox" id="card_chk1_1" name="name1" aria-labelledby="card_chk1_1_cont" />
-											<label for="card_chk1_1" class="chk_label"></label>
-											<i></i>
-										</div>
-										<div class="inner_cont">
-											<div class="item_top" id="card_chk1_1_cont">
-												<div class="title_info">
-													<div class="main_title">대인배상Ⅱ 1억5천 → <span class="point">무한</span></div>
-												</div>
-												<div class="desc">피해자 사망시 대인배상Ⅰ 가입금액(1억5천)을 초과하는 손해를 대비해 대인배상Ⅱ(무한)을 가입하여 보호 받아보세요.</div>
-											</div>
-
-											<ul class="card_list_ty1">
-												<li class="result">
-													<div class="title">추가보험료</div>
-													<div class="cont">
-														<strong class="text_body_large">21,980원</strong>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="card_item">
-									<div class="item_inner">
-										<div class="inp_checkbox">
-											<input type="checkbox" id="card_chk1_2" name="name1" aria-labelledby="card_chk1_2_cont" />
-											<label for="card_chk1_2" class="chk_label"></label>
-											<i></i>
-										</div>
-										<div class="inner_cont">
-											<div class="item_top" id="card_chk1_2_cont">
-												<div class="title_info">
-													<div class="main_title">대물배상 2천 → <span class="point">1억</span></div>
-												</div>
-												<div class="desc">자동차가 고급화되고 외제차가 늘어나는 최근 추세에 대비해 대물배상 가입금액을 확대해보세요</div>
-											</div>
-
-											<ul class="card_list_ty1">
-												<li class="result">
-													<div class="title">추가보험료</div>
-													<div class="cont">
-														<strong class="text_body_large">21,980원</strong>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							<div class="item">
+								<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
 
-					<!-- s: 하단 고정 버튼 영역 -->
-					<div class="popup_bottom">
-						<div class="total_price_display_ty1">
-							<p class="price_label">선택한 담보 <span>1</span>개</p>
-							<p class="price_val">
-								<strong> <span class="primary">540,540</span>원 </strong>
-							</p>
+			<div id="container" class="container">
+				<div class="content">
+					<div class="process_info_area">
+						<!-- s: 25-07-22 수정(gif) -->
+						<div class="complete_info complete_info_gif" aria-hidden="true"></div>
+						<!-- e: 25-07-22 수정(gif) -->
+						<h2 class="process_title">
+							<strong>가입이 완료</strong>되었습니다.<br />
+							항상 안전 운전을 기원합니다.
+						</h2>
+					</div>
+
+					<div class="info_gray df_type summary">
+						<h2 class="title_h2">다이렉트 이륜차보험(CM개인용)</h2>
+						<div class="data_box df_type_w_ty9">
+							<dl>
+								<dt>자동차번호</dt>
+								<dd><strong>부산해운****08</strong></dd>
+							</dl>
+							<dl>
+								<dt>총 보험료</dt>
+								<dd>
+									<strong>200,000 원</strong>
+								</dd>
+							</dl>
+							<dl>
+								<dt>보험기간</dt>
+								<dd><strong>2025.01.01 ~2026.01.01</strong></dd>
+							</dl>
+							<dl>
+								<dt>초회보험료</dt>
+								<dd>208,260원(6회납)</dd>
+							</dl>
+							<dl>
+								<dt>차량정보(연식)</dt>
+								<dd><strong>혼다 / NBC110MCF(2021)</strong></dd>
+							</dl>
+							<dl>
+								<dt>계약자/피보험자</dt>
+								<dd><strong>김*대/김*대</strong></dd>
+							</dl>
+							<dl>
+								<dt>운전자범위</dt>
+								<dd><strong>기명피보험자 1인한정</strong></dd>
+							</dl>
+							<dl>
+								<dt>연령한정</dt>
+								<dd>
+									<strong>만21세 이상<br />(만 24세 이상 연령한정 자동변경 예정: 2025.07.01)</strong>
+								</dd>
+							</dl>
 						</div>
-						<div class="btn_area">
+						<div class="btn_area center">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+								<span class="text">가입 내용 자세히 보기</span>
+								<i class="hd_icon documentChkSvg"></i>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+								<span class="text">상품 약관 다운로드</span>
+								<i class="hd_icon downloadSvg"></i>
+							</button>
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
+								<span class="text">가입증명서 발송</span>
+								<i class="hd_icon mailSvg"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="banner_box ty2">
+						<a href="#">
+							<img src="../../../images/event/banner1.png" alt="가입 리뷰 작성 이벤트 안내 배너 마케팅 관련 요건 및 정책 확인 후 상세 정의 필요합니다." />
+						</a>
+					</div>
+
+					<div class="bottom_fix_wrap">
+						<div class="btn_area center">
 							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
-								<span class="text">기존 담보 유지</span>
+								<span class="text">홈으로 이동하기</span>
 							</button>
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
-								<span class="text">추천담보로 변경</span>
+								<span class="text">다른차량 갱신하기</span>
 							</button>
 						</div>
 					</div>
-					<!-- e: 하단 고정 버튼 영역 -->
-
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
-		<!-- e: Full 팝업 -->
+
+		<!-- s: popup area -->
+
+		<!-- e: popup area -->
 	</body>
 </html>
