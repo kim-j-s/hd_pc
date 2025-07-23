@@ -32,15 +32,13 @@
 			<div class="form_group_wrap">
 				<div class="form_line">
 					<div class="label_tit">은행</div>
-					<!-- s: 25-07-10 수정 -->
 					{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
-					<!-- e: 25-07-10 수정 -->
 				</div>
 				<div class="form_line">
 					<div class="label_tit">계좌번호</div>
 					{{> cp/text type="tel" placeholder="계좌번호 입력" inp-title="계좌번호 입력" }}
 					<ul class="list_ty2">
-						<li><strong>김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
+						<li><strong>현대해상(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
 					</ul>
 				</div>
 			</div>
@@ -50,7 +48,7 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="전자서명" }}
+					{{> cp/button type="1" size="1" b-text="전자서명" disabled=true }}
 				</div>
 			</div>
 			<!-- s: 하단 버튼 영역 -->
