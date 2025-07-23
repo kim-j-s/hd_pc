@@ -1880,8 +1880,8 @@
 
 // 간격 전역변수 필요시 사용
 .space_gap_8 {
-		margin-top: 32px;
+		margin-top: var(--gap-8);
 }
 .space_gap_11 {
-		margin-top: 52px;
+		margin-top: var(--gap-11);
 }

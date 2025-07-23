@@ -110,10 +110,18 @@
 }
 .tag_item_cont {
 	// margin-top: var(--gap-8);
+	&:has(.card_list_wrap_ty4){
+		.s_title {
+			&:first-child {
+				padding-top: var(--padding-6);
+			}
+		}
+	}
+
 	.s_title {
 		color: var(--color-text-subtle);
 		font-size: var(--font-size-body-small);
-		& + .card_list_wrap {
+		& + [class^=card_list_wrap] {
 			margin-top: var(--gap-4);
 		}
 	}
@@ -134,5 +142,11 @@
 				}
 			} 
 		} // 카드 링크 아이콘
+	}
+
+	.card_list_wrap_ty4 {
+		& + .s_title {
+			margin-top: var(--gap-11);
+		}
 	}
 }
