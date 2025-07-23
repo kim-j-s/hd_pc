@@ -300,7 +300,7 @@
 /* 스크를 이벤트 관련 css */
 .sc_down {
 	.header_pc {
-		&:not(.header_pc_nd) {
+		&:not(.header_pc_nd):not(.header_pc_error) {
 			top: -48px;
 		}
 	}
