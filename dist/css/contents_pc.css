@@ -1698,9 +1698,6 @@ body {
 .content_top + .card_item_wrap {
 	margin-top: var(--gap-5);
 }
-.relationship_box:not(.motorcycle) .rel_case1:after {
-	top: 152px;
-}
 .reward_img_area {
 	width: 252px;
 	height: 55px;
@@ -3533,12 +3530,12 @@ body {
 	transition: none;
 	gap: var(--gap-8);
 }
-.car_step_layout .bi_stepper .opts_area .autocomplete_wrap {
+.car_step_layout .bi_stepper .opts_area .search_inp_box {
 	position: static;
 	z-index: 10;
 	width: 100%;
 }
-.car_step_layout .bi_stepper .opts_area .autocomplete_wrap + .opts_area {
+.car_step_layout .bi_stepper .opts_area .search_inp_box + .opts_area {
 	margin-top: var(--gap-8);
 }
 .car_step_layout .bi_stepper .opts_area .oai_filter {
@@ -3906,11 +3903,18 @@ body {
 	padding-right: 100px;
 	background: url("../images/content/gu/install_qr.png") no-repeat right center/96px auto;
 }
+.space_gap_8 {
+	margin-top: var(--gap-8);
+}
+.space_gap_11 {
+	margin-top: var(--gap-11);
+}
 /* PC용 component  */
 /* 개발 요청 생성 별도 wrap */
 .custom_wrap.custom_wrap_ty1 {
 	margin-top: var(--gap-11);
 }
+.custom_wrap.custom_wrap_ty1 + .acd_item,
 .custom_wrap.custom_wrap_ty1 .banner_box {
 	margin-top: var(--gap-11);
 }
