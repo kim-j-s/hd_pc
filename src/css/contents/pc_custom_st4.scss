@@ -2,6 +2,7 @@
 .custom_wrap {
 	&.custom_wrap_ty1 {
 		margin-top: var(--gap-11);
+		+ .acd_item,
 		.banner_box {
 			margin-top: var(--gap-11);
 		}
