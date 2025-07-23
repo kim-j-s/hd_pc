@@ -49,10 +49,12 @@
 				</div>
 
 				<div class="form_line">
-					<div class="label_tit">
+					<!-- s: 25-07-23 수정 -->
+					<div class="label_tit box">
 						<div>전문금융소비자 여부를 확인해주세요</div>
 						{{> cp/linkButton bl_class="short_cut sm" bl_text="구분 안내" question_tit="전문금융소비자" }}
 					</div>
+					<!-- e: 25-07-23 수정 -->
 					<div class="radio_group_wrap" role="radiogroup">
 						{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_01" name="receiveSel02" labelname="일반금융소비자" }}
 						{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="전문금융소비자" }}
