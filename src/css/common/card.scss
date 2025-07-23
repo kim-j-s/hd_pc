@@ -1112,6 +1112,59 @@
   }
 }
 
+//카드형 리스트 (혼합)
+.card_list_wrap_ty4 {
+	> li ~ li {
+		margin-top: var(--gap-5);
+	}
+	.card_item {
+		padding: var(--padding-8) var(--padding-7);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		background: var(--color-surface-white-subtle);
+		border-radius: var(--radius-large2);
+
+		&[role='button']{
+			.inner_cont {
+				padding-right: 28px;
+				background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 2px / 20px;
+			}
+		}
+
+		.item_inner {
+			.inner_cont {
+				display: flex;
+				flex-direction: column;
+				gap: var(--gap-2);
+
+				.item_title {
+					font-size: var(--font-size-heading-xxsmall);
+					font-weight: 700;
+				}
+				.item_desc {
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-subtle);
+				}
+
+				.item_title,
+				.item_desc {
+					display: -webkit-box;
+					line-clamp: 2;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+				}
+			}
+
+			& + .img_box {
+				margin-top: var(--gap-5);
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
 //car_list를 사용하지 않고 card_item만 삽입하는 케이스가 있어 스타일 선언 구조 별도 분리함.
 	.card_item.donation {
 
