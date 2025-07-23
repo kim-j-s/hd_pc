@@ -973,6 +973,14 @@
 					&.driver {
 						background-image: url(../images/icon/icon_driver.svg);
 					}
+					&.house_fire {
+						background-image: url(../images/icon/icon_house_fire.svg);
+					}
+					> button {
+						width: 100%;
+						padding-right: 30px;
+						background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right / 20px auto;
+					}
 				}
 				.sub_text {
 					font-size: var(--font-size-body-small);
