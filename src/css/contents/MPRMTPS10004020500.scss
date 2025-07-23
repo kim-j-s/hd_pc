@@ -31,4 +31,17 @@
 	& + [class^=title_h] {
 		margin-top: var(--gap-9);
 	}
+
+	&.ty2 {
+		> li {
+			width: 100%;
+			.thumnail {
+				border:none;
+				border-radius: 0;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
