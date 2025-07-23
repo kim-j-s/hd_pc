@@ -1,23 +1,22 @@
-{{#> layout/default page-title="자동차 피보험자 정보 | 상품"}}
+{{#> layout/default no-gnb=true page-title="자동차 피보험자 정보 | 상품"}}
 	<div id="wrap" class="wrap">
-
-		{{> layout/header_pc h-title="피보험자 정보" h-carstep="5" h-chatbot=true}}
+    {{> layout/header_pc h-prd="이륜차보험(개인)" }}
 		<div id="container" class="container">
 			<div class="content">
-				<!-- s: content_top -->
-				<div class="content_top">
-					<h2 class="title_h2">
-            특약 가입을 위한 <br>
-            <strong>사진을 등록</strong>해주세요
-					</h2>
-				</div>
-				<!-- e: content_top -->
-
+				<div class="title_view_wrap">
+          <div class="page_title">
+            <div class="p_info">피보험자 정보</div>
+            <h2 class="p_title">
+                특약 가입을 위한 <strong>사진을 등록</strong>해주세요
+            </h2>
+          </div>
+        </div>
         <ul class="list_ty3">
           <li>부적합한 사진(허위 및 해당 사진이 아닌 경우)으로 변경하실 경우, 특약은 무효가 되며 할인보험료를 환입하셔야 합니다.</li>
           <li>사진은 10MB이하의 JPG, JPEG, GIF, PNG 파일만 등록이 가능합니다.</li>
           <li>사진이 없으실 경우 <strong>할인특약을 제외하시고 보험료 재계산 버튼을 누르시면 제외된 보험료로 계속 진행</strong>할 수 있습니다.</li>
         </ul>
+			
         
         <div class="tab_wrap">
           <div class="tab_wrap_list_ty1" role="tablist">
@@ -26,7 +25,7 @@
           </div>
 
           <div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-            <div class="btn_area">
+            <div class="btn_area center">
               {{> cp/button type="2" size="2" b-text="전계약 사진 불러오기" }}
             </div>
 
@@ -37,6 +36,11 @@
                   <button type="button" class="acd_btn" aria-expanded="false">
                     <span class="picture_info_top">
                       <span class="status">
+                        <!-- s: 등록완료 시 -->
+                        <!-- <span class="badge_wrap">
+                          <span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
+                        </span> -->
+                        <!-- e: 등록완료 시 -->
                         <span class="title">차량번호판 사진</span>
                       </span>
                       <!-- s: 등록한 이미지 있을 시 -->
@@ -86,6 +90,11 @@
                   <button type="button" class="acd_btn" aria-expanded="false">
                     <span class="picture_info_top">
                       <span class="status">
+                        <!-- s: 등록완료 시 -->
+                        <!-- <span class="badge_wrap">
+                          <span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
+                        </span> -->
+                        <!-- e: 등록완료 시 -->
                         <span class="title">블랙박스 장착 사진</span>
                       </span>
                       <!-- s: 등록한 이미지 있을 시 -->
@@ -137,6 +146,11 @@
                   <button type="button" class="acd_btn" aria-expanded="false">
                     <span class="picture_info_top">
                       <span class="status">
+                        <!-- s: 등록완료 시 -->
+                        <!-- <span class="badge_wrap">
+                          <span class="hd_badge outline solid_pastel c_success size_m">등록완료</span>
+                        </span> -->
+                        <!-- e: 등록완료 시 -->
                         <span class="title">장애인 입증서류</span>
                       </span>
                       <!-- s: 등록한 이미지 있을 시 -->
@@ -192,20 +206,26 @@
             문자로 링크 받기 내용
           </div>
         </div>
+
+        <!-- s: 하단 버튼 영역 -->
+        <div class="bottom_fix_wrap">
+          <div class="btn_area">
+            {{> cp/button type="3" size="1" b-text="이전" }}
+            {{> cp/button type="1" size="1" b-text="사진을 등록해 주세요" disabled=true }}
+            <!-- {{> cp/button type="1" size="1" b-text="보험료 재계산" }}
+            {{> cp/button type="1" size="1" b-text="다음" }} -->
+            <!-- {{> cp/button type="3" size="1" b-text="취소" }}
+            {{> cp/button type="1" size="1" b-text="적용" }} -->
+          </div> 
+        </div>
+        <!-- s: 하단 버튼 영역 -->
       </div>
+
+      <!-- s: 사이드 패널 -->
+      {{> cp/panel_자동차이륜차개인 step5=true panel-title="고객 정보" }}
+      <!-- e: 사이드 패널 -->
     </div>
-<!-- s: 25-05-19 팝업에서 페이지로 수정 -->
-		<!-- s: 하단 고정 버튼 영역 -->
-		<div class="bottom_fix_wrap">
-			<div class="btn_area">
-        {{> cp/button type="1" size="1" b-text="사진을 등록해 주세요" disabled=true }}
-        <!-- {{> cp/button type="1" size="1" b-text="보험료 재계산" }}
-        {{> cp/button type="1" size="1" b-text="다음" }} -->
-        <!-- {{> cp/button type="3" size="1" b-text="취소" }}
-        {{> cp/button type="1" size="1" b-text="적용" }} -->
-			</div> 
-		</div>
-		<!-- s: 하단 고정 버튼 영역 -->
+
 	</div>
 <!-- e: 25-05-19 팝업에서 페이지로 수정 -->
  
