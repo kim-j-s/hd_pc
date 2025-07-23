@@ -1,9 +1,7 @@
 {{#> layout/default no-sp=true page-title="카드/포인트 혜택 | 혜택"}}
-<div id="wrap" class="wrap">
-	<div id="container" class="container">
-		<div class="content">
+        <div class="iframe_cont"><!-- iframe padding값 -->
             <div class="tab_wrap">
-                <div class="tab_wrap_list_ty1" role="tablist">
+                <div class="tab_wrap_list_ty1 sticky_fix" role="tablist"><!-- popup에서는 tab 고정 .sticky_fix 추가 -->
                     {{>cp/tab_btn tb-text="결제혜택" tb-class="" tb-id="ex01" tb-active=true}}
                     {{>cp/tab_btn tb-text="무이자할부" tb-class="" tb-id="ex02"}}
                     {{>cp/tab_btn tb-text="포인트 결제" tb-class="" tb-id="ex03"}}
@@ -471,9 +469,8 @@
                     </div>
                 </div>
             </div>
-		</div>
-	</div>
-</div>
+            
+        </div>
 
 <!-- s: popup area -->
 <!-- e: popup area -->
