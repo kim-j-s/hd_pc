@@ -477,8 +477,10 @@
 
 		// 지정된 순으로
 		if($(this).closest('.select_driver_range').hasClass('direct')){
-			const newVal = $parent.attr('class');
+			let newVal = $parent.attr('class');
 			$relGroup.removeAttr('class').addClass('relationship_box ' + newVal);
+			$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newVal);
+		
 		// 순차적으로
 		}else {
 			$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
