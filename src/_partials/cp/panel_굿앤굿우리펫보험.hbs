@@ -2,7 +2,7 @@
 	<div class="info_cont pro_info_wrap">
 		<div class="pro_info_item">
 			<div class="tit_box">
-				<h3 class="pop_title_h3">{{panel-title}}</h3>
+				<h3 class="pop_title_h3">반려동물 정보</h3>
 				<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
 					<span class="text">수정</span>
 					<i class="hd_icon resetSvg"></i>
@@ -40,7 +40,7 @@
 
 		<div class="pro_info_item">
 			<div class="tit_box">
-				<h3 class="pop_title_h3">{{panel-title2}}</h3>
+				<h3 class="pop_title_h3">피보험자 정보</h3>
 				{{!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
 					<span class="text">수정</span>
 					<i class="hd_icon resetSvg"></i>
@@ -62,7 +62,9 @@
 						</li>
 						<li>
 								<dl>
-										<dt class="job"></dt>
+										<!-- s: 25-07-24 수정 -->
+										<dt class="job">직업</dt>
+										<!-- e: 25-07-24 수정 -->
 										<dd>사무직 종사자</dd>
 								</dl>
 						</li>	
@@ -71,10 +73,11 @@
 		</div>
 	</div>
 		
+	<!-- s: 25-07-24 수정 -->
 	<div class="info_gray">
 		<ol class="step_list">
 		<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-			<li {{#if step1}}class="active"{{/if}}>
+			<li>
 				<dl>
 					<dt class="title">1.보험료 계산 결과</dt>
 					<dd>
@@ -88,18 +91,16 @@
 							<li>
 								의료비 외 담보: <span>1년 갱신</span>
 							</li>
-							
-							
 						</ul>
 						<div class="info">보험료를 확인 중이에요</div>
 					</dd>
 				</dl>
-				<button type="button" class="modify" title="보험료확인 수정 페이지로 이동">
+				<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
 					<span class="sr-only">수정</span>
 					<i class="hd_icon resetSvg"></i>
 				</button>
 			</li>
-			<li {{#if step2}}class="active"{{/if}}>
+			<li>
 				<dl>
 					<dt class="title">2.피보험자/계약자 정보</dt>
 					<dd>
@@ -111,12 +112,12 @@
 						<div class="info">정보를 입력 중이에요</div>
 					</dd>
 				</dl>
-				<button type="button" class="modify" title="피보험자/계약자 정보 수정 페이지로 이동">
+				<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
 					<span class="sr-only">수정</span>
 					<i class="hd_icon resetSvg"></i>
 				</button>
 			</li>
-			<li {{#if step3}}class="active"{{/if}}>
+			<li>
 				<dl>
 					<dt class="title">3.반려동물 정보</dt>
 					<dd>
@@ -131,12 +132,12 @@
 						<div class="info">정보를 입력 중이에요</div>
 					</dd>
 				</dl>
-				<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
+				<button type="button" class="modify" title="반려동물 정보 페이지로 이동">
 					<span class="sr-only">수정</span>
 					<i class="hd_icon resetSvg"></i>
 				</button>
 			</li>
-			<li {{#if step4}}class="active"{{/if}}>
+			<li>
 				<dl>
 					<dt class="title">4.가입 내용 확인</dt>
 					<dd>
@@ -148,12 +149,12 @@
 						<div class="info">내용을 확인 중이에요</div>
 					</dd>
 				</dl>
-				<button type="button" class="modify" title="가입내용 수정 페이지로 이동">
-					<span class="sr-only">수정</span>
+				<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
+					<span class="sr-only">재확인</span>
 					<i class="hd_icon resetSvg"></i>
 				</button>
 			</li>
-			<li {{#if step5}}class="active"{{/if}}>
+			<li class="active">
 				<dl>
 					<dt class="title">5.보험료 결제</dt>
 					<dd>
@@ -163,6 +164,7 @@
 			</li>
 		</ol>
 	</div>
+	<!-- e: 25-07-24 수정 -->
 
 	<div class="panel_total">
 		<div class="inner">
