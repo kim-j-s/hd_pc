@@ -10321,6 +10321,12 @@ strong {
 .data_list li ~ li {
 	margin-top: var(--gap-3);
 }
+.data_list li > .info {
+	padding-left: 26px;
+	background: url(../images/content/bi/icon_info.svg) no-repeat 4px 3px/16px auto;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-disabled-on);
+}
 .data_list + .info_gray {
 	margin-top: var(--gap-7);
 }
