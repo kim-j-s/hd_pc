@@ -4952,11 +4952,14 @@ strong {
 .tag_item_move > .tag_move:first-child {
 	padding-top: var(--gap-5);
 }
+.tag_item_cont:has(.card_list_wrap_ty4) .s_title:first-child {
+	padding-top: var(--padding-6);
+}
 .tag_item_cont .s_title {
 	color: var(--color-text-subtle);
 	font-size: var(--font-size-body-small);
 }
-.tag_item_cont .s_title + .card_list_wrap {
+.tag_item_cont .s_title + [class^="card_list_wrap"] {
 	margin-top: var(--gap-4);
 }
 .tag_item_cont .card_list_wrap + .s_title {
@@ -4965,6 +4968,9 @@ strong {
 .tag_item_cont .card_list_wrap .card_wrap .card_link .item_top .title_info .title {
 	padding-right: 30px;
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right top 3.5px/20px auto;
+}
+.tag_item_cont .card_list_wrap_ty4 + .s_title {
+	margin-top: var(--gap-11);
 }
 /* button_tag */
 .keypad_wrap {
@@ -5928,7 +5934,10 @@ strong {
 	margin-top: var(--gap-11);
 	padding: 24px 20px;
 }
-.card_item_wrap .card_item ~ .card_item.non_chk .item_inner .inp_radio .chk_label::before {
+.card_item_wrap .card_item ~ .card_item.non_chk .item_inner [class^="inp_"] .chk_label {
+	margin-top: 0;
+}
+.card_item_wrap .card_item ~ .card_item.non_chk .item_inner [class^="inp_"] .chk_label::before {
 	top: 1px;
 }
 .card_item_wrap .card_item .item_inner {
@@ -6583,6 +6592,14 @@ strong {
 .card_list_wrap > li .card_wrap > dt .icon.driver {
 	background-image: url(../images/icon/icon_driver.svg);
 }
+.card_list_wrap > li .card_wrap > dt .icon.house_fire {
+	background-image: url(../images/icon/icon_house_fire.svg);
+}
+.card_list_wrap > li .card_wrap > dt .icon > button {
+	width: 100%;
+	padding-right: 30px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right/20px auto;
+}
 .card_list_wrap > li .card_wrap > dt .sub_text {
 	font-size: var(--font-size-body-small);
 }
@@ -6724,6 +6741,51 @@ strong {
 }
 .card_list_wrap_ty3 li ~ li {
 	margin-top: var(--gap-5);
+}
+.card_list_wrap_ty4 > li ~ li {
+	margin-top: var(--gap-5);
+}
+.card_list_wrap_ty4 .card_item {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+	border-radius: var(--radius-large2);
+}
+.card_list_wrap_ty4 .card_item[role="button"] .inner_cont {
+	padding-right: 28px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 2px/20px;
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: var(--gap-2);
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title {
+	font-size: var(--font-size-heading-xxsmall);
+	font-weight: 700;
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title,
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.card_list_wrap_ty4 .card_item .item_inner + .img_box {
+	margin-top: var(--gap-5);
+}
+.card_list_wrap_ty4 .card_item .item_inner + .img_box img {
+	width: 100%;
 }
 .card_item.donation {
 	padding: var(--padding-8) var(--padding-7);
@@ -9200,6 +9262,7 @@ strong {
 .list_ty3 + .btn_area {
 	margin-top: var(--gap-5);
 }
+.list_ty3 + .grid,
 .list_ty3 + .space_list_ty2,
 .list_ty3 + .tab_wrap,
 .list_ty3 + .table_wrap,
@@ -9311,6 +9374,9 @@ strong {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	overflow-y: hidden;
+}
+.popup_cont.search_list_type .popup_content .search_inp_box {
+	margin-bottom: var(--gap-11);
 }
 .popup_cont.search_list_type2 {
 	position: relative;
@@ -13106,7 +13172,8 @@ strong {
 	margin-top: var(--gap-5);
 }
 .title_h4 + .number_list,
-.title_h4 + .no_list_area {
+.title_h4 + .no_list_area,
+.title_h4 + .view_img_list.ty2 {
 	margin-top: var(--gap-4);
 }
 .title_h5 {

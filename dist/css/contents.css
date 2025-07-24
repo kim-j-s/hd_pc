@@ -1259,6 +1259,10 @@
 	font-weight: 700;
 	font-size: var(--font-size-heading-medium);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_sub {
+	margin-top: var(--gap-4);
+	font-size: var(--font-size-body-medium);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_cont {
 	margin-top: var(--gap-6);
 }
@@ -1405,6 +1409,18 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty36 {
 	background-image: url(../images/content/bi/visual/bg_exp_ty36.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty37 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty37.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty38 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty38.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty39 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty39.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty40 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty40.png);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details.grid3 .pb_details_inner {
 	grid-template-columns: repeat(3, 1fr);
@@ -2107,6 +2123,16 @@
 .view_img_list + [class^="title_h"] {
 	margin-top: var(--gap-9);
 }
+.view_img_list.ty2 > li {
+	width: 100%;
+}
+.view_img_list.ty2 > li .thumnail {
+	border: none;
+	border-radius: 0;
+}
+.view_img_list.ty2 > li .thumnail img {
+	width: 100%;
+}
 /* 자동차보험 - 운전자정보 */
 /* 자동차보험 | 운전자 정보 - 운전자 범위 선택 */
 .driver_relationship_state {
@@ -2213,7 +2239,7 @@
 	content: "";
 	display: block;
 	position: absolute;
-	top: 162px;
+	top: 161px;
 	left: 50%;
 	z-index: 1;
 	width: 1px;
@@ -2226,6 +2252,7 @@
 }
 .relationship_box .rel_case2 > span {
 	width: 90px;
+	min-height: 103px;
 	background-image: url(../images/content/mtps/img_rel_case2.svg);
 }
 .relationship_box .rel_case2 > span:before {
@@ -4048,6 +4075,9 @@ ul + .form_group_wrap {
 .info_cont .list_depth + .list_ty2 {
 	margin: 12px 0 0 8px;
 }
+.info_cont .list_depth + .checkbox_group_wrap {
+	margin-top: var(--gap-8);
+}
 .info_cont .acd_item + .acd_item {
 	margin-top: var(--gap-5);
 }
@@ -5073,6 +5103,9 @@ ul + .form_group_wrap {
 }
 .contact_list > li .item.spot::before {
 	background-image: url(../images/content/my/icon_manager_spot.svg);
+}
+.contact_list + .acd_item {
+	margin-top: var(--gap-11);
 }
 /* 계약 담당자 */
 /* 수수료 비교 이미지 */

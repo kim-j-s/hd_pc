@@ -193,7 +193,7 @@
 			content:'';
 			display: block;
 			position: absolute;
-			top: 162px;
+			top: 161px;
 			left: 50%;
 			z-index: 1;
 			width: 1px;
@@ -207,6 +207,7 @@
 
 		> span {
 			width: 90px;
+			min-height: 103px;
 			background-image:url(../images/content/mtps/img_rel_case2.svg);
 
 			&:before {

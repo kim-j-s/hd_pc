@@ -368,6 +368,9 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.pts_cont {
 	padding: 0;
 }
+.iframe_cont {
+	padding: var(--padding-6) var(--padding-8) var(--padding-5);
+}
 /* popup_layer */
 .popup_wrap.popup_wrap_type1.active .popup_container {
 	opacity: 1;
