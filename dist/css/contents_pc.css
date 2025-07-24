@@ -1645,6 +1645,24 @@ body {
 .driver_relationship_box .driver_relationship_cont.pick10 .rel_case11 {
 	display: block;
 }
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick1 > div {
+	display: none;
+}
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick1 .rel_case2 {
+	display: block;
+}
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick3 > div {
+	display: none;
+}
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick3 .rel_case3 {
+	display: block;
+}
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick4 > div {
+	display: none;
+}
+.select_driver_range.direct .driver_relationship_box .driver_relationship_cont.pick4 .rel_case4 {
+	display: block;
+}
 .link_flex_box {
 	position: relative;
 	background-size: 16px auto;
@@ -3495,7 +3513,7 @@ body {
 }
 .car_step_layout .title_view_wrap .bit_inner .bit_inner_text {
 	display: block;
-	font-size: var(--font-size-heading-xxlarge);
+	font-size: var(--font-size-body-small);
 }
 .car_step_layout .title_view_wrap .bit_inner.active .bit_inner_text {
 	display: none;
