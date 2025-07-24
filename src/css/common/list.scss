@@ -1311,10 +1311,11 @@
 			gap: var(--gap-2);
 			font-size: var(--font-size-body-small);
 			dt {
+				flex: 0 0 auto;
 				color: var(--color-text-disabled-on);
 				padding-left: 26px;
 				background-repeat: no-repeat;
-				background-position: 4px center;
+				background-position: 4px 3px;
 				background-size: 16px auto;
 				//대상
 				&.person {
