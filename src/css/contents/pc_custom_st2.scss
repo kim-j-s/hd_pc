@@ -1900,6 +1900,37 @@
 	}
 }
 
+.select_driver_range.direct {
+	.driver_relationship_box {		
+		.driver_relationship_cont {
+			&.pick1 {
+				> div {
+					display: none;
+				}
+				.rel_case2 {
+					display: block;
+				}
+			}
+			&.pick3 {
+				> div {
+					display: none;
+				}
+				.rel_case3 {
+					display: block;
+				}
+			}
+			&.pick4 {
+				> div {
+					display: none;
+				}
+				.rel_case4 {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
 
 .link_flex_box {
 	position: relative;
