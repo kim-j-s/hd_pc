@@ -1396,7 +1396,7 @@ strong {
 	font-size: 0;
 }
 /* 스크를 이벤트 관련 css */
-.sc_down .header_pc:not(.header_pc_nd) {
+.sc_down .header_pc:not(.header_pc_nd):not(.header_pc_error) {
 	top: -48px;
 }
 .sc_down .nld_cont {
@@ -4075,7 +4075,7 @@ strong {
   */
 .hd_btn_s_1 {
 	min-width: 98px;
-	padding: 13px var(--padding-8) 14px;
+	padding: 13px calc(var(--padding-8) - 2px) 14px;
 	border-radius: var(--radius-medium4);
 	font-size: var(--font-size-button-cta-bold);
 	font-weight: 700;
@@ -7460,6 +7460,9 @@ strong {
 	min-height: var(--size-height-6);
 	padding: var(--padding-3) var(--padding-4);
 }
+.inp_checkbox.rd_check_btn.sm input[type="checkbox"] + .chk_label.chk_label_ty5 span {
+	padding-left: calc(var(--gap-2) + var(--size-height-3));
+}
 .inp_checkbox.rd_check_btn.sm input[type="checkbox"] + .chk_label.chk_label_ty5 span.label_cont {
 	font-size: var(--font-size-button-medium);
 }
@@ -7533,6 +7536,9 @@ strong {
 }
 .checkbox_group_wrap + .car_type_option {
 	margin-top: var(--gap-11);
+}
+.checkbox_group_wrap + .info_gray {
+	margin-top: var(--gap-8);
 }
 .checkbox_group_wrap.column {
 	-webkit-box-orient: vertical;
@@ -10219,10 +10225,13 @@ strong {
 	font-size: var(--font-size-body-small);
 }
 .data_list li dl dt {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
 	color: var(--color-text-disabled-on);
 	padding-left: 26px;
 	background-repeat: no-repeat;
-	background-position: 4px center;
+	background-position: 4px 3px;
 	background-size: 16px auto;
 }
 .data_list li dl dt.person {
@@ -10680,7 +10689,7 @@ strong {
 	padding-left: 24px;
 	font-size: var(--font-size-heading-xsmall);
 	color: var(--color-text-basic);
-	background: url(../images/icon/point_circle.svg) no-repeat left 50%/16px auto;
+	background: url(../images/icon/point_circle.svg) no-repeat left 50%/20px auto;
 }
 .bottom_fix_notice .acd_head .acd_btn:after {
 	position: absolute;
@@ -12972,7 +12981,6 @@ strong {
 	position: relative;
 	font-weight: normal;
 	background: transparent;
-	border-right: none !important;
 }
 .table_wrap.type_mini + .type_mini {
 	margin-top: var(--gap-5);
@@ -13751,9 +13759,6 @@ strong {
 }
 .info_gray .title_h3 + [class^="title_h"] {
 	margin-top: 0;
-}
-.info_gray .title_h3 + .list_depth {
-	margin-top: var(--gap-4);
 }
 .info_gray .title_h3 + .list_ty3 {
 	margin-top: var(--gap-5);
