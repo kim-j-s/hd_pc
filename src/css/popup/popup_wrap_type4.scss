@@ -53,6 +53,12 @@
 				}
 			}
 		}
+
+		.info_gray.ty2  {
+			& + .call_box  {
+				margin-top: var(--gap-11);
+			}
+		}
 	}
 }
 .iframe_cont {
