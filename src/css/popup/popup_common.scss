@@ -414,4 +414,26 @@
 			}
 		}
 	}
+
+
+	/* iframe 대응용 */
+	&:has(.abc) {
+		// background-color: blue;
+		> .popup_container  {
+			display: block;
+			> .popup_inner {
+				// background-color: red;
+				display: block;
+				height: 100%;
+				> .popup_cont {
+					display: block;
+					height: 100%;
+				}
+			}
+		}
+	}
+	/* iframe 대응용 */
+
+
+
 }
