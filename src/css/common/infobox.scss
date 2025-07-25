@@ -81,6 +81,9 @@
 		background-color: var(--color-surface-information-subtler);
 		+ .call_box {
 			margin-top: var(--gap-5);
+			&.space1 {
+				margin-top: var(--gap-8);
+			}
 		}
 	}
 
