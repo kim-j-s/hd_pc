@@ -1,0 +1,341 @@
+<!---
+화면번호 : PPRGITR80003000000
+경로 :  상품 > 여행 > 해외여행보험 > 보험료계산결과
+-->
+{{#> layout/default no-gnb=true page-title="보험료 확인 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="해외여행보험" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료확인</div>
+					<h2 class="p_title">
+						설레는 해외여행,<br>
+						<strong>어디까지 보장</strong>을 받아야 할까요?
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="3" size="4" b-text="계산 결과 문자로 받기"}}
+				</div>
+			</div>
+
+			<!-- s: 25-07-28 수정 -->
+			<div class="guarantee_select_wrap guarantee_select_wrap_n3">
+				<div class="select_item single">
+					<span class="badge_wrap">
+						<span class="hd_badge class_type class_type03">
+							<span class="text">네이버파이낸셜플랜 <em>19개 보장</em></span>
+						</span>
+					</span>
+					<span class="item_top">
+						<span class="top_title">비교해봐도 역시 현대해상</span>
+						<em class="top_info">
+							<span class="price"><strong>11,500</strong> 원</span>
+						</em>
+					</span>
+					<span class="item_desc">
+						내 마음대로 자유롭게 보장금액을 바꿀 수 있어요
+					</span>
+				</div>
+			</div>
+			<!-- e: 25-07-28 수정 -->
+
+			<!-- s: 상세 보장 목록 -->
+			<div class="acc_group">
+				<div class="space_list_ty2">
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
+						<div class="coverage_item_list_ty3">
+							<div class="list">
+								<div class="detail_list">
+									<div class="item_inner">
+										{{> cp/ibs sct="상해사망•후유장해(해외여행중)" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+									</div>									
+								</div>
+								<div class="detail_price">
+									<span class="point">3억원</span>
+								</div>
+							</div>
+						</div>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="해외에서 아프거나 다쳤을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-1" sct="질병사망및80%고도후유장해" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">100만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-2" sct="해외여행 상해_해외의료실비보장" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-3" sct="해외여행 질병_해외의료실비보장" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-4" sct="해외여행 상해급여_국내의료실비보장(통원한도:20만원)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-5" sct="해외여행 질병급여_국내의료실비보장(통원한도:20만원)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-6" sct="해외여행 상해비급여_국내의료실비보장(통원한도:20만원)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-7" sct="해외여행 질병비급여_국내의료실비보장(통원한도:20만원)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>											
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="여행 중 문제가 생겼을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-1" sct="중대사고 구조송환비용 등(7일 이상)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-2" sct="항공기납치위로금" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">140만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-3" sct="해외여행중 중단사고 발생 추가비용" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">30만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-4" sct="여권분실 후 재발급 비용" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">20만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="일정에 문제가 생겼을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-1" sct="항공기 및 수하물 지연비용" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">30만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-2" sct="출국항공기 지연(2~4시간) 손해 보장" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">3만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="물건이 손상됐거나 도난당했을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-1" sct="휴대품손해(분실제외)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">200만원</span>
+									</div>
+								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox05-2" sct="해외여행중 자택 도난손해(가재)보장" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">300만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="다른 사람에게 피해를 입혔을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox06-1" sct="일괄배상(해외여행중)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+				</div>
+			</div>
+			<!-- e: 상세 보장 목록 -->
+
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+				</div>
+			</div>
+
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+			<ul class="list_ty1">
+				<li>여러 명이 함께 인터넷으로 가입하는 경우, 관련 규정상 본인만 사망담보에 가입할 수 있습니다. 가족/동반인 모두 상해&middot;질병 사망담보에 가입을 원할 경우, 개인별로 가입해 주세요.(단, 만 19세 미만은 사망담보 가입 불가)</li>
+				<li>보험가입 전 진단 또는 치료를 받은 질병이 있는 경우, 관련 담보에는 가입이 제한될 수 있습니다.</li>
+				<li>실손의료보험에 이미 가입한 경우, 해외여행보험의 ‘국내치료비’ 담보는 실제 손해액을 한도로 비례 보상하므로 가입 실익이 낮습니다.</li>
+			</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
+		</div>
+
+		<!-- s: 25-07-04 수정 -->
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_해외여행}}
+		<!-- e: 사이드 패널 -->
+		 <!-- e: 25-07-04 수정 -->
+
+
+	</div>
+
+	<!-- footer -->
+	{{> layout/footer no-footer=true }}
+	<!-- footer -->
+</div>
+
+<!-- s: popup area -->
+
+	<!-- s: Bottom 팝업 -->
+	{{#> popup/popup_bottom popup-id="ex_popup_bottom" popup-title="Bottom팝업" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			bottom popup 예시
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="1" size="2" b-text="확인" }}
+		</div>
+	</div>
+	{{/ popup/popup_bottom}}
+	<!-- e: Bottom 팝업 -->
+
+	
+	<!-- s: Full 팝업(예시) -->
+	{{#> popup/popup_full popup-id="ex_popup_full" popup-title="팝업 타이틀" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<!-- s: popup_content_top -->
+			<div class="popup_content_top">
+				<h2 class="title_h2">
+					타이틀영역
+				</h2>
+			</div>
+			<!-- e: popup_content_top -->
+
+			버튼클릭시 출력되는 풀 팝업 예시입니다.
+		</div>
+	</div>
+	<div class="popup_bottom">		
+		<div class="btn_area">
+			{{> cp/button type="3" size="1" b-text="취소" }}
+			{{> cp/button type="1" size="1" b-text="확인" }}
+		</div>
+	</div>
+	{{/ popup/popup_full}}
+	<!-- e: Full 팝업(예시) -->
+
+<!-- e: popup area -->
+{{/ layout/default }}
