@@ -221,18 +221,173 @@ body {
 	.info_gray {
 		.step_list {
 			> li {
-				dl {
-					dd {
-						margin-top: 12px;
-					}
+				& ~ li {
+					padding-top: 12px;
 				}
+
 				.modify {
 					width: 24px;
 					height: 24px;
 					padding: 5px;
+
 					.hd_icon {
 						width: 12px;
 						height: 12px;
+						vertical-align: top;
+					}
+				}
+
+				> dl {
+					dd {
+						margin-top: 12px;
+					}
+				}
+
+				// 아코디언 case
+				.acd_item_ty9 {
+					position: relative;
+					flex: 1;
+			
+					&:before {
+						content: "";
+						position: absolute;
+						top: 9px;
+						left: -15px;
+						width: 3px;
+						height: 3px;
+						background-color: var(--color-icon-gray);
+						border-radius: 50%;
+					}
+			
+					.acd_head {
+						.acd_btn {
+							display: flex;
+							// position: relative;
+							width: 100%;
+							font-size: var(--font-size-body-small);
+							color: var(--color-text-disabled-on);
+			
+							> span {
+								flex: 1;
+							}
+			
+							&:after {
+								// position: absolute;
+								// right: 0;
+								content:'';
+								width: 20px;
+								height: 20px;
+								background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 16px;
+							}
+						}
+			
+						&.active {
+							.acd_btn {
+								&:after {
+									transform: rotate(180deg);
+								}
+							}
+							& +.acd_cont {
+								dl {
+									dd {
+										.info {
+											// display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+			
+					.acd_cont {
+						padding: var(--gap-4) 0 var(--padding-3);
+			
+						.info {
+							color: var(--color-text-disabled-on);
+							font-size: var(--font-size-body-small);
+						}
+			
+						dl {
+							position: relative;
+			
+							& ~ dl {
+								margin-top: 24px;
+							}
+
+							&:has(.modify_move){
+								dt {
+									padding-right: 29px;
+								}
+							}
+			
+							dt {
+								font-size: var(--font-size-body-xsmall);
+								font-weight: 700;
+								color: var(--color-text-subtle);
+								
+								&:after {
+									content: none;
+								}
+							}
+							dd {
+								margin-top: 8px !important;
+								
+								.modify_sub {
+									position: absolute;
+									top: 0;
+									right : 2px;
+									padding: 0;
+									width: auto;
+									height: auto;
+									border: none;
+									font-size: var(--font-size-button-small);
+									color: var(--color-text-subtle);
+									text-decoration: underline;
+								}
+
+								> ul {
+									> li {
+										position: relative;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// 아코디언 + 아코디언 X
+			&.type_mix {
+				> li {
+					// padding-bottom: 33px;
+
+					& ~ li {
+						&:after {
+							position: absolute;
+							top: -17px;
+							left: 14px;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+					}
+					dl {
+						.title {
+							font-size: var(--font-size-body-small);
+						}
+					}
+					> .modify {
+						width: 20px;
+						height: 20px;
+						padding: 2px;
+						border: none;
+						border-radius: 0;
+
+						.hd_icon {
+							width: 16px;
+							height: 16px;
+						}
 					}
 				}
 			}
@@ -245,6 +400,10 @@ body {
 		gap: var(--gap-5);
 	}
 }
+
+
+
+
 
 // aside panel
 .aside {
