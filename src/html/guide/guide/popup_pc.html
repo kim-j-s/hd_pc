@@ -17,6 +17,8 @@
 		<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
 		<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
 
+		{{> cp/button type="2" size="5" b-text="iframe 테스트 (600px)" popup="if" }}
+
 		{{> cp/button type="2" size="5" b-text="Full 팝업열기 (600px)" popup="pop_type01" }}
 		{{> cp/button type="2" size="5" b-text="Full 팝업열기 (800px)" popup="pop_type05" }}
 		{{> cp/button type="2" size="5" b-text="Bottom 팝업열기(팝업중첩)" popup="pop_type04" }}
@@ -26,6 +28,28 @@
 
 	</div>
 </div>
+
+	<!-- Full 팝업 -->
+	{{#> popup/popup_full popup-id="if" popup-title="팝업 타이틀" }}
+	ifrma 테스트
+	{{/ popup/popup_full}}
+	<!-- // Full 팝업 -->
+
+
+	<!-- Full 팝업 -->
+	{{#> popup/popup_full popup-class="big" popup-id="pop_type05" popup-title="팝업 타이틀" }}
+	<div class="popup_cont">
+	팝업내용입니다<br>
+	내용
+	</div>
+	<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="3" size="2" b-text="취소" }}
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+	</div>
+	{{/ popup/popup_full}}
+	<!-- Full 팝업 -->
 	
 	<!-- Full 팝업 -->
 	{{#> popup/popup_full popup-id="pop_type01" popup-title="팝업 타이틀" }}
