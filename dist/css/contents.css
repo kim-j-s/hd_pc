@@ -3964,6 +3964,11 @@ ul + .form_group_wrap {
 .info_cont ul + h3 {
 	margin-top: var(--gap-5);
 }
+.info_cont p + h3.ty2,
+.info_cont ol + h3.ty2,
+.info_cont ul + h3.ty2 {
+	margin-top: var(--gap-7);
+}
 .info_cont p + h4,
 .info_cont ol + h4,
 .info_cont ul + h4 {
@@ -4352,7 +4357,7 @@ ul + .form_group_wrap {
 }
 /* 특약리스트 */
 .special_contract_list {
-	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .special_contract_list + .badge_wrap {
 	margin-top: var(--gap-5);
@@ -4377,6 +4382,14 @@ ul + .form_group_wrap {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+}
+.special_contract_list > li .check_flex_box .check_box .label_cont {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: var(--gap-2);
 }
 .special_contract_list > li .check_flex_box .check_box .label_cont .badge_wrap {
 	width: auto;
@@ -5274,6 +5287,40 @@ ul + .form_group_wrap {
 }
 .my_info_flow > li .frame_list .file_attach_box .file_thumbnail {
 	background-color: transparent;
+}
+.my_info_flow.certify {
+	counter-reset: number 0;
+}
+.my_info_flow.certify li {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 0;
+	padding-left: 52px;
+	font-size: var(--font-size-body-medium);
+	background-size: 24px auto;
+	background-position: 20px 24px;
+	background-repeat: no-repeat;
+}
+.my_info_flow.certify li::before {
+	counter-increment: number 1;
+	content: "STEP 0" counter(number);
+	position: static;
+	display: block;
+	width: auto;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
+	font-weight: 700;
+}
+.my_info_flow.certify li.pc {
+	background-image: url(../images/common/cert/icon_step_pc.svg);
+}
+.my_info_flow.certify li.phone {
+	background-image: url(../images/common/cert/icon_step_phone.svg);
 }
 .frame_list > li > .tit {
 	display: block;

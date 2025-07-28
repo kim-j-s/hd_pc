@@ -35,7 +35,7 @@
 		<script type="text/javascript" src="../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
-		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
@@ -189,7 +189,8 @@
 				</div>
 
 				<!-- s: 사이드 패널 -->
-				<!-- s: 25-07-25 수정 -->
+
+				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
 					<div class="info_cont pro_info_wrap">
 						<div class="pro_info_item">
@@ -220,18 +221,25 @@
 					</div>
 
 					<div class="info_gray">
-						<!-- 진행 전 상태일 때, disabled 클래스 추가 -->
 						<ol class="step_list type_mix">
-							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-							<li>
+							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+							<li class="active">
 								<!-- 차량정보 -->
+								<!-- 입력진행 전 -->
+								<!-- <dl>
+										<dt class="title">1. 차량정보</dt>
+										<dd>
+											<div class="info">청약내용을 확인 중이에요</div>
+										</dd>
+									</dl> -->
+								<!-- 입력진행 후 -->
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>1. 차량정보</span></button>
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true"><span>1. 차량정보</span></button>
 									</div>
 									<div class="acd_cont">
-										<div class="inner">
+										<div class="inner" style="display: block">
 											<dl>
 												<dt>차량선택</dt>
 												<dd>
@@ -302,7 +310,7 @@
 													<ul>
 														<li>총차량가액: <span>11,000만원</span></li>
 													</ul>
-													<button type="button" class="modify_sub" title="총차량가액 페이지로 이동">
+													<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
 														<span>수정</span>
 													</button>
 													<div class="info">보험기간을 입력 중이에요</div>
@@ -323,107 +331,132 @@
 							</li>
 							<li>
 								<!-- 운전자정보 -->
-								<div class="acd_item acd_item_ty9">
-									<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>2. 운전자정보</span></button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<dl>
-												<dt>운전범위</dt>
-												<dd>
-													<ul>
-														<li>운전자범위: <span>부부 한정</span></li>
-														<li>배우자생년월일: <span>2000.01.01</span></li>
-													</ul>
-													<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-											<dl>
-												<dt>할인특약</dt>
-												<dd>
-													<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-											<dl>
-												<dt>알릴의무</dt>
-												<dd>
-													<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-										</div>
-									</div>
-								</div>
+								<!-- 입력진행 전 -->
+								<dl>
+									<dt class="title">2. 운전자정보</dt>
+									<dd><div class="info"></div></dd>
+								</dl>
+								<!-- 입력진행 후 -->
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<!-- <div class="acd_item acd_item_ty9">
+				<div class="acd_head">
+				  <button type="button" class="acd_btn" aria-expanded="false"><span>2. 운전자정보</span></button>
+				</div>
+				<div class="acd_cont">
+				  <div class="inner">
+				    							<dl>
+				    								<dt>운전범위</dt>
+				    								<dd>
+				    									<ul>
+				    										<li>
+				    											운전자범위: <span>부부 한정</span>
+				    										</li>
+				    										<li>
+				    											배우자생년월일: <span>2000.01.01</span>
+				    										</li>
+				    									</ul>
+				    									<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				    							<dl>
+				    								<dt>할인특약</dt>
+				    								<dd>
+				    									<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				    							<dl>
+				    								<dt>알릴의무</dt>
+				    								<dd>
+				    									<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				  </div>
+				</div>					</div> -->
 							</li>
 							<li>
 								<!-- 보험료확인 -->
-								<div class="acd_item acd_item_ty9">
-									<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>3. 보험료확인</span></button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<dl>
-												<dt>보험료확인</dt>
-												<dd>
-													<ul>
-														<li>최종보험료: <span>1,000,000원</span></li>
-													</ul>
-													<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-										</div>
-									</div>
-								</div>
+								<!-- 입력진행 전 -->
+								<dl>
+									<dt class="title">3. 보험료확인</dt>
+									<dd><div class="info"></div></dd>
+								</dl>
+								<!-- 입력진행 후 -->
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<!-- <div class="acd_item acd_item_ty9">
+				<div class="acd_head">
+				  <button type="button" class="acd_btn" aria-expanded="false"><span>3. 보험료확인</span></button>
+				</div>
+				<div class="acd_cont">
+				  <div class="inner">
+				    							<dl>
+				    								<dt>보험료확인</dt>
+				    								<dd>
+				    									<ul>
+				    										<li>
+				    											최종보험료: <span>1,000,000원</span>
+				    										</li>
+				    									</ul>
+				    									<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				  </div>
+				</div>					</div> -->
 							</li>
 							<li>
 								<!-- 피보험자/계약자정보 -->
-								<div class="acd_item acd_item_ty9">
-									<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>4. 피보험자/계약자정보</span></button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<dl>
-												<dt>피보험자/계약자정보</dt>
-												<dd>
-													<ul>
-														<li>피보험자: <span>김*대(900101-1******)</span></li>
-														<li>계약자: <span>김*대(900101-1******)</span></li>
-													</ul>
-													<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-											<dl>
-												<dt>사진첨부</dt>
-												<dd>
-													<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
-														<span>수정</span>
-													</button>
-													<div class="info">정보를 입력 중이에요</div>
-												</dd>
-											</dl>
-										</div>
-									</div>
-								</div>
+								<!-- 입력진행 전 -->
+								<dl>
+									<dt class="title">4. 피보험자/계약자정보</dt>
+									<dd><div class="info"></div></dd>
+								</dl>
+								<!-- 입력진행 후 -->
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<!-- <div class="acd_item acd_item_ty9">
+				<div class="acd_head">
+				  <button type="button" class="acd_btn" aria-expanded="false"><span>4. 피보험자/계약자정보</span></button>
+				</div>
+				<div class="acd_cont">
+				  <div class="inner">
+				    							<dl>
+				    								<dt>피보험자/계약자정보</dt>
+				    								<dd>
+				    									<ul>
+				    										<li>
+				    											피보험자: <span>김*대(900101-1******)</span>
+				    										</li>
+				    										<li>
+				    											계약자: <span>김*대(900101-1******)</span>
+				    										</li>
+				    									</ul>
+				    									<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				    							<dl>
+				    								<dt>사진첨부</dt>
+				    								<dd>
+				    									<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
+				    										<span>수정</span>
+				    									</button>
+				    									<div class="info">정보를 입력 중이에요</div>
+				    								</dd>
+				    							</dl>
+				  </div>
+				</div>					</div> -->
 							</li>
 							<li>
 								<!-- 청약내용 확인 -->
@@ -433,12 +466,12 @@
 										<div class="info">청약내용을 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="청약내용 확인 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify" title="청약내용 확인 정보 페이지로 이동">
+										<span class="sr-only">수정</span>
+										<i class="hd_icon resetSvg"></i>
+									</button> -->
 							</li>
-							<li class="active">
+							<li>
 								<!-- 결제 -->
 								<dl>
 									<dt class="title">6.결제</dt>
@@ -450,6 +483,18 @@
 						</ol>
 					</div>
 
+					<!-- 최종 보험료 -->
+					<!-- <div class="panel_total">
+							<div class="inner">
+								<div class="title">최종 보험료</div>
+								<div class="right">
+									<del>1,563,393원</del>
+									<span class="price">7,200원</span>
+								</div>
+							</div>
+						</div> -->
+
+					<!-- 다이렉트 고객센터 -->
 					<div class="customer_info">
 						<div class="contact_list">
 							<div class="list">
@@ -465,7 +510,7 @@
 						</ul>
 					</div>
 				</div>
-				<!-- e: 25-07-25 수정 -->
+				<!-- e: 사이드 패널 -->
 				<!-- e: 사이드 패널 -->
 			</div>
 
