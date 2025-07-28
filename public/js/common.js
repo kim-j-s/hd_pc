@@ -738,6 +738,113 @@
     }, 10);
   });
 
+	// 1) 초기화 함수 (동적 요소가 생성될 때마다 호출)
+	function initPositionEventWrap($wrap) {
+		if (!$wrap.length) return;
+
+		const $tabBtns = $wrap.find('.position_event_tab .tag_item');
+		const $contents = $wrap.find('.position_event_content .pec_point');
+		const $scrollArea = $wrap.find('.position_event_content');
+
+		$wrap.data('scrolling', false);
+
+		// 스크롤 이벤트 (요소 개별)
+		$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
+			if ($wrap.data('scrolling')) return;
+
+			const scrollTop = $wrap.scrollTop();
+			let expHeight = 0;
+
+			if ($wrap.find('.pew_exception').length) {
+				const $exception = $wrap.find('.pew_exception');
+				const exceptionHeight = $exception.outerHeight();
+
+				if ($wrap.find('.tag_item_wrap_po_etc1').length) {
+					expHeight = exceptionHeight + 64;
+				} else {
+					expHeight = exceptionHeight;
+				}
+			}
+
+			let activeIdx = -1;
+
+			$contents.each(function (index) {
+				const targetTop = $(this).offset().top;
+				const containerTop = $scrollArea.offset().top;
+				const scrollY = targetTop - containerTop + expHeight;
+
+				if (scrollY < scrollTop + 10) {
+					activeIdx = index;
+				}
+			});
+
+			if (activeIdx !== -1) {
+				$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+			}
+		});
+	}
+
+	// 2) 이벤트 위임 - 탭 클릭 이벤트
+	$(document).off('click.positionEventTab').on('click.positionEventTab', '.position_event_wrap .position_event_tab .tag_item', function () {
+		const $tab = $(this);
+		const $wrap = $tab.closest('.position_event_wrap');
+		const $tabBtns = $wrap.find('.position_event_tab .tag_item');
+		const $contents = $wrap.find('.position_event_content .pec_point');
+		const $scrollArea = $wrap.find('.position_event_content');
+
+		const idx = $tab.index();
+		const $target = $contents.eq(idx);
+
+		let expHeight = 0;
+
+		if ($wrap.find('.pew_exception').length) {
+			const $exception = $wrap.find('.pew_exception');
+			const exceptionHeight = $exception.outerHeight();
+
+			if ($wrap.find('.tag_item_wrap_po_etc1').length) {
+				expHeight = exceptionHeight + 64;
+			} else {
+				expHeight = exceptionHeight;
+			}
+		}
+
+		if ($target.length) {
+			$wrap.data('scrolling', true);
+
+			$tabBtns.removeClass('active');
+			$tab.addClass('active');
+
+			const containerTop = $scrollArea.offset().top;
+			const targetTop = $target.offset().top;
+			const scrollY = targetTop - containerTop + expHeight;
+
+			$wrap.stop().animate({
+				scrollTop: scrollY
+			}, 300, function () {
+				$wrap.data('scrolling', false);
+
+				// 포커스 가능한 첫 요소 탐색
+				const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+
+				if ($focusable.length) {
+					$focusable.focus();
+				} else {
+					$target.attr('tabindex', '-1').focus();
+				}
+			});
+		}
+	});
+
+	// 3) 초기 로드 시 존재하는 요소들 초기화
+	$('.position_event_wrap').each(function () {
+		initPositionEventWrap($(this));
+	});
+
+	// 4) 동적으로 생성된 .position_event_wrap에 대해 초기화 필요 시 아래처럼 호출
+	// 예: ajax, 동적삽입 후
+	// initPositionEventWrap($('#newlyAddedWrap'));
+
+
 
 })();
 
@@ -1023,8 +1130,7 @@ $(function(){
 		// 		$focusable.focus();
 		// 	}
 		// }, 10);
-	});
-	
+	});	
 	// 달력 호출
 
 
@@ -1424,6 +1530,7 @@ $(function(){
 
 
 	// 개선 버젼
+	/*
 	const $wraps = $('.position_event_wrap');
 	$wraps.each(function () {
 		const $wrap = $(this);
@@ -1523,6 +1630,7 @@ $(function(){
 		});
 
 	});
+	*/
 	// 개선 버젼
   
 
