@@ -425,9 +425,16 @@
 				// background-color: red;
 				display: block;
 				height: 100%;
-				> .popup_cont {
+				> .pop_cont {
 					display: block;
 					height: 100%;
+					background-color: blue;
+					iframe {
+						background-color: red;
+						.popup_wrap {
+							background-color: blue;
+						}
+					}
 				}
 			}
 		}
