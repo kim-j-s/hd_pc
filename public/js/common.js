@@ -68,150 +68,6 @@
 		}
 	})
 
-	/* tag_item click */
-	/*
-	$DOM.on('click', '.tag_item_wrap .tag_item', function(){
-		const $this = $(this);
-		const idx = $this.index();
-		const positionVal = null;
-		const $thisData = $this.closest('.tag_item_wrap').data('tib') ;
-		console.log('이벤트 idex : ' + idx + ' : ' + $thisData);
-
-		if($('.tag_item_move').length) {
-			const $target = $('.tag_item_move').find('.tag_move').eq(idx);
-			const targetPadding = parseFloat($target.css('padding-top'));
-			const targetMarginTop = parseFloat($target.css('margin-top'));
-			// const simpleHeight = $('.simple_info_wrap').height();
-			// const targetOffset = $target.position().top;
-			let summaryHeight = 0,
-					simpleHeight = 0;
-			const targetOffset = $target.position().top;
-			const fix_h = $(this).closest('.sticky').height();
-			
-			console.log($target + ' : ? : ' + targetOffset);
-			// console.log(targetOffset , targetMargin);
-
-			if($('.simple_info_wrap.ty2').length){
-				simpleHeight = 102;
-			}
-			if($('.info_summary').length){
-				summaryHeight = $('.info_summary').height();
-			}
-
-			$(this).closest('.tag_item_wrap').find('.tag_item').removeClass('active');
-			$this.addClass('active');
-
-			$this.closest('.popup_cont').animate({
-				scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
-			}, 500);
-
-			// PC 용
-			$this.closest('.am_content').animate({
-				scrollTop: targetOffset + targetPadding + targetMarginTop
-			}, 500, function(){
-				setTimeout(function() {
-					const $targetPanel = $('.tag_item_move .tag_move').eq(idx);
-
-					// 포커스 가능한 첫 요소 탐색
-					const $focusable = $targetPanel.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
-
-					if ($focusable.length) {
-						$focusable.focus();
-					} else {
-						// 없다면 컨테이너 자체에 tabindex 부여 후 포커스 (예외 대응)
-						$targetPanel.attr('tabindex', '-1').focus();
-					}
-				}, 100);
-			});
-			// PC 용
-
-			if($('.btn_toggle').length){
-				// posiionVal = targetOffset + targetPadding + simpleHeight + fix_h;
-				positionVal = targetOffset + targetPadding + simpleHeight + fix_h;
-			}
-		}
-	});
-	*/
-
-	/* tag_item click - 개선 */
-	/*
-	$DOM.on('click', '.tag_item_wrap .tag_item', function() {
-    const $this = $(this);
-    const idx = $this.index();
-
-    // 클릭한 .tag_item_wrap의 data-tib 값 읽기
-    const tibValue = $this.closest('.tag_item_wrap').data('tib');
-    if (!tibValue) return;  // 없으면 중단
-
-    // 같은 data-tib-get 값을 가진 .tag_item_move 요소 찾기
-    const $targetWrap = $(`.tag_item_move[data-tib-get="${tibValue}"]`);
-    if ($targetWrap.length === 0) return; // 해당 영역 없으면 중단
-
-    const $target = $targetWrap.find('.tag_move').eq(idx);
-    if ($target.length === 0) return;
-
-    // 위치 계산
-    const targetPadding = parseFloat($target.css('padding-top')) || 0;
-    const targetMarginTop = parseFloat($target.css('margin-top')) || 0;
-    const targetOffset = $target.position().top || 0;
-
-    let summaryHeight = 0,
-        simpleHeight = 0;
-
-    if($('.simple_info_wrap.ty2').length){
-        simpleHeight = 102;
-    }
-    if($('.info_summary').length){
-        summaryHeight = $('.info_summary').height();
-    }
-
-    const fix_h = $this.closest('.sticky').height() || 0;
-
-    // 탭 active 클래스 변경
-    $this.closest('.tag_item_wrap').find('.tag_item').removeClass('active');
-    $this.addClass('active');
-
-    // 스크롤 애니메이션 (popup_cont 영역)
-		// PC 영역 스크롤 애니메이션
-    $this.closest('.popup_cont').animate({
-        scrollTop: targetOffset + targetPadding + simpleHeight + fix_h + summaryHeight
-			}, 500, function() {
-        setTimeout(function() {
-            // 포커스 가능한 첫 요소 찾기
-            const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
-            if ($focusable.length) {
-                $focusable.focus();
-            } else {
-                // 없으면 tabindex 부여 후 포커스
-                $target.attr('tabindex', '-1').focus();
-            }
-        }, 100);
-    });
-
-    // PC 영역 스크롤 애니메이션
-    $this.closest('.am_content').animate({
-        scrollTop: targetOffset + targetPadding + targetMarginTop
-    }, 500, function() {
-        setTimeout(function() {
-            // 포커스 가능한 첫 요소 찾기
-            const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
-            if ($focusable.length) {
-                $focusable.focus();
-            } else {
-                // 없으면 tabindex 부여 후 포커스
-                $target.attr('tabindex', '-1').focus();
-            }
-        }, 100);
-    });
-
-    // positionVal 용도로 쓰이는 부분
-    if($('.btn_toggle').length){
-        // positionVal = targetOffset + targetPadding + simpleHeight + fix_h;
-        // 필요하면 여기서 활용
-    }
-	});
-	*/
-
   /* Tooltip */
   $DOM.on('click', '.tooltip_wrap button', function(){
     const $click = $(this).closest('.tooltip_wrap'),
@@ -398,7 +254,6 @@
       $(this).closest('.chk_group_wrap').find('input[type=checkbox]:not(:disabled)').prop('checked', false);
     }
   });
-
 	// 약관 동의
   	
 	
@@ -581,86 +436,6 @@
 		}
 	}
 
-	// 수령지 일괄 선택
-
-	// $DOM.on('change', '.select_driver_range input[type="radio"]', function(){
-	// 	const $relGroup = $('.ouput_driver_relationship').find('.rel_group')
-	// 	let chkNum = $(this).attr('data-num');
-
-	// 	if(chkNum){
-	// 		chkNum = chkNum.split(',');
-	// 	}else {
-	// 		return;
-	// 	}
-
-	// 	console.log(chkNum);
-
-	// 	$relGroup.children('div').each(function(){
-	// 		const $this = $(this),
-	// 					thisNum = $this.attr('data-num'),
-	// 					numSrc = $this.find('img').attr('src'),
-	// 					newFile = numSrc.substring(0, numSrc.lastIndexOf('.'));
-
-	// 		// console.log('chkNum' + chkNum, 'num' + num);
-	// 		// console.log(numSrc)
-
-	// 		if (chkNum.includes(thisNum)) {
-	// 			$this.addClass('active');
-	// 			$this.find('img').attr('src', newFile + '_on.' + /[^.]+$/.exec(numSrc));
-	// 	} else {
-	// 			// chkNum에 해당하지 않는 div에 대해서는 '_on'을 삭제
-	// 			if (numSrc.includes('_on')) {
-	// 					const originalSrc = numSrc.replace('_on', '');
-	// 					$this.find('img').attr('src', originalSrc);
-	// 			}
-	// 	}
-
-	// 		// numCase.addClass('active');
-	// 		// numCase.find('img').attr('src', newFile + '_on.' + /[^.]+$/.exec(numSrc));
-	// 	});
-	// })
-
-
-	// 위치 이벤트
-	// let pe = true; // 초기엔 true로 시작해야 클릭이 가능함
-	/*
-	$DOM.on('click', '.position_event_tab .tag_item', function () {
-		if (!pe) return;
-
-		pe = false; // 클릭되면 바로 잠금 (중복 클릭 방지)
-
-		const $this = $(this),
-					$target = $this.closest('.position_event_wrap').find('.position_event_content'),
-					idx = $this.index();
-
-		const $point = $target.find('.pec_point').eq(idx);
-		if (!$point.length) {
-			pe = true; // 타겟 없으면 다시 풀어줌
-			return;
-		}
-
-		const posInfo = $point.offset().top;
-
-		if ($this.closest('.popup_cont').length) {
-			const $popupContent = $('.popup_content');
-			const popupContTop = $popupContent.position().top;
-			const $wrapHeight = $this.closest('.tag_item_wrap').outerHeight();
-
-			$('.popup_cont').stop().animate({
-				scrollTop: posInfo - (popupContTop + $wrapHeight)
-			}, 500, function () {
-				pe = true; // 애니메이션 끝난 후 다시 열림
-				setTimeout(function () {
-					$this.closest('.position_event_tab').find('.tag_item').removeClass('active');
-					$this.addClass('active');
-				}, 10);
-			});
-		} else {
-			pe = true; // 조건 미충족 시도라도 열어둠
-		}
-	});
-	*/
-
 	let ri = $('.radio_group_resetable input');
 	let richecked = ri.filter(':checked').val();
 	$DOM.on('click', '.radio_group_resetable input[type="radio"]', function() {
@@ -839,12 +614,6 @@
 	$('.position_event_wrap').each(function () {
 		initPositionEventWrap($(this));
 	});
-
-	// 4) 동적으로 생성된 .position_event_wrap에 대해 초기화 필요 시 아래처럼 호출
-	// 예: ajax, 동적삽입 후
-	// initPositionEventWrap($('#newlyAddedWrap'));
-
-
 
 })();
 
@@ -1061,7 +830,6 @@ $(function(){
 		}
 	});
 
-
 	// 달력 호출
 	// let $lastCalendarCallBtn = null;
 	$.datepicker.setDefaults({
@@ -1087,26 +855,7 @@ $(function(){
 
 		beforeShow: function () { 
 			$("body").addClass('modal_open');
-			// setTimeout(function(){
-			// 	// 이전/다음 버튼 tabindex 부여
-			// 	const $dp = $("#ui-datepicker-div");
-			// 	$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
-			// }, 50);
 		},
-		// onChangeMonthYear: function(year, month, inst) {
-		// 	// 월 변경 후에도 tabindex 재설정 필요
-		// 	setTimeout(function() {
-		// 		const $dp = $("#ui-datepicker-div");
-		// 		$dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
-		// 	}, 0);
-		// },
-		// onClose: function() {
-		// 	$("body").removeClass('modal_open');
-		// 	// 호출했던 버튼으로 포커스 복귀
-		// 	if ($lastCalendarCallBtn) {
-		// 		$lastCalendarCallBtn.focus();
-		// 	}
-		// }
 	});
 
 	$(".inp_picker").datepicker();
@@ -1116,28 +865,7 @@ $(function(){
 	
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker");
-	
-		// 포커스 복귀용으로 버튼 참조 저장
-		// $lastCalendarCallBtn = $btn;
-	
-		// readonly 잠시 설정 → 키보드 입력 방지
-		// $input.attr("readonly", true);
 		$input.datepicker("show");
-	
-		// 0.5초 후 readonly 제거
-		// setTimeout(function () {
-		// 	$input.attr("readonly", false);
-		// }, 500);
-	
-		// ✅ 달력 내부 포커스로 이동 (접근성 강화)
-		// setTimeout(function () {
-		// 	const $dp = $("#ui-datepicker-div");
-		// 	// 날짜가 선택되어 있으면 해당 날짜에 포커스, 없으면 현재일
-		// 	const $focusable = $dp.find(".ui-state-active, .ui-state-highlight, td a").first();
-		// 	if ($focusable.length) {
-		// 		$focusable.focus();
-		// 	}
-		// }, 10);
 	});	
 	// 달력 호출
 
@@ -1495,48 +1223,6 @@ $(function(){
 		}
 	});
 
-	// 범용 전체 팝업 내 스크롤 이벤트
-	/*
-	$('.popup_cont').on('scroll', function() {
-
-		// 현재 스크롤 위치
-		if (!$('.position_event_wrap').length) return;
-
-		const $this = $(this);
-		const scrollTop = $this.scrollTop();
-
-		// 기준 위치값 계산 요소
-		const $popupContent = $('.popup_content');
-		const popupContTop = $popupContent.position().top;
-		const $wrapHeight = $('.tag_item_wrap').outerHeight();
-
-		const baseOffset = popupContTop + $wrapHeight;
-
-		const $points = $('.position_event_content .pec_point');
-		let activeIdx = -1;
-
-		const $tagItem = $('.position_event_tab .tag_item');
-
-		$points.each(function (index) {
-			const pointTop = $(this).offset().top;
-			const targetScroll = pointTop - baseOffset;
-
-			if (scrollTop >= targetScroll) {
-				activeIdx = index; // 조건을 만족하는 가장 마지막 인덱스를 저장
-			}
-		});
-
-		if (activeIdx !== -1) {
-			// console.log('현재 인덱스:', activeIdx);
-			$tagItem.removeClass('active');
-			$tagItem.eq(activeIdx).addClass('active');
-		}
-	});
-	*/
-
-	// 500
-
-
 	// 개선 버젼
 	/*
 	const $wraps = $('.position_event_wrap');
@@ -1639,8 +1325,7 @@ $(function(){
 
 	});
 	*/
-	// 개선 버젼
-  
+	// 개선 버젼  
 
 
 	// ready
@@ -1726,18 +1411,9 @@ $(window).on('click', function(e) {
 	if (!$target.closest($test_item).length) {
 		$test_item.removeClass('active');
 	}
-	
-	// 팝업 영역 외 클릭 시 팝업 닫기
-	// var $rml = $('.ftr_sns_list');
-	// var $rmb = $('.ftr_sns_open');
-	// if (!$target.closest($rml).length &&  !$target.closest($rmb).length) {
-	// 	$('.ftr_sns_list').removeClass('active');
-	// 	$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
-	// }
 
 	// footer sns 링크 팝업 외부 클릭 시 닫기
 	if ( !$target.closest('.ftr_sns_list').length && !$target.closest('.ftr_sns_open').length ) {
-		// console.log('이거도 먹나요?');
 		$('.ftr_sns_list').removeClass('active');
 		$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
 	}
