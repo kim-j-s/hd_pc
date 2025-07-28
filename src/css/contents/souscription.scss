@@ -865,6 +865,10 @@ ul + .form_group_wrap {
 				flex: 1;
 
 				.label_cont {
+					display: flex;
+					flex-wrap: wrap;
+					gap: var(--gap-2);
+					
 					.badge_wrap {
 						width: auto;
 						gap: 4px;
