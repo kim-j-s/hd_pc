@@ -910,14 +910,6 @@ $(function(){
 // 	simpleInfo();
 
 
-	//side panel
-	const $panel = $('.side_panel .info_gray');
-	const $p_side = $panel.find('.step_list.multiple').find('li.active');
-
-	if($p_side.length > 0){
-		$p_side.last().find('.title').addClass('bold');
-	}
-
 	//input disabled&readonly
 	$('.input_text input').each(function() {
 		const $this = $(this),
