@@ -203,6 +203,50 @@
 							<div class="divider_ty1"></div>
 							<h3 class="title_h3">제휴포인트 사용여부</h3>
 							<div class="form_group_wrap">
+								<div class="form_line full">
+									<div class="checkbox_group_wrap ty2">
+										<!-- s: 현대카드 선택 시, 노출 -->
+										<div class="inp_checkbox rd_box">
+											<input type="checkbox" id="checkbox01-01" />
+											<label for="checkbox01-01" class="chk_label chk_label_ty3">
+												<span class="label_cont">현대카드 M포인트 사용<span class="sub_g_txt">(1천원 이상 결제시, 3만 M포인트 한도)</span></span>
+											</label>
+										</div>
+										<div class="inp_checkbox rd_box">
+											<input type="checkbox" id="checkbox01-02" />
+											<label for="checkbox01-02" class="chk_label chk_label_ty3">
+												<span class="label_cont">M포인트 + 블루/기아 멤버스포인트 사용<span class="sub_g_txt">(현대·기아 전용 신용카드, 포인트별 최대 3만 포인트 한도)</span></span>
+											</label>
+										</div>
+										<div class="inp_checkbox rd_box">
+											<input type="checkbox" id="checkbox01-03" />
+											<label for="checkbox01-03" class="chk_label chk_label_ty3">
+												<span class="label_cont">현대카드M 블루멤버스/기아멤버스 신용카드<span class="sub_g_txt">(청구할인적용, M포인트 사용 불가)</span></span>
+											</label>
+										</div>
+										<!-- e: 현대카드 선택 시, 노출 -->
+										<!-- s: 삼성카드 선택 시, 노출 -->
+										<div class="inp_checkbox rd_box">
+											<input type="checkbox" id="checkbox01-01" />
+											<label for="checkbox01-01" class="chk_label chk_label_ty3">
+												<span class="label_cont"
+													>삼성카드보너스포인트 사용<span class="sub_g_txt">(1포인트 ~ 보유 포인트 전액 차감<br />(카드 승인액 한도 내))</span></span
+												>
+											</label>
+										</div>
+										<!-- e: 삼성카드 선택 시, 노출 -->
+										<!-- s: 신한카드 선택 시, 노출 -->
+										<div class="inp_checkbox rd_box">
+											<input type="checkbox" id="checkbox01-01" />
+											<label for="checkbox01-01" class="chk_label chk_label_ty3">
+												<span class="label_cont"
+													>마이신한포인트 사용<span class="sub_g_txt">(1포인트 ~ 보유 포인트 전액 차감<br />(카드 승인액 한도 내))</span></span
+												>
+											</label>
+										</div>
+										<!-- e: 신한카드 선택 시, 노출 -->
+									</div>
+								</div>
 								<!-- s: 블루/기아멤버스 -->
 								<div class="form_line full_half">
 									<div class="label_tit">블루/기아멤버스 포인트 선택</div>
@@ -324,6 +368,7 @@
 								<li>비밀번호 3회 오류 시 블루멤버스 고객센터(080-600-6000)로 연락하시어 비밀번호 재설정 후 결제 진행이 가능합니다.</li>
 							</ul>
 							<!-- e: 블루/기아멤버스 -->
+							<!-- 제휴포인트 미노출시 point_check=true -->
 						</div>
 
 						<!-- 간편결제 -->

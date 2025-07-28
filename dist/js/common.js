@@ -928,6 +928,8 @@ $(function(){
 			} 
 			if(!$wrapBox.length) {
 				$inpBox.addClass('readonly');
+			} else if ($wrapBox.length) {
+				$inpBox.addClass('readonly');
 			}
 		} 
 		if (isDisabled) {
@@ -937,6 +939,8 @@ $(function(){
 				$this.siblings('.calendar_call').prop('disabled', true);
 			}
 			if(!$wrapBox.length) {
+				$inpBox.addClass('disabled');
+			} else if ($wrapBox.length) {
 				$inpBox.addClass('disabled');
 			}
 		}

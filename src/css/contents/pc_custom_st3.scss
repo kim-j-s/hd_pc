@@ -1088,6 +1088,60 @@
 			font-size: var(--font-size-body-small);
 			color: var(--color-text-subtle);
 		}
+
+		// pm 케이스
+		&.single {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin-bottom: var(--gap-8);
+			padding: var(--gap-7) var(--gap-6);
+			border: var(--border-width-static-medium, 2px) solid var(--color-border-primary);
+    	border-radius: var(--radius-large2);
+			.badge_wrap {
+				.hd_badge {
+					&.class_type {
+						width: auto;
+						height: 32px;
+						border-radius: var(--radius-small2);
+	
+						.text {
+							display: flex;
+							padding: 0;
+							background: none;
+							font-weight: 700;
+	
+							em {
+								position: relative;
+								display: inline-block;
+								padding-left: 15px;
+								font-weight: 400;
+	
+								&:before {
+									position: absolute;
+									top: 4px;
+									left: var(--gap-3);
+									content:'';
+									width: 1px;
+									height: 12px;
+									background-color: var(--color-border-success-light);
+								}
+							}
+						}
+						&.class_type03 {
+							.text {
+								font-size: var(--font-size-body-small);
+								background-image: none;
+							}
+						}
+					}
+				}
+			}
+			.item_top {
+				margin-top: var(--gap-6);
+				margin-bottom: 4px;
+			}
+		}
+
 	}
 
 	&:has(input:checked) {
@@ -1285,6 +1339,7 @@
 				}
 			}
 		}
+
 	}
 
 	& + .dc_info_box {

@@ -218,21 +218,261 @@ body {
 		}
 	}
 
-	.info_gray {
-		.step_list {
-			> li {
-				dl {
-					dd {
-						margin-top: 12px;
+	.step_list {
+		> li {
+			& ~ li {
+				padding-top: 12px;
+			}
+
+			.modify {
+				width: 24px;
+				height: 24px;
+				padding: 5px;
+
+				.hd_icon {
+					width: 12px;
+					height: 12px;
+					vertical-align: top;
+				}
+			}
+
+			> dl {
+				dd {
+					margin-top: 0;
+					// margin-top: 12px;
+				}
+			}
+
+			> .p_step {
+				display: block;
+				.title {
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-disabled-on);
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 9px;
+						left: -1px;
+						width: 3px;
+						height: 3px;
+						background-color: var(--color-icon-gray);
+						border-radius: 50%;
 					}
 				}
-				.modify {
-					width: 24px;
-					height: 24px;
-					padding: 5px;
+			}
+
+			// 아코디언 case
+			.acd_item_ty9 {
+				position: relative;
+				flex: 1;
+		
+				&:before {
+					content: "";
+					position: absolute;
+					top: 9px;
+					left: -15px;
+					width: 3px;
+					height: 3px;
+					background-color: var(--color-icon-gray);
+					border-radius: 50%;
+				}
+		
+				.acd_head {
+					.acd_btn {
+						display: flex;
+						// position: relative;
+						width: 100%;
+						font-size: var(--font-size-body-small);
+						color: var(--color-text-disabled-on);
+		
+						> span {
+							flex: 1;
+						}
+		
+						&:after {
+							// position: absolute;
+							// right: 0;
+							content:'';
+							width: 20px;
+							height: 20px;
+							background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 16px;
+						}
+					}
+		
+					&.active {
+						.acd_btn {
+							&:after {
+								transform: rotate(180deg);
+							}
+						}
+						& +.acd_cont {
+							dl {
+								dd {
+									.info {
+										// display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+		
+				.acd_cont {
+					.inner {
+						padding: var(--gap-4) 0 var(--padding-3);
+		
+						.info {
+							color: var(--color-text-disabled-on);
+							font-size: var(--font-size-body-small);
+						}
+			
+						dl {
+							position: relative;
+			
+							& ~ dl {
+								margin-top: 24px;
+							}
+
+							&:has(.modify_move){
+								dt {
+									padding-right: 29px;
+								}
+							}
+			
+							dt {
+								font-size: var(--font-size-body-xsmall);
+								font-weight: 700;
+								color: var(--color-text-subtle);
+								
+								&:after {
+									content: none;
+								}
+							}
+							dd {
+								margin-top: 8px !important;
+								
+								.modify_sub {
+									position: absolute;
+									top: 0;
+									right : 2px;
+									padding: 0;
+									width: auto;
+									height: auto;
+									border: none;
+									font-size: var(--font-size-button-small);
+									color: var(--color-text-subtle);
+									text-decoration: underline;
+								}
+
+								> ul {
+									> li {
+										position: relative;
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+
+		// 아코디언 + 아코디언 X
+		&.type_mix {
+			> li {
+				&:last-child {
+					&:before {
+						top: 0;
+					}
+				}
+				& ~ li {
+					padding-top: 8px;
+
+					dl {
+						.title {
+							&:after {
+								top: 16px;
+							}
+						}
+					}
+				}
+				
+				dl {
+					.title {
+						font-size: var(--font-size-body-small);
+					}
+				}
+				> .modify {
+					width: 20px;
+					height: 20px;
+					padding: 2px;
+					border: none;
+					border-radius: 0;
+
 					.hd_icon {
-						width: 12px;
-						height: 12px;
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				&.active {
+					padding-bottom: 16px;
+
+					& ~ li {
+						dl dd,
+						.modify {
+							display: block;
+						}
+					}
+
+					> dl {
+						padding-bottom: 24px;
+
+						.title {
+							&:after {
+								top: 16px;
+							}
+						}
+
+						&:after {
+							position: absolute;
+							bottom: 16px;
+							left: 14px;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+					}
+
+					&:last-child {
+						> dl {
+							&:after {
+								content: none;
+							}
+						}
+					}
+
+					.acd_item_ty9 {
+						padding-bottom: 24px;
+								
+						&:after {
+							position: absolute;
+							bottom: 0px;
+							left: 0;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+
+						.acd_head {
+							span {
+								font-weight: 700;
+								color: var(--color-text-basic);
+							}
+						}
 					}
 				}
 			}
@@ -245,6 +485,10 @@ body {
 		gap: var(--gap-5);
 	}
 }
+
+
+
+
 
 // aside panel
 .aside {
