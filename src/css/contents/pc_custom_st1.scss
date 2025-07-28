@@ -233,6 +233,13 @@ body {
 				padding-top: 12px;
 			}
 
+			&.active {
+				.last {
+					font-weight: 700;
+					color: var(--color-text-basic);
+				}
+			}
+
 			.modify {
 				width: 24px;
 				height: 24px;
@@ -521,8 +528,19 @@ body {
 						}
 					}
 
+
+					.last {
+						font-weight: 700;
+						color: var(--color-text-basic);
+					}
+
 					> dl {
 						padding-bottom: 24px;
+
+						> dt {
+							font-weight: 400;
+							color: var(--color-text-disabled-on);
+						}
 
 						.title {
 							&:after {
@@ -645,14 +663,16 @@ body {
 
 					> dl {
 						padding-bottom: 24px;
-	
-						// .title {
-						// 	font-weight: 400;
-						// 	color: var(--color-text-disabled-on));
-						// 	&:after {
-						// 		// top: 16px;
-						// 	}
-						// }
+
+						.title {
+							font-weight: 400;
+							color: var(--color-text-disabled-on);
+
+							&.last {
+								font-weight: 700;
+								color: var(--color-text-basic);
+							}
+						}
 	
 						&:after {
 							position: absolute;
@@ -662,22 +682,6 @@ body {
 							width: 100%;
 							height: 1px;
 							background-color: var(--color-divider-gray-light);
-						}
-
-						.title {
-							font-weight: 400;
-							color: var(--color-text-disabled-on);
-
-							&.bold {
-								font-weight: 700;
-								color: var(--color-text-basic);
-							}
-						}
-
-						> dl {
-							.title {
-								color: blue;
-							}
 						}
 					}
 				}
