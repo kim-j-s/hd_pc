@@ -673,6 +673,12 @@ body {
 								color: var(--color-text-basic);
 							}
 						}
+
+						> dl {
+							.title {
+								color: blue;
+							}
+						}
 					}
 				}
 			}
