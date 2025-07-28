@@ -23,9 +23,6 @@ body {
 	overflow: hidden;
 	color: var(--color-text-basic);
 }
-html {
-	scroll-behavior: smooth;
-}
 .hidden {
 	display: none;
 }
@@ -4749,8 +4746,8 @@ strong {
 }
 .btn_rd_close {
 	width: 32px;
-	height: 32px;
-	background: url(../images/icon/close_ty1.svg) no-repeat center/16px auto;
+	height: var(--size-height-5);
+	background: url(../images/icon/close_ty3.svg) no-repeat center/16px auto;
 	border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
 	border-radius: 100%;
 }
@@ -5939,6 +5936,9 @@ strong {
 .card_item_wrap .card_item ~ .card_item.non_chk .item_inner [class^="inp_"] .chk_label::before {
 	top: 1px;
 }
+.card_item_wrap .card_item ~ .card_item.non_chk .item_inner .sub_title {
+	color: var(--color-text-basic);
+}
 .card_item_wrap .card_item .item_inner {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -6028,7 +6028,7 @@ strong {
 }
 .card_item_wrap .card_item .card_link .item_top .title_info .main_title {
 	padding-right: 30px;
-	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right top 3.5px/20px auto;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 2px top 3.5px/20px auto;
 }
 .card_item_wrap .card_item .card_link[aria-disabled="true"] .item_top .title_info .main_title {
 	cursor: not-allowed;
@@ -6353,6 +6353,12 @@ strong {
 	padding-right: 30px;
 	background: url(../images/icon/arrowRight_disabled_ty2.svg) no-repeat right bottom/24px auto;
 }
+.card_item_wrap .card_item.disabled .hd_btn:disabled {
+	background-color: var(--color-button-disabled-fill);
+}
+.card_item_wrap .card_item.disabled .hd_btn:disabled span {
+	background-color: transparent;
+}
 .card_item_wrap .card_item.selected:not(.disabled) {
 	background-color: #fff;
 }
@@ -6542,6 +6548,7 @@ strong {
 }
 .card_list_wrap > li .card_wrap > dt .title + .sub_text {
 	margin-top: var(--gap-3);
+	color: var(--color-text-information);
 }
 .card_list_wrap > li .card_wrap > dt .icon {
 	padding-left: 32px;
@@ -6605,7 +6612,7 @@ strong {
 .card_list_wrap > li .card_wrap > dd {
 	margin-top: var(--gap-5);
 	padding-top: 16px;
-	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .card_list_wrap > li .card_wrap > dd.card_cont_list dl {
 	display: -webkit-box;
@@ -6890,7 +6897,7 @@ strong {
 	transform: translateY(-50%);
 	width: 30%;
 	height: 4px;
-	background: var(--color-light-primary-60);
+	background: var(--color-border-primary);
 	border-radius: 4px;
 }
 .card_item.donation .inner_cont .progress .bar .guage:after {
@@ -6904,7 +6911,7 @@ strong {
 	width: 8px;
 	height: 8px;
 	background: #fff;
-	border: 2px solid var(--color-light-primary-60);
+	border: 1px solid var(--color-border-primary);
 	border-radius: 999px;
 }
 .card_item.donation .inner_cont .progress .progress_info {
@@ -6994,7 +7001,7 @@ strong {
 }
 .form_card_case {
 	position: relative;
-	padding: 16px 20px 24px;
+	padding: var(--padding-8) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	border-radius: 24px;
 }
@@ -7002,7 +7009,8 @@ strong {
 .form_card_case + .btn_area.btn_area_space2 {
 	margin-top: var(--gap-5);
 }
-.form_card_case .select_item + .form_group_wrap {
+.form_card_case .select_item + .form_group_wrap,
+.form_card_case .title_h4 + .form_group_wrap {
 	margin-top: var(--gap-5);
 }
 .form_card_case + .btn_area {
@@ -10202,6 +10210,7 @@ strong {
 	position: absolute;
 	top: 0;
 	left: 0;
+	color: var(--color-text-primary);
 }
 .star_list > span:nth-child(2)::before {
 	content: "**";
@@ -10261,7 +10270,7 @@ strong {
 	color: var(--color-text-disabled-on);
 	padding-left: 26px;
 	background-repeat: no-repeat;
-	background-position: 4px 3px;
+	background-position: 4px 2px;
 	background-size: 16px auto;
 }
 .data_list li dl dt.person {
@@ -10344,6 +10353,9 @@ strong {
 }
 .data_list li dl dt.type {
 	background-image: url(../images/content/bi/icon_stepper_type.svg);
+}
+.data_list li dl dt.regist {
+	background-image: url(../images/content/bi/icon_stepper_motorcycle.svg);
 }
 .data_list li dl dd {
 	color: var(--color-text-basic);
@@ -10442,7 +10454,6 @@ strong {
 }
 .step_list > li dl dd .info {
 	margin-top: var(--gap-3);
-	display: none;
 }
 .step_list > li .modify {
 	width: 32px;
@@ -10471,8 +10482,8 @@ strong {
 .step_list > li.active .info {
 	display: block;
 }
-.step_list li.active ~ li dl dd,
-.step_list li.active ~ li .modify {
+.step_list > li.active ~ li dl dd,
+.step_list > li.active ~ li .modify {
 	display: none;
 }
 .repair_list .item {
@@ -10597,6 +10608,16 @@ strong {
 }
 .call_info_list .item + .item {
 	margin-top: var(--gap-5);
+}
+.has_title li + li {
+	margin-top: var(--gap-9);
+}
+.has_title li::before {
+	top: 43px;
+}
+.has_title li .pop_title_h2 {
+	margin-left: -18px;
+	margin-bottom: var(--gap-5);
 }
 /* list_box */
 /* box_list(목록형) */
@@ -14042,6 +14063,12 @@ strong {
 	width: 1px;
 	height: 52px;
 	background: var(--color-divider-gray-light);
+}
+.info_gray .list_depth_ty2_group {
+	margin: var(--padding-5) 0 0 var(--padding-3);
+}
+.info_gray .list_depth_ty2_group .list_depth_ty2 > li {
+	font-size: var(--font-size-body-medium);
 }
 .call_box {
 	margin-top: var(--gap-11);

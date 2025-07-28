@@ -1317,7 +1317,7 @@
 				color: var(--color-text-disabled-on);
 				padding-left: 26px;
 				background-repeat: no-repeat;
-				background-position: 4px 3px;
+				background-position: 4px 2px;
 				background-size: 16px auto;
 				//대상
 				&.person {
@@ -1427,6 +1427,10 @@
 				&.type { 
 					background-image: url(../images/content/bi/icon_stepper_type.svg);
 				}
+				//사업자번호
+				&.regist {
+					background-image: url(../images/content/bi/icon_stepper_motorcycle.svg);
+				}
 			}
 			dd {
 				color: var(--color-text-basic);
@@ -1477,6 +1481,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -1521,7 +1526,7 @@
 				}
 				.info {
 					margin-top: var(--gap-3);
-					display: none;
+					// display: none;
 				}
 			}
 		}
@@ -1563,14 +1568,14 @@
 			.info {
 				display: block;
 			}
+			
+			& ~ li {
+				dl dd,
+				.modify {
+					display: none;
+				}
+			}
 		}
-	}
-	li.active ~ li {
-		dl dd,
-		.modify {
-		  display: none;
-		}
-
 	}
 }
 

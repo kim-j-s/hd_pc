@@ -22,6 +22,8 @@
 	padding: 80px 0;
 	/* 전체메뉴 검색 팝업 zindex 1500 */
 	/* 전체메뉴 검색 팝업 zindex 1500 */
+	/* iframe 대응용 */
+	/* iframe 대응용 */
 }
 .popup_wrap.active {
 	visibility: visible;
@@ -335,6 +337,24 @@
 }
 .popup_wrap .card_item_wrap .card_item .item_top .title_info .main_title.tooltip_add .tooltip_wrap .tooltip_panel {
 	width: calc(100vw - 86px);
+}
+.popup_wrap:has(.abc) > .popup_container {
+	display: block;
+}
+.popup_wrap:has(.abc) > .popup_container > .popup_inner {
+	display: block;
+	height: 100%;
+}
+.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont {
+	display: block;
+	height: 100%;
+	background-color: blue;
+}
+.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont iframe {
+	background-color: red;
+}
+.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont iframe .popup_wrap {
+	background-color: blue;
 }
 /* popup_full */
 .popup_wrap.popup_wrap_type4.big .popup_container {
