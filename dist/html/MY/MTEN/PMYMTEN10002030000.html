@@ -35,7 +35,7 @@
 		<script type="text/javascript" src="../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
-		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
@@ -1683,7 +1683,9 @@
 							<h2 class="p_title">
 								<strong>자동차번호 확정/변경</strong>
 							</h2>
-							<div class="sub_desc"><strong>확정/변경할 정보</strong>를 입력해주세요</div>
+							<!-- s: 25-07-28 수정 -->
+							<div class="sub_desc"><strong>확정/변경</strong>할 <strong>정보</strong>를 입력해주세요</div>
+							<!-- e: 25-07-28 수정 -->
 						</div>
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
@@ -1703,7 +1705,7 @@
 							<!-- e: 확정 -->
 							<!-- s: 변경 -->
 							<!-- <dl>
-									<dt>자동차번호</dt>
+									<dt>차량번호</dt>
 									<dd>18루**22</dd>
 								</dl> -->
 							<!-- e: 변경 -->
@@ -1714,18 +1716,19 @@
 						</div>
 					</div>
 
+					<!-- s: 25-07-28 수정 -->
 					<div class="form_group_wrap">
 						<div class="form_line">
-							<div class="label_tit">확정/변경 자동차번호</div>
+							<div class="label_tit">확정/변경 차량번호</div>
 							<div class="input_text">
 								<div class="inp">
-									<input type="text" placeholder="123가**67(띄어쓰기 없이)" maxlength="9" title="확정/변경 자동차번호 입력" />
+									<input type="text" placeholder="123가**67(띄어쓰기 없이)" maxlength="9" title="확정/변경 차량번호 입력" />
 									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 								</div>
 							</div>
 						</div>
 						<div class="form_line">
-							<div class="label_tit">변경 기준일</div>
+							<div class="label_tit">변경기준일</div>
 							<div class="input_text calendar">
 								<div class="inp">
 									<input type="tel" class="inp_picker" value="2025.12.18" title="날짜를 입력해주세요" />
@@ -1734,15 +1737,16 @@
 							</div>
 							<ul class="list_ty2">
 								<li>
-									변경기준일은 다음날짜로 선택해 주세요.
+									변경기준일은 다음 날짜로 선택해주세요.
 									<ul class="list_ty5">
-										<li>자동차번호 확정: 책임개시일(대체후 차량인 경우 차량대체일)</li>
+										<li>자동차번호 확정: 책임개시일(대체 후 차량인 경우 차량대체일)</li>
 										<li>자동차번호 변경: 변경등록일</li>
 									</ul>
 								</li>
 							</ul>
 						</div>
 					</div>
+					<!-- e: 25-07-28 수정 -->
 
 					<div class="info_gray ty2">
 						<div class="insurance_policyBox">

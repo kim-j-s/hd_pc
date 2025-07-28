@@ -35,7 +35,7 @@
 		<script type="text/javascript" src="../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../js/common_pc.js"></script>
 		<script type="text/javascript" src="../../../js/libs/lottie-player.js"></script>
-		<script type="text/javascript" src="../../../js/popup_pc.js"></script>
+		<script type="text/javascript" src="../../../js/popup.js"></script>
 		<script type="text/javascript" src="../../../js/dragging.js"></script>
 		<script type="text/javascript" src="../../../js/stepper.js"></script>
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
@@ -60,6 +60,13 @@
 					.popup_container {
 						/* width: 800px; */
 					}
+				}
+			}
+			.dmpdmpdmp {
+				height: 500px;
+				background: blue;
+				&.dmpdmpdmp_ty2 {
+					background-color: red;
 				}
 			}
 		</style>
@@ -1771,6 +1778,11 @@
 			</div>
 		</div> -->
 			<div id="container" class="container">
+				<!-- <div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
+				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div>
+				<div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
+				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div> -->
+
 				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button> -->
 				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
 				<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
@@ -1802,16 +1814,9 @@
 
 		<!-- Full 팝업 -->
 		<div class="popup_wrap popup_wrap_type4" id="if" role="dialog" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('if');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">팝업 타이틀</div>
-					</div>
-					ifrma 테스트 pw_iframe_type
-					<button type="button" class="popup_close" onclick="closeHDPopup('if');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
+			<!-- <div class="pop_cont abc"> -->
+			<iframe src="https://kim-j-s.github.io/hd_mo/dist/html/GU/LI00/MGULI0010006000000.html" frameborder="0" scrolling="no" style="width: 100%; height: 100%"></iframe>
+			<!-- </div> -->
 		</div>
 		<!-- // Full 팝업 -->
 
