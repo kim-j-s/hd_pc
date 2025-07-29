@@ -788,7 +788,116 @@
 
 						<div class="hpi_sub_utils">
 							<div class="item">
-								<button type="button" class="hus_btn hsu_alarm"><span class="text">알림 팝업 열기</span></button>
+								<button type="button" class="hus_btn hsu_alarm" onclick="openHDPopup(this,'pop_c_alarm');">
+									<span class="text">알림 팝업 열기</span>
+								</button>
+								<div class="popup_wrap popup_wrap_type4" id="pop_c_alarm" role="dialog" aria-hidden="true">
+									<div class="popup_container">
+										<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_c_alarm');"></div>
+										<div class="popup_inner">
+											<div class="popup_head">
+												<div class="popup_head_title">알림</div>
+											</div>
+											<div class="popup_cont">
+												<div class="popup_content">
+													<div class="tag_item_wrap">
+														<button type="button" class="tag_item size_m c_ty02 active"><span class="text">#전체</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#일상</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#계약</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#혜택</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#이벤트</span></button>
+													</div>
+
+													<div class="tag_item_cont">
+														<div class="s_title">2025.01.06</div>
+														<ul class="card_list_wrap_ty4">
+															<li>
+																<div class="card_item">
+																	<div class="item_inner">
+																		<div class="inner_cont">
+																			<div class="badge_wrap">
+																				<span class="hd_badge outline solid_pastel c_primary size_m">이벤트</span>
+																			</div>
+																			<h3 class="item_title">운전자보험 7% 할인해드려요.</h3>
+																			<p class="item_desc">자동차보험 가입자 대상 운전자보험을 할인해드려요.</p>
+																		</div>
+																	</div>
+																	<div class="img_box">
+																		<img src="../../../images/content/bn/img_MBNEVNT10000000000.svg" alt="이벤트이미지" />
+																	</div>
+																</div>
+															</li>
+														</ul>
+
+														<div class="s_title">2025.01.05</div>
+														<ul class="card_list_wrap_ty4">
+															<li>
+																<div class="card_item">
+																	<div class="item_inner">
+																		<div class="inner_cont">
+																			<div class="badge_wrap">
+																				<span class="hd_badge outline solid_pastel c_secondary size_m">일상</span>
+																			</div>
+																			<h3 class="item_title">자동차보험 종료안내</h3>
+																			<p class="item_desc">
+																				15가1321 자동차의 보험이 곧 종료되요.<br />
+																				보험 갱신하고 앞으로도 현대해상과 함께해요 :)
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<div class="card_item" role="button" tabindex="0">
+																	<a href="#">
+																		<div class="item_inner">
+																			<div class="inner_cont">
+																				<div class="badge_wrap">
+																					<span class="hd_badge outline solid_pastel c_success size_m">혜택</span>
+																				</div>
+																				<h3 class="item_title">마일리지 환급금 이용 TIP</h3>
+																				<p class="item_desc">
+																					마일리지 환급예정금액이 있나요?<br />
+																					자동차보험 환급예정금액으로 결제해보세요.
+																				</p>
+																			</div>
+																		</div>
+																	</a>
+																</div>
+															</li>
+														</ul>
+
+														<div class="s_title">2025.01.03</div>
+														<ul class="card_list_wrap_ty4">
+															<li>
+																<div class="card_item">
+																	<div class="item_inner">
+																		<div class="inner_cont">
+																			<div class="badge_wrap">
+																				<span class="hd_badge outline solid_pastel c_warning size_m">계약</span>
+																			</div>
+																			<h3 class="item_title">가입안내</h3>
+																			<p class="item_desc">다이렉트 굿앤굿어린이보험 신규가입</p>
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+
+														<div class="btn_area center view_more">
+															<button type="button" class="btn btn_more_view">
+																<span class="text">
+																	더보기 <span class="counter"><strong class="btn_more_view_now">1</strong> / 2</span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="popup_close" onclick="closeHDPopup('pop_c_alarm');"><span class="blind">팝업 닫기</span></button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="item">
 								<button type="button" class="hus_btn hsu_cart"><span class="text">장바구니 팝업 열기</span></button>
@@ -1696,7 +1805,9 @@
 						<div class="tab_wrap_list_ty1" role="tablist"><button type="button" class="tab_btn active" role="tab" aria-selected="true" aria-controls="tabPanel01" id="tab01">직접 사진 등록</button> <button type="button" class="tab_btn" role="tab" aria-selected="false" aria-controls="tabPanel02" id="tab02">문자로 링크 받기</button></div>
 
 						<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanel01">
-							<h3 class="title_h3"><span class="point">필수</span> 사진등록</h3>
+							<!-- s: 25-07-29 수정 -->
+							<h3 class="title_h3"><span class="point">[필수]</span> 사진등록</h3>
+							<!-- e: 25-07-29 수정 -->
 							<div class="space_list_ty2">
 								<div class="acd_item acd_item_ty2">
 									<div class="acd_head">
