@@ -96,7 +96,10 @@
 		top: 0;
 	}
 
-
+	&.sticky_fix {
+		padding-bottom: var(--gap-8);
+		margin-bottom: 0;
+	}
 }
 
 .tag_item_move {

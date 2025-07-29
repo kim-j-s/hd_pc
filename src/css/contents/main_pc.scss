@@ -22,6 +22,88 @@
 		}
 	}
 
+
+	// 메인 Visual
+	.main_visual_box {
+		min-height: 260px;
+		background: url(../images/content/main/img_main_car_kv.png) no-repeat right top / auto 260px;
+		.title_view_wrap {
+			.page_title {
+				.p_info {
+					color: var(--color-text-secondary-light);
+				}
+			}
+			.btn_area {
+				margin-top: var(--gap-5);
+				.hd_btn {
+					min-width: 160px;
+				}
+			}
+		}
+	}
+
+	.main_product_box {
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-5);
+
+		// 메인 Banner 
+		.banner_box {
+			gap: var(--gap-5);
+	
+			> * {
+				flex: 1;
+			}
+		}
+	
+		// 추천 상품
+		.main_recommend_box {
+			padding: var(--padding-6) var(--padding-7) var(--padding-5);
+			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+			border-radius: var(--radius-large2);
+
+			.title {
+				font-size: var(--font-size-heading-xsmall);
+				font-weight: 700;
+				color: var(--color-text-bolder);
+
+				& + .re_product_list {
+					margin-top: var(--gap-5);
+				}
+			}
+
+			.re_product_list {
+				display: flex;
+				> li {
+					flex: 1;
+
+					.re_link {
+						position: relative;
+						display: block;
+						font-size: var(--font-size-body-small);
+						color: var(--color-text-subtle);
+						text-align: center;
+
+						.tip_item {
+							display: none;
+						}
+					}
+
+					& ~ li {
+						&:after {
+							content:'';
+							position: absolute;
+							top: 0;
+							right: 1px;
+							width: 1px;
+							height: 67px;
+							background-color:  var(--color-divider-gray-light);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
