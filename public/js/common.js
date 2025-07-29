@@ -1393,8 +1393,10 @@ $(function(){
   const $doneButton = $('.done');
   const $moveTarget = $popupCont.find('.move');
 
-  let moveTargetPosition = $moveTarget.position().top;
-
+  let moveTargetPosition = 0;
+	if ($moveTarget.length) {
+		moveTargetPosition = $moveTarget.position().top;
+	}
   $doneButton.hide();
 
   // 스크롤 이벤트
