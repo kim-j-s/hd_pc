@@ -511,9 +511,7 @@
 				$('.ftr_sns_open').attr('title', '다이렉트 SNS 목록보기');
       }
     }, 10);
-  });
-
-	
+  });	
 
 	// 이벤트 위임 - 탭 클릭 이벤트
 	$(document).off('click.positionEventTab').on('click.positionEventTab', '.position_event_wrap .position_event_tab .tag_item', function () {
@@ -567,8 +565,6 @@
 	});
 
 })();
-
-
 
 
 /* Tab Scroll */
