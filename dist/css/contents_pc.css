@@ -205,6 +205,10 @@ body {
 .side_panel .step_list > li ~ li {
 	padding-top: 12px;
 }
+.side_panel .step_list > li.active .last {
+	font-weight: 700;
+	color: var(--color-text-basic);
+}
 .side_panel .step_list > li .modify {
 	width: 24px;
 	height: 24px;
@@ -317,6 +321,14 @@ body {
 	width: 20px;
 	height: 20px;
 	background: url(../images/icon/arrowDown_ty3.svg) no-repeat center/16px;
+}
+.side_panel .step_list > li .acd_item_ty9 .acd_head.last .acd_btn {
+	font-weight: 700;
+	color: var(--color-text-basic);
+}
+.side_panel .step_list > li .acd_item_ty9 .acd_head.last .acd_btn[aria-expanded="false"] {
+	font-weight: 700;
+	color: var(--color-text-basic);
 }
 .side_panel .step_list > li .acd_item_ty9 .acd_head.active .acd_btn:after {
 	-webkit-transform: rotate(180deg);
@@ -432,8 +444,16 @@ body {
 .side_panel .step_list.type_mix > li.active ~ li .modify {
 	display: block;
 }
+.side_panel .step_list.type_mix > li.active .last {
+	font-weight: 700;
+	color: var(--color-text-basic);
+}
 .side_panel .step_list.type_mix > li.active > dl {
 	padding-bottom: 24px;
+}
+.side_panel .step_list.type_mix > li.active > dl > dt {
+	font-weight: 400;
+	color: var(--color-text-disabled-on);
 }
 .side_panel .step_list.type_mix > li.active > dl .title:after {
 	top: 16px;
@@ -513,6 +533,14 @@ body {
 .side_panel .step_list.multiple > li.active > dl {
 	padding-bottom: 24px;
 }
+.side_panel .step_list.multiple > li.active > dl .title {
+	font-weight: 400;
+	color: var(--color-text-disabled-on);
+}
+.side_panel .step_list.multiple > li.active > dl .title.last {
+	font-weight: 700;
+	color: var(--color-text-basic);
+}
 .side_panel .step_list.multiple > li.active > dl:after {
 	position: absolute;
 	bottom: 16px;
@@ -521,17 +549,6 @@ body {
 	width: 100%;
 	height: 1px;
 	background-color: var(--color-divider-gray-light);
-}
-.side_panel .step_list.multiple > li.active > dl .title {
-	font-weight: 400;
-	color: var(--color-text-disabled-on);
-}
-.side_panel .step_list.multiple > li.active > dl .title.bold {
-	font-weight: 700;
-	color: var(--color-text-basic);
-}
-.side_panel .step_list.multiple > li.active > dl > dl .title {
-	color: blue;
 }
 .side_panel .panel_cont {
 	display: -webkit-box;
@@ -2161,13 +2178,21 @@ body {
 .sns_box {
 	margin-bottom: 16px;
 }
-.bg_list_case02 {
+.bg_list.bg_list_case02 {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.bg_list.bg_list_case02 > li.year_status {
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 .card_item.donation .img_box {
 	width: auto;

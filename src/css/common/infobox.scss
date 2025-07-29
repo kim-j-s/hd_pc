@@ -240,6 +240,9 @@
 		font-size: var(--font-size-body-small);
 		&.middle {
 			align-items: center;
+			.big {
+				font-size: var(--font-size-body-large);
+			}
 		}
 		&.bottom {
 			align-items: flex-end;
@@ -329,8 +332,8 @@
 	}
 	.total {
 		.big {
-			//font-size: 20px;
-			font-size: var(--font-size-body-large);
+			font-size: 20px;
+			//font-size: var(--font-size-body-large);
 		}
 		&:not(.car) {
 			dl {
