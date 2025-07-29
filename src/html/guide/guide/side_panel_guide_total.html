@@ -1090,6 +1090,11 @@
 	</li>
 	<li style="flex: 1; width:auto">
 		<div class="guide_h4 pc">2. 입력 후</div>
+		<!-- 
+			* 자동차 Case 진행 단계별 적용사항
+			- 진행 단계에 따라 점진적으로 해당 단계까지 active 클래스 추가 ex) 4단계일 시, 1~4단계까지 active 클래스 추가
+			- 현재 단계일 떄, last 클래스 추가
+		-->
 		<ul style="display:flex; gap:20px;">
 			<li>
 				<!-- s: 사이드 패널 -->
@@ -1135,7 +1140,8 @@
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									{{#> cp/accordion ac-title="1. 차량정보" ac-active=true}}
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
+									{{#> cp/accordion ac-title="1. 차량정보" ac-active=true head-class="last"}}
 										<dl class="item_depth">
 											<dt>차량선택</dt>
 											<dd>
@@ -1553,7 +1559,8 @@
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									{{#> cp/accordion ac-title="2. 운전자정보" ac-active=true}}
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
+									{{#> cp/accordion ac-title="2. 운전자정보" ac-active=true head-class="last"}}
 										<dl class="item_depth">
 											<dt>운전범위</dt>
 											<dd>
@@ -1920,7 +1927,8 @@
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									{{#> cp/accordion ac-title="3. 보험료확인" ac-active=true}}
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
+									{{#> cp/accordion ac-title="3. 보험료확인" ac-active=true head-class='last'}}
 										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
@@ -2261,7 +2269,8 @@
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									{{#> cp/accordion ac-title="4. 피보험자/계약자정보" ac-active=true}}
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
+									{{#> cp/accordion ac-title="4. 피보험자/계약자정보" ac-active=true head-class="last"}}
 										<dl class="item_depth">
 											<dt>피보험자/계약자정보</dt>
 											<dd>
@@ -2980,6 +2989,11 @@
 
 <!-- *** 쓰실 땐, 사이드 패널 영역만(주석 참고) 사용! -->
 <div class="guide_h1 pc">보험가입 진행 정보 - 자동차 예시 Case</div>
+<!-- 
+	* 자동차 Case 진행 단계별 적용 참고사항
+	- 진행 단계에 따라 점진적으로 해당 단계까지 active 클래스 추가 ex) 4단계일 시, 1~4단계까지 active 클래스 추가
+	- 현재 단계일 떄, last 클래스 추가
+-->
 <ul style="display:flex; gap:40px;">
 	<li>
 		<div class="guide_h4 pc">이륜차</div>
@@ -3041,7 +3055,8 @@
 						<!-- 입력진행 후 -->
 						<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 						<div class="acd_item acd_item_ty9">
-							{{#> cp/accordion ac-title="1. 차량정보" ac-active=true ac-title="tttt"}}
+							<!-- 해당되는 단계에만, last 클래스 추가 -->
+							{{#> cp/accordion ac-title="1. 차량정보" ac-active=true head-class="last"}}
 								<dl class="item_depth">
 									<dt>차량선택</dt>
 									<dd>
