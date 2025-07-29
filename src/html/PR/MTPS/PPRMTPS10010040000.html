@@ -24,7 +24,64 @@
 					</div>
 				</div>
 
+				<!-- 가입설계서 확인 전 -->
         <div class="info_gray summary">
+          <h2 class="title_h2">
+						다이렉트 자동차보험(CM개인용)
+						<!-- <span class="badge_wrap">
+							<span class="hd_badge outline solid_pastel c_primary size_m">확인완료</span>
+						</span> -->
+					</h2>
+          <div class="data_box df_type_w_ty9">
+            <dl>
+              <dt>자동차번호</dt>
+              <dd><strong>123가**67</strong></dd>
+            </dl>
+            <dl>
+              <dt>
+                총 보험료
+              </dt>
+              <dd>
+                200,000 원
+              </dd>
+            </dl>
+            <dl>
+              <dt>보험기간</dt>
+              <dd>2025.01.01 ~2026.01.01</dd>
+            </dl>
+            <dl>
+              <dt>초회보험료</dt>
+              <dd>208,260원(6회납)</dd>
+            </dl>
+            <dl>
+              <dt>차량정보(연식)</dt>
+              <dd>더 뉴 EV6(롱레인지)(2025)</dd>
+            </dl>
+            <dl>
+              <dt>계약자/피보험자</dt>
+              <dd>김*대/김*대</dd>
+            </dl>
+            <dl>
+              <dt>운전자범위</dt>
+              <dd>기명피보험자 1인한정</dd>
+            </dl>
+            <dl>
+              <dt>연령한정</dt>
+              <dd>
+                만43세 이상 만 48세 이상 연령한정 <br>(자동변경 예정: 2025.07.01)
+              </dd>
+            </dl>
+          </div>
+          <div class="btn_area center">
+						<!-- s: 25-07-29 수정 -->
+            {{> cp/button type="3" size="3" rightIcon="documentSvg" b-text="가입 설계 보기"}}
+						<!-- e: 25-07-29 수정 -->
+            {{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
+          </div>
+        </div>
+
+				<!-- 가입설계서 확인 후 -->
+				<div class="info_gray summary">
           <h2 class="title_h2">
 						다이렉트 자동차보험(CM개인용)
 						<span class="badge_wrap">
@@ -72,16 +129,21 @@
             </dl>
           </div>
           <div class="btn_area center">
+            {{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 설계 보기"}}
             {{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
           </div>
         </div>
+
         <div class="acd_item acd_item_ty2">
           {{#> cp/accordion ac-title="계약 주요 사항을 모두 확인하였습니다." cont-class="" ac-active=true }}
-            {{> cp/checkbox labelname="가입설계서 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-1" checked=true disabled=true }}
+						<!-- s: 25-07-29 수정 -->
+            <!-- 삭제 {{> cp/checkbox labelname="가입설계서 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-1" checked=true disabled=true }} -->
             {{> cp/checkbox labelname="상품설명서 확인" label_class="chk_label_ty3" ag_more=true id="checkbox01-2" checked=true disabled=true }}
             {{> cp/checkbox labelname="상품설명서 주요 내용 확인" label_class="chk_label_ty3" ag_more=true id="checkbox01-3" checked=true disabled=true }}
-            {{> cp/checkbox labelname="상품 약관 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-4" }}
-          {{/ cp/accordion }}
+            {{> cp/checkbox labelname="개인용 상품 약관 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-4" }}
+            {{> cp/checkbox labelname="업무용 상품 약관 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-5" }}   	
+						<!-- s: 25-07-29 수정 -->
+						{{/ cp/accordion }}
         </div>
         <div class="checkbox_group_wrap">
           {{> cp/checkbox id="checkbox100_1" checkbox_class="rd_box" label_class="chk_label_ty3" labelname="보험계약 해지 시 통신수단(고객콜센터, 1899-6782)을 이용한 보험계약 해지에 동의합니다." }}
