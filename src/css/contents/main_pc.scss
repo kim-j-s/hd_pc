@@ -1,6 +1,7 @@
 .main_cont_wrap {
 
 	&.main_cont_wrap_ty2 {
+		padding-top: var(--gap-11);
 		padding-bottom: var(--gap-12);
 		background: var(--color-surface-secondary-subtler);
 	}
@@ -14,6 +15,7 @@
 
 		.mc_l_cont {
 			flex: 1 1 0;
+			padding-bottom: var(--gap-11);
 		}
 
 		.mc_r_cont {
@@ -76,16 +78,65 @@
 				display: flex;
 				> li {
 					flex: 1;
+					position: relative;
+
+					&:has(.re_link:hover, .re_link:focus){
+						& + li {
+							&:after {
+								content: none;
+							}
+						}
+					}
 
 					.re_link {
-						position: relative;
 						display: block;
+						padding: 65px var(--padding-7) var(--padding-2);
+						background-repeat: no-repeat;
+						background-position: center 5px;
+						background-size: 56px auto;
 						font-size: var(--font-size-body-small);
 						color: var(--color-text-subtle);
 						text-align: center;
 
 						.tip_item {
 							display: none;
+							left: 50%;
+							bottom: calc(100% - 2px);
+							transform: translateX(-50%);
+							padding: 0;
+							white-space: nowrap;
+
+							.tip_item_cont {
+								&:before {
+									left: calc(50% - 6px);
+								}
+							}
+						}
+
+						&.driver {
+							background-image: url(../images/content/main/icon_product_driver.svg);
+						}
+						&.children {
+							background-image: url(../images/content/main/icon_product_child.svg);
+						}
+						&.pet {
+							background-image: url(../images/content/main/icon_product_pet.svg);
+						}
+						&.home {
+							background-image: url(../images/content/main/icon_product_home.svg);
+						}
+						&.travel {
+							background-image: url(../images/content/main/icon_product_travel.svg);
+						}
+
+						&:focus,
+						&:hover {
+							background-color: var(--color-action-secondary-hover);
+							border-radius: var(--radius-medium4);
+
+							.tip_item {
+								display: block;
+							}
 						}
 					}
 
@@ -93,8 +144,9 @@
 						&:after {
 							content:'';
 							position: absolute;
-							top: 0;
-							right: 1px;
+							top: 12px;
+							left: 0;
+							z-index: -1;
 							width: 1px;
 							height: 67px;
 							background-color:  var(--color-divider-gray-light);
