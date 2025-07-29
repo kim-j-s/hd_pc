@@ -2,19 +2,65 @@
 <div id="wrap" class="wrap">
 	{{> layout/header_pc }}
 	<div id="container" class="container main_container">
-
 		<div class="main_cont_wrap">
 			<div class="mcw_cont">
-				<div class="mc_l_cont"></div>
-				<div class="mc_r_cont"></div>
+				<div class="mc_l_cont">
+					<!-- 메인 Visual-->
+					<div class="main_visual_box">
+						<div class="title_view_wrap">
+							<div class="page_title">
+								<div class="p_info secondary">인터넷가입 오프라인 평균 18.3% 저렴하게! 자동차보험</div>
+								<h2 class="p_title">
+									마음은 가볍게<br>
+									<strong>자동차보험은 든든하게</strong>
+								</h2>
+								<div class="btn_area">
+									{{> cp/button type="1" size="2" b-text="보험료계산"}}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 메인 상품영역 -->
+					<div class="main_product_box">
+						<!-- 메인 Banner -->
+						<div class="banner_box">
+							<a href="#">
+								<img src="../../../images/content/main/img_main_banner01.png" alt="다양한 할인 특약을 만나보세요">
+							</a>
+							<a href="#">
+								<img src="../../../images/content/main/img_main_banner02.png" alt="자동차 보험 결제 혜택 최대 3만원" />
+							</a>
+						</div>
+
+						<!-- 추천 상품 -->
+						<div class="main_recommend_box">
+							<div class="title">이런 상품 어떠세요?</div>
+							<ul class="re_product_list">
+								<li>
+									<a href="#" class="re_link">
+										운전자
+										<span class="tip_item top">
+											<span class="tip_item_cont">내용</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="mc_r_cont">
+
+				</div>
 			</div>
 		</div>
 
 		<!-- 하단 푸른 영역 -->
-		<div class="main_cont_wrap main_cont_wrap_ty2 position_event_wrap">
+		<div class="main_cont_wrap main_cont_wrap_ty2 ">
 			<div class="mcw_cont">
 				<!-- 상품별 리스트 -->
-				<div class="mc_l_cont">
+				<div class="mc_l_cont position_event_wrap">
 
 					<div class="tag_item_wrap sticky position_event_tab">
 						<button type="button" class="tag_item size_m c_ty02 active"><span class="text" title="자동차 위치로 이동하기">자동차</span></button>
@@ -27,9 +73,9 @@
 						<button type="button" class="tag_item size_m c_ty02"><span class="text" title="연금/저축 위치로 이동하기">연금/저축</span></button>
 					</div>
 
-					<div class="mcont_items_wrap position_event_content">
+					<div class="mcont_items_wrap sticky position_event_content">
 						<!-- 자동차 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
 								<h3 class="main_prd_title">자동차</h3>
 								<div class="main_prd_cont">
@@ -84,7 +130,7 @@
 						<!-- 자동차 -->
 
 						<!-- 운전자 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
 								<h3 class="main_prd_title">운전자</h3>
 								<div class="main_prd_cont">
@@ -128,9 +174,9 @@
 						<!-- 배너 -->
 
 						<!-- 어린이/태아 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">어린이/태아</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic3">
 										<div class="mpc_item_cont">
@@ -161,9 +207,9 @@
 						<!-- 어린이/태아 -->
 
 						<!-- 펫 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">펫</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic4">
 										<div class="mpc_item_cont">
@@ -194,9 +240,9 @@
 						<!-- 펫 -->
 
 						<!-- 주택 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">주택</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic5">
 										<div class="mpc_item_cont">
@@ -249,9 +295,9 @@
 						<!-- 배너 -->
 
 						<!-- 건강/암 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">건강/암</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic6">
 										<div class="mpc_item_cont">
@@ -291,9 +337,9 @@
 						<!-- 건강/암 -->
 
 						<!-- 여행/레저 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">여행/레저</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic7">
 										<div class="mpc_item_cont">
@@ -342,9 +388,9 @@
 						<!-- 여행/레저 -->
 
 						<!-- 연금/저축 -->
-						<div class="mcont_items">
+						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title"></h3>
+								<h3 class="main_prd_title">연금/저축</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic8">
 										<div class="mpc_item_cont">
@@ -376,13 +422,7 @@
 
 						<!-- 새로운 소식 -->
 						<!-- 새로운 소식 -->
-
-
 					</div>
-					
-					
-					
-					
 					
 				</div>
 				<!-- 상품별 리스트 -->
