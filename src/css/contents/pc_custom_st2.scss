@@ -2183,10 +2183,21 @@
 
 
 //bg_list
-.bg_list_case02 {
-	display: flex;
-	justify-content: space-between;
+.bg_list {
+	&.bg_list_case02 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& > li {
+			&.year_status { 
+				padding: 0;
+				margin: 0;
+				border: none;
+			}
+		}
+	}
 }
+
 
 
 .card_item.donation {
