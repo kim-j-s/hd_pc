@@ -1427,6 +1427,10 @@
 				&.regist {
 					background-image: url(../images/content/bi/icon_stepper_motorcycle.svg);
 				}
+				//법인
+				&.company {
+					background-image: url(../images/content/bi/icon_stepper_type.svg);
+				}
 			}
 			dd {
 				color: var(--color-text-basic);

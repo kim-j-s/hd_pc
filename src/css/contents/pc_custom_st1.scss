@@ -382,6 +382,18 @@ body {
 							background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 16px;
 						}
 					}
+						
+					&.last {
+						.acd_btn {
+							font-weight: 700;
+							color: var(--color-text-basic);
+							
+							&[aria-expanded="false"]{
+								font-weight: 700;
+								color: var(--color-text-basic);
+							}
+						}
+					}
 		
 					&.active {
 						.acd_btn {
