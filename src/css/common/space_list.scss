@@ -68,3 +68,27 @@
 	}
 
 }
+
+/* 컨텐츠 show/hide 용 */
+.fake_form_group_wrap {
+	+ .form_group_wrap {
+		margin-top: var(--gap-8);
+	}
+	// &.hidden,
+	&[style*="display: none"] {
+		+ .form_group_wrap {
+			margin-top: 0;
+		}		
+	}
+}
+
+.form_group_wrap {
+	+ .fake_form_group_wrap {
+		> .title_h3 {
+			&:first-child {
+				margin-top: var(--gap-11);
+			}
+		}
+	}
+}
+/* 컨텐츠 show/hide 용 */

@@ -429,7 +429,8 @@
 			}
 		}
 
-		&:has(.phone.readonly) {
+		&:has(.phone.readonly),
+		&:has(.phone.disabled) {
 			overflow: hidden;
 			&::before {
 				content: '';
