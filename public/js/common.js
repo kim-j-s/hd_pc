@@ -1402,45 +1402,63 @@ $(function(){
 	// s: 상품설명서 주요 내용 스크롤 이동 버튼
 	const $popupCont = $('.popup_cont');
   const $fixedButton = $('.scroll_down');
-  const $doneButton = $('.done');
   const $moveTarget = $popupCont.find('.move');
 
-  let moveTargetPosition = 0;
+	let moveTargetPosition = 0;
 	if ($moveTarget.length) {
 		moveTargetPosition = $moveTarget.position().top;
 	}
-  $doneButton.hide();
+
+	let scrollingChk = false; // 스크롤 중복 실행 방지 플래그	
 
   // 스크롤 이벤트
   $popupCont.on('scroll', function() {
-    const currentScrollTopInPopup = $(this).scrollTop();
-    const scrollHeight = this.scrollHeight;
-    const clientHeight = $(this).height();
-
-    // 스크롤이 최하단에 도달했는지 확인
-    if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
-      $fixedButton.hide();
-      $doneButton.show();
-    } else {
-      $fixedButton.show();
-      $doneButton.hide();
-    }
-  });
+		if (scrollingChk) return;
+		if ( $(this).find('.move').length === 0 ) return; // .move가 없으면 실행하지 않음
+		const $thisPopupCont = $(this); // 현재 스크롤된 .popup_cont
+		const $popupWrap = $thisPopupCont.closest('.popup_wrap');
+		const $fixedButton = $popupWrap.find('.scroll_down');
+		const $doneButton = $popupWrap.find('.done');
+	
+		const currentScrollTopInPopup = $thisPopupCont.scrollTop();
+		const scrollHeight = this.scrollHeight; // DOM element 접근
+		const clientHeight = $thisPopupCont.height();
+	
+		// console.log('currentScrollTopInPopup: ' + currentScrollTopInPopup);
+	
+		// 스크롤이 최하단에 도달했는지 확인
+		if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
+			$fixedButton.hide();
+			$doneButton.show();
+		}
+	});
 
   // 하단 고정 버튼 클릭 이벤트
-  $fixedButton.on('click', function(e) {
-    e.preventDefault();
-
-    const currentScrollTopInPopup = $popupCont.scrollTop();
-
+	
+	
+  $fixedButton.on('click', function() {
+		if (scrollingChk) return; // 이미 스크롤 중이면 중복 실행 방지
+		scrollingChk = true; // 스크롤 시작 시 플래그 설정
+		// 스크롤 애니메이션
+		const $popupContThis = $(this).closest('.popup_wrap').find('.popup_cont');
+    const currentScrollTopInPopup = $popupContThis.scrollTop();
     if (currentScrollTopInPopup < moveTargetPosition - 88) {
-      $popupCont.animate({
+      $popupContThis.animate({
         scrollTop: moveTargetPosition - 88
-      }, 800);
+      }, 800, function(){
+				moveTargetPosition = $popupContThis.scrollTop();
+				scrollingChk = false; // 스크롤 완료 후 플래그 해제
+			});
+			// console.log('event 1');
     } else {
-      $popupCont.animate({
-        scrollTop: $popupCont[0].scrollHeight - $popupCont.height()
-      }, 800);
+      $popupContThis.animate({
+        scrollTop: $popupContThis[0].scrollHeight - $popupContThis.outerHeight()
+      }, 800, function(){
+				scrollingChk = false; // 스크롤 완료 후 플래그 해제
+				$(this).closest('.popup_wrap').find('.scroll_down').hide();
+				$(this).closest('.popup_wrap').find('.done').show();
+			});
+			// console.log('event 2');
     }
   });
 	// e: 상품설명서 주요 내용 스크롤 버튼
