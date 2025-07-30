@@ -42,6 +42,13 @@
 				}
 			}
 		}
+
+		.visual_link {
+			display: block;
+			> img {
+				vertical-align: top;
+			}
+		}
 	}
 
 	.main_product_box {
@@ -99,9 +106,9 @@
 						text-align: center;
 
 						.tip_item {
-							display: none;
+							opacity: 0;
+							bottom: 80%;
 							left: 50%;
-							bottom: calc(100% - 2px);
 							transform: translateX(-50%);
 							padding: 0;
 							white-space: nowrap;
@@ -135,7 +142,9 @@
 							border-radius: var(--radius-medium4);
 
 							.tip_item {
-								display: block;
+								opacity: 1;
+								bottom: calc(100% - 2px);
+								transition: all .3s ease-in;
 							}
 						}
 					}
@@ -261,3 +270,193 @@
 	}
 }
 /* 메인 베너별 관리 */
+
+
+
+
+.mc_r_cont {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-4);
+}
+.mc_bann_wrap {
+	position: relative;
+	text-align: center;
+
+	.swiper {
+		width: 100%;
+		border-radius: var(--radius-large2);
+
+		.swiper-wrapper {
+			.swiper-slide {
+				img {
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+	.swiper_control {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		// bottom: 32px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 8px;
+		z-index: 10;
+		padding: 0 24px;
+
+		.swiper-pagination {
+			position: relative;
+			width: auto;
+			left: auto;
+			top: auto;
+			bottom: auto;
+			padding: var(--padding-3);
+			display: flex;
+			gap: var(--gap-2);
+
+			&.sp_ty1 {
+				.swiper-pagination-bullet {
+					margin: 0;
+				}
+			}
+		}
+
+		.swiper_button {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: transparent;
+			background-size: 16px;
+
+			&.swiper_button_left {
+				left: 0;
+			}
+			&.swiper_button_right {
+				right: 0;
+			}
+		}
+
+		.swiper-button-play-pause {
+			width: 24px;
+			height: 24px;
+			font-size: 0;
+			background: url(../images/icon/icon_stop.svg) no-repeat center / 16px;
+
+			&.active {
+				background-image: url(../images/icon/icon_play.svg);
+			}
+		}
+	}
+}
+
+
+
+
+// hover Case 영역
+.prd_module_box {
+	background-color: var(--color-surface-secondary-subtler);
+	border-radius: var(--radius-large2);
+
+	.prd_login {
+		padding: var(--padding-6) var(--padding-5) var(--padding-3);
+		border-bottom: 1px solid var(--color-divider-secondary-light);
+
+		> button {
+			position: relative;
+			width: 100%;
+			height: 48px;
+			padding: var(--padding-3) 40px var(--padding-3) 52px;
+			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center / 16px;
+
+			&:before {
+				content:'';
+				position: absolute;
+				top: 50%;
+				left: var(--padding-3);
+				transform: translateY(-50%);
+				width: 32px;
+				height: 32px;
+				background: var(--color-element-secondary-light) url(../images/content/main/icon_login_person.svg) no-repeat center / 16px;
+				border-radius: var(--radius-medium1);
+			}
+
+
+			.text {
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-subtle);
+
+				strong {
+					color: var(--color-text-basic);
+				}
+			}
+		}
+		
+		// change effect
+		.chg_item {
+			&:hover,
+			&:focus {
+				background-color: #DEE6EF;
+				// background-color: var(--color-menu-secondary-fill-hover);
+				border-radius: var(--radius-medium1);
+				transition: background-color .3s ease-in;
+
+				&:before {
+					background-color: var(--color-element-secondary-lighter);
+					transition: background-color .3s ease-in;
+				}
+			}
+		}
+	}
+
+	.prd_module_list {
+		padding: var(--padding-6) var(--padding-5);
+
+		> button {
+			width: 100%;
+			height: 40px;
+			padding: var(--padding-3) var(--padding-5) var(--padding-3) 52px;
+			background-repeat: no-repeat;
+			background-position: left 12px center;
+			background-size: 20px;
+
+			.text {
+				font-size: var(--font-size-body-small);
+			}
+
+			&.prd_ic1 {
+				background-image: url(../images/content/main/icon_prd_document_fill.svg);
+			}
+			&.prd_ic2 {
+				background-image: url(../images/content/main/icon_prd_change.svg);
+			}
+			&.prd_ic3 {
+				background-image: url(../images/content/main/icon_prd_infomation.svg);
+			}
+			&.prd_ic4 {
+				background-image: url(../images/content/main/icon_prd_tmapsafety.svg);
+			}
+		}
+		
+		// change effect
+		.chg_item {
+			&:hover,
+			&:focus { 
+				padding: var(--padding-3) var(--padding-6) var(--padding-3) 56px;
+				background-color: #DEE6EF;
+				background-position: left 16px center;
+				// background-color: var(--color-menu-secondary-fill-hover);
+				border-radius: var(--radius-medium1);
+				transition: all .3s ease-in;
+			}
+		}
+	}
+}
+.chg_hover_box {
+
+
+}
