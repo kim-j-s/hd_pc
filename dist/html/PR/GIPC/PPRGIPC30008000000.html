@@ -904,7 +904,264 @@
 								</div>
 							</div>
 							<div class="item">
-								<button type="button" class="hus_btn hsu_cart"><span class="text">장바구니 팝업 열기</span></button>
+								<button type="button" class="hus_btn hsu_cart" onclick="openHDPopup(this,'resect_calc');">
+									<span class="text">최근 계산내역 팝업 열기</span>
+								</button>
+								<div class="popup_wrap popup_wrap_type4" id="resect_calc" role="dialog" aria-hidden="true">
+									<div class="popup_container">
+										<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('resect_calc');"></div>
+										<div class="popup_inner">
+											<div class="popup_head">
+												<div class="popup_head_title">최근 계산내역</div>
+											</div>
+											<div class="popup_cont">
+												<div class="popup_content">
+													<div class="tag_item_wrap">
+														<button type="button" class="tag_item size_m c_ty02 active"><span class="text">#전체</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#자동차</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#운전자</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#펫</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#어린이</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#건강</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#여행</span></button>
+														<button type="button" class="tag_item size_m c_ty02"><span class="text">#레저/연금/저축</span></button>
+													</div>
+													<div class="tag_item_cont">
+														<div class="s_title">2025.03.21</div>
+														<ul class="card_list_wrap">
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon car02">
+																			<button type="button">
+																				<strong class="title">자동차보험(80고**44)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간</dt>
+																			<dd>25.01.18~25.01.19</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,014,320원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon driver">
+																			<button type="button">
+																				<strong class="title">운전자보험(김*원)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간/납입방법</dt>
+																			<dd>3년 / 월납</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,339,830원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>차량정보 입력</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon dog">
+																			<button type="button">
+																				<strong class="title">하이펫보험(강아지)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간/납입방법</dt>
+																			<dd>3년 / 월납</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,014,320원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+														</ul>
+														<div class="s_title">2025.03.21</div>
+														<ul class="card_list_wrap">
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon car02">
+																			<button type="button">
+																				<span class="hd_badge outline solid_pastel c_primary size_m">다소안심</span>
+																				<strong class="title">자동차보험(80고**44)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간</dt>
+																			<dd>25.01.18~25.01.19</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,014,320원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon car02">
+																			<button type="button">
+																				<span class="hd_badge outline solid_pastel c_primary size_m">다소안심</span>
+																				<strong class="title">자동차보험(80고**44)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간</dt>
+																			<dd>25.01.18~25.01.19</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>차량정보 입력</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon dog">
+																			<button type="button">
+																				<strong class="title">하이펫보험(강아지)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간/납입방법</dt>
+																			<dd>3년 / 월납</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,014,320원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon cat">
+																			<button type="button">
+																				<strong class="title">하이펫보험(고양이)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산 전</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+														</ul>
+														<div class="no_list_area">
+															<i class="hd_icon exclamationSvg"></i>
+															<p>자동차보험 설계내역이 없어요</p>
+														</div>
+														<ul class="card_list_wrap">
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon dog">
+																			<button type="button">
+																				<strong class="title">하이펫보험(강아지)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>보험기간/납입방법</dt>
+																			<dd>3년 / 월납</dd>
+																		</dl>
+																		<dl>
+																			<dt>보험료</dt>
+																			<dd>1,014,320원</dd>
+																		</dl>
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+															<li>
+																<dl class="card_wrap">
+																	<dt>
+																		<div class="icon cat">
+																			<button type="button">
+																				<strong class="title">하이펫보험(고양이)</strong>
+																			</button>
+																		</div>
+																	</dt>
+																	<dd class="card_cont_list">
+																		<dl>
+																			<dt>진행단계</dt>
+																			<dd>보험료 계산 전</dd>
+																		</dl>
+																	</dd>
+																</dl>
+															</li>
+														</ul>
+														<div class="no_list_area">
+															<i class="hd_icon exclamationSvg"></i>
+															<p>내역이 없어요</p>
+														</div>
+														<div class="img_area">
+															<a href="#">
+																<img src="../../../images/event/img_car_bann01.png" alt="자동차보험 결제혜택 최대 3만원 받으세요. 30만원 이상 결제시 카드사, 간편결제사 제공 (이륜차포함)" />
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="popup_close" onclick="closeHDPopup('resect_calc');"><span class="blind">팝업 닫기</span></button>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="item">
 								<button type="button" class="hus_btn hsu_search" aria-expanded="false"><span class="text">메뉴검색 팝업 열기</span></button>

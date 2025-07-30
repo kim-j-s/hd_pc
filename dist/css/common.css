@@ -1450,6 +1450,7 @@ strong {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	margin-top: var(--padding-9);
 	padding-bottom: var(--gap-12);
 }
 .nav_list.nav_list_am_type .nl_dept1.tag_move {
@@ -1794,6 +1795,7 @@ strong {
 .am_content {
 	height: calc(100% - 72px);
 	overflow: auto;
+	overflow-x: hidden;
 	text-align: center;
 }
 .am_content .am_content_inner {
@@ -1804,8 +1806,33 @@ strong {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	padding: var(--padding-6, 16px) 0px var(--padding-8, 24px) 0px;
+	padding: var(--padding-6) 0px var(--padding-8) 0px;
 	background-color: var(--color-background-white);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.am_content .amc_nav::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100vw;
+	height: 100%;
+	background: var(--color-background-white, #fff);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+	transition: -webkit-box-shadow 0.3s ease-in-out;
+	transition: box-shadow 0.3s ease-in-out;
+	transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.am_content .amc_nav .tag_item_wrap {
+	position: relative;
+	margin-bottom: 0;
+}
+.am_content .amc_nav.active::before {
+	-webkit-box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .am_content .amc_cont {
 	-webkit-box-flex: 1;
@@ -4308,7 +4335,8 @@ strong {
 .btn_link.short_cut.lg {
 	padding-right: 28px;
 	font-weight: 700;
-	background-size: 24px auto;
+	background-size: 20px auto;
+	background-position: right 2px center;
 }
 .btn_link.short_cut.long {
 	display: block;
@@ -5386,8 +5414,8 @@ strong {
 	border-radius: var(--radius-xlarge2);
 	border: 1px solid var(--color-divider-gray-light, #e6e8ea);
 	background: var(--color-surface-white-subtle, #fff) !important;
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .ui-datepicker:before {
 	content: "";
@@ -5538,7 +5566,7 @@ strong {
 /* 달력 바디 */
 /* 달력 하단 버튼 */
 .ui-datepicker-buttonpane.ui-widget-content {
-	padding: var(--padding-5, 12px) var(--padding-8, 24px) var(--padding-6, 16px) var(--padding-8, 24px);
+	padding: var(--padding-5, 12px) var(--padding-8) var(--padding-6, 16px) var(--padding-8);
 }
 .ui-datepicker-buttonpane.ui-widget-content .ui-datepicker-current {
 	display: none;
@@ -5775,7 +5803,7 @@ strong {
     // margin: 0 -24px;
     padding: 20px 24px 0 24px;
     border-radius: var(--radius-large2) var(--radius-large2) 0 0;
-    box-shadow: 0px var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+    box-shadow: 0px var(--shadow-y-minus2, -6px) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 
     .dsa_date {
       padding-left: 28px;
@@ -8572,6 +8600,7 @@ strong {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
+	min-width: 0;
 }
 .comp_wrap .comp_wrap_keypad_call .keypad_call {
 	display: block;
@@ -8610,6 +8639,7 @@ strong {
 	width: 100%;
 }
 .comp_wrap.birth > .input_text {
+	min-width: 0;
 	width: calc(50% - 8px);
 }
 .comp_wrap.birth input {
@@ -13580,8 +13610,8 @@ ol li .table_wrap + .list_ty2 li + li {
 	top: calc(100% + 9px);
 	border-radius: var(--radius-medium1, 12px);
 	background: var(--color-element-information);
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .tooltip_wrap .tooltip_panel .inner {
 	position: relative;
@@ -13686,8 +13716,8 @@ ol li .table_wrap + .list_ty2 li + li {
 	border-radius: var(--radius-medium1);
 	border: var(--border-width-static-regular) solid var(--color-border-primary);
 	background-color: var(--color-element-primary-lighter);
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .tip_item .tip_item_cont::before {
 	content: "";
@@ -13957,7 +13987,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	text-align: right;
 }
 .info_gray dl dd .big {
-	font-size: var(--font-size-heading-medium);
+	font-size: var(--font-size-body-large);
 }
 .info_gray dl dd .rise,
 .info_gray dl dd .trend {

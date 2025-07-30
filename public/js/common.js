@@ -548,10 +548,8 @@
 			const scrollY = targetTop - containerTop + expHeight;
 
 			if ($(this).closest('.amc_nav').length && scrollY == 0 ) {
-				// console.log('머리');
 				$('.amc_nav').removeClass('active');
 			} else {
-				// console.log('몸');
 				$('.amc_nav').addClass('active');
 			}
 
@@ -750,13 +748,9 @@ function initPositionEventWrap($wrap) {
 		const scrollTop = $wrap.scrollTop();
 		let expHeight = 0;
 
-		// console.log('scrolling : ' + scrollTop);
-
 		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
-			// console.log('머리 scroll');
 			$('.amc_nav').removeClass('active');
 		} else {
-			// console.log('몸 scroll');
 			$('.amc_nav').addClass('active');
 		}
 
