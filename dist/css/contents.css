@@ -4455,6 +4455,14 @@ ul + .form_group_wrap {
 .special_contract_list.radio .check_flex_box + .form_group_wrap {
 	margin: 16px 0 0 28px;
 }
+.special_contract_list.radio.state_check .money_box {
+	display: none;
+}
+.special_contract_list.radio.state_check > li:has(input[type="radio"]:checked) .money_box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
 .link_flex_box {
 	display: block;
 	padding-right: 36px;

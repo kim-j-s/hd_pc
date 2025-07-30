@@ -2037,20 +2037,24 @@
 						<div class="mc_l_cont">
 							<!-- 메인 Visual-->
 							<div class="main_visual_box">
-								<div class="title_view_wrap">
+								<!-- <div class="title_view_wrap">
 									<div class="page_title">
 										<div class="p_info secondary">인터넷가입 오프라인 평균 18.3% 저렴하게! 자동차보험</div>
 										<h2 class="p_title">
-											마음은 가볍게<br />
+											마음은 가볍게<br>
 											<strong>자동차보험은 든든하게</strong>
 										</h2>
 										<div class="btn_area">
 											<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-												<span class="text">보험료계산</span>
-											</button>
-										</div>
+											
+													<span class="text">보험료계산</span>
+											
+											</button>								</div>
 									</div>
-								</div>
+								</div> -->
+								<a href="#" title="자동차보험 보험료 계산하기" class="visual_link">
+									<img src="../../../images/content/main/img_main_visual.png" alt="인터넷가입 오프라인 평균 18.3% 저렴하게! 자동차보험 마음은 가볍게 자동차보험은 든든하게" />
+								</a>
 							</div>
 
 							<!-- 메인 상품영역 -->
@@ -2113,7 +2117,54 @@
 								</div>
 							</div>
 						</div>
-						<div class="mc_r_cont"></div>
+
+						<div class="mc_r_cont">
+							<!-- 배너 영역 -->
+							<div class="mc_bann_wrap">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<a class="swiper-slide bann_wrap bann_ty2" href="#">
+											<img src="../../../images/content/main/img_main_side_bann01.png" alt="배너 통 이미지1" />
+										</a>
+										<a class="swiper-slide bann_wrap bann_ty2" href="#">
+											<img src="../../../images/content/main/img_main_side_bann02.png" alt="배너 통 이미지2" />
+										</a>
+										<a class="swiper-slide bann_wrap bann_ty2" href="#">
+											<img src="../../../images/content/main/img_main_side_bann03.png" alt="배너 통 이미지3" />
+										</a>
+									</div>
+								</div>
+								<div class="swiper_control">
+									<button class="swiper_button swiper_button_left"></button>
+									<button class="swiper_button swiper_button_right"></button>
+									<div class="swiper-pagination sp_ty1"></div>
+									<button class="swiper-button-play-pause" aria-label="슬라이드 쇼 제어">정지</button>
+								</div>
+							</div>
+
+							<!-- 로그인 영역 -->
+							<div class="prd_module_box">
+								<div class="prd_login">
+									<button type="button" class="chg_item">
+										<span class="text"><strong>로그인</strong> 후 편하게 이용하세요</span>
+									</button>
+								</div>
+								<div class="prd_module_list">
+									<button type="button" class="chg_item prd_ic1">
+										<span class="text">계약조회</span>
+									</button>
+									<button type="button" class="chg_item prd_ic2">
+										<span class="text">계약변경</span>
+									</button>
+									<button type="button" class="chg_item prd_ic3">
+										<span class="text">보험증명서</span>
+									</button>
+									<button type="button" class="chg_item prd_ic4">
+										<span class="text">단기운전확대특약</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -2620,3 +2671,48 @@
 		<!-- e: popup area -->
 	</body>
 </html>
+
+<script>
+	let bannerSwiper;
+
+	$(document).ready(function () {
+		bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
+			slidesPerView: 1,
+			updateOnWindowResize: true,
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: ".swiper_button_right",
+				prevEl: ".swiper_button_left",
+			},
+			a11y: {
+				enabled: true,
+				prevSlideMessage: "이전 항목으로 이동",
+				nextSlideMessage: "다음 항목으로 이동",
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				type: "bullets",
+				renderBullet: function (index, className) {
+					return `<span class="${className}" aria-label="Go to slidesss ${index + 1}"></span>`;
+				},
+			},
+		});
+	});
+
+	console.log("Swiper instance:", bannerSwiper);
+
+	$(".mc_bann_wrap .swiper-button-play-pause").on("click", function () {
+		// bannerSwiper.autoplay.stop();
+		if (bannerSwiper.autoplay.running) {
+			bannerSwiper.autoplay.stop();
+			$(this).text("시작").addClass("active");
+		} else {
+			bannerSwiper.autoplay.start();
+			$(this).text("정지").removeClass("active");
+		}
+	});
+</script>

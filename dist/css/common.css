@@ -4875,6 +4875,11 @@ strong {
 	background-size: 24px auto;
 }
 /* swiper button */
+/* 상품설명서에 사용되는 스타일용 */
+.hd_btn.done {
+	display: none;
+}
+/* 상품설명서에 사용되는 스타일용 */
 /* button_tag */
 .tag_item {
 	display: inline-block;
@@ -12390,7 +12395,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .opt_select_list.opt_case5 + .title_h3 {
-	margin-top: var(--gap-9);
+	margin-top: var(--gap-11);
 }
 .opt_select_list_top {
 	padding-bottom: var(--gap-5);
