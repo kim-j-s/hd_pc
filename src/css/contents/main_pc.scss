@@ -194,8 +194,8 @@
 			flex: 1 1 calc(50% - 8px);
 			position: relative;
 			display: block;
-			padding: var(--padding-8, 24px) 0px var(--padding-8, 24px) var(--padding-7, 20px);
-			border-radius: var(--radius-large2, 24px);
+			padding: var(--padding-8) 0px var(--padding-8) var(--padding-7);
+			border-radius: var(--radius-large2);
 			background-repeat: no-repeat;
 			transition: all 0.3s;
 			&:focus,

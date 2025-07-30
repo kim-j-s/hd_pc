@@ -2035,8 +2035,8 @@
 	background: -webkit-gradient(linear, left top, right top, from(rgb(5, 43, 87)), color-stop(50%, rgb(107, 150, 199)), to(rgb(5, 43, 87)));
 	background: linear-gradient(90deg, rgb(5, 43, 87) 0%, rgb(107, 150, 199) 50%, rgb(5, 43, 87) 100%);
 	border-radius: 19px;
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .car_input_box .car_number_input .inp {
 	padding: 12px 0 12px 40px;
@@ -3386,8 +3386,8 @@
 	padding: var(--padding-6) var(--padding-8);
 	border-radius: 0px 0px var(--padding-6, 16px) var(--padding-6, 16px);
 	background: var(--color-surface-white-subtler, #fff);
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 .simple_info_wrap .simple_info_item .sii_list > li {
 	display: -webkit-box;
@@ -3492,8 +3492,8 @@
 	padding-top: var(--padding-6);
 	padding-bottom: var(--padding-6);
 	background-color: #fff;
-	-webkit-box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	border-radius: 0px 0px var(--padding-6, 16px) var(--padding-6, 16px);
 }
 /* 간편정보 */
@@ -4992,6 +4992,9 @@ ul + .form_group_wrap {
 }
 .bg_top_cover .info_top_cont dt .point {
 	margin-left: 4px;
+}
+.bg_top_cover .info_gray.bg_etc01 .total .big {
+	font-size: var(--font-size-heading-medium);
 }
 /* 배경색 있는 상단 컨텐츠 영역 */
 /* 계약상세 */

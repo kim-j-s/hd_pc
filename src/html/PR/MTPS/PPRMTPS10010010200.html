@@ -1,0 +1,35 @@
+{{#> layout/default page-title="최근계산내역 제외 안내 | 상품"}}
+	<!-- s: popup area -->
+		<!-- s: Bottom 팝업 -->
+		{{#> popup/popup_bottom popup-id="pop_type03" popup-active=true popup-title="최근계산내역 제외 안내" }}
+		<div class="popup_cont">
+			<div class="popup_content">
+				<div class="info_cont">
+					<p>아래 차량은 다음과 같은 사유로 최근 계산 내역에서 제외 되었습니다.</p>
+
+					<div class="info_gray">
+						<dl>
+							<dt>111가 1111</dt>
+							<dd>책임개시일 경과</dd>
+						</dl>
+						<dl>
+							<dt>222나2222</dt>
+							<dd>계약체결 완료</dd>
+						</dl>
+						<dl>
+							<dt>333다3333</dt>
+							<dd>기타사유<span class="sub_text">(다이렉트 고객센터(1899-6782)로<br/>문의해주세요.)</span></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup_bottom">
+			<div class="btn_area">
+				{{> cp/button type="1" size="2" b-text="확인" }}
+			</div>
+		</div>
+		{{/ popup/popup_bottom}} 
+		<!-- e: Bottom 팝업 -->
+	<!-- e: popup area -->
+{{/ layout/default }}

@@ -12,7 +12,7 @@
 	border-radius: var(--radius-xlarge2);
 	border: 1px solid var(--color-divider-gray-light, #E6E8EA);
 	background: var(--color-surface-white-subtle, #FFF) !important;
-	box-shadow: 0px var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }
 
 .ui-datepicker:before {
@@ -164,7 +164,7 @@
 
 /* 달력 하단 버튼 */
 .ui-datepicker-buttonpane.ui-widget-content {
-	padding: var(--padding-5, 12px) var(--padding-8, 24px) var(--padding-6, 16px) var(--padding-8, 24px);
+	padding: var(--padding-5, 12px) var(--padding-8) var(--padding-6, 16px) var(--padding-8);
 	.ui-datepicker-current {
 		display: none;
 	}
@@ -462,7 +462,7 @@
     // margin: 0 -24px;
     padding: 20px 24px 0 24px;
     border-radius: var(--radius-large2) var(--radius-large2) 0 0;
-    box-shadow: 0px var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+    box-shadow: 0px var(--shadow-y-minus2, -6px) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 
     .dsa_date {
       padding-left: 28px;
