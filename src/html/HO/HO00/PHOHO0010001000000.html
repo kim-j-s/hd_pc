@@ -558,8 +558,6 @@
 			});
 		});
 
-		console.log('Swiper instance:', bannerSwiper);
-
 		$('.mc_bann_wrap .swiper-button-play-pause').on('click', function() {
     	// bannerSwiper.autoplay.stop();
 			if (bannerSwiper.autoplay.running){
@@ -569,5 +567,5 @@
 				bannerSwiper.autoplay.start();
 				$(this).text('정지').removeClass('active');
 			}
-		})
+		});
 </script>
