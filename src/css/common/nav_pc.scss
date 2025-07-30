@@ -37,6 +37,7 @@
 	/* 전체메뉴 사용 */
 	&.nav_list_am_type {
 		flex-direction: column;
+		margin-top: var(--padding-9);
 		padding-bottom: var(--gap-12);
 		.nl_dept1 {
 			&.tag_move {

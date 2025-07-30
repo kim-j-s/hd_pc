@@ -742,14 +742,19 @@ function initPositionEventWrap($wrap) {
 		const scrollTop = $wrap.scrollTop();
 		let expHeight = 0;
 
+		// console.log('t1 : ', scrollTop);
+
 		if ($wrap.find('.pew_exception').length) {
 			const $exception = $wrap.find('.pew_exception');
 			const exceptionHeight = $exception.outerHeight();
+			console.log('t2 : ', scrollTop);
 
 			if ($wrap.find('.tag_item_wrap_po_etc1').length) {
 				expHeight = exceptionHeight + 64;
+				console.log('t3 : ', scrollTop);
 			} else {
 				expHeight = exceptionHeight;
+				console.log('t4 : ', scrollTop);
 			}
 		}
 
@@ -758,7 +763,7 @@ function initPositionEventWrap($wrap) {
 		$contents.each(function (index) {
 			const targetTop = $(this).offset().top;
 			const containerTop = $scrollArea.offset().top;
-			const scrollY = targetTop - containerTop + expHeight;
+			const scrollY = targetTop - containerTop + expHeight;			
 
 			if (scrollY < scrollTop + 10) {
 				activeIdx = index;

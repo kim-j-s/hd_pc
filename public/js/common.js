@@ -547,6 +547,14 @@
 			const targetTop = $target.offset().top;
 			const scrollY = targetTop - containerTop + expHeight;
 
+			if ($(this).closest('.amc_nav').length && scrollY == 0 ) {
+				// console.log('머리');
+				$('.amc_nav').removeClass('active');
+			} else {
+				// console.log('몸');
+				$('.amc_nav').addClass('active');
+			}
+
 			$wrap.stop().animate({
 				scrollTop: scrollY
 			}, 300, function () {
@@ -735,12 +743,22 @@ function initPositionEventWrap($wrap) {
 
 	$wrap.data('scrolling', false);
 
-	// 스크롤 이벤트 (요소 개별)
+	// 스크롤 이벤트 (요소 개별) - 이벤트 중복 방지 (off, on)
 	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
 		if ($wrap.data('scrolling')) return;
 
 		const scrollTop = $wrap.scrollTop();
 		let expHeight = 0;
+
+		// console.log('scrolling : ' + scrollTop);
+
+		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
+			// console.log('머리 scroll');
+			$('.amc_nav').removeClass('active');
+		} else {
+			// console.log('몸 scroll');
+			$('.amc_nav').addClass('active');
+		}
 
 		if ($wrap.find('.pew_exception').length) {
 			const $exception = $wrap.find('.pew_exception');
