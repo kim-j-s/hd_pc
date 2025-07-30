@@ -13,7 +13,6 @@
 
 	.event_pop_ele_inner {
 		height: 100%;
-		// overflow: auto;
 	}
 
 	.popup_close {
@@ -56,7 +55,6 @@
 		width: 1188px;
 	}
 	.amc_nav {
-		// flex: none;
 		position: sticky;
 		top: 0;
 		z-index: 1;
@@ -70,8 +68,8 @@
 			left: 50%;
 			width: 100vw;
 			height: 100%;
-			transform: translateX(-50%);
 			background: var(--color-background-white, #FFF);
+			transform: translateX(-50%);
 			transition: box-shadow 0.3s ease-in-out;
 		}
 		.tag_item_wrap {
