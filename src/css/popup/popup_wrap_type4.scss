@@ -23,6 +23,27 @@
 		// 	}
 		// }
 
+		/* iframe 대응용 */
+		&.iframe_custom_pc {
+			> .popup_container  {
+				display: block;
+				> .popup_inner {
+					display: block;
+					height: 100%;
+					padding-bottom: var(--padding-6);
+					&:not(:has(.popup_bottom)) {
+						padding-bottom: var(--padding-6);
+					}
+					> .pop_cont {
+						display: block;
+						height: 100%;
+						// padding-top: 64px;
+					}
+				}
+			}
+		}
+		/* iframe 대응용 */
+
 		.popup_container {
 			align-items: center;
 			// width: 734px;
@@ -59,6 +80,12 @@
 				margin-top: var(--gap-11);
 			}
 		}
+
+
+
+
+
+
 	}
 }
 .iframe_cont {

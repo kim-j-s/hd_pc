@@ -857,7 +857,7 @@
 		flex:none;
 		img {
 			display: block;
-			width: 52px;
+			width: 54px;
 			height: 40px;
 		}
 		//여러 개의 이미지가 등록된 경우 
@@ -906,7 +906,7 @@
 			&.active {
 				border: none;
 				.acd_btn {
-					background: var(--color-action-secondary-pressed);
+					//background: var(--color-action-secondary-pressed);
 					&::before {
 						transform: translateY(-50%) rotate(180deg);
 					}
