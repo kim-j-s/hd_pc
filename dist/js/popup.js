@@ -88,8 +88,10 @@ function openHDPopup($triggerEl, target) {
 	// 	"aria-hidden": "false",
 	// });
 
-	if ($header) $header.attr("tabindex", 0);
-	if ($content) $content.attr("tabindex", 0);
+	// pc tabindex 정리 0731
+	// if ($header) $header.attr("tabindex", 0);
+	// if ($content) $content.attr("tabindex", 0);
+	// pc tabindex 정리 0731
 
 	const focusTarget = $header || $content;
 
@@ -257,13 +259,15 @@ function setTabindex($target){
 
 			const $header = $target.find('.popup_head_title');
 			const $content = $target.find('.popup_cont');
-			if($header) {
-				const title = $header.text().trim();
-				if(title.length>0){
-					$header.attr('tabindex',0);
-				}
-			}
-			if($content){ $content.attr('tabindex',0); }
+			// pc tabindex 정리 0731
+			// if($header) {
+			// 	const title = $header.text().trim();
+			// 	if(title.length>0){
+			// 		$header.attr('tabindex',0);
+			// 	}
+			// }
+			// if($content){ $content.attr('tabindex',0); }
+			// pc tabindex 정리 0731
 }
 
 

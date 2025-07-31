@@ -22,8 +22,6 @@
 	padding: 80px 0;
 	/* 전체메뉴 검색 팝업 zindex 1500 */
 	/* 전체메뉴 검색 팝업 zindex 1500 */
-	/* iframe 대응용 */
-	/* iframe 대응용 */
 }
 .popup_wrap.active {
 	visibility: visible;
@@ -36,10 +34,6 @@
 }
 .popup_wrap.menu_search_popup {
 	z-index: 1500;
-}
-.popup_wrap.popup_wrap_type3 .popup_head:not(div.popup_head_title) + .popup_cont,
-.popup_wrap.popup_wrap_type4 .popup_head:not(div.popup_head_title) + .popup_cont {
-	padding-top: 0;
 }
 .popup_wrap:has(.hd_btn) .btn_area:not(.basic) .btn_link,
 .popup_wrap:has(.hd_btn) .btn_area:not(.basic) .hd_btn {
@@ -338,31 +332,32 @@
 .popup_wrap .card_item_wrap .card_item .item_top .title_info .main_title.tooltip_add .tooltip_wrap .tooltip_panel {
 	width: calc(100vw - 86px);
 }
-.popup_wrap:has(.abc) > .popup_container {
-	display: block;
-}
-.popup_wrap:has(.abc) > .popup_container > .popup_inner {
-	display: block;
-	height: 100%;
-}
-.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont {
-	display: block;
-	height: 100%;
-	background-color: blue;
-}
-.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont iframe {
-	background-color: red;
-}
-.popup_wrap:has(.abc) > .popup_container > .popup_inner > .pop_cont iframe .popup_wrap {
-	background-color: blue;
-}
 /* popup_full */
+.popup_wrap.popup_wrap_type4 {
+	/* iframe 대응용 */
+	/* iframe 대응용 */
+}
 .popup_wrap.popup_wrap_type4.big .popup_container {
 	width: 800px;
 }
 .popup_wrap.popup_wrap_type4.active .popup_container {
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
+}
+.popup_wrap.popup_wrap_type4.iframe_custom_pc > .popup_container {
+	display: block;
+}
+.popup_wrap.popup_wrap_type4.iframe_custom_pc > .popup_container > .popup_inner {
+	display: block;
+	height: 100%;
+	padding-bottom: var(--padding-6);
+}
+.popup_wrap.popup_wrap_type4.iframe_custom_pc > .popup_container > .popup_inner:not(:has(.popup_bottom)) {
+	padding-bottom: var(--padding-6);
+}
+.popup_wrap.popup_wrap_type4.iframe_custom_pc > .popup_container > .popup_inner > .pop_cont {
+	display: block;
+	height: 100%;
 }
 .popup_wrap.popup_wrap_type4 .popup_container {
 	-webkit-box-align: center;

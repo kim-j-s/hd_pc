@@ -2251,10 +2251,15 @@
 	top: 109px;
 	left: 30px;
 }
+.relationship_box .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man.svg);
+}
+.relationship_box .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman.svg);
+}
 .relationship_box .rel_case2 > span {
 	width: 90px;
 	min-height: 103px;
-	background-image: url(../images/content/mtps/img_rel_case2.svg);
 }
 .relationship_box .rel_case2 > span:before {
 	content: "";
@@ -2283,10 +2288,15 @@
 	left: 50%;
 	margin-left: -28px;
 }
+.relationship_box .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man.svg);
+}
+.relationship_box .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman.svg);
+}
 .relationship_box .rel_case3 > span {
 	width: 90px;
 	min-height: 103px;
-	background-image: url(../images/content/mtps/img_rel_case3.svg);
 }
 .relationship_box .rel_case3 > span:before {
 	content: "";
@@ -2341,8 +2351,11 @@
 .relationship_box.pick1 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick1 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick1 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick1 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick2 .rel_case2:before {
 	opacity: 1;
@@ -2350,8 +2363,11 @@
 .relationship_box.pick2 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick2 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick2 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick2 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick2 .rel_case3:before {
 	opacity: 1;
@@ -2359,8 +2375,11 @@
 .relationship_box.pick2 .rel_case3 > span {
 	font-weight: 700;
 }
-.relationship_box.pick2 .rel_case3 > span {
-	background-image: url(../images/content/mtps/img_rel_case3_on.svg);
+.relationship_box.pick2 .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick2 .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick3 .rel_case1:before {
 	opacity: 1;
@@ -2380,8 +2399,11 @@
 .relationship_box.pick3 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick3 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick3 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick3 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick3 .rel_case3:before {
 	opacity: 1;
@@ -2389,8 +2411,11 @@
 .relationship_box.pick3 .rel_case3 > span {
 	font-weight: 700;
 }
-.relationship_box.pick3 .rel_case3 > span {
-	background-image: url(../images/content/mtps/img_rel_case3_on.svg);
+.relationship_box.pick3 .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick3 .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick3 .rel_case5:before {
 	opacity: 1;
@@ -2419,6 +2444,12 @@
 .relationship_box.pick4 .rel_case2 > span {
 	font-weight: 700;
 }
+.relationship_box.pick4 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick4 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
+}
 .relationship_box.pick4 .rel_case2 > span {
 	background-image: url("../images/content/mtps/img_rel_case2_on.svg");
 }
@@ -2427,6 +2458,12 @@
 }
 .relationship_box.pick4 .rel_case3 > span {
 	font-weight: 700;
+}
+.relationship_box.pick4 .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick4 .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick4 .rel_case3 > span {
 	background-image: url("../images/content/mtps/img_rel_case3_on.svg");
@@ -2464,8 +2501,11 @@
 .relationship_box.pick6 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick6 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick6 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick6 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick6 .rel_case6:before {
 	opacity: 1;
@@ -2482,8 +2522,11 @@
 .relationship_box.pick7 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick7 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick7 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick7 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick7 .rel_case3:before {
 	opacity: 1;
@@ -2491,8 +2534,11 @@
 .relationship_box.pick7 .rel_case3 > span {
 	font-weight: 700;
 }
-.relationship_box.pick7 .rel_case3 > span {
-	background-image: url(../images/content/mtps/img_rel_case3_on.svg);
+.relationship_box.pick7 .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick7 .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick7 .rel_case6:before {
 	opacity: 1;
@@ -2509,8 +2555,11 @@
 .relationship_box.pick8 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick8 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick8 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick8 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick8 .rel_case3:before {
 	opacity: 1;
@@ -2518,8 +2567,11 @@
 .relationship_box.pick8 .rel_case3 > span {
 	font-weight: 700;
 }
-.relationship_box.pick8 .rel_case3 > span {
-	background-image: url(../images/content/mtps/img_rel_case3_on.svg);
+.relationship_box.pick8 .rel_case3.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick8 .rel_case3.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick8 .rel_case5:before {
 	opacity: 1;
@@ -2536,8 +2588,11 @@
 .relationship_box.pick9 .rel_case2 > span {
 	font-weight: 700;
 }
-.relationship_box.pick9 .rel_case2 > span {
-	background-image: url(../images/content/mtps/img_rel_case2_on.svg);
+.relationship_box.pick9 .rel_case2.man > span {
+	background-image: url(../images/content/mtps/img_rel_case_man_on.svg);
+}
+.relationship_box.pick9 .rel_case2.woman > span {
+	background-image: url(../images/content/mtps/img_rel_case_woman_on.svg);
 }
 .relationship_box.pick9 .rel_case5:before {
 	opacity: 1;
@@ -3384,7 +3439,7 @@
 	width: 100%;
 	overflow: hidden;
 	padding: var(--padding-6) var(--padding-8);
-	border-radius: 0px 0px var(--padding-6, 16px) var(--padding-6, 16px);
+	border-radius: 0px 0px var(--padding-6) var(--padding-6);
 	background: var(--color-surface-white-subtler, #fff);
 	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
@@ -3494,7 +3549,7 @@
 	background-color: #fff;
 	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	border-radius: 0px 0px var(--padding-6, 16px) var(--padding-6, 16px);
+	border-radius: 0px 0px var(--padding-6) var(--padding-6);
 }
 /* 간편정보 */
 .coverage_item_wrap {
