@@ -29,6 +29,7 @@ body {
 /* skipNavi */
 
 .quick_menu {
+	--color-button-tertiary-fill: rgba(255, 255, 255, 0);
 	position: fixed;
 	left: calc(50% + 626px);
 	bottom: 64px;
@@ -63,8 +64,6 @@ body {
 				width: 100%;
 				height: var(--size-height-8);
 				border-radius: var(--radius-max);
-				border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
-				background: var(--color-element-inverse-static);
 				background-repeat: no-repeat;
 				background-position: center center;
 			}
@@ -84,13 +83,17 @@ body {
 			}
 			&.qm_btn_chatbot {
 				&::before {
+					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+					background-color: var(--color-button-tertiary-fill);
 					background-image: url(../images/common/icon_qm_chatbot.png);
 				}
 			}
 			&.qm_btn_pagetop {
 				font-size: 0;
 				&::before {
-				background-image: url(../images/common/icon_qm_pagetop.png);					
+					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+					background-color: var(--color-button-tertiary-fill);
+					background-image: url(../images/common/icon_qm_pagetop.png);					
 				}
 			}			
 		}

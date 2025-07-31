@@ -41,8 +41,25 @@
 	&.c_ty02 {
 		> .text {
 			background-color: var(--color-element-secondary-lighter);
-			color:  var(--color-text-basic);
+			color: var(--color-text-basic);
 			border-color: var(--color-element-secondary-lighter);
+		}
+
+
+		&.active {
+			> .text {
+				background-color: var(--color-border-secondary);
+				color: var(--color-text-basic-inverse);
+				border-color: var(--color-border-secondary);
+			}
+		}
+	}
+
+	&.c_ty03 {
+		> .text {
+			background-color: var(--color-element-secondary-light);
+			color: var(--color-text-basic);
+			border-color: var(--color-element-secondary-light);
 		}
 
 

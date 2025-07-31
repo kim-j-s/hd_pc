@@ -308,4 +308,17 @@
 		max-height: calc(100vh - 172px);
 	}
 }
+.sc_up {
+	.main_cont_wrap {
+		.mcw_cont {
+			.mc_l_cont {
+				.tag_item_wrap {
+					&.main_sticky {
+						top: 120px;
+					}
+				}
+			}
+		}
+	}
+}
 /* 스크를 이벤트 관련 css */
