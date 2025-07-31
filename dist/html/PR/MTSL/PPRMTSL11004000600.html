@@ -1,3 +1,6 @@
+<!---
+경로 : 6.보험료 확인 > 자기차량손해
+-->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -54,8 +57,7 @@
 			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
-		<!-- s: popup area -->
-		<!-- s: Full 팝업 -->
+		<!-- s: popup area --><!-- s: Full 팝업 -->
 		<div class="popup_wrap popup_wrap_type4 active" id="pop_full" role="dialog" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_full');"></div>
@@ -65,6 +67,7 @@
 					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
+							<!-- s: 25-05-19 수정 -->
 							<div class="pop_top sticky_fix">
 								<div class="info_gray">
 									<dl>
@@ -73,15 +76,27 @@
 									</dl>
 								</div>
 							</div>
-							<h2 class="pop_title_h1">대인배상Ⅱ</h2>
-							<p class="info_text">대인배상Ⅱ는 피보험자동차의 사고로 인하여 남을 죽게 하거나 다치게 한 경우에 대인배상Ⅰ을 초과하는 손해를 보상합니다.</p>
+							<!-- e: 25-05-19 수정 -->
+							<h2 class="pop_title_h1">자기차량손해</h2>
+							<!-- s: 25-06-16 -->
+							<p class="info_text">자기차량손해는 피보험자동차를 소유, 사용, 관리하는 동안에 피보험자동차에 직접적으로 생긴 손해를 보상합니다.<br />타차 이외의 물체와의 충돌, 피보험자동차 단독사고, 침수 등의 손해에 대해서는 「자기차량손해 보장 확대 특약 」 특약을 가입해야 보상 가능합니다.</p>
+							<!-- e: 25-06-16 -->
 							<div class="btn_area basic">
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="대인배상Ⅱ 자세히보기 팝업 열기">
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="자기차량손해 자세히보기 팝업 열기">
 									<span class="text">자세히보기</span>
 									<i class="hd_icon arrowRightSvg"></i>
 								</button>
 							</div>
-							<ul class="special_contract_list radio">
+							<div class="checkbox_group_wrap column">
+								<div class="inp_checkbox">
+									<input type="checkbox" id="agreement01" name="agreement01" />
+									<label for="agreement01" class="chk_label chk_label_ty3">
+										<span class="label_cont">자기차량손해 보장 확대</span>
+									</label>
+								</div>
+							</div>
+							<!-- s: 25-07-30 수정 -->
+							<ul class="special_contract_list radio state_check">
 								<li>
 									<div class="check_flex_box">
 										<div class="check_box">
@@ -90,7 +105,7 @@
 												<input type="radio" id="agreement01_1" name="agreement01" checked />
 												<label for="agreement01_1">
 													<span class="label_cont"
-														>무한 <span class="badge_wrap"><span class="hd_badge outline solid_pastel c_primary size_m">추천</span></span></span
+														>손해액의 20%/20만원~50만원 <span class="badge_wrap"><span class="hd_badge outline solid_pastel c_primary size_m">추천</span> <span class="hd_badge outline solid_pastel c_success size_m">18.9% Best 3</span></span></span
 													>
 												</label>
 											</div>
@@ -98,9 +113,59 @@
 										</div>
 										<div class="money_box">
 											<div class="money"><span>190,300</span>원</div>
-											<div class="money">
-												<strong class="trend">0원</strong>
+											<!-- s: 25-07-30 수정 -->
+											<!-- <div class="money">
+					                                <strong class="trend up"><span class="updown increase">증가</span>60,300원</strong>
+					                            </div> -->
+											<!-- e: 25-07-30 수정 -->
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="check_flex_box">
+										<div class="check_box">
+											<!-- s: 25-06-04 수정 -->
+											<div class="inp_radio">
+												<input type="radio" id="agreement01-2" name="agreement01" />
+												<label for="agreement01-2">
+													<span class="label_cont"
+														>손해액의 20%/30만원~100만원 <span class="badge_wrap"><span class="hd_badge outline solid_pastel c_primary size_m">38.9% Best 1</span></span></span
+													>
+												</label>
 											</div>
+											<!-- e: 25-06-04 수정 -->
+										</div>
+										<div class="money_box">
+											<div class="money"><span>190,300</span>원</div>
+											<!-- s: 25-07-30 수정 -->
+											<!-- <div class="money">
+					                                <strong class="trend">0원</strong>
+					                            </div> -->
+											<!-- e: 25-07-30 수정 -->
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="check_flex_box">
+										<div class="check_box">
+											<!-- s: 25-06-04 수정 -->
+											<div class="inp_radio">
+												<input type="radio" id="agreement01-3" name="agreement01" />
+												<label for="agreement01-3">
+													<span class="label_cont"
+														>손해액의 30%/30만원~100만원 <span class="badge_wrap"><span class="hd_badge outline solid_pastel c_secondary size_m">28.9% Best 1</span></span></span
+													>
+												</label>
+											</div>
+											<!-- e: 25-06-04 수정 -->
+										</div>
+										<div class="money_box">
+											<div class="money"><span>190,300</span>원</div>
+											<!-- s: 25-07-30 수정 -->
+											<!-- <div class="money">
+					                                <strong class="trend down"><span class="updown decrease">감소</span>60,300원</strong>
+					                            </div> -->
+											<!-- e: 25-07-30 수정 -->
 										</div>
 									</div>
 								</li>
@@ -108,21 +173,44 @@
 									<div class="check_flex_box">
 										<div class="check_box">
 											<div class="inp_radio">
-												<input type="radio" id="agreement01-2" name="agreement01" />
-												<label for="agreement01-2">
-													<span class="label_cont">가입 안함</span>
+												<input type="radio" id="agreement01-4" name="agreement01" />
+												<label for="agreement01-4">
+													<span class="label_cont">손해액의 30%/50만원~200만원</span>
+												</label>
+											</div>
+										</div>
+										<div class="money_box">
+											<div class="money"><span>190,300</span>원</div>
+											<!-- s: 25-07-30 수정 -->
+											<!-- <div class="money">
+					                                <strong class="trend down"><span class="updown decrease">감소</span>60,300원</strong>
+					                            </div> -->
+											<!-- e: 25-07-30 수정 -->
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="check_flex_box">
+										<div class="check_box">
+											<div class="inp_radio">
+												<input type="radio" id="agreement01-5" name="agreement01" />
+												<label for="agreement01-5">
+													<span class="label_cont">가입 안함/가입 안함</span>
 												</label>
 											</div>
 										</div>
 										<div class="money_box">
 											<div class="money"><span>0</span>원</div>
-											<div class="money">
-												<strong class="trend down"><span class="updown decrease">감소</span>60,300원</strong>
-											</div>
+											<!-- s: 25-07-30 수정 -->
+											<!-- <div class="money">
+					                                <strong class="trend up"><span class="updown increase">증가</span>60,300원</strong>
+					                            </div> -->
+											<!-- e: 25-07-30 수정 -->
 										</div>
 									</div>
 								</li>
 							</ul>
+							<!-- e: 25-07-30 수정 -->
 						</div>
 					</div>
 					<!-- s: 하단 버튼 영역 -->
