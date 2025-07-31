@@ -35,14 +35,14 @@
 	}
 	/* 전체메뉴 검색 팝업 zindex 1500 */
 
-	&.popup_wrap_type3,
-	&.popup_wrap_type4  {
-		.popup_head:not( div.popup_head_title) {
-			+ .popup_cont {
-				padding-top: 0;
-			}
-		}
-	}
+	// &.popup_wrap_type3,
+	// &.popup_wrap_type4  {
+	// 	.popup_head:not( div.popup_head_title) {
+	// 		+ .popup_cont {
+	// 			padding-top: 0;
+	// 		}
+	// 	}
+	// }
 	// Button
 	&:has(.hd_btn){
 		.btn_area:not(.basic) {
@@ -416,30 +416,7 @@
 	}
 
 
-	/* iframe 대응용 */
-	&:has(.abc) {
-		// background-color: blue;
-		> .popup_container  {
-			display: block;
-			> .popup_inner {
-				// background-color: red;
-				display: block;
-				height: 100%;
-				> .pop_cont {
-					display: block;
-					height: 100%;
-					background-color: blue;
-					iframe {
-						background-color: red;
-						.popup_wrap {
-							background-color: blue;
-						}
-					}
-				}
-			}
-		}
-	}
-	/* iframe 대응용 */
+	
 
 
 
