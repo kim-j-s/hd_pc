@@ -140,16 +140,19 @@
 			<div class="mcw_cont">
 				<!-- 상품별 리스트 -->
 				<div class="mc_l_cont position_event_wrap">
-
-					<div class="tag_item_wrap main_sticky position_event_tab">
-						<button type="button" class="tag_item size_l c_ty03 active"><span class="text" title="자동차 위치로 이동하기">자동차</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="운전자 위치로 이동하기">운전자</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="어린이/태아 위치로 이동하기">어린이/태아</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="펫 위치로 이동하기">펫</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="주택 위치로 이동하기">주택</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="건강/암 위치로 이동하기">건강/암</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="여행/레저 위치로 이동하기">여행/레저</span></button>
-						<button type="button" class="tag_item size_l c_ty03"><span class="text" title="연금/저축 위치로 이동하기">연금/저축</span></button>
+					<div class="main_sticky_cont">
+						<div class="msc_inner">
+							<div class="tag_item_wrap main_sticky position_event_tab">
+								<button type="button" class="tag_item size_l c_ty03 active"><span class="text" title="자동차 위치로 이동하기">자동차</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="운전자 위치로 이동하기">운전자</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="어린이/태아 위치로 이동하기">어린이/태아</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="펫 위치로 이동하기">펫</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="주택 위치로 이동하기">주택</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="건강/암 위치로 이동하기">건강/암</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="여행/레저 위치로 이동하기">여행/레저</span></button>
+								<button type="button" class="tag_item size_l c_ty03"><span class="text" title="연금/저축 위치로 이동하기">연금/저축</span></button>
+							</div>
+						</div>
 					</div>
 
 					<div class="mcont_items_wrap sticky position_event_content">
@@ -484,7 +487,24 @@
 				</div>
 				<!-- 상품별 리스트 -->
 				<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
-				<div class="mc_r_cont"></div>
+				<div class="mc_r_cont">
+					<div class="main_benefit">
+						<h4 class="main_benefit_title">다양한 할인 혜택을 확인하세요</h4>
+						<div class="dd dd_1">
+							<img src="../../../images/temp/1.png" alt="">
+						</div>
+						<div class="dd dd_2">
+							<img src="" alt="">
+							<img src="../../../images/temp/2.png" alt="">
+						</div>
+						<div class="dd dd_3">
+							<img src="" alt="">
+							<img src="../../../images/temp/3.png" alt="">
+						</div>
+
+					</div>
+
+				</div>
 				<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
 			</div>
 		</div>
@@ -546,4 +566,56 @@
 				$(this).text('정지').removeClass('active');
 			}
 		});
+
+
+		$(window).on('scroll', function() {
+			let scrollTop = $(this).scrollTop();
+			// let stickyHeight = $('.position_event_tab').outerHeight();
+			// if (scrollTop > stickyHeight) {
+			// 	$('.position_event_tab').addClass('sticky');
+			// } else {
+			// 	$('.position_event_tab').removeClass('sticky');
+			// }
+			
+			const $target = $('.main_sticky_cont');			
+			const $targetActive = $target.find('.main_sticky');
+			const $targetActiveHeight = $targetActive.outerHeight();
+			const $targetCover = $('.msc_inner');
+			const targetOffset = $target.offset().top;
+
+			console.log(scrollTop, targetOffset);
+
+
+			// 스크롤 추가 조건
+			const $sideScroll = $('.main_benefit');
+
+			if ( $('body').hasClass('sc_down') ) {
+				if (scrollTop > targetOffset - 72) {
+					$target.css('height', $targetActiveHeight);
+					$targetCover.addClass('active');
+					$sideScroll.addClass('active');
+				} else {
+					$target.css('height', 'auto');
+					$targetCover.removeClass('active');
+					$sideScroll.removeClass('active');
+				}
+			} else if ( $('body').hasClass('sc_up') ) {
+				if (scrollTop > targetOffset - 120) {
+					$target.css('height', $targetActiveHeight);
+					$targetCover.addClass('active');
+					$sideScroll.addClass('active');
+				} else {
+					$target.css('height', 'auto');
+					$targetCover.removeClass('active');
+					$sideScroll.removeClass('active');
+				}
+			}
+
+			
+
+		});
+
+
+
+
 </script>
