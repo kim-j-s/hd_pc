@@ -3796,7 +3796,7 @@ ul + .form_group_wrap {
 	font-weight: 700;
 }
 .pop_title_h1 + .info_text {
-	margin-top: var(--gap-3);
+	margin-top: var(--gap-4);
 }
 .pop_title_h1 + p {
 	margin-top: var(--gap-4);
