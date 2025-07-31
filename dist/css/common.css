@@ -1405,6 +1405,9 @@ strong {
 .sc_down .nld_cont {
 	max-height: calc(100vh - 172px);
 }
+.sc_up .main_cont_wrap .mcw_cont .mc_l_cont .tag_item_wrap.main_sticky {
+	top: 120px;
+}
 /* 스크를 이벤트 관련 css */
 /* navigation */
 .hpi_gnb {
@@ -1697,7 +1700,7 @@ strong {
 }
 .nrs_items .item_name {
 	display: block;
-	padding: 10px var(--padding-5, 16px) 9px var(--padding-5, 16px);
+	padding: 10px var(--padding-5) 9px var(--padding-5);
 	font-size: var(--font-size-button-medium);
 }
 .nrs_items .item_fav_box {
@@ -3485,9 +3488,6 @@ strong {
 .item_wrap_faq .acd_item .acd_head.active {
 	border: none;
 }
-.item_wrap_faq .acd_item .acd_head.active .acd_btn {
-	background: var(--color-action-secondary-pressed);
-}
 .item_wrap_faq .acd_item .acd_head.active .acd_btn::before {
 	-webkit-transform: translateY(-50%) rotate(180deg);
 	transform: translateY(-50%) rotate(180deg);
@@ -3602,7 +3602,7 @@ strong {
 	background-color: var(--color-border-gray-light);
 }
 .view_wrap .view_navigation li.navigation_item .navigation_title {
-	font-size: var(--font-size-body-medium, 16px);
+	font-size: var(--font-size-body-medium);
 }
 .view_wrap .view_navigation li.navigation_item .navigation_title.no-data {
 	color: var(--color-text-disabled-on);
@@ -3816,7 +3816,7 @@ strong {
 	transform: translateY(-50%);
 }
 .review_acd_item .inner .review_cont {
-	font-size: var(--font-size-body-medium, 16px);
+	font-size: var(--font-size-body-medium);
 	display: -webkit-box;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
@@ -3979,6 +3979,10 @@ strong {
 	-ms-flex: none;
 	flex: none;
 	margin-left: auto;
+}
+.btn_area.end + .form_group_wrap,
+.btn_area.end + .rd_box {
+	margin-top: var(--gap-5);
 }
 .btn_area.view_more {
 	margin-top: var(--gap-5);
@@ -4703,8 +4707,8 @@ strong {
 	margin-right: -30px;
 	padding: 7px 60px 7px 8px;
 	background-color: var(--color-graphic-blue-darker);
-	-webkit-box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
-	box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+	-webkit-box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4) var(--shadow-blur-4) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+	box-shadow: 0px 0px 2px 0px var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0px var(--shadow-y-4) var(--shadow-blur-4) 0px var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	border-radius: 150px 0 0 150px;
 	opacity: 0;
 	-webkit-transform-origin: right;
@@ -4885,6 +4889,7 @@ strong {
 /* 상품설명서에 사용되는 스타일용 */
 /* button_tag */
 .tag_item {
+	position: relative;
 	display: inline-block;
 	background: transparent;
 }
@@ -4920,6 +4925,16 @@ strong {
 	border-color: var(--color-element-secondary-lighter);
 }
 .tag_item.c_ty02.active > .text {
+	background-color: var(--color-border-secondary);
+	color: var(--color-text-basic-inverse);
+	border-color: var(--color-border-secondary);
+}
+.tag_item.c_ty03 > .text {
+	background-color: var(--color-element-secondary-light);
+	color: var(--color-text-basic);
+	border-color: var(--color-element-secondary-light);
+}
+.tag_item.c_ty03.active > .text {
 	background-color: var(--color-border-secondary);
 	color: var(--color-text-basic-inverse);
 	border-color: var(--color-border-secondary);
@@ -5574,7 +5589,7 @@ strong {
 /* 달력 바디 */
 /* 달력 하단 버튼 */
 .ui-datepicker-buttonpane.ui-widget-content {
-	padding: var(--padding-5, 12px) var(--padding-8) var(--padding-6, 16px) var(--padding-8);
+	padding: var(--padding-5, 12px) var(--padding-8) var(--padding-6) var(--padding-8);
 }
 .ui-datepicker-buttonpane.ui-widget-content .ui-datepicker-current {
 	display: none;
