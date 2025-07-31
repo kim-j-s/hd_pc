@@ -970,30 +970,20 @@
 		<!-- s: 사이드 패널 -->
 		<div class="side_panel">
 			<div class="info_gray">
-				<ol class="step_list type_car">
+				<ol class="step_list type_mix">
 				<!-- 진행된 단계까지 li에 active 클래스 추가 -->
 					<li class="active">
 						<!-- 고객정보 -->
+						<!-- s: 입력진행 전 -->
 						<dl>
-							<!-- 해당 단계일 시, last 클래스 추가 -->
 							<dt class="title">1.고객정보</dt>
 							<dd>
 								<ul>
-									<li class="person">
-										이름
-										<span>김*대</span>
-									</li>
-									<li class="birth">
-										주민등록번호
-										<span>900101-1******</span>
-									</li>
+									<li></li>
 								</ul>
 							</dd>
 						</dl>
-						<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">			
-							<span class="text">수정</span>
-							<i class="hd_icon resetSvg"></i>
-						</button>
+						<!-- e: 입력진행 전 -->
 					</li>
 					<li>
 						<!-- 차량정보 -->
@@ -1094,31 +1084,37 @@
 			<li>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_gray">
-						<ol class="step_list type_car">
-						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
-							<li class="active">
-								<!-- 고객정보 -->
-								<dl>
-									<dt class="title">1.고객정보</dt>
-									<dd>
-										<ul>
-											<li class="person">
-												이름
-												<span>김*대</span>
-											</li>
-											<li class="birth">
-												주민등록번호
-												<span>900101-1******</span>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">			
+					<div class="info_cont pro_info_wrap">
+						<div class="pro_info_item">
+							<div class="tit_box">
+								<h3 class="pop_title_h3">1.고객 정보</h3>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">			
 									<span class="text">수정</span>
 									<i class="hd_icon resetSvg"></i>
 								</button>
-							</li>
+							</div>
+							<div class="data_list">
+								<ul>
+									<li>
+										<dl>
+											<dt class="person">이름</dt>
+											<dd>김*대</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="birth">주민등록번호</dt>
+											<dd>900101-1******</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+						
+					<div class="info_gray">
+						<ol class="step_list type_mix">
+						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
 								<!-- 입력진행 전 -->
@@ -1129,9 +1125,10 @@
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
 									{{#> cp/accordion ac-title="2.차량정보" ac-active=true head-class="last"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1147,8 +1144,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1161,8 +1158,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1198,8 +1195,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1212,8 +1209,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1229,14 +1226,14 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="3.운전자정보"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1255,8 +1252,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -1264,8 +1261,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm2">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1281,13 +1278,13 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="4.보험료확인" }}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -1309,14 +1306,14 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보" }}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1332,8 +1329,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -1430,7 +1427,7 @@
 					</div>
 						
 					<div class="info_gray">
-						<ol class="step_list type_car">
+						<ol class="step_list type_mix">
 						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
@@ -1443,8 +1440,8 @@
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="2.차량정보"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1460,8 +1457,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1474,8 +1471,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1511,8 +1508,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1525,8 +1522,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1542,14 +1539,15 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
 									{{#> cp/accordion ac-title="3.운전자정보" ac-active=true head-class="last"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1568,8 +1566,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -1577,8 +1575,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1594,13 +1592,13 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="4.보험료확인" }}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -1622,14 +1620,14 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보" }}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1645,8 +1643,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -1743,7 +1741,7 @@
 					</div>
 						
 					<div class="info_gray">
-						<ol class="step_list type_car">
+						<ol class="step_list type_mix">
 						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
@@ -1758,8 +1756,8 @@
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="2.차량정보"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1775,8 +1773,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1789,8 +1787,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1826,8 +1824,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1840,8 +1838,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1857,14 +1855,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="3.운전자정보"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1883,8 +1881,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -1892,8 +1890,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -1909,13 +1907,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
 									{{#> cp/accordion ac-title="4.보험료확인" ac-active=true head-class='last'}}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -1937,14 +1936,14 @@
 								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl>
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<!-- <div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보" }}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -1960,8 +1959,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -2058,7 +2057,7 @@
 					</div>
 						
 					<div class="info_gray">
-						<ol class="step_list type_car">
+						<ol class="step_list type_mix">
 						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
@@ -2071,8 +2070,8 @@
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="2.차량정보"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2088,8 +2087,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2102,8 +2101,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2139,8 +2138,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2153,8 +2152,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2170,14 +2169,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="3.운전자정보"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2196,8 +2195,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -2205,8 +2204,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2222,13 +2221,13 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="4.보험료확인"}}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -2250,14 +2249,15 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보" ac-active=true head-class="last"}}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2273,8 +2273,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -2371,7 +2371,7 @@
 					</div>
 						
 					<div class="info_gray">
-						<ol class="step_list type_car">
+						<ol class="step_list type_mix">
 						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
@@ -2384,8 +2384,8 @@
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="2.차량정보"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2401,8 +2401,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2415,8 +2415,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2452,8 +2452,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2466,8 +2466,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2483,14 +2483,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="3.운전자정보"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2509,8 +2509,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -2518,8 +2518,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2535,13 +2535,13 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="4.보험료확인"}}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -2563,14 +2563,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보"}}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2586,8 +2586,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -2601,7 +2601,8 @@
 							<li class="active">
 								<!-- 청약내용 확인 -->
 								<dl>
-									<dt class="title">6.청약내용 확인</dt>
+									<!-- 해당되는 단계에만, last 클래스 추가 -->
+									<dt class="title last">6.청약내용 확인</dt>
 									<dd>
 										<div class="info">청약내용을 확인 중이에요</div>
 									</dd>
@@ -2684,7 +2685,7 @@
 					</div>
 						
 					<div class="info_gray">
-						<ol class="step_list type_car">
+						<ol class="step_list type_mix">
 						<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 차량정보 -->
@@ -2697,8 +2698,8 @@
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="2.차량정보"}}
-										<dl class="dep_list">
-											<dt class="car">차량선택</dt>
+										<dl class="item_depth">
+											<dt>차량선택</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2714,8 +2715,8 @@
 												<div class="info">차량을 선택 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="date">보험기간</dt>
+										<dl class="item_depth">
+											<dt>보험기간</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2728,8 +2729,8 @@
 												<div class="info">보험기간을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="car_info">차량정보입력</dt>
+										<dl class="item_depth">
+											<dt>차량정보입력</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2765,8 +2766,8 @@
 												<div class="info">차량정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="maker">차량부품정보</dt>
+										<dl class="item_depth">
+											<dt>차량부품정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2779,8 +2780,8 @@
 												<div class="info">차량부품정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2796,14 +2797,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">3.운전자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="3.운전자정보"}}
-										<dl class="dep_list">
-											<dt class="driver">운전범위</dt>
+										<dl class="item_depth">
+											<dt>운전범위</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2822,8 +2823,8 @@
 												<div class="info">운전범위를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="discount">할인특약</dt>
+										<dl class="item_depth">
+											<dt>할인특약</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 													<span>수정</span>
@@ -2831,8 +2832,8 @@
 												<div class="info">할인특약을 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="alarm">알릴의무</dt>
+										<dl class="item_depth">
+											<dt>알릴의무</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 													<span>수정</span>
@@ -2848,13 +2849,13 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">4.보험료확인</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="4.보험료확인"}}
-										<dl class="dep_list">
+										<dl class="item_depth">
 											<dt>보험료확인</dt>
 											<dd>
 												<ul>
@@ -2876,14 +2877,14 @@
 								<!-- 입력진행 전 -->
 								<!-- <dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
-									<dd></dd>
+									<dd><div class="info"></div></dd>
 								</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
 									{{#> cp/accordion ac-title="5.피보험자/계약자정보"}}
-										<dl class="dep_list">
-											<dt class="contractor">피보험자/계약자정보</dt>
+										<dl class="item_depth">
+											<dt>피보험자/계약자정보</dt>
 											<dd>
 												<ul>
 													<li>
@@ -2899,8 +2900,8 @@
 												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 											</dd>
 										</dl>
-										<dl class="dep_list">
-											<dt class="picture">사진첨부</dt>
+										<dl class="item_depth">
+											<dt>사진첨부</dt>
 											<dd>
 												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 													<span>수정</span>
@@ -2928,7 +2929,7 @@
 								<!-- 결제 -->
 								<dl>
 									<!-- 해당 단계일 시, last 클래스 추가 -->
-									<dt class="title">7.결제</dt>
+									<dt class="title last">7.결제</dt>
 									<dd>
 										<div class="info">보험료를 결제 중이에요</div>
 									</dd>
@@ -3027,7 +3028,7 @@
 			</div>
 				
 			<div class="info_gray">
-				<ol class="step_list type_car">
+				<ol class="step_list type_mix">
 				<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 					<li class="active">
 						<!-- 차량정보 -->
@@ -3041,7 +3042,7 @@
 						<div class="acd_item acd_item_ty9">
 							<!-- 해당되는 단계에만, last 클래스 추가 -->
 							{{#> cp/accordion ac-title="2. 차량정보" ac-active=true head-class="last"}}
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>차량선택</dt>
 									<dd>
 										<ul>
@@ -3058,7 +3059,7 @@
 										<div class="info">차량을 선택 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>보험기간</dt>
 									<dd>
 										<ul>
@@ -3072,7 +3073,7 @@
 										<div class="info">보험기간을 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>차량정보입력</dt>
 									<dd>
 										<ul>
@@ -3116,7 +3117,7 @@
 										<div class="info">차량정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>차량부품정보</dt>
 									<dd>
 										<ul>
@@ -3130,7 +3131,7 @@
 										<div class="info">차량부품정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>사용용도</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="사용용도 페이지로 이동">
@@ -3147,13 +3148,13 @@
 						<!-- 입력진행 전 -->
 						<dl>
 							<dt class="title">3. 운전자정보</dt>
-							<dd></dd>
+							<dd><div class="info"></div></dd>
 						</dl>
 						<!-- 입력진행 후 -->
 						<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 						<!-- <div class="acd_item acd_item_ty9">
 							{{#> cp/accordion ac-title="2. 운전자정보"}}
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>운전범위</dt>
 									<dd>
 										<ul>
@@ -3173,7 +3174,7 @@
 										<div class="info">운전범위를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>할인특약</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
@@ -3182,7 +3183,7 @@
 										<div class="info">할인특약을 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>알릴의무</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
@@ -3199,13 +3200,13 @@
 						<!-- 입력진행 전 -->
 						<dl>
 							<dt class="title">5. 보험료확인</dt>
-							<dd></dd>
+							<dd><div class="info"></div></dd>
 						</dl>
 						<!-- 입력진행 후 -->
 						<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 						<!-- <div class="acd_item acd_item_ty9">
 							{{#> cp/accordion ac-title="3. 보험료확인" }}
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>보험료확인</dt>
 									<dd>
 										<ul>
@@ -3227,13 +3228,13 @@
 						<!-- 입력진행 전 -->
 						<dl>
 							<dt class="title">5. 피보험자/계약자정보</dt>
-							<dd></dd>
+							<dd><div class="info"></div></dd>
 						</dl>
 						<!-- 입력진행 후 -->
 						<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 						<!-- <div class="acd_item acd_item_ty9">
 							{{#> cp/accordion ac-title="4. 피보험자/계약자정보" }}
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>피보험자/계약자정보</dt>
 									<dd>
 										<ul>
@@ -3250,7 +3251,7 @@
 										<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>사진첨부</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
@@ -3460,7 +3461,7 @@
 						<!-- 입력진행 전 -->
 						<!-- <dl>
 							<dt class="title">3. 보험료확인</dt>
-							<dd></dd>
+							<dd><div class="info"></div></dd>
 						</dl> -->
 						<!-- 입력진행 후 -->
 						<dl>
@@ -3512,13 +3513,13 @@
 						<!-- 입력진행 전 -->
 						<!-- <dl>
 							<dt class="title">4. 피보험자/계약자정보</dt>
-							<dd></dd>
+							<dd><div class="info"></div></dd>
 						</dl> -->
 						<!-- 입력진행 후 -->
 						<dl>
 							<dt class="title">5. 피보험자/계약자정보</dt>
 							<dd>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>피보험자 정보 입력</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="피보험자 정보 입력 페이지로 이동">
@@ -3527,7 +3528,7 @@
 										<div class="info">사용용도를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<dl class="dep_list">
+								<dl class="item_depth">
 									<dt>증빙사진 입력</dt>
 									<dd>
 										<button type="button" class="modify_sub" title="증빙사진 입력 페이지로 이동">
@@ -3590,7 +3591,7 @@
 						<!-- 결제 -->
 						<dl>
 							<!-- 해당되는 단계에만, last 클래스 추가 -->
-							<dt class="title">7. 결제</dt>
+							<dt class="title last">7. 결제</dt>
 							<dd>
 								<div class="info">보험료를 결제 중이에요</div>
 							</dd>
