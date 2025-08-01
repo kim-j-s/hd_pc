@@ -277,7 +277,7 @@ body {
 	.info_list {
 		display: flex;
 		flex-direction: column;
-		gap: var(--gap-7);
+		gap: var(--gap-8);
 		.tit {
 			font-size: var(--font-size-body-medium);
 			color: var(--color-text-basic);
@@ -331,6 +331,8 @@ body {
 	justify-content: space-between;
 	position: relative;
 	width: 100%;
+	min-height: 100px;
+	padding-left: var(--padding-8);
 	border: 1px solid transparent;
 	border-radius: var(--radius-large2);
 	&::after {
@@ -349,7 +351,6 @@ body {
 	}
 
 	.desc_wrap {
-		padding-left: var(--padding-8);
 		.tit {
 			font-size: var(--font-size-body-large);
 		}
