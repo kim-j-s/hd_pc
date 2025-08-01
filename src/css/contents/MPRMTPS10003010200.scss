@@ -94,7 +94,7 @@
 		padding: 0 4px;
 		background-color: var(--color-border-gray-darker);
 		font-size: var(--font-size-label-xsmall);
-		line-height: 17px;
+		line-height: 15px;
 		color: #FFF;
 		border-radius: 8px;
 		white-space: nowrap;
@@ -187,10 +187,10 @@
 		left: 50%;
 		transform: translateX(-50%);
 		display: inline-block;
-		padding: 0 4px;
+		padding: 1px 4px 0;
 		background-color: var(--color-border-gray-darker);
 		font-size: var(--font-size-label-xsmall);
-		line-height: 15px;
+		line-height: 14px;
 		color: #FFF;
 		border-radius: 8px;
 		white-space: nowrap;
@@ -203,10 +203,10 @@
 		.spot {
 			display: block;
 			width: 34px;
-			padding: 0 4px;
+			padding: 3px 4px 1px;
 			background-color: var(--color-border-secondary);
 			font-size: var(--font-size-label-xsmall);
-			line-height: 19px;
+			line-height: 15px;
 			font-style: normal;
 			color: #FFF;
 			white-space: nowrap;
