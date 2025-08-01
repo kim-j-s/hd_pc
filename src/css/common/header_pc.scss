@@ -312,9 +312,11 @@
 	.main_cont_wrap {
 		.mcw_cont {
 			.mc_l_cont {
-				.tag_item_wrap {
-					&.main_sticky {
-						top: 120px;
+				.main_sticky_cont {
+					.msc_inner {
+						&.active {
+							top: 120px;
+						}
 					}
 				}
 			}

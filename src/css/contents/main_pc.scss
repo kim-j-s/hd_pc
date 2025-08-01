@@ -18,26 +18,48 @@
 			flex: 1 1 0;
 			padding-bottom: var(--gap-11);
 
+			--calc-shadow-area: 18px;
+
+			.main_sticky_cont {
+				.msc_inner {
+					position: relative;
+					overflow: hidden;
+					transition: top 0.3s;
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 50%;
+						width: 130vw;
+						height: calc(100% - var(--calc-shadow-area));
+						transform: translateX(-50%);
+					}					
+					&.active {
+						position: fixed;
+						width: 100%;
+						top: 72px;
+						left: 0;
+						z-index: 2;
+						&::before {
+							background-color: var(--color-background-white);
+							box-shadow: 0 var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0 rgba(0, 0, 0, 0.05);
+							// box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.05);
+						}
+						.tag_item_wrap {
+							width: 1188px;
+							margin: 0 auto;
+							padding-bottom: calc( var(--padding-8) + var(--calc-shadow-area));
+						}
+					}
+				}
+			}
+
 			.tag_item_wrap {
 				margin-bottom: 0;
 				background-color: transparent;
 				&.main_sticky {
-					position: sticky;
-					top: 72px;
 					padding: var(--padding-6) 0 var(--padding-8) 0;
 					z-index: 10;
-					transition: 0.3s;
-					// &::before {
-					// 	content: '';
-					// 	position: absolute;
-					// 	top: 0;
-					// 	left: 50%;
-					// 	width: 130vw;
-					// 	height: 100%;
-					// 	background: var(--color-background-white);
-					// 	box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-					// 	transform: translateX(-50%);
-					// }
 				}
 			}
 		}
@@ -45,6 +67,32 @@
 		.mc_r_cont {
 			flex: none;
 			width: 288px;
+		}
+
+		.main_benefit {
+			position: sticky;
+			top: 0;
+
+			// 제안 사항
+			&.normal {
+				position: static;
+			}
+			// 제안 사항
+
+
+			.main_benefit_title {
+				font-weight: 700;
+				font-size: var(--font-size-heading-small);
+				color: var(--color-text-bolder);
+			}
+			.dd {
+				// background-color: #fff;
+				margin-top: 12px;
+				font-size: 0;
+				img {
+					display: block;
+				}
+			}
 		}
 	}
 
@@ -496,3 +544,37 @@
 
 
 }
+
+
+
+// 제안조건
+.main_benefit {
+	transition: top 0.3s, max-height 0.3s;
+	&.active {
+		// max-height: 100vw;
+		overflow: auto;
+	}
+}
+.sc_down {
+	.main_benefit {
+		&.sc_mode {
+			&.active {
+				top: calc(72px + 80px);
+				max-height: calc(100vh - 72px - 80px);
+				overflow: auto;
+			}
+		}
+	}
+}
+.sc_up {
+	.main_benefit {
+		&.sc_mode {
+			&.active {
+				top: calc(120px + 80px);
+				max-height: calc(100vh - 72px - 80px);
+				overflow: auto;
+			}
+		}
+	}
+}
+// 제안조건
