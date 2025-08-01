@@ -202,11 +202,11 @@ body {
 
 
 
-// panel
+// 우측 panel
 .side_panel {
 	display: flex;
 	flex-direction: column;
-	gap: var(--gap-7);
+	gap: var(--gap-5);
 
 	.info_cont {
 		.data_list {
@@ -586,6 +586,14 @@ body {
 								&.birth {
 									background: url(../images/content/bi/icon_stepper_birth.svg) no-repeat left 4px center / 16px;
 								}
+								//사업자번호
+								&.busi_num {
+									background: url(../images/content/bi/icon_stepper_insurance.svg) no-repeat left 4px center / 16px;
+								}
+								//회사명
+								&.company {
+									background: url(../images/content/bi/icon_stepper_job.svg) no-repeat left 4px center / 16px;
+								}
 							}
 						}
 					}
@@ -634,35 +642,49 @@ body {
 						font-size: var(--font-size-body-small);
 						color: var(--color-text-basic);
 
+						//차량선택
 						&.car {
 							background-image: url(../images/content/bi/icon_stepper_car.svg);
 						}
+						//보험기간
 						&.date {
 							background-image: url(../images/content/bi/icon_stepper_date.svg);
 						}
+						//차량부품정보
 						&.maker {
 							background-image: url(../images/content/bi/icon_stepper_car_maker.svg);
 						}
+						//차량정보입력
 						&.car_info {
 							background-image: url(../images/content/bi/icon_stepper_car_detail2.svg);
 						}
+						//차량정보 - 알림 특약
 						&.alarm {
 							background-image: url(../images/content/bi/icon_stepper_alarm.svg);
 						}
-						&.discount {
-							background-image: url(../images/content/bi/icon_stepper_discount.svg);
-						}
-						&.driver {
-							background-image: url(../images/content/bi/icon_stepper_person.svg);
-						}
+						//운전자정보 - 알림 특약
 						&.alarm2 {
 							background-image: url(../images/content/bi/icon_stepper_alarm.svg);
 						}
+						//할인 특약
+						&.discount {
+							background-image: url(../images/content/bi/icon_stepper_discount.svg);
+						}
+						//운전범위
+						&.driver {
+							background-image: url(../images/content/bi/icon_stepper_person.svg);
+						}
+						// 피보험자/계약자정보
+						&.contractor {
+							background-image: url(../images/content/bi/icon_stepper_contractor.svg);
+						}
+						// 사진첨부
 						&.picture {
 							background-image: url(../images/content/bi/icon_stepper_picture.svg);
 						}
-						&.contractor {
-							background-image: url(../images/content/bi/icon_stepper_contractor.svg);
+						// 사용용도
+						&.useful {
+							background-image: url(../images/content/bi/icon_info.svg);
 						}
 					}
 
