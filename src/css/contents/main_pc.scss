@@ -15,9 +15,9 @@
 		margin: 0 auto;
 
 		.mc_l_cont {
-			flex: 1 1 0;
-			// padding-bottom: var(--gap-11);
 			--calc-shadow-area: 18px;
+			flex: 1 1 0;
+			min-width: 0;
 			.main_sticky_cont {
 				.msc_inner {
 					position: relative;
@@ -630,8 +630,7 @@
 
 /* 알려드려요 */
 .item_news_link {
-	// display: flex;
-	display: block;
+	display: flex;
 	padding: 0 var(--padding-5);
 	border-radius: var(--radius-medium1, 12px);
 	background-color: transparent;
@@ -639,46 +638,41 @@
 	min-width: 0;
 	width: 100%;
 	.item_news_link_inner	{
-		min-width: 0;
 		position: relative;
-		// flex: 1 1 0;
-		// display: flex;
-		// align-items: center;
-		display: block;
-		width: 100%;
-		padding-left: var(--gap-3);
-		// gap: var(--gap-4);
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-
-		font-size: var(--font-size-body-medium);
-
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			left: 0;
-			width: 3px;
-			border-bottom: 3px solid #33363D;
-			border-radius: 50%;
-			transform: translateY(-50%);
-		}
+		flex: 1 1 0;
+		display: flex;
+		align-items: center;
+		min-width: 0;
 		> .text {
-			flex: 1 1 0;
-			display: block;
-			max-width: 100%;
-			// min-width: 0;
+			position: relative;
+			min-width: 0;
+			padding-left: var(--gap-3);
 			font-size: var(--font-size-body-medium);
 			color: var(--color-text-basic);
 			line-height: 48px;
-			// overflow: hidden;
-			// text-overflow: ellipsis;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 3px;
+				border-bottom: 3px solid #33363D;
+				border-radius: 50%;
+				transform: translateY(-50%);
+			}
+			.tit {
+				display: block;
+				max-width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 		.date {
 			flex: none;
+			padding-left: var(--gap-4);
 			font-size: var(--font-size-body-small);
+			font-variant-numeric: tabular-nums;
 			color: var(--color-text-subtle, #464C53);
 		}
 	}
@@ -686,6 +680,11 @@
 	&:focus {
 		padding: 0 var(--padding-6);
 		background-color: var(--color-action-secondary-dark-fill-hover);
+	}
+	&.item_news_link_ty2 {		
+		.item_news_link_inner {
+			justify-content: flex-end;
+		}
 	}
 }
 /* 알려드려요 */
