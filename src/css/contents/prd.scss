@@ -4,7 +4,21 @@
 	background-size: 32px auto;
 }
 
-// 상품안내
+body {
+	// 백그라운드 넓이 100% 좌우 스크롤 삭제
+	&.overflow-x {
+		overflow-x: hidden;
+	}
+}
+.wrap {
+	.container {
+		&.prd_view {
+			padding-bottom: 0;
+		}
+	}
+}
+
+// 상품상세
 .prd_view {
 	// 타이틀 영역
 	.title_view_wrap {
@@ -20,6 +34,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--gap-11);
+		padding-bottom: 148px;
 	}
 
 	// intro info
@@ -75,26 +90,72 @@
 			width: 100vw;
 			height: 100%;
 			background: var(--color-surface-warning-subtler);
-			z-index: -1;
 			transform: translateX(-50%);
+			z-index: -1;
 		}
 		.guarantee_list {
 			display: flex;
 			flex-direction: column;
 			gap: var(--gap-5);
-			.title_h5 {
-				padding-left: 44px;
-				@extend %background_set;
-				@for $i from 1 through 40 {
-					&.item_ico_ty#{$i} {
-							background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
+			.item {
+				&:nth-child(n+4) {
+					display: none;
+				}
+				.titie_wrap {
+					padding-left: 44px;
+					@extend %background_set;
+					@for $i from 1 through 40 {
+						&.item_ico_ty#{$i} {
+								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
+						}
 					}
+				}
+				.desc {
+					padding-top: var(--gap-2);
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-subtle);
 				}
 			}
 		}
 		.btn_area {
 			margin-top: var(--gap-5);
 		}
+
+		// 보장내용 토글버튼
+		.tg_item {
+			+ .btn_area {
+				.btn_toggle {
+					.text {
+						&::before {
+							content:'더보기';
+						}
+					}
+				}
+			}
+			&.active {
+				.guarantee_list {
+					.item {
+						&:nth-child(n+4) {
+							display: block;
+						}
+					}
+				}
+				+ .btn_area {
+					 .btn_toggle {
+						 .text {
+							&::before {
+								content: "닫기";
+							}
+							&::after {
+								transform: rotate(-180deg);
+							}
+						 }
+					 }
+				}
+			}
+			
+		}
+
 	}
 
 	// 할인혜택
@@ -184,7 +245,7 @@
 						position: relative;
 						& + .meta {
 							padding-left: 9px;
-							&:before {
+							&::before {
 								display: block;
 								content: "";
 								width: 1px;
@@ -211,7 +272,6 @@
 			}
 		}
 	}
-
 	
 	// 목록
 	.info_list {
@@ -325,27 +385,79 @@
 	}
 }
 
-// 보장내용 접기 버튼
-.btn_toggle_close {
-	display: inline-block;
-	font-size: var(--font-size-button-medium);
-	background-color: transparent;
-	.text {
+// 상품바로가기
+.prd_link_area {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	&.fixed {
+		position: fixed;
+	}
+
+	.prd_link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		position: relative;
-		display: block;
-		padding-right: 16px;
-		&:before {
-			content:'닫기';
-		}
-		&:after {
-			content:'';
+		width: 836px;
+		min-height: 84px;
+		margin: 0 auto;
+		padding: var(--padding-5) 0 var(--padding-6);
+		&::before {
+			content: '';
+			display: block;
 			position: absolute;
-			top: calc(50% - 8px);
-			right: 0;
-			width: 16px;
-			height: 16px;
-			background: url('../images/icon/arrowDown_ty3.svg') no-repeat right center / 16px auto;
-			transform: rotate(-180deg);
+			top: 0;
+			left: 50%;
+			width: 100vw;
+			height: 100%;
+			border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
+			background-color: var(--color-surface-white-subtle);
+			box-shadow: 0 var(--shadow-y-minus2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1);
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+
+		.prd_item {
+			position: relative;
+			padding-left: 68px;
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 56px;
+				height: 56px;
+				border-radius: var(--radius-medium2);
+				background: var(--color-surface-primary-subtler);
+				transform: translateY(-50%);
+			}
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -4px;
+				left: 12px;
+				width: 32px;
+				height: 32px;
+				@extend %background_set;
+				z-index: 2;
+			}
+			@for $i from 1 through 40 {
+				&.item_ico_ty#{$i}::after {
+						background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
+				}
+			}
+
+			.tit {
+				font-weight: 700;
+				font-size: var(--font-size-body-medium);
+				color: var(--color-text-basic);
+			}
 		}
 	}
+
 }
