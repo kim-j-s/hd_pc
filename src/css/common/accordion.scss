@@ -444,6 +444,42 @@
 
 	}
 
+
+	&.acd_item_ty5 {
+		border-radius: var(--radius-medium3);
+		background: var(--color-action-secondary-dark-fill);
+		.acd_head {
+			display: flex;
+			align-items: center;
+			padding: var(--padding-3) var(--padding-7);
+			.acd_head_title {
+				flex: none;
+				width: 134px;
+				padding-left: 32px;
+				font-weight: 700;
+				font-size: var(--font-size-heading-xsmall);
+				color: var(--color-text-static);
+				background: url(../images/content/ho/icon_bell2.svg) no-repeat left center / 32px auto;
+			}
+			.acd_btn {
+				flex: none;
+				width: 48px;
+				height: 48px;
+				margin-left: auto;
+				background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 20px auto;
+			}
+		}
+
+		.acd_cont {
+			> .inner {
+				padding: 0 var(--padding-5) var(--padding-8) var(--padding-9);
+			}
+		}
+	}
+
+
+
+
 	&.acd_item_ty6 {
 		.acd_head {
 			position: relative;
