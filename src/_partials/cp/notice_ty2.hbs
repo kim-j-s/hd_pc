@@ -1,0 +1,26 @@
+{{!-- /**
+ * @name : notice
+ * @description : notice 컴포넌트
+ * @property
+ *  - dp-active : 활성화 상태
+ *  - dp-head-class : notice head 부분 class 배정
+ *  - dp-cont-class : notice cont 부분 class 배정
+ */
+ --}}
+<div class="acd_item">
+	<div class="acd_head{{#if dp-active}} active{{/if}}{{#if dp-head-class}} {{dp-head-class}}{{/if}}">
+		<h5 class="acd_head_title">{{#if dp-title}}{{dp-title}}{{else}}꼭 알아두세요{{/if}}</h5>
+		<a href="#" class="item_news_link item_news_link">
+			<span class="item_news_link_inner">
+				<span class="text">3월 신용카드 무이자할부 안내</span>
+				<span class="date">2025.01.01</span>
+			</span>
+		</a>
+		<button type="button" class="acd_btn" {{#if dp-active}}aria-expanded="true"{{else}}aria-expanded="false"{{/if}}></button>
+	</div>
+	<div class="acd_cont{{#if dp-cont-class}} {{dp-cont-class}}{{/if}}">
+		<div class="inner"{{#if dp-active}} style="display:block;"{{/if}}>
+			{{> @partial-block }}
+		</div>
+	</div>
+</div>

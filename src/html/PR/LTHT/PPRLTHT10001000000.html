@@ -1,4 +1,4 @@
-{{#> layout/default page-title="건강보험 상품안내 | 상품"}}
+{{#> layout/default page-title="건강보험 상품안내 | 상품" bd-class="overflow-x"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc bc=true }}
 
@@ -25,8 +25,13 @@
 						</div>
 					</div>
 					<div class="btn_area">
-						{{> cp/linkButton bl_class="short_cut" bl_text="가입후기 100개 이상" bl_title="페이지 이동" }}
+						{{> cp/linkButton bl_class="short_cut anchor_btn" bl_text="가입후기 100개 이상" href="#anchor_move" role_b=true}}
 					</div>
+					<!-- <div class="anchor_wrap">
+						<button type="button" class="anchor_btn" title="해당 영역으로 이동">
+							필요해요
+						</button>
+					</div> -->
 				</div>
 				<!-- e: review -->
 			</div>
@@ -54,8 +59,13 @@
 							</ul>
 						</div>
 					</div>
-					<div class="btn_area center">
+					<!-- <div class="btn_area center">
 						{{> cp/button type="1" size="3" b-text="보험료 확인하기" btn-title="페이지 이동"}}
+					</div> -->
+					<div class="btn_area center">
+						<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_3">
+							<span class="text">보험료 확인하기</span>
+						</a>
 					</div>
 				</div>
 				<!-- e: intro_info -->
@@ -76,43 +86,52 @@
 						<p class="info_text2">해당 특약 가입 시</p>
 					</div>				
 					<div class="cont_body">
-						<ul class="guarantee_list">
-							<li class="item">
-								<div class="info_gray bg_etc01">
-									<h5 class="title_h5 item_ico_ty15">
-										<strong class="point">3대질병(암, 뇌혈관질환, 심장질환) 진단비</strong> 보장
-									</h5>
-								</div>
-							</li>
-							<li class="item">
-								<div class="info_gray bg_etc01">
-									<h5 class="title_h5 item_ico_ty2">
-										<strong class="point">입원/수술비, 응급실 내원, 특정감염병 입원</strong>까지 보장
-									</h5>
-								</div>
-							</li>
-							<li class="item">
-								<div class="info_gray bg_etc01">
-									<h5 class="title_h5 item_ico_ty16">
-										생활 속 걱정되는 <strong class="point">특정 질환 진단비(통풍, 대상포진 등)</strong> 보장
-									</h5>
-								</div>
-							</li>
-							<li class="item">
-								<div class="info_gray bg_etc01">
-									<h5 class="title_h5 item_ico_ty16">
-										생활 속 걱정되는 <strong class="point">특정 질환 진단비(통풍, 대상포진 등)</strong> 보장
-									</h5>
-								</div>
-							</li>
-						</ul>
-						<!-- s: btn_area -->
-						<div class="btn_area center">
-							<button type="button" class="btn btn_toggle_close">
-								<span class="text"></span>
-							</button>
+						<!-- s: acd_item -->
+						<div class="  acd_tg_bottom2">
+							<div class="tg_item">
+								<!-- s: guarantee_list -->
+								<ul class="guarantee_list">
+									<li class="item">
+										<div class="info_gray bg_etc01">
+											<div class="titie_wrap item_ico_ty15">
+												<h5 class="title_h5">
+													<strong class="point">3대질병(암, 뇌혈관질환, 심장질환) 진단비</strong> 보장
+												</h5>
+												<!-- 서브문구 필요시 -->
+												<!-- <p class="desc"></p> -->
+											</div>
+										</div>
+									</li>
+									<li class="item">
+										<div class="info_gray bg_etc01">
+											<div class="titie_wrap item_ico_ty2">
+												<h5 class="title_h5">
+													<strong class="point">입원/수술비, 응급실 내원, 특정감염병 입원</strong>까지 보장
+												</h5>
+											</div>
+										</div>
+									</li>
+									<li class="item">
+										<div class="info_gray bg_etc01">
+											<div class="titie_wrap item_ico_ty16">
+												<h5 class="title_h5">
+													생활 속 걱정되는 <strong class="point">특정 질환 진단비(통풍, 대상포진 등)</strong> 보장
+												</h5>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- e: guarantee_list -->
+							</div>
+							<!-- s: btn_area -->
+							<div class="btn_area center">
+								<button type="button" class="btn btn_toggle">
+									<span class="text"></span>
+								</button>
+							</div>
+							<!-- e: btn_area -->
 						</div>
-						<!-- e: btn_area -->
+						<!-- e: acd_item -->
 					</div>				
 				</div>
 				<!-- e: 보장내용 -->
@@ -178,8 +197,9 @@
 				</div>
 				<!-- e: 자주하는 질문 -->
 
+
 				<!-- s: 가입후기 -->
-				<div class="recommend_area">
+				<div class="recommend_area" id="anchor_move">
 					<div class="cont_head">
 						<h5 class="title_h5"><strong class="point">가입후기</strong></h5>
 						<h3 class="title_h3">실제로 가입하신 분들의 생생한 후기</h3>
@@ -272,6 +292,7 @@
 				</div>
 				<!-- e: 가입후기 -->
 
+
 				<!-- s: 유의사항 -->
 				<div class="notice_area">
 					<div class="info_gray">
@@ -282,7 +303,6 @@
 						<div class="btn_area center">
 							{{> cp/button type="3" size="4" rightIcon="documentSvg" b-text="상품약관"}}
 							{{> cp/button type="3" size="4" rightIcon="documentSvg" b-text="유의사항"}}
-							<!-- {{> cp/button type="1" size="4" b-text="button"}} -->
 						</div>
 					</div>
 				</div>
@@ -295,6 +315,21 @@
 				<!-- e: 준법감시필 -->
 			</div>
 			<!-- e: content_body -->
+
+			<!-- s: 상품바로가기 -->
+			<div class="prd_link_area">
+				<div class="prd_link">
+					<div class="prd_item item_ico_ty21">
+						<p class="tit">무배당 현대해상다이렉트 H건강보험</p>
+					</div>
+					<div class="btn_area">
+						<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+							<span class="text">보험료 확인하기</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- e: 상품바로가기 -->
 
 		</div>
 	</div>
@@ -368,6 +403,62 @@
 <!-- e: popup area -->
 
 
+<script>
+$(function(){
+	toggleView();
+	prdFixed();
+	anchorMove();
+});
+
+function toggleView() {
+  $('.guarantee_area .acd_tg_bottom2').each(function () {
+    const $this = $(this),
+          $item = $this.find('.guarantee_list'),
+          $ele = $item.find('.item');
+    const eleLength = $ele.length;
+
+    if (eleLength <= 3) {
+      $this.find('.btn_area').remove();
+    }
+  });
+}
+
+function prdFixed() {
+	let lastScrollTop = 0;
+	$(window).on("scroll", function () {
+		const st = $(this).scrollTop();
+		const scrollHeight = $(document).height();
+		const windowHeight = $(this).height();
+		const scrollBottom = scrollHeight - windowHeight - st;
+
+		// 위치 임시값
+		if (st >= 500) {
+			$('.prd_link_area').addClass('fixed')
+		}
+		if (st < 400 || scrollBottom <= 203) {
+			$('.prd_link_area').removeClass('fixed')
+		}
+		lastScrollTop = st <= 0 ? 0 : st;
+	});
+}
+
+function anchorMove() {
+	$(".anchor_btn").on("click", function (e) {
+    e.preventDefault();
+
+    const targetId = $(this).attr("href");
+    const target = $(targetId);
+    if (target.length) {
+      $("html, body").animate(
+        {
+          scrollTop: target.offset().top - 100
+        },
+        500 
+      );
+    }
+  });
+}
+</script>
 
 
 {{/ layout/default }}

@@ -5,7 +5,7 @@
 	{{!-- <script type="text/javascript" src="../../../js/common_pc.js"></script> --}}
 	{{!-- <script type="text/javascript" src="../../../js/popup_pc.js"></script> --}}
 	</head>
-  <body>
+  <body {{#if bd-class}} class="{{bd-class}}"{{/if}}>
 		{{#unless no-skip}}
 		<ul id="skipNavi" class="skipNavi">
 			{{#unless no-gnb}}<li><a href="#gnb">주메뉴바로가기</a></li>{{/unless}}

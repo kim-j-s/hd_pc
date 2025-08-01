@@ -286,7 +286,10 @@
 						<!-- 펫 -->
 						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title" style="background-color: red;">펫 - 알럿 추가 필요</h3>
+								<h3 class="main_prd_title">
+									펫
+									<small class="n_msg">동물등록, 유기동물 입양, 다펫 시 최대 13% 할인</small>
+								</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic4">
 										<div class="mpc_item_cont">
@@ -360,9 +363,14 @@
 
 						<!-- 배너 -->
 						<div class="mcont_items">
-							배너 <br>
-							진행 필요 <br>
-							좌우 sw							
+							<div class="main_banner">
+								<a href="#">
+									<img src="../../../images/temp/temp_banner1.png" alt="일반/장기에 대한 배너 영역입니다 안내 문구 필요합니다.">
+								</a>
+								<a href="#">
+									<img src="../../../images/temp/temp_banner2.png" alt="보험 가입하고 경품 받아가세요 운전자,주택,어린이,암,건강,펫">
+								</a>
+							</div>
 						</div>
 						<!-- 배너 -->
 
@@ -480,8 +488,63 @@
 						</div>
 						<!-- 연금/저축 -->
 
-						<!-- 새로운 소식 -->
-						<!-- 새로운 소식 -->
+						<!-- 알려드려요 -->
+						<div class="mcont_items">
+							<div class="acd_item acd_item_ty5">
+								{{#> cp/notice_ty2 notice-class="etc01" dp-title="알려드려요" dp-active=true }}
+								<ul class="list_news">
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">3월 신용카드 무이자할부 안내</span>
+												<span class="date">2025.01.01</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link"> 
+											<span class="item_news_link_inner">
+												<span class="text">신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드</span>
+												<span class="date">2025.01.01</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link"> 
+											<span class="item_news_link_inner">
+												<span class="text">신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드 신용카드</span>
+												<span class="date">2025.01.01</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">신상품 ‘다이렉트 오토바이운전바보험‘ 출시</span>
+												<span class="date">2025.12.28</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">온라인플랫폼 서비스 이용약관 개정 안내</span>
+												<span class="date">2025.11.11</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+								{{/ cp/notice_ty2 }}
+							</div>
+						</div>
+						<!-- 알려드려요 -->
 					</div>
 					
 				</div>
@@ -568,14 +631,11 @@
 		});
 
 
+
+
+		// 메인 스크롤 이벤트
 		$(window).on('scroll', function() {
 			let scrollTop = $(this).scrollTop();
-			// let stickyHeight = $('.position_event_tab').outerHeight();
-			// if (scrollTop > stickyHeight) {
-			// 	$('.position_event_tab').addClass('sticky');
-			// } else {
-			// 	$('.position_event_tab').removeClass('sticky');
-			// }
 			
 			const $target = $('.main_sticky_cont');			
 			const $targetActive = $target.find('.main_sticky');
@@ -583,9 +643,7 @@
 			const $targetCover = $('.msc_inner');
 			const targetOffset = $target.offset().top;
 
-			console.log(scrollTop, targetOffset);
-
-
+			// console.log(scrollTop, targetOffset);
 			// 스크롤 추가 조건
 			const $sideScroll = $('.main_benefit');
 
