@@ -190,7 +190,7 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	gap: var(--gap-7);
+	gap: var(--gap-5);
 }
 .side_panel .info_cont .data_list {
 	margin-top: var(--gap-4);
@@ -475,6 +475,12 @@ body {
 .side_panel .step_list.step_car > li > dl dd ul li.birth {
 	background: url(../images/content/bi/icon_stepper_birth.svg) no-repeat left 4px center/16px;
 }
+.side_panel .step_list.step_car > li > dl dd ul li.busi_num {
+	background: url(../images/content/bi/icon_stepper_insurance.svg) no-repeat left 4px center/16px;
+}
+.side_panel .step_list.step_car > li > dl dd ul li.company {
+	background: url(../images/content/bi/icon_stepper_job.svg) no-repeat left 4px center/16px;
+}
 .side_panel .step_list.step_car > li > .acd_item_ty9:before {
 	content: none;
 }
@@ -521,20 +527,23 @@ body {
 .side_panel .step_list.step_car > li .dep_list > dt.alarm {
 	background-image: url(../images/content/bi/icon_stepper_alarm.svg);
 }
+.side_panel .step_list.step_car > li .dep_list > dt.alarm2 {
+	background-image: url(../images/content/bi/icon_stepper_alarm.svg);
+}
 .side_panel .step_list.step_car > li .dep_list > dt.discount {
 	background-image: url(../images/content/bi/icon_stepper_discount.svg);
 }
 .side_panel .step_list.step_car > li .dep_list > dt.driver {
 	background-image: url(../images/content/bi/icon_stepper_person.svg);
 }
-.side_panel .step_list.step_car > li .dep_list > dt.alarm2 {
-	background-image: url(../images/content/bi/icon_stepper_alarm.svg);
+.side_panel .step_list.step_car > li .dep_list > dt.contractor {
+	background-image: url(../images/content/bi/icon_stepper_contractor.svg);
 }
 .side_panel .step_list.step_car > li .dep_list > dt.picture {
 	background-image: url(../images/content/bi/icon_stepper_picture.svg);
 }
-.side_panel .step_list.step_car > li .dep_list > dt.contractor {
-	background-image: url(../images/content/bi/icon_stepper_contractor.svg);
+.side_panel .step_list.step_car > li .dep_list > dt.useful {
+	background-image: url(../images/content/bi/icon_info.svg);
 }
 .side_panel .step_list.step_car > li .dep_list dd {
 	margin-top: 0;
@@ -4680,7 +4689,6 @@ body {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
-	padding-bottom: var(--gap-11);
 	--calc-shadow-area: 18px;
 }
 .main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner {
@@ -4699,6 +4707,10 @@ body {
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
+.main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner .tag_item_wrap .tag_item.c_ty03 > .text {
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
 .main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner.active {
 	position: fixed;
 	width: 100%;
@@ -4716,6 +4728,14 @@ body {
 	margin: 0 auto;
 	padding-bottom: calc(var(--padding-8) + var(--calc-shadow-area));
 }
+.main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner.active .tag_item_wrap .tag_item.c_ty03 > .text {
+	border-color: var(--color-element-secondary-lighter);
+	background-color: var(--color-element-secondary-lighter);
+}
+.main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner.active .tag_item_wrap .tag_item.c_ty03.active > .text {
+	border-color: var(--color-border-secondary);
+	background-color: var(--color-border-secondary);
+}
 .main_cont_wrap .mcw_cont .mc_l_cont .tag_item_wrap {
 	margin-bottom: 0;
 	background-color: transparent;
@@ -4729,6 +4749,23 @@ body {
 	-ms-flex: none;
 	flex: none;
 	width: 288px;
+}
+.main_cont_wrap .mcw_cont .main_banner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	gap: var(--gap-5);
+}
+.main_cont_wrap .mcw_cont .main_banner > a {
+	display: block;
+	font-size: 0;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 calc(50% - 8px);
+	flex: 0 1 calc(50% - 8px);
 }
 .main_cont_wrap .mcw_cont .main_benefit {
 	position: sticky;
@@ -4880,10 +4917,26 @@ body {
 }
 /* 메인 상품별 아이콘 처리 */
 .main_prd .main_prd_title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	padding-bottom: var(--gap-6);
 	font-weight: 700;
 	font-size: var(--font-size-heading-medium);
 	color: var(--color-text-bolder);
+}
+.main_prd .main_prd_title .n_msg {
+	display: inline-block;
+	margin-left: var(--gap-3);
+	padding-left: 20px;
+	padding-top: var(--gap-2);
+	font-weight: 400;
+	color: var(--color-text-information);
+	font-size: var(--font-size-label-medium);
+	background: url(../images/icon/info_ty2.svg) no-repeat left top 7px/16px auto;
 }
 .main_prd .main_prd_cont {
 	display: grid;
@@ -5220,3 +5273,59 @@ body {
 	max-height: calc(100vh - 72px - 80px);
 	overflow: auto;
 }
+/* 알려드려요 */
+.item_news_link {
+	display: block;
+	padding: 0 var(--padding-5);
+	border-radius: var(--radius-medium1, 12px);
+	background-color: transparent;
+	-webkit-transition: padding 0.3s, background-color 0.3s;
+	transition: padding 0.3s, background-color 0.3s;
+	min-width: 0;
+	width: 100%;
+}
+.item_news_link .item_news_link_inner {
+	min-width: 0;
+	position: relative;
+	display: block;
+	width: 100%;
+	padding-left: var(--gap-3);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: var(--font-size-body-medium);
+}
+.item_news_link .item_news_link_inner::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 3px;
+	border-bottom: 3px solid #33363d;
+	border-radius: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.item_news_link .item_news_link_inner > .text {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	display: block;
+	max-width: 100%;
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-basic);
+	line-height: 48px;
+}
+.item_news_link .item_news_link_inner .date {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle, #464c53);
+}
+.item_news_link:hover,
+.item_news_link:focus {
+	padding: 0 var(--padding-6);
+	background-color: var(--color-action-secondary-dark-fill-hover);
+}
+/* 알려드려요 */

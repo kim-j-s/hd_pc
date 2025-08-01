@@ -2432,6 +2432,7 @@
 				});
 			});
 
+			// s: 25-08-01 수정
 			function prograssCar() {
 				const $prograss = $(".progress_box_ty2");
 
@@ -2441,15 +2442,16 @@
 						$start = $bar.find(".newStart");
 
 					const allW = $allBar.width(),
-						barW = $bar.width();
+						barW = $bar.width(),
+						labelW = $allBar.find(".start").width();
 
 					const newW = Math.round((barW / allW) * 100),
 						startW = Math.round((10 / allW) * 100),
-						newstartW = Math.round((37 / allW) * 100);
+						newstartW = Math.round((labelW / allW) * 100);
 
 					$prograss.children(".ing").removeClass("full");
 
-					let spotMargin = -(100 - newW - newstartW - 1) + "%";
+					let spotMargin = -(100 - newW - newstartW) + "%";
 					let parseVal = parseFloat(spotMargin);
 					let leftVal = (parseVal / 100) * barW;
 
@@ -2475,6 +2477,7 @@
 					}
 				});
 			}
+			// e: 25-08-01 수정
 		</script>
 	</body>
 </html>
