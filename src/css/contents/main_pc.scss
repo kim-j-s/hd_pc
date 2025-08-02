@@ -1,7 +1,7 @@
 .main_cont_wrap {
+	padding-bottom: var(--gap-11);
 
 	&.main_cont_wrap_ty2 {
-		// padding-top: var(--gap-11);
 		padding-top: calc(var(--gap-11) - var(--gap-6));
 		padding-bottom: var(--gap-12);
 		background: var(--color-surface-secondary-subtler);
@@ -109,18 +109,38 @@
 			position: sticky;
 			top: 0;
 
-			// 제안 사항
-			&.normal {
-				position: static;
-			}
-			// 제안 사항
-
 
 			.main_benefit_title {
 				font-weight: 700;
 				font-size: var(--font-size-heading-small);
 				color: var(--color-text-bolder);
 			}
+
+			.main_benefit_cont {
+				margin-top: var(--gap-5);
+				~ .main_benefit_cont {
+					margin-top: var(--gap-4);
+				}
+			}
+
+			.main_benefit_cont {
+				> li {
+					> .item {
+						display: block;
+						padding: var(--padding-6) 0;
+					}
+				}
+			}
+
+
+
+
+
+
+
+
+
+			// 삭제
 			.dd {
 				// background-color: #fff;
 				margin-top: 12px;
@@ -129,6 +149,7 @@
 					display: block;
 				}
 			}
+			// 삭제
 		}
 	}
 
@@ -498,27 +519,33 @@
 		padding: var(--padding-6) var(--padding-5) var(--padding-3);
 		border-bottom: 1px solid var(--color-divider-secondary-light);
 
-		> button {
+		> .chg_item {
 			position: relative;
+			display: block;
 			width: 100%;
-			height: 48px;
 			padding: var(--padding-3) 40px var(--padding-3) 52px;
+			border-radius: var(--radius-medium1);
 			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center / 16px;
+			transition: background-color 0.3s;
+			background-color: var(--color-menu-secondary-fill-hover);
 
 			&:before {
 				content:'';
 				position: absolute;
 				top: 50%;
 				left: var(--padding-3);
-				transform: translateY(-50%);
 				width: 32px;
 				height: 32px;
-				background: var(--color-element-secondary-light) url(../images/content/main/icon_login_person.svg) no-repeat center / 16px;
 				border-radius: var(--radius-medium1);
+				background: var(--color-element-secondary-light) url(../images/content/main/icon_login_person.svg) no-repeat center / 16px;
+				transform: translateY(-50%);
+				transition: background-color 0.3s;
 			}
 
 
 			.text {
+				display: block;
+				padding: 6px 0 5px 0;
 				font-size: var(--font-size-body-small);
 				color: var(--color-text-subtle);
 
@@ -532,14 +559,11 @@
 		.chg_item {
 			&:hover,
 			&:focus {
-				background-color: #DEE6EF;
 				// background-color: var(--color-menu-secondary-fill-hover);
-				border-radius: var(--radius-medium1);
-				transition: background-color .3s ease-in;
+				background-color: #DEE6EF;
 
 				&:before {
 					background-color: var(--color-element-secondary-lighter);
-					transition: background-color .3s ease-in;
 				}
 			}
 		}
@@ -548,15 +572,18 @@
 	.prd_module_list {
 		padding: var(--padding-6) var(--padding-5);
 
-		> button {
+		.item {
+			display: block;
 			width: 100%;
 			height: 40px;
 			padding: var(--padding-3) var(--padding-5) var(--padding-3) 52px;
 			background-repeat: no-repeat;
 			background-position: left 12px center;
 			background-size: 20px;
+			transition: all 0.3s;
 
 			.text {
+				display: block;
 				font-size: var(--font-size-body-small);
 			}
 
@@ -575,7 +602,7 @@
 		}
 		
 		// change effect
-		.chg_item {
+		.item {
 			&:hover,
 			&:focus { 
 				padding: var(--padding-3) var(--padding-6) var(--padding-3) 56px;
@@ -583,14 +610,9 @@
 				background-position: left 16px center;
 				// background-color: var(--color-menu-secondary-fill-hover);
 				border-radius: var(--radius-medium1);
-				transition: all .3s ease-in;
 			}
 		}
 	}
-}
-.chg_hover_box {
-
-
 }
 
 
@@ -598,6 +620,11 @@
 // 제안조건
 .main_benefit {
 	transition: top 0.3s, max-height 0.3s;
+	// 제안 사항
+	&.normal {
+		position: static;
+	}
+	// 제안 사항
 	&.active {
 		// max-height: 100vw;
 		overflow: auto;
