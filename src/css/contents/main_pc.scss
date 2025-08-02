@@ -124,10 +124,37 @@
 			}
 
 			.main_benefit_cont {
-				> li {
-					> .item {
-						display: block;
-						padding: var(--padding-6) 0;
+				padding: var(--padding-8) var(--padding-7);
+				border-radius: var(--radius-large2);
+				background: var(--color-surface-secondary-subtle);
+
+				.mbc_list {
+					> li {
+						> .item {
+							position: relative;
+							display: flex;
+							align-items: center;
+							gap: 0 var(--gap-3);
+							padding: var(--padding-6) 0;
+
+							.badge_wrap {
+								flex: none;
+								width: auto;
+								.hd_badge {
+									min-width: 48px;
+								}
+							}
+
+							.text {
+								flex: 1 1 0;
+								font-size: var(--font-size-body-small);
+								color: var(--color-text-basic);
+							}
+						}
+						border-bottom: var(--border-width-static-regular) solid var(--color-divider-secondary-light);
+						&:last-child {
+							border-bottom: none;
+						}
 					}
 				}
 			}
@@ -517,7 +544,8 @@
 
 	.prd_login {
 		padding: var(--padding-6) var(--padding-5) var(--padding-3);
-		border-bottom: 1px solid var(--color-divider-secondary-light);
+		border-bottom: var(--border-width-static-regular) solid var(--color-divider-secondary-light);
+		
 
 		> .chg_item {
 			position: relative;
