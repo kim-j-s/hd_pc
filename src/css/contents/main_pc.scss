@@ -464,6 +464,7 @@
 		.mpc_item {
 			flex: 1 1 calc(50% - 8px);
 			position: relative;
+			top: 0;
 			display: flex;
 			align-items: center;
 			padding: var(--padding-8) 0px var(--padding-8) var(--padding-7);
@@ -471,11 +472,12 @@
 			background-repeat: no-repeat;
 			transition: all 0.3s;
 			&:focus,
-			&:hover {
-
+			&:hover,
+			&:active {
+				top: calc(-1 * var(--gap-2));
+				box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.20));
+				transition: all 0.3s;
 			}
-
-			
 
 			&.mpc_item_ty1 {
 				padding-right: 159px;
@@ -483,7 +485,6 @@
 				background-color: var(--color-action-primary-fill);
 				background-position: right center;
 				background-size: 160px 106px;
-				box-shadow: 0px 0px 0px 0px rgba(248, 99, 60, 0.20);
 				@for $i from 1 through 8 {
 					&.mit1_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit1_ic#{$i}.png);
@@ -493,12 +494,17 @@
 			&.mpc_item_ty2 {
 				padding-right: 107px;
 				background-position: right 36px center;
-				border: var(--border-width-static-regular, 1px) solid var(--color-border-inverse, #FFF);
+				border: var(--border-width-static-regular) solid var(--color-border-inverse);
 				background-color: var(--color-action-secondary-fill);
 				@for $i from 1 through 16 {
 					&.mit2_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
 					}
+				}
+				&:focus,
+				&:hover,
+				&:active {
+					border: var(--border-width-static-regular) solid var(--color-border-gray-dark);
 				}
 			}
 
@@ -748,16 +754,16 @@
 // 제안조건
 .main_benefit {
 	transition: top 0.3s, max-height 0.3s;
-	// 제안 사항
-	&.normal {
-		position: static;
-	}
-	// 제안 사항
 	&.active {
 		// max-height: 100vw;
 		overflow: auto;
 	}
 }
+// 제안 사항
+.main_cont_wrap .mcw_cont .main_benefit.normal {
+	position: static;
+}
+// 제안 사항
 .sc_down {
 	.main_benefit {
 		&.sc_mode {

@@ -5671,7 +5671,7 @@ ul + .form_group_wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	border-bottom: 1px solid var(--color-border-gray-light);
+	border-bottom: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
 .anchor_wrap .anchor_btn {
 	position: relative;
@@ -6242,7 +6242,7 @@ body.overflow-x {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	gap: var(--gap-7);
+	gap: var(--gap-8);
 }
 .prd_view .info_list .tit {
 	font-size: var(--font-size-body-medium);
@@ -6305,6 +6305,8 @@ body.overflow-x {
 	justify-content: space-between;
 	position: relative;
 	width: 100%;
+	min-height: 100px;
+	padding-left: var(--padding-8);
 	border: 1px solid transparent;
 	border-radius: var(--radius-large2);
 }
@@ -6331,9 +6333,6 @@ body.overflow-x {
 }
 .evt_banner.evt_bg5::after {
 	background-image: url("../images/content/ltht/bg_banner5.png");
-}
-.evt_banner .desc_wrap {
-	padding-left: var(--padding-8);
 }
 .evt_banner .desc_wrap .tit {
 	font-size: var(--font-size-body-large);

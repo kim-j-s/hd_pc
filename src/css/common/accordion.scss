@@ -482,6 +482,17 @@
 				margin-left: auto;
 				background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 20px auto;
 			}
+			.item_news_link {
+				visibility: visible;
+				opacity: 1;
+				transition: all 0.3s;
+			}
+			&.active {
+				.item_news_link {
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
 		}
 
 		.acd_cont {
