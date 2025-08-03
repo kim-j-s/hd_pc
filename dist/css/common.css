@@ -2133,7 +2133,7 @@ strong {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-subtle);
 	text-align: left;
-	border-radius: var(--radius-medium2, 12px);
+	border-radius: var(--radius-medium2);
 	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
@@ -5661,7 +5661,7 @@ strong {
 	padding: 0px var(--padding-7);
 	font-size: var(--font-size-button-large);
 	text-align: center;
-	border-radius: var(--radius-medium2, 12px);
+	border-radius: var(--radius-medium2);
 	border: var(--border-width-static-regular, 1px) solid var(--color-button-tertiary-border, #b1b8be);
 }
 /* 달력 하단 버튼 */
@@ -13712,7 +13712,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	width: calc(100vw - 48px);
 	z-index: 11;
 	top: calc(100% + 9px);
-	border-radius: var(--radius-medium1, 12px);
+	border-radius: var(--radius-medium1);
 	background: var(--color-element-information);
 	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));

@@ -257,6 +257,26 @@
 					}
 
 				}
+
+				.mbc_desc_wrap {
+					padding-top: calc(var(--padding-5) + 1px);
+					border-top: var(--border-width-static-regular) solid var(--color-divider-secondary-light);
+					.desc_txt {
+						position: relative;
+						padding-left: var(--padding-3);
+						font-size: var(--font-size-body-xsmall);
+						color: var(--color-text-information);
+						&::before {
+							content: '';
+							position: absolute;
+							top: 8px;
+							left: 0;
+							width: 2px;
+							border-bottom: 1px solid #6D7882;
+							border-radius: 50%;
+						}
+					}
+				}
 			}
 
 
@@ -793,7 +813,7 @@
 .item_news_link {
 	display: flex;
 	padding: 0 var(--padding-5);
-	border-radius: var(--radius-medium1, 12px);
+	border-radius: var(--radius-medium1);
 	background-color: transparent;
 	transition: padding 0.3s, background-color 0.3s;
 	min-width: 0;
