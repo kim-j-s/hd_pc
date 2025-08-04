@@ -138,6 +138,12 @@
 	+ .btn_area {
 		margin-top: var(--gap-5);
 	}
+	+ .info_gray {
+		&.ty2 {
+			margin-top: var(--gap-8);
+		}
+	}
+
 	&:has(.pin_enter_error_msg) {
 		+ .btn_area {
 			margin-top: var(--gap-8);
@@ -156,7 +162,7 @@
 		height: 24px;
 		> input[type="password"] {
 			right: auto;
-			left: 0;			
+			left: -1px;
 		}
 		> span {
 			width: auto;
@@ -348,11 +354,11 @@
 	.pin_enter_error_msg {
 		display: none;
 		position: absolute;
-		text-align: left;
 		bottom: 8px;
 		left: 0;
 		.text {
 			background-position: left top;
+			text-align: left;
 		}
 	}
 }
@@ -363,7 +369,9 @@
 		.error {
 			& + .pin_info {
 				.pin_enter_error_msg {
+					position: static;
 					display: block;
+					text-align: left;
 				}
 			}
 		}
