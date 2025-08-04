@@ -1,4 +1,4 @@
-{{#> layout/default no-sp=true page-title="간편비밀번호"}}
+{{#> layout/default no-sp=true page-title="1회용 간편번호"}}
 
 <!-- s: Full 팝업 -->
 {{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
@@ -7,7 +7,7 @@
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
 			<h2 class="title_h2">
-				<strong>6자리 간편비밀번호를 입력해주세요</strong>
+				<strong>1회용 간편번호로<br> 전자서명을 진행할게요</strong>
 			</h2>
 			<div class="btn_area basic">
 				{{> cp/linkButton bl_class="short_cut sm" bl_text="다른 인증방법 선택" }}
@@ -25,15 +25,12 @@
 					<strong class="ergAt dot_mark"></strong>
 					<strong class="ergAt dot_mark"></strong>
 				</div>
-				<button type="button" class="keyboard" title="보안키패드 열기">
-					<span class="sr-only">보안키패드 열기</span>
-					<i class="hd_icon keyboardSvg"></i>
-				</button>
+				{{> cp/keypad_pc placeholder="뒷자리"}}
 			</div>
 		</div>
 
 		<!-- s: pin 에러 시 유형 -->
-		<!-- <div class="pin_enter">
+		<div class="pin_enter">
 			<div class="form_key pin_type error">
 				<div class="pin_area">
 					<strong class="ergAt dot_mark active"></strong>
@@ -51,12 +48,16 @@
 			<p class="pin_enter_error_msg">
 				<span class="text">등록된 간편비밀번호와 달라요. (1/5회)</span>
 			</p>
-		</div> -->
+		</div>
 		<!-- e: pin 에러 시 유형 -->
 
-		<div class="btn_area center">
-			{{> cp/linkButton bl_class="short_cut" bl_text="간편비밀번호를 잊으셨나요?" }}
+		<div class="info_gray ty2">
+			<ul class="list_depth">
+				<li>전자서명을 위해 1회용으로만 사용됩니다.</li>
+				<li>입력 후 같은 번호를 다시 입력하셔야 합니다.</li>
+			</ul>
 		</div>
+		
 	</div>
 </div>
 {{/ popup/popup_full}}
