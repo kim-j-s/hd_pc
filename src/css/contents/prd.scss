@@ -4,25 +4,23 @@
 	background-size: 32px auto;
 }
 
-body {
-	// 백그라운드 넓이 100% 좌우 스크롤 삭제
-	&.overflow-x {
-		overflow-x: hidden;
-	}
-}
 .wrap {
 	.container {
 		&.prd_view {
+			width: 100%;
+			gap: 0;
 			padding-bottom: 0;
 		}
+	}
+	.prd_link_area {
 		// 퀵메뉴 위치 조정
-		&:has(.prd_link_area.fixed) {
-			+ .quick_menu {
+		&.fixed {
+			+.quick_menu {
 				bottom: calc(64px + 64px);
 			}
 		}
-		&:not(:has(.prd_link_area.fixed)) {
-			+ .quick_menu {
+		&:not(:has(.fixed)) {
+			+.quick_menu {
 				&.active {
 					bottom: calc(267px + 64px);
 				}
@@ -34,6 +32,10 @@ body {
 
 // 상품안내
 .prd_view {
+	.in_sec {
+		width: 836px;
+		margin: 0 auto;
+	}
 	// 타이틀 영역
 	.title_view_wrap {
 		&.flex_column {
@@ -47,6 +49,7 @@ body {
 	.content_body {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 		gap: var(--gap-11);
 		padding-bottom: 148px;
 	}
@@ -89,6 +92,11 @@ body {
 				}
 			}
 		}
+	}
+
+	// 이벤트베너
+	.evt_banner {
+		margin-top: var(--gap-11);
 	}
 
 	// 보장내용
@@ -135,7 +143,9 @@ body {
 					font-size: var(--font-size-body-small);
 					color: var(--color-text-subtle);
 				}
-				
+				.list_depth_ty2 {
+					padding-top: var(--gap-3);
+				}
 			}
 		}
 		.btn_area {
@@ -181,6 +191,11 @@ body {
 
 	// 할인혜택
 	.benefit_area {
+		.benefit_list {
+			.list_depth_ty2 {
+				padding-top: var(--gap-3);
+			}
+		}
 		.info_list {
 			.item {
 				position: relative;
@@ -307,6 +322,14 @@ body {
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
+			}
+		}
+	}
+
+	.notice_area {
+		.info_gray {
+			+.list_ty2 {
+				margin-top: var(--gap-11);
 			}
 		}
 	}

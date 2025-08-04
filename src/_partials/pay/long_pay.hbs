@@ -14,13 +14,7 @@
 			<div class="form_group_wrap">
 				<div class="form_line">
 					<div class="label_tit">은행</div>
-					<!-- s: 25-08-04 -->
-					{{#> cp/selectbox_pc s-title="은행 선택" }}
-						<option value="" selected>은행 선택</option>
-						<option value="">우리</option>
-					{{/ cp/selectbox_pc}}
-					{{!-- {{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}} --}}
-					<!-- e: 25-08-04 -->
+					{{> cp/selectitem si_ph="은행 선택" si_title="은행 선택" si_popup="bank_select"}}
 				</div>
 				<div class="form_line">
 					<div class="label_tit">계좌번호</div>
