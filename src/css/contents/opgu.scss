@@ -369,7 +369,9 @@
 		.error {
 			& + .pin_info {
 				.pin_enter_error_msg {
+					position: static;
 					display: block;
+					text-align: left;
 				}
 			}
 		}
