@@ -396,6 +396,9 @@ body {
 .side_panel .step_list > li .acd_item_ty9 .acd_cont .inner .info {
 	color: var(--color-text-disabled-on);
 }
+.side_panel .step_list > li .pro_step_result {
+	padding-left: var(--gap-7);
+}
 .side_panel .step_list > li .pro_step_result > li {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -404,6 +407,11 @@ body {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-2);
+	padding: var(--padding-2) 0 var(--padding-2) var(--padding-2);
+	font-size: var(--font-size-body-xsmall);
+}
+.side_panel .step_list > li .pro_step_result > li ~ li {
+	margin-top: 0;
 }
 .side_panel .step_list > li .pro_step_result > li span {
 	-webkit-box-flex: 1;
@@ -434,7 +442,7 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-top: 12px;
+	height: 18px;
 	color: var(--color-text-basic);
 }
 .side_panel .step_list > li .result_pager > span {
@@ -465,6 +473,7 @@ body {
 	background-image: url(../images/icon/arrowRight_disabled_ty2.svg);
 }
 .side_panel .step_list > li .result_pager > button .text {
+	display: inline-block;
 	width: 1px;
 	height: 1px;
 	opacity: 0;
@@ -589,6 +598,10 @@ body {
 }
 .side_panel .step_list.step_car > li .dep_list dd .dep_list_sub > li {
 	padding-left: var(--padding-2);
+}
+.side_panel .step_list.step_car > li .dep_list dd .pro_step_result {
+	margin-top: var(--gap-4);
+	padding-left: 0;
 }
 .side_panel .step_list.step_car > li .dep_list_sub:has(.modify_sub) > li {
 	padding-right: 29px;

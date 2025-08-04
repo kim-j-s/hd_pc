@@ -3039,6 +3039,7 @@ strong {
 	background-color: #fff;
 	font-weight: 700;
 	font-size: var(--font-size-heading-medium);
+	color: var(--color-text-bolder);
 }
 .acd_item.acd_item_ty3 .acd_head .acd_btn::before {
 	content: "";
@@ -3090,6 +3091,7 @@ strong {
 	width: 100%;
 	padding: var(--padding-6) var(--padding-7);
 	background-color: transparent;
+	color: var(--color-text-bolder);
 }
 .acd_item.acd_item_ty4 .acd_head .acd_btn > span {
 	display: block;
@@ -3505,14 +3507,9 @@ strong {
 	flex: none;
 	gap: 8px;
 }
-.item_wrap_faq {
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-}
-.item_wrap_faq .acd_item {
-	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-}
 .item_wrap_faq .acd_item .acd_head {
 	position: relative;
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 }
 .item_wrap_faq .acd_item .acd_head .acd_btn {
 	position: relative;
@@ -3521,6 +3518,7 @@ strong {
 	min-height: 48px;
 	background-color: #fff;
 	font-size: var(--font-size-body-medium);
+	color: var(--color-text-bolder);
 }
 .item_wrap_faq .acd_item .acd_head .acd_btn::before {
 	content: "";
@@ -3545,7 +3543,7 @@ strong {
 	background: var(--color-action-secondary-pressed);
 }
 .item_wrap_faq .acd_item .acd_head.active {
-	border: none;
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 }
 .item_wrap_faq .acd_item .acd_head.active .acd_btn::before {
 	-webkit-transform: translateY(-50%) rotate(180deg);
@@ -3554,7 +3552,6 @@ strong {
 .item_wrap_faq .acd_item .acd_head.active + .acd_cont {
 	padding: 16px 0;
 	font-size: var(--font-size-body-medium);
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 }
 .item_wrap_faq .acd_item .acd_head.active + .acd_cont::before {
 	opacity: 1;
@@ -5608,7 +5605,7 @@ strong {
 .ui-datepicker-today .ui-state-default:before {
 	content: "";
 	position: absolute;
-	bottom: 14px;
+	bottom: 9px;
 	left: 50%;
 	width: 4px;
 	height: 4px;
@@ -5616,13 +5613,6 @@ strong {
 	background-color: var(--color-element-point);
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-}
-.ui-datepicker-today .ui-state-default::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 4px;
-	margin-top: 1px;
 }
 .ui-state-default.ui-state-active {
 	position: relative;
