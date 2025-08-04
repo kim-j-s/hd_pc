@@ -977,77 +977,90 @@
 				<div class="guide_h4 pc">1. 입력 전</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_gray">
-						<ol class="step_list type_mix">
-							<!-- 진행된 단계까지 li에 active 클래스 추가 -->
+					<div class="info_panel">
+						<ol class="step_list step_car">
+							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
 							<li class="active">
 								<!-- 고객정보 -->
-								<!-- s: 입력진행 전 -->
 								<dl>
 									<dt class="title">1.고객정보</dt>
 									<dd>
 										<ul>
-											<li></li>
+											<li class="person">
+												이름
+												<span>김*대</span>
+											</li>
+											<li class="birth">
+												주민등록번호
+												<span>900101-1******</span>
+											</li>
+											<!-- s: 법인 Case -->
+											<li class="company">
+												회사명
+												<span>㈜현대해상</span>
+											</li>
+											<li class="busi_num">
+												사업자번호
+												<span>123-45-67890</span>
+											</li>
+											<!-- e: 법인 Case -->
 										</ul>
 									</dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
 							</li>
 							<li>
 								<!-- 차량정보 -->
-								<!-- s: 입력진행 전 -->
+								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">2.차량정보</dt>
 									<dd></dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
 							</li>
 							<li>
 								<!-- 운전자정보 -->
-								<!-- s: 입력진행 전 -->
+								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">3.운전자정보</dt>
 									<dd></dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
 							</li>
 							<li>
 								<!-- 보험료확인 -->
+								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">4.보험료확인</dt>
 									<dd></dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
 							</li>
 							<li>
 								<!-- 피보험자/계약자정보 -->
-								<!-- s: 입력진행 전 -->
+								<!-- 입력진행 전 -->
 								<dl>
 									<dt class="title">5.피보험자/계약자정보</dt>
 									<dd></dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
 							</li>
 							<li>
 								<!-- 청약내용 확인 -->
-								<!-- s: 입력진행 전 -->
 								<dl>
 									<dt class="title">6.청약내용 확인</dt>
 									<dd></dd>
 								</dl>
-								<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    							<span class="sr-only">수정</span>
+								<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
+    							<span class="text">수정</span>
     							<i class="hd_icon resetSvg"></i>
     						</button> -->
 							</li>
 							<li>
 								<!-- 결제 -->
-								<!-- s: 입력진행 전 -->
 								<dl>
 									<dt class="title">7.결제</dt>
 									<dd></dd>
 								</dl>
-								<!-- e: 입력진행 전 -->
 							</li>
 						</ol>
 					</div>
@@ -1061,7 +1074,7 @@
     						<span class="price">7,200원</span>
     					</div>
     				</div>
-    			</div>  -->
+    			</div> -->
 
 					<!-- 다이렉트 고객센터 -->
 					<div class="customer_info">
@@ -1085,64 +1098,69 @@
 				<div class="guide_h4 pc">2. 입력 후</div>
 				<!-- 
     			* 자동차 Case 진행 단계별 적용사항
-    			- 진행 단계에 따라 점진적으로 해당 단계까지 active 클래스 추가 ex) 4단계일 시, 1~4단계까지 active 클래스 추가
-    			- 현재 단계일 떄, last 클래스 추가
-    		-->
+    				- 자동차 우측 패널은 다른 상품과 달리 고객정보 영역이 분리되지 않고 회색 박스 영역(.info_panel) 안으로 배치되어 있습니다.
+    					따라서, 고객 정보는 active 클래스가 추가된 상태에서 단계가 진행됩니다.
+    				- 진행 단계에 따라 순차적으로 해당 단계까지 active 클래스가 누적됩니다. 
+    					ex) 현재 단계가 4단계일 시, 1~4단계까지 active 클래스 존재
+    			-->
 				<ul style="display: flex; gap: 20px">
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_panel">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
 										<!-- <dl>
-    									<dt class="title">1. 차량정보</dt>
+    									<dt class="title">2.차량정보</dt>
     									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 										<div class="acd_item acd_item_ty9">
-											<!-- 해당되는 단계에만, last 클래스 추가 -->
-											<div class="acd_head active last">
+											<div class="acd_head active">
 												<button type="button" class="acd_btn" aria-expanded="true"><span>2.차량정보</span></button>
 											</div>
 											<div class="acd_cont">
 												<div class="inner" style="display: block">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -1152,10 +1170,10 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	<span>2025.01.01~2026.01.01</span>
 																</li>
@@ -1166,10 +1184,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -1203,10 +1221,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -1215,8 +1233,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -1233,7 +1251,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">3.운전자정보</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1243,10 +1261,10 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
-        											<dt>운전범위</dt>
+        										<dl class="dep_list">
+        											<dt class="driver">운전범위</dt>
         											<dd>
-        												<ul>
+        												<ul class="dep_list_sub">
         													<li>
         														운전자범위: <span>부부 한정</span>
         													</li>
@@ -1263,8 +1281,8 @@
         												<div class="info">운전범위를 입력 중이에요</div>
         											</dd>
         										</dl>
-        										<dl class="item_depth">
-        											<dt>할인특약</dt>
+        										<dl class="dep_list">
+        											<dt class="discount">할인특약</dt>
         											<dd>
         												<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
         													<span>수정</span>
@@ -1272,8 +1290,8 @@
         												<div class="info">할인특약을 입력 중이에요</div>
         											</dd>
         										</dl>
-        										<dl class="item_depth">
-        											<dt>알릴의무</dt>
+        										<dl class="dep_list">
+        											<dt class="alarm">알릴의무</dt>
         											<dd>
         												<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
         													<span>수정</span>
@@ -1289,7 +1307,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">4.보험료확인</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1299,20 +1317,15 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
-        											<dt>보험료확인</dt>
-        											<dd>
-        												<ul>
-        													<li>
-        														최종보험료: <span>1,000,000원</span>
-        													</li>
-        												</ul>
-        												<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
-        													<span>수정</span>
-        												</button>
-        												<div class="info">보험료를 확인 중이에요</div>
-        											</dd>
-        										</dl>
+        									<ul class="dep_list_sub">
+        										<li>
+        											최종보험료: <span>1,000,000원</span>
+        											<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
+        												<span>수정</span>
+        											</button>
+        										</li>
+        									</ul>
+        									<div class="info">보험료를 확인 중이에요</div>
       </div>
     </div>								</div> -->
 									</li>
@@ -1321,7 +1334,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">5.피보험자/계약자정보</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1331,10 +1344,10 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
-        											<dt>피보험자/계약자정보</dt>
+        										<dl class="dep_list">
+        											<dt class="contractor">피보험자/계약자정보</dt>
         											<dd>
-        												<ul>
+        												<ul class="dep_list_sub">
         													<li>
         														피보험자: <span>김*대(900101-1******)</span>
         													</li>
@@ -1348,8 +1361,8 @@
         												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
         											</dd>
         										</dl>
-        										<dl class="item_depth">
-        											<dt>사진첨부</dt>
+        										<dl class="dep_list">
+        											<dt class="picture">사진첨부</dt>
         											<dd>
         												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
         													<span>수정</span>
@@ -1365,11 +1378,11 @@
 										<dl>
 											<dt class="title">6.청약내용 확인</dt>
 											<dd>
-												<div class="info">청약내용을 확인 중이에요</div>
+												<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 											</dd>
 										</dl>
-										<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    									<span class="sr-only">수정</span>
+										<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
+    									<span class="text">수정</span>
     									<i class="hd_icon resetSvg"></i>
     								</button> -->
 									</li>
@@ -1378,7 +1391,7 @@
 										<dl>
 											<dt class="title">7.결제</dt>
 											<dd>
-												<div class="info">보험료를 결제 중이에요</div>
+												<!-- <div class="info">보험료를 결제 중이에요</div> -->
 											</dd>
 										</dl>
 									</li>
@@ -1417,37 +1430,41 @@
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_panel">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
@@ -1463,10 +1480,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -1476,10 +1493,10 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	<span>2025.01.01~2026.01.01</span>
 																</li>
@@ -1490,10 +1507,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -1527,10 +1544,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -1539,8 +1556,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -1557,26 +1574,23 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">3.운전자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 										<div class="acd_item acd_item_ty9">
-											<!-- 해당되는 단계에만, last 클래스 추가 -->
-											<div class="acd_head active last">
+											<div class="acd_head active">
 												<button type="button" class="acd_btn" aria-expanded="true"><span>3.운전자정보</span></button>
 											</div>
 											<div class="acd_cont">
 												<div class="inner" style="display: block">
-													<dl class="item_depth">
-														<dt>운전범위</dt>
+													<dl class="dep_list">
+														<dt class="driver">운전범위</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>운전자범위: <span>부부 한정</span></li>
 																<li>배우자생년월일: <span>2000.01.01</span></li>
-																<!-- <li>
-        														운전자나이: <span>만 24세 이상</span>
-        													</li> -->
+																<li>운전자나이: <span>만 24세 이상</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
 																<span>수정</span>
@@ -1584,8 +1598,8 @@
 															<div class="info">운전범위를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>할인특약</dt>
+													<dl class="dep_list">
+														<dt class="discount">할인특약</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 																<span>수정</span>
@@ -1593,8 +1607,8 @@
 															<div class="info">할인특약을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -1611,7 +1625,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">4.보험료확인</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1621,10 +1635,10 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
+        										<dl class="dep_list">
         											<dt>보험료확인</dt>
         											<dd>
-        												<ul>
+        												<ul class="dep_list_sub">
         													<li>
         														최종보험료: <span>1,000,000원</span>
         													</li>
@@ -1643,7 +1657,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">5.피보험자/계약자정보</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1653,10 +1667,10 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
-        											<dt>피보험자/계약자정보</dt>
+        										<dl class="dep_list">
+        											<dt class="contractor">피보험자/계약자정보</dt>
         											<dd>
-        												<ul>
+        												<ul class="dep_list_sub">
         													<li>
         														피보험자: <span>김*대(900101-1******)</span>
         													</li>
@@ -1670,8 +1684,8 @@
         												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
         											</dd>
         										</dl>
-        										<dl class="item_depth">
-        											<dt>사진첨부</dt>
+        										<dl class="dep_list">
+        											<dt class="picture">사진첨부</dt>
         											<dd>
         												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
         													<span>수정</span>
@@ -1687,11 +1701,11 @@
 										<dl>
 											<dt class="title">6.청약내용 확인</dt>
 											<dd>
-												<div class="info">청약내용을 확인 중이에요</div>
+												<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 											</dd>
 										</dl>
-										<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    									<span class="sr-only">수정</span>
+										<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
+    									<span class="text">수정</span>
     									<i class="hd_icon resetSvg"></i>
     								</button> -->
 									</li>
@@ -1700,7 +1714,7 @@
 										<dl>
 											<dt class="title">7.결제</dt>
 											<dd>
-												<div class="info">보험료를 결제 중이에요</div>
+												<!-- <div class="info">보험료를 결제 중이에요</div> -->
 											</dd>
 										</dl>
 									</li>
@@ -1739,37 +1753,41 @@
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_gray">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
@@ -1787,10 +1805,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -1800,8 +1818,8 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
 															<ul>
 																<li>
@@ -1814,10 +1832,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -1851,10 +1869,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -1863,8 +1881,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -1881,7 +1899,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">3.운전자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1891,10 +1909,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>운전범위</dt>
+													<dl class="dep_list">
+														<dt class="driver">운전범위</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>운전자범위: <span>부부 한정</span></li>
 																<li>배우자생년월일: <span>2000.01.01</span></li>
 																<!-- <li>
@@ -1907,8 +1925,8 @@
 															<div class="info">운전범위를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>할인특약</dt>
+													<dl class="dep_list">
+														<dt class="discount">할인특약</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 																<span>수정</span>
@@ -1916,8 +1934,8 @@
 															<div class="info">할인특약을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -1934,29 +1952,25 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">4.보험료확인</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 										<div class="acd_item acd_item_ty9">
-											<!-- 해당되는 단계에만, last 클래스 추가 -->
-											<div class="acd_head active last">
+											<div class="acd_head active">
 												<button type="button" class="acd_btn" aria-expanded="true"><span>4.보험료확인</span></button>
 											</div>
 											<div class="acd_cont">
 												<div class="inner" style="display: block">
-													<dl class="item_depth">
-														<dt>보험료확인</dt>
-														<dd>
-															<ul>
-																<li>최종보험료: <span>1,000,000원</span></li>
-															</ul>
+													<ul class="dep_list_sub">
+														<li>
+															최종보험료: <span>1,000,000원</span>
 															<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
 																<span>수정</span>
 															</button>
-															<div class="info">보험료를 확인 중이에요</div>
-														</dd>
-													</dl>
+														</li>
+													</ul>
+													<div class="info">보험료를 확인 중이에요</div>
 												</div>
 											</div>
 										</div>
@@ -1966,7 +1980,7 @@
 										<!-- 입력진행 전 -->
 										<dl>
 											<dt class="title">5.피보험자/계약자정보</dt>
-											<dd><div class="info"></div></dd>
+											<dd></dd>
 										</dl>
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -1976,10 +1990,10 @@
     </div>
     <div class="acd_cont">
       <div class="inner">
-        										<dl class="item_depth">
-        											<dt>피보험자/계약자정보</dt>
+        										<dl class="dep_list">
+        											<dt class="contractor">피보험자/계약자정보</dt>
         											<dd>
-        												<ul>
+        												<ul class="dep_list_sub">
         													<li>
         														피보험자: <span>김*대(900101-1******)</span>
         													</li>
@@ -1987,14 +2001,14 @@
         														계약자: <span>김*대(900101-1******)</span>
         													</li>
         												</ul>
-        												<button type="button" class="modify_sub" title="피보험자/계약자정보 페이지로 이동">
+        												<button type="button" class="ㅇ" title="피보험자/계약자정보 페이지로 이동">
         													<span>수정</span>
         												</button>
         												<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
         											</dd>
         										</dl>
-        										<dl class="item_depth">
-        											<dt>사진첨부</dt>
+        										<dl class="dep_list">
+        											<dt class="picture">사진첨부</dt>
         											<dd>
         												<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
         													<span>수정</span>
@@ -2010,11 +2024,11 @@
 										<dl>
 											<dt class="title">6.청약내용 확인</dt>
 											<dd>
-												<div class="info">청약내용을 확인 중이에요</div>
+												<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 											</dd>
 										</dl>
-										<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    									<span class="sr-only">수정</span>
+										<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">			
+    									<span class="text">수정</span>
     									<i class="hd_icon resetSvg"></i>
     								</button> -->
 									</li>
@@ -2023,7 +2037,7 @@
 										<dl>
 											<dt class="title">7.결제</dt>
 											<dd>
-												<div class="info">보험료를 결제 중이에요</div>
+												<!-- <div class="info">보험료를 결제 중이에요</div> -->
 											</dd>
 										</dl>
 									</li>
@@ -2062,37 +2076,41 @@
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_gray">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
@@ -2108,10 +2126,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -2121,10 +2139,10 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	<span>2025.01.01~2026.01.01</span>
 																</li>
@@ -2135,10 +2153,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -2172,10 +2190,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -2184,8 +2202,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2202,7 +2220,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">3.운전자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2212,10 +2230,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>운전범위</dt>
+													<dl class="dep_list">
+														<dt class="driver">운전범위</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>운전자범위: <span>부부 한정</span></li>
 																<li>배우자생년월일: <span>2000.01.01</span></li>
 																<!-- <li>
@@ -2228,8 +2246,8 @@
 															<div class="info">운전범위를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>할인특약</dt>
+													<dl class="dep_list">
+														<dt class="discount">할인특약</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 																<span>수정</span>
@@ -2237,8 +2255,8 @@
 															<div class="info">할인특약을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2255,7 +2273,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">4.보험료확인</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2265,18 +2283,15 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>보험료확인</dt>
-														<dd>
-															<ul>
-																<li>최종보험료: <span>1,000,000원</span></li>
-															</ul>
+													<ul class="dep_list_sub">
+														<li>
+															최종보험료: <span>1,000,000원</span>
 															<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
 																<span>수정</span>
 															</button>
-															<div class="info">보험료를 확인 중이에요</div>
-														</dd>
-													</dl>
+														</li>
+													</ul>
+													<div class="info">보험료를 확인 중이에요</div>
 												</div>
 											</div>
 										</div>
@@ -2286,21 +2301,20 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">5.피보험자/계약자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 										<div class="acd_item acd_item_ty9">
-											<!-- 해당되는 단계에만, last 클래스 추가 -->
-											<div class="acd_head active last">
+											<div class="acd_head active">
 												<button type="button" class="acd_btn" aria-expanded="true"><span>5.피보험자/계약자정보</span></button>
 											</div>
 											<div class="acd_cont">
 												<div class="inner" style="display: block">
-													<dl class="item_depth">
-														<dt>피보험자/계약자정보</dt>
+													<dl class="dep_list">
+														<dt class="contractor">피보험자/계약자정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>피보험자: <span>김*대(900101-1******)</span></li>
 																<li>계약자: <span>김*대(900101-1******)</span></li>
 															</ul>
@@ -2310,8 +2324,8 @@
 															<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>사진첨부</dt>
+													<dl class="dep_list">
+														<dt class="picture">사진첨부</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 																<span>수정</span>
@@ -2328,11 +2342,11 @@
 										<dl>
 											<dt class="title">6.청약내용 확인</dt>
 											<dd>
-												<div class="info">청약내용을 확인 중이에요</div>
+												<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 											</dd>
 										</dl>
-										<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    									<span class="sr-only">수정</span>
+										<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
+    									<span class="text">수정</span>
     									<i class="hd_icon resetSvg"></i>
     								</button> -->
 									</li>
@@ -2341,7 +2355,7 @@
 										<dl>
 											<dt class="title">7.결제</dt>
 											<dd>
-												<div class="info">보험료를 결제 중이에요</div>
+												<!-- <div class="info">보험료를 결제 중이에요</div> -->
 											</dd>
 										</dl>
 									</li>
@@ -2380,37 +2394,41 @@
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_gray">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
@@ -2426,10 +2444,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -2439,10 +2457,10 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	<span>2025.01.01~2026.01.01</span>
 																</li>
@@ -2453,10 +2471,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -2490,10 +2508,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -2502,8 +2520,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2520,7 +2538,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">3.운전자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2530,10 +2548,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>운전범위</dt>
+													<dl class="dep_list">
+														<dt class="driver">운전범위</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>운전자범위: <span>부부 한정</span></li>
 																<li>배우자생년월일: <span>2000.01.01</span></li>
 																<!-- <li>
@@ -2546,8 +2564,8 @@
 															<div class="info">운전범위를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>할인특약</dt>
+													<dl class="dep_list">
+														<dt class="discount">할인특약</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 																<span>수정</span>
@@ -2555,8 +2573,8 @@
 															<div class="info">할인특약을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2573,7 +2591,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">4.보험료확인</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2583,18 +2601,15 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>보험료확인</dt>
-														<dd>
-															<ul>
-																<li>최종보험료: <span>1,000,000원</span></li>
-															</ul>
+													<ul class="dep_list_sub">
+														<li>
+															최종보험료: <span>1,000,000원</span>
 															<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
 																<span>수정</span>
 															</button>
-															<div class="info">보험료를 확인 중이에요</div>
-														</dd>
-													</dl>
+														</li>
+													</ul>
+													<div class="info">보험료를 확인 중이에요</div>
 												</div>
 											</div>
 										</div>
@@ -2604,7 +2619,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">5.피보험자/계약자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2614,10 +2629,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>피보험자/계약자정보</dt>
+													<dl class="dep_list">
+														<dt class="contractor">피보험자/계약자정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>피보험자: <span>김*대(900101-1******)</span></li>
 																<li>계약자: <span>김*대(900101-1******)</span></li>
 															</ul>
@@ -2627,8 +2642,8 @@
 															<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>사진첨부</dt>
+													<dl class="dep_list">
+														<dt class="picture">사진첨부</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 																<span>수정</span>
@@ -2643,14 +2658,13 @@
 									<li class="active">
 										<!-- 청약내용 확인 -->
 										<dl>
-											<!-- 해당되는 단계에만, last 클래스 추가 -->
-											<dt class="title last">6.청약내용 확인</dt>
+											<dt class="title">6.청약내용 확인</dt>
 											<dd>
 												<div class="info">청약내용을 확인 중이에요</div>
 											</dd>
 										</dl>
-										<button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-											<span class="sr-only">수정</span>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">
+											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
 									</li>
@@ -2698,37 +2712,41 @@
 					<li>
 						<!-- s: 사이드 패널 -->
 						<div class="side_panel">
-							<div class="info_cont pro_info_wrap">
-								<div class="pro_info_item">
-									<div class="tit_box">
-										<h3 class="pop_title_h3">1.고객 정보</h3>
-										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+							<div class="info_gray">
+								<ol class="step_list step_car">
+									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									<li class="active">
+										<!-- 고객정보 -->
+										<dl>
+											<dt class="title">1.고객정보</dt>
+											<dd>
+												<ul>
+													<li class="person">
+														이름
+														<span>김*대</span>
+													</li>
+													<li class="birth">
+														주민등록번호
+														<span>900101-1******</span>
+													</li>
+													<!-- s: 법인 Case -->
+													<li class="company">
+														회사명
+														<span>㈜현대해상</span>
+													</li>
+													<li class="busi_num">
+														사업자번호
+														<span>123-45-67890</span>
+													</li>
+													<!-- e: 법인 Case -->
+												</ul>
+											</dd>
+										</dl>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
-									</div>
-									<div class="data_list">
-										<ul>
-											<li>
-												<dl>
-													<dt class="person">이름</dt>
-													<dd>김*대</dd>
-												</dl>
-											</li>
-											<li>
-												<dl>
-													<dt class="birth">주민등록번호</dt>
-													<dd>900101-1******</dd>
-												</dl>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<div class="info_gray">
-								<ol class="step_list type_mix">
-									<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+									</li>
 									<li class="active">
 										<!-- 차량정보 -->
 										<!-- 입력진행 전 -->
@@ -2744,10 +2762,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>차량선택</dt>
+													<dl class="dep_list">
+														<dt class="car">차량선택</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>차량번호: <span>구매예정</span></li>
 																<li>차량종류: <span>승용차</span></li>
 															</ul>
@@ -2757,10 +2775,10 @@
 															<div class="info">차량을 선택 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>보험기간</dt>
+													<dl class="dep_list">
+														<dt class="date">보험기간</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	<span>2025.01.01~2026.01.01</span>
 																</li>
@@ -2771,10 +2789,10 @@
 															<div class="info">보험기간을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량정보입력</dt>
+													<dl class="dep_list">
+														<dt class="car_info">차량정보입력</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>
 																	제조사: <span>기아</span>
 
@@ -2808,10 +2826,10 @@
 															<div class="info">차량정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>차량부품정보</dt>
+													<dl class="dep_list">
+														<dt class="maker">차량부품정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>총차량가액: <span>11,000만원</span></li>
 															</ul>
 															<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -2820,8 +2838,8 @@
 															<div class="info">차량부품정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2838,7 +2856,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">3.운전자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2848,10 +2866,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>운전범위</dt>
+													<dl class="dep_list">
+														<dt class="driver">운전범위</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>운전자범위: <span>부부 한정</span></li>
 																<li>배우자생년월일: <span>2000.01.01</span></li>
 																<!-- <li>
@@ -2864,8 +2882,8 @@
 															<div class="info">운전범위를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>할인특약</dt>
+													<dl class="dep_list">
+														<dt class="discount">할인특약</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
 																<span>수정</span>
@@ -2873,8 +2891,8 @@
 															<div class="info">할인특약을 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>알릴의무</dt>
+													<dl class="dep_list">
+														<dt class="alarm">알릴의무</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
 																<span>수정</span>
@@ -2891,7 +2909,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">4.보험료확인</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2901,18 +2919,15 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>보험료확인</dt>
-														<dd>
-															<ul>
-																<li>최종보험료: <span>1,000,000원</span></li>
-															</ul>
+													<ul class="dep_list_sub">
+														<li>
+															최종보험료: <span>1,000,000원</span>
 															<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
 																<span>수정</span>
 															</button>
-															<div class="info">보험료를 확인 중이에요</div>
-														</dd>
-													</dl>
+														</li>
+													</ul>
+													<div class="info">보험료를 확인 중이에요</div>
 												</div>
 											</div>
 										</div>
@@ -2922,7 +2937,7 @@
 										<!-- 입력진행 전 -->
 										<!-- <dl>
     									<dt class="title">5.피보험자/계약자정보</dt>
-    									<dd><div class="info"></div></dd>
+    									<dd></dd>
     								</dl> -->
 										<!-- 입력진행 후 -->
 										<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
@@ -2932,10 +2947,10 @@
 											</div>
 											<div class="acd_cont">
 												<div class="inner">
-													<dl class="item_depth">
-														<dt>피보험자/계약자정보</dt>
+													<dl class="dep_list">
+														<dt class="contractor">피보험자/계약자정보</dt>
 														<dd>
-															<ul>
+															<ul class="dep_list_sub">
 																<li>피보험자: <span>김*대(900101-1******)</span></li>
 																<li>계약자: <span>김*대(900101-1******)</span></li>
 															</ul>
@@ -2945,8 +2960,8 @@
 															<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
 														</dd>
 													</dl>
-													<dl class="item_depth">
-														<dt>사진첨부</dt>
+													<dl class="dep_list">
+														<dt class="picture">사진첨부</dt>
 														<dd>
 															<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
 																<span>수정</span>
@@ -2963,19 +2978,18 @@
 										<dl>
 											<dt class="title">6.청약내용 확인</dt>
 											<dd>
-												<div class="info">청약내용을 확인 중이에요</div>
+												<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 											</dd>
 										</dl>
-										<button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-											<span class="sr-only">수정</span>
+										<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">
+											<span class="text">수정</span>
 											<i class="hd_icon resetSvg"></i>
 										</button>
 									</li>
 									<li class="active">
 										<!-- 결제 -->
 										<dl>
-											<!-- 해당 단계일 시, last 클래스 추가 -->
-											<dt class="title last">7.결제</dt>
+											<dt class="title">7.결제</dt>
 											<dd>
 												<div class="info">보험료를 결제 중이에요</div>
 											</dd>
@@ -3021,82 +3035,72 @@
 		<div class="guide_h1 pc">보험가입 진행 정보 - 자동차 예시 Case</div>
 		<!-- 
     	* 자동차 Case 진행 단계별 적용 참고사항
-    	- 진행 단계에 따라 점진적으로 해당 단계까지 active 클래스 추가 ex) 4단계일 시, 1~4단계까지 active 클래스 추가
-    	- 현재 단계일 떄, last 클래스 추가
+    	- 자동차 우측 패널은 다른 상품과 달리 고객정보 영역이 분리되지 않고 회색 박스 영역(.info_panel) 안으로 배치되어 있습니다.
+    		따라서, 고객 정보는 active 클래스가 추가된 상태에서 단계가 진행됩니다.
+    	- 진행 단계에 따라 순차적으로 해당 단계까지 active 클래스가 누적됩니다. 
+    		ex) 현재 단계가 4단계일 시, 1~4단계까지 active 클래스 존재
     -->
 		<ul style="display: flex; gap: 40px">
 			<li>
 				<div class="guide_h4 pc">이륜차</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">1. 고객 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+					<div class="info_gray">
+						<ol class="step_list step_car">
+							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+							<li class="active">
+								<!-- 고객정보 -->
+								<dl>
+									<dt class="title">1.고객정보</dt>
+									<dd>
+										<ul>
+											<li class="person">
+												이름
+												<span>김*대</span>
+											</li>
+											<li class="birth">
+												주민등록번호
+												<span>900101-1******</span>
+											</li>
+											<!-- s: 법인 Case -->
+											<li class="company">
+												회사명
+												<span>㈜김*대</span>
+											</li>
+											<li class="busi_num">
+												사업자번호
+												<span>123-45-67890</span>
+											</li>
+											<!-- e: 법인 Case -->
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 									<span class="text">수정</span>
 									<i class="hd_icon resetSvg"></i>
 								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="person">이름</dt>
-											<dd>김*대</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="birth">주민등록번호</dt>
-											<dd>900101-1******</dd>
-										</dl>
-									</li>
-								</ul>
-								<!-- 법인 Case -->
-								<ul>
-									<li>
-										<dl>
-											<dt class="company">법인명</dt>
-											<dd>㈜김*대</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="regist">사업자번호</dt>
-											<dd>123-45-67890</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="info_gray">
-						<ol class="step_list type_mix">
-							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+							</li>
 							<li class="active">
 								<!-- 차량정보 -->
 								<!-- 입력진행 전 -->
 								<!-- <dl>
-    							<dt class="title">1. 차량정보</dt>
+    							<dt class="title">2.차량정보</dt>
     							<dd></dd>
     						</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
 								<div class="acd_item acd_item_ty9">
-									<!-- 해당되는 단계에만, last 클래스 추가 -->
-									<div class="acd_head active last">
-										<button type="button" class="acd_btn" aria-expanded="true"><span>2. 차량정보</span></button>
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>2.차량정보</span></button>
 									</div>
 									<div class="acd_cont">
-										<div class="inner" style="display: block">
-											<dl class="item_depth">
-												<dt>차량선택</dt>
+										<div class="inner">
+											<dl class="dep_list">
+												<dt class="car">차량선택</dt>
 												<dd>
-													<ul>
+													<ul class="dep_list_sub">
 														<li>차량번호: <span>구매예정</span></li>
-														<li>차량종류: <span>이륜차</span></li>
+														<li>차량종류: <span>승용차</span></li>
 													</ul>
 													<button type="button" class="modify_sub" title="차량선택 페이지로 이동">
 														<span>수정</span>
@@ -3104,10 +3108,10 @@
 													<div class="info">차량을 선택 중이에요</div>
 												</dd>
 											</dl>
-											<dl class="item_depth">
-												<dt>보험기간</dt>
+											<dl class="dep_list">
+												<dt class="date">보험기간</dt>
 												<dd>
-													<ul>
+													<ul class="dep_list_sub">
 														<li>
 															<span>2025.01.01~2026.01.01</span>
 														</li>
@@ -3118,10 +3122,10 @@
 													<div class="info">보험기간을 입력 중이에요</div>
 												</dd>
 											</dl>
-											<dl class="item_depth">
-												<dt>차량정보입력</dt>
+											<dl class="dep_list">
+												<dt class="car_info">차량정보입력</dt>
 												<dd>
-													<ul>
+													<ul class="dep_list_sub">
 														<li>
 															제조사: <span>혼다</span>
 
@@ -3162,10 +3166,10 @@
 													<div class="info">차량정보를 입력 중이에요</div>
 												</dd>
 											</dl>
-											<dl class="item_depth">
-												<dt>차량부품정보</dt>
+											<dl class="dep_list">
+												<dt class="maker">차량부품정보</dt>
 												<dd>
-													<ul>
+													<ul class="dep_list_sub">
 														<li>부품정보: <span>블랙박스</span></li>
 													</ul>
 													<button type="button" class="modify_sub" title="차량부품정보 페이지로 이동">
@@ -3174,9 +3178,14 @@
 													<div class="info">차량부품정보를 입력 중이에요</div>
 												</dd>
 											</dl>
-											<dl class="item_depth">
-												<dt>사용용도</dt>
+											<dl class="dep_list">
+												<dt class="useful">사용용도</dt>
 												<dd>
+													<ul class="dep_list_sub">
+														<li>
+															<span>가정용/기타</span>
+														</li>
+													</ul>
 													<button type="button" class="modify_sub" title="사용용도 페이지로 이동">
 														<span>수정</span>
 													</button>
@@ -3187,152 +3196,144 @@
 									</div>
 								</div>
 							</li>
-							<li>
+							<li class="active">
 								<!-- 운전자정보 -->
 								<!-- 입력진행 전 -->
-								<dl>
-									<dt class="title">3. 운전자정보</dt>
-									<dd><div class="info"></div></dd>
-								</dl>
+								<!-- <dl>
+    							<dt class="title">3.운전자정보</dt>
+    							<dd></dd>
+    						</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-								<!-- <div class="acd_item acd_item_ty9">
-    <div class="acd_head">
-      <button type="button" class="acd_btn" aria-expanded="false"><span>2. 운전자정보</span></button>
-    </div>
-    <div class="acd_cont">
-      <div class="inner">
-        								<dl class="item_depth">
-        									<dt>운전범위</dt>
-        									<dd>
-        										<ul>
-        											<li>
-        												운전자범위: <span>부부 한정</span>
-        											</li>
-        											<li>
-        												배우자생년월일: <span>2000.01.01</span>
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>3.운전자정보</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<dl class="dep_list">
+												<dt class="driver">운전범위</dt>
+												<dd>
+													<ul class="dep_list_sub">
+														<li>운전자범위: <span>만 21세 이상(YYYY.MM.DD이전 출생)</span></li>
+														<!-- <li>
+        												최소연령: <span>2000.01.01</span>
         											</li>
         											<li>
         												운전자나이: <span>만 24세 이상</span>
-        											</li>
-        										</ul>
-        										<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">운전범위를 입력 중이에요</div>
-        									</dd>
-        								</dl>
-        								<dl class="item_depth">
-        									<dt>할인특약</dt>
-        									<dd>
-        										<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">할인특약을 입력 중이에요</div>
-        									</dd>
-        								</dl>
-        								<dl class="item_depth">
-        									<dt>알릴의무</dt>
-        									<dd>
-        										<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">알릴의무를 입력 중이에요</div>
-        									</dd>
-        								</dl>
-      </div>
-    </div>						</div> -->
+        											</li> -->
+													</ul>
+													<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
+														<span>수정</span>
+													</button>
+													<div class="info">운전범위를 입력 중이에요</div>
+												</dd>
+											</dl>
+											<dl class="dep_list">
+												<dt class="discount">할인특약</dt>
+												<dd>
+													<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
+														<span>수정</span>
+													</button>
+													<div class="info">할인특약을 입력 중이에요</div>
+												</dd>
+											</dl>
+											<dl class="dep_list">
+												<dt class="alarm">알릴의무</dt>
+												<dd>
+													<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
+														<span>수정</span>
+													</button>
+													<div class="info">알릴의무를 입력 중이에요</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
 							</li>
-							<li>
+							<li class="active">
 								<!-- 보험료확인 -->
 								<!-- 입력진행 전 -->
-								<dl>
-									<dt class="title">5. 보험료확인</dt>
-									<dd><div class="info"></div></dd>
-								</dl>
+								<!-- <dl>
+    							<dt class="title">4.보험료확인</dt>
+    							<dd></dd>
+    						</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-								<!-- <div class="acd_item acd_item_ty9">
-    <div class="acd_head">
-      <button type="button" class="acd_btn" aria-expanded="false"><span>3. 보험료확인</span></button>
-    </div>
-    <div class="acd_cont">
-      <div class="inner">
-        								<dl class="item_depth">
-        									<dt>보험료확인</dt>
-        									<dd>
-        										<ul>
-        											<li>
-        												최종보험료: <span>1,000,000원</span>
-        											</li>
-        										</ul>
-        										<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">보험료를 확인 중이에요</div>
-        									</dd>
-        								</dl>
-      </div>
-    </div>						</div> -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>4.보험료확인</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<ul class="dep_list_sub">
+												<li>
+													최종보험료: <span>1,000,000원</span>
+													<button type="button" class="modify_sub" title="보험료확인 페이지로 이동">
+														<span>수정</span>
+													</button>
+												</li>
+											</ul>
+											<div class="info">보험료를 확인 중이에요</div>
+										</div>
+									</div>
+								</div>
 							</li>
-							<li>
+							<li class="active">
 								<!-- 피보험자/계약자정보 -->
 								<!-- 입력진행 전 -->
-								<dl>
-									<dt class="title">5. 피보험자/계약자정보</dt>
-									<dd><div class="info"></div></dd>
-								</dl>
+								<!-- <dl>
+    							<dt class="title">5.피보험자/계약자정보</dt>
+    							<dd></dd>
+    						</dl> -->
 								<!-- 입력진행 후 -->
 								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-								<!-- <div class="acd_item acd_item_ty9">
-    <div class="acd_head">
-      <button type="button" class="acd_btn" aria-expanded="false"><span>4. 피보험자/계약자정보</span></button>
-    </div>
-    <div class="acd_cont">
-      <div class="inner">
-        								<dl class="item_depth">
-        									<dt>피보험자/계약자정보</dt>
-        									<dd>
-        										<ul>
-        											<li>
-        												피보험자: <span>김*대(900101-1******)</span>
-        											</li>
-        											<li>
-        												계약자: <span>김*대(900101-1******)</span>
-        											</li>
-        										</ul>
-        										<button type="button" class="modify_sub" title="피보험자/계약자정보 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
-        									</dd>
-        								</dl>
-        								<dl class="item_depth">
-        									<dt>사진첨부</dt>
-        									<dd>
-        										<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
-        											<span>수정</span>
-        										</button>
-        										<div class="info">사진을 첨부 중이에요</div>
-        									</dd>
-        								</dl>
-      </div>
-    </div>						</div> -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>5.피보험자/계약자정보</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<dl class="dep_list">
+												<dt class="contractor">피보험자/계약자정보</dt>
+												<dd>
+													<ul class="dep_list_sub">
+														<li>피보험자: <span>김*대(900101-1******)</span></li>
+														<li>계약자: <span>김*대(900101-1******)</span></li>
+													</ul>
+													<button type="button" class="modify_sub" title="피보험자/계약자정보 페이지로 이동">
+														<span>수정</span>
+													</button>
+													<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
+												</dd>
+											</dl>
+											<dl class="dep_list">
+												<dt class="picture">사진첨부</dt>
+												<dd>
+													<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
+														<span>수정</span>
+													</button>
+													<div class="info">사진을 첨부 중이에요</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
 							</li>
-							<li>
+							<li class="active">
 								<!-- 청약내용 확인 -->
 								<dl>
 									<dt class="title">6.청약내용 확인</dt>
 									<dd>
-										<div class="info">청약내용을 확인 중이에요</div>
+										<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 									</dd>
 								</dl>
-								<!-- <button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-    							<span class="sr-only">수정</span>
-    							<i class="hd_icon resetSvg"></i>
-    						</button> -->
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
 							</li>
-							<li>
+							<li class="active">
 								<!-- 결제 -->
 								<dl>
 									<dt class="title">7.결제</dt>
@@ -3345,15 +3346,15 @@
 					</div>
 
 					<!-- 최종 보험료 -->
-					<!-- <div class="panel_total">
-    				<div class="inner">
-    					<div class="title">최종 보험료</div>
-    					<div class="right">
-    						<del>1,563,393원</del>
-    						<span class="price">7,200원</span>
-    					</div>
-    				</div>
-    			</div> -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
 
 					<!-- 다이렉트 고객센터 -->
 					<div class="customer_info">
@@ -3377,277 +3378,275 @@
 				<div class="guide_h4 pc">다수차량</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">1. 고객 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+					<div class="info_gray">
+						<ol class="step_list step_car">
+							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+							<li class="active">
+								<!-- 고객정보 -->
+								<dl>
+									<dt class="title">1.고객정보</dt>
+									<dd>
+										<ul>
+											<li class="person">
+												이름
+												<span>김*대</span>
+											</li>
+											<li class="birth">
+												주민등록번호
+												<span>900101-1******</span>
+											</li>
+											<!-- s: 법인 Case -->
+											<li class="company">
+												회사명
+												<span>㈜현대해상</span>
+											</li>
+											<li class="busi_num">
+												사업자번호
+												<span>123-45-67890</span>
+											</li>
+											<!-- e: 법인 Case -->
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">
 									<span class="text">수정</span>
 									<i class="hd_icon resetSvg"></i>
 								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="person">이름</dt>
-											<dd>김*대</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="birth">주민등록번호</dt>
-											<dd>900101-1******</dd>
-										</dl>
-									</li>
-								</ul>
-								<!-- 법인 Case -->
-								<ul>
-									<li>
-										<dl>
-											<dt class="company">법인명</dt>
-											<dd>㈜김*대</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="regist">사업자번호</dt>
-											<dd>123-45-67890</dd>
-										</dl>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<div class="info_gray">
-						<!-- 다수차량일 시, mutiple 클래스 추가 -->
-						<ol class="step_list multiple">
-							<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+							</li>
 							<li class="active">
 								<!-- 차량정보 -->
 								<!-- 입력진행 전 -->
 								<!-- <dl>
-    							<dt class="title">1. 차량정보</dt>
+    							<dt class="title">2.차량정보</dt>
     							<dd></dd>
     						</dl> -->
 								<!-- 입력진행 후 -->
-								<dl>
-									<dt class="title">2.차량정보</dt>
-									<dd>
-										<ul class="pro_step_result">
-											<li>
-												<span>111가1111(현대) 제네시스</span>
-												<!-- 입력완료 시, ok 클래스 추가 -->
-												<span class="result ok">입력완료</span>
-											</li>
-											<li>
-												<span>111가1111(현대) 싼타페</span>
-												<!-- 입력중일 시, ing 클래스 추가 -->
-												<span class="result ing">입력중</span>
-											</li>
-											<li>
-												<span>111가1111(현대) 화물</span>
-												<span class="result">미입력</span>
-											</li>
-										</ul>
-										<div class="info">차량을 선택 중이에요</div>
-									</dd>
-								</dl>
-								<!-- <div class="result_pager">
-    							<button class="prev" disabled>
-    								<span class="text">이전</span>
-    							</button>
-    							<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
-    							<button class="next" disabled>
-    								<span class="text">다음</span>
-    							</button>
-    						</div> -->
-								<button type="button" class="modify" title="차량정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>2.차량정보</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<ul class="pro_step_result">
+												<li>
+													<span>111가1111(현대) 제네시스</span>
+													<!-- 입력완료 시, ok 클래스 추가 -->
+													<span class="result ok">입력완료</span>
+												</li>
+												<li>
+													<span>111가1111(현대) 싼타페</span>
+													<!-- 입력중일 시, ing 클래스 추가 -->
+													<span class="result ing">입력중</span>
+												</li>
+												<li>
+													<span>111가1111(현대) 화물</span>
+													<span class="result">미입력</span>
+												</li>
+											</ul>
+											<!-- <div class="result_pager">
+        								<button class="prev" disabled>
+        									<span class="text">이전</span>
+        								</button>
+        								<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
+        								<button class="next">
+        									<span class="text">다음</span>
+        								</button>
+        							</div> -->
+										</div>
+									</div>
+								</div>
 							</li>
 							<li class="active">
 								<!-- 운전자정보 -->
 								<!-- 입력진행 전 -->
 								<!-- <dl>
-    							<dt class="title">2. 운전자정보</dt>
+    							<dt class="title">3.운전자정보</dt>
     							<dd></dd>
     						</dl> -->
 								<!-- 입력진행 후 -->
-								<dl>
-									<dt class="title">3. 운전자정보</dt>
-									<dd>
-										<ul class="pro_step_result">
-											<li>
-												<span>111가1111(현대) 제네시스</span>
-												<!-- 입력완료 시, ok 클래스 추가 -->
-												<span class="result ok">입력완료</span>
-											</li>
-											<li>
-												<span>111가1111(현대) 싼타페</span>
-												<!-- 입력중일 시, ing 클래스 추가 -->
-												<span class="result ing">입력중</span>
-											</li>
-											<li>
-												<span>111가1111(현대) 화물</span>
-												<span class="result">미입력</span>
-											</li>
-										</ul>
-										<!-- <div class="result_pager">
-    									<button class="prev" disabled>
-    										<span class="text">이전</span>
-    									</button>
-    									<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
-    									<button class="next" disabled>
-    										<span class="text">다음</span>
-    									</button>
-    								</div> -->
-										<div class="info">운전자정보를 입력 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="운전자정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>3.운전자정보</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<ul class="pro_step_result">
+												<li>
+													<span>111가1111(현대) 제네시스</span>
+													<!-- 입력완료 시, ok 클래스 추가 -->
+													<span class="result ok">입력완료</span>
+												</li>
+												<li>
+													<span>111가1111(현대) 싼타페</span>
+													<!-- 입력중일 시, ing 클래스 추가 -->
+													<span class="result ing">입력중</span>
+												</li>
+												<li>
+													<span>777너2222(현대) 그랜드 스타렉스</span>
+													<span class="result">미입력</span>
+												</li>
+												<li>
+													<span>111가1111(현대) 화물</span>
+													<span class="result">미입력</span>
+												</li>
+											</ul>
+											<!-- <div class="result_pager">
+        								<button class="prev" disabled>
+        									<span class="text">이전</span>
+        								</button>
+        								<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
+        								<button class="next">
+        									<span class="text">다음</span>
+        								</button>
+        							</div> -->
+										</div>
+									</div>
+								</div>
 							</li>
 							<li class="active">
 								<!-- 보험료확인 -->
 								<!-- 입력진행 전 -->
 								<!-- <dl>
-    							<dt class="title">3. 보험료확인</dt>
-    							<dd><div class="info"></div></dd>
+    							<dt class="title">4.보험료확인</dt>
+    							<dd></dd>
     						</dl> -->
 								<!-- 입력진행 후 -->
-								<dl>
-									<dt class="title">4. 보험료확인</dt>
-									<dd>
-										<ul class="pro_step_result">
-											<li>
-												<span>ABCDEFG1234567890 쏘나타</span>
-												<!-- 입력완료 시, ok 클래스 추가 -->
-												<span class="result ok">입력완료</span>
-											</li>
-											<li>
-												<span>777너2222 봉고</span>
-												<!-- 입력중일 시, ing 클래스 추가 -->
-												<span class="result ing">입력중</span>
-											</li>
-											<li>
-												<span>333너3333 그랜저</span>
-												<span class="result">미입력</span>
-											</li>
-											<li>
-												<span>111가4444 EV5</span>
-												<span class="result">미입력</span>
-											</li>
-											<li>
-												<span>222너5555 EV4</span>
-												<span class="result">미입력</span>
-											</li>
-										</ul>
-										<div class="result_pager">
-											<button class="prev" disabled>
-												<span class="text">이전</span>
-											</button>
-											<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
-											<button class="next">
-												<span class="text">다음</span>
-											</button>
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>4.보험료확인</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<ul class="pro_step_result">
+												<li>
+													<span>ABCDEFG1234567890 쏘나타</span>
+													<!-- 계산완료 시, ok 클래스 추가 -->
+													<span class="result ok">계산완료</span>
+												</li>
+												<li>
+													<span>777너2222 봉고</span>
+													<span class="result ok">계산완료</span>
+												</li>
+												<li>
+													<span>333너3333 그랜저</span>
+													<span class="result ok">계산완료</span>
+												</li>
+												<li>
+													<span>111가4444 EV5</span>
+													<span class="result ok">계산완료</span>
+												</li>
+												<li>
+													<span>222너5555 EV4</span>
+													<span class="result">재계산</span>
+												</li>
+											</ul>
+											<div class="result_pager">
+												<button class="prev" disabled>
+													<span class="text">이전</span>
+												</button>
+												<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
+												<button class="next">
+													<span class="text">다음</span>
+												</button>
+											</div>
 										</div>
-										<div class="info">보험료를 확인 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="보험료확인 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+									</div>
+								</div>
 							</li>
 							<li class="active">
 								<!-- 피보험자/계약자정보 -->
 								<!-- 입력진행 전 -->
 								<!-- <dl>
-    							<dt class="title">4. 피보험자/계약자정보</dt>
-    							<dd><div class="info"></div></dd>
+    							<dt class="title">5.피보험자/계약자정보</dt>
+    							<dd></dd>
     						</dl> -->
 								<!-- 입력진행 후 -->
-								<dl>
-									<dt class="title">5. 피보험자/계약자정보</dt>
-									<dd>
-										<dl class="item_depth">
-											<dt>피보험자 정보 입력</dt>
-											<dd>
-												<button type="button" class="modify_sub" title="피보험자 정보 입력 페이지로 이동">
-													<span>수정</span>
-												</button>
-												<div class="info">사용용도를 입력 중이에요</div>
-											</dd>
-										</dl>
-										<dl class="item_depth">
-											<dt>증빙사진 입력</dt>
-											<dd>
-												<button type="button" class="modify_sub" title="증빙사진 입력 페이지로 이동">
-													<span>수정</span>
-												</button>
-
-												<ul class="pro_step_result">
-													<li>
-														<span>ABCDEFG1234567890 쏘나타</span>
-														<!-- 입력완료 시, ok 클래스 추가 -->
-														<span class="result ok">입력완료</span>
-													</li>
-													<li>
-														<span>777너2222 봉고</span>
-														<!-- 입력중일 시, ing 클래스 추가 -->
-														<span class="result ing">입력중</span>
-													</li>
-													<li>
-														<span>333너3333 그랜저</span>
-														<span class="result">미입력</span>
-													</li>
-													<li>
-														<span>111가4444 EV5</span>
-														<span class="result">미입력</span>
-													</li>
-													<li>
-														<span>222너5555 EV4</span>
-														<span class="result">미입력</span>
-													</li>
-												</ul>
-												<div class="result_pager">
-													<button class="prev" disabled>
-														<span class="text">이전</span>
+								<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+								<div class="acd_item acd_item_ty9">
+									<div class="acd_head">
+										<button type="button" class="acd_btn" aria-expanded="false"><span>5.피보험자/계약자정보</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner">
+											<dl class="dep_list">
+												<dt class="contractor">피보험자/계약자정보</dt>
+												<dd>
+													<ul class="dep_list_sub">
+														<li>피보험자: <span>김*대(900101-1******)</span></li>
+														<li>계약자: <span>김*대(900101-1******)</span></li>
+													</ul>
+													<button type="button" class="modify_sub" title="피보험자/계약자정보 페이지로 이동">
+														<span>수정</span>
 													</button>
-													<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
-													<button class="next">
-														<span class="text">다음</span>
+													<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
+												</dd>
+											</dl>
+											<dl class="dep_list">
+												<dt class="picture">사진첨부</dt>
+												<dd>
+													<ul class="pro_step_result">
+														<li>
+															<span>ABCDEFG1234567890 쏘나타</span>
+															<!-- 입력완료 시, ok 클래스 추가 -->
+															<span class="result ok">입력완료</span>
+														</li>
+														<li>
+															<span>777너2222 봉고</span>
+															<!-- 입력중일 시, ing 클래스 추가 -->
+															<span class="result ing">입력중</span>
+														</li>
+														<li>
+															<span>333너3333 그랜저</span>
+															<span class="result">미입력</span>
+														</li>
+														<li>
+															<span>111가4444 EV5</span>
+															<span class="result">미입력</span>
+														</li>
+														<li>
+															<span>222너5555 EV4</span>
+															<span class="result">미입력</span>
+														</li>
+													</ul>
+													<div class="result_pager">
+														<button class="prev" disabled>
+															<span class="text">이전</span>
+														</button>
+														<span title="현재 페이지">1</span>/<span class="총 페이지">5</span>
+														<button class="next">
+															<span class="text">다음</span>
+														</button>
+													</div>
+													<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
+														<span>수정</span>
 													</button>
-												</div>
-												<div class="info">사용용도를 입력 중이에요</div>
-											</dd>
-										</dl>
-									</dd>
-								</dl>
+													<div class="info">사진을 첨부 중이에요</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
 							</li>
 							<li class="active">
 								<!-- 청약내용 확인 -->
 								<dl>
-									<dt class="title">6. 청약내용 확인</dt>
+									<dt class="title">6.청약내용 확인</dt>
 									<dd>
-										<div class="info">청약내용을 확인 중이에요</div>
+										<!-- <div class="info">청약내용을 확인 중이에요</div> -->
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="청약내용 확인 페이지로 이동">
-									<span class="sr-only">수정</span>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">
+									<span class="text">수정</span>
 									<i class="hd_icon resetSvg"></i>
 								</button>
 							</li>
 							<li class="active">
 								<!-- 결제 -->
 								<dl>
-									<!-- 해당되는 단계에만, last 클래스 추가 -->
-									<dt class="title last">7. 결제</dt>
+									<dt class="title">7.결제</dt>
 									<dd>
 										<div class="info">보험료를 결제 중이에요</div>
 									</dd>
@@ -3657,15 +3656,15 @@
 					</div>
 
 					<!-- 최종 보험료 -->
-					<!-- <div class="panel_total">
-    				<div class="inner">
-    					<div class="title">최종 보험료</div>
-    					<div class="right">
-    						<del>1,563,393원</del>
-    						<span class="price">7,200원</span>
-    					</div>
-    				</div>
-    			</div> -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
 
 					<!-- 다이렉트 고객센터 -->
 					<div class="customer_info">

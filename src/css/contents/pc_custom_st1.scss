@@ -505,10 +505,17 @@ body {
 
 			// 입력상태 결과 리스트
 			.pro_step_result {
+				padding-left: var(--gap-7);
 				> li {
 					display: flex;
 					justify-content: space-between;
 					gap: var(--gap-2);
+					padding: var(--padding-2) 0 var(--padding-2) var(--padding-2);
+					font-size: var(--font-size-body-xsmall);
+
+					& ~ li {
+						margin-top: 0;
+					}
 
 					span {
 						flex: 1;
@@ -533,7 +540,7 @@ body {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				margin-top: 12px;
+				height: 18px;
 				color: var(--color-text-basic);
 
 				> span {
@@ -569,6 +576,7 @@ body {
 					}
 
 					.text {
+						display: inline-block;
 						width: 1px;
 						height: 1px;
 						opacity: 0;
@@ -750,6 +758,11 @@ body {
 							> li {
 								padding-left: var(--padding-2);
 							}
+						}
+
+						.pro_step_result {							
+							margin-top: var(--gap-4);
+							padding-left: 0;
 						}
 					}
 				}
