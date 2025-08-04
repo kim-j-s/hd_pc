@@ -143,6 +143,25 @@
 			margin-top: var(--gap-8);
 		}
 	}
+	.form_key_pc {
+		flex: none;
+		display: inline-flex;
+		width: auto;
+		height: 40px;
+		> span {
+			width: 40px;
+			> input[type="checkbox"] {
+				+ label {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+		> input[type="password"] {
+			flex: none;
+			width: 1px;
+		}
+	}
 }
 
 .pin_enter_error_msg {
