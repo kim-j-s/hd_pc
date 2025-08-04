@@ -41,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>간편비밀번호 - 현대해상 다이렉트</title>
+		<title>전자서명 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -61,66 +61,41 @@
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title"></div>
+						<div class="popup_head_title">전자서명</div>
 					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
 							<div class="popup_content_top">
 								<h2 class="title_h2">
-									<strong>6자리 간편비밀번호를 입력해주세요</strong>
+									<strong>
+										법인카드 비밀번호로<br />
+										전자서명을 진행할게요
+									</strong>
 								</h2>
 								<div class="btn_area basic">
-									<a href="javascript:void(0)" class="btn_link short_cut sm">
+									<a href="javascript:void(0)" class="btn_link short_cut sm" role="button" onclick="openHDPopup(this,'pop_type02');">
 										<span class="text">다른 인증방법 선택</span>
 									</a>
 								</div>
 							</div>
 							<!-- e: popup_content_top -->
 
-							<div class="pin_enter">
-								<div class="form_key pin_type">
-									<div class="pin_area">
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
+							<div class="form_group_wrap">
+								<div class="form_line">
+									<div class="label_tit">비밀번호 앞2자리</div>
+									<div class="input_text">
+										<div class="inp">
+											<input type="text" placeholder="이름 입력" title="이름 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
 									</div>
-									<button type="button" class="keyboard" title="보안키패드 열기">
-										<span class="sr-only">보안키패드 열기</span>
-										<i class="hd_icon keyboardSvg"></i>
-									</button>
 								</div>
-							</div>
-
-							<!-- s: pin 에러 시 유형 -->
-							<!-- <div class="pin_enter">
-								<div class="form_key pin_type error">
-									<div class="pin_area">
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark active"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-										<strong class="ergAt dot_mark"></strong>
-									</div>
-									<button type="button" class="keyboard" title="보안키패드 열기">
-										<span class="sr-only">보안키패드 열기</span>
-										<i class="hd_icon keyboardSvg on"></i>
-									</button>
+								<div class="info_gray ty2">
+									<ul class="list_depth">
+										<li>법인카드 비밀번호를 설정하지 않았다면 공동인증을 이용해 주세요(모바일앱 또는 PC에서 가능)</li>
+									</ul>
 								</div>
-								<p class="pin_enter_error_msg">
-									<span class="text">등록된 간편비밀번호와 달라요. (1/5회)</span>
-								</p>
-							</div> -->
-							<!-- e: pin 에러 시 유형 -->
-
-							<div class="btn_area center">
-								<a href="javascript:void(0)" class="btn_link short_cut">
-									<span class="text">간편비밀번호를 잊으셨나요?</span>
-								</a>
 							</div>
 						</div>
 					</div>
