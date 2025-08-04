@@ -15,8 +15,22 @@ body {
 		&.prd_view {
 			padding-bottom: 0;
 		}
+		// 퀵메뉴 위치 조정
+		&:has(.prd_link_area.fixed) {
+			+ .quick_menu {
+				bottom: calc(64px + 64px);
+			}
+		}
+		&:not(:has(.prd_link_area.fixed)) {
+			+ .quick_menu {
+				&.active {
+					bottom: calc(267px + 64px);
+				}
+			}
+		}
 	}
 }
+
 
 // 상품안내
 .prd_view {
@@ -162,9 +176,26 @@ body {
 	.benefit_area {
 		.info_list {
 			.item {
+				position: relative;
+				background-repeat: no-repeat;
+				background-size: 24px auto;
+				background-position: left 4px center;
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 32px;
+					height: 32px;
+					border-radius: var(--radius-small3);
+					background-color: var(--color-surface-gray-subtler);
+					transform: translateY(-50%);
+					z-index: -1;
+				}
 				@for $i from 1 through 5 {
 					&.ico_benefit#{$i} {
-							background-image: url('../images/content/ltht/ico_benefit#{$i}.svg');
+						background-image: url('../images/content/ltht/ico_benefit#{$i}.svg');
 					}
 				}
 			}
@@ -322,56 +353,6 @@ body {
 		}
 	}
 	
-}
-
-// 이벤트 베너
-.evt_banner {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	width: 100%;
-	min-height: 100px;
-	padding-left: var(--padding-8);
-	border: 1px solid transparent;
-	border-radius: var(--radius-large2);
-	&::after {
-		content: '';
-		display: block;
-		width: 164px;
-		height: 100px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 100% auto;
-	}
-	@for $i from 1 through 5 {
-		&.evt_bg#{$i}::after {
-				background-image: url('../images/content/ltht/bg_banner#{$i}.png');
-		}
-	}
-
-	.desc_wrap {
-		.tit {
-			font-size: var(--font-size-body-large);
-		}
-		.desc {
-			font-size: 13px;
-		}
-	}
-
-	// 베너 종류
-	&.evt_bg1 {
-		border-color: #D1F3DE;
-		background-color: #EDFFF4;
-		.desc_wrap {
-			.tit {
-				color: #167052;
-			}
-			.desc {
-				color: #218564;
-			}
-		}
-	}
 }
 
 // 별점 리뷰
