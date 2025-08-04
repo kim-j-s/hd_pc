@@ -233,7 +233,7 @@
             padding: 20px 36px 20px 44px;
             text-align: left;
             background-position: center left;
-            border-bottom: 1px solid var(--color-divider-gray-light);
+            border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
             &::after {
                 content: '';
                 position: absolute;

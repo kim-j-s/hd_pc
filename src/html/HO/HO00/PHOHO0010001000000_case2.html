@@ -112,30 +112,39 @@
 					<!-- 로그인 영역 -->
 					<div class="prd_module_box">
 						<div class="prd_login">
-							<button type="button" class="chg_item">
+							<a href="#" class="chg_item">
 								<span class="text"><strong>로그인</strong> 후 편하게 이용하세요</span>
-							</button>
+							</a>
 						</div>
-						<div class="prd_module_list">
-							<button type="button" class="chg_item prd_ic1">
-								<span class="text">계약조회</span>
-							</button>
-							<button type="button" class="chg_item prd_ic2">
-								<span class="text">계약변경</span>
-							</button>
-							<button type="button" class="chg_item prd_ic3">
-								<span class="text">보험증명서</span>
-							</button>
-							<button type="button" class="chg_item prd_ic4">
-								<span class="text">단기운전확대특약</span>
-							</button>
-						</div>
+						<ul class="prd_module_list">
+							<li>
+								<a href="#" class="item prd_ic1">
+									<span class="text">계약조회</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item prd_ic2">
+									<span class="text">계약변경</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item prd_ic3">
+									<span class="text">보험증명서</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item prd_ic4">
+									<span class="text">단기운전확대특약</span>
+								</a>
+							</li>
+						</ul>
 					</div>
+					<!-- 로그인 영역 -->
 				</div>
 			</div>
 		</div>
 
-		<!-- 하단 푸른 영역 -->
+		<!-- 상품 영역 -->
 		<div class="main_cont_wrap main_cont_wrap_ty2 ">
 			<div class="mcw_cont">
 				<!-- 상품별 리스트 -->
@@ -286,7 +295,10 @@
 						<!-- 펫 -->
 						<div class="mcont_items pec_point">
 							<div class="main_prd">
-								<h3 class="main_prd_title" style="background-color: red;">펫 - 알럿 추가 필요</h3>
+								<h3 class="main_prd_title">
+									펫
+									<small class="n_msg">동물등록, 유기동물 입양, 다펫 시 최대 13% 할인</small>
+								</h3>
 								<div class="main_prd_cont">
 									<a href="#" class="mpc_item mpc_item_ty1 mit1_ic4">
 										<div class="mpc_item_cont">
@@ -360,9 +372,14 @@
 
 						<!-- 배너 -->
 						<div class="mcont_items">
-							배너 <br>
-							진행 필요 <br>
-							좌우 sw							
+							<div class="main_banner">
+								<a href="#">
+									<img src="../../../images/temp/temp_banner1.png" alt="일반/장기에 대한 배너 영역입니다 안내 문구 필요합니다.">
+								</a>
+								<a href="#">
+									<img src="../../../images/temp/temp_banner2.png" alt="보험 가입하고 경품 받아가세요 운전자,주택,어린이,암,건강,펫">
+								</a>
+							</div>
 						</div>
 						<!-- 배너 -->
 
@@ -480,8 +497,62 @@
 						</div>
 						<!-- 연금/저축 -->
 
-						<!-- 새로운 소식 -->
-						<!-- 새로운 소식 -->
+						<!-- 알려드려요 -->
+						<div class="mcont_items">
+							<div class="acd_item acd_item_ty5">
+								{{#> cp/notice_ty2 notice-class="etc01" dp-title="알려드려요" }}
+								<ul class="list_news">
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">
+													<span class="tit">3월 신용카드 무이자할부 안내</span>
+												</span>
+												<span class="date">2025.01.01</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link"> 
+											<span class="item_news_link_inner">
+												<span class="text">
+													<span class="tit">
+														신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드신용카드
+													</span>
+												</span>
+												<span class="date">2025.01.01</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">
+													<span class="tit">
+														신상품 ‘다이렉트 오토바이운전바보험‘ 출시
+													</span>
+												</span>
+												<span class="date">2025.12.28</span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="item_news_link">
+											<span class="item_news_link_inner">
+												<span class="text">
+													<span class="tit">
+														온라인플랫폼 서비스 이용약관 개정 안내
+													</span>
+												</span>
+												<span class="date">2025.11.11</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+								{{/ cp/notice_ty2 }}
+							</div>
+						</div>
+						<!-- 알려드려요 -->
 					</div>
 					
 				</div>
@@ -489,18 +560,132 @@
 				<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
 				<div class="mc_r_cont">
 					<div class="main_benefit normal">
-						<h4 class="main_benefit_title">다양한 할인 혜택을 확인하세요</h4>
-						<div class="dd dd_1">
-							<img src="../../../images/temp/1.png" alt="">
+						<h3 class="main_benefit_title">다양한 할인 혜택을 확인하세요</h3>
+						<!-- 제휴서비스 -->
+						<div class="main_benefit_cont">
+							<h4 class="mbc_title">제휴서비스</h4>
+							<ul class="mbc_list">
+								<li>
+									<a href="#" class="item">
+										<span class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_success outline size_m">제휴</span>
+										</span>
+										<span class="text">
+											<span class="word">
+												자동차정비 할인쿠폰받기
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item">
+										<span class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_warning outline size_m">무이자</span>
+										</span>
+										<span class="text">
+											<span class="word">
+												자동차정비 할인쿠폰받기
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item">
+										<span class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_success outline size_m">제휴</span>
+										</span>
+										<span class="text">
+											<span class="word">
+												와이퍼 교체 무료쿠폰 받기
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item">
+										<span class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_success outline size_m">제휴</span>
+										</span>
+										<span class="text">
+											<span class="word">
+												우수정비 서비스
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<div class="dd dd_2">
-							<img src="" alt="">
-							<img src="../../../images/temp/2.png" alt="">
+						<!-- 제휴서비스 -->
+
+						<!-- 카드혜택 -->
+						<div class="main_benefit_cont">
+							<h4 class="mbc_title">카드혜택</h4>
+							<ul class="mbc_list">
+								<li>
+									<a href="#" class="item column">
+										<strong class="tit">결제혜택</strong>
+										<span class="text">
+											<span class="word">
+												최대 3만원 주유권 또는 캐시백
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item column">
+										<strong class="tit">무이자 할부</strong>
+										<span class="text">
+											<span class="word">
+												2~6개월 무이자 할부
+											</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item column">
+										<strong class="tit">포인트 결제</strong>
+										<span class="text">
+											<span class="word">
+												3만 포인트부터 전액 사용까지
+											</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div class="mbc_desc_wrap">
+								<p class="desc_txt">카드사별로 다를 수 있으니 상세 내용을 확인해주세요</p>
+							</div>
 						</div>
-						<div class="dd dd_3">
-							<img src="" alt="">
-							<img src="../../../images/temp/3.png" alt="">
+						<!-- 카드혜택 -->
+
+						<!-- 보험 할인혜택 -->
+						<div class="main_benefit_cont">
+							<h4 class="mbc_title">보험 할인혜택</h4>
+							<ul class="mbc_ins_list">
+								<li>
+									<a href="#" class="item item_ico_ty1">
+										<div class="inner">
+											<strong class="tit tit_ty1">하이워크</strong>
+											<span class="text">
+												<span class="word">건강도 찾고 보험료 할인까지</span>
+											</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="item item_ico_ty2">
+										<div class="inner">
+											<strong class="tit tit_ty2">대중교통 할인</strong>
+											<span class="text">
+												<span class="word">교통카드 등록으로 간편하게</span>
+											</span>
+										</div>
+									</a>
+								</li>
+							</ul>
 						</div>
+						<!-- 보험 할인혜택 -->
+						
 
 					</div>
 
@@ -508,7 +693,7 @@
 				<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
 			</div>
 		</div>
-		<!-- 하단 푸른 영역 -->
+		<!-- 상품 영역 -->
 
 	</div>
 

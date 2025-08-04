@@ -52,7 +52,7 @@ body {
 				position: relative;
 				display: block;
 				padding-top: var(--gap-2);
-				font-size: var(--font-size-body-xsmall, 12px);
+				font-size: var(--font-size-body-xsmall);
 				color: var(--color-text-subtle);
 				text-align: center;
 			}
@@ -66,26 +66,60 @@ body {
 				border-radius: var(--radius-max);
 				background-repeat: no-repeat;
 				background-position: center center;
+				transition: background-color 0.3s;
 			}
 			&.qm_btn_acc_report {
 				&::before {
 					border-color: var(--color-button-primary-fill);
 					background-color: var(--color-button-primary-fill);
 					background-image: url(../images/common/icon_qm_tel.png);
-				}				
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-primary-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-primary-fill-pressed);
+					}
+				}
 			}
 			&.qm_btn_bd_dispatch {
 				&::before {
 					border-color: var(--color-border-secondary-dark);
 					background-color: var(--color-border-secondary-dark);
 					background-image: url(../images/common/icon_qm_car.png);
-				}				
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-icon-fab-fill-hover-pc);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-icon-fab-fill-pressed-pc);
+					}
+				}
 			}
 			&.qm_btn_chatbot {
 				&::before {
 					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
 					background-color: var(--color-button-tertiary-fill);
 					background-image: url(../images/common/icon_qm_chatbot.png);
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-pressed);
+					}
 				}
 			}
 			&.qm_btn_pagetop {
@@ -94,6 +128,17 @@ body {
 					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
 					background-color: var(--color-button-tertiary-fill);
 					background-image: url(../images/common/icon_qm_pagetop.png);					
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-pressed);
+					}
 				}
 			}			
 		}

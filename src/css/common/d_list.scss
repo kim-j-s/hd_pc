@@ -40,7 +40,7 @@
 			align-items: center;
 			justify-content: space-between;
 			gap: 8px;
-			border-bottom: 1px solid var(--border-color);
+			border-bottom: var(--border-width-static-regular) solid var(--border-color);
 			&:last-child {
 				border-bottom: none;
 			}
