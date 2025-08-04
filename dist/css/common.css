@@ -7352,7 +7352,7 @@ strong {
 	height: 24px;
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.switch_check.lg > .label_cont {
-	font-size: var(--font-size-body-large);
+	font-size: var(--font-size-label-large);
 	line-height: 24px;
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.switch_check.lg.txt_sm > .label_cont {
@@ -7430,6 +7430,9 @@ strong {
 }
 .inp_checkbox input[type="checkbox"]:disabled + .chk_label.switch_check::after {
 	background-color: var(--color-element-gray-light);
+}
+.inp_checkbox input[type="checkbox"]:disabled + .chk_label.switch_check .label_cont {
+	color: var(--color-text-disabled);
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label::before {
 	background: var(--color-element-primary) url(../images/icon/check_ty1.svg) no-repeat center/12px auto;

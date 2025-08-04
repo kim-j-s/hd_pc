@@ -813,6 +813,10 @@ body {
 					font-size: var(--font-size-button-small);
 					color: var(--color-text-subtle);
 					text-decoration: underline;
+
+					> span {
+						color: var(--color-text-subtle);
+					} 
 				}
 
 				&.active {

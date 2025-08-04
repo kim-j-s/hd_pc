@@ -639,6 +639,9 @@ body {
 	color: var(--color-text-subtle);
 	text-decoration: underline;
 }
+.side_panel .step_list.step_car > li .modify_sub > span {
+	color: var(--color-text-subtle);
+}
 .side_panel .step_list.step_car > li.active:first-child {
 	padding-bottom: 24px;
 }
