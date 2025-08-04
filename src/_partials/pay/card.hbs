@@ -14,7 +14,14 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">카드사</div>
-							{{> cp/selectitem si_ph="카드사 선택" si_title="카드사 선택" si_popup="card_select"}}
+							<!-- s: 25-08-04 -->
+							{{#> cp/selectbox_pc s-title="카드 할부 선택" }}
+								<option value="" selected>카드사 선택</option>
+								<option value="">현대</option>
+							{{/ cp/selectbox_pc}}
+							{{!-- {{> cp/selectitem si_ph="카드사 선택" si_title="카드사 선택" si_popup="card_select"}}
+							 --}}
+							<!-- e: 25-08-04 -->
 							{{#unless corporate}}
 							<!-- s: KB카드 선택 시 노출 -->
 							{{> cp/checkbox id="checkbox1" labelname="앱카드 결제" }}
