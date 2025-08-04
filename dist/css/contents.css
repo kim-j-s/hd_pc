@@ -4787,6 +4787,29 @@ ul + .form_group_wrap {
 .pin_enter:has(.pin_enter_error_msg) + .btn_area {
 	margin-top: var(--gap-8);
 }
+.pin_enter .form_key_pc {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: auto;
+	height: 40px;
+}
+.pin_enter .form_key_pc > span {
+	width: 40px;
+}
+.pin_enter .form_key_pc > span > input[type="checkbox"] + label {
+	width: 40px;
+	height: 40px;
+}
+.pin_enter .form_key_pc > input[type="password"] {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: 1px;
+}
 .pin_enter_error_msg {
 	margin-top: var(--gap-3);
 	font-size: 0;
@@ -5982,6 +6005,9 @@ body.overflow-x {
 }
 .prd_view .guarantee_area .guarantee_list .item:nth-child(n + 4) {
 	display: none;
+}
+.prd_view .guarantee_area .guarantee_list .item .info_gray.bg_etc01 {
+	padding: var(--padding-8) var(--padding-7);
 }
 .prd_view .guarantee_area .guarantee_list .item .titie_wrap {
 	padding-left: 44px;
