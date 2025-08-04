@@ -148,15 +148,19 @@
 								position: relative;
 								flex: none;
 								width: auto;
-								.hd_badge {
-									min-width: 48px;
-								}
 							}
 							.text {
 								position: relative;
 								flex: 1 1 0;
+								min-width: 0;
 								font-size: var(--font-size-body-small);
 								color: var(--color-text-basic);
+								.word {
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
+								}
 							}
 							.tit {
 								position: relative;
@@ -165,6 +169,10 @@
 								font-size: var(--font-size-body-small);
 								color: var(--color-text-secondary-light);
 								text-align: left;
+								display: block;
+								text-overflow: ellipsis;
+								overflow: hidden;
+								white-space: nowrap;
 							}
 							&.column {
 								flex-direction: column;
@@ -207,7 +215,7 @@
 							display: flex;
 							align-items: center;
 							min-height: 96px;
-							padding: var(--padding-7) var(--padding-6);
+							padding: var(--padding-7) 88px var(--padding-7) var(--padding-6);
 							border-radius: var(--radius-medium3);
 							background-repeat: no-repeat;
 							background-position: right 16px center;
@@ -218,11 +226,16 @@
 								display: inline-flex;
 								flex-direction: column;
 								gap: var(--gap-2) 0;
+								min-width: 0;
 								.tit {
 									width: 100%;
 									font-weight: 700;
 									font-size: var(--font-size-body-small);
 									text-align: left;
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
 									&.tit_ty1 {
 										color: var(--color-text-primary-bold);
 									}
@@ -235,6 +248,10 @@
 									font-size: var(--font-size-body-xsmall);
 									color: var(--color-text-subtle);
 									text-align: left;
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
 								}
 							}
 							&:hover,
@@ -380,6 +397,9 @@
 						font-size: var(--font-size-body-small);
 						color: var(--color-text-subtle);
 						text-align: center;
+						.text {
+							display: block;
+						}
 
 						.tip_item {
 							opacity: 0;

@@ -372,7 +372,7 @@
 				background-color: #fff;
 				font-weight: 700;
 				font-size: var(--font-size-heading-medium);
-				
+				color: var(--color-text-bolder);
 				&::before {
 					content: '';
 					position: absolute;
@@ -423,7 +423,7 @@
 				width: 100%;
 				padding: var(--padding-6) var(--padding-7);
 				background-color: transparent;
-				
+				color: var(--color-text-bolder);
 				> span {
 					display: block;
 					font-weight: 700; 
@@ -931,18 +931,18 @@
 }
 
 .item_wrap_faq {
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	.acd_item {
-		border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		.acd_head {
 			position: relative;
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			.acd_btn {
 				position: relative;
 				width: 100%;
-				padding: 12px 32px 8px 0;
+				padding: 12px 32px 8px 0;  
 				min-height: 48px;
 				background-color: #fff;
 				font-size: var(--font-size-body-medium);
+				color: var(--color-text-bolder);
 				&::before {
 					content: '';
 					position: absolute;
@@ -965,7 +965,7 @@
 				}
 			}
 			&.active {
-				border: none;
+				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 				.acd_btn {
 					//background: var(--color-action-secondary-pressed);
 					&::before {
@@ -975,7 +975,6 @@
 				& + .acd_cont {
 					padding: 16px 0;
 					font-size: var(--font-size-body-medium);
-					border-top: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 					&::before {
 						opacity: 1;
 					}
