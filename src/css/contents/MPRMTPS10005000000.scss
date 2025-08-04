@@ -96,8 +96,8 @@
 .driver_relationship_state {
 	margin: var(--gap-8) -24px 0;
 	padding: var(--padding-9) var(--padding-8);
-	background-color: #F5F5F5;
 	border-radius: var(--radius-xlarge2);
+	background: var(--color-surface-gray-subtler);
 }
 
 .relationship_box {
@@ -177,7 +177,7 @@
 				z-index: 1;
 				width: 1px;
 				height: 100vh;
-				background-color: #D9D9D9;
+				background-color: var(--color-border-gray-light);
 			}
 
 			&.ty1 {
@@ -198,7 +198,7 @@
 			z-index: 1;
 			width: 1px;
 			height: 100vh;
-			background-color: #D9D9D9;
+			background-color: var(--color-border-gray-light);
 		}
 	}
 	.rel_case2 {
@@ -229,19 +229,19 @@
 				z-index: 1;
 				width: 1px;
 				height: 100vw;
-				background-color: #F5F5F5;
+				background-color: var(--color-surface-gray-subtler);
 			}
 	
 			&:after {
 				content:'';
 				display: block;
 				position: absolute;
-				top:50%;
+				top: 50%;
 				left: 100%;
 				z-index: 1;
 				width: 100vw;
 				height: 1px;
-				background-color: #D9D9D9;
+				background-color: var(--color-border-gray-light);
 			}
 
 			// &:after {
@@ -253,7 +253,7 @@
 			// 	z-index: 1;
 			// 	width: 1px;
 			// 	height: 100vh;
-			// 	background-color: #D9D9D9;
+			// 	background-color: var(--color-border-gray-light);
 			// }
 		}
 	}
@@ -285,19 +285,19 @@
 				left: 1px;
 				width: 100%;
 				height: 100vw;
-				background-color: #F5F5F5;
+				background-color: var(--color-surface-gray-subtler);
 			}
 
 			&:after {
 				content:'';
 				display: block;
 				position: absolute;
-				top:50%;
+				top: calc(50% - 5px);
 				left: 100%;
 				z-index: 1;
 				width: 100vw;
 				height: 1px;
-				background-color: #F5F5F5;
+				background-color: var(--color-surface-gray-subtler);
 			}
 		}
 	}

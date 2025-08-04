@@ -396,6 +396,9 @@ body {
 .side_panel .step_list > li .acd_item_ty9 .acd_cont .inner .info {
 	color: var(--color-text-disabled-on);
 }
+.side_panel .step_list > li .pro_step_result {
+	padding-left: var(--gap-7);
+}
 .side_panel .step_list > li .pro_step_result > li {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -404,6 +407,11 @@ body {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-2);
+	padding: var(--padding-2) 0 var(--padding-2) var(--padding-2);
+	font-size: var(--font-size-body-xsmall);
+}
+.side_panel .step_list > li .pro_step_result > li ~ li {
+	margin-top: 0;
 }
 .side_panel .step_list > li .pro_step_result > li span {
 	-webkit-box-flex: 1;
@@ -434,7 +442,7 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-top: 12px;
+	height: 18px;
 	color: var(--color-text-basic);
 }
 .side_panel .step_list > li .result_pager > span {
@@ -465,6 +473,7 @@ body {
 	background-image: url(../images/icon/arrowRight_disabled_ty2.svg);
 }
 .side_panel .step_list > li .result_pager > button .text {
+	display: inline-block;
 	width: 1px;
 	height: 1px;
 	opacity: 0;
@@ -589,6 +598,10 @@ body {
 }
 .side_panel .step_list.step_car > li .dep_list dd .dep_list_sub > li {
 	padding-left: var(--padding-2);
+}
+.side_panel .step_list.step_car > li .dep_list dd .pro_step_result {
+	margin-top: var(--gap-4);
+	padding-left: 0;
 }
 .side_panel .step_list.step_car > li .dep_list_sub:has(.modify_sub) > li {
 	padding-right: 29px;
@@ -4850,16 +4863,20 @@ body {
 	flex: none;
 	width: auto;
 }
-.main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .badge_wrap .hd_badge {
-	min-width: 48px;
-}
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .text {
 	position: relative;
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
+	min-width: 0;
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-basic);
+}
+.main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .text .word {
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .tit {
 	position: relative;
@@ -4868,6 +4885,10 @@ body {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-secondary-light);
 	text-align: left;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item.column {
 	-webkit-box-orient: vertical;
@@ -4914,7 +4935,7 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	min-height: 96px;
-	padding: var(--padding-7) var(--padding-6);
+	padding: var(--padding-7) 88px var(--padding-7) var(--padding-6);
 	border-radius: var(--radius-medium3);
 	background-repeat: no-repeat;
 	background-position: right 16px center;
@@ -4932,12 +4953,17 @@ body {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: var(--gap-2) 0;
+	min-width: 0;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item .inner .tit {
 	width: 100%;
 	font-weight: 700;
 	font-size: var(--font-size-body-small);
 	text-align: left;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item .inner .tit.tit_ty1 {
 	color: var(--color-text-primary-bold);
@@ -4950,6 +4976,10 @@ body {
 	font-size: var(--font-size-body-xsmall);
 	color: var(--color-text-subtle);
 	text-align: left;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item:hover,
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item:focus {
@@ -5063,6 +5093,9 @@ body {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 	text-align: center;
+}
+.main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li .re_link .text {
+	display: block;
 }
 .main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li .re_link .tip_item {
 	opacity: 0;
