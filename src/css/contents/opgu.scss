@@ -143,17 +143,29 @@
 			margin-top: var(--gap-8);
 		}
 	}
+	.form_key {
+		&.pin_type {
+			
+		}
+	}
 	.form_key_pc {
+		// position: relative;
 		flex: none;
 		display: inline-flex;
 		width: auto;
-		height: 40px;
+		height: 24px;
+		> input[type="password"] {
+			right: auto;
+			left: 0;			
+		}
 		> span {
-			width: 40px;
+			width: auto;
+			padding-left: 0;
 			> input[type="checkbox"] {
 				+ label {
-					width: 40px;
-					height: 40px;
+					width: 24px;
+					height: 24px;
+					background-image: url(../images/icon/icon_keyboard.svg);					
 				}
 			}
 		}
@@ -345,6 +357,7 @@
 	}
 }
 .pin_enter {
+	text-align: center;
 	&.pass_join {
 		height: auto;
 		.error {
@@ -357,7 +370,10 @@
 	}
 	.form_key {
 		&.pin_type {
-			display: flex;
+			position: relative;
+			display: inline-flex;
+			margin: 0 auto;
+			// display: flex;
 			justify-content: center;
 			align-items: flex-end;
 			gap: var(--gap-3);
