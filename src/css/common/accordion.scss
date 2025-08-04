@@ -931,11 +931,10 @@
 }
 
 .item_wrap_faq {
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	.acd_item {
-		border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		.acd_head {
 			position: relative;
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			.acd_btn {
 				position: relative;
 				width: 100%;
@@ -966,7 +965,7 @@
 				}
 			}
 			&.active {
-				border: none;
+				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 				.acd_btn {
 					//background: var(--color-action-secondary-pressed);
 					&::before {
@@ -976,7 +975,6 @@
 				& + .acd_cont {
 					padding: 16px 0;
 					font-size: var(--font-size-body-medium);
-					border-top: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 					&::before {
 						opacity: 1;
 					}
