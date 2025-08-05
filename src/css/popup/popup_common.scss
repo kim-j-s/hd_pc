@@ -195,6 +195,10 @@
 							.status_icon {
 								margin-bottom: var(--gap-5)
 							}
+
+							& + .text_sub {
+								margin-top: var(--gap-5);
+							}
 						}
 					}
 
@@ -252,6 +256,11 @@
 
 					.text_sub {
 						margin-top:var(--gap-8);
+
+						&.txt_center {
+							margin-top:var(--gap-5);
+							text-align: center;
+						}
 					}
 				}
 

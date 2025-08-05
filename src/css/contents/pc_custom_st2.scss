@@ -843,7 +843,7 @@
 
 		&:has(dl:nth-of-type(2)) {
 			dl:nth-of-type(odd) {
-				border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+				border-right: var(--border-width-static-regular) solid var(--color-divider-secondary-light);
 			}
 		}
 
@@ -1020,6 +1020,17 @@
 				margin-top: var(--gap-6);
 			}
 		}		
+	}
+
+	&.ty2 {
+		.data_box {
+
+			&:has(dl:nth-of-type(2)) {
+				dl:nth-of-type(odd) {
+					border-right-color: var(--color-divider-gray-light);
+				}
+			}
+		}
 	}
 }
 
