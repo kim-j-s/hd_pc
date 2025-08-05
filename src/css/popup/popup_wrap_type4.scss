@@ -46,10 +46,7 @@
 
 		.popup_container {
 			align-items: center;
-			// width: 734px;
 			width: 600px;
-			// transform: translateX(100%);
-			// transition: transform 0.3s ease;
 
 			.popup_inner {
 				padding-bottom: var(--padding-6);
@@ -58,10 +55,14 @@
 				&:not(:has(.popup_bottom)){
 					padding-bottom: 32px;
 				}
+				.popup_head {
+					margin-bottom: var(--gap-5);
+				}
 				
 				.popup_cont {
 					height: auto;
 					max-height: 100%;
+					padding-top: 0;
 					padding-bottom: var(--padding-12);
 
 					&.load_cont {
