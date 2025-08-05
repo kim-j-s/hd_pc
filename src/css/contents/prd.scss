@@ -215,7 +215,7 @@
 					transform: translateY(-50%);
 					z-index: -1;
 				}
-				@for $i from 1 through 5 {
+				@for $i from 1 through 19 {
 					&.ico_benefit#{$i} {
 						background-image: url('../images/content/ltht/ico_benefit#{$i}.svg');
 					}
