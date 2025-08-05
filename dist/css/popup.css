@@ -161,6 +161,9 @@
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content .popup_content_top.txt_center .status_icon {
 	margin-bottom: var(--gap-5);
 }
+.popup_wrap .popup_container .popup_inner .popup_cont .popup_content .popup_content_top.txt_center + .text_sub {
+	margin-top: var(--gap-5);
+}
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content .list_ty3 + .title_h4 {
 	margin-top: var(--gap-9);
 }
@@ -194,6 +197,10 @@
 }
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content.ty2 .text_sub {
 	margin-top: var(--gap-8);
+}
+.popup_wrap .popup_container .popup_inner .popup_cont .popup_content.ty2 .text_sub.txt_center {
+	margin-top: var(--gap-5);
+	text-align: center;
 }
 .popup_wrap .popup_container .popup_inner .popup_cont .popup_content + .acd_info_box {
 	margin-top: var(--gap-7);

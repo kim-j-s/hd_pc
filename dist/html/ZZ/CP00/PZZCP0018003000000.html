@@ -125,10 +125,10 @@
 										</div>
 										<span class="dash">-</span>
 										<div class="comp_wrap_keypad_call form_key_pc">
-											<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="true" maxlength="7" />
+											<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒷자리" maxlength="7" />
 											<span>
-												<input type="checkbox" name="" id="" />
-												<label for="">마우스입력기사용</label>
+												<input type="checkbox" name="" id="kp1" />
+												<label for="kp1">마우스입력기사용</label>
 											</span>
 										</div>
 									</div>
@@ -136,11 +136,16 @@
 
 								<div class="form_line">
 									<div class="label_tit">통신사</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="통신사 선택 팝업 호출" onclick="openHDPopup(this,'pop_type03');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type03');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="통신사 선택"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
+									<div class="select_option_box">
+										<select name="" id="" title="통신사 선택" class="selectbox">
+											<option value="default" hidden>통신사 선택</option>
+											<option value="">SKT</option>
+											<option value="">KT</option>
+											<option value="">LG U+</option>
+											<option value="">SKT알뜰</option>
+											<option value="">KT알뜰</option>
+											<option value="">LG U+알뜰</option>
+										</select>
 									</div>
 								</div>
 								<!-- e: 자체 본인인증 불가한 경우 노출 -->
