@@ -548,7 +548,8 @@ ul + .form_group_wrap {
 			margin: 0 0 16px;
 		}
 		.img_area,
-		.btn_area {
+		.btn_area,
+		.file_attach_box {
 			& + p {
 				margin-top: var(--gap-8);
 			}
@@ -700,6 +701,7 @@ ul + .form_group_wrap {
 	padding-left: 20px;
 	font-size: var(--font-size-label-medium);
 	color: var(--color-text-information);
+	text-align: left;
 	background: url(../images/icon/icon_info.svg) no-repeat left 2px / 16px auto;
 }
 .search_reult_list_container {

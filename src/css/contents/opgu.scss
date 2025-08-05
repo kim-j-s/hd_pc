@@ -138,22 +138,40 @@
 	+ .btn_area {
 		margin-top: var(--gap-5);
 	}
+	+ .info_gray {
+		&.ty2 {
+			margin-top: var(--gap-8);
+		}
+	}
+
 	&:has(.pin_enter_error_msg) {
 		+ .btn_area {
 			margin-top: var(--gap-8);
 		}
 	}
+	.form_key {
+		&.pin_type {
+			
+		}
+	}
 	.form_key_pc {
+		// position: relative;
 		flex: none;
 		display: inline-flex;
 		width: auto;
-		height: 40px;
+		height: 24px;
+		> input[type="password"] {
+			right: auto;
+			left: -1px;
+		}
 		> span {
-			width: 40px;
+			width: auto;
+			padding-left: 0;
 			> input[type="checkbox"] {
 				+ label {
-					width: 40px;
-					height: 40px;
+					width: 24px;
+					height: 24px;
+					background-image: url(../images/icon/icon_keyboard.svg);					
 				}
 			}
 		}
@@ -336,28 +354,34 @@
 	.pin_enter_error_msg {
 		display: none;
 		position: absolute;
-		text-align: left;
 		bottom: 8px;
 		left: 0;
 		.text {
 			background-position: left top;
+			text-align: left;
 		}
 	}
 }
 .pin_enter {
+	text-align: center;
 	&.pass_join {
 		height: auto;
 		.error {
 			& + .pin_info {
 				.pin_enter_error_msg {
+					position: static;
 					display: block;
+					text-align: left;
 				}
 			}
 		}
 	}
 	.form_key {
 		&.pin_type {
-			display: flex;
+			position: relative;
+			display: inline-flex;
+			margin: 0 auto;
+			// display: flex;
 			justify-content: center;
 			align-items: flex-end;
 			gap: var(--gap-3);

@@ -7165,6 +7165,37 @@ strong {
 	width: 20px;
 	height: 20px;
 	opacity: 0;
+	z-index: 1;
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont {
+	display: block;
+	font-size: var(--font-size-label-large);
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont .badge_wrap {
+	width: auto;
+	gap: 4px;
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont .cheking_color {
+	font-weight: 700;
+	color: var(--color-text-disabled-on);
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont .ess {
+	font-weight: 700;
+	color: var(--color-text-primary-bold);
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont .ess.ess_t1 {
+	position: relative;
+	top: -1px;
+	font-size: var(--font-size-heading-xxsmall);
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont .ess.ess_t1.off {
+	color: var(--color-text-disabled-on);
+}
+.inp_checkbox input[type="checkbox"] ~ .label_area .sub_g_txt {
+	display: block;
+	padding-top: 8px;
+	font-size: var(--font-size-label-medium);
+	color: var(--color-text-subtle);
 }
 .inp_checkbox input[type="checkbox"] + .chk_label {
 	position: relative;
@@ -7517,6 +7548,22 @@ strong {
 	background-color: var(--color-element-gray-light);
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
+}
+.inp_checkbox:has(.label_area) {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-3);
+}
+.inp_checkbox:has(.label_area) input[type="checkbox"] {
+	width: 24px;
+	height: 24px;
+}
+.inp_checkbox:has(.label_area) input[type="checkbox"] + .chk_label {
+	width: 24px;
+	height: 24px;
+	padding-left: 24px;
+	border-radius: var(--radius-small2);
 }
 .inp_checkbox.rd_box {
 	padding: var(--padding-8) var(--padding-7);
@@ -13937,6 +13984,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .info_gray.ty2 + .call_box.space1 {
 	margin-top: var(--gap-8);
+}
+.info_gray.ty2 dl + .footer_dl {
+	border-color: var(--color-divider-gray-light);
 }
 .info_gray.ty3 {
 	background: var(--color-action-secondary);

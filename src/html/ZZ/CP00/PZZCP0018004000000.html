@@ -1,0 +1,63 @@
+{{#> layout/default no-sp=true page-title="1회용 간편번호"}}
+
+<!-- s: Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- s: popup_content_top -->
+		<div class="popup_content_top">
+			<h2 class="title_h2">
+				<strong>1회용 간편번호로<br> 전자서명을 진행할게요</strong>
+			</h2>
+			<div class="btn_area basic">
+				{{> cp/linkButton bl_class="short_cut sm" bl_text="다른 인증방법 선택" }}
+			</div>
+		</div>
+		<!-- e: popup_content_top -->
+
+		<div class="pin_enter">
+			<div class="form_key pin_type">
+				<div class="pin_area">
+					<strong class="ergAt dot_mark active"></strong>
+					<strong class="ergAt dot_mark active"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+				</div>
+				{{> cp/keypad_pc placeholder="뒷자리"}}
+			</div>
+		</div>
+
+		<!-- s: pin 에러 시 유형 -->
+		<div class="pin_enter">
+			<div class="form_key pin_type error">
+				<div class="pin_area">
+					<strong class="ergAt dot_mark active"></strong>
+					<strong class="ergAt dot_mark active"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+					<strong class="ergAt dot_mark"></strong>
+				</div>
+				{{> cp/keypad_pc placeholder="뒷자리"}}
+			</div>
+			<p class="pin_enter_error_msg">
+				<span class="text">등록된 간편비밀번호와 달라요. (1/5회)</span>
+			</p>
+		</div>
+		<!-- e: pin 에러 시 유형 -->
+
+		<div class="info_gray ty2">
+			<ul class="list_depth">
+				<li>전자서명을 위해 1회용으로만 사용됩니다.</li>
+				<li>입력 후 같은 번호를 다시 입력하셔야 합니다.</li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: Full 팝업 -->
+
+{{/ layout/default }}
