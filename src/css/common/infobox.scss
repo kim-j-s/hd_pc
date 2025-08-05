@@ -132,6 +132,12 @@
 		margin-top: var(--gap-7);
 	}
 
+	// margin-top 16 {
+	> .info_gray {
+		margin-top: var(--gap-6);
+		background-color: var(--color-surface-secondary-subtle);
+	}
+
 	// margin-top 16
 	& + .list_depth,
 	& + .info_gray,
