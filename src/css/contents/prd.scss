@@ -276,6 +276,9 @@
 						> p {
 							margin-bottom: var(--gap-4);
 							text-align: left;
+							& + .list_ty2 {
+								margin-top: var(--gap-5);
+							}
 						}
 						&:has(img) {
 							text-align: center;
@@ -283,6 +286,12 @@
 						.list_ty2 {
 							text-align: left;
 							margin-top: var(--gap-4);
+						}
+						.list_depth_ty2 {
+							margin-top: var(--gap-5);
+						}
+						.call_box  {
+							margin-top:0;
 						}
 					}
 				}
