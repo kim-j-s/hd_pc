@@ -132,7 +132,7 @@
 				.titie_wrap {
 					padding-left: 44px;
 					@extend %background_set;
-					@for $i from 1 through 42 {
+					@for $i from 1 through 43 {
 						&.item_ico_ty#{$i} {
 								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 						}
@@ -484,7 +484,7 @@
 				@extend %background_set;
 				z-index: 2;
 			}
-			@for $i from 1 through 42 {
+			@for $i from 1 through 43 {
 				&.item_ico_ty#{$i}::after {
 						background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 				}
