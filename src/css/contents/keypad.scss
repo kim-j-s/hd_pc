@@ -11,6 +11,7 @@
 		text-align: center;
 		border: none;
 		background-color: var(--color-input-surface) !important;
+		border-radius: var(--radius-medium3);
 		&::placeholder {
 			color: var(--color-text-disabled);
 			text-align: left;
