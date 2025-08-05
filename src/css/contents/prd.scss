@@ -79,7 +79,7 @@
 		}
 		@for $i from 1 through 5 {
 			&.bg_intro#{$i}::after {
-					background-image: url('../images/content/ltht/bg_intro#{$i}.png');
+					background-image: url('../images/content/prd/bg_intro#{$i}.png');
 			}
 		}
 
@@ -87,7 +87,7 @@
 			.item {
 				@for $i from 1 through 16 {
 					&.ico_intro#{$i} {
-							background-image: url('../images/content/ltht/ico_intro#{$i}.svg');
+							background-image: url('../images/content/prd/ico_intro#{$i}.svg');
 					}
 				}
 			}
@@ -217,7 +217,7 @@
 				}
 				@for $i from 1 through 19 {
 					&.ico_benefit#{$i} {
-						background-image: url('../images/content/ltht/ico_benefit#{$i}.svg');
+						background-image: url('../images/content/prd/ico_benefit#{$i}.svg');
 					}
 				}
 			}
@@ -243,7 +243,7 @@
 							left: 0;
 							width: 24px;
 							height: 24px;
-							background: url('../images/content/ltht/ico_accordion_q.svg') no-repeat;
+							background: url('../images/content/prd/ico_accordion_q.svg') no-repeat;
 							background-size: 24px auto;
 						}
 					}
@@ -260,7 +260,7 @@
 							left: 0;
 							width: 24px;
 							height: 24px;
-							background: url('../images/content/ltht/ico_accordion_a.svg') no-repeat;
+							background: url('../images/content/prd/ico_accordion_a.svg') no-repeat;
 							background-size: 24px auto;
 						}
 						> p {
@@ -526,7 +526,7 @@
 			}
 			@for $i from 1 through 5 {
 				&.ico_mis#{$i} {
-						background-image: url('../images/content/ltht/ico_mis_list#{$i}.svg');
+						background-image: url('../images/content/prd/ico_mis_list#{$i}.svg');
 				}
 			}
 		}
