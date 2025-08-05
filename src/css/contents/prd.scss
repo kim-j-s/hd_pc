@@ -61,6 +61,9 @@
 			align-items: center;
 			min-height: 234px;
 		}
+		+ .btn_area {
+			margin-top: var(--gap-5);
+		}
 	}
 	.intro_info {
 		display: flex;
@@ -132,7 +135,7 @@
 				.titie_wrap {
 					padding-left: 44px;
 					@extend %background_set;
-					@for $i from 1 through 46 {
+					@for $i from 1 through 50 {
 						&.item_ico_ty#{$i} {
 								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 						}
@@ -191,6 +194,12 @@
 
 	// 할인혜택
 	.benefit_area {
+		.cont_head {
+			.flex_inline {
+				display: flex;
+				align-items: center;
+			}
+		}
 		.benefit_list {
 			.list_ty2 {
 				padding-top: var(--gap-3);
@@ -488,7 +497,7 @@
 				@extend %background_set;
 				z-index: 2;
 			}
-			@for $i from 1 through 46 {
+			@for $i from 1 through 50 {
 				&.item_ico_ty#{$i}::after {
 						background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 				}
