@@ -71,13 +71,13 @@
 		&::after {
 			content: '';
 			display: block;
-			width: 240px;
-			height: 160px;
+			width: 280px;
+			height: 186px;
 			background-repeat: no-repeat;
     	background-position: center center;
     	background-size: contain;
 		}
-		@for $i from 1 through 5 {
+		@for $i from 1 through 15 {
 			&.bg_intro#{$i}::after {
 					background-image: url('../images/content/prd/bg_intro#{$i}.png');
 			}
