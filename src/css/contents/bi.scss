@@ -1107,7 +1107,7 @@
 								}
 							}
 
-							@for $i from 1 through 46 {
+							@for $i from 1 through 49 {
 								&.item_ico_ty#{$i} {
 									background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
 								}
