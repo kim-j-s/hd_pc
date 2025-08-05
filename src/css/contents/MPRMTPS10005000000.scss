@@ -225,9 +225,8 @@
 				display: block;
 				position: absolute;
 				top: 100%;
-				left: 49%;
-				z-index: 1;
-				width: 1px;
+				left: 1px;
+				width: 100%;
 				height: 100vw;
 				background-color: var(--color-surface-gray-subtler);
 			}
@@ -243,18 +242,6 @@
 				height: 1px;
 				background-color: var(--color-border-gray-light);
 			}
-
-			// &:after {
-			// 	content:'';
-			// 	display: block;
-			// 	position: absolute;
-			// 	top:-100vh;
-			// 	left: 50%;
-			// 	z-index: 1;
-			// 	width: 1px;
-			// 	height: 100vh;
-			// 	background-color: var(--color-border-gray-light);
-			// }
 		}
 	}
 	.rel_case3 {

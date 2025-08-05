@@ -274,6 +274,7 @@
 
 	// margin-top 16
 	& + &,
+	& + .btn_area,
 	& + .title_h5,
 	& + .info_gray,
 	& + .my_info_flow,
@@ -299,6 +300,9 @@
 			margin-top: var(--gap-2);
 			&.space1 {
 				margin-top: var(--gap-3);
+			}
+			&.center {
+				margin-top: var(--gap-5);
 			}
 		}
 	}

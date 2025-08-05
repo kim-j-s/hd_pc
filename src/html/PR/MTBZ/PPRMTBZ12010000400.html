@@ -1,0 +1,140 @@
+{{#> layout/default page-title="청약내용 확인 | 상품"}}
+
+<!-- s: Bottom 팝업 -->
+
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="타사 보유계약 조회"}}
+<div class="popup_cont">
+	<div class="popup_content">
+
+		<!-- 보유차량 조회 -->
+		<div class="popup_content_top txt_center">
+			<h2 class="title_h3">
+				<span class="light">
+					고객님이 보유한 타사 계약 중 갱신 가능한 계약을 조회하여<br> 
+					보험료 계산에 추가할 수 있습니다.
+				</span>
+			</h2>
+		</div>
+		<p class="text_sub txt_center">보유 차량이 많을 경우 조회 시간이 오래 걸릴 수 있습니다.</p>
+
+		<div class="btn_area basic center">
+			{{> cp/button type="2" size="3" b-text="보유계약 조회하기" }}
+		</div>
+
+		<!-- 조회결과 -->
+		<div class="all_checking">
+			{{> cp/checkbox id="checkbox1" labelname="총 <strong class='point'>3</strong>건 전체 선택" }}
+		</div>
+		<div class="card_item_wrap">
+			<div class="card_item">
+				<div class="item_inner">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="card_chk_opt1_1" name="name2" aria-labelledby="card_chk_opt1_1_cont" />
+						<label for="card_chk_opt1_1" class="chk_label"></label>
+						<i></i>
+					</div>
+					<div class="inner_cont">
+						<div class="item_top" id="card_chk_opt1_1_cont">
+							<div class="title_info">
+								<div class="main_title">
+									111너**33 <span class="info">(삼성)</span>
+									<span class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">만기 D-10</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<ul class="card_list_ty1">
+							<li>
+								<div class="title">보험기간</div>
+								<div class="cont">
+									2020.01.01 ~ 2021.01.01
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card_item">
+				<div class="item_inner">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="card_chk_opt1_2" name="name2" aria-labelledby="card_chk_opt1_2_cont" />
+						<label for="card_chk_opt1_2" class="chk_label"></label>
+						<i></i>
+					</div>
+					<div class="inner_cont">
+						<div class="item_top" id="card_chk_opt1_2_cont">
+							<div class="title_info">
+								<div class="main_title">
+									111너**33 <span class="info">(삼성)</span>
+									<span class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">만기 D-10</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<ul class="card_list_ty1">
+							<li>
+								<div class="title">보험기간</div>
+								<div class="cont">
+									2020.01.01 ~ 2021.01.01
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card_item">
+				<div class="item_inner">
+					<div class="inp_checkbox">
+						<input type="checkbox" id="card_chk_opt1_3" name="name2" aria-labelledby="card_chk_opt1_3_cont" />
+						<label for="card_chk_opt1_3" class="chk_label"></label>
+						<i></i>
+					</div>
+					<div class="inner_cont">
+						<div class="item_top" id="card_chk_opt1_3_cont">
+							<div class="title_info">
+								<div class="main_title">
+									111너**33 <span class="info">(삼성)</span>
+									<span class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">만기 D-10</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<ul class="card_list_ty1">
+							<li>
+								<div class="title">보험기간</div>
+								<div class="cont">
+									2020.01.01 ~ 2021.01.01
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- s: 내역이 없는 경우 -->
+		<div class="no_list_area">
+			{{> cp/icon iconClass="exclamationSvg"}}
+			<p>타사 보유계약이 없습니다.</p>
+		</div>
+		<!-- e: 내역이 없는 경우 -->
+	</div>
+</div>
+
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="3" size="2" b-text="취소" }}
+		{{> cp/button type="1" size="2" b-text="자동차 추가" disabled=true }}
+	</div>
+</div>
+{{/ popup/popup_full}}
+
+<!-- e: Bottom 팝업 -->
+
+{{/ layout/default }}
