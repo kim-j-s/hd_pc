@@ -378,9 +378,13 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.popup_bottom)) {
 	padding-bottom: 32px;
 }
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_head {
+	margin-bottom: var(--gap-5);
+}
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont {
 	height: auto;
 	max-height: 100%;
+	padding-top: 0;
 	padding-bottom: var(--padding-12);
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont {
@@ -526,11 +530,14 @@
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner:not(:has(.popup_bottom)) {
 	padding-bottom: 32px;
 }
+.popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_head {
+	margin-bottom: var(--gap-2);
+}
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_head .popup_head_title {
 	padding-right: 40px;
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont {
-	padding-top: var(--padding-2);
+	padding-top: 0;
 }
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont .bottom_fix_notice {
 	padding-top: 32px;
