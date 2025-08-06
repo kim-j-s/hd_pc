@@ -878,12 +878,6 @@
 }
 
 .position_event_wrap {
-	&:not(:has(.simple_info_wrap)){
-		
-		.tag_item_wrap_po_etc1 {
-			top: -16px;
-		}
-	}
 	&:has(.pec_point_wrap) {
 		.pec_point_wrap {
 			.pec_point {
