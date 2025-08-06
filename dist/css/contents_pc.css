@@ -232,7 +232,7 @@ body {
 	background-image: url(../images/content/bi/icon_stepper_home2.svg);
 }
 .side_panel .info_cont + .info_gray {
-	margin-top: 0;
+	margin-top: 8px;
 	background-color: var(--color-surface-gray-subtler);
 }
 .side_panel .info_gray {

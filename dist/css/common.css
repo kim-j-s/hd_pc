@@ -640,7 +640,7 @@ strong {
 }
 .process_info_area .process_title {
 	font-size: var(--font-size-heading-large);
-	color: var(--Grey-12);
+	color: var(--color-text-bolder);
 }
 .process_info_area .process_title.kakao_case {
 	margin-top: var(--gap-7);
@@ -10462,7 +10462,7 @@ strong {
 	-ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	color: var(--color-text-disabled-on);
-	padding-left: 26px;
+	padding-left: 28px;
 	background-repeat: no-repeat;
 	background-position: 4px 2px;
 	background-size: 16px auto;
@@ -13048,6 +13048,11 @@ ol li .table_wrap + .list_ty2 li + li {
 	-ms-flex: none;
 	flex: none;
 }
+/* 조회 탭 결과 컨텐츠 간격용 */
+.tab_wrap_rst.tab_wrap_rst_ty1 {
+	padding-top: var(--gap-5);
+}
+/* 조회 탭 결과 컨텐츠 간격용 */
 /* table */
 .table_wrap + .table_wrap {
 	margin-top: var(--gap-8);
