@@ -67,5 +67,8 @@
 /* 해외장기체류보험 - 실손의료보험 중지 및 환급 제도 */
 @import 'contents/MPRGIPC50007050000.scss';
 
-/* 상품안내 */
+/* 상품안내 - 장기일반 */
 @import 'contents/prd.scss';
+
+/* 상품안내 - 자동차 */
+@import 'contents/prd_car.scss';
