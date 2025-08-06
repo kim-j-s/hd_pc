@@ -702,35 +702,35 @@
 	let bannerSwiper;
 	
 	$(document).ready(function(){
+
 		bannerSwiper = new Swiper('.mc_bann_wrap .swiper', {
-				slidesPerView: 1,
-				updateOnWindowResize:true,
-				autoplay: {
-					delay: 6000,
-					disableOnInteraction: false,
+			slidesPerView: 1,
+			updateOnWindowResize:true,
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: ".swiper_button_right",
+				prevEl: ".swiper_button_left",
+			},
+			a11y: {
+				enabled: true,
+				prevSlideMessage: '이전 항목으로 이동',
+				nextSlideMessage: '다음 항목으로 이동',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				type: 'bullets',
+				renderBullet: function (index, className) {
+					return `<span class="${className}" aria-label="Go to slidesss ${index + 1}"></span>`;
 				},
-				navigation: {
-					nextEl: ".swiper_button_right",
-					prevEl: ".swiper_button_left",
-				},
-				a11y: {
-					enabled: true,
-					prevSlideMessage: '이전 항목으로 이동',
-					nextSlideMessage: '다음 항목으로 이동',
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-					type: 'bullets',
-					renderBullet: function (index, className) {
-						return `<span class="${className}" aria-label="Go to slidesss ${index + 1}"></span>`;
-					},
-				}
-			});
+			}
 		});
 
 		$('.mc_bann_wrap .swiper-button-play-pause').on('click', function() {
-    	// bannerSwiper.autoplay.stop();
+			// bannerSwiper.autoplay.stop();
 			if (bannerSwiper.autoplay.running){
 				bannerSwiper.autoplay.stop();
 				$(this).text('시작').addClass('active');
@@ -740,10 +740,7 @@
 			}
 		});
 
-
-
-
-		// 메인 스크롤 이벤트
+		/* 메인 스크롤 이벤트  */
 		$(window).on('scroll', function() {
 			let scrollTop = $(this).scrollTop();
 			
@@ -779,11 +776,27 @@
 				}
 			}
 
-			
+			// 스크롤 시 tag_item 활성화
+			const $m_doc = $(document);
+			const $tabBtns = $m_doc.find('.main_cont_wrap').find('.position_event_tab .tag_item');
+			const $contents = $m_doc.find('.main_cont_wrap').find('.position_event_content .pec_point');
+			const $scrollArea = $m_doc.find('.main_cont_wrap').find('.position_event_content');
+			let activeIdx = -1;
 
+			$contents.each(function (index) {
+				const targetTop = $(this).offset().top;
+				const scrollY = targetTop;
+
+				if (scrollY < scrollTop + 204) { // 204 : header높이+fixedmenu높이
+					activeIdx = index;
+				}//else if(scrollTop + $(window).height() >= $(document).height() - 1) {
+				// 	activeIdx = $contents.length - 1;
+				// }
+			});
+
+			if (activeIdx !== -1) {
+				$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+			}
 		});
-
-
-
-
+	});
 </script>
