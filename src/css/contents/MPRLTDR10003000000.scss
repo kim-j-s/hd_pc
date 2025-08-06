@@ -876,6 +876,18 @@
 		}
 	}
 }
+
+.position_event_wrap {
+	&:has(.pec_point_wrap) {
+		.pec_point_wrap {
+			.pec_point {
+				~ .pec_point {
+					margin-top: 52px;
+				}
+			}
+		}
+	}
+}
 /* 간편정보 */
 
 
