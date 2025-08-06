@@ -1,0 +1,29 @@
+{{#> layout/default page-title="다수차량 보험료계산 안내 | 상품"}}
+
+<!-- s: Bottom 팝업 -->
+
+{{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="다수차량 보험료계산 안내"}}
+<div class="popup_cont">
+	<div class="popup_content">
+		
+		<ul class="list_depth">
+			<li>보험료 계산/가입이 가능한 자동차만 선택하여 진행할 수 있습니다.</li>
+			<li>여러 대 동시에 설계하는 경우 시간이 소요될 수 있으므로 <strong class="point">충분한 시간을 확보</strong>하신 후 진행해주세요.</li>
+			<li>할인특약 가입 시, <strong class="point">각 차량별로</strong> 번호판 사진 및 특약증빙사진을 등록해야 합니다.</li>
+			<li>보험료 결제는 <strong class="point">신용카드와 실시간 계좌이체만 가능</strong>하며, 마일리지 환급금 대체수납 기능은 이용하실 수 없습니다.</li>
+		</ul>
+
+		{{> cp/checkbox id="checkbox04-1" label_class="chk_label_ty3" labelname="<strong>안내사항을 확인했습니다.</strong>" }}
+	</div>
+</div>
+
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" disabled="disabled" }}
+	</div>
+</div>
+{{/ popup/popup_bottom}}
+
+<!-- e: Bottom 팝업 -->
+
+{{/ layout/default }}

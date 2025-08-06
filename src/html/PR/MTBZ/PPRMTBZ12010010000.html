@@ -1,0 +1,331 @@
+{{#> layout/default no-gnb=true page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+
+	<div id="container" class="container">
+		<div class="content">
+			<div class="title_view_wrap">
+				<div class="page_title">
+					<div class="p_info">보험료 계산 차량 정보 입력</div>
+					<h2 class="p_title">
+						<strong>할인특약 조회동의</strong> 후 보험료를 계산할 <strong>차량정보를 <br>입력</strong>해주세요.
+					</h2>
+				</div>
+				<div class="btn_area">
+					{{> cp/button type="2" size="3"  b-text="1대씩 계산/가입"}}
+				</div>
+			</div>
+
+			<!-- <div class="checkbox_group_wrap column">
+				{{> cp/checkbox labelname="할인특약 조회동의" ag_more=true id="more_case2" checkbox_class="rd_box" label_class="chk_label_ty3" }}
+			</div> -->
+			
+			<div class="all_checking">
+				{{> cp/checkbox id="checkbox1" labelname="총 <strong class='point'>5</strong>건 전체 선택" }}
+			</div>
+			<div class="card_item_wrap ty7">
+				<!-- 정보입력 완료 후, Case -->
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inp_checkbox">
+							<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+							<label for="card_chk_opt1111_1" class="chk_label"></label>
+							<i></i>
+						</div>
+						<div class="inner_cont">
+							<div class="space_between">
+								<div class="item_top" id="card_chk_opt1111_1_cont">
+									<div class="title_info">
+										<div class="main_title">
+											111가1111(현대)
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+											</span>
+										</div>
+									</div>
+									<div class="data_info_list">
+										<dl>
+											<dt>보험기간</dt>
+											<dd>2025.01.01~2026.01.01</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="data_info_list">
+										<dl>
+											<dt>차명</dt>
+											<dd>
+												제네시스 G80 3.8
+												<!-- {{> cp/button type="2" size="5" b-text="차량정보 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>부속가액(총 차량가액)</dt>
+											<dd>
+												250만원(9,800만원)
+												<!-- {{> cp/button type="2" size="5" b-text="부속정보 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>운전범위</dt>
+											<dd>
+												본인만(만 43세 이상 한정)
+												<!-- {{> cp/button type="2" size="5" b-text="운전범위 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>할인특약</dt>
+											<dd>
+												총 7개 특약
+												<!-- {{> cp/button type="2" size="5" b-text="할인특약 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item_result">
+						<div class="btn_area basic">
+							{{> cp/button type="3" size="5" b-text="삭제" }}
+						</div>
+						<p class="msg_success">입력완료</p>
+					</div>
+				</div>
+				
+				<!-- 정보입력 완료 전, Case -->
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inp_checkbox">
+							<input type="checkbox" id="card_chk_opt1112_1" name="name1" aria-labelledby="card_chk_opt1112_1_cont" disabled />
+							<label for="card_chk_opt1112_1" class="chk_label"></label>
+							<i></i>
+						</div>
+						<div class="inner_cont">
+							<div class="space_between">
+								<div class="item_top" id="card_chk_opt1112_1_cont">
+									<div class="title_info">
+										<div class="main_title">
+											222나2222
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+											</span>
+										</div>
+									</div>
+									<div class="data_info_list">
+										<dl>
+											<dt>보험기간</dt>
+											<dd>2025.01.01~2026.01.01</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="data_info_list">
+										<dl>
+											<dt>차명</dt>
+											<dd>
+												제네시스 G80 3.8
+												<!-- {{> cp/button type="2" size="5" b-text="차량정보 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>부속가액(총 차량가액)</dt>
+											<dd>
+												250만원(9,800만원)
+												{{> cp/button type="2" size="5" b-text="부속정보 입력" }}
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>운전범위</dt>
+											<dd>
+												본인만(만 43세 이상 한정)
+												<!-- {{> cp/button type="2" size="5" b-text="운전범위 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>할인특약</dt>
+											<dd>
+												총 7개 특약
+												<!-- {{> cp/button type="2" size="5" b-text="할인특약 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item_result">
+						<div class="btn_area basic">
+							{{> cp/button type="3" size="5" b-text="삭제" }}
+						</div>
+						<!-- <p class="msg_success">입력완료</p> -->
+					</div>
+				</div>
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inp_checkbox">
+							<input type="checkbox" id="card_chk_opt1113_1" name="name1" aria-labelledby="card_chk_opt1113_1_cont" disabled />
+							<label for="card_chk_opt1113_1" class="chk_label"></label>
+							<i></i>
+						</div>
+						<div class="inner_cont">
+							<div class="space_between">
+								<div class="item_top" id="card_chk_opt1113_1_cont">
+									<div class="title_info">
+										<div class="main_title">
+											ABCDEFG1234567890
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_success size_m">승합</span>
+											</span>
+										</div>
+										<div class="data_info_list">
+											<dl>
+												<dt>보험기간</dt>
+												<dd>2025.01.01~2026.01.01</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="data_info_list">
+										<dl>
+											<dt>차명</dt>
+											<dd>
+												제네시스 G80 3.8
+												<!-- {{> cp/button type="2" size="5" b-text="차량정보 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>부속가액(총 차량가액)</dt>
+											<dd>
+												250만원(9,800만원)
+												<!-- {{> cp/button type="2" size="5" b-text="부속정보 입력" }} -->
+												{{> cp/button type="3" size="5" b-text="수정" }}
+											</dd>
+										</dl>
+										<dl>
+											<dt>운전범위</dt>
+											<dd>
+												본인만(만 43세 이상 한정)
+												{{> cp/button type="2" size="5" b-text="운전범위 입력" }}
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>할인특약</dt>
+											<dd>
+												총 7개 특약
+												<!-- {{> cp/button type="2" size="5" b-text="할인특약 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item_result">
+						<div class="btn_area basic">
+							{{> cp/button type="3" size="5" b-text="삭제" }}
+							<!-- <p class="msg_success">입력완료</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inp_checkbox">
+							<input type="checkbox" id="card_chk_opt1114_1" name="name1" aria-labelledby="card_chk_opt1114_1_cont" disabled />
+							<label for="card_chk_opt1114_1" class="chk_label"></label>
+							<i></i>
+						</div>
+						<div class="inner_cont">
+							<div class="space_between">
+								<div class="item_top" id="card_chk_opt1114_1_cont">
+									<div class="title_info">
+										<div class="main_title">
+											92구0890
+											<span class="badge_wrap">
+												<span class="hd_badge outline solid_pastel c_warning size_m">화물</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="cont">
+									<div class="data_info_list">
+										<dl>
+											<dt>차명</dt>
+											<dd>
+												제네시스 G80 3.8
+												{{> cp/button type="2" size="5" b-text="차량정보 입력" }}
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>부속가액(총 차량가액)</dt>
+											<dd>
+												250만원(9,800만원)
+												<!-- {{> cp/button type="2" size="5" b-text="부속정보 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>운전범위</dt>
+											<dd>
+												본인만(만 43세 이상 한정)
+												<!-- {{> cp/button type="2" size="5" b-text="운전범위 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+										<dl>
+											<dt>할인특약</dt>
+											<dd>
+												총 7개 특약
+												<!-- {{> cp/button type="2" size="5" b-text="할인특약 입력" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item_result">
+						<div class="btn_area basic">
+							{{> cp/button type="3" size="5" b-text="삭제" }}
+							<!-- <p class="msg_success">입력완료</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_fix_wrap">
+				<div class="btn_area">
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
+				</div>
+			</div>
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차다수차량개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+
+	<!-- footer -->
+	{{> layout/footer no-footer=true }}
+	<!-- footer -->
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}
