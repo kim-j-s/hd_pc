@@ -270,7 +270,7 @@ body {
 		}
 
 		& + .info_gray {
-			margin-top: 0;
+			margin-top: 8px;
 			background-color: var(--color-surface-gray-subtler);
 		}
 	}
@@ -605,7 +605,7 @@ body {
 				}
 				
 				.info {
-					// display: none;
+					display: none;
 					margin-top: var(--gap-4);
 					padding: var(--padding-2) 0 var(--padding-2) 16px;
 				}
@@ -680,7 +680,6 @@ body {
 					& ~ .dep_list {
 						margin-top: var(--gap-3);
 					}
-
 					&:has(.modify_sub){
 						> dt {
 							padding-right: 33px;
@@ -749,7 +748,7 @@ body {
 						.info {
 							margin-top: 4px;
 							padding-left: var(--padding-2);
-							font-size: var(--font-size-body-xsmall);
+							font-size: var(--font-size-body-xsmall); 
 						}
 
 						.dep_list_sub {
@@ -838,7 +837,25 @@ body {
 					&:has(.acd_btn[aria-expanded="true"]){
 						padding-bottom: 24px;
 					}
-
+					&.ing {
+						.dep_list {
+							&:last-child {
+								.info {
+									display: block;
+								}
+							}
+						}
+						.acd_item_ty9 .acd_cont .inner {
+							> .dep_list_sub {
+								+ .info {
+									display: block;
+								}
+							}
+						}
+						> dl > dd > .info {
+							display: block;
+						}
+					}
 					& ~ li {
 						dl dd,
 						.modify {

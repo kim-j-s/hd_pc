@@ -13,16 +13,20 @@
 			</h2>
 		</div>
 		<!-- e: popup_content_top -->
-		<div class="search_inp_box">
-      {{> cp/text inp-search=true placeholder="검색어를 입력하세요" inp-title="검색어 입력" }}	
-    </div>
+		 
+		<!-- s: 25-08-06 수정 -->
+		<div class="autocomplete_wrap">
+			{{> cp/text inp-search=true placeholder="ex) 그랜져" inp-title="검색어를 입력하세요." auto=true }}
+			<div class="autocomplete_wrap_list">
+				<ul class="autocomplete_list"></ul>
+			</div>
+		</div>
+		<!-- e: 25-08-06 수정 -->
 
 		<!-- 최초 진입 시 노출 -->
 		<!-- s: 25-04-21 수정 -->
-		<div class="suggestion_list_wrap">
-			
-			<div class="title_h3"><strong>인기검색어</strong></div>
-			
+		<div class="suggestion_list_wrap">			
+			<div class="title_h3"><strong>인기검색어</strong></div>			
 			<div class="item_wrap">
 				<button type="button" class="tag_item size_m c_ty01"><span class="text">그랜져</span></button>
 				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘렌토</span></button>

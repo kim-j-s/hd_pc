@@ -74,20 +74,25 @@
 								</h2>
 							</div>
 							<!-- e: popup_content_top -->
-							<div class="search_inp_box">
+
+							<!-- s: 25-08-06 수정 -->
+							<div class="autocomplete_wrap">
 								<div class="input_text search">
 									<div class="inp">
-										<input type="search" placeholder="검색어를 입력하세요" title="검색어 입력" />
+										<input type="search" class="autocomplete_input" placeholder="ex) 그랜져" title="검색어를 입력하세요." autocomplete="off" />
 										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 									</div>
 								</div>
+								<div class="autocomplete_wrap_list">
+									<ul class="autocomplete_list"></ul>
+								</div>
 							</div>
+							<!-- e: 25-08-06 수정 -->
 
 							<!-- 최초 진입 시 노출 -->
 							<!-- s: 25-04-21 수정 -->
 							<div class="suggestion_list_wrap">
 								<div class="title_h3"><strong>인기검색어</strong></div>
-
 								<div class="item_wrap">
 									<button type="button" class="tag_item size_m c_ty01"><span class="text">그랜져</span></button>
 									<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘렌토</span></button>
