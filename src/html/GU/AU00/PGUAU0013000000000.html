@@ -26,7 +26,7 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="comp_wrap birth">
-								{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호(외국인등록번호) 앞자리 입력" }}
+								{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호(외국인등록번호) 앞자리 입력" value="990101" }}
 								<span class="dash">-</span>
 								{{> cp/keypad7 case1="뒷자리" kt="주민등록번호(외국인등록번호) 뒷자리 입력" ktid="kp1" }}
 							</div>
@@ -38,7 +38,7 @@
 				<div class="bottom_fix_wrap">
 					<div class="btn_area center">
 						{{> cp/button type="3" size="1" b-text="해지"}}
-						{{> cp/button type="1" size="1" b-text="등록"}}
+						<!-- {{> cp/button type="1" size="1" b-text="등록"}} -->
 					</div>
 				</div>
 				<!-- s: 하단 고정 버튼 영역 -->
@@ -62,6 +62,23 @@
 	</div>
 
 	<!-- s: popup area -->
+	<!-- s: 25-08-06 수정 -->
+	<!-- s: Layer 팝업 -->
+	{{#> popup/popup_layer popup-id="pop_type01" popup-active="true" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			인증센터 > 생체인증 등록/관리는 로그인한 회원만 이용할 수 있습니다.
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="3" size="2" b-text="회원가입" }}
+			{{> cp/button type="1" size="2" b-text="로그인" }}
+		</div>
+	</div>
+	{{/ popup/popup_layer}}
+	<!-- e: Layer 팝업 -->
+	<!-- s: 25-08-06 수정 -->
 	<!-- e: popup area -->
 
 {{/ layout/default }}
