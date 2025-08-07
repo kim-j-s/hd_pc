@@ -221,7 +221,7 @@
 					&:checked {
 						+ label {
 							padding: 11px;
-							border: 2px solid #F8633C;
+							border: var(--border-width-static-medium) solid #F8633C;
 						}
 					}
 					&:focus {
