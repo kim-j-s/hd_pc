@@ -383,10 +383,19 @@
 				// width: 24px;
 				// height: 24px;
 				top: 18px;
-				right: 16px;
+				right: 20px;
 				width: 32px;
 				height: 32px;
 				background: url(../images/icon/close_ty1.svg) no-repeat center / 32px auto;
+			}
+
+			> .popup_setting {
+				position: absolute;
+				top: 18px;
+				right: 60px;
+				width: 32px;
+				height: 32px;
+				background: url(../images/icon/icon_setting.svg) no-repeat center / 32px auto;
 			}
 
 			.pl_txt1 {
