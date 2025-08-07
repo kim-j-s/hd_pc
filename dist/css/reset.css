@@ -1033,19 +1033,19 @@ select:focus,
 input:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 2px solid #000;
+	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
 }
 input:focus + label {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 2px solid #000;
+	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
 }
 .inp input:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: 2px solid #000;
+	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
 }
 /* 모바일 디바이스 분기 */

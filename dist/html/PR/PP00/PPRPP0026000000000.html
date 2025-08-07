@@ -66,14 +66,22 @@
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="info_cont">
-								<p>담보 조정 결과를 확인하시고 진행해주세요.</p>
+								<!-- s: 25-08-07 -->
+								<p>담보 조정 결과 확인 후, 가입을 진행해주세요.</p>
+								<!-- e: 25-08-07 -->
 								<div class="info_gray">
-									<p>다른 보험에 <strong class="point">중복 가입</strong>되거나 <strong class="point">한도가 초과</strong>된 담보가 있습니다.</p>
+									<!-- s: 25-06-05 수정 -->
+									<!-- s: 25-08-07 -->
+									<p>다른 보험에 <strong class="point">중복 가입</strong>돼 있거나 <strong class="point">한도가 초과</strong>된 담보가 있어요.</p>
+									<!-- e: 25-08-07 -->
+									<!-- e: 25-06-05 수정 -->
 								</div>
 
 								<div class="space_wrap space_ty1">
 									<h2 class="pop_title_h1">가입이 가능한 담보(실손형 보장)</h2>
-									<p>아래 실손형 담보의 초과된 한도에 맞추어 조정한 금액을 확인하고, 가입금액을 줄여주세요.</p>
+									<!-- s: 25-08-07 -->
+									<p>아래 실손형 담보의 초과된 한도에 맞춰 조정한 금액을 확인 후, 가입금액을 줄여주세요.</p>
+									<!-- e: 25-08-07 -->
 									<div class="table_wrap">
 										<table class="table">
 											<caption>
@@ -94,13 +102,16 @@
 													<td>자동차사고변호사선임비용Ⅲ(특정사고경찰조사포함)(갱신형)담보</td>
 													<td>
 														<div class="select_option_box sm">
-															<select name="" id="" title="가입금액 변경 선택" class="selectbox">
+															<select name="" id="" title="가입금액 변경 선택" class="selectbox" required>
+																<option value="" hidden disabled>선택</option>
 																<option value="">1억원</option>
 																<option value="">9천만원</option>
 																<option value="">8천만원</option>
 																<option value="">7천만원</option>
 																<option value="">6천만원</option>
-																<option value="" selected>미가입</option>
+																<!-- s: 25-08-07 -->
+																<option value="" selected>가입 안함</option>
+																<!-- e: 25-08-07 -->
 															</select>
 														</div>
 													</td>
@@ -112,8 +123,9 @@
 											</tbody>
 										</table>
 										<ul class="list_ty2">
-											<li>실손형 담보를 추가로 가입하면 보상 한도가 늘어나는 효과가 있습니다. 단, 실제 손해액 범위 내에서만 보상합니다.</li>
-											<li>실손형 담보 추가 가입을 원할 경우 ‘가입금액＇을 조정해 주세요.</li>
+											<!-- s: 25-08-07 -->
+											<li>실손형 담보를 추가로 가입하면 보상 한도가 늘어나는 효과가 있어요. 단, 실제 손해액 범위 내에서만 보상해요.</li>
+											<!-- e: 25-08-07 -->
 										</ul>
 									</div>
 								</div>
@@ -146,18 +158,21 @@
 											</tbody>
 										</table>
 										<ul class="list_ty2">
-											<li>누적초과담보는 중복으로 가입이 가능하지만 담보의 합산 금액이 현대해상에서 정한 수준을 초과할 경우 가입이 제한됩니다.</li>
+											<!-- s: 25-08-07 -->
+											<li>담보의 합산 금액이 현대해상에서 정한 수준을 초과할 경우 가입이 제한돼요.</li>
+											<!-- e: 25-08-07 -->
 										</ul>
 									</div>
 								</div>
 
 								<!-- e: 한도 초과 담보 제외  Case -->
 
+								<!-- s: 25-08-07 -->
 								<!-- s: 중복가입 담보 제외  Case -->
 
 								<div class="space_wrap space_ty1">
-									<h2 class="pop_title_h1">중복 가입 된 담보</h2>
-									<p>아래 실손형 담보의 초과된 한도에 맞추어 조정한 금액을 확인하고, 가입금액을 줄여주세요.</p>
+									<h2 class="pop_title_h1">중복 가입된 담보</h2>
+									<p>아래 담보는 다른 보험에 이미 가입돼 있어 가입이 제한돼요. 실손형 보장은 이중으로 가입할 필요가 없어요.</p>
 									<div class="table_wrap">
 										<table class="table">
 											<caption>
@@ -194,9 +209,56 @@
 								<!-- e: 중복가입 담보 제외  Case -->
 							</div>
 
+							<!-- s: 필수 담보가 한도 초과 또는 중복 가입된 Case -->
+							<!-- e: 25-08-07 -->
+							<!-- s: 25-07-15 추가 -->
+							<div class="info_cont">
+								<p>해당 보장은 꼭 가입해야하는 필수 담보로 가입 금액 조정이 어려워 상품 가입이 중단됐습니다.</p>
+								<div class="info_gray">
+									<!-- s: 25-08-07 -->
+									<p>다른 보험에 <strong class="point">중복 가입돼 있거나 한도가 초과된 필수 담보</strong>가 있습니다.</p>
+									<!-- e: 25-08-07 -->
+								</div>
+
+								<div class="space_wrap space_ty1">
+									<h2 class="pop_title_h1">가입 금액 조정이 어려운 필수 담보</h2>
+									<div class="table_wrap">
+										<table class="table">
+											<caption>
+												담보명, 조정 결과 제공
+											</caption>
+											<colgroup>
+												<col style="width: 70%" />
+												<col style="width: 30%" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">담보명</th>
+													<th scope="col">조정 결과</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>암진단급여금(유사암제외)</td>
+													<td>조정 불가</td>
+												</tr>
+												<tr>
+													<td>암진단 및 다발성 소아암진단</td>
+													<td>조정 불가</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- e: 25-07-15 추가 -->
+							<!-- e: 필수 담보가 한도 초과 또는 중복 가입된 Case -->
+
 							<!-- s: 25-07-02 수정 -->
 							<div class="call_box">
-								<p class="info_text">자세한 사항은 다이렉트 고객센터로 문의해 주세요.</p>
+								<!-- s: 25-08-07 -->
+								<p class="info_text">자세한 사항은 다이렉트 고객센터로 문의해주세요.</p>
+								<!-- e: 25-08-07 -->
 								<div class="info_gray ty2">
 									<div class="center_info">
 										<h4 class="title_h4">다이렉트 고객센터</h4>
@@ -216,53 +278,31 @@
 					<div class="popup_bottom">
 						<div class="btn_area">
 							<!-- s: 25-07-02 수정 -->
-							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_1">
 								<span class="text">홈으로</span>
 							</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
 								<span class="text">담보 조정 후 진행</span>
 							</button>
+							<!-- e: 25-07-02 수정 -->
+
+							<!-- s: 25-07-15 필수 담보가 한도 초과 또는 중복 가입된 Case 추가 -->
+							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
+					
+							<span class="text">홈으로</span>
+					
+					</button> -->
+							<!-- e: 25-07-15 필수 담보가 한도 초과 또는 중복 가입된 Case 추가 -->
 						</div>
 					</div>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
 		<!-- e: 중복 담보 및 한도 초과 안내 팝업 -->
 
-		<!-- s: selpop -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">가입금액 변경</div>
-					</div>
-
-					<div class="popup_cont">
-						<div class="popup_content">
-							<div class="opt_select_list opt_case3">
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-								<div role="button" tabindex="0" class="option"><span class="text"></span></div>
-							</div>
-						</div>
-					</div>
-					<div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
-							</button>
-						</div>
-					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: selpop -->
 		<!-- e: popup area -->
 	</body>
 </html>

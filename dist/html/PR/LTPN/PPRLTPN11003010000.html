@@ -108,7 +108,8 @@
 									<div class="form_line grow">
 										<div class="label_tit">납입기간</div>
 										<div class="select_option_box">
-											<select name="" id="" title="납입기간 선택" class="selectbox">
+											<select name="" id="" title="납입기간 선택" class="selectbox" required>
+												<option value="" hidden disabled>선택</option>
 												<option value="" selected>5년</option>
 												<option value="">7년</option>
 												<option value="">10년</option>
@@ -121,7 +122,8 @@
 									<div class="form_line grow">
 										<div class="label_tit">연금받는 기간</div>
 										<div class="select_option_box">
-											<select name="" id="" title="연금받는 기간 선택" class="selectbox">
+											<select name="" id="" title="연금받는 기간 선택" class="selectbox" required>
+												<option value="" hidden disabled>선택</option>
 												<option value="" selected>5년</option>
 												<option value="">6년</option>
 												<option value="">7년</option>
@@ -137,7 +139,8 @@
 									<div class="form_line grow">
 										<div class="label_tit">연금시작 나이</div>
 										<div class="select_option_box">
-											<select name="" id="" title="연금시작 나이 선택" class="selectbox">
+											<select name="" id="" title="연금시작 나이 선택" class="selectbox" required>
+												<option value="" hidden disabled>선택</option>
 												<option value="" selected>45세</option>
 												<option value="">46세</option>
 												<option value="">47세</option>
@@ -150,7 +153,8 @@
 									<div class="form_line grow">
 										<div class="label_tit">연금받는 주기</div>
 										<div class="select_option_box">
-											<select name="" id="" title="연금받는 주기 선택" class="selectbox">
+											<select name="" id="" title="연금받는 주기 선택" class="selectbox" required>
+												<option value="" hidden disabled>선택</option>
 												<option value="" selected>매월</option>
 												<option value="">3개월</option>
 												<option value="">6개월</option>
@@ -169,6 +173,8 @@
 							</button>
 						</div>
 					</div>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>

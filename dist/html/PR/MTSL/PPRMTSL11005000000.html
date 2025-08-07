@@ -112,8 +112,8 @@
 										</div>
 									</div>
 									<div class="select_option_box">
-										<select name="" id="" title="피보험자와 계약자 관계 선택" class="selectbox">
-											<option value="default" hidden>피보험자(자동차소유자)와 동일</option>
+										<select name="" id="" title="피보험자와 계약자 관계 선택" class="selectbox" required>
+											<option value="" hidden disabled selected>피보험자(자동차소유자)와 동일</option>
 											<option value="">배우자</option>
 											<option value="">자녀</option>
 											<option value="">부모(시부모/처부모포함)</option>
@@ -642,7 +642,8 @@
 									<i class="hd_icon resetSvg"></i>
 								</button>
 							</li>
-							<li class="active">
+							<!-- 현재 단계일시 ing 클래스 추가 -->
+							<li class="active ing">
 								<!-- 결제 -->
 								<dl>
 									<dt class="title">7.결제</dt>
