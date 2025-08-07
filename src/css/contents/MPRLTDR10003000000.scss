@@ -152,7 +152,7 @@
 		display: none;
 		padding: 20px;
 		border-radius: var(--radius-large2);
-		border: 2px solid var(--color-border-primary);
+		border: var(--border-width-static-medium) solid var(--color-border-primary);
 		background-color: var(--color-surface-white-subtle);
 		.gic_inner_top {
 			position: relative;
