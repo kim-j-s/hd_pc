@@ -851,9 +851,16 @@
 	.main_benefit {
 		&.sc_mode {
 			&.active {
-				top: calc(72px + 80px);
-				max-height: calc(100vh - 72px - 80px);
+				// top: calc(72px + 80px);
+				top: calc(var(--gap-11) - var(--gap-6) + 152px);
+				max-height: calc(100vh - 72px - 80px - 30px);
 				overflow: auto;
+				// &::-webkit-scrollbar {
+				// 	display: none;
+				// }
+			}
+			&::-webkit-scrollbar {
+				display: none;
 			}
 		}
 	}
@@ -862,9 +869,13 @@
 	.main_benefit {
 		&.sc_mode {
 			&.active {
-				top: calc(120px + 80px);
-				max-height: calc(100vh - 72px - 80px);
+				// top: calc(120px + 80px);
+				top: calc(var(--gap-11) - var(--gap-6) + 200px);
+				max-height: calc(100vh - 72px - 80px - 30px);
 				overflow: auto;
+			}
+			&::-webkit-scrollbar {
+				display: none;
 			}
 		}
 	}
