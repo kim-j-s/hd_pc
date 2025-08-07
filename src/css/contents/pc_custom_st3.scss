@@ -578,6 +578,13 @@
 				border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
 			}
 		}
+		&:required:invalid {
+			color: var(--color-text-disabled);
+		}
+
+		&:required:valid {
+			color: var(--color-text-subtle);
+		}
 	}
 
 	&.sm {

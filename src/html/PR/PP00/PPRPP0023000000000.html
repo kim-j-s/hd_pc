@@ -1,56 +1,66 @@
-
 {{#> layout/default no-sp=true page-title="계약자정보 입력 | 상품"}}
 <!-- s: popup area -->
- <!-- s: 온라인 가입 불가 안내 Full 팝업 -->
-{{#> popup/popup_full popup-active=true popup-id="pop_type03" popup-title="온라인 가입 불가 안내" }}                    
-    <div class="popup_cont">
-        <div class="popup_content">
-            <div class="process_info_area">
-                <div class="complete_info" aria-hidden="true">
-                    <lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
-                </div>
-                <h2 class="process_title">
-                    <strong>죄송합니다</strong><br>
-                    상품 가입 진행이 어렵습니다. 
-                </h2>
+<!-- s: 온라인 가입 불가 안내 Full 팝업 -->
+{{#> popup/popup_full popup-active=true popup-id="pop_type03" popup-title="온라인 가입 불가 안내" }}
+<div class="popup_cont">
+    <div class="popup_content">
+        <div class="process_info_area">
+            <div class="complete_info" aria-hidden="true">
+                <lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay>
+                </lottie-player>
             </div>
-            <div class="info_gray">
-              <p class="info_text"><strong>피보험자 김*대 고객</strong>이 이전에 가입하신 계약 중 <strong class="point">[이륜차부담보설정]</strong>이 필요한 계약이 있어요.</p>
-            </div>
-            <div class="info_gray ty2">
+            <h2 class="process_title">
+                <!-- s: 25-08-07 -->
+                <strong>이전에 가입한 계약</strong>으로 인해<br>
+                상품 가입이 중단됐습니다
+                <!-- e: 25-08-07 -->
+            </h2>
+        </div>
+        <div class="info_gray">
+            <!-- s: 25-08-07 -->
+            <p class="info_text"><strong>피보험자 김*대 고객</strong>님이 이전에 가입하신 계약 중 <strong class="point">‘이륜차부담보설정’</strong>이 필요한 계약이 있습니다.</p>
+            <!-- e: 25-08-07 -->
+        </div>
+        <div class="info_gray ty2">
+            <h3>이륜차부담보설정 안내</h3>
+            <ul class="list_depth">
+                <!-- s: 25-08-07 -->
+                <h3 class="title_h3">이륜차부담보설정 안내</h3>
                 <ul class="list_depth">
-									<li>[이륜차부담보설정]이란 “피보험자가 이륜차 운전 중 발생한 사고를 보험 보장 범위에서 제외하는 것에 동의”하는 것을 말합니다.</li>
-									<li>그러나, <strong class="point">계약자가 다른 고객인 계약</strong>은 온라인에서 바로 처리할 수 없으므로, 해당 계약의 계약자가 <strong class="point">보험 계약 담당자</strong>를 통하여 설정 후에 다시 진행하시기 바랍니다.</li>
+                    <li>이륜차보담보설정은 ‘피보험자가 이륜차 운전 중 발생한 사고를 보험 보장 범위에서 제외하는 것에 동의’하는 것을 말합니다.</li>
+                    <li>그러나, <strong class="point">계약자와 피보험자가 다른 계약</strong>은 온라인에서 이륜차부담보를 설정할 수 없습니다.</li>
+                    <li>해당 계약의 계약자가 <strong class="point">이전 보험계약 담당자</strong>를 통해 설정 후 다시 가입을 진행해야 합니다.</li>
                 </ul>
-            </div>
-            <div class="call_box">
-                <p class="info_text">자세한 사항은 다이렉트 고객센터로 문의해 주세요.</p>
-                <div class="info_gray ty2">
-									<div class="center_info">
-											<h4 class="title_h4">다이렉트 고객센터</h4>
-											<div class="line1">
-													<div class="line1_item">
-															<strong class="tel">1899-6782</strong>
-													</div>
-													<div class="line1_item">
-															<span class="cit">평일 09:00 ~ 18:00</span>
-													</div>
-											</div>
-									</div>
+                <!-- e: 25-08-07 -->
+        </div>
+        <div class="call_box">
+            <!-- s: 25-08-07 -->
+            <p class="info_text">자세한 사항은 다이렉트 고객센터로 문의해주세요.</p>
+            <!-- e: 25-08-07 -->
+            <div class="info_gray ty2">
+                <div class="center_info">
+                    <h4 class="title_h4">다이렉트 고객센터</h4>
+                    <div class="line1">
+                        <div class="line1_item">
+                            <strong class="tel">1899-6782</strong>
+                        </div>
+                        <div class="line1_item">
+                            <span class="cit">평일 09:00 ~ 18:00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="popup_bottom">
-        <div class="btn_area">
-            {{> cp/button type="1" size="2" b-text="홈으로"}}
-        </div>
+</div>
+<div class="popup_bottom">
+    <div class="btn_area">
+        {{> cp/button type="1" size="2" b-text="홈으로"}}
     </div>
+</div>
 {{/ popup/popup_full}}
 <!-- e: 온라인 가입 불가 안내 Full 팝업 -->
 
 <!-- e: popup area -->
 
 {{/ layout/default }}
-
-
