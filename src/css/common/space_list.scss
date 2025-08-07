@@ -37,6 +37,11 @@
 			margin-top: var(--gap-11);
 		}
 	}
+	& + .space_list_ty4_next {
+		&.space_list_ty4_next_ty1 {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 // space_list_ty 
@@ -92,3 +97,13 @@
 	}
 }
 /* 컨텐츠 show/hide 용 */
+
+
+
+/* 조회 탭 결과 컨텐츠 간격용 */
+.tab_wrap_rst {
+	&.tab_wrap_rst_ty1 {
+		padding-top: var(--gap-5);
+	}
+}
+/* 조회 탭 결과 컨텐츠 간격용 */
