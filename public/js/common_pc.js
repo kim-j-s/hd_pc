@@ -44,21 +44,24 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	// 헤더 이벤트 스크립트
-	let lastScrollTop = 0;
-  $(window).on('scroll', function() {
-    let st = $(this).scrollTop();
-		// console.log(st);
+	if(!$('.main_cont_wrap').length){
+		let lastScrollTop = 0;
+		
+		$(window).on('scroll', function() {
+			let st = $(this).scrollTop();
+			// console.log(st);
 
-    if (st > lastScrollTop) {
-      // 아래로 스크롤
-      $('body').removeClass('sc_up').addClass('sc_down');
-    } else if (st < lastScrollTop) {
-      // 위로 스크롤
-      $('body').removeClass('sc_down').addClass('sc_up');
-    }
-
-    lastScrollTop = st;
-  });
+				if (st > lastScrollTop) {
+					// 아래로 스크롤
+					$('body').removeClass('sc_up').addClass('sc_down');
+				} else if (st < lastScrollTop) {
+					// 위로 스크롤
+					$('body').removeClass('sc_down').addClass('sc_up');
+				}
+		
+				lastScrollTop = st;
+		});
+	}
 
 	// 헤더 gnb
 	$DOM.on('mouseenter', '.nav_list > li', function() {
