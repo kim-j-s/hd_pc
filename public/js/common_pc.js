@@ -72,17 +72,17 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	// selectbox 스타일 처리 스크립트
-	$('.selectbox').each(function(index, element) {
-		const $this = $(element);
-		const selectedValue = $this.val();  // 현재 선택된 option의 value 값
-		console.log(selectedValue);
+	// $('.selectbox').each(function(index, element) {
+	// 	const $this = $(element);
+	// 	const selectedValue = $this.val();  // 현재 선택된 option의 value 값
+	// 	console.log(selectedValue);
 	
-		if (selectedValue === 'default') {
-			$this.addClass('default');
-		} else {
-			$this.removeClass('default'); // 필요에 따라 제거도 처리
-		}
-	});
+	// 	if (selectedValue === 'default') {
+	// 		$this.addClass('default');
+	// 	} else {
+	// 		$this.removeClass('default'); // 필요에 따라 제거도 처리
+	// 	}
+	// });
 
 	// 페이지 상단으로 스크롤
 	$DOM.on('click', '.qm_btn_pagetop', function(e) {
