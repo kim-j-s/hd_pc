@@ -1,6 +1,64 @@
 {{#> layout/guide }}
 <div class="guide_h1">info box</div>
 
+<div class="guide_h4">info_gray + info_gray 간격</div>
+<div class="guide_discription">info_gray + info_gray</div>
+<div class="info_gray">
+	<ul class="list_depth">
+		<li>1level</li>
+	</ul>
+</div>
+<div class="info_gray">
+	<ul class="list_depth">
+		<li>1level</li>
+	</ul>
+</div>
+<div class="guide_discription">info_gray + info_gray ty2 간격(컨텐츠 독립일경우)</div>
+<div class="info_gray">
+	<ul class="list_depth">
+		<li>1level</li>
+	</ul>
+</div>
+<div class="info_gray ty2">
+	<ul class="list_depth">
+		<li>1level</li>
+	</ul>
+</div>
+<div class="guide_discription">info_gray + info_gray ty2 and 간격(컨텐츠 상속 일경우)</div>
+<div class="info_gray">
+	<ul class="list_depth">
+		<li>1level</li>
+	</ul>
+</div>
+<div class="info_gray ty2 and">
+	<ul class="list_depth">
+		<li>2level</li>
+	</ul>
+</div>
+
+<div class="guide_h4">info_gray - 고객센터</div>
+<div class="guide_discription">전화연결 없는 정보성 Case</div>
+<div class="call_box">
+	<p class="info_text">자세한 사항은 다이렉트 고객센터로 문의해 주세요.</p>
+	<div class="info_gray ty2">
+		<div class="center_info">
+			<h4 class="title_h4">고객센터</h4>
+			<div class="line1">
+				<div class="line1_item">
+					<strong class="tel">1899-6782</strong>
+				</div>
+				<div class="line1_item">
+					<span class="cit">평일 09:00~18:00</span>
+				</div>
+			</div>
+		</div>
+		<ul class="list_ty5">
+			<li>장기·일반보험 가입상담/계약변경 (ARS 3번)</li>
+			<li>자동차보험 산출/가입상담 (ARS 1번)</li>
+		</ul>
+	</div>
+</div>
+
 <div class="guide_h4">info_depth 단일 사용 케이스 - 1</div>
 <div class="info_gray">
 	<dl class="middle">
@@ -39,7 +97,7 @@
 				<dd>46,100원</dd>
 			</dl>
 			<dl>
-				<dt>자동차보험 고객 할인 <span class="point">5%</span></dt>
+				<dt>자동차보험 고객 할인 <strong class="point">5%</strong></dt>
 				<dd>1,200원</dd>
 			</dl>
 		</div>
@@ -59,7 +117,7 @@
 			<dl>
 				<dt>할인 받은 보험료</dt>
 				<dd>
-					{{> cp/linkButton bl_class="short_cut lg" bl_text="<span>-686,850 </span>원 (<span>6개</span>)" bl_title="페이지 이동" }}       
+					{{> cp/linkButton bl_class="short_cut lg" bl_text="<span>-686,850</span>원 (<span>6개</span>)" bl_title="페이지 이동" }}       
 				</dd>
 			</dl>
 		</div>
@@ -151,7 +209,9 @@
 		<li>안과질환 : 백내장, 녹내장, 체리아이</li>
 		<li>혈액 질환 : 면역매개성용혈성빈혈(IMHA), 면역매개성혈소판감소증(IMT), 기타 응고계질환</li>
 	</ul>
+	<div class="btn_area basic">
 	{{> cp/button type="1" size="4" b-text="button"}}
+	</div>
 </div>
 
 <div class="guide_h4">info_data gray1</div>
@@ -212,13 +272,17 @@
 			<strong class="trend up"><span class="updown increase">증가</span>190,300원</strong>
 		</dd>
 	</dl>
+	<div class="btn_area basic">
 	{{> cp/button type="1" size="4" b-text="button"}}
+	</div>
 </div>
 <div class="guide_h4">info_content gray1</div>
 <div class="info_gray">
 	<h3 class="title_h3">h3title</h3>
 	<p class="info_text">content content content content content content content content content content content</p>
+  <div class="btn_area basic">
 		{{> cp/button type="1" size="4" b-text="button"}}
+	</div>
 </div>
 
 <div class="guide_h4">info_depth gray2</div>
@@ -252,7 +316,9 @@
 		<li>안과질환 : 백내장, 녹내장, 체리아이</li>
 		<li>혈액 질환 : 면역매개성용혈성빈혈(IMHA), 면역매개성혈소판감소증(IMT), 기타 응고계질환</li>
 	</ul>
+	<div class="btn_area basic">
 		{{> cp/button type="1" size="4" b-text="button"}}
+	</div>
 </div>
 <div class="guide_h4">info_data gray2</div>
 <div class="info_gray ty2">
@@ -295,11 +361,13 @@
 						강조
 				</dd>
 		</dl>
+		<div class="btn_area basic">
 		{{> cp/button type="1" size="4" b-text="button"}}
+		</div>
 </div>
 
 <br />
-
+<div class="guide_discription" style="background-color:red;color:#fff;">사용(X)</div>
 <div class="info_gray ty2">
 	<h4 class="title_h4">카카오페이 고객센터</h4>
 	<div class="badge_wrap">
@@ -312,7 +380,9 @@
 <div class="info_gray ty2">
 	<h3 class="title_h3">h3title</h3>
 	<p class="info_text">content content content content content content content content content content content</p>
+  <div class="btn_area basic">
 		{{> cp/button type="1" size="4" b-text="button"}}
+	</div>
 </div>
 
 
@@ -356,7 +426,7 @@
 		<div class="file_btn">
 			<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 			<label for="file">
-				<span class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+				<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
 					<i class="hd_icon carmeraSvg"></i>
 					사진 등록
 				</span>
@@ -366,7 +436,7 @@
 		<!-- <div class="file_btn">
 			<input type="file" name="file" id="file">
 			<label for="file">
-				<span class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+				<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
 					<i class="hd_icon carmeraSvg2"></i>
 					사진 변경
 				</span>
@@ -407,13 +477,13 @@
 		<div class="file_btn">
 			<input type="file" name="file" id="file" accept=".jpg, .jpeg, .gif, .png">
 			<label for="file">
-				<span class="hd_btn hd_btn_ty_3 hd_btn_s_2">
+				<span class="hd_btn hd_btn_ty_3 hd_btn_s_3">
 					<i class="hd_icon carmeraSvg2"></i>
 					사진 등록
 				</span>
 			</label>
 		</div>
-		<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2">
+		<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
 			<i class="hd_icon carmeraSvg"></i>
 			<span class="text">사진 촬영</span>
 		</button>
