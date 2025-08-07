@@ -12,6 +12,9 @@
 	& + & {
 		&.ty2 {
 			margin-top: var(--gap-5);
+			&:not(.and) {
+				margin-top: var(--gap-11);
+			}
 		}
 	}
 	& + .text_sub,
