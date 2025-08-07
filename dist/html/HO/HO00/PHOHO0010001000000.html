@@ -2865,53 +2865,76 @@
 				},
 			},
 		});
-	});
 
-	$(".mc_bann_wrap .swiper-button-play-pause").on("click", function () {
-		// bannerSwiper.autoplay.stop();
-		if (bannerSwiper.autoplay.running) {
-			bannerSwiper.autoplay.stop();
-			$(this).text("시작").addClass("active");
-		} else {
-			bannerSwiper.autoplay.start();
-			$(this).text("정지").removeClass("active");
-		}
-	});
-
-	// 메인 스크롤 이벤트
-	$(window).on("scroll", function () {
-		let scrollTop = $(this).scrollTop();
-
-		const $target = $(".main_sticky_cont");
-		const $targetActive = $target.find(".main_sticky");
-		const $targetActiveHeight = $targetActive.outerHeight();
-		const $targetCover = $(".msc_inner");
-		const targetOffset = $target.offset().top;
-
-		// console.log(scrollTop, targetOffset);
-		// 스크롤 추가 조건
-		const $sideScroll = $(".main_benefit");
-
-		if ($("body").hasClass("sc_down")) {
-			if (scrollTop > targetOffset - 72) {
-				$target.css("height", $targetActiveHeight);
-				$targetCover.addClass("active");
-				$sideScroll.addClass("active");
+		$(".mc_bann_wrap .swiper-button-play-pause").on("click", function () {
+			// bannerSwiper.autoplay.stop();
+			if (bannerSwiper.autoplay.running) {
+				bannerSwiper.autoplay.stop();
+				$(this).text("시작").addClass("active");
 			} else {
-				$target.css("height", "auto");
-				$targetCover.removeClass("active");
-				$sideScroll.removeClass("active");
+				bannerSwiper.autoplay.start();
+				$(this).text("정지").removeClass("active");
 			}
-		} else if ($("body").hasClass("sc_up")) {
-			if (scrollTop > targetOffset - 120) {
-				$target.css("height", $targetActiveHeight);
-				$targetCover.addClass("active");
-				$sideScroll.addClass("active");
-			} else {
-				$target.css("height", "auto");
-				$targetCover.removeClass("active");
-				$sideScroll.removeClass("active");
+		});
+
+		/* 메인 스크롤 이벤트  */
+		$(window).on("scroll", function () {
+			let scrollTop = $(this).scrollTop();
+
+			const $target = $(".main_sticky_cont");
+			const $targetActive = $target.find(".main_sticky");
+			const $targetActiveHeight = $targetActive.outerHeight();
+			const $targetCover = $(".msc_inner");
+			const targetOffset = $target.offset().top;
+
+			// console.log(scrollTop, targetOffset);
+			// 스크롤 추가 조건
+			const $sideScroll = $(".main_benefit");
+
+			if ($("body").hasClass("sc_down")) {
+				if (scrollTop > targetOffset - 72) {
+					$target.css("height", $targetActiveHeight);
+					$targetCover.addClass("active");
+					$sideScroll.addClass("active");
+				} else {
+					$target.css("height", "auto");
+					$targetCover.removeClass("active");
+					$sideScroll.removeClass("active");
+				}
+			} else if ($("body").hasClass("sc_up")) {
+				if (scrollTop > targetOffset - 120) {
+					$target.css("height", $targetActiveHeight);
+					$targetCover.addClass("active");
+					$sideScroll.addClass("active");
+				} else {
+					$target.css("height", "auto");
+					$targetCover.removeClass("active");
+					$sideScroll.removeClass("active");
+				}
 			}
-		}
+
+			// 스크롤 시 tag_item 활성화
+			const $m_doc = $(document);
+			const $tabBtns = $m_doc.find(".main_cont_wrap").find(".position_event_tab .tag_item");
+			const $contents = $m_doc.find(".main_cont_wrap").find(".position_event_content .pec_point");
+			const $scrollArea = $m_doc.find(".main_cont_wrap").find(".position_event_content");
+			let activeIdx = -1;
+
+			$contents.each(function (index) {
+				const targetTop = $(this).offset().top;
+				const scrollY = targetTop;
+
+				if (scrollY < scrollTop + 204) {
+					// 204 : header높이+fixedmenu높이
+					activeIdx = index;
+				} //else if(scrollTop + $(window).height() >= $(document).height() - 1) {
+				// 	activeIdx = $contents.length - 1;
+				// }
+			});
+
+			if (activeIdx !== -1) {
+				$tabBtns.removeClass("active").eq(activeIdx).addClass("active");
+			}
+		});
 	});
 </script>

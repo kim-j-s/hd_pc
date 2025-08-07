@@ -1,7 +1,9 @@
 <div class="select_option_box{{#if s-class}} {{s-class}}{{/if}}">
-	<select name="" id="" title="{{s-title}}" class="selectbox" {{#if disabled}}disabled{{/if}}>
+	<select name="" id="" title="{{s-title}}" class="selectbox" {{#if disabled}}disabled{{/if}} required>
 		{{#if sb-ph}}
-		<option value="default" hidden>{{sb-ph}}</option>
+		<option value="" hidden disabled selected>{{sb-ph}}</option>
+		{{else}}
+		<option value="" hidden disabled>선택</option>
 		{{/if}}
 		{{> @partial-block }}
 	</select>

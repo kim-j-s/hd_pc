@@ -259,6 +259,11 @@
 		// padding-top: 16px;
 		// down to up
 
+		//sub_txt, button 있는 케이스(연금보험)
+		&:has(.height_fixed:not(.active)) {
+				height:143px;
+		}
+
 		&.bit_etc1 {
 			height: 150px;
 		}
@@ -331,7 +336,7 @@
 		.bit_history_inner {
 			display: flex;
 			flex-flow: row wrap;
-			gap: 10px;
+			gap: 8px; 
 			margin: 0 -20px;
 			padding: 0 20px;
 			// overflow-x: scroll;
@@ -570,6 +575,9 @@
 				font-size: var(--font-size-body-small);
 			}
 		}
+		&.selected {
+			border: var(--border-width-static-medium) solid var(--color-border-primary);
+		}
 		
 		&.ty2 {
 			min-height: 89px;
@@ -627,7 +635,7 @@
 	padding: 9px 10px 9px 34px;
 	font-size: 14px;
 	line-height: 20px;
-	color: #666D7D;
+	color: var(--color-text-basic);
 	border-radius: 12px;
 	border: var(--border-width-static-regular) solid #F5F5F5;
 	background-repeat: no-repeat;
@@ -637,7 +645,11 @@
 	background-color: #FFF;
 	visibility: visible;
 	opacity: 1;
-	// transition: var(--t-time);
+	&.selected {
+		padding: 8px 8px 8px 32px;
+		border: var(--border-width-static-medium) solid var(--color-border-primary);
+		background-position: 8px center;
+	}
 	&.person {
 		background-image: url(../images/content/bi/icon_stepper_person.svg);
 	}

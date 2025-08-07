@@ -3942,8 +3942,11 @@ strong {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	-ms-flex-wrap: row wrap;
+	flex-wrap: row wrap;
+}
+.btn_area:has(.hd_btn_s_1) {
+	gap: var(--gap-4) var(--gap-3);
 }
 .btn_area ~ .btn_area,
 .btn_area + .list_ty2,
@@ -5124,7 +5127,7 @@ strong {
 	background: var(--color-button-tertiary-fill-pressed);
 }
 .keypad_wrap .keypad_chip_item.selected {
-	border: 2px solid var(--color-element-primary);
+	border: var(--border-width-static-medium) solid var(--color-element-primary);
 }
 /* badge */
 /**********************
@@ -5219,7 +5222,7 @@ strong {
 .hd_badge.c_tertiary.solid_pastel.outline {
 	color: var(--color-text-subtle);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-	background: var(--color-element-gray-light);
+	background: var(--color-element-gray-lighter);
 }
 .hd_badge.c_point {
 	color: var(--color-text-point);
@@ -6123,7 +6126,7 @@ strong {
 	z-index: 0;
 	width: calc(100% + 2px);
 	height: calc(100% + 2px);
-	border: 2px solid #f8633c;
+	border: var(--border-width-static-medium) solid #f8633c;
 	border-radius: 24px;
 }
 .card_item_wrap .card_item .item_inner .inp_radio input:checked + .chk_label_ty4:before,
@@ -6352,6 +6355,9 @@ strong {
 .card_item_wrap .card_item .card_list_ty1 > li:not(.list_title).subitem {
 	font-size: var(--font-size-body-xsmall);
 	line-height: 18px;
+}
+.card_item_wrap .card_item .card_list_ty1 > li:not(.list_title).subitem .cont {
+	color: var(--color-text-subtle);
 }
 .card_item_wrap .card_item .card_list_ty1 > li:not(.list_title) + .subitem {
 	margin-top: -8px;
@@ -6763,6 +6769,9 @@ strong {
 	padding: 0;
 	border: 0;
 }
+.card_list_wrap + .img_area {
+	margin-top: var(--gap-8);
+}
 .card_list_wrap_ty2 li ~ li {
 	margin-top: var(--gap-5);
 }
@@ -6855,51 +6864,6 @@ strong {
 }
 .card_list_wrap_ty3 li ~ li {
 	margin-top: var(--gap-5);
-}
-.card_list_wrap_ty4 > li ~ li {
-	margin-top: var(--gap-5);
-}
-.card_list_wrap_ty4 .card_item {
-	padding: var(--padding-8) var(--padding-7);
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-	background: var(--color-surface-white-subtle);
-	border-radius: var(--radius-large2);
-}
-.card_list_wrap_ty4 .card_item[role="button"] .inner_cont {
-	padding-right: 28px;
-	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 2px/20px;
-}
-.card_list_wrap_ty4 .card_item .item_inner .inner_cont {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	gap: var(--gap-2);
-}
-.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title {
-	font-size: var(--font-size-heading-xxsmall);
-	font-weight: 700;
-}
-.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
-	font-size: var(--font-size-body-small);
-	color: var(--color-text-subtle);
-}
-.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title,
-.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
-	display: -webkit-box;
-	line-clamp: 2;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-}
-.card_list_wrap_ty4 .card_item .item_inner + .img_box {
-	margin-top: var(--gap-5);
-}
-.card_list_wrap_ty4 .card_item .item_inner + .img_box img {
-	width: 100%;
 }
 .card_item.donation {
 	padding: var(--padding-8) var(--padding-7);
@@ -7101,8 +7065,56 @@ strong {
 	opacity: 0.7;
 	mix-blend-mode: luminosity;
 }
+.card_list_wrap_ty4 > li ~ li {
+	margin-top: var(--gap-5);
+}
+.card_list_wrap_ty4 .card_item {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+	border-radius: var(--radius-large2);
+}
+.card_list_wrap_ty4 .card_item[role="button"] .inner_cont {
+	padding-right: 28px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 2px/20px;
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: var(--gap-2);
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title {
+	font-size: var(--font-size-heading-xxsmall);
+	font-weight: 700;
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
+}
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_title,
+.card_list_wrap_ty4 .card_item .item_inner .inner_cont .item_desc {
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.card_list_wrap_ty4 .card_item .item_inner + .img_box {
+	margin-top: var(--gap-5);
+}
+.card_list_wrap_ty4 .card_item .item_inner + .img_box img {
+	width: 100%;
+}
 .form_card_wrap .form_card_case + .form_card_case {
 	margin-top: var(--gap-5);
+}
+.form_card_wrap .form_card_case .form_group_wrap .form_line ~ .form_line {
+	margin-top: var(--gap-8);
 }
 .form_card_wrap + .btn_area {
 	margin-top: var(--gap-5);
@@ -7483,7 +7495,7 @@ strong {
 	background: url(../images/icon/check_ty4.svg) no-repeat center;
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.chk_label_ty5:after {
-	border: 2px solid var(--color-border-primary);
+	border: var(--border-width-static-medium) solid var(--color-border-primary);
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.chk_label_ty5 span::before {
 	background: url(../images/icon/check_ty4.svg) no-repeat center;
@@ -10614,7 +10626,6 @@ strong {
 	left: 0;
 	width: 1px;
 	height: 100%;
-	border-radius: 50%;
 	background-color: var(--color-border-gray-light);
 }
 .step_list > li dl {
@@ -11642,7 +11653,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	gap: 4px;
 }
 .inp_radio[class*="rd_btn"] input[type="radio"]:checked + label:after {
-	border: 2px solid var(--color-border-primary);
+	border: var(--border-width-static-medium) solid var(--color-border-primary);
 }
 .inp_radio[class*="rd_btn"] input[type="radio"]:disabled + label {
 	color: var(--color-text-disabled-on);
@@ -11776,7 +11787,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	content: "";
 	width: 100%;
 	height: 100%;
-	border: 2px solid var(--color-element-primary);
+	border: var(--border-width-static-medium) solid var(--color-element-primary);
 	border-radius: var(--radius-medium1);
 }
 .inp_radio.rd_img input[type="radio"]:checked + label .img img {
@@ -11923,7 +11934,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	width: 100%;
 	height: 100%;
 	border-radius: var(--radius-medium3);
-	border: 2px solid var(--color-border-primary);
+	border: var(--border-width-static-medium) solid var(--color-border-primary);
 }
 .radio_comb .inp_radio.rd_btn input[type="radio"]:disabled + label {
 	background-color: transparent;
@@ -12296,7 +12307,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	overflow: hidden;
 }
 .select_item.error .si_item::after {
-	border: 2px solid var(--color-input-border-error);
+	border: var(--border-width-static-medium) solid var(--color-input-border-error);
 }
 .select_item[aria-disabled="true"] {
 	pointer-events: none;
@@ -12343,7 +12354,7 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .opt_select_list.opt_case1 .option.active > .text {
 	padding: 22px 62px 22px 18px;
-	border: 2px solid var(--color-border-primary);
+	border: var(--border-width-static-medium) solid var(--color-border-primary);
 }
 .opt_select_list.opt_case1 .option ~ .option {
 	margin-top: var(--gap-4);
@@ -12666,6 +12677,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .space_list_ty4 > * + * {
 	margin-top: var(--gap-11);
 }
+.space_list_ty4 + .space_list_ty4_next.space_list_ty4_next_ty1 {
+	margin-top: var(--gap-8);
+}
 .space_list_ty5 > * + * {
 	margin-top: var(--gap-8);
 }
@@ -12686,6 +12700,11 @@ ol li .table_wrap + .list_ty2 li + li {
 	margin-top: var(--gap-11);
 }
 /* 컨텐츠 show/hide 용 */
+/* 조회 탭 결과 컨텐츠 간격용 */
+.tab_wrap_rst.tab_wrap_rst_ty1 {
+	padding-top: var(--gap-5);
+}
+/* 조회 탭 결과 컨텐츠 간격용 */
 /* swiper */
 /* 예시 */
 #swiper1 .swiper-slide {
@@ -13933,6 +13952,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .info_gray + .info_gray.ty2 {
 	margin-top: var(--gap-5);
+}
+.info_gray + .info_gray.ty2:not(.and) {
+	margin-top: var(--gap-11);
 }
 .info_gray + .text_sub,
 .info_gray + [class^="list_ty"] {

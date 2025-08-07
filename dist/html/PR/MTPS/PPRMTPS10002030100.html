@@ -329,7 +329,8 @@
 												<div class="opts_area_item">
 													<div class="oai_block oai_filter">
 														<div class="select_option_box sm">
-															<select name="" id="" title="배기량 선택" class="selectbox">
+															<select name="" id="" title="배기량 선택" class="selectbox" required>
+																<option value="" hidden disabled>선택</option>
 																<option value="" selected>배기량</option>
 																<option value="">800cc 이하</option>
 																<option value="">800cc 초과 ~ 1000cc 이하</option>
@@ -339,7 +340,8 @@
 															</select>
 														</div>
 														<div class="select_option_box sm">
-															<select name="" id="" title="인승 선택" class="selectbox">
+															<select name="" id="" title="인승 선택" class="selectbox" required>
+																<option value="" hidden disabled>선택</option>
 																<option value="" selected>인승</option>
 																<option value="">6인 이하</option>
 																<option value="">7인 이상~8인 이하</option>
@@ -383,7 +385,8 @@
 												<div class="opts_area_item">
 													<div class="oai_block oai_filter">
 														<div class="select_option_box sm">
-															<select name="" id="" title="배기량 선택" class="selectbox">
+															<select name="" id="" title="배기량 선택" class="selectbox" required>
+																<option value="" hidden disabled>선택</option>
 																<option value="" selected>배기량</option>
 																<option value="">800cc 이하</option>
 																<option value="">800cc 초과 ~ 1000cc 이하</option>
@@ -393,7 +396,8 @@
 															</select>
 														</div>
 														<div class="select_option_box sm">
-															<select name="" id="" title="인승 선택" class="selectbox">
+															<select name="" id="" title="인승 선택" class="selectbox" required>
+																<option value="" hidden disabled>선택</option>
 																<option value="" selected>인승</option>
 																<option value="">6인 이하</option>
 																<option value="">7인 이상~8인 이하</option>
@@ -702,7 +706,8 @@
 									<i class="hd_icon resetSvg"></i>
 								</button>
 							</li>
-							<li class="active">
+							<!-- 현재 단계일시 ing 클래스 추가 -->
+							<li class="active ing">
 								<!-- 결제 -->
 								<dl>
 									<dt class="title">7.결제</dt>

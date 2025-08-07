@@ -221,7 +221,8 @@
 										<!-- e: 25-07-31 수정 -->
 									</div>
 									<div class="select_option_box">
-										<select name="" id="" title="카드 할부 선택" class="selectbox">
+										<select name="" id="" title="카드 할부 선택" class="selectbox" required>
+											<option value="" hidden disabled>선택</option>
 											<option value="" selected>일시불</option>
 											<option value="">2개월</option>
 										</select>
@@ -283,7 +284,8 @@
 								<div class="form_line full_half">
 									<div class="label_tit">블루/기아멤버스 포인트 선택</div>
 									<div class="select_option_box">
-										<select name="" id="" title="블루/기아멤버스 포인트 선택" class="selectbox">
+										<select name="" id="" title="블루/기아멤버스 포인트 선택" class="selectbox" required>
+											<option value="" hidden disabled>선택</option>
 											<option value="" selected>블루/기아멤버스 포인트 선택</option>
 											<option value="">기아 멤버스 포인트</option>
 										</select>
@@ -376,7 +378,8 @@
 								<div class="form_line">
 									<div class="label_tit">사용 포인트</div>
 									<div class="select_option_box">
-										<select name="" id="" title="사용할 포인트 선택" class="selectbox">
+										<select name="" id="" title="사용할 포인트 선택" class="selectbox" required>
+											<option value="" hidden disabled>선택</option>
 											<option value="" selected>1만</option>
 											<option value="">2만</option>
 										</select>
@@ -1074,7 +1077,8 @@
 									<i class="hd_icon resetSvg"></i>
 								</button>
 							</li>
-							<li class="active">
+							<!-- 현재 단계일시 ing 클래스 추가 -->
+							<li class="active ing">
 								<!-- 결제 -->
 								<dl>
 									<dt class="title">7.결제</dt>
@@ -1352,6 +1356,8 @@
 							</button>
 						</div>
 					</div>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type05');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -1472,6 +1478,8 @@
 							</button>
 						</div>
 					</div>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type06');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>

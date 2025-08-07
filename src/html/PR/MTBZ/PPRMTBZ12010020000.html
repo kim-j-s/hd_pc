@@ -1,0 +1,168 @@
+{{#> layout/default no-gnb=true page-title="자동차 보험료 확인 | 상품"}}
+	<div id="wrap" class="wrap">
+		{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+
+		<div id="container" class="container">
+			<div class="content">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">보험료 확인</div>
+						<h2 class="p_title">
+							차량별 <strong>보장 내용을 확인하거나 변경</strong>할 수 있어요
+						</h2>
+					</div>
+					<div class="btn_area">
+						{{> cp/button type="2" size="3"  b-text="1대씩 계산/가입"}}
+					</div>
+				</div>
+
+				<div class="info_summary">
+					<div class="summery_inner">
+						<div class="total_wrap">
+							<div class="tit">총 다이렉트 보험료</div>
+							<div class="value">
+								<div class="val_price">5,768,693<span class="text">원</span></div>
+								<div class="val_discount">7,563,393원</div>
+							</div>
+							<div class="sub_info">
+								<span class="tit">할인받은 보험료</span>
+								<span>
+									{{> cp/linkButton bl_class="short_cut lg" bl_text="<span>-2,686,850 </span>원 (<span>6개</span>)" bl_title="페이지 이동" }}       
+								</span>
+							</div>
+						</div>
+						<div class="output_wrap">
+							<div class="tit">총 계산 차량</div>
+							<div class="count"><strong>15</strong>대</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="table_wrap">
+					<table class="table table_c table_v_mid">
+						<caption>차량번호, 보험료, 대인, 대인Ⅱ, 대물, 자기신체(자동차상해), 무보험차상해, 자기차량손해, 긴급출동특약, 조회/변경 제공</caption>
+						<colgroup>
+							<col style="width:auto;">
+							<col style="width:84px;">
+							<col style="width:84px;">
+							<col style="width:84px;">
+							<col style="width:90px;">
+							<col style="width:84px;">
+							<col style="width:84px;">
+							<col style="width:84px;">
+							<col style="width:90px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									{{> cp/checkbox id="checkbox1" labelname="<strong>차량번호 <br><span class='point'>보험료</span></strong>" }}
+								</th>
+								<th scope="col">대인</th>
+								<th scope="col">대인Ⅱ</th>
+								<th scope="col">대물</th>
+								<th scope="col">자기신체<br>(자동차상해)</th>
+								<th scope="col">무보험차<br>상해</th>
+								<th scope="col">자기차량<br>손해</th>
+								<th scope="col">긴급출동<br>특약</th>
+								<th scope="col">조회/변경</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									{{> cp/checkbox id="checkbox1_1" labelname="<strong>111가1111<br><span class='point'>1,234,457원</span></strong>" }}
+								</td>
+								<td>가입</td>
+								<td>무한</td>
+								<td>10억</td>
+								<td>5천/3천</td>
+								<td>2억</td>
+								<td>가입</td>
+								<td>하이카 <br>10KM</td>
+								<td>
+									{{> cp/button type="3" size="4" b-text="조회/변경"}}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									{{> cp/checkbox id="checkbox1_2" labelname="<strong>123가1111<br><span class='point'>234,457원</span></strong>" }}
+								</td>
+								<td>가입</td>
+								<td>무한</td>
+								<td>10억</td>
+								<td>5천/3천</td>
+								<td>2억</td>
+								<td>가입</td>
+								<td>하이카 <br>10KM</td>
+								<td>
+									{{> cp/button type="3" size="4" b-text="조회/변경"}}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									{{> cp/checkbox id="checkbox1_3" labelname="<strong>456가1111<br><span class='point'>2,034,457원</span></strong>" }}
+								</td>
+								<td>가입</td>
+								<td>무한</td>
+								<td>10억</td>
+								<td>5천/3천</td>
+								<td>2억</td>
+								<td>가입<strong class="sub_t">자차확대 <br>미가입</strong></td>
+								<td>하이카 <br>10KM</td>
+								<td>
+									{{> cp/button type="3" size="4" b-text="조회/변경"}}
+								</td>
+							</tr>
+							<tr>
+								<td>
+									{{> cp/checkbox id="checkbox1_4" labelname="<strong>222가222<br><span class='point'>534,457원</span></strong>" disabled=true }}
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									{{> cp/button type="3" size="4" b-text="재계산"}}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<!-- <div class="banner_box">
+					<a href="javascript:void(0);" title="팝업열기">
+						<img src="../../../images/event/banner4.png" alt="자동차보험료 결제혜택 최대 3만원 30만원 이상 결제 시, 각 결제사 제공">
+					</a>
+				</div> -->
+				
+				<div class="btn_area center">
+					{{> cp/button type="3" size="3" b-text="내 보험료 저장" }}
+					{{> cp/button type="3" size="3" b-text="계산결과 확인" }}
+				</div>
+
+				<!-- s: 하단 버튼 영역 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" }}
+						{{> cp/button type="1" size="1" b-text="다음" disabled=true }}
+					</div>
+				</div>
+				<!-- s: 하단 버튼 영역 -->
+			</div>
+
+			<!-- s: 사이드 패널 -->
+			{{> cp/panel_자동차다수차량개인 step5=true panel-title="고객 정보" }}
+			<!-- e: 사이드 패널 -->
+		</div>
+
+		<!-- footer -->
+		{{> layout/footer no-footer=true }}
+		<!-- footer -->
+	</div>
+
+	<!-- s: popup area -->
+	<!-- e: popup area -->
+{{/ layout/default }}
