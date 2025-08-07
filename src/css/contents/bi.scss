@@ -259,6 +259,11 @@
 		// padding-top: 16px;
 		// down to up
 
+		//sub_txt, button 있는 케이스(연금보험)
+		&:has(.height_fixed:not(.active)) {
+				height:143px;
+		}
+
 		&.bit_etc1 {
 			height: 150px;
 		}
@@ -331,7 +336,7 @@
 		.bit_history_inner {
 			display: flex;
 			flex-flow: row wrap;
-			gap: 10px;
+			gap: 8px; 
 			margin: 0 -20px;
 			padding: 0 20px;
 			// overflow-x: scroll;

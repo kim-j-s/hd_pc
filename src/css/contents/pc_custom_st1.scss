@@ -308,9 +308,8 @@ body {
 			}
 
 			&.active {
-				.last {
-					font-weight: 700;
-					color: var(--color-text-basic);
+				.info {
+					display: block;
 				}
 			}
 
@@ -345,6 +344,7 @@ body {
 			}
 
 			.info {
+				display: none;
 				padding: var(--padding-2);
 				font-size: var(--font-size-body-xsmall);
 			}
