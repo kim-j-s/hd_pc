@@ -4,54 +4,12 @@
 	background-size: 32px auto;
 }
 
-.wrap {
-	.container {
-		&.prd_view {
-			width: 100%;
-			gap: 0;
-			padding-bottom: 0;
-		}
-	}
-	.prd_link_area {
-		// 퀵메뉴 위치 조정
-		&.fixed {
-			+.quick_menu {
-				bottom: calc(64px + 64px);
-			}
-		}
-		&:not(:has(.fixed)) {
-			+.quick_menu {
-				&.active {
-					bottom: calc(267px + 64px);
-				}
-			}
-		}
-	}
-}
-
-
-// 상품안내
-.prd_view {
-	.in_sec {
-		width: 836px;
-		margin: 0 auto;
-	}
-	// 타이틀 영역
-	.title_view_wrap {
-		&.flex_column {
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
-			gap: var(--gap-3);
-		}
-	}
-	// 컨텐츠 영역
-	.content_body {
+// 상품안내 
+.prd_car {
+	.popup_content_body {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
 		gap: var(--gap-11);
-		padding-bottom: 148px;
 	}
 
 	// intro info
@@ -59,10 +17,6 @@
 		.info_gray {
 			display: flex;
 			align-items: center;
-			min-height: 234px;
-		}
-		+ .btn_area {
-			margin-top: var(--gap-5);
 		}
 	}
 	.intro_info {
@@ -73,127 +27,50 @@
 		width: 100%;
 		&::after {
 			content: '';
-			display: block;
-			width: 280px;
-			height: 186px;
+			display: none;
+			width: 240px;
+			height: 160px;
 			background-repeat: no-repeat;
-    	background-position: center center;
-    	background-size: contain;
+			background-position: center center;
+			background-size: contain;
 		}
-		@for $i from 1 through 15 {
+		@for $i from 1 through 5 {
 			&.bg_intro#{$i}::after {
-					background-image: url('../images/content/prd/bg_intro#{$i}.png');
+				display: block;
+				background-image: url('../images/content/prdcar/bg_car_prd#{$i}.png');
 			}
 		}
 
 		.info_list {
 			.item {
-				@for $i from 1 through 16 {
+				@for $i from 1 through 5 {
 					&.ico_intro#{$i} {
-							background-image: url('../images/content/prd/ico_intro#{$i}.svg');
+						background-image: url('../images/content/prdcar/ico_car_intro#{$i}.svg');
 					}
 				}
 			}
 		}
-	}
 
-	// 이벤트베너
-	// .evt_banner {
-	// 	margin-top: var(--gap-11);
-	// }
-
-	// 보장내용
-	.guarantee_area {
-		position: relative;
-		padding: var(--padding-10) 0;
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 50%;
-			// width: 100vw;
-			width: 100%;
-			height: 100%;
-			background: var(--color-surface-warning-subtler);
-			transform: translateX(-50%);
-			z-index: -1;
-		}
-		.guarantee_list {
-			display: flex;
+		&.column {
 			flex-direction: column;
-			gap: var(--gap-5);
-			.item {
-				&:nth-child(n+4) {
-					display: none;
-				}
-				.info_gray {
-					&.bg_etc01 {
-						padding: var(--padding-8) var(--padding-7);
-					}
-				}
-				.titie_wrap {
-					padding-left: 44px;
-					@extend %background_set;
-					@for $i from 1 through 66 {
-						&.item_ico_ty#{$i} {
-								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
-						}  
-					}
-				}
-				.desc {
-					padding-top: var(--gap-2);
-					font-size: var(--font-size-body-small);
-					color: var(--color-text-subtle);
-				}
-				.list_depth_ty2,
-				.list_ty2 {
-					padding-top: var(--gap-3);
+			justify-content: center;
+			padding-top: 56px;
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: 40px auto;
+			.title_h3 {
+				font-size: var(--font-size-heading-medium);
+				text-align: center;
+			}
+			@for $i from 1 through 13 {
+				&.ico_special#{$i} {
+					background-image: url('../images/content/prdcar/ico_car_benefit#{$i}.svg');
 				}
 			}
 		}
-		.btn_area {
-			margin-top: var(--gap-5);
-		}
-
-		// 보장내용 토글버튼
-		.tg_item {
-			+ .btn_area {
-				.btn_toggle {
-					.text {
-						&::before {
-							content:'더보기';
-						}
-					}
-				}
-			}
-			&.active {
-				.guarantee_list {
-					.item {
-						&:nth-child(n+4) {
-							display: block;
-						}
-					}
-				}
-				+ .btn_area {
-					 .btn_toggle {
-						 .text {
-							&::before {
-								content: "닫기";
-							}
-							&::after {
-								transform: rotate(-180deg);
-							}
-						 }
-					 }
-				}
-			}
-			
-		}
-
 	}
 
-	// 할인혜택
+	// 할인특약 
 	.benefit_area {
 		.cont_head {
 			.flex_inline {
@@ -209,9 +86,6 @@
 		.info_list {
 			.item {
 				position: relative;
-				background-repeat: no-repeat;
-				background-size: 24px auto;
-				background-position: left 4px center;
 				&:before {
 					content: '';
 					display: block;
@@ -223,147 +97,29 @@
 					border-radius: var(--radius-small3);
 					background-color: var(--color-surface-gray-subtler);
 					transform: translateY(-50%);
-					z-index: -1;
 				}
-				@for $i from 1 through 19 {
-					&.ico_benefit#{$i} {
-						background-image: url('../images/content/prd/ico_benefit#{$i}.svg');
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 32px;
+					height: 32px;
+					background-repeat: no-repeat;
+					background-size: 24px auto;
+					background-position: left 4px center;
+					transform: translateY(-50%);
+				}
+				@for $i from 1 through 13 {
+					&.ico_benefit#{$i}::after {
+						background-image: url('../images/content/prdcar/ico_car_benefit#{$i}.svg');
 					}
 				}
 			}
 		}
 	}
 
-	// 자주하는질문
-	.faq_area {
-		.item_wrap_faq {
-			border-top: 0;
-			.acd_item {
-				// border-bottom: 0;
-				.acd_head {
-					.acd_btn {
-						position: relative;
-						padding: 14px 32px 10px 28px;
-						background-color: transparent;
-						&::after {
-							content: '';
-							display: block;
-							position: absolute;
-							top: 13px;
-							left: 0;
-							width: 24px;
-							height: 24px;
-							background: url('../images/content/prd/ico_accordion_q.svg') no-repeat;
-							background-size: 24px auto;
-						}
-					}
-				}
-				.acd_cont {
-					.inner {
-						position: relative;
-						padding-left: 28px;
-						&::before {
-							content: '';
-							display: block;
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 24px;
-							height: 24px;
-							background: url('../images/content/prd/ico_accordion_a.svg') no-repeat;
-							background-size: 24px auto;
-						}
-						> p {
-							margin-bottom: var(--gap-4);
-							text-align: left;
-							& + .list_ty2 {
-								margin-top: var(--gap-5);
-							}
-						}
-						&:has(img) {
-							text-align: center;
-						}
-						.list_ty2 {
-							text-align: left;
-							margin-top: var(--gap-4);
-						}
-						.list_depth_ty2 {
-							margin-top: var(--gap-5);
-						}
-						.call_box  {
-							margin-top:0;
-						}
-						.btn_area {
-							margin-top: var(--gap-2);
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// 가입후기
-	.recommend_area {
-		.card_list_wrap_ty2 {
-			display: flex;
-			flex-wrap: wrap;
-			gap: var(--gap-4);
-			> li {
-				flex-grow: 0;
-				flex-basis: calc(100% / 2 - 6px);
-				margin: 0;
-
-				.info_area {
-					width: 100%;
-					display: flex;
-					align-items: center;
-					gap: var(--gap-2);
-					flex-wrap: wrap;
-					.meta {
-						display: inline-block;
-						color: var(--color-text-subtle);
-						font-size: var(--font-size-body-small);
-						color: var(--color-text-subtle);
-						white-space: nowrap;
-						position: relative;
-						& + .meta {
-							padding-left: 9px;
-							&::before {
-								display: block;
-								content: "";
-								width: 1px;
-								height: 12px;
-								margin: 0 4px;
-								background: var(--color-border-gray-light);
-								position: absolute;
-								top: 50%;
-								left: 0px;
-								transform: translateY(-50%);
-							}
-						}
-					}
-				} //info_area
-			}
-			.item_preview {
-				font-size: var(--font-size-body-medium);
-				color: var(--color-text-basic);
-				line-height: 24px;
-				line-clamp: 2;
-				-webkit-line-clamp: 2;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-			}
-		}
-	}
-
-	.notice_area {
-		.info_gray {
-			+.list_ty2 {
-				margin-top: var(--gap-11);
-			}
-		}
-	}
-	
 	// 목록
 	.info_list {
 		display: flex;
@@ -375,18 +131,34 @@
 			line-height: 24px;
 		}
 		.desc {
-			padding-top: var(--gap-2);
 			font-size: var(--font-size-body-small);
 			color: var(--color-text-subtle);
 			line-height: 21px;
-			+ button,
-			+ .btn_area {
-				margin-top: var(--gap-2);
-			}
 		}
 		.item {
 			padding-left: 44px;
 			@extend %background_set;
+			.item_link {
+				display: block;
+				position: relative;
+				padding-right: 36px;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 24px;
+					height: 24px;
+					top: 50%;
+					right: 0;
+					background: url(../images/icon/arrowRight_ty4.svg) no-repeat center / 20px auto;
+					transform: translateY(-50%);
+				}
+			}
+		}
+		// 간격
+		.desc,
+		.list_ty2 {
+			padding-top: var(--gap-2);
 		}
 		&.ty_line {
 			gap: 0;
@@ -400,222 +172,53 @@
 			}
 		}
 	}
+
+
+	.sec_group {
+		.sec_head {
+			margin-bottom: var(--gap-5);
+			.title_h3 {
+				+ .title_h4,
+				+ .desc {
+					margin-top: var(--gap-4);
+				}
+			}
+			.title_h4 { 
+				+ .desc {
+					margin-top: var(--gap-4);
+				}
+			}
+			&:not(:has(.title_h4, .desc)) {
+				margin-bottom: var(--gap-6);
+			}
+		}
+	}
+	.sec_body {
+		&:has(.title_h4) {
+			margin-top: -6px;
+		}
+
+		// sec_group 안에 간격 40 인경우
+		.group {
+			+ .group {
+				margin-top: 40px;
+			}
+		}
+	}
 	
 	// 간격
-	.cont_head {
-		display: flex;
-		flex-direction: column;
-		gap: var(--gap-2);
-		margin-bottom: var(--gap-6);
-		&.flex-inline {
-			flex-direction: row;
-			align-items: center;
-		}
-		.info_text2 {
-			margin-top: 0;
-			margin-left: var(--gap-3);
-		}
-	}	
-}
-
-// 별점 리뷰
-.review_wrap {
-	display: flex;
-	align-items: center;
-	gap: var(--gap-3);
-	.review_acd_item {
-		width: auto;
-		border: 0;
-		border-radius: inherit;
-	}
-}
-
-// 상품바로가기
-.prd_link_area {
-	position: absolute;
-	left: 0;
-	// bottom: 0;
-	bottom: 203px;
-	display: block;
-	width: 100%;
-	&.fixed {
-		position: fixed;
-		bottom: 0;
-	}
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		// width: 100vw;
-		width: 100%;
-		height: 100%;
-		border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
-		background-color: var(--color-surface-white-subtle);
-		box-shadow: 0 var(--shadow-y-minus2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1);
-		transform: translateX(-50%);
-		z-index: -1;
-	}
-
-	.prd_link {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		position: relative;
-		width: 836px;
-		min-height: 84px;
-		margin: 0 auto;
-		padding: var(--padding-5) 0 var(--padding-6);
-		// &::before {
-		// 	content: '';
-		// 	display: block;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 50%;
-		// 	// width: 100vw;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
-		// 	background-color: var(--color-surface-white-subtle);
-		// 	box-shadow: 0 var(--shadow-y-minus2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1);
-		// 	transform: translateX(-50%);
-		// 	z-index: -1;
-		// }
-
-		.prd_item {
-			position: relative;
-			padding-left: 68px;
-			&::before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 56px;
-				height: 56px;
-				border-radius: var(--radius-medium2);
-				background: var(--color-surface-primary-subtler);
-				transform: translateY(-50%);
-			}
-			&::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: -4px;
-				left: 12px;
-				width: 32px;
-				height: 32px;
-				@extend %background_set;
-				z-index: 2;
-			}
-			@for $i from 1 through 66 {
-				&.item_ico_ty#{$i}::after {
-						background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
-				}
-			}
-
-			.tit {
-				font-weight: 700;
-				font-size: var(--font-size-body-medium);
-				color: var(--color-text-basic);
+	.tab_wrap {
+		+ .btn_area {
+			margin-top: var(--gap-11);
+			+ .list_ty2 {
+				margin-top: var(--gap-11);
 			}
 		}
-	}
-
-}
-
-// 자주하는질문 아코디언 운전자보험
-.driver_mis_list {
-	margin-top: var(--gap-4);
-	padding: var(--padding-8) var(--padding-7);
-	border-radius: var(--radius-large2);
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-	background-color: var(--color-surface-white-subtle);
-	.mis_list {
-		display: flex;
-		flex-direction: column;
-		gap: var(--gap-8);
-		margin-bottom: 16px;
-		padding: 16px 0 17px;
-		border-bottom: 1px solid #E6E8EA;
-		.item {
-			padding-left: 44px;
-			@extend %background_set;
-			font-size: var(--font-size-body-medium);
-			color: var(--color-text-basic);
-			span {
-				display: block;
-				font-size: var(--font-size-body-small);
-				color: var(--color-text-subtle);
-			}
-			@for $i from 1 through 5 {
-				&.ico_mis#{$i} {
-						background-image: url('../images/content/prd/ico_mis_list#{$i}.svg');
-				}
-			}
-		}
+	} // 텝 + 보험약관버튼 + 준법감시필 
+	
+	.title_h4 {
 		+ .list_depth {
-			margin-top: 16px;
+			margin-top: var(--gap-4);
 		}
 	}
-}
-
-// 텍스트리스트
-.text_list {
-	margin-top: var(--gap-3);
-	& > li {
-		position: relative;
-		padding-left: 16px;
-		font-size: var(--font-size-body-xsmall);
-		color: var(--color-text-information);
-		& + li {
-			margin-top:var(--gap-3);
-		}
-	}
-	.mark {
-		position: absolute;
-		top: 0;
-		left: 0;
-		color: var(--color-icon-information);
-	}
-}
-
-// 테이블 
-.table.prd {
-	.th_tit {
-		background-color: var(--color-surface-white-subtle);
-		padding: var(--padding-2) var(--padding-7) var(--padding-2) var(--padding-3);
-		vertical-align: top;
-		color: var(--color-text-subtle);
-		font-size: var(--font-size-body-xsmall);
-		& ~ td {
-			padding: var(--padding-2) var(--padding-5);
-			font-size: var(--font-size-body-xsmall);
-		}
-	}	
-}
-
-
-// 어린이치아 팝업
-.tooth_list {
-	display: flex;
-	justify-content: space-between;
-	li {
-		width: 80px;
-		padding-top: 40px;
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: 40px auto;
-		text-align: center;
-		line-height: 1.5;
-		font-weight: 700;
-		font-size: 16px;
-		@for $i from 1 through 6 {
-			&.ico_tooth#{$i} {
-				background-image: url('../images/content/prd/ico_tooth#{$i}.svg');
-			}
-		}
-	}
-
 }
