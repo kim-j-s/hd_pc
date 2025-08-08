@@ -17,7 +17,9 @@
 					</h2>
 				</div>
 				<div class="btn_area">
-					{{> cp/button type="3" size="4" b-text="계산 결과 문자로 받기"}}
+					<!-- s: 25-08-08 UXW -->
+					{{> cp/button type="3" size="4" b-text="계산 결과 받기"}}
+					<!-- e: 25-08-08 UXW -->
 				</div>
 			</div>
 
@@ -269,7 +271,9 @@
 									</div>
 									<div class="detail_price">
 										<div class="detail_price">
-											<span>미가입</span>
+											<!-- s: 25-08-08 UXW -->
+											<span>가입 안함</span>
+											<!-- e: 25-08-08 UXW -->
 										</div>
 									</div>
 									<!-- e: 25-07-31 수정 -->
@@ -328,7 +332,9 @@
 										<!-- s: 25-07-31 수정 -->									
 										<div class="sub_txt_area">
 										{{#> cp/selectbox_pc s-class="ty3 tr" s-title="가입금액 선택"}}
-											<option value="" selected>미가입</option>
+											<!-- s: 25-08-08 UXW -->
+											<option value="" selected>가입 안함</option>
+											<!-- e: 25-08-08 UXW -->
 										{{/ cp/selectbox_pc}}	
 										</div>			
 										<!-- e: 25-07-31 수정 -->						
@@ -404,7 +410,11 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
+					<!-- s: 25-08-08 UXW -->
+					{{> cp/button type="1" size="1" b-text="이대로 가입하기" }}
+					<!-- e: 25-08-08 UXW -->
+
+					<!-- {{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }} -->
 					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
 					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
 				</div>
@@ -413,8 +423,10 @@
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active=true }}
 			<ul class="list_ty1">
-				<li>여러 명이 함께 인터넷으로 가입하는 경우, 관련 규정상 본인만 사망담보에 가입할 수 있습니다. 가족/동반인 모두 상해&middot;질병 사망담보에 가입을 원할 경우, 개인별로 가입해 주세요.(단, 만 19세 미만은 사망담보 가입 불가)</li>
-				<li>보험가입 전 진단 또는 치료를 받은 질병이 있는 경우, 관련 담보에는 가입이 제한될 수 있습니다.</li>
+				<!-- s: 25-08-08 UXW -->
+				<li>여러 명이 함께 인터넷으로 가입하는 경우, 관련 규정상 본인만 사망담보에 가입할 수 있습니다. 가족/동반인 모두 상해&middot;질병 사망담보에 가입을 원할 경우, 개인별로 가입해주세요.(단, 만 19세 미만은 사망담보 가입 불가)</li>
+				<li>보험가입 전 진단 또는 치료를 받은 질병이 있는 경우, 관련 담보에는 가입하지 못할 수 있습니다.</li>
+				<!-- e: 25-08-08 UXW -->
 				<li>실손의료보험에 이미 가입한 경우, 해외여행보험의 ‘국내치료비’ 담보는 실제 손해액을 한도로 비례 보상하므로 가입 실익이 낮습니다.</li>
 			</ul>
 			{{/ cp/notice }}

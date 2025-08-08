@@ -10,7 +10,7 @@
 
 		.popup_container {
 			transform: none;
-			width: 280px;
+			width: 440px;
 			// padding: 40px 48px;
 			opacity: 0;
 
@@ -49,6 +49,23 @@
 
 			.pl_msg_top {
 				font-size: var(--font-size-heading-small);
+			}
+
+			.info_text {
+				text-align: center;
+			}
+	
+			.info_confirm {
+				padding-top: 48px;
+				background: url(../images/icon/icon_exclamation.svg) no-repeat top center / 32px auto;
+	
+				strong {
+					font-size: var(--font-size-heading-small);
+	
+					&+.info_text {
+						margin-top: var(--gap-5);
+					}
+				}
 			}
 		}
 	}

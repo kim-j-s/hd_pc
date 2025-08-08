@@ -87,6 +87,12 @@
 			padding-bottom: 8px;
 			border-radius: var(--radius-xlarge2);
 
+			&:not(:has(.popup_close)):not(:has(.popup_head_title)){
+				.popup_head {
+					min-height: auto;
+				}
+			}
+
 			.popup_head {
 				// min-height: 52px;
 				min-height: 64px;
