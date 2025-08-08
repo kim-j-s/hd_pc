@@ -254,11 +254,21 @@ body {
 	gap: var(--gap-5);
 
 	
-	.pro_info_item.active{
+	.pro_info_item {
 		.data_list {
-			> li {
+			li {
 				> .info {
-					display: block;
+					display: none;
+				}
+			}
+		}
+
+		&.active{
+			.data_list {
+				li {
+					> .info {
+						display: block;
+					}
 				}
 			}
 		}
