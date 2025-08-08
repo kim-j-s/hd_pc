@@ -1,5 +1,5 @@
 <div class="select_option_box{{#if s-class}} {{s-class}}{{/if}}">
-	<select name="" id="" title="{{s-title}}" class="selectbox" {{#if disabled}}disabled{{/if}} required>
+	<select name="" id=""{{#if s-title}} title="{{s-title}}"{{/if}} class="selectbox" {{#if disabled}}disabled{{/if}} required>
 		{{#if sb-ph}}
 		<option value="" hidden disabled selected>{{sb-ph}}</option>
 		{{else}}
