@@ -626,6 +626,7 @@
 // tooltip 재선언
 .tooltip_wrap {
 	.tooltip_panel {
+		top: calc(100% + 6px);
 		max-width: 327px;
 		min-width: 120px;
 	}
@@ -645,6 +646,9 @@
 			right: -16px;
 		}
 	}
+}
+.form_group_wrap [class^=form_line] .label_tit .tooltip_wrap .tooltip_panel {
+	top: calc(100% + 28px);
 }
 
 
