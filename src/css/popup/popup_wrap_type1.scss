@@ -10,7 +10,7 @@
 
 		.popup_container {
 			transform: none;
-			width: 280px;
+			width: 440px;
 			// padding: 40px 48px;
 			opacity: 0;
 
@@ -19,12 +19,6 @@
 				max-height: 100%;
 				padding-bottom: 0;
 				border-radius: var(--radius-large2);
-
-				&:not(:has(.popup_close)){
-					.popup_head {
-						min-height: auto;
-					}
-				}
 
 				& > .popup_close {
 					top: 12px;
