@@ -749,7 +749,7 @@
 			// if (isClick) return;
 			// scrollVal = true;
 
-			console.log(isClick);
+			// console.log(isClick);
 
 			if (!isClick) return;
 
@@ -800,16 +800,18 @@
 			const $m_doc = $(document);
 			const $tabBtns = $m_doc.find('.main_cont_wrap').find('.main_evt_tab .tag_item');
 			const $contents = $m_doc.find('.main_cont_wrap').find('.main_evt_box .evt_point');
-			const $scrollArea = $m_doc.find('.main_cont_wrap').find('.position_event_content');
+			const headeHeight = $m_doc.find('#header').height();
 			let activeIdx = -1;
 
+			// console.log(headeHeight)
 			$contents.each(function (index) {
 				const targetTop = $(this).offset().top;
 				const scrollY = targetTop;
 
-				if (scrollY < scrollTop + 204) { // 204 : header높이+fixedmenu높이
+				if (scrollY < scrollTop + headeHeight + 80) { // 80 :fixedmenu높이
 					activeIdx = index;
-				}//else if(scrollTop + $(window).height() >= $(document).height() - 1) {
+				}
+				//else if(scrollTop + $(window).height() >= $(document).height() - 1) {
 				// 	activeIdx = $contents.length - 1;
 				// }
 			});
@@ -829,6 +831,10 @@
 			const $contents = $wrap.find('.main_evt_box .evt_point');
 			const $scrollArea = $wrap.find('.position_event_content');
 			let headerH = $('.header_pc').outerHeight();
+			let headerState = 0;
+			const headerTopH = $('.header_pc').find('.hpi_top').outerHeight();
+			const pointPadding = $contents.css('padding-top');
+			const paddingNum = parseInt(pointPadding);
 
 			const idx = $this.index();
 			const $target = $contents.eq(idx);
@@ -852,10 +858,14 @@
 					$sideScroll.addClass('active');
 				}
 
-				// console.log(containerTop, targetTop)
+				if($('body').hasClass('sc_down')){
+					headerState = paddingNum;
+				}else {
+					headerState = paddingNum - headerTopH
+				}
 
 				$wrap.stop().animate({
-					scrollTop: targetTop - headerH - 80
+					scrollTop: targetTop - headerH - 80 + headerState
 				}, 300, function () {
 					$wrap.data('scrolling', false);
 
@@ -869,7 +879,7 @@
 							$target.attr('tabindex', '-1').focus();
 						}
 						isClick = true;
-					},300);
+					},200);
 				});
 			}
 		});

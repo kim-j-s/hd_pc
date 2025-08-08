@@ -478,16 +478,7 @@
 
 .mcont_items_wrap {
 	.mcont_items {
-		// padding-top: var(--gap-11);
-		padding-top: calc(var(--gap-11) - var(--gap-8));
-		&:first-child {
-			// margin-top: -32px;
-			// padding-top: var(--gap-6);
-		}
-
-		~ .mcont_items {
-			padding-top: var(--gap-11);
-		}
+		padding-top: var(--gap-11);
 	}
 }
 
