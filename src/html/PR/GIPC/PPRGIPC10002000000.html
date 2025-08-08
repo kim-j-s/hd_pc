@@ -112,8 +112,10 @@
 										<div class="bit_inner active" data-pickitem="step5">
 											
 											<p class="bit_inner_text">
+												<!-- s: 25-08-08 UXW -->
 												<span class="bold">성별</span>을 알려주세요<br>
-												보험료를 알아볼게요
+												이제 <span class="bold">보험료</span>를 알아볼게요
+												<!-- e: 25-08-08 UXW -->
 											</p>
 										</div>
 										<!-- 성별 -->
@@ -219,7 +221,9 @@
 											</div>
 
 											<div class="opts_area_item_cta btn_area">
-												{{> cp/button type="1" size="1" class="full" b-text="일정을 입력했어요"}}
+												<!-- s: 25-08-08 UXW -->
+												{{> cp/button type="1" size="1" class="full" b-text="일정을 선택했어요"}}
+												<!-- e: 25-08-08 UXW -->
 											</div>
 
 										</div>
@@ -229,29 +233,11 @@
 
 									<!-- 생년월일 -->
 									<div class="opts_area active" tabindex="0" aria-label="생년월일 8자리를 입력하시면 다음단계로 이동합니다." data-pickitem="step2">
+										<!-- s: 25-08-08 수정 -->
 										<div class="opts_area_item column">
-											<div class="birth_date_field" aria-live="polite"></div>
-											<div class="bi_keypad">
-												<div class="bi_keypad_item">
-													<button type="button" class="keypad_btn">1</button>
-													<button type="button" class="keypad_btn">2</button>
-													<button type="button" class="keypad_btn">3</button>
-													<button type="button" class="keypad_btn keypad_btn_del" aria-label="지우기"></button>
-												</div>
-												<div class="bi_keypad_item">
-													<button type="button" class="keypad_btn">4</button>
-													<button type="button" class="keypad_btn">5</button>
-													<button type="button" class="keypad_btn">6</button>
-													<button type="button" class="keypad_btn keypad_btn_delall">전체삭제</button>
-												</div>
-												<div class="bi_keypad_item">
-													<button type="button" class="keypad_btn">7</button>
-													<button type="button" class="keypad_btn">8</button>
-													<button type="button" class="keypad_btn">9</button>
-													<button type="button" class="keypad_btn">0</button>
-												</div>
-											</div>
+											{{> cp/text type='tel' inpclass="inp_only_num" placeholder="8자리 숫자 입력" minlength="8" maxlength="8" inp-title="생년월일 8자리를 입력" }}
 										</div>
+										<!-- e: 25-08-08 수정 -->
 									</div>
 									<!-- 생년월일 -->
 
