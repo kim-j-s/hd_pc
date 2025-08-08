@@ -183,7 +183,9 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- s: 25-08-08 수정 -->
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- e: 25-08-08 수정 -->
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>
@@ -193,7 +195,9 @@
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
-				<li>입력한 정보로 개인정보도 함께 변경돼요.</li>
+				<!-- s: 25-08-08 수정 -->
+				<li>입력한 정보로 개인정보도 함께 변경됩니다.</li>
+				<!-- e: 25-08-08 수정 -->				
 				<li>보험계약서류를 보내드리니 정확하게 입력해주세요.</li>
 			</ul>
 			{{/ cp/notice }}
