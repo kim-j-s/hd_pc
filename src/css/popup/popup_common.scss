@@ -87,6 +87,12 @@
 			padding-bottom: 8px;
 			border-radius: var(--radius-xlarge2);
 
+			&:not(:has(.popup_close)){
+				.popup_head {
+					min-height: auto;
+				}
+			}
+
 			.popup_head {
 				// min-height: 52px;
 				min-height: 64px;
@@ -418,6 +424,9 @@
 				& + .info_cont {
 					margin-top: var(--gap-8);
 				}
+			}
+			.pl_ico_ty_case1 {
+				background-image: url(../images/icon/icon_exclamation_confirm.svg);
 			}
 		}
 	}

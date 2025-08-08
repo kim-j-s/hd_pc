@@ -16,7 +16,9 @@
 			<div class="form_box">
 				<h3 class="title_h3">배우자
 					<!-- s: 인증전 안내문구 -->
-					 <span class="msg_error">본인인증이 필요해요.</span>
+					<!-- s: 25-08-08 UXW -->
+					<span class="msg_error">본인인증이 필요합니다.</span>
+					<!-- e: 25-08-08 UXW -->
 					<!-- e: 인증전 안내문구 -->
 					<!-- s: 인증완료 시 안내문구 -->
 					<!--<span class="msg_success">본인인증 완료</span>-->
@@ -40,12 +42,16 @@
 						<div class="label_tit">영문이름</div>
 						{{> cp/text type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력"}}
 						<ul class="list_ty2">
-							<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
+							<!-- s: 25-08-08 UXW -->
+							<li>여권 영문이름과 달라도 보상 여부와는 무관합니다.</li>
+							<!-- e: 25-08-08 UXW -->
 						</ul>
 					</div>
 					<div class="form_line">
 						<div class="label_tit">휴대폰번호</div>
-						{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" value="- 1234 - 5678" inp-title="휴대폰번호" }}
+						<!-- s: 25-08-08 UXW -->
+						{{> cp/text class="phone" type="tel" placeholder="-없이 입력" maxlength="8" l-text="010" value="- 1234 - 5678" inp-title="휴대폰번호" }}
+						<!-- e: 25-08-08 UXW -->
 					</div>
 				</div>
 				<div class="btn_area">
@@ -58,7 +64,10 @@
 			<div class="form_box">
 				<h3 class="title_h3">자녀1
 					<!-- s: 자녀등록 전 안내문구 -->
-					<span class="msg_error">자녀등록이 필요해요.</span>
+					<!-- s: 25-08-08 UXW -->
+					<span class="msg_error">자녀등록이 필요합니다.</span>
+					<!-- e: 25-08-08 UXW -->
+
 					<!-- e: 자녀등록 전 안내문구 -->
 					<!-- s: 자녀등록 후 안내문구 -->
 					<!--<span class="msg_success">자녀등록 완료</span>-->
@@ -82,7 +91,9 @@
 						<div class="label_tit">영문이름</div>
 						{{> cp/text type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력"}}
 						<ul class="list_ty2">
-							<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
+							<!-- s: 25-08-08 UXW -->
+							<li>여권 영문이름과 달라도 보상 여부와는 무관합니다.</li>
+							<!-- e: 25-08-08 UXW -->
 						</ul>
 					</div>
 				</div>
@@ -96,7 +107,9 @@
 			<div class="form_box">
 				<h3 class="title_h3">자녀2
 					<!-- s: 자녀등록 전 안내문구 -->
-					<span class="msg_error">자녀등록이 필요해요.</span>
+					<!-- s: 25-08-08 UXW -->
+					<span class="msg_error">자녀등록이 필요합니다.</span>
+					<!-- e: 25-08-08 UXW -->
 					<!-- e: 자녀등록 전 안내문구 -->
 					<!-- s: 자녀등록 후 안내문구 -->
 					<!--<span class="msg_success">자녀등록 완료</span>-->
@@ -120,7 +133,9 @@
 						<div class="label_tit">영문이름</div>
 						{{> cp/text type="text" placeholder="여권 영문이름 입력(예: KIM HYUN DAI)" inp-title="영문이름 입력" }}
 						<ul class="list_ty2">
-							<li>여권 영문이름과 달라도 보상 여부와는 무관해요.</li>
+							<!-- s: 25-08-08 UXW -->
+							<li>여권 영문이름과 달라도 보상 여부와는 무관합니다.</li>
+							<!-- e: 25-08-08 UXW -->
 						</ul>
 					</div>
 				</div>
@@ -179,7 +194,9 @@
 					</div>
 					<div class="form_line full_half">
 						<div class="label_tit">공동 친권자 이름(배우자)</div>
-						{{> cp/text type="text" placeholder="이름 입력" inp-title="공동 친권자 이름(배우자) 입력" }}
+						<!-- s: 25-08-08 UXW -->
+						{{> cp/text type="text" placeholder="공동 친권자 이름 입력" inp-title="공동 친권자 이름(배우자) 입력" }}
+						<!-- e: 25-08-08 UXW -->
 					</div>
 					<!-- e: 25-07-02 수정 -->
 				</div>
@@ -189,7 +206,9 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- s: 25-08-08 UXW -->
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- e: 25-08-08 UXW -->
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>
