@@ -62,9 +62,17 @@
 				</h1>
 				{{/if}}
 				{{else}}
+				{{#if npay}}
+				<h1 class="hpi_logo">
+					<a href="#">
+						<img src="../../../images/header/img_logo_ty2_xnpay.png" alt="현대해상 다이렉트 X Npay 홈으로">
+					</a>
+				</h1>
+				{{else}}
 				<h1 class="hpi_logo">
 					<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트">
 				</h1>
+				{{/if}}
 				<strong class="hpi_l_prd_name">{{h-prd}}</strong>
 				{{/unless}}
 			</div>
