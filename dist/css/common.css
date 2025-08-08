@@ -700,6 +700,15 @@ strong {
 .pl_msg_top.normal {
 	font-weight: 400;
 }
+.popup_wrap .popup_cont .pl_msg_top.msg_ty1 {
+	text-align: left;
+	font-weight: normal;
+	font-size: var(--font-size-body-medium);
+}
+.popup_wrap .popup_cont .pl_msg_top.msg_ty1 span {
+	display: block;
+	margin-top: var(--gap-4);
+}
 [class*="pl_ico_ty_"] {
 	padding-top: 48px;
 	background-repeat: no-repeat;
@@ -927,6 +936,9 @@ strong {
 }
 [class^="ico_top_ty"] + [class^="title_h"] {
 	margin-top: var(--gap-4);
+}
+.and {
+	margin-top: var(--gap-5) !important;
 }
 /* common 인증, 로딩 등 */
 .blockUI,
@@ -1246,10 +1258,6 @@ strong {
 }
 .hpi_bottom .hpi_l .hpi_logo a {
 	display: block;
-	width: 160px;
-}
-.hpi_bottom .hpi_l .hpi_logo > img {
-	width: 160px;
 }
 .hpi_bottom .hpi_l .hpi_l_prd_name {
 	-webkit-box-flex: 0;
@@ -3942,8 +3950,10 @@ strong {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	-ms-flex-wrap: row wrap;
-	flex-wrap: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
 }
 .btn_area:has(.hd_btn_s_1) {
 	gap: var(--gap-4) var(--gap-3);
@@ -9033,6 +9043,9 @@ strong {
 .form_group_wrap + .select_item,
 .form_group_wrap + .form_group_wrap.space2 {
 	margin-top: var(--gap-5);
+}
+.form_group_wrap + .form_group_wrap.space3 {
+	margin-top: var(--gap-11);
 }
 .form_group_wrap > * ~ .row {
 	margin-top: var(--gap-8);
