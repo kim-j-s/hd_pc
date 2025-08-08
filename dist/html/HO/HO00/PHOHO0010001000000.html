@@ -2166,10 +2166,10 @@
 				<div class="main_cont_wrap main_cont_wrap_ty2">
 					<div class="mcw_cont">
 						<!-- 상품별 리스트 -->
-						<div class="mc_l_cont position_event_wrap">
+						<div class="mc_l_cont">
 							<div class="main_sticky_cont">
 								<div class="msc_inner">
-									<div class="tag_item_wrap main_sticky position_event_tab">
+									<div class="main_evt_tab main_sticky">
 										<button type="button" class="tag_item size_l c_ty03 active"><span class="text" title="자동차 위치로 이동하기">자동차</span></button>
 										<button type="button" class="tag_item size_l c_ty03"><span class="text" title="운전자 위치로 이동하기">운전자</span></button>
 										<button type="button" class="tag_item size_l c_ty03"><span class="text" title="어린이/태아 위치로 이동하기">어린이/태아</span></button>
@@ -2182,9 +2182,9 @@
 								</div>
 							</div>
 
-							<div class="mcont_items_wrap sticky position_event_content">
+							<div class="mcont_items_wrap sticky main_evt_box">
 								<!-- 자동차 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">자동차</h3>
 										<div class="main_prd_cont">
@@ -2235,7 +2235,7 @@
 								<!-- 자동차 -->
 
 								<!-- 운전자 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">운전자</h3>
 										<div class="main_prd_cont">
@@ -2279,7 +2279,7 @@
 								<!-- 배너 -->
 
 								<!-- 어린이/태아 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">어린이/태아</h3>
 										<div class="main_prd_cont">
@@ -2309,7 +2309,7 @@
 								<!-- 어린이/태아 -->
 
 								<!-- 펫 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">
 											펫
@@ -2345,7 +2345,7 @@
 								<!-- 펫 -->
 
 								<!-- 주택 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">주택</h3>
 										<div class="main_prd_cont">
@@ -2400,7 +2400,7 @@
 								<!-- 배너 -->
 
 								<!-- 건강/암 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">건강/암</h3>
 										<div class="main_prd_cont">
@@ -2439,7 +2439,7 @@
 								<!-- 건강/암 -->
 
 								<!-- 여행/레저 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">여행/레저</h3>
 										<div class="main_prd_cont">
@@ -2484,7 +2484,7 @@
 								<!-- 여행/레저 -->
 
 								<!-- 연금/저축 -->
-								<div class="mcont_items pec_point">
+								<div class="mcont_items evt_point">
 									<div class="main_prd">
 										<h3 class="main_prd_title">연금/저축</h3>
 										<div class="main_prd_cont">
@@ -2837,10 +2837,14 @@
 </html>
 
 <script>
-	let bannerSwiper;
+	let scrollVal = true;
+	let isClick = true;
+	let lastScrollTop = 0;
+
+	const $sideScroll = $(".main_benefit");
 
 	$(document).ready(function () {
-		bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
+		let bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
 			slidesPerView: 1,
 			updateOnWindowResize: true,
 			autoplay: {
@@ -2879,7 +2883,23 @@
 
 		/* 메인 스크롤 이벤트  */
 		$(window).on("scroll", function () {
+			// if (isClick) return;
+			// scrollVal = true;
+
+			// console.log(isClick);
+
+			if (!isClick) return;
+
 			let scrollTop = $(this).scrollTop();
+
+			if (isClick === true) {
+				if (scrollTop > lastScrollTop) {
+					$("body").removeClass("sc_up").addClass("sc_down");
+				} else if (scrollTop < lastScrollTop) {
+					$("body").removeClass("sc_down").addClass("sc_up");
+				}
+				lastScrollTop = scrollTop;
+			}
 
 			const $target = $(".main_sticky_cont");
 			const $targetActive = $target.find(".main_sticky");
@@ -2889,7 +2909,7 @@
 
 			// console.log(scrollTop, targetOffset);
 			// 스크롤 추가 조건
-			const $sideScroll = $(".main_benefit");
+			// const $sideScroll = $('.main_benefit');
 
 			if ($("body").hasClass("sc_down")) {
 				if (scrollTop > targetOffset - 72) {
@@ -2915,19 +2935,21 @@
 
 			// 스크롤 시 tag_item 활성화
 			const $m_doc = $(document);
-			const $tabBtns = $m_doc.find(".main_cont_wrap").find(".position_event_tab .tag_item");
-			const $contents = $m_doc.find(".main_cont_wrap").find(".position_event_content .pec_point");
-			const $scrollArea = $m_doc.find(".main_cont_wrap").find(".position_event_content");
+			const $tabBtns = $m_doc.find(".main_cont_wrap").find(".main_evt_tab .tag_item");
+			const $contents = $m_doc.find(".main_cont_wrap").find(".main_evt_box .evt_point");
+			const headeHeight = $m_doc.find("#header").height();
 			let activeIdx = -1;
 
+			// console.log(headeHeight)
 			$contents.each(function (index) {
 				const targetTop = $(this).offset().top;
 				const scrollY = targetTop;
 
-				if (scrollY < scrollTop + 204) {
-					// 204 : header높이+fixedmenu높이
+				if (scrollY < scrollTop + headeHeight + 80) {
+					// 80 :fixedmenu높이
 					activeIdx = index;
-				} //else if(scrollTop + $(window).height() >= $(document).height() - 1) {
+				}
+				//else if(scrollTop + $(window).height() >= $(document).height() - 1) {
 				// 	activeIdx = $contents.length - 1;
 				// }
 			});
@@ -2936,5 +2958,72 @@
 				$tabBtns.removeClass("active").eq(activeIdx).addClass("active");
 			}
 		});
+
+		/* 메인 탭 클릭 이벤트 */
+		$(document)
+			.off("click.mainEventTab")
+			.on("click.mainEventTab", ".main_cont_wrap .main_evt_tab .tag_item", function () {
+				const $this = $(this);
+				const $wrap = $("html, body");
+				const $tabs = $wrap.find(".main_evt_tab .tag_item");
+				const $contents = $wrap.find(".main_evt_box .evt_point");
+				const $scrollArea = $wrap.find(".position_event_content");
+				let headerH = $(".header_pc").outerHeight();
+				let headerState = 0;
+				const headerTopH = $(".header_pc").find(".hpi_top").outerHeight();
+				const pointPadding = $contents.css("padding-top");
+				const paddingNum = parseInt(pointPadding);
+
+				const idx = $this.index();
+				const $target = $contents.eq(idx);
+
+				isClick = false;
+
+				// console.log($this.find('.text').attr('title'));
+
+				if ($target.length) {
+					// scrollVal = false;
+
+					$tabs.removeClass("active");
+					$this.addClass("active");
+
+					const containerTop = $wrap.scrollTop();
+					const targetTop = $target.offset().top;
+					const scrollY = targetTop - containerTop;
+
+					if (containerTop < targetTop) {
+						$(".msc_inner").addClass("active");
+						$sideScroll.addClass("active");
+					}
+
+					if ($("body").hasClass("sc_down")) {
+						headerState = paddingNum;
+					} else {
+						headerState = paddingNum - headerTopH;
+					}
+
+					$wrap.stop().animate(
+						{
+							scrollTop: targetTop - headerH - 80 + headerState,
+						},
+						300,
+						function () {
+							$wrap.data("scrolling", false);
+
+							// 포커스 가능한 첫 요소 탐색
+							const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(":visible").first();
+
+							setTimeout(function () {
+								if ($focusable.length) {
+									$focusable.focus();
+								} else {
+									$target.attr("tabindex", "-1").focus();
+								}
+								isClick = true;
+							}, 200);
+						},
+					);
+				}
+			});
 	});
 </script>
