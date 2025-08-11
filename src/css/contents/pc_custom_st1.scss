@@ -253,6 +253,27 @@ body {
 	flex-direction: column;
 	gap: var(--gap-5);
 
+	
+	.pro_info_item {
+		.data_list {
+			li {
+				> .info {
+					display: none;
+				}
+			}
+		}
+
+		&.active{
+			.data_list {
+				li {
+					> .info {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
 	.info_cont {
 		.data_list {
 			margin-top: var(--gap-4);
