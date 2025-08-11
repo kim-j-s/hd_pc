@@ -234,6 +234,7 @@
 						}
 
 						.file_info_box {
+							flex: auto;
 							& + .file_attach_box {
 								margin-top: var(--gap-5);
 							}
