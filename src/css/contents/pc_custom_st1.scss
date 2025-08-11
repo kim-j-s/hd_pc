@@ -255,20 +255,22 @@ body {
 
 	
 	.pro_info_item {
+		.info {
+			padding-left: 26px;
+			background: url(../images/content/bi/icon_info.svg) no-repeat 4px 3px/16px auto;
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-disabled-on);
+		}
 		.data_list {
-			li {
-				> .info {
-					display: none;
-				}
+			> .info {
+				display: none;
 			}
 		}
 
 		&.active{
 			.data_list {
-				li {
-					> .info {
-						display: block;
-					}
+				> .info {
+					display: block;
 				}
 			}
 		}
@@ -626,7 +628,7 @@ body {
 				}
 				
 				.info {
-					display: none;
+					// display: none;
 					margin-top: var(--gap-4);
 					padding: var(--padding-2) 0 var(--padding-2) 16px;
 				}
@@ -640,6 +642,7 @@ body {
 				}
 				
 				> dl {
+					flex: 1;
 					.title {
 						font-size: var(--font-size-heading-xsmall);
 						font-weight: 700;
@@ -858,25 +861,25 @@ body {
 					&:has(.acd_btn[aria-expanded="true"]){
 						padding-bottom: 24px;
 					}
-					&.ing {
-						.dep_list {
-							&:last-child {
-								.info {
-									display: block;
-								}
-							}
-						}
-						.acd_item_ty9 .acd_cont .inner {
-							> .dep_list_sub {
-								+ .info {
-									display: block;
-								}
-							}
-						}
-						> dl > dd > .info {
-							display: block;
-						}
-					}
+					// &.ing {
+					// 	.dep_list {
+					// 		&:last-child {
+					// 			.info {
+					// 				display: block;
+					// 			}
+					// 		}
+					// 	}
+					// 	.acd_item_ty9 .acd_cont .inner {
+					// 		> .dep_list_sub {
+					// 			+ .info {
+					// 				display: block;
+					// 			}
+					// 		}
+					// 	}
+					// 	> dl > dd > .info {
+					// 		display: block;
+					// 	}
+					// }
 					& ~ li {
 						dl dd,
 						.modify {
@@ -885,6 +888,7 @@ body {
 					}
 
 					.info {
+						// display: block;
 						margin-top: 12px;
 					}
 
