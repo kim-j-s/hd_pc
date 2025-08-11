@@ -81,6 +81,28 @@
 			box-shadow: 0px 1px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05)), 0px 0px 2px 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 		}
 	}
+
+	&.tag {
+		gap: var(--gap-3);
+		background: none;
+		.tab_btn {
+			flex: 0 0 auto;
+			min-width: 40px;
+			// padding: var(--padding-2, 4px) var(--padding-4, 10px);
+			padding: 7px var(--padding-4, 10px);
+			background-color: var(--color-element-secondary-lighter);
+			font-size: var(--font-size-label-small);
+			color: var(--color-text-basic);
+			border-radius: var(--radius-max);
+			border: 0;
+			box-shadow:none;
+
+			&.active {
+				background-color: var(--color-border-secondary);
+				color: var(--color-text-basic-inverse);
+			}
+		}
+	}
 }
 
 .tab_wrap_content {
