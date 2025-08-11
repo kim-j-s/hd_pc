@@ -333,7 +333,6 @@
 	// 메인 Visual
 	.main_visual_box {
 		min-height: 260px;
-		background: url(../images/content/main/img_main_car_kv.png) no-repeat right top / auto 260px;
 		.title_view_wrap {
 			.page_title {
 				.p_info {
@@ -479,6 +478,12 @@
 .mcont_items_wrap {
 	.mcont_items {
 		padding-top: var(--gap-11);
+
+		.acd_item_ty5 {
+			.acd_head_title {
+				background-size: 24px auto;
+			}
+		}
 	}
 }
 
@@ -545,7 +550,7 @@
 				background-position: right 36px center;
 				border: var(--border-width-static-regular) solid var(--color-border-inverse);
 				background-color: var(--color-action-secondary-fill);
-				@for $i from 1 through 16 {
+				@for $i from 1 through 17 {
 					&.mit2_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
 					}
@@ -754,7 +759,8 @@
 		padding: var(--padding-6) var(--padding-5);
 
 		.item {
-			display: block;
+			display: flex;
+			align-items: center;
 			width: 100%;
 			height: 40px;
 			padding: var(--padding-3) var(--padding-5) var(--padding-3) 52px;
