@@ -80,7 +80,7 @@
 	padding-bottom: 8px;
 	border-radius: var(--radius-xlarge2);
 }
-.popup_wrap .popup_container .popup_inner:not(:has(.popup_close)) .popup_head {
+.popup_wrap .popup_container .popup_inner:not(:has(.popup_close)):not(:has(.popup_head_title)) .popup_head {
 	min-height: auto;
 }
 .popup_wrap .popup_container .popup_inner .popup_head {
@@ -429,7 +429,7 @@
 .popup_wrap.popup_wrap_type1 .popup_container {
 	-webkit-transform: none;
 	transform: none;
-	width: 280px;
+	width: 440px;
 	opacity: 0;
 }
 .popup_wrap.popup_wrap_type1 .popup_container .popup_inner {
@@ -437,9 +437,6 @@
 	max-height: 100%;
 	padding-bottom: 0;
 	border-radius: var(--radius-large2);
-}
-.popup_wrap.popup_wrap_type1 .popup_container .popup_inner:not(:has(.popup_close)) .popup_head {
-	min-height: auto;
 }
 .popup_wrap.popup_wrap_type1 .popup_container .popup_inner > .popup_close {
 	top: 12px;
@@ -489,7 +486,7 @@
 	justify-content: center;
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
-	width: 280px;
+	width: 440px;
 }
 .popup_wrap.popup_wrap_type2 .popup_container .popup_inner {
 	max-height: calc(100% - 20px);

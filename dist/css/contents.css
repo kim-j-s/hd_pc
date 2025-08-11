@@ -7198,6 +7198,9 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-heading-medium);
 	text-align: center;
 }
+.prd_car .intro_info.column .title_h3 + .note {
+	margin-top: var(--gap-5);
+}
 .prd_car .intro_info.column.ico_special1 {
 	background-image: url("../images/content/prdcar/ico_car_benefit1.svg");
 }

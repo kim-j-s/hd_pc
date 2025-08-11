@@ -690,6 +690,11 @@
 				padding-right: 18px;
 				background: url(../images/icon/arrowRight_ty4.svg) no-repeat right center / 16px auto;
 			}
+			&.md {
+				padding: 6px 12px;
+				border-radius: 12px;
+				font-size: var(--font-size-button-small);
+			}
 		}
 
 		&.search_type {
