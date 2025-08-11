@@ -1,17 +1,13 @@
 
 .input_text {
 	position: relative;
-	border-radius: var(--radius-medium3);
 	display: flex;
 	align-items: center;
 	gap: var(--gap-3);
-	border: var(--border-width-variable-regular) solid var(--color-input-border);
-	transition: border-color 0.3s;
+	border-radius: var(--radius-medium3);
 	border: var(--border-width-variable-regular) solid var(--color-input-border);
 	background: var(--color-input-surface);
-	border-radius: var(--radius-medium3);
-	// overflow: hidden; 
-
+	transition: border-color 0.3s;
 
 	&.inp_mi {
 		border-radius: var(--radius-medium1);
@@ -359,11 +355,16 @@
 		&.price {
 			margin-right:4px;
 		}
+		&.big {
+			input {
+				height: calc(var(--size-height-10) - 8px);
+			}
+		}
 	}
 	
 	// 주민번호
 	&.birth {
-		padding: 3px;
+		padding: 3px 4px;
 		display: flex;
 		align-items: center;
 		gap: 4px;
@@ -372,6 +373,37 @@
 			min-width: 0;
 			width: calc(50% - 8px);
 		}
+
+		&:has(.big) {
+			.form_key_pc {
+				input[type="password"] {
+					height: 64px;
+					font-weight: 700;
+					font-size: var(--font-size-heading-medium);
+					&::placeholder {
+						font-size: var(--font-size-heading-medium);
+					}
+					&:read-only {
+						+ span {
+							> input {
+								+ label {
+									background-image: url(../images/icon/icon_keypad_on_big.png);
+								}
+							}
+						}
+					}
+				}
+				> span {
+					> input {
+						+ label {
+							background-image: url(../images/icon/icon_keypad_big.png);
+						}
+					}
+				}
+			}
+		}
+
+
 		input {
 			height: 48px;
 			&:read-only {

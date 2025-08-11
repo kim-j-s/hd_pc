@@ -157,7 +157,7 @@
 
 		.birth {
 			gap: var(--gap-3);
-			border-color: var(--color-border-gray-light);
+			// border-color: var(--color-border-gray-light);
 
 			&.active {
 				.input_text {
@@ -172,8 +172,10 @@
 			.input_text {
 				&.big {
 					input {
+						height: calc(var(--size-height-10) - 8px); 
+						padding-left: var(--padding-5);
 						caret-color: var(--color-element-primary);
-	
+						text-align: left;	
 						&::placeholder {
 							font-size: var(--font-size-heading-medium);
 						}
