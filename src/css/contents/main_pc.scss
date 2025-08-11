@@ -615,7 +615,6 @@
 	gap: var(--gap-4);
 }
 
-
 .mc_bann_wrap {
 	position: relative;
 	text-align: center;
@@ -690,9 +689,6 @@
 		}
 	}
 }
-
-
-
 
 // hover Case 영역
 .prd_module_box {
@@ -799,8 +795,6 @@
 	}
 }
 
-
-
 // 제안조건
 .main_benefit {
 	transition: top 0.3s, max-height 0.3s;
@@ -809,10 +803,17 @@
 		overflow: auto;
 	}
 }
+
 // 제안 사항
 .main_cont_wrap .mcw_cont .main_benefit.normal {
 	position: static;
 }
+// 제안 사항 - 스크립트 브레이크 포인트 처리
+.main_cont_wrap .mcw_cont .main_benefit.nb {
+	position: relative;
+	transition: top 0s;
+}
+
 // 제안 사항
 .sc_down {
 	.main_benefit {
