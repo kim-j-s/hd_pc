@@ -34,7 +34,45 @@
 					padding-top: var(--padding-5);
 					padding-bottom: var(--padding-6);
 					// padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
+					text-align: center;
 					
+
+					.info_confirm {
+						padding-top: 48px;
+						background: url(../images/icon/icon_exclamation.svg) no-repeat top center / 32px auto;
+
+						strong {
+							font-size: var(--font-size-heading-small);
+
+							&+.info_text {
+								margin-top: var(--gap-5);
+							}
+						}
+					}
+
+					.info_text {
+						&+.list_ty2 {
+							margin-top: var(--gap-5);
+						}
+					}
+					.list_ty2,
+					.list_depth {
+						> li {
+							padding: 0;
+							&::before {
+								display: inline-block;
+								position: static;
+								margin-right: 4px;
+							}
+						}
+					}
+					.list_depth {
+						> li {
+							&::before {
+								transform: translateY(-100%);
+							}
+						}
+					}
 				}
 
 				.popup_bottom {
