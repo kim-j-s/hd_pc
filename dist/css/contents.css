@@ -1141,11 +1141,6 @@
 .prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bi_wrap_content .form_group_wrap .input_text {
 	border-color: var(--color-border-gray-light);
 }
-.prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bi_wrap_content .form_group_wrap .input_text.big input {
-	height: auto;
-	padding: var(--padding-7) var(--padding-6);
-	line-height: 150%;
-}
 .prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bi_wrap_content .form_group_wrap .input_text.phone input {
 	padding-left: 0;
 }
@@ -1544,6 +1539,7 @@
 	height: 100%;
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-information-light);
+	pointer-events: none;
 }
 .prd_bi_wrap .bottom_fix_notice {
 	padding-top: var(--gap-5);
@@ -1746,13 +1742,15 @@
 }
 .input_form_box .input_item_wrap .birth {
 	gap: var(--gap-3);
-	border-color: var(--color-border-gray-light);
 }
 .input_form_box .input_item_wrap .birth.active .input_text.big + .dash {
 	color: var(--color-text-basic);
 }
 .input_form_box .input_item_wrap .birth .input_text.big input {
+	height: calc(var(--size-height-10) - 8px);
+	padding-left: var(--padding-5);
 	caret-color: var(--color-element-primary);
+	text-align: left;
 }
 .input_form_box .input_item_wrap .birth .input_text.big input::-webkit-input-placeholder {
 	font-size: var(--font-size-heading-medium);
