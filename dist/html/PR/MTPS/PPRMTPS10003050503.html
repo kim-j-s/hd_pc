@@ -1,7 +1,3 @@
-<!---
-화면번호 : MPRMTPS10005020400
-경로 : 4.운전자 정보 > 4-2.운전자 정보 입력	 > 누구나
--->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -45,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>운전자 정보 | 상품 - 현대해상 다이렉트</title>
+		<title>ECO마일리지 특약 안내 | 상품 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -58,76 +54,28 @@
 			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
-
+		<!-- s: popup area -->
 		<!-- s: Bottom 팝업 -->
 		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title">운전자 범위와 연령</div>
+						<div class="popup_head_title">ECO마일리지 특약 안내</div>
 					</div>
 
 					<div class="popup_cont">
-						<div class="popup_content ty2">
-							<div class="popup_content_top">
-								<!-- s: 25-04-23 수정 -->
-								<div class="title_h3 txt_center">
-									운전자 범위는<br />
-									<strong>운전자 제한 없음</strong>이에요
-								</div>
-								<!-- e: 25-04-23 수정 -->
-							</div>
-							<!-- s: 유효한 생년월일이 입력되면 출력 -->
-							<!-- s: 25-05-27 수정 -->
-
-							<p class="text_sub_ty2">
-								<!-- e: 25-05-27 수정 -->
-								운전자 연령은 <strong class="point">만 24세 이상 한정 운전 특약</strong>입니다.
-							</p>
-
-							<div class="info_gray">
-								<p class="info_text"><strong>2024년 3월 13일 이전</strong> 출생자부터 운전가능</p>
-							</div>
-							<div class="info_gray">
-								<p class="info_text">운전자 제한없음, 만24세이상 한정 운전 특약 이외의 운전자가 차량 운전 사고 발생 시 대인배상I(책임보험)을 제외한 나머지 보상은 받으실 수 없습니다.</p>
-							</div>
-
-							<!-- e: 유효한 생년월일이 입력되면 출력 -->
-
-							<!-- s: 25-04-23 수정 -->
-							<!-- s: 25-05-27 수정 -->
-							<p class="text_sub_ty2">
-								<!-- e: 25-05-27 수정 -->
-								운전자 중 가장 어린 분의 나이를 선택해 주세요.
-							</p>
-							<!-- e: 25-04-23 수정 -->
-
-							<div class="form_group_wrap">
-								<div class="form_line">
-									<div class="label_tit">나이</div>
-									<!-- s: 25-05-27 수정 -->
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="연령 선택 팝업 호출" onclick="openHDPopup(this,'select_option_ty1');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'select_option_ty1');">
-										<div class="select_item_inner">
-											<div class="si_item" data-placeholder="나이 선택"></div>
-											<span class="si_stat">선택됨</span>
-										</div>
-									</div>
-									<!-- e: 25-05-27 수정 -->
-								</div>
-							</div>
+						<div class="popup_content">
+							<p class="text_sub">ECO마일리지 특약은 보험개시일 45일 이내인 경우에만 가입이 가능합니다.</p>
+							<p class="text_sub">특약 제외 후 산출하여 주시기 바랍니다.</p>
+							<p class="text_sub">2025년 8월 15일 이후 다이렉트 고객센터(1899-6782)를 통해 ECO마일리지 특약 가입이 가능합니다.</p>
 						</div>
 					</div>
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
-								<span class="text">나이를 선택 중이에요</span>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
 							</button>
-							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-					
-							<span class="text">보험료 확인하기</span>
-					
-					</button> -->
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
@@ -135,45 +83,6 @@
 			</div>
 		</div>
 		<!-- e: Bottom 팝업 -->
-
-		<!-- s: 나이 선택 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="select_option_ty1" role="dialog" aria-modal="true" aria-hidden="true">
-			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('select_option_ty1');"></div>
-				<div class="popup_inner">
-					<div class="popup_head">
-						<div class="popup_head_title">연령선택</div>
-					</div>
-
-					<div class="popup_cont">
-						<!-- s: 25-04-23 수정 -->
-						<div class="opt_select_list opt_case3">
-							<div role="button" tabindex="0" class="option"><span class="text">만 21세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 22세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 24세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 26세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 28세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 30세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 35세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 43세 이상</span></div>
-							<div role="button" tabindex="0" class="option"><span class="text">만 48세 이상</span></div>
-						</div>
-						<!-- e: 25-04-23 수정 -->
-					</div>
-					<!-- s: 25-05-27 수정 -->
-					<!-- <div class="popup_bottom">
-						<div class="btn_area">
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-							
-									<span class="text">확인</span>
-							
-							</button>	</div>
-					</div> -->
-					<!-- e: 25-05-27 수정 -->
-					<button type="button" class="popup_close" onclick="closeHDPopup('select_option_ty1');"><span class="blind">팝업 닫기</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- e: 나이 선택 팝업 -->
+		<!-- e: popup area -->
 	</body>
 </html>
