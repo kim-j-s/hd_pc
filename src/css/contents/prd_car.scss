@@ -378,5 +378,15 @@
 			width: 100%;
 		}
 	}
+
+	// 스크롤바
+	.tab_scroll_box_ty1::-webkit-scrollbar {
+		height: 6px;
+	}
+	// 스크롤바 핸들
+	.tab_scroll_box_ty1::-webkit-scrollbar-thumb {
+		background: #c1c1c1; /* 스크롤바 색상 */
+  	border-radius: 10px;
+	}
 	
 }
