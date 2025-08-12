@@ -383,23 +383,23 @@
 					&::placeholder {
 						font-size: var(--font-size-heading-medium);
 					}
-					&:read-only {
-						+ span {
-							> input {
-								+ label {
-									background-image: url(../images/icon/icon_keypad_on_big.png);
-								}
-							}
-						}
-					}
+					// &:read-only {
+					// 	+ span {
+					// 		> input {
+					// 			+ label {
+					// 				background-image: url(../images/icon/icon_keypad_on_big.png);
+					// 			}
+					// 		}
+					// 	}
+					// }
 				}
-				> span {
-					> input {
-						+ label {
-							background-image: url(../images/icon/icon_keypad_big.png);
-						}
-					}
-				}
+				// > span {
+				// 	> input {
+				// 		+ label {
+				// 			background-image: url(../images/icon/icon_keypad_big.png);
+				// 		}
+				// 	}
+				// }
 			}
 		}
 
