@@ -2279,17 +2279,16 @@
 								<!-- 배너 -->
 
 								<!-- 어린이/태아 -->
-								<div class="mcont_items evt_point">
+								<div class="mcont_items evt_point offpoint">
 									<div class="main_prd">
 										<h3 class="main_prd_title">어린이/태아</h3>
 										<div class="main_prd_cont">
-											<!-- s: 25-08-11 수정 -->
 											<a href="#" class="mpc_item mpc_item_ty1 mit1_ic3">
 												<div class="mpc_item_cont">
-													<strong class="title">굿앤굿어린이종합보험Q(태아)</strong>
+													<strong class="title">굿앤굿어린이보험</strong>
 													<span class="text">
-														출생부터 안심되는 우리 아이 첫! 보험<br />
-														엄마의 임신, 출산도 함께 보장
+														10명 중 6명이 가입한 어린이보험<br />
+														우리아이 보험은 역시 굿앤굿!
 													</span>
 													<div class="fb_c">
 														<span class="hd_btn hd_btn_ty_2 hd_btn_s_4">
@@ -2298,19 +2297,12 @@
 													</div>
 												</div>
 											</a>
-											<a href="#" class="mpc_item mpc_item_ty2 mit2_ic17">
-												<div class="mpc_item_cont">
-													<strong class="title">굿앤굿어린이종합보험Q(0~15세)</strong>
-													<span class="text">우리 아이 성장단계별 맞춤 보장</span>
-												</div>
-											</a>
 											<a href="#" class="mpc_item mpc_item_ty2 mit2_ic6">
 												<div class="mpc_item_cont">
 													<strong class="title">어린이 치아보험</strong>
 													<span class="text">유치, 영구치 치과 치료비 보장</span>
 												</div>
 											</a>
-											<!-- e: 25-08-11 수정 -->
 										</div>
 									</div>
 								</div>
@@ -2408,7 +2400,7 @@
 								<!-- 배너 -->
 
 								<!-- 건강/암 -->
-								<div class="mcont_items evt_point">
+								<div class="mcont_items evt_point offpoint">
 									<div class="main_prd">
 										<h3 class="main_prd_title">건강/암</h3>
 										<div class="main_prd_cont">
@@ -2590,7 +2582,7 @@
 							</div>
 						</div>
 						<!-- 상품별 리스트 -->
-						<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
+						<!-- 사이드 스티키 영역 -->
 						<div class="mc_r_cont">
 							<div class="main_benefit">
 								<h3 class="main_benefit_title">다양한 할인 혜택을 확인하세요</h3>
@@ -2706,7 +2698,7 @@
 								<!-- 보험 할인혜택 -->
 							</div>
 						</div>
-						<!-- 사이드 스티키 영역 - 추후 스티키 처리 후 높이 현업 확인 후 확정 진행 필요 -->
+						<!-- 사이드 스티키 영역 -->
 					</div>
 				</div>
 				<!-- 상품 영역 -->
@@ -2844,12 +2836,43 @@
 	</body>
 </html>
 
+<!-- s: 25-08-12 수정-->
 <script>
 	let scrollVal = true;
 	let isClick = true;
 	let lastScrollTop = 0;
 
 	const $sideScroll = $(".main_benefit");
+
+	function sideMove() {
+		// 스크롤 시, side benefit 이동
+		const wHeight = $(window).height();
+		const mainContH = $(".main_cont_wrap").outerHeight();
+		let lastPoint = null;
+		const headerH = $(".header_pc").height();
+		const stickyMenuH = $(".main_sticky_cont").height();
+		let scrollTop = $(this).scrollTop();
+
+		$(".main_cont_wrap .mcont_items_wrap .offpoint").each(function (idx) {
+			const pointTop = $(this).offset().top;
+			const pointHeight = $(this).outerHeight();
+			const pointBottom = pointTop + pointHeight;
+
+			if (pointTop <= scrollTop + headerH + stickyMenuH + 52) {
+				lastPoint = pointTop;
+			}
+
+			if (lastPoint !== null) {
+				setTimeout(function () {
+					$sideScroll.css("top", lastPoint - mainContH - 160 + "px");
+				}, 100);
+			} else {
+				setTimeout(function () {
+					$sideScroll.css("top", 0);
+				}, 100);
+			}
+		});
+	}
 
 	$(document).ready(function () {
 		let bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
@@ -2891,14 +2914,13 @@
 
 		/* 메인 스크롤 이벤트  */
 		$(window).on("scroll", function () {
-			// if (isClick) return;
-			// scrollVal = true;
-
 			// console.log(isClick);
 
 			if (!isClick) return;
 
 			let scrollTop = $(this).scrollTop();
+
+			sideMove();
 
 			if (isClick === true) {
 				if (scrollTop > lastScrollTop) {
@@ -2965,6 +2987,8 @@
 			if (activeIdx !== -1) {
 				$tabBtns.removeClass("active").eq(activeIdx).addClass("active");
 			}
+
+			// console.log(scrollTop)
 		});
 
 		/* 메인 탭 클릭 이벤트 */
@@ -3018,6 +3042,8 @@
 						function () {
 							$wrap.data("scrolling", false);
 
+							sideMove();
+
 							// 포커스 가능한 첫 요소 탐색
 							const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(":visible").first();
 
@@ -3035,3 +3061,4 @@
 			});
 	});
 </script>
+<!-- e: 25-08-12 수정-->

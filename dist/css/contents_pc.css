@@ -4773,8 +4773,13 @@ body {
 	flex: 0 1 calc(50% - 8px);
 }
 .main_cont_wrap .mcw_cont .main_benefit {
-	position: sticky;
+	position: relative;
 	top: 0;
+	-webkit-transition: top 0.3s, max-height 0.3s;
+	transition: top 0.3s, max-height 0.3s;
+}
+.main_cont_wrap .mcw_cont .main_benefit.active {
+	overflow: auto;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_title {
 	font-weight: 700;
@@ -5491,37 +5496,6 @@ body {
 	background-color: var(--color-action-secondary-subtle-fill-hover);
 	background-position: left 16px center;
 	border-radius: var(--radius-medium1);
-}
-.main_benefit {
-	-webkit-transition: top 0.3s, max-height 0.3s;
-	transition: top 0.3s, max-height 0.3s;
-}
-.main_benefit.active {
-	overflow: auto;
-}
-.main_cont_wrap .mcw_cont .main_benefit.normal {
-	position: static;
-}
-.main_cont_wrap .mcw_cont .main_benefit.nb {
-	position: relative;
-	-webkit-transition: top 0s;
-	transition: top 0s;
-}
-.sc_down .main_benefit.sc_mode.active {
-	top: calc(var(--gap-11) - var(--gap-6) + 152px);
-	max-height: calc(100vh - 72px - 80px - 30px);
-	overflow: auto;
-}
-.sc_down .main_benefit.sc_mode::-webkit-scrollbar {
-	display: none;
-}
-.sc_up .main_benefit.sc_mode.active {
-	top: calc(var(--gap-11) - var(--gap-6) + 200px);
-	max-height: calc(100vh - 72px - 80px - 30px);
-	overflow: auto;
-}
-.sc_up .main_benefit.sc_mode::-webkit-scrollbar {
-	display: none;
 }
 /* 알려드려요 */
 .item_news_link {
