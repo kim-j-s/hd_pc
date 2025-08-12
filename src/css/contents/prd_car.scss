@@ -241,8 +241,12 @@
 			margin-bottom: var(--gap-6);
 		}
 		.sec_body {
-			&:has(.title_h4) {
+			&:has(.title_h4),
+			&:has(.text_sub) {
 				margin-top: -8px;
+			}
+			&:has(.my_info_flow) {
+				margin-top: 0;
 			}
 		}
 	}
@@ -324,8 +328,9 @@
 	//팝업 - 마일리지환급금 대체사용 특약이란?
 	.mileage_box {
 		display:flex;
-		flex-direction: column;
+		flex-direction: row;
 		.item {
+			flex:1;
 			position: relative;
 			padding: calc(var(--padding-4) - 1px) calc(var(--padding-3) - 1px);
 			background-color: var(--color-element-secondary-lighter);
@@ -341,14 +346,15 @@
 				width: 16px;
 				height: 16px;
 				position: absolute;
-				bottom: -20px;
-				left: calc(50% - 8px);
+				right: -20px;
+				top: calc(50% - 8px);
 			}
 			&:nth-child(1)::after {
 				background-image: url('../images/content/prdcar/icon_plus.svg')
 			}
 			&:nth-child(2)::after {
-				background-image: url('../images/content/prdcar/icon_sum.svg')
+				background-image: url('../images/content/prdcar/icon_sum.svg');
+				transform: rotate(90deg);
 			}
 			& > div {
 				display: flex;
@@ -357,7 +363,7 @@
 				gap: var(--gap-2);
 			}
 			& + .item {
-				margin-top: 24px;
+				margin-left: 24px;
 			}
 			strong {
 				color: var(--color-text-secondary);
