@@ -746,9 +746,6 @@
 
 		/* 메인 스크롤 이벤트  */
 		$(window).on('scroll', function() {
-			// if (isClick) return;
-			// scrollVal = true;
-
 			// console.log(isClick);
 
 			if (!isClick) return;
@@ -796,6 +793,32 @@
 				}
 			}
 
+			// 스크롤 시, side benefit 이동
+			const wHeight = $(window).height();
+			const mainContH = $('.main_cont_wrap').outerHeight();
+			let lastPoint = null;
+			const headerH = $('.header_pc').height();
+			const stickyMenuH = $('.main_sticky_cont').height();
+
+			$('.main_cont_wrap .mcont_items_wrap .offpoint').each(function (idx){
+				const pointTop = $(this).offset().top;
+				const pointHeight = $(this).outerHeight();
+				const pointBottom = pointTop + pointHeight;
+
+				console.log(headerH + stickyMenuH);
+
+				if (pointTop <= scrollTop + headerH + stickyMenuH) {
+					lastPoint = pointTop;
+				}
+
+				if (lastPoint !== null) {
+					console.log('지나감');
+					$sideScroll.css('top', lastPoint - mainContH - 160 + 'px');
+				} else {
+					$sideScroll.css('top', 0);
+				}
+			})
+
 			// 스크롤 시 tag_item 활성화
 			const $m_doc = $(document);
 			const $tabBtns = $m_doc.find('.main_cont_wrap').find('.main_evt_tab .tag_item');
@@ -820,8 +843,7 @@
 				$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
 			}
 
-			console.log(scrollTop);
-
+			// console.log(scrollTop)
 			
 		});
 
