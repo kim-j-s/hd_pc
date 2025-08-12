@@ -99,13 +99,16 @@
 		}
 
 
-
-
-
+		// 우측 
 		.main_benefit {
-			position: sticky;
+			position: relative;
 			top: 0;
-
+			transition: top 0.3s, max-height 0.3s;
+			
+			&.active {
+				// max-height: 100vw;
+				overflow: auto;
+			}
 
 			.main_benefit_title {
 				font-weight: 700;
@@ -800,62 +803,6 @@
 		}
 	}
 }
-
-// 제안조건
-.main_benefit {
-	transition: top 0.3s, max-height 0.3s;
-	&.active {
-		// max-height: 100vw;
-		overflow: auto;
-	}
-}
-
-// 제안 사항
-.main_cont_wrap .mcw_cont .main_benefit.normal {
-	position: static;
-}
-// 제안 사항 - 스크립트 브레이크 포인트 처리
-.main_cont_wrap .mcw_cont .main_benefit.nb {
-	position: relative;
-	transition: top 0s;
-}
-
-// 제안 사항
-.sc_down {
-	.main_benefit {
-		&.sc_mode {
-			&.active {
-				// top: calc(72px + 80px);
-				top: calc(var(--gap-11) - var(--gap-6) + 152px);
-				max-height: calc(100vh - 72px - 80px - 30px);
-				overflow: auto;
-				// &::-webkit-scrollbar {
-				// 	display: none;
-				// }
-			}
-			&::-webkit-scrollbar {
-				display: none;
-			}
-		}
-	}
-}
-.sc_up {
-	.main_benefit {
-		&.sc_mode {
-			&.active {
-				// top: calc(120px + 80px);
-				top: calc(var(--gap-11) - var(--gap-6) + 200px);
-				max-height: calc(100vh - 72px - 80px - 30px);
-				overflow: auto;
-			}
-			&::-webkit-scrollbar {
-				display: none;
-			}
-		}
-	}
-}
-// 제안조건
-
 
 /* 알려드려요 */
 .item_news_link {
