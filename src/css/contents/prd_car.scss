@@ -264,7 +264,8 @@
 
 	.title_h4 {
 		+ .desc,
-		+ .list_depth {
+		+ .list_depth,
+		+ .group_item {
 			margin-top: var(--gap-4);
 		}
 		+ .table_wrap {
@@ -368,6 +369,13 @@
 			strong {
 				color: var(--color-text-secondary);
 			}
+		}
+	}
+
+	//사진 촬영 예시
+	.file_attach_box  {
+		.file_thumbnail {
+			width: 100%;
 		}
 	}
 	
