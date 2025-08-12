@@ -813,9 +813,13 @@
 
 				if (lastPoint !== null) {
 					console.log('지나감');
-					$sideScroll.css('top', lastPoint - mainContH - 160 + 'px');
+					setTimeout(function(){
+						$sideScroll.css('top', lastPoint - mainContH - 160 + 'px');
+					},100)
 				} else {
-					$sideScroll.css('top', 0);
+					setTimeout(function(){
+						$sideScroll.css('top', 0);
+					},100)
 				}
 			})
 
