@@ -9,6 +9,13 @@
 	&.position_event_wrap {
 		.sii_wrap {
 			padding-bottom: 0;
+			.tag_item_wrap {
+				&.sticky {
+					&.tag_item_stick_fix {
+						top: 65px;
+					}
+				}
+			}
 		}
 	}
 	// .position_event_content {
@@ -243,6 +250,11 @@
 	.group {
 		+ .group {
 			padding-top: 40px;
+		}
+		.group_item {
+			+ .group_item {
+				margin-top: var(--gap-8);
+			}
 		}
 	}
 
