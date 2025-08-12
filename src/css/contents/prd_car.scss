@@ -282,5 +282,87 @@
 			}
 		}
 	} // 텝 + 보험약관버튼 + 준법감시필 
+
+	.web_link {
+		text-decoration: underline;
+	}
+	
+	.table_wrap {
+		+ .list_depth {
+			margin-top: var(--gap-8);
+		}
+	}
+
+	.my_info_flow {
+		> li:last-child {
+			margin-bottom:0;
+		}
+		& + .list_ty2 {
+			margin-top: var(--gap-5);
+		}
+	}
+
+	// 자주하는질문
+	.item_wrap_faq {
+		.acd_cont {  
+			.inner {
+				> p {
+					margin-bottom: var(--gap-4);
+				}
+				.btn_area {
+					margin-top: var(--gap-2);
+				}
+				.list_depth {
+					& + .text_sub {
+						margin-top: var(--gap-4);
+					}
+				}
+			}  
+		}
+	}
+
+	//팝업 - 마일리지환급금 대체사용 특약이란?
+	.mileage_box {
+		display:flex;
+		flex-direction: column;
+		.item {
+			position: relative;
+			padding: calc(var(--padding-4) - 1px) calc(var(--padding-3) - 1px);
+			background-color: var(--color-element-secondary-lighter);
+			border: 1px solid var(--color-border-secondary-light);
+			border-radius: 12px;
+			font-size: 12px;
+			color: var(--color-text-subtle);
+			&::after {
+				content: "";
+				display: block;
+				background-repeat: no-repeat;
+				background-size: 16px auto;
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				bottom: -20px;
+				left: calc(50% - 8px);
+			}
+			&:nth-child(1)::after {
+				background-image: url('../images/content/prdcar/icon_plus.svg')
+			}
+			&:nth-child(2)::after {
+				background-image: url('../images/content/prdcar/icon_sum.svg')
+			}
+			& > div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: var(--gap-2);
+			}
+			& + .item {
+				margin-top: 24px;
+			}
+			strong {
+				color: var(--color-text-secondary);
+			}
+		}
+	}
 	
 }
