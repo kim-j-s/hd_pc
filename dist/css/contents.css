@@ -7104,7 +7104,7 @@ ul + .form_group_wrap {
 .prd_car.position_event_wrap .sii_wrap {
 	padding-bottom: 0;
 }
-.prd_car.position_event_wrap .sii_wrap .tag_item_wrap.sticky.tag_item_stick_fix {
+.prd_car.position_event_wrap .sii_wrap .tag_item_wrap.sticky {
 	top: 65px;
 }
 .prd_car .popup_content_body {
@@ -7239,9 +7239,13 @@ ul + .form_group_wrap {
 	background-size: 20px auto;
 }
 .prd_car .intro_info.column .desc_wrap {
+	width: 100%;
 	margin-top: var(--gap-7);
 	padding-top: var(--gap-7);
 	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+}
+.prd_car .intro_info.column .desc_wrap .list_ty6 li {
+	text-align: left;
 }
 .prd_car .intro_info.column.ico_special1 {
 	background-image: url("../images/content/prdcar/ico_car_benefit1.svg");

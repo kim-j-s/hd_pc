@@ -11,9 +11,7 @@
 			padding-bottom: 0;
 			.tag_item_wrap {
 				&.sticky {
-					&.tag_item_stick_fix {
-						top: 65px;
-					}
+					top: 65px;
 				}
 			}
 		}
@@ -117,10 +115,17 @@
 					background-size: 20px auto;
 				}
 			}
-			.desc_wrap {
+			.desc_wrap {        
+				width: 100%;
 				margin-top: var(--gap-7);
 				padding-top: var(--gap-7);
 				border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+				.list_ty6 {
+					> li {
+						text-align: left;
+						color: var(--color-text-information);
+					}
+				}
 			}
 			
 			@for $i from 1 through 13 {
