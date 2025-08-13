@@ -119,6 +119,11 @@
 				margin-top: var(--gap-7);
 				padding-top: var(--gap-7);
 				border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
+				.list_ty6 {
+					li {
+						text-align: left;
+					}
+				}
 			}
 			
 			@for $i from 1 through 13 {
