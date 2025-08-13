@@ -66,7 +66,7 @@
 				margin-top: 4px;
 			}
 		}
-		
+
 		&:has(button.hd_btn_s_6){
 			gap: var(--gap-4);	
 		}
@@ -365,7 +365,7 @@
 	&_s_6 {
 		//xxlarge
 		min-height: 72px;
-		padding: 6px var(--padding-6);
+		padding: 0 var(--padding-6);
 		border-radius: var(--radius-medium1);
 		font-size: var(--font-size-button-large);
 		font-weight: 700;
