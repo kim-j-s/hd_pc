@@ -66,6 +66,10 @@
 				margin-top: 4px;
 			}
 		}
+		
+		&:has(button.hd_btn_s_6){
+			gap: var(--gap-4);	
+		}
 	}
 
 	&.basic {
