@@ -18,7 +18,12 @@
 {{#if leftIcon}}{{> cp/icon iconClass=leftIcon}}{{/if}}
 {{#unless noText}}
 	{{#if b-text}}
-		<span class="text">{{{b-text}}}</span>
+		<span class="text">
+			{{{b-text}}}
+			{{#if sub-text}}
+				<span class="sub_g_text">{{sub-text}}</span>
+			{{/if}}
+		</span>
 		{{else}}
 		<span class="text">{{> @partial-block }}</span>
 	{{/if}}
