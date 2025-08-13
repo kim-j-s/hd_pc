@@ -259,13 +259,14 @@ $(document).ready(function() {
 {{#> popup/popup_bottom popup-id="pop_type02" popup-title="자녀 직업 선택"  }}
 <div class="popup_cont">
 	<div class="popup_content">
-    <div class="radio_group_wrap column" role="radiogroup">
-			{{> cp/radio rd-class="rd_btn_s1 xs" rd-id="radio_btn_gt1" name="radio_gt1" labelname="학원생, 재수생, 고시준비생" checked=true }}
-			{{> cp/radio rd-class="rd_btn_s1 xs" rd-id="radio_btn_gt2" name="radio_gt1" labelname="운동선수 (격투기)<p class='sub_g_txt'>이종격투기, 레슬링, 권투, 유도, 검도, 태권도 선수 등</p>" }}
-			{{> cp/radio rd-class="rd_btn_s1 xs" rd-id="radio_btn_gt3" name="radio_gt1" labelname="운동선수 (격투기 제외, 장비 미착용)<p class='sub_g_txt'>축구, 배구, 테니스, 골프 선수 등</p>" }}
-			{{> cp/radio rd-class="rd_btn_s1 xs" rd-id="radio_btn_gt4" name="radio_gt1" labelname="운동선수 (격투기 제외, 장비 착용)<p class='sub_g_txt'>럭비, 펜싱 선수 등</p>" }}
+		<!-- s: 25-08-13 수정 -->
+		<div class="btn_area column">
+			{{> cp/button type="3" size="6" class="left" b-text="학원생, 재수생, 고시준비생"}}
+			{{> cp/button type="3" size="6" class="left" b-text="운동선수 (격투기)" sub-text="격투기, 레슬링, 권투, 유도, 검도, 태권도 선수 등"}}
+			{{> cp/button type="3" size="6" class="left" b-text="운동선수 (격투기 제외, 장비 미착용" sub-text="축구, 배구, 테니스, 골프 선수 등"}}
+			{{> cp/button type="3" size="6" class="left" b-text="운동선수 (격투기 제외, 장비 착용)" sub-text="럭비, 펜싱 선수 등"}}
 		</div>
-   
+		<!-- e: 25-08-13 수정 -->   
 	</div>
 </div>
 <div class="popup_bottom">
