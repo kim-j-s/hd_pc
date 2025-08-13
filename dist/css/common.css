@@ -13126,6 +13126,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .tab_wrap.tab_wrap_ty2 .tab_wrap_content {
 	padding-top: 24px;
 }
+.tab_wrap.tab_wrap_ty2:has(.tab_wrap_list_ty2.tag) .tab_wrap_content {
+	padding-top: var(--padding-9);
+}
 .tab_wrap + .title_h3 {
 	margin-top: var(--gap-11);
 }
