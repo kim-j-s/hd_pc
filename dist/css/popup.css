@@ -370,7 +370,7 @@
 	/* iframe 대응용 */
 }
 .popup_wrap.popup_wrap_type4.big .popup_container {
-	width: 800px;
+	width: 900px;
 }
 .popup_wrap.popup_wrap_type4.active .popup_container {
 	-webkit-transform: translateX(0);
@@ -410,7 +410,6 @@
 	height: auto;
 	max-height: 100%;
 	padding-top: 0;
-	padding-bottom: var(--padding-12);
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont {
 	overflow: hidden;
@@ -418,6 +417,9 @@
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.pts_cont {
 	padding: 0;
+}
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont .popup_content {
+	padding-bottom: var(--padding-12);
 }
 .popup_wrap.popup_wrap_type4 .info_gray.ty2 + .call_box {
 	margin-top: var(--gap-11);

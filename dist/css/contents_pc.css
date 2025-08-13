@@ -1321,9 +1321,9 @@ body {
 }
 .notification .form_list > li > .form_group_wrap > .form_line .row {
 	width: 100%;
-	display: -webkit-box !important;
-	display: -ms-flexbox !important;
-	display: flex !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
@@ -2544,9 +2544,9 @@ body {
 }
 .card_list_wrap_ty2.row {
 	width: 100%;
-	display: -webkit-box !important;
-	display: -ms-flexbox !important;
-	display: flex !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: row;
