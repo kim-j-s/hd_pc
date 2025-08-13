@@ -3,7 +3,7 @@
 	&.popup_wrap_type4 {
 		&.big {
 			.popup_container {
-				width: 800px;
+				width: 900px;
 			}
 		}
 		&.active {
@@ -63,7 +63,6 @@
 					height: auto;
 					max-height: 100%;
 					padding-top: 0;
-					padding-bottom: var(--padding-12);
 
 					&.load_cont {
 						overflow: hidden;
@@ -71,6 +70,10 @@
 					}
 					&.pts_cont {
 						padding: 0;
+					}
+
+					.popup_content {
+						padding-bottom: var(--padding-12);
 					}
 				}
 			}
