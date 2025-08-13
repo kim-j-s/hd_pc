@@ -7244,8 +7244,9 @@ ul + .form_group_wrap {
 	padding-top: var(--gap-7);
 	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
-.prd_car .intro_info.column .desc_wrap .list_ty6 li {
+.prd_car .intro_info.column .desc_wrap .list_ty6 > li {
 	text-align: left;
+	color: var(--color-text-information);
 }
 .prd_car .intro_info.column.ico_special1 {
 	background-image: url("../images/content/prdcar/ico_car_benefit1.svg");
