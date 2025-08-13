@@ -10,6 +10,19 @@
 				<div class="nld_cont_body">
 					<ul class="nld_cont_body_list">
 						<li>
+							{{#if corp_mode}}
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">자동차</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="#"><span class="text">자동차보험(법인)</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">이륜차보험(법인)</span></a>
+									</li>
+								</ul>
+							</div>
+							{{else}}
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">자동차</strong>
 								<ul class="nl_dept2_list">
@@ -69,8 +82,9 @@
 									</li>
 								</ul>
 							</div>
+							{{/if}}
 						</li>
-
+						{{#unless corp_mode}}
 						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">펫</strong>
@@ -211,6 +225,7 @@
 								</ul>
 							</div>
 						</li>
+						{{/unless}}
 
 					</ul>
 				</div>
@@ -234,6 +249,24 @@
 				</div>
 				<div class="nld_cont_body">
 					<ul class="nld_cont_body_list">
+						{{#if corp_mode}}
+						<li>
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">자동차</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="#"><span class="text">단기운전자 신청(법인)</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">단기운전자 변경(법인)</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">계약체결 전자서명(법인)</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						{{else}}
 						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">보험계약 확인</strong>
@@ -373,6 +406,7 @@
 								</ul>
 							</div>
 						</li>
+						{{/if}}
 					</ul>
 				</div>
 
