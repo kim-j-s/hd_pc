@@ -115,14 +115,15 @@
 					background-size: 20px auto;
 				}
 			}
-			.desc_wrap {
+			.desc_wrap {        
 				width: 100%;
 				margin-top: var(--gap-7);
 				padding-top: var(--gap-7);
 				border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 				.list_ty6 {
-					li {
+					> li {
 						text-align: left;
+						color: var(--color-text-information);
 					}
 				}
 			}
