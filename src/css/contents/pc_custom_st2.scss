@@ -563,7 +563,8 @@
 
 					.row {
 						width: 100%;
-						display: flex !important;
+						// display: flex !important;
+						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
 						flex-wrap: wrap;
@@ -2286,7 +2287,8 @@
 
 	&.row {
 		width: 100%;
-		display: flex !important;
+		// display: flex !important;
+		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
