@@ -578,19 +578,20 @@
 function tabScroll(){
 	let scrollPosition = 0;
 
-	$('[class^=tab_scroll_box]').on('scroll', function() {
-		scrollPosition = $(this).scrollLeft();
-		// $('#scroll_position span').text(scrollPosition);
-	});
+	// $('[class^=tab_scroll_box]').on('scroll', function() {
+	// 	scrollPosition = $(this).scrollLeft();
+	// 	$('#scroll_position span').text(scrollPosition);
+	// });
 
 	$('[class^=tab_scroll_box] .tab_btn').on('click', function(){
 		const $this = $(this),
 					$scrollBox = $this.closest('[class^=tab_scroll_box]')
 					$scrollList = $scrollBox.children('.scroll');
 
-		const btn_offset = $this.closest('.wrap').length ? $this.offset().left - 20 : $this.position().left,
+		// const btn_offset = $this.closest('.wrap').length ? $this.offset().left - 20 : $this.position().left,
+		const btn_offset = $this.position().left,
 					scrollBox_w = $scrollList.width();
-		let scrollMove = btn_offset + scrollPosition - ($scrollBox.width() / 2) + ($this.outerWidth() / 2);
+		let scrollMove = btn_offset - ($scrollBox.width() / 2) + ($this.outerWidth() / 2);
 
 		// console.log('move : ' + scrollMove);
 		// console.log('버튼 위치 : ' + btn_offset, '스크롤 위치 : ' + scrollPosition);
