@@ -403,6 +403,10 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.popup_bottom)) {
 	padding-bottom: 32px;
 }
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner:has(.load_cont_ty2) {
+	width: 100%;
+	height: 100%;
+}
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_head {
 	margin-bottom: var(--gap-5);
 }
@@ -414,6 +418,12 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont {
 	overflow: hidden;
 	padding: 0;
+}
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont_ty2 {
+	overflow: hidden;
+}
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont_ty2 .popup_content {
+	padding-bottom: 0;
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.pts_cont {
 	padding: 0;

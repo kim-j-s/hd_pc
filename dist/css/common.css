@@ -2750,6 +2750,9 @@ strong {
 .acd_item .acd_cont .inner {
 	display: none;
 }
+.acd_item .acd_cont .inner .badge_wrap .hd_badge {
+	text-align: left;
+}
 .acd_item .acd_cont .inner .badge_wrap + .border_list {
 	margin-top: var(--gap-5);
 	padding-top: 16px;
@@ -2824,7 +2827,7 @@ strong {
 .acd_item .acd_head .acd_btn[class*="acd_ico_"] {
 	padding-left: 32px;
 	background-repeat: no-repeat;
-	background-position: left top;
+	background-position: left center;
 	background-size: 24px auto;
 }
 .acd_item .acd_head.active .preview {
@@ -3621,6 +3624,9 @@ strong {
 	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 	font-size: var(--font-size-body-medium);
 }
+.view_wrap .view_cont img {
+	display: block;
+}
 .view_wrap .view_cont .button_area {
 	text-align: right;
 	margin-bottom: var(--gap-3);
@@ -4263,10 +4269,6 @@ strong {
 	border-radius: var(--radius-medium1);
 	font-size: var(--font-size-button-large);
 	font-weight: 700;
-}
-.hd_btn_s_6 .hd_icon {
-	width: 16px;
-	height: 16px;
 }
 .hd_btn_s_6 .sub_g_text {
 	display: block;
@@ -9533,6 +9535,9 @@ strong {
 .list_ty2 + .btn_area {
 	margin-top: var(--gap-5);
 }
+.list_ty2 + .btn_area:has(button.hd_btn_s_6) {
+	margin-top: var(--gap-8);
+}
 .list_ty3 > li {
 	position: relative;
 	margin: 0;
@@ -14058,7 +14063,8 @@ ol li .table_wrap + .list_ty2 li + li {
 	margin-top: var(--gap-11);
 }
 .info_gray + .text_sub,
-.info_gray + [class^="list_ty"] {
+.info_gray + [class^="list_ty"],
+.info_gray + [class^="list_depth_ty"] {
 	margin-top: var(--gap-5);
 }
 .info_gray + .hd_icon.infoArrowSvg {
