@@ -177,7 +177,7 @@
 					background-position: left 4px center;
 					transform: translateY(-50%);
 				}
-				@for $i from 1 through 13 {
+				@for $i from 1 through 14 {
 					&.ico_benefit#{$i}::after {
 						background-image: url('../images/content/prdcar/ico_car_benefit#{$i}.svg');
 					}
@@ -239,6 +239,22 @@
 		}
 	}
 
+	// 이미지 박스
+	[class*="img_wrap"] {
+		border: 1px solid #CDD1D5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.img_wrap_highwalk {
+		margin-top: 32px;
+		height: 236px;
+		border-radius: 24px;
+		img {
+			width: 280px; 
+		}
+	}
+
 
 	// 간격
 	.sec_group {
@@ -246,12 +262,14 @@
 			margin-bottom: var(--gap-6);
 		}
 		.sec_body {
-			&:has(.title_h4),
-			&:has(.text_sub) {
+			&:has(.title_h4) {
 				margin-top: -8px;
 			}
 			&:has(.my_info_flow) {
 				margin-top: 0;
+				&:has(.title_h4) {
+					margin-top: -8px;
+				}
 			}
 		}
 	}
@@ -259,11 +277,11 @@
 	.group {
 		+ .group {
 			padding-top: 40px;
-		}
-		.group_item {
-			+ .group_item {
-				margin-top: var(--gap-8);
-			}
+		}		
+	}
+	.group_item {
+		+ .group_item {
+			margin-top: var(--gap-8);
 		}
 	}
 
@@ -273,7 +291,14 @@
 		+ .group_item {
 			margin-top: var(--gap-4);
 		}
-		+ .table_wrap {
+		+ .table_wrap,
+		+ .my_info_flow {
+			margin-top: var(--gap-5);
+		}
+	}
+
+	.text_sub {
+		+ .list_depth {
 			margin-top: var(--gap-5);
 		}
 	}
@@ -301,6 +326,19 @@
 		+ .list_depth {
 			margin-top: var(--gap-8);
 		}
+
+		.table {
+			border-collapse: collapse;
+		}
+
+		tbody:has(td[rowspan]) {
+			td:last-child {
+				border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+			}
+			td[rowspan]:last-child {
+				border-right: none
+			}
+		}
 	}
 
 	.my_info_flow {
@@ -310,6 +348,16 @@
 		& + .list_ty2 {
 			margin-top: var(--gap-5);
 		}
+
+		.img_wrap_ex {
+			margin-top: var(--gap-4);
+			height:320px;
+			background-color: #fff;
+			border-radius: 16px 16px 0 0;
+			img {
+				width: 250px;
+			}
+		}
 	}
 
 	// 자주하는질문
@@ -317,14 +365,14 @@
 		.acd_cont {  
 			.inner {
 				> p {
-					margin-bottom: var(--gap-4);
+					margin-bottom: var(--gap-5);
 				}
 				.btn_area {
 					margin-top: var(--gap-2);
 				}
 				.list_depth {
 					& + .text_sub {
-						margin-top: var(--gap-4);
+						margin-top: var(--gap-5);
 					}
 				}
 			}  
@@ -381,6 +429,106 @@
 	.file_attach_box  {
 		.file_thumbnail {
 			width: 100%;
+			img {
+				max-width: none;
+			}
+		}
+	}
+
+	//스마트 안전운전(UBI) 
+	.list_contract {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--gap-5);
+		.item {
+			padding: var(--padding-7) var(--padding-8);
+			background-color: var(--color-background-gray-subtler);
+			border-radius: 16px;
+			font-size: var(--font-size-label-medium);
+			color: var(--color-text-basic);
+			& > div {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				&::before {
+					content:"";
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					margin-bottom: var(--gap-2);
+				}
+			}
+
+			@for $i from 1 through 7 {
+				&.ico#{$i} {
+					&>div::before {
+						background-image: url('../images/content/prdcar/ico_contract_logo#{$i}.svg');
+					}
+				}
+			}
+		}
+	}
+	
+
+	// 타이틀 아이콘
+	.title_h3 {
+		&.icon::before {
+			content:"";
+			display: inline-block;
+			width: 24px;
+			height: 24px; 
+			margin: 4px 4px 0 0;
+			background: url('../images/content/prdcar/ico_price_20.svg') no-repeat 0 0;
+			background-size: 24px auto;
+			vertical-align: top;
+		}
+	}
+
+	//qr배너
+	.banner_qr {
+		display: flex;
+		justify-content: space-between;
+		gap: var(--gap-4);
+		padding: calc(var(--padding-8) - 1px);
+		background-color: var(--color-element-primary-lighter);
+		border: var(--border-width-static-regular) solid var(--color-element-primary-light);
+		border-radius: 24px;
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&::before {
+			width: 32px;
+			height: 32px;  
+			vertical-align: top;
+			margin-top: 14px;
+			background-image: url('../images/content/prdcar/ico_qr_heart.png');			
+		}
+		&::after {
+			width: 60px;
+			height: 60px;
+			background-image: url('../images/content/prdcar/img_qr.png');			
+		}
+		.item {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.title {
+			font-weight: 700;
+			font-size: var(--font-size-heading-small);
+		}
+		.desc {
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
 		}
 	}
 
