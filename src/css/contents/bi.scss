@@ -998,7 +998,10 @@
 				background-image: url(../images/content/bi/visual/bg_img_ltht.png);
 			}
 			&.pi_bg_ty3 { //자동차보험(개인)
-				background-image: url(../images/content/bi/visual/bg_img_mtps.png);
+				background-image: url(../images/content/bi/visual/bg_img_mtps_ty1.png);
+			}
+			&.pi_bg_ty3-1 { //자동차보험(개인) 타입2
+				background-image: url(../images/content/bi/visual/bg_img_mtps_ty2.png);
 			}
 			&.pi_bg_ty4 { //암보험
 				background-image: url(../images/content/bi/visual/bg_img_ltcc.png);
@@ -1073,7 +1076,7 @@
 					> small {
 						display: block;
 						font-weight: 700;
-						font-size: var(--font-size-heading-xsmall);
+						font-size: var(--font-size-heading-medium);
 						color: var(--color-text-primary-bold);
 					}
 					font-size: var(--font-size-heading-xxlarge);
