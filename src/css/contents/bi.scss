@@ -991,7 +991,7 @@
 			background-position: top 56px right 32px;
 			background-color: var(--color-surface-light-blue-subtle);
 
-			&.pi_bg_ty1 {
+			&.pi_bg_ty1 { //해외여행자보험
 				background-image: url(../images/content/bi/visual/bg_img_gitr.png);
 			}
 			&.pi_bg_ty2 { //건강보험
@@ -1057,6 +1057,12 @@
 			&.pi_bg_ty22 { //네이버페이
 				background-image: url(../images/content/bi/visual/bg_img_npay.png);
 			}
+			&.pi_bg_ty23 { //자동차보험(영업)
+				background-image: url(../images/content/bi/visual/bg_img_mtps3.png);
+			}
+			&.pi_bg_ty24 { //자동차보험(법인)
+				background-image: url(../images/content/bi/visual/bg_img_mtps4.png);
+			}
 
 
 			.pi_top {
@@ -1094,11 +1100,25 @@
 
 				.pb_details {
 					display: flex;
-					align-items: center;
+					flex-direction: column;
+					// align-items: center;
 					min-height: 210px;
 					padding: var(--padding-5) var(--padding-7);
 					border-radius: var(--radius-large2);
 					background-color: var(--color-surface-white-subtle);
+					
+					.pb_desc {
+						margin-left: auto;
+
+						.msg_info {
+							margin-top: 0;
+							text-align: right;
+						}
+						& + .pb_details_inner {
+							margin-top: var(--gap-3);
+						}
+					}
+					
 					.pb_details_inner {
 						display: grid;
 						grid-template-columns: repeat(2, 1fr);
