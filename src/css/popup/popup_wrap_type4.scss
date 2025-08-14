@@ -55,6 +55,13 @@
 				&:not(:has(.popup_bottom)){
 					padding-bottom: 32px;
 				}
+
+				// rd viewer
+				&:has(.load_cont_ty2){
+					width: 100%;
+					height: 100%;
+				}
+
 				.popup_head {
 					margin-bottom: var(--gap-5);
 				}
@@ -67,6 +74,12 @@
 					&.load_cont {
 						overflow: hidden;
 						padding: 0;
+					}
+					&.load_cont_ty2{
+						overflow: hidden;
+						.popup_content {
+							padding-bottom: 0;
+						}
 					}
 					&.pts_cont {
 						padding: 0;
