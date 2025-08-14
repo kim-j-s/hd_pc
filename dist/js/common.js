@@ -854,6 +854,26 @@ function inputState() {
 
 $(window).on('load', function() {
 	inputState();
+	
+	// 폼요소 라디오, 체크박스 타이틀 연결 필요시 살릴 소스
+	// $('.form_line').each(function(index) {
+	// 	const $formBox = $(this);
+	// 	const $formLabel = $formBox.find('.label_tit');
+	// 	const $formRadio = $formBox.find('.radio_group_wrap');
+	// 	const $formCheck = $formBox.find('.checkbox_group_wrap');
+
+	// 	if ($formRadio.length) {
+	// 		const labelId = 'label_radio_' + (index + 1);
+	// 		$formLabel.attr('id', labelId);
+	// 		$formRadio.attr('aria-labelledby', labelId);
+	// 	}
+
+	// 	if ($formCheck.length) {
+	// 		const labelId = 'label_check_' + (index + 1);
+	// 		$formLabel.attr('id', labelId);
+	// 		$formCheck.attr('aria-labelledby', labelId);
+	// 	}
+	// });
 });
 
 $(function(){
@@ -862,6 +882,8 @@ $(function(){
 
 	currentPlan();
 	fixedMenuPlay();
+	
+	nbList();//알릴고지 넘버링
 
 	// 스크롤 이벤트 초기화 및 동적 생성시 재 호출
 	$('.position_event_wrap').each(function () {
@@ -1161,18 +1183,6 @@ $(function(){
 	});
 	// 큰글씨 모드
 	
-	//알릴고지 숫자 표기
-	$('ol.form_list > li').each(function (index) {
-		const $labels = $(this).find('> .form_group_wrap > .form_line > .label_tit'); // 여러 개일 수 있음
-		const num = (index + 1).toString().padStart(2, '0');
-		$labels.each(function (i) {
-			let numStr = num;
-			if ($labels.length > 1 && i > 0) {
-			  numStr += `-${i}`;
-			}
-			$(this).prepend(`<span class="num">${numStr}</span>`);
-		});
-	});
 
 	//이메일 자동완성
 	function autoCompleteEmail() {
@@ -1434,7 +1444,25 @@ $(function(){
 	// e: 상품설명서 주요 내용 스크롤 버튼
 
 });
-	
+
+
+//알릴고지 숫자 표기
+function nbList() {
+	$('ol.form_list > li').each(function (index) {
+		const $labels = $(this).find('> .form_group_wrap > .form_line > .label_tit'); // 여러 개일 수 있음
+		const num = (index + 1).toString().padStart(2, '0');
+		
+		$labels.find('.num').remove(); // 기존 번호 삭제
+
+		$labels.each(function (i) {
+			let numStr = num;
+			if ($labels.length > 1 && i > 0) {
+			  numStr += `-${i}`;
+			}
+			$(this).prepend(`<span class="num">${numStr}</span>`);
+		});
+	});
+}
 
 $(window).resize(function(){
 	// prograssBar();

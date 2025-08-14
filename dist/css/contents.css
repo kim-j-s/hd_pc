@@ -930,6 +930,9 @@
 .selected_case.fuel {
 	background-image: url(../images/content/bi/icon_stepper_fuel.svg);
 }
+.selected_case.room {
+	background-image: url(../images/content/bi/icon_stepper_building.svg);
+}
 .selected_case:empty {
 	width: 0;
 	padding: 9px 0;
@@ -4680,6 +4683,15 @@ ul + .form_group_wrap {
 .title_item + p {
 	margin-top: var(--gap-4);
 }
+.info_cont_wrap {
+	margin-top: var(--gap-8);
+}
+.info_cont_wrap .title_h3 + .info_cont {
+	margin-top: var(--gap-4);
+}
+.info_cont_wrap + .info_cont_wrap {
+	margin-top: 52px;
+}
 /* 운전자보험 - 보험료 결제 */
 .insurance_payment_area {
 	position: relative;
@@ -7367,6 +7379,9 @@ ul + .form_group_wrap {
 .prd_car .benefit_area .info_list .item.ico_benefit13::after {
 	background-image: url("../images/content/prdcar/ico_car_benefit13.svg");
 }
+.prd_car .benefit_area .info_list .item.ico_benefit14::after {
+	background-image: url("../images/content/prdcar/ico_car_benefit14.svg");
+}
 .prd_car .info_list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -7422,20 +7437,42 @@ ul + .form_group_wrap {
 .prd_car .info_list.ty_line .item:first-of-type {
 	border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
+.prd_car [class*="img_wrap"] {
+	border: 1px solid #cdd1d5;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.prd_car .img_wrap_highwalk {
+	margin-top: 32px;
+	height: 236px;
+	border-radius: 24px;
+}
+.prd_car .img_wrap_highwalk img {
+	width: 280px;
+}
 .prd_car .sec_group .sec_head {
 	margin-bottom: var(--gap-6);
 }
-.prd_car .sec_group .sec_body:has(.title_h4),
-.prd_car .sec_group .sec_body:has(.text_sub) {
+.prd_car .sec_group .sec_body:has(.title_h4) {
 	margin-top: -8px;
 }
 .prd_car .sec_group .sec_body:has(.my_info_flow) {
 	margin-top: 0;
 }
+.prd_car .sec_group .sec_body:has(.my_info_flow):has(.title_h4) {
+	margin-top: -8px;
+}
 .prd_car .group + .group {
 	padding-top: 40px;
 }
-.prd_car .group .group_item + .group_item {
+.prd_car .group_item + .group_item {
 	margin-top: var(--gap-8);
 }
 .prd_car .title_h4 + .desc,
@@ -7443,7 +7480,11 @@ ul + .form_group_wrap {
 .prd_car .title_h4 + .group_item {
 	margin-top: var(--gap-4);
 }
-.prd_car .title_h4 + .table_wrap {
+.prd_car .title_h4 + .table_wrap,
+.prd_car .title_h4 + .my_info_flow {
+	margin-top: var(--gap-5);
+}
+.prd_car .text_sub + .list_depth {
 	margin-top: var(--gap-5);
 }
 .prd_car .list_depth + .table_wrap {
@@ -7461,20 +7502,38 @@ ul + .form_group_wrap {
 .prd_car .table_wrap + .list_depth {
 	margin-top: var(--gap-8);
 }
+.prd_car .table_wrap .table {
+	border-collapse: collapse;
+}
+.prd_car .table_wrap tbody:has(td[rowspan]) td:last-child {
+	border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+}
+.prd_car .table_wrap tbody:has(td[rowspan]) td[rowspan]:last-child {
+	border-right: none;
+}
 .prd_car .my_info_flow > li:last-child {
 	margin-bottom: 0;
 }
 .prd_car .my_info_flow + .list_ty2 {
 	margin-top: var(--gap-5);
 }
+.prd_car .my_info_flow .img_wrap_ex {
+	margin-top: var(--gap-4);
+	height: 320px;
+	background-color: #fff;
+	border-radius: 16px 16px 0 0;
+}
+.prd_car .my_info_flow .img_wrap_ex img {
+	width: 250px;
+}
 .prd_car .item_wrap_faq .acd_cont .inner > p {
-	margin-bottom: var(--gap-4);
+	margin-bottom: var(--gap-5);
 }
 .prd_car .item_wrap_faq .acd_cont .inner .btn_area {
 	margin-top: var(--gap-2);
 }
 .prd_car .item_wrap_faq .acd_cont .inner .list_depth + .text_sub {
-	margin-top: var(--gap-4);
+	margin-top: var(--gap-5);
 }
 .prd_car .mileage_box {
 	display: -webkit-box;
@@ -7537,6 +7596,130 @@ ul + .form_group_wrap {
 }
 .prd_car .file_attach_box .file_thumbnail {
 	width: 100%;
+}
+.prd_car .file_attach_box .file_thumbnail img {
+	max-width: none;
+}
+.prd_car .list_contract {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--gap-5);
+}
+.prd_car .list_contract .item {
+	padding: var(--padding-7) var(--padding-8);
+	background-color: var(--color-background-gray-subtler);
+	border-radius: 16px;
+	font-size: var(--font-size-label-medium);
+	color: var(--color-text-basic);
+}
+.prd_car .list_contract .item > div {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.prd_car .list_contract .item > div::before {
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-bottom: var(--gap-2);
+}
+.prd_car .list_contract .item.ico1 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo1.svg");
+}
+.prd_car .list_contract .item.ico2 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo2.svg");
+}
+.prd_car .list_contract .item.ico3 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo3.svg");
+}
+.prd_car .list_contract .item.ico4 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo4.svg");
+}
+.prd_car .list_contract .item.ico5 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo5.svg");
+}
+.prd_car .list_contract .item.ico6 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo6.svg");
+}
+.prd_car .list_contract .item.ico7 > div::before {
+	background-image: url("../images/content/prdcar/ico_contract_logo7.svg");
+}
+.prd_car .title_h3.icon::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 4px 4px 0 0;
+	background: url("../images/content/prdcar/ico_price_20.svg") no-repeat 0 0;
+	background-size: 24px auto;
+	vertical-align: top;
+}
+.prd_car .banner_qr {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	gap: var(--gap-4);
+	padding: calc(var(--padding-8) - 1px);
+	background-color: var(--color-element-primary-lighter);
+	border: var(--border-width-static-regular) solid var(--color-element-primary-light);
+	border-radius: 24px;
+}
+.prd_car .banner_qr::before,
+.prd_car .banner_qr::after {
+	content: "";
+	display: inline-block;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.prd_car .banner_qr::before {
+	width: 32px;
+	height: 32px;
+	vertical-align: top;
+	margin-top: 14px;
+	background-image: url("../images/content/prdcar/ico_qr_heart.png");
+}
+.prd_car .banner_qr::after {
+	width: 60px;
+	height: 60px;
+	background-image: url("../images/content/prdcar/img_qr.png");
+}
+.prd_car .banner_qr .item {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.prd_car .banner_qr .title {
+	font-weight: 700;
+	font-size: var(--font-size-heading-small);
+}
+.prd_car .banner_qr .desc {
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
 }
 .prd_car .tab_scroll_box_ty1::-webkit-scrollbar {
 	height: 6px;
