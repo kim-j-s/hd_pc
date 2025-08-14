@@ -1244,6 +1244,12 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty22 {
 	background-image: url(../images/content/bi/visual/bg_img_npay.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty23 {
+	background-image: url(../images/content/bi/visual/bg_img_mtps3.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty24 {
+	background-image: url(../images/content/bi/visual/bg_img_mtps4.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
@@ -1280,13 +1286,24 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	min-height: 210px;
 	padding: var(--padding-5) var(--padding-7);
 	border-radius: var(--radius-large2);
 	background-color: var(--color-surface-white-subtle);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_desc {
+	margin-left: auto;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_desc .msg_info {
+	margin-top: 0;
+	text-align: right;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_desc + .pb_details_inner {
+	margin-top: var(--gap-3);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner {
 	display: grid;
@@ -2716,8 +2733,20 @@
 	background-image: url(../images/content/mtps/img_rel_case5_on.svg);
 }
 /* 자동차보험 - 보험료 확인 */
-.acd_ico_rcd_ty1 {
+.acd_item .acd_ico_rcd_ty1 {
 	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty01.svg);
+}
+.acd_item .acd_ico_rcd_ty2 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty02.svg);
+}
+.acd_item .acd_ico_rcd_ty3 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty03.svg);
+}
+.acd_item .acd_ico_rcd_ty4 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty04.svg);
+}
+.acd_item .acd_ico_rcd_ty5 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10007000905_ty05.svg);
 }
 .border_list .list {
 	display: -webkit-box;

@@ -2750,6 +2750,9 @@ strong {
 .acd_item .acd_cont .inner {
 	display: none;
 }
+.acd_item .acd_cont .inner .badge_wrap .hd_badge {
+	text-align: left;
+}
 .acd_item .acd_cont .inner .badge_wrap + .border_list {
 	margin-top: var(--gap-5);
 	padding-top: 16px;
@@ -2824,7 +2827,7 @@ strong {
 .acd_item .acd_head .acd_btn[class*="acd_ico_"] {
 	padding-left: 32px;
 	background-repeat: no-repeat;
-	background-position: left top;
+	background-position: left center;
 	background-size: 24px auto;
 }
 .acd_item .acd_head.active .preview {
