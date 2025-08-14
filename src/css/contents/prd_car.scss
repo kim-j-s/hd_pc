@@ -429,6 +429,9 @@
 	.file_attach_box  {
 		.file_thumbnail {
 			width: 100%;
+			img {
+				max-width: none;
+			}
 		}
 	}
 
