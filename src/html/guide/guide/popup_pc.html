@@ -295,14 +295,17 @@
 		</div>
 	{{/ popup/popup_confirm}}
 	
-	{{#> popup/popup_full popup-id="pop_iframe01" popup-title="iframe 팝업" }}
-	<div class="popup_cont load_cont_ty2">
+	{{#> popup/popup_full popup-class="big" popup-id="pop_iframe01" popup-title="iframe 팝업" }}
+		<div class="popup_cont load_cont_ty2">
 			<div class="popup_content">
 				iframe 연결
 			</div>
 		</div>
-		<script>
-		</script>
+		<div class="popup_bottom">
+			<div class="btn_area">
+				{{> cp/button type="1" size="2" b-text="확인" }}
+			</div>
+		</div>
 	{{/ popup/popup_full}}
 
 {{/ layout/default }}	
