@@ -39,6 +39,7 @@
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기(팝업중첩)" popup="pop_type02" }}
 		{{> cp/button type="2" size="5" b-text="Layer 팝업열기" popup="pop_type03" }}
 		{{> cp/button type="2" size="5" b-text="Confirm 팝업열기" popup="pop_type06" }}
+		{{> cp/button type="2" size="5" b-text="iframe Case 팝업열기" popup="pop_iframe01" }}
 
 	</div>
 </div>
@@ -56,8 +57,10 @@
 	<!-- Full 팝업 -->
 	{{#> popup/popup_full popup-class="big" popup-id="pop_type05" popup-title="팝업 타이틀" }}
 	<div class="popup_cont">
-	팝업내용입니다<br>
-	내용
+		<div class="poup_content">
+			팝업내용입니다<br>
+			내용
+		</div>
 	</div>
 	<div class="popup_bottom">
 	<div class="btn_area">
@@ -71,8 +74,10 @@
 	<!-- Full 팝업 -->
 	{{#> popup/popup_full popup-id="pop_type01" popup-title="팝업 타이틀" }}
 		<div class="popup_cont">
-			팝업내용입니다<br>
-			내용
+			<div class="poup_content">
+				팝업내용입니다<br>
+				내용
+			</div>
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
@@ -84,8 +89,10 @@
 	<!-- Full 팝업 -->
 	{{#> popup/popup_full popup-class="big" popup-id="pop_type05" popup-title="팝업 타이틀" }}
 	<div class="popup_cont">
-		팝업내용입니다<br>
-		내용
+		<div class="poup_content">
+			팝업내용입니다<br>
+			내용
+		</div>
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
@@ -99,67 +106,69 @@
 	<!-- Bottom 팝업 -->
 	{{#> popup/popup_bottom popup-id="pop_type04" popup-title="팝업 타이틀" }}
 		<div class="popup_cont">
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
-			팝업내용입니다<br>
-			내용
+			<div class="poup_content">
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+				팝업내용입니다<br>
+				내용
+			</div>
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
@@ -174,75 +183,77 @@
 	<!-- Layer 팝업 -->		
 	{{#> popup/popup_layer popup-id="pop_type02" popup-title="팝업 타이틀" }}
 		<div class="popup_cont">
-			팝업내용입니다
-			<br><br><br>
-			<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-			<br><br><br>
+			<div class="poup_content">
+				팝업내용입니다
+				<br><br><br>
+				<button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+				<br><br><br>
 
-			(팝업이 중첩된 상태에서 trigger를 falsy한 값으로 지정했을 때, prevPopup으로 포커스 이동)
-			<button type="button" class="btn popup_open" onclick="openHDPopup('','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-			<br><br><br>
+				(팝업이 중첩된 상태에서 trigger를 falsy한 값으로 지정했을 때, prevPopup으로 포커스 이동)
+				<button type="button" class="btn popup_open" onclick="openHDPopup('','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+				<br><br><br>
 
 
-			(닫을 때 this가 아닌 다른 요소를 지정했을 때 - 아래의 input으로 포커스 설정한 예시)
-			<button type="button" class="btn popup_open" onclick="openHDPopup('#input01','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
-			<br><br><br>
-			<label>텍스트 입력창</label>
-			<input type="text" id="input01" class="input_text" placeholder="입력하세요">
-			<br><br><br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
-			팝업내용입니다<br>
-			내용<br>
+				(닫을 때 this가 아닌 다른 요소를 지정했을 때 - 아래의 input으로 포커스 설정한 예시)
+				<button type="button" class="btn popup_open" onclick="openHDPopup('#input01','pop_type03');"><span>[새 Layer 팝업열기]</span></button>
+				<br><br><br>
+				<label>텍스트 입력창</label>
+				<input type="text" id="input01" class="input_text" placeholder="입력하세요">
+				<br><br><br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+				팝업내용입니다<br>
+				내용<br>
+			</div>
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
@@ -254,9 +265,11 @@
 
 	{{#> popup/popup_layer popup-id="pop_type03" popup-title="팝업 타이틀" }}
 		<div class="popup_cont">
-			팝업내용입니다<br>
-			팝업내용입니다<br>
-			내용<br>
+			<div class="poup_content">
+				팝업내용입니다<br>
+				팝업내용입니다<br>
+				내용<br>
+			</div>
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
@@ -268,9 +281,11 @@
 
 	{{#> popup/popup_confirm popup-id="pop_type06" popup-title="팝업 타이틀" }}
 		<div class="popup_cont">
-			팝업내용입니다<br>
-			팝업내용입니다<br>
-			내용<br>
+			<div class="poup_content">
+				팝업내용입니다<br>
+				팝업내용입니다<br>
+				내용<br>
+			</div>
 		</div>
 		<div class="popup_bottom">
 			<div class="btn_area">
@@ -279,5 +294,18 @@
 			</div>
 		</div>
 	{{/ popup/popup_confirm}}
+	
+	{{#> popup/popup_full popup-class="big" popup-id="pop_iframe01" popup-title="iframe 팝업" }}
+		<div class="popup_cont load_cont_ty2">
+			<div class="popup_content">
+				iframe 연결
+			</div>
+		</div>
+		<div class="popup_bottom">
+			<div class="btn_area">
+				{{> cp/button type="1" size="2" b-text="확인" }}
+			</div>
+		</div>
+	{{/ popup/popup_full}}
 
 {{/ layout/default }}	

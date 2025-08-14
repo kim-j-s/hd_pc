@@ -29,8 +29,26 @@
 				</div>
 				
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" name="agreement01" rd-id="tabPanelcontract01">
-				
-					<ul class="special_contract_list radio state_check">
+					<!-- s: 25-08-14 수정 -->
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="label_tit">사망/장해</div>
+								{{#> cp/selectbox_pc s-title="사망/장해 보장금액 선택" }}
+									<option value="" >1억원</option>
+									<option value="" >5천만원</option>
+									<option value="" selected>3천만원</option>
+								{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line">
+							<div class="label_tit">부상</div>
+								{{#> cp/selectbox_pc s-title="부상 보장금액 선택" }}
+									<option value="" >5천만원</option>
+									<option value="" >3천만원</option>
+									<option value="" selected>1.5천만원</option>
+								{{/ cp/selectbox_pc}}
+						</div>
+					</div>
+					<!-- <ul class="special_contract_list radio state_check">
 						<li>
 							<div class="check_flex_box">
 								<div class="check_box">
@@ -137,10 +155,30 @@
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ul> -->
+					<!-- e: 25-08-14 수정 -->
 				</div>
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab02" name="agreement01" rd-id="tabPanelcontract02">
-					<ul class="special_contract_list radio state_check">
+					<!-- s: 25-08-14 수정 -->
+					<div class="form_group_wrap">
+						<div class="form_line">
+							<div class="label_tit">사망/장해</div>
+								{{#> cp/selectbox_pc s-title="사망/장해 보장금액 선택" }}
+									<option value="" selected>1억원</option>
+									<option value="" >5천만원</option>
+									<option value="" >3천만원</option>
+								{{/ cp/selectbox_pc}}
+						</div>
+						<div class="form_line">
+							<div class="label_tit">부상</div>
+								{{#> cp/selectbox_pc s-title="부상 보장금액 선택" }}
+									<option value="" >5천만원</option>
+									<option value="" selected>3천만원</option>
+									<option value="" >1.5천만원</option>
+								{{/ cp/selectbox_pc}}
+						</div>
+					</div>
+					<!-- <ul class="special_contract_list radio state_check">
 						<li>
 							<div class="check_flex_box">
 								<div class="check_box">
@@ -249,8 +287,8 @@
 								</div>
 							</div>
 						</li>
-					</ul>
-				
+					</ul> -->
+					<!-- e: 25-08-14 수정 -->
 				</div>
             </div>
 		</div>
