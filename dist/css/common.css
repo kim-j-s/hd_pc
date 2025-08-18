@@ -2419,6 +2419,9 @@ strong {
 	justify-content: end;
 	min-width: 122px;
 }
+.ag_groups + .ag_groups {
+	margin-top: var(--gap-11);
+}
 .ag_groups .ag_groups_top {
 	padding: var(--padding-8) 20px;
 	border-radius: var(--radius-large2);
