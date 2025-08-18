@@ -1140,6 +1140,8 @@
 							padding: 0;
 						}
 						.item {
+							display: flex;
+							align-items: center;
 							padding: var(--padding-3) 0 var(--padding-3) 44px;
 							font-size: var(--font-size-body-small);
 							background-repeat: no-repeat;
