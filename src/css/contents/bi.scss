@@ -1290,13 +1290,18 @@
 
 				.pbc_banners {
 					margin-top: var(--gap-5);
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					gap: 12px;
+					&:not(.full) {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 12px;
+					}
 					.item {
 						a {
 							display: block;
 							font-size: 0;
+							img {
+								display: block;
+							}
 						}
 					}
 				}
