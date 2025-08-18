@@ -1588,6 +1588,8 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners {
 	margin-top: var(--gap-5);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners:not(.full) {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 12px;
@@ -1595,6 +1597,9 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners .item a {
 	display: block;
 	font-size: 0;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners .item a img {
+	display: block;
 }
 .prd_bi_wrap .prd_bi_wrap_r {
 	-webkit-box-flex: 0;
