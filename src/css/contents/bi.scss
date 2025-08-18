@@ -921,17 +921,17 @@
 					margin-top: 0;
 					padding-top: 40px;
 
-					.pb_details {
-						.pb_details_inner {
-							.item {
-								.item_exp {
-									strong {
-										display: block;
-									}
-								}
-							}
-						}
-					}
+					// .pb_details {
+					// 	.pb_details_inner {
+					// 		.item {
+					// 			.item_exp {
+					// 				strong {
+					// 					display: block;
+					// 				}
+					// 			}
+					// 		}
+					// 	}
+					// }
 				}
 			}
 		}
@@ -1055,8 +1055,8 @@
 			&.pi_bg_ty20 { //개인정보보호배상책임보험(II)
 				background-image: url(../images/content/bi/visual/bg_img_gipi.png);
 			}
-			&.pi_bg_ty21 { //자동차보험(이륜차)
-				background-image: url(../images/content/bi/visual/bg_img_mtps2.png);
+			&.pi_bg_ty21 { //자동차보험(이륜차 개인)
+				background-image: url(../images/content/bi/visual/bg_img_mtbc.png);
 			}
 			&.pi_bg_ty22 { //네이버페이
 				background-image: url(../images/content/bi/visual/bg_img_npay.png);
@@ -1066,6 +1066,9 @@
 			}
 			&.pi_bg_ty24 { //자동차보험(법인)
 				background-image: url(../images/content/bi/visual/bg_img_mtps4.png);
+			}
+			&.pi_bg_ty25 { //자동차보험(이륜차 법인)
+				background-image: url(../images/content/bi/visual/bg_img_mtbc_business.png);
 			}
 
 
@@ -1081,6 +1084,11 @@
 						color: var(--color-text-primary-bold);
 					}
 					font-size: var(--font-size-heading-xxlarge);
+				}
+				.pt_desc {
+					padding-top: 8px;
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-subtle);
 				}
 				.pt_btn_area {
 					padding-top: 8px;
@@ -1132,6 +1140,8 @@
 							padding: 0;
 						}
 						.item {
+							display: flex;
+							align-items: center;
 							padding: var(--padding-3) 0 var(--padding-3) 44px;
 							font-size: var(--font-size-body-small);
 							background-repeat: no-repeat;
@@ -1146,7 +1156,7 @@
 								}
 							}
 
-							@for $i from 1 through 66 {
+							@for $i from 1 through 73 {
 								&.item_ico_ty#{$i} {
 									background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
 								}
@@ -1247,6 +1257,27 @@
 							// &.item_ico_ty32 {
 							// 	background-image: url(../images/content/bi/visual/bg_exp_ty32.png);  
 							// }
+						}
+					}
+					&:has(.bottom_info_wrap) {
+						padding-bottom: var(--padding-8);
+					}
+					.bottom_info_wrap {
+						margin-top: 20px;
+						border-top: 1px solid var(--color-border-information-light);
+						padding-top: 20px;
+						text-align: center;
+						
+						strong {
+							padding-left: 20px;
+							background: url(../images/icon/icon_info.svg) no-repeat left 50%;
+							background-size: 16px;
+							font-size: var(--font-size-body-medium);
+						}
+						.desc {
+							margin-top: var(--gap-2);
+							font-size: var(--font-size-body-small);
+							color: var(--color-text-subtle);
 						}
 					}
 
