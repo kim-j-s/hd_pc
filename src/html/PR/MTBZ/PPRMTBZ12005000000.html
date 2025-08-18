@@ -134,11 +134,13 @@
 						<div class="form_line full_half">
 							<div class="label_tit">보험증권 수령방법을 선택해주세요.</div>
 							<div class="radio_group_wrap" role="radiogroup">
+								<!-- s: 25-08-19 수정 -->
 								<!-- s: 소유자 불일치 케이스 -->
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_01" name="receiveSel02" labelname="모바일" checked=true }}
+								<!-- {{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_01" name="receiveSel02" labelname="모바일" checked=true }} -->
 								<!-- e: 소유자 불일치 케이스 -->
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="이메일" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_04" name="receiveSel02" labelname="직장" }}
+								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="이메일" checked=true }}
+								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_04" name="receiveSel02" labelname="우편" }}
+								<!-- e: 25-08-19 수정 -->
 							</div>
 							<ul class="list_ty2">
 								<!-- s: 피보험자/계약자 동일 -->
