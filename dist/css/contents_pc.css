@@ -3981,6 +3981,9 @@ body {
 .guarantee_select_wrap + .dc_info_box {
 	margin-top: var(--gap-5);
 }
+.guarantee_select_wrap + .acc_group {
+	margin-top: var(--gap-8);
+}
 .guarantee_select_wrap.guarantee_select_wrap_n3 .select_item .item_radio label {
 	width: 268px;
 	height: 256px;
@@ -5417,9 +5420,8 @@ body {
 	position: relative;
 	display: block;
 	width: 100%;
-	padding: var(--padding-3) 40px var(--padding-3) 52px;
+	padding: var(--padding-3) var(--padding-3) var(--padding-3) 52px;
 	border-radius: var(--radius-medium1);
-	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center/16px;
 	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 	background-color: var(--color-menu-secondary-fill-hover);
@@ -5447,9 +5449,13 @@ body {
 .prd_module_box .prd_login > .chg_item .text strong {
 	color: var(--color-text-basic);
 }
+.prd_module_box .prd_login > a.chg_item {
+	padding: var(--padding-3) 40px var(--padding-3) 52px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center/16px;
+}
 .prd_module_box .prd_login .chg_item:hover,
 .prd_module_box .prd_login .chg_item:focus {
-	background-color: #dee6ef;
+	background-color: var(--color-action-secondary-subtle-fill-hover);
 }
 .prd_module_box .prd_login .chg_item:hover:before,
 .prd_module_box .prd_login .chg_item:focus:before {

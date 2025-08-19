@@ -414,6 +414,7 @@
 	height: auto;
 	max-height: 100%;
 	padding-top: 0;
+	padding-bottom: 0;
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont.load_cont {
 	overflow: hidden;
