@@ -1,0 +1,45 @@
+{{#> layout/default no-sp=true page-title="정보입력"}}
+
+<!-- s: Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="법인 공동인증서 인증" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- s: popup_content_top -->
+		<div class="popup_content_top">
+			<h2 class="title_h2">				
+				<strong>법인 공동인증서로 인증을 진행해주세요</strong>
+			</h2>
+			<p class="title_sub">법인은 회원가입 절차 없이 공동인증만으로 업무 이용이 가능합니다.</p>
+		</div>
+		<!-- e: popup_content_top -->
+
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">법인명</div>
+				{{> cp/text type="text" placeholder="법인명(단체명) 입력" inp-title="법인명(단체명) 입력" }}
+			</div>
+
+			<div class="form_line">
+				<div class="label_tit">사업자등록번호</div>
+				<div class="comp_wrap business">
+					{{> cp/text type="tel" minlength="3" maxlength="3" placeholder="3자리" inp-title="사업자번호 첫번째 3자리 입력" value="2232" no_del="flase" }}
+					<span class="dash">-</span>
+					{{> cp/text type="tel" minlength="2" maxlength="2" placeholder="2자리" inp-title="사업자번호 두번째 2자리 입력" no_del="flase" }}
+					<span class="dash">-</span>
+					{{> cp/text type="tel" minlength="5" maxlength="5" placeholder="5자리" inp-title="사업자번호 3번째 5자리 입력" no_del="flase" }}
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="공동인증서 본인인증" disabled=true }}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: Full 팝업 -->
+
+{{/ layout/default }}
