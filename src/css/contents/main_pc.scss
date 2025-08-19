@@ -712,9 +712,8 @@
 			position: relative;
 			display: block;
 			width: 100%;
-			padding: var(--padding-3) 40px var(--padding-3) 52px;
+			padding: var(--padding-3) var(--padding-3) var(--padding-3) 52px;
 			border-radius: var(--radius-medium1);
-			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center / 16px;
 			transition: background-color 0.3s;
 			background-color: var(--color-menu-secondary-fill-hover);
 
@@ -731,7 +730,6 @@
 				transition: background-color 0.3s;
 			}
 
-
 			.text {
 				display: block;
 				padding: 6px 0 5px 0;
@@ -743,13 +741,17 @@
 				}
 			}
 		}
-		
+
+		> a.chg_item {
+			padding: var(--padding-3) 40px var(--padding-3) 52px;
+			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center / 16px;
+		}
+				
 		// change effect
 		.chg_item {
 			&:hover,
 			&:focus {
-				// background-color: var(--color-menu-secondary-fill-hover);
-				background-color: #DEE6EF;
+				background-color: var(--color-action-secondary-subtle-fill-hover);
 
 				&:before {
 					background-color: var(--color-element-secondary-lighter);
