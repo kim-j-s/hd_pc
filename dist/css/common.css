@@ -3971,6 +3971,7 @@ strong {
 .btn_area:has(.hd_btn_s_1) {
 	gap: var(--gap-4) var(--gap-3);
 }
+.btn_area + .ele_sign,
 .btn_area ~ .btn_area,
 .btn_area + .list_ty2,
 .btn_area + .card_item_wrap,
@@ -13749,6 +13750,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	line-height: 24px;
 	color: var(--color-text-basic);
 }
+.text_sub_ty2 + .btn_area,
 .text_sub_ty2 + .form_group_wrap,
 .text_sub_ty2 + .info_gray,
 .text_sub_ty2 + .card_item_wrap,
