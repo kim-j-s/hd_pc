@@ -5202,14 +5202,13 @@ ul + .form_group_wrap {
 /* 전자서명 */
 .ele_sign {
 	margin-top: var(--gap-8);
-	padding: var(--padding-5) var(--padding-7) var(--padding-8) var(--padding-7);
+	padding: var(--padding-8, 24px) var(--padding-7, 20px);
 	border-radius: var(--radius-large2);
 	border: var(--border-width-variable-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white-subtle);
 }
 .ele_sign .ele_sign_canvas_wrap .ele_sign_canvas_wrap_top {
 	position: relative;
-	padding-top: calc(var(--padding-8) + (var(--padding-1)));
 }
 .ele_sign .ele_sign_canvas_wrap .ele_sign_canvas_wrap_top .hd_btn {
 	position: absolute;
@@ -5227,7 +5226,7 @@ ul + .form_group_wrap {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	height: 160px;
+	height: 200px;
 	border-radius: var(--radius-medium3);
 	background-color: var(--color-surface-secondary-subtler);
 }
