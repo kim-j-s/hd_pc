@@ -126,7 +126,8 @@
 			&.agc_tig {
 				background-color: var(--color-input-surface-disabled);
 			}
-			+ .agc_item {
+			+ .agc_item,
+			+ .badge_wrap {
 				margin-top: var(--gap-5);
 			}
 		}
@@ -192,11 +193,11 @@
 					&::before {
 						content: '';
 						position: absolute;
-						top: 9px;
+						top: 10px;
 						left: 0;
-						width: 4px;
+						width: 3px;
 						border-radius: 50%;
-						border-bottom: 4px solid #33363D;
+						border-bottom: 3px solid #33363D;
 					}
 
 				}
@@ -215,6 +216,10 @@
 		.agc_item_cont {
 			padding-top: 16px;
 			padding-left: 16px;
+
+			&:has(.dot_none){
+				padding-top: var(--padding-3);
+			}
 		}
 
 		.aic_list {
