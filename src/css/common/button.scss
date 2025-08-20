@@ -13,6 +13,7 @@
 		gap: var(--gap-4) var(--gap-3);
 	}
 	
+	& + .ele_sign,
 	& ~ .btn_area,
 	& + .list_ty2,
 	& + .card_item_wrap,

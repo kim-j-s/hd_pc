@@ -322,6 +322,7 @@
 	color: var(--color-text-basic);
 
 	// margin-top 32
+	& + .btn_area,
 	& + .form_group_wrap,
 	& + .info_gray,
 	& + .card_item_wrap,
