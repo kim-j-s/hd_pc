@@ -19,30 +19,48 @@ function openHDPopup($triggerEl, target) {
 	let $trigger;
 
 	//$trigger 타입 유효성 체크
-	if (typeof $triggerEl == "string" || $triggerEl instanceof HTMLElement) {
-		$trigger = $($triggerEl);
-	} else if ($triggerEl instanceof jQuery) {
-		// jQuery 객체인 경우
-		$trigger = $triggerEl;
-	} else {		
+	try {
+		if (!$triggerEl) { // null 또는 undefined
+			$trigger = $(event.target);
+		} else if ($triggerEl instanceof jQuery) {
+			// jQuery 객체인 경우
+			$trigger = $triggerEl;
+		} else if (typeof $triggerEl === "string" || $triggerEl instanceof HTMLElement) {
+			$trigger = $($triggerEl);
+		} else {		
+			$trigger = $("body");
+		}
+	} catch {
 		$trigger = $("body");
 	}
-
+	
 	const $target = $("#" + target);
 
 	let $header = $target.find(".popup_head_title").length > 0 ? $target.find(".popup_head_title") : null;
 	let $content = $target.find(".popup_cont").length > 0 ? $target.find(".popup_cont") : null;
 
-	const getOpenerId = $trigger.attr("triggerId");
-	let openerId;
+	$("[triggerId]").removeAttr("triggerId");
+	$("[opner]").removeAttr("opner");
 
-	if (!getOpenerId) {
-		openerId = generateUUID();
-		$trigger.attr("triggerId", openerId);
-	} else {
-		openerId = getOpenerId;
+	if (!$trigger.is("button, a")) {
+		const $parentTrigger = $trigger.closest("button, a");
+		if ($parentTrigger.length) {
+			$trigger = $parentTrigger;
+		}
 	}
 
+	//const getOpenerId = $trigger.attr("triggerId");
+	let openerId;
+
+	// if (!getOpenerId) {
+	// 	openerId = generateUUID();
+	// 	$trigger.attr("triggerId", openerId);
+	// } else {
+	// 	openerId = getOpenerId;
+	// }
+
+	openerId = generateUUID();
+	$trigger.attr("triggerId", openerId);
 	$target.attr("opner", openerId);
 
 	// if ($(".wrap").attr("aria-hidden") == undefined || $(".wrap").attr("aria-hidden") == "false") {
@@ -175,6 +193,8 @@ function closeHDPopup(target, returnTarget = null) {
 		// focusTarget[0].offsetHeight; //강제 reflow
 		// focusTarget.css("display", "block");
 		setTimeout(() => {
+			$target.attr("aria-hidden", "true");
+			$target.find(".popup_inner").attr("aria-hidden", "true").removeAttr("tabindex", 0);
 			if(focusTarget) {
 				focusTarget.focus();
 				focusTarget.attr("aria-live", "assertive"); //포커스 이동을 스크린 리더에 알림
@@ -182,10 +202,6 @@ function closeHDPopup(target, returnTarget = null) {
 					focusTarget.attr("aria-live", null);
 				}, 0);
 			}
-
-
-			$target.attr("aria-hidden", "true");
-			$target.find(".popup_inner").attr("aria-hidden", "true").removeAttr("tabindex", 0);
 		}, 350);
 	} else {
 		// $(".wrap").attr("aria-hidden", "false");

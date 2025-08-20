@@ -10,9 +10,11 @@
 					<h2 class="p_title">
 						<strong>운전자 범위/연령 변경</strong>
 					</h2>
+					<!-- s: 25-08-20 UXW -->
 					<div class="sub_desc">
-						변경할 운전자 범위를 선택해주세요
+						<strong>변경</strong>할 <strong>운전자 범위</strong>를 <br>선택해주세요
 					</div>
+					<!-- e: 25-08-20 UXW -->
 				</div>
 				<div class="btn_area">
 					{{> cp/button type="3" size="4" leftIcon="iic" b-text="자동차 계약변경" btn-title="팝업 열기" popup="pop_insChk"}}
@@ -451,15 +453,18 @@
 <!-- e: 자동차 배서 메뉴 -->
 
 <!-- s: 자녀한정 선택 시, 변경불가 alert -->
-{{#> popup/popup_confirm popup-id="pop_type01" no-header=true }}
+<!-- s: 25-08-20 UXW -->
+{{#> popup/popup_confirm popup-id="pop_type01" popup-title="홈페이지에서 변경할 수 없는 계약입니다" no-header=true }}
+<!-- e: 25-08-20 UXW -->
 <div class="popup_cont">
 	<div class="popup_content">
-		<p class="info_text">자녀운전자한정특약은 홈페이지에서 변경하실 수 없습니다.</p>
+		<!-- s: 25-08-20 UXW -->
+		<p class="info_text">자녀운전자한정특약의 운전자 범위를 변경하려면 대표콜센터(1588-5656)로 문의해주세요.</p>
 		<ul class="list_ty2">
-			<li>피보험자 본인은 운전범위에 해당되지 않습니다.</li>
+			<li>피보험자 본인은 운전자 범위에 해당되지 않습니다.</li>
 			<li>피보험자가 기준인 일부 특약에 가입하실 수 없습니다.</li>
-			<li>운전범위 변경을 원하시는 경우 대표콜센터(1588-5656)로 연락주시기 바랍니다.</li>
 		</ul>
+		<!-- e: 25-08-20 UXW -->
 	</div>
 </div>
 <div class="popup_bottom">
