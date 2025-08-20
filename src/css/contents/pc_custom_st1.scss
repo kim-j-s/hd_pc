@@ -226,10 +226,16 @@ body {
 		+ .container {
 			margin-top: var(--gap-12);
 		}
+		+ .container_form {
+			margin-top: var(--gap-12);
+		}
 	}
 
 	.breadcrumb {
 		+ .container {
+			padding-top: var(--gap-8);
+		}
+		+ .container_form {
 			padding-top: var(--gap-8);
 		}
 	}

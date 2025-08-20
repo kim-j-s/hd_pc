@@ -159,13 +159,14 @@ strong {
 		}
 	}
 
-	.container_form {
-		flex: 1;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		overflow-y: auto;
-	}
+	// 모바일에서 적용 케이스
+	// .container_form {
+	// 	flex: 1;
+	// 	position: relative;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	overflow-y: auto;
+	// }
 
 	&.wrap_ty2 {
 
