@@ -2072,7 +2072,7 @@
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	display: inline-block;
-	padding: 1px 4px 0;
+	padding: 0 4px 1px;
 	background-color: var(--color-border-gray-darker);
 	font-size: var(--font-size-label-xsmall);
 	line-height: 14px;
@@ -2087,7 +2087,7 @@
 .progress_box_ty2 i .spot {
 	display: block;
 	width: 34px;
-	padding: 3px 4px 1px;
+	padding: 2px 4px;
 	background-color: var(--color-border-secondary);
 	font-size: var(--font-size-label-xsmall);
 	line-height: 15px;
@@ -7606,9 +7606,10 @@ ul + .form_group_wrap {
 	height: 320px;
 	background-color: #fff;
 	border-radius: 16px 16px 0 0;
+	overflow: hidden;
 }
 .prd_car .my_info_flow .img_wrap_ex img {
-	width: 250px;
+	width: 255px;
 }
 .prd_car .item_wrap_faq .acd_cont .inner > p {
 	margin-bottom: var(--gap-5);

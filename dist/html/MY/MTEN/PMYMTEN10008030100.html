@@ -56,14 +56,16 @@
 		</ul>
 
 		<!-- s: Bottom 팝업 -->
+		<!-- s: 25-08-20 UXW -->
 		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title">가입경력인정대상자 정보</div>
+						<div class="popup_head_title">가입경력인정 대상자 정보</div>
 					</div>
 
+					<!-- e: 25-08-20 UXW -->
 					<div class="popup_cont">
 						<div class="popup_content">
 							<div class="form_group_wrap">
@@ -79,12 +81,14 @@
 								<div class="form_line">
 									<div class="label_tit">주민등록번호</div>
 									<div class="comp_wrap birth">
+										<!-- s: 25-08-20 UXW -->
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="앞자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+												<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞 6자리 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 										</div>
+										<!-- e: 25-08-20 UXW -->
 										<span class="dash">-</span>
 										<div class="comp_wrap_keypad_call form_key_pc">
 											<input type="password" name="" id="" title="주민등록번호 뒷자리 입력" placeholder="뒷자리" maxlength="7" />
@@ -99,9 +103,11 @@
 									<div class="label_tit">피보험자와의 관계</div>
 									<!-- s: 25-07-08 수정 -->
 									<!-- s: 25-08-12 수정 -->
+									<!-- s: 25-08-20 UXW -->
 									<div class="select_option_box">
 										<select name="" id="" title="피보험자와의 관계 선택" class="selectbox" required>
-											<option value="" hidden disabled selected>선택해주세요.</option>
+											<option value="" hidden disabled selected>관계 선택</option>
+											<!-- e: 25-08-20 UXW -->
 											<!-- e: 25-08-12 수정 -->
 											<option value="">선택 옵션값 1</option>
 											<option value="">선택 옵션값 2</option>

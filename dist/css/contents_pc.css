@@ -135,7 +135,7 @@ body {
 .wrap {
 	position: relative;
 	display: block;
-	min-width: 1188px;
+	min-width: 1280px;
 	height: auto;
 	min-height: 100%;
 	padding: 120px 0 203px 0;
@@ -203,7 +203,13 @@ body {
 .wrap .header_pc + .container {
 	margin-top: var(--gap-12);
 }
+.wrap .header_pc + .container_form {
+	margin-top: var(--gap-12);
+}
 .wrap .breadcrumb + .container {
+	padding-top: var(--gap-8);
+}
+.wrap .breadcrumb + .container_form {
 	padding-top: var(--gap-8);
 }
 .wrap aside {
