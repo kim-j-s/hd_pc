@@ -11,6 +11,9 @@
                 </h2>
                 <div class="sub_desc">
 					보험료를 <strong>결제</strong> 및 <strong>전자서명</strong>을 <strong>진행</strong>해주세요
+					<!-- s: 25-08-21 UXW -->
+					<!-- 보험료를 <strong>결제하면 가입이 완료</strong>돼요 --><!-- 해외여행자보험 기간연장 타이틀 -->
+					<!-- e: 25-08-21 UXW -->
 				</div>
 			</div>
 		</div>
@@ -111,12 +114,17 @@
 			</div>
             <!-- e: 해외여행자보험 기간연장 외 결제 -->
             <!-- s: 해외여행자보험 기간연장 -->
-            {{> pay/card prev_story=true no_tit=true installment=true }}
+
+				<!-- s: 25-08-21 -->            
+				 {{> pay/card prev_story=true app_no=true installment=true }}
+				<!-- e: 25-08-21 -->
             <!-- e: 해외여행자보험 기간연장 -->
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="결제 정보를 입력해 주세요" disabled=true }}
+					<!-- s: 25-08-21 UXW -->
+					{{> cp/button type="1" size="1" b-text="결제 정보를 입력 중이에요" disabled=true }}
+					<!-- e: 25-08-21 UXW -->
 					<!-- {{> cp/button type="1" size="1" b-text="전자서명" }} 해외여행자보험 기간연장 외 상품 -->
 					<!-- {{> cp/button type="1" size="1" b-text="변경을 위해 전자서명 하기" }} 해외여행자보험 기간연장 -->
 				</div>
