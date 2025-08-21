@@ -368,6 +368,7 @@ strong {
 	padding: var(--gap-7) 0;
 	color: var(--color-text-subtle);
 	font-size: var(--font-size-body-medium);
+	text-align: center;
 	min-height: 160px;
 }
 .no_list_area .hd_icon {
@@ -5866,34 +5867,8 @@ strong {
 .calendar_tbl > table .day_active > .text {
 	color: var(--color-text-inverse-static);
 }
-.calendar_tbl > table .start_day.start_day_fix::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 50%;
-	background-color: var(--color-action-secondary-selected);
-}
-.calendar_tbl > table .start_day.start_day_fix > .text::before {
-	content: "시작일";
-	font-size: 0;
-}
 .calendar_tbl > table .day_today.day_active > .text::after {
 	background-color: var(--color-element-inverse-static);
-}
-.calendar_tbl > table .end_day.end_day_fix::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 50%;
-	background-color: var(--color-action-secondary-selected);
-}
-.calendar_tbl > table .end_day.end_day_fix > .text::before {
-	content: "종료일";
-	font-size: 0;
 }
 .calendar_tbl > table .between {
 	background-color: var(--color-action-secondary-selected);
@@ -6030,7 +6005,7 @@ strong {
 	padding: 0;
 }
 .card_item_wrap.focusin .card_item .item_inner {
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid transparent;
 }
 .card_item_wrap.focusin .card_item:not(.disabled):focus-within {
@@ -6073,7 +6048,7 @@ strong {
 }
 .card_item_wrap .card_item {
 	position: relative;
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	border-radius: 24px;
 	background: var(--color-surface-white-subtle);
@@ -6272,8 +6247,8 @@ strong {
 	margin-top: var(--gap-3);
 }
 .card_item_wrap .card_item .item_top .desc {
-	font-size: 14px;
-	line-height: 21px;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-information);
 	color: #58616a;
 }
 .card_item_wrap .card_item .item_top + .card_list_ty1 > li:first-child {
@@ -6349,7 +6324,6 @@ strong {
 	margin: 0;
 	padding: 0 0 12px;
 	font-size: var(--font-size-body-small);
-	line-height: 20px;
 	color: inherit;
 }
 .card_item_wrap .card_item .card_list_ty1 > li:not(.list_title) {
@@ -6814,7 +6788,7 @@ strong {
 	margin-top: var(--gap-5);
 }
 .card_list_wrap_ty2 .card_item {
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white-subtle);
 	border-radius: var(--radius-large2);
@@ -6904,7 +6878,7 @@ strong {
 	margin-top: var(--gap-5);
 }
 .card_item.donation {
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white-subtle);
 	border-radius: var(--radius-large2);
@@ -7108,7 +7082,7 @@ strong {
 }
 .card_list_wrap_ty4 .card_item {
 	position: relative;
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white-subtle);
 	border-radius: var(--radius-large2);
@@ -7171,7 +7145,7 @@ strong {
 }
 .form_card_case {
 	position: relative;
-	padding: var(--padding-8) var(--padding-7);
+	padding: calc(var(--padding-8) - 1px) var(--padding-7);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	border-radius: 24px;
 }
@@ -12670,7 +12644,7 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .stepper_list .list_item {
 	position: relative;
-	font-size: 14px;
+	font-size: var(--font-size-body-small);
 }
 .stepper_list .list_item ~ .list_item {
 	padding-left: 18px;
@@ -14558,4 +14532,13 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .function_item + .info_gray.ty2 ul {
 	margin-top: 0;
+}
+.pay_notice .msg_info {
+	background-position: left 2px;
+}
+.pay_notice .msg_info + .list_ty2 {
+	margin: var(--gap-6) 0 0 var(--gap-6);
+}
+.pay_notice + .tab_wrap {
+	margin-top: var(--gap-8);
 }

@@ -108,7 +108,7 @@
 	-ms-flex: 1;
 	flex: 1;
 	padding: var(--padding-6) var(--padding-8) var(--padding-5);
-	font-size: 14px;
+	font-size: var(--font-size-body-small);
 }
 .popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 {
 	padding-top: 0;

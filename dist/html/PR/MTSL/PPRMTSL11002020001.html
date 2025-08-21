@@ -1,7 +1,3 @@
-<!---
-화면번호 : MPRMTPS10004010100_1
-경로 : 3.자동차 상세정보 > 3-1.자동차 상세정보 입력 > 차량정보와 부품정보 조회(case2)
--->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -45,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>자동차 상세정보 | 상품 - 현대해상 다이렉트</title>
+		<title>자동차 기본정보 | 상품 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -65,16 +61,10 @@
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title"></div>
+						<div class="popup_head_title">보험기간 입력</div>
 					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
-							<!-- s: popup_content_top -->
-							<div class="popup_content_top">
-								<h2 class="title_h2"><strong>보험기간</strong>을 입력해 주세요</h2>
-							</div>
-							<!-- e: popup_content_top -->
-
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">가입기간</div>
@@ -98,7 +88,7 @@
 										<div class="label_tit">보험시작일</div>
 										<div class="input_text calendar">
 											<div class="inp">
-												<input type="tel" class="inp_picker" title="날짜를 입력해주세요" />
+												<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 											</div>
 										</div>
@@ -107,46 +97,33 @@
 										<div class="label_tit">보험종료일</div>
 										<div class="input_text calendar">
 											<div class="inp">
-												<input type="tel" class="inp_picker" title="날짜를 입력해주세요" />
+												<input type="tel" class="inp_picker" placeholder="날짜 선택" title="날짜를 입력해주세요" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
 							<!-- s: 꼭 알아두세요 -->
+							<!-- s: 25-08-21 수정 -->
 							<div class="bottom_fix_notice">
 								<div class="acd_item">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>꼭 알아두세요</span></button>
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
 									</div>
 									<div class="acd_cont">
-										<div class="inner">
-											<!-- s: 가입기간 1년 계약 선택 시 노출 -->
-											<ul class="list_ty1">
-												<li>차대번호로 가입하는 경우, 추후 차량번호로 계약변경이 필요합니다.</li>
-												<li><strong class="point">자동차를 구입할 예정인 경우(차량번호와 차대번호를 둘 다 모르는 경우)에는 보험료 계산은 가능하지만, 가입은 불가능합니다.</strong></li>
-												<li>1년으로 가입하는 경우, 보험기간의 시작일과 종료일은 반드시 같아야 합니다.</li>
-												<li>보험계약을 갱신하는 경우, 보험효력은 시작일 24시( 다음날 00시)부터 종료일의 24시까지 입니다. (단 만기일이 경과하여 가입하는 경우, 의무보험의 보험효력은 보험료를 받은 때부터 시작되고 임의보험은 보험료를 받은 날의 24시부터 시작됩니다.)</li>
-												<li>자동차를 새로 구입하여 가입하는 경우, 보험효력은 보험료를 받은 때부터 시작됩니다.</li>
-											</ul>
-											<!-- e: 가입기간 1년 계약 선택 시 노출 -->
-
-											<!-- s: 가입기간 1년 미만 계약 선택 시 노출 -->
+										<div class="inner" style="display: block">
 											<ul class="list_depth">
-												<li>차대번호로 가입하는 경우, 추후 차량번호로 계약변경이 필요합니다.</li>
-												<li><strong class="point">자동차를 구입할 예정인 경우(차량번호와 차대번호를 둘 다 모르는 경우)에는 보험료 계산은 가능하지만, 가입은 불가능합니다.</strong></li>
+												<li>1년으로 가입하는 경우 보험기간의 <strong class="point">개시일과 종료일이 같아야 합니다.</strong> (예:2022.04.<strong class="point">01</strong>~2023.04.<strong class="point">01</strong>)</li>
 												<li>
 													보험기간을 <strong class="point">1년 미만</strong>으로 가입하시는 경우, 아래 내용을 반드시 확인하시기 바랍니다.
 													<ul>
 														<li>갱신시 무사고 할인혜택을 받으실 수 없습니다.</li>
-														<li><strong class="point">Eco 마일리지 특별약관을 가입하실 수 없습니다.</strong></li>
 														<li>단, 다른 자동차보험 계약과 동일증권으로 가입하는 경우 보험기간 3개월 이상인 경우에 한하여 가입할 수 있습니다.</li>
 														<li>
 															<strong class="point">보험기간 별 긴급출동 서비스 제공 횟수가 상이하오니</strong> 약관을 참고해 주시기 바랍니다.
 															<ul>
-																<li>(3개월 초과~1년 미만 계약 : 3회, 3개월 이하 계약 : 1회, 개인용 기준)</li>
+																<li>(3개월 초과~1년 미만 계약 : 3회, 3개월 이하 계약 : 1회, 영업용 기준)</li>
 															</ul>
 														</li>
 														<li>인터넷으로 보험가입시, 보험기간이 3개월 미만인 경우에는 자기차량손해 담보를 가입하실 수 없습니다.</li>
@@ -158,26 +135,23 @@
 														<li>단기요율은 보험기간1년의 적용보험료를 100으로 가정할 때 보험기간에 따라 고객이 부담하게 되는 보험료 비율입니다.</li>
 													</ul>
 												</li>
-												<li>보험계약을 갱신하는 경우, 보험효력은 시작일 24시( 다음날 00시)부터 종료일의 24시까지 입니다. (단 만기일이 경과하여 가입하는 경우, 의무보험의 보험효력은 보험료를 받은 때부터 시작되고 임의보험은 보험료를 받은 날의 24시부터 시작됩니다.)</li>
-												<li>자동차를 새로 구입하여 가입하는 경우, 보험효력은 보험료를 받은 때부터 시작됩니다.</li>
 											</ul>
-											<!-- e: 가입기간 1년 미만 계약 선택 시 노출 -->
 										</div>
 									</div>
 								</div>
 							</div>
+							<!-- e: 25-08-21 수정 -->
 							<!-- e: 꼭 알아두세요 -->
 						</div>
 					</div>
-
 					<div class="popup_bottom">
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">1년 계약으로</span>
+								<span class="text">1년 계약으로 가입할게요</span>
 							</button>
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 					
-						<span class="text">1년 미만 계약으로</span>
+						<span class="text">1년 미만 계약으로 가입할게요</span>
 					
 					</button> -->
 						</div>

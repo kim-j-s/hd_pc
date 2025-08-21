@@ -837,7 +837,7 @@
 	position: relative;
 	width: auto;
 	padding: 9px 10px 9px 34px;
-	font-size: 14px;
+	font-size: var(--font-size-body-small);
 	line-height: 20px;
 	color: var(--color-text-basic);
 	border-radius: 12px;
@@ -4414,7 +4414,7 @@ ul + .form_group_wrap {
 	margin-top: var(--gap-8);
 }
 .banner_box.ty3 {
-	margin: var(--gap-8) 0;
+	margin: var(--gap-8) 0 var(--gap-7);
 }
 .pop_title_h1 + .info_text + .btn_area {
 	margin: 8px 0 32px;

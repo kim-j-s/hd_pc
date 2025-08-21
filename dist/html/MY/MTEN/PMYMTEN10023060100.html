@@ -1303,7 +1303,7 @@
 															<li class="search_reult_list_item">
 																<div class="no_list_area">
 																	<i class="hd_icon exclamationSvg"></i>
-																	<p>검색결과가 없어요</p>
+																	<p>검색 결과가 없어요.<br />다른 검색어로 조회해보세요.</p>
 																</div>
 															</li>
 														</ul>
@@ -2146,9 +2146,11 @@
 							<!-- s: 25-07-31 -->
 							<div class="btn_area end">
 								<!-- s: 25-08-14 수정 -->
+								<!-- s: 25-08-21 UXW -->
 								<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type07');">
-									<span class="text">이전 카드정보 불러오기</span>
+									<span class="text">이전 카드 정보 불러오기</span>
 								</a>
+								<!-- e: 25-08-21 UXW -->
 								<!-- e: 25-08-14 수정 -->
 							</div>
 							<!-- e: 25-07-31 -->
@@ -2161,14 +2163,14 @@
 											<span class="si_stat">선택됨</span>
 										</div>
 									</div>
-									<!-- s: KB카드 선택 시 노출 -->
+									<!-- s: 25-08-21 UXW -->
 									<div class="inp_checkbox">
 										<input type="checkbox" id="checkbox1" />
 										<label for="checkbox1" class="chk_label">
-											<span class="label_cont">앱카드 결제</span>
+											<span class="label_cont">앱카드 사용</span>
 										</label>
 									</div>
-									<!-- e: KB카드 선택 시 노출 -->
+									<!-- e: 25-08-21 UXW -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">카드번호</div>
@@ -2191,6 +2193,7 @@
 											</div>
 										</div>
 										<span class="dash">-</span>
+										<!-- s: 25-08-21 UXW -->
 										<div class="comp_wrap_keypad_call form_key_pc">
 											<input type="password" name="" id="" title="카드번호 마지막 4(3자리) 입력" placeholder="4(3자리)" maxlength="4" />
 											<span>
@@ -2198,6 +2201,8 @@
 												<label for="kp1">마우스입력기사용</label>
 											</span>
 										</div>
+
+										<!-- e: 25-08-21 UXW -->
 									</div>
 								</div>
 								<div class="form_line">
@@ -2218,17 +2223,21 @@
 										</a>
 										<!-- e: 25-07-31 수정 -->
 									</div>
+									<!-- s: 25-08-21 UXW -->
 									<div class="select_option_box">
 										<select name="" id="" title="카드 할부 선택" class="selectbox" required>
-											<option value="" hidden disabled>선택</option>
-											<option value="" selected>일시불</option>
+											<option value="" hidden disabled selected>개월 수 선택</option>
+											<option value="">일시불</option>
 											<option value="">2개월</option>
 										</select>
 									</div>
+									<!-- e: 25-08-21 UXW -->
 								</div>
 								<ul class="list_ty2 full">
 									<!-- s: 25-08-14 UXW -->
-									<li><strong class="point">계약자 명의의 국내 발급 카드로만 결제가 가능합니다.</strong> (법인, 가족카드 불가)</li>
+									<!-- s: 25-08-21 UXW -->
+									<li><strong class="point">계약자 명의의 국내 발급 카드로만 결제할 수 있어요.</strong>(법인, 가족카드 불가)</li>
+									<!-- e: 25-08-21 UXW -->
 									<!-- e: 25-08-14 UXW -->
 								</ul>
 							</div>
@@ -2256,9 +2265,11 @@
 							<!-- s: 25-07-31 -->
 							<div class="btn_area end">
 								<!-- s: 25-08-14 수정 -->
+								<!-- s: 25-08-21 UXW -->
 								<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type07');">
-									<span class="text">이전 결제정보 불러오기</span>
+									<span class="text">이전 결제 정보 불러오기</span>
 								</a>
+								<!-- e: 25-08-21 UXW -->
 								<!-- e: 25-08-14 수정 -->
 							</div>
 							<!-- e: 25-07-31 -->
@@ -2274,17 +2285,21 @@
 								</div>
 								<div class="form_line">
 									<div class="label_tit">계좌번호</div>
+									<!-- s: 25-08-21 UXW -->
 									<div class="input_text">
 										<div class="inp">
-											<input type="text" placeholder="계좌번호 입력" title="계좌번호 입력" />
+											<input type="text" placeholder="- 없이 입력" title="계좌번호 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-21 UXW -->
 									<ul class="list_ty2">
 										<!-- s: 25-08-14 UXW -->
 										<li><strong class="point">김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
 										<!-- e: 25-08-14 UXW -->
-										<li>즉시 이체 가능 시간 : 09:00 ~ 21:50</li>
+										<!-- s: 25-08-21 UXW -->
+										<li>즉시 이체 가능 시간: 09:00~21:50</li>
+										<!-- e: 25-08-21 UXW -->
 									</ul>
 								</div>
 							</div>

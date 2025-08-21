@@ -903,7 +903,6 @@ body {
 	display: inline-block;
 	padding-right: 18px;
 	font-size: var(--font-size-label-medium);
-	line-height: 1.5;
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 2px/16px auto;
 }
 .hd_btn.short_cut2 .text .short_cut2_tit::after {
@@ -2449,9 +2448,9 @@ body {
 	padding: 0 calc(var(--padding-6) - 2px);
 }
 .comp_wrap.card .comp_wrap_keypad_call {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
+	-webkit-box-flex: 1.6;
+	-ms-flex: 1.6;
+	flex: 1.6;
 }
 .comp_wrap.card .comp_wrap_keypad_call.form_key_pc > input {
 	width: 59px;
@@ -3596,6 +3595,9 @@ body {
 	display: -ms-flexbox;
 	display: flex;
 	gap: var(--gap-3);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 .coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn {
 	-webkit-box-flex: 0;
@@ -3605,6 +3607,10 @@ body {
 .coverage_item_list_ty3 > .list .detail_list .item_inner + .cont_text_sub {
 	margin-top: 4px;
 }
+.coverage_item_list_ty3 > .list .detail_list .item_inner .inp_checkbox {
+	-ms-flex-item-align: center;
+	align-self: center;
+}
 .coverage_item_list_ty3 > .list .detail_list .inp_checkbox .chk_label {
 	padding-left: 0;
 	width: 20px;
@@ -3612,6 +3618,12 @@ body {
 }
 .coverage_item_list_ty3 > .list .detail_list .inp_checkbox input[type="checkbox"] {
 	left: 0;
+}
+.coverage_item_list_ty3 > .list .detail_list .coverage_text {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	font-size: var(--font-size-label-medium);
 }
 .coverage_item_list_ty3 > .list .detail_list .chk_lby2 {
 	padding: 5px 0 0 28px;

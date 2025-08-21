@@ -106,9 +106,11 @@
 							<!-- s: 25-07-31 -->
 							<div class="btn_area end">
 								<!-- s: 25-08-14 수정 -->
+								<!-- s: 25-08-21 UXW -->
 								<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type07');">
-									<span class="text">이전 카드정보 불러오기</span>
+									<span class="text">이전 카드 정보 불러오기</span>
 								</a>
+								<!-- e: 25-08-21 UXW -->
 								<!-- e: 25-08-14 수정 -->
 							</div>
 							<!-- e: 25-07-31 -->
@@ -143,6 +145,7 @@
 											</div>
 										</div>
 										<span class="dash">-</span>
+										<!-- s: 25-08-21 UXW -->
 										<div class="comp_wrap_keypad_call form_key_pc">
 											<input type="password" name="" id="" title="카드번호 마지막 4(3자리) 입력" placeholder="4(3자리)" maxlength="4" />
 											<span>
@@ -150,6 +153,8 @@
 												<label for="kp1">마우스입력기사용</label>
 											</span>
 										</div>
+
+										<!-- e: 25-08-21 UXW -->
 									</div>
 								</div>
 								<div class="form_line">
@@ -170,16 +175,20 @@
 										</a>
 										<!-- e: 25-07-31 수정 -->
 									</div>
+									<!-- s: 25-08-21 UXW -->
 									<div class="select_option_box">
 										<select name="" id="" title="카드 할부 선택" class="selectbox" required>
-											<option value="" hidden disabled>선택</option>
-											<option value="" selected>일시불</option>
+											<option value="" hidden disabled selected>개월 수 선택</option>
+											<option value="">일시불</option>
 											<option value="">2개월</option>
 										</select>
 									</div>
+									<!-- e: 25-08-21 UXW -->
 								</div>
 								<ul class="list_ty2 full">
-									<li>&회사명&(계약자)명의의 국내발급 카드로만 결제가 가능합니다. (법인, 가족카드 불가)</li>
+									<!-- s: 25-08-21 UXW -->
+									<li>&회사명&(계약자)명의의 국내발급 카드로만 결제할 수 있어요.(법인, 가족카드 불가)</li>
+									<!-- e: 25-08-21 UXW -->
 								</ul>
 							</div>
 						</div>
@@ -189,9 +198,11 @@
 							<!-- s: 25-07-31 -->
 							<div class="btn_area end">
 								<!-- s: 25-08-14 수정 -->
+								<!-- s: 25-08-21 UXW -->
 								<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type07');">
-									<span class="text">이전 결제정보 불러오기</span>
+									<span class="text">이전 결제 정보 불러오기</span>
 								</a>
+								<!-- e: 25-08-21 UXW -->
 								<!-- e: 25-08-14 수정 -->
 							</div>
 							<!-- e: 25-07-31 -->
@@ -207,17 +218,21 @@
 								</div>
 								<div class="form_line">
 									<div class="label_tit">계좌번호</div>
+									<!-- s: 25-08-21 UXW -->
 									<div class="input_text">
 										<div class="inp">
-											<input type="text" placeholder="계좌번호 입력" title="계좌번호 입력" />
+											<input type="text" placeholder="- 없이 입력" title="계좌번호 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-21 UXW -->
 									<ul class="list_ty2">
 										<!-- s: 25-08-14 UXW -->
 										<li><strong class="point">김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
 										<!-- e: 25-08-14 UXW -->
-										<li>즉시 이체 가능 시간 : 09:00 ~ 21:50</li>
+										<!-- s: 25-08-21 UXW -->
+										<li>즉시 이체 가능 시간: 09:00~21:50</li>
+										<!-- e: 25-08-21 UXW -->
 									</ul>
 								</div>
 							</div>
@@ -237,12 +252,14 @@
 								</div>
 								<div class="form_line">
 									<div class="label_tit">입금 예정일</div>
+									<!-- s: 25-08-21 UXW -->
 									<div class="input_text calendar">
 										<div class="inp">
-											<input type="tel" class="inp_picker" placeholder="날짜를 선택하세요" title="날짜를 입력해주세요" />
+											<input type="tel" class="inp_picker" placeholder="입금 예정일 선택" title="날짜를 입력해주세요" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 										</div>
 									</div>
+									<!-- e: 25-08-21 UXW -->
 									<ul class="list_ty2">
 										<li><span class="point">2025년01월01일(보험시작일) 전까지 입금이 완료되어야 자동차보험의 효력이 발생합니다.</span></li>
 									</ul>

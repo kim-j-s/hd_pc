@@ -54,6 +54,7 @@
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 		<div id="wrap" class="wrap">
+			<!-- s: 25-08-21 UXW -->
 			<div id="header" class="header_pc header_pc_nd">
 				<div class="header_pc_inner">
 					<div class="hpi_bottom">
@@ -61,7 +62,7 @@
 							<h1 class="hpi_logo">
 								<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트" />
 							</h1>
-							<strong class="hpi_l_prd_name">풍수해·지진재해보험(소상공인용)</strong>
+							<strong class="hpi_l_prd_name">풍수해·지진재해보험(소상공인)</strong>
 						</div>
 
 						<div class="hpi_sub_utils">
@@ -75,13 +76,18 @@
 					</div>
 				</div>
 			</div>
+			<!-- e: 25-08-21 UXW -->
 
 			<div id="container" class="container">
 				<div class="content">
 					<div class="title_view_wrap">
 						<div class="page_title">
 							<div class="p_info">일반/공장 정보</div>
-							<h2 class="p_title">가입할 <strong>일반/공장의 정보</strong>를 입력하고 <strong>보험료를</strong> 확인해주세요</h2>
+							<h2 class="p_title">
+								<!-- s: 25-08-21 UXW -->
+								가입할 <strong>일반/공장 정보</strong> 입력 후 보험료를 확인해주세요
+								<!-- e: 25-08-21 UXW -->
+							</h2>
 						</div>
 					</div>
 
@@ -226,9 +232,11 @@
 							<div class="acd_cont">
 								<div class="inner" style="display: block">
 									<ul class="list_ty1">
-										<li>사업장 또는 공장이 위치하는 건물의 지상 층수를 입력해주세요(지하층 제외)</li>
+										<!-- s: 25-08-21 UXW -->
+										<li>사업장 또는 공장이 위치하는 건물의 지상 층수를 입력해주세요.(지하층 제외)</li>
 										<li>보험에 가입하고자하는 해당 층을 선택해주세요.</li>
-										<li><strong class="point">지하층은 가입 및 보상이 불가합니다.</strong> <br />(사업장 및 공장이 지하층부터 지상층까지 있을 경우 지상1층부터 가입할 수 있습니다.)</li>
+										<li><strong class="point">지하층은 가입 및 보상 대상이 아닙니다.</strong> <br />(사업장 및 공장이 지하층부터 지상층까지 있을 경우 지상1층부터 가입할 수 있습니다.)</li>
+										<!-- e: 25-08-21 UXW -->
 
 										<!-- s: 요기요 제휴 유입 Case -->
 										<li>보험에 가입하고자하는 해당 층을 선택해주세요.</li>
@@ -241,6 +249,166 @@
 					</div>
 					<!-- e: 꼭 알아두세요 -->
 				</div>
+				<!-- s: 25-08-21 수정 -->
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<!-- s: 25-07-24 수정 -->
+					<div class="info_cont pro_info_wrap">
+						<div class="pro_info_item">
+							<div class="tit_box">
+								<h3 class="pop_title_h3">기초 정보</h3>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</div>
+							<div class="data_list">
+								<ul>
+									<li>
+										<dl>
+											<dt class="business">사업자 형태</dt>
+											<dd>공장</dd>
+										</dl>
+										<dl>
+											<dt class="structure">건물 형태</dt>
+											<dd>공장</dd>
+										</dl>
+										<dl>
+											<dt class="type">업종</dt>
+											<dd>금속기계기구</dd>
+										</dl>
+										<dl>
+											<dt class="person">소유 여부</dt>
+											<dd>자가소유</dd>
+										</dl>
+									</li>
+								</ul>
+								<!-- s: 정보를 입력 중인경우 -->
+								<!-- e: 정보를 입력 중인경우 -->
+							</div>
+						</div>
+						<div class="pro_info_item">
+							<div class="tit_box">
+								<h3 class="pop_title_h3">건물 정보</h3>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
+									<span class="text">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</div>
+							<div class="data_list">
+								<ul>
+									<li>
+										<dl>
+											<dt class="info">총 지상 층수</dt>
+											<dd>5층</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="info">가입 층수</dt>
+											<dd>1층 ~ 2층</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt class="info">전용면적</dt>
+											<dd>200.0 ㎡ (65평)</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1.보험료 계산 결과</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>15,100원</span></li>
+											<li>납입기간: <span>일시납</span></li>
+											<li>보험기간: <span>2025.01.01 24시~2026.01.01 24시</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
+									<span class="sr-only">수정</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3.가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
+									<span class="sr-only">재확인</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">4.보험료 결제</dt>
+									<dd>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+					<!-- e: 25-07-24 수정 -->
+
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+						<ul class="list_depth_ty2">
+							<li>인터넷가입 보험료와 차이가 있어요</li>
+						</ul>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+				<!-- e: 25-08-21 수정 -->
 			</div>
 
 			<!-- footer -->
@@ -271,7 +439,11 @@
 						<div class="popup_head_title"></div>
 					</div>
 					<div class="popup_cont">
-						<div class="popup_content">총 전용 면적 10,000㎡ 이하의 사업장만 가입이 가능합니다.</div>
+						<div class="popup_content">
+							<!-- s: 25-08-21 UXW -->
+							총 전용 면적 10,000㎡ 이하의 사업장만 가입할 수 있습니다.
+							<!-- e: 25-08-21 UXW -->
+						</div>
 					</div>
 					<div class="popup_bottom">
 						<div class="btn_area">
