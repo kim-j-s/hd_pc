@@ -1,13 +1,17 @@
 {{#> layout/default no-gnb=true page-title="피보험자/계약자 정보 | 상품"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-prd="풍수해·지진재해보험(소상공인용)" }}
+	<!-- s: 25-08-21 UXW -->
+	{{> layout/header_pc h-prd="풍수해·지진재해보험(소상공인)" }}
+	<!-- e: 25-08-21 UXW -->
 	<div id="container" class="container">
 		<div class="content">
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">피보험자/계약자 정보</div>
 					<h2 class="p_title">
-						<strong>보험 가입을 위해 고객님의 정보를 입력해주세요</strong>
+						<!-- s: 25-08-21 UXW -->
+						보험 가입을 위해 <strong>고객님의 정보를 입력</strong>해주세요
+						<!-- e: 25-08-21 UXW -->
 					</h2>
 				</div>
 			</div>
@@ -40,7 +44,9 @@
 
 			<!-- s: 25-07-21 추가 -->
 			<div class="divider_ty1"></div>
-			<h3 class="title_h3">필수 확인 사항</h3>
+			<!-- s: 25-08-21 UXW -->
+			<h3 class="title_h3">필수 확인사항</h3>
+			<!-- e: 25-08-21 UXW -->
 			<div class="form_group_wrap">
 				<div class="form_line full">
 					<!-- s: 25-07-01 수정 -->
@@ -51,7 +57,9 @@
 				<div class="form_line">
 					<!-- s: 25-07-23 수정 -->
 					<div class="label_tit box">
-						<div>전문금융소비자 여부를 확인해주세요</div>
+						<!-- s: 25-08-21 UXW -->
+						<div>전문금융소비자 여부를 확인해주세요.</div>
+						<!-- e: 25-08-21 UXW -->
 						{{> cp/linkButton bl_class="short_cut sm" bl_text="구분 안내" question_tit="전문금융소비자" }}
 					</div>
 					<!-- e: 25-07-23 수정 -->
@@ -70,7 +78,9 @@
 			<div class="bottom_fix_wrap"> 
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="입력 중이에요" disabled=true }}
+					<!-- s: 25-08-21 UXW -->
+					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
+					<!-- e: 25-08-21 UXW -->
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>
