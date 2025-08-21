@@ -376,26 +376,26 @@
       
     }
 
-    .start_day {
-      &.start_day_fix {
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-          width: 50%;
-          background-color: var(--color-action-secondary-selected);
-        }
-        > .text {
-          &::before {
-            content: '시작일';
-            font-size: 0;
-          }
-        }
-      }
+    // .start_day {
+    //   &.start_day_fix {
+    //     &::before {
+    //       content: '';
+    //       position: absolute;
+    //       top: 0;
+    //       right: 0;
+    //       height: 100%;
+    //       width: 50%;
+    //       background-color: var(--color-action-secondary-selected);
+    //     }
+    //     > .text {
+    //       &::before {
+    //         content: '시작일';
+    //         font-size: 0;
+    //       }
+    //     }
+    //   }
       
-    }
+    // }
 
     .day_today {
       &.day_active {
@@ -408,25 +408,25 @@
 
     }
 
-    .end_day {
-      &.end_day_fix {
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 50%;
-          background-color: var(--color-action-secondary-selected);
-        }
-        > .text {
-          &::before {
-            content: '종료일';
-            font-size: 0;
-          }
-        }
-      }
-    }
+    // .end_day {
+    //   &.end_day_fix {
+    //     &::before {
+    //       content: '';
+    //       position: absolute;
+    //       top: 0;
+    //       left: 0;
+    //       height: 100%;
+    //       width: 50%;
+    //       background-color: var(--color-action-secondary-selected);
+    //     }
+    //     > .text {
+    //       &::before {
+    //         content: '종료일';
+    //         font-size: 0;
+    //       }
+    //     }
+    //   }
+    // }
 
     .between {
       background-color: var(--color-action-secondary-selected);
