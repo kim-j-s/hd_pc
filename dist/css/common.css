@@ -5652,6 +5652,7 @@ strong {
 }
 .ui-datepicker-today .ui-state-default {
 	position: relative;
+	font-weight: bold;
 }
 .ui-datepicker-today .ui-state-default:before {
 	content: "";
@@ -5664,6 +5665,12 @@ strong {
 	background-color: var(--color-element-point);
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+.ui-datepicker-today .ui-state-default.ui-state-active {
+	font-weight: normal;
+}
+.ui-datepicker-today .ui-state-default.ui-state-active::before {
+	background-color: var(--color-element-inverse-static);
 }
 .ui-state-default.ui-state-active {
 	position: relative;
