@@ -2653,6 +2653,10 @@
 			margin-top: var(--gap-8);
 		}
 	}
+
+	& + .progress_bar {
+			margin-top: var(--gap-8);
+	}
 }
 
 
