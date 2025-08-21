@@ -29,7 +29,7 @@
 			display: inline-block;
 			padding-right: 18px;
 			font-size: var(--font-size-label-medium);
-			line-height: 1.5;
+			// line-height: 1.5;
 			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 2px / 16px auto;
 			&::after {
 				content: '';
@@ -2167,7 +2167,7 @@
 		gap: 8px;
 		padding: 0 calc(var(--padding-6) - 2px);
 		.comp_wrap_keypad_call {
-			flex: 1;
+			flex: 1.6;
 			&.form_key_pc {
 				> input {
 					width: 59px;
