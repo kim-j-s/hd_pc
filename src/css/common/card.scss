@@ -410,9 +410,8 @@
 				}
 			}
 			.desc {
-				font-size: 14px;
-				line-height: 21px;
-				color: #58616A;
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-information);color: #58616A;
 			}
 
 			& + .card_list_ty1 {

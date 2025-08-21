@@ -118,7 +118,7 @@ svg {
 		height: 40px;
 		padding: 0 16px 0;
 		border-radius: 6px;
-		font-size: 14px;
+		font-size: var(--font-size-body-small);
 		line-height: 150%;
 		font-weight: 400;
 
@@ -197,7 +197,7 @@ svg {
 	}
 	&.s_2 {
 		border-radius: 4px;
-		font-size: 14px;
+		font-size: var(--font-size-body-small);
 		font-weight: 400;
 		line-height: 150%;
 	}
