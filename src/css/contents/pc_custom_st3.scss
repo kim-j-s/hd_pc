@@ -759,6 +759,7 @@
 			.item_inner {
 				display: flex;
 				gap: var(--gap-3);
+				align-items: center;
 	
 				.hd_btn {
 					flex: 0 0 auto;
@@ -778,6 +779,11 @@
 				input[type=checkbox]{
 					left: 0;
 				}
+			}
+
+			.coverage_text {
+				flex: none;
+				font-size: var(--font-size-label-medium);
 			}
 	
 			.chk_lby2 {
