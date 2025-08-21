@@ -403,7 +403,7 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.popup_bottom)) {
 	padding-bottom: 32px;
 }
-.popup_wrap.popup_wrap_type4 .popup_container .popup_inner:has(.load_cont_ty2) {
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner:has(.load_cont_ty2, .ty_full) {
 	width: 100%;
 	height: 100%;
 }
