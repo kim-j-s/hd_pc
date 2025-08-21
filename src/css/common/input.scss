@@ -108,12 +108,14 @@
 	}
 	.int_txt {
 		flex: none;
+		position: relative;
 		font-size: var(--font-size-body-medium);
 		&.left {
 			padding-top: 2px;
 			padding-left: 16px;
 		}
 		&.right {
+			top: 1px;
 			padding-right: 16px;
 		}
 	}
@@ -527,8 +529,10 @@
 			}
 		}
 		.int_txt {
+			position: relative;
 			font-size: var(--font-size-body-small);
 			&.right {
+				top: 0;
 				font-weight: 700;
 				font-size: var(--font-size-body-large);
 				color: var(--color-text-primary-bold);
