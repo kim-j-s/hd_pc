@@ -368,7 +368,32 @@
 		margin-top: var(--gap-8);
 	}
 }
-
+.dc_data_area {
+	margin-top: var(--gap-5);
+	.list_ty4 {
+		display: flex;
+		justify-content: flex-end;
+		gap: 40px;
+		li {
+			display: flex;
+			align-items: center;
+			margin-top: 0;
+			gap: var(--gap-5);
+			&::before {
+				top: 50%;
+			}
+			.txt {
+				color: var(--color-text-subtle);
+				strong {
+					padding-left: var(--gap-3);
+				}
+			}
+		}
+	}
+	& + .acc_group {
+		margin-top: var(--gap-8);
+	}
+}
 
 // side panel
 .sel_item_list {
