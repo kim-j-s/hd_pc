@@ -2889,6 +2889,9 @@ body {
 .process_info_area + .table_wrap + .btn_area {
 	margin-top: var(--gap-8);
 }
+.process_info_area + .progress_bar {
+	margin-top: var(--gap-8);
+}
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
 .info_summary {
@@ -3239,6 +3242,40 @@ body {
 	padding-left: var(--gap-2);
 }
 .dc_info_box + .acc_group {
+	margin-top: var(--gap-8);
+}
+.dc_data_area {
+	margin-top: var(--gap-5);
+}
+.dc_data_area .list_ty4 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	gap: 40px;
+}
+.dc_data_area .list_ty4 li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 0;
+	gap: var(--gap-5);
+}
+.dc_data_area .list_ty4 li::before {
+	top: 50%;
+}
+.dc_data_area .list_ty4 li .txt {
+	color: var(--color-text-subtle);
+}
+.dc_data_area .list_ty4 li .txt strong {
+	padding-left: var(--gap-3);
+}
+.dc_data_area + .acc_group {
 	margin-top: var(--gap-8);
 }
 .sel_item_list .item {
