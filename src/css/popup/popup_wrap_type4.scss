@@ -57,7 +57,7 @@
 				}
 
 				// rd viewer
-				&:has(.load_cont_ty2){
+				&:has(.load_cont_ty2, .ty_full){
 					width: 100%;
 					height: 100%;
 				}

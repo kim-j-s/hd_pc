@@ -1,0 +1,51 @@
+
+{{#> layout/default page-title="보험료 확인 | 상품"}}
+	<!-- s: popup area -->
+		<!-- s: Bottom 팝업 -->
+		{{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="할인받은 보험료" }}
+		<div class="popup_cont">
+			<div class="popup_content">
+                <h2 class="title_h3">차량 할인내역</h2>
+                    <div class="space_list_ty2">
+                    {{#> cp/selectbox_pc s-title="차량 선택" sb-ph="선택해주세요." }}
+                        <option value="" selected>111가1111(쏘나타)</option>
+                        <option value="">222나2222(그랜져)</option>
+                    {{/ cp/selectbox_pc}}
+                    <div class="info_gray">
+                        <dl>
+                            <dt>다이렉트 할인</dt>
+                            <dd><strong class="point">315,730원</strong></dd>
+                        </dl>
+                        <dl>
+                            <dt>걸음 수 할인</dt>
+                            <dd><strong class="point">89,260원</strong></dd>
+                        </dl>
+                        <dl>
+                            <dt>커넥티드 안전운전 할인</dt>
+                            <dd><strong class="point">89,260원</strong></dd>
+                        </dl>
+                        <dl>
+                            <dt>커넥티드카 할인</dt>
+                            <dd><strong class="point">79,420원</strong></dd>
+                        </dl>
+                        <dl>
+                            <dt>첨단안전장치 할인</dt>
+                            <dd><strong class="point">171,440원</strong></dd>
+                        </dl>
+                        <dl>
+                            <dt>하이카 그린 서비스</dt>
+                            <dd><strong class="point">1,000원</strong></dd>
+                        </dl>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="popup_bottom">
+			<div class="btn_area basic">
+				{{> cp/button type="1" size="2" b-text="확인"}}
+			</div>
+		</div>
+		{{/ popup/popup_bottom}} 
+		<!-- e: Bottom 팝업 -->
+	<!-- e: popup area -->
+{{/ layout/default }}
