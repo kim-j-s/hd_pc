@@ -1460,8 +1460,7 @@
 		.bit_inner {
 			.bit_inner_text {
 				display: block;
-				font-size: var(--font-size-body-small);
-				// font-size: var(--font-size-heading-xxlarge);
+				font-size: var(--font-size-heading-xxlarge);
 			}
 			&.active {
 				.bit_inner_text {

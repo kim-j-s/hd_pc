@@ -7,14 +7,17 @@
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">보험료확인</div>
+					<!-- s: 25-08-22 UXW -->					
 					<h2 class="p_title">
-						자동차 사고,<br>
-						<strong>어디까지 보장</strong>을 받아야 할까요?
+						자동차 사고,<br><strong>어디까지 보장</strong>받아야 할까요?
 					</h2>
+					<!-- e: 25-08-22 UXW -->
 				</div>
 				<div class="btn_area">
 					{{> cp/button type="3" size="4" b-text="모든 플랜 확인"}}
-					{{> cp/button type="3" size="4" b-text="계산 결과 문자로 받기"}}
+					<!-- s: 25-08-22 UXW -->					
+					{{> cp/button type="3" size="4" b-text="계산 결과 받기"}}
+					<!-- e: 25-08-22 UXW -->
 				</div>
 			</div>
 
@@ -55,10 +58,11 @@
 									<span class="price"><strong>14,900</strong> 원</span>
 								</em>
 							</span>
+							<!-- s: 25-08-22 UXW -->							
 							<span class="item_desc">
-								자동차 사고 부상, 골절, 상처 봉합, 흉터 성형 비용 보장을 더했습니다.
-
+								자동차사고부상, 흉터 성형 비용을 더했어요.
 							</span>
+							<!-- e: 25-08-22 UXW -->
 						</label>
 					</div>
 				</div>
@@ -72,15 +76,18 @@
 								</span>
 							</span>
 							<span class="item_top">
-								<span class="top_title">사고 후 치료와 재활까지도 꼼꼼하게</span>
+								<!-- s: 25-08-22 UXW -->								
+								<span class="top_title">사고 후 치료와 재활까지 꼼꼼하게</span>
+								<!-- e: 25-08-22 UXW -->
 								<em class="top_info">
 									<span class="price"><strong>23,900</strong> 원</span>
 								</em>
 							</span>
+							<!-- s: 25-08-22 UXW -->							
 							<span class="item_desc">
-								입원, 통원 간병비, 상해 수술비, 재활 치료비 등 빠른 일상생활 복귀를 돕는 보장을 더했습니다
-
+								입원, 수술, 재활치료비까지 더 넓게 보장해요.
 							</span>
+							<!-- e: 25-08-22 UXW -->
 						</label>
 					</div>
 				</div>
@@ -427,19 +434,25 @@
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
 					{{> cp/button type="1" size="1" b-text="원하는 보장을 선택 중이에요" disabled=true }}
-					<!-- {{> cp/button type="1" size="1" b-text="선택한 플랜으로 가입할게요" }} -->
-					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입할래요" }} -->
+					<!-- s: 25-08-22 UXW -->					
+					<!-- {{> cp/button type="1" size="1" b-text="보험료 다시 계산하기" }} -->				
+					<!-- {{> cp/button type="1" size="1" b-text="이대로 가입하기" }} -->
+					<!-- e: 25-08-22 UXW -->
 				</div>
 			</div>
 
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active=true }}
 			<ul class="list_ty1">
-				<li>가입하지 않은 담보를 계약체결 이후 추가하시는 경우, 회사가 정하는 인수지침에 의하여 피보험자의 가입나이, 건강상태, 과거병력 및 직무 등에 따라 보험가입금액이 제한되거나 가입이 불가능할 수 있습니다.</li>
+				<!-- s: 25-08-22 UXW -->				
+				<li>가입하지 않은 보장을 계약체결 이후 추가하시는 경우, 현대해상이 정하는 인수지침에 의하여 피보험자의 가입나이, 건강상태, 과거병력 및 직무 등에 따라 보험가입금액이 제한되거나 가입하지 못할 수 있습니다.</li>
+				<!-- e: 25-08-22 UXW -->
 				<li>현대해상 자동차보험 가입고객 보험료 매월 7% 할인(자동차보험 보험기간 1년, 유효 계약 기준)</li>
 				<li>할인을 적용받던 계약이 할인적용대상에 해당되지 않게 된 경우 다음달 이후 납입되는 보험료부터 할인이 적용되지 않으며, 다시 적용대상에 해당되더라도 할인이 재적용되지 않습니다.</li>
-				<li>차대차사고차량시세하락손실지원(개인자가용), 차량유리교체비용지원(개인자가용, 연간 1회 한) 담보는 고객님 본인의 개인 자가용(개인명의로 소유하거나 개인명의로 리스한 자동차) 자동차번호가 있어야 가입 가능하며, 보험가입기간이 10년을 초과할 경우 이 담보는 최대 10년까지만 보장됩니다.</li>
-				<li>자동차사고변호사선임비용, 자동차사고처리지원금 담보는 다른 보험에 이미 가입했어도 보장금액 확대를 위한 추가 가입이 가능합니다. 단, 실제 손해액 범위 내에서만 비례 보상됩니다.</li>
+				<!-- s: 25-08-22 UXW -->				
+				<li>차대차사고차량시세하락손실지원(개인자가용), 차량유리교체비용지원(개인자가용, 연간 1회 한정)보장은 고객님 본인의 개인 자가용(개인명의로 소유하거나 개인명의로 리스한 자동차) 자동차번호가 있어야 가입할 수 있으며, 보험가입기간이 10년을 넘을 경우 이 담보는 최대 10년까지만 보장됩니다.</li>
+				<li>자동차사고변호사선임비용, 자동차사고처리지원금 보장은 다른 보험에 이미 가입했어도 보장금액 확대를 위한 추가 가입이 가능합니다. 단, 실제 손해액 범위 내에서만 비례 보상됩니다.</li>
+				<!-- e: 25-08-22 UXW -->
 			</ul>
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
@@ -460,26 +473,35 @@
 <!-- s: popup area -->
 
 	<!-- s: 특약 팝업 -->
-	{{#> popup/popup_bottom popup-id="sp_pop" popup-title="다음 특약에 가입하시겠어요?" }}
+	<!-- s: 25-08-22 UXW -->
+	{{#> popup/popup_bottom popup-id="sp_pop" popup-title="아래 특약에 가입하시겠어요?" }}
+	<!-- e: 25-08-22 UXW -->
 	<div class="popup_cont">
 		<div class="popup_content">
 			<div class="info_gray">
-				<h5 class="title_h3">가입할 담보</h5>
+				<!-- s: 25-08-22 UXW -->				
+				<h5 class="title_h3">가입할 보장</h5>
+				<!-- e: 25-08-22 UXW -->
 				<ul class="list_depth">
 					<li>차대차사고차량시세하락손실지원(개인자가용)</li>
-					<li>차량유리교체비용지원(개인자가용, 연간1회한)</li>
+					<!-- s: 25-08-22 UXW -->					
+					<li>차량유리교체비용지원(개인자가용, 연간 1회한)</li>
+					<!-- e: 25-08-22 UXW -->
 				</ul>
 			</div>
+			<!-- s: 25-08-22 UXW -->			
 			<div class="form_group_wrap">
 				<div class="form_line">
-					<div class="label_tit">가입할 자동차번호</div>
-					{{> cp/text inp-title="자동차번호 입력" placeholder="자동차번호 입력" }}
+					<div class="label_tit">자동차 번호</div>
+					{{> cp/text inp-title="자동차 번호 입력" placeholder="자동차 번호 입력" }}
 				</div>
 				<ul class="list_ty2">
-					<li>위 담보 가입 시 고객님 본인소유 개인 자가용(개인명의로 소유하거나 개인명의로 리스한 자동차) 차량정보가 필요합니다.</li>
+					<li>위 보장 가입 시 고객님 본인소유 개인 자가용(개인명의로 소유하거나 개인명의로 리스한 자동차) 차량정보가 필요합니다.</li>
 					<li>보험증권에 기재된 본인소유 해당 차량에 대해서만 보장됩니다.</li>
+					<li>보험기간이 10년 초과하는 경우에도 최대 10년까지만 보장됩니다.</li>
 				</ul>
 			</div>
+			<!-- e: 25-08-22 UXW -->
 			<!-- e: popup_content_top -->
 		</div>
 	</div>
