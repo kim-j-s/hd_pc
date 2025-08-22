@@ -6,7 +6,9 @@
 	<div class="popup_content">
 		<div class="form_group_wrap">
 			<div class="form_line">
-				<div class="label_tit">보험기간/납입기간</div>
+				<!-- s: 25-08-25 UXW -->				
+				<div class="label_tit">보험/납입기간</div>
+				<!-- e: 25-08-25 UXW -->
 				<div class="radio_group_wrap_ty2" role="radiogroup">
 					{{> cp/radio rd-class="rd_btn" rd-id="rd_opt1_1" name="rd_opt1" labelname="3년" checked=true  }}
 					{{> cp/radio rd-class="rd_btn" rd-id="rd_opt1_2" name="rd_opt1" labelname="5년" }}
@@ -21,7 +23,9 @@
 				<div class="label_tit">납입 방법</div>
 				<div class="radio_group_wrap_ty2" role="radiogroup">
 					{{> cp/radio rd-class="rd_btn" rd-id="radio01-1" name="radio01" labelname="매월 보험료 내기" checked=true }}
-					{{> cp/radio rd-class="rd_btn" rd-id="radio01-2" name="radio01" labelname="1년치 한꺼번에 내기" }}
+					<!-- s: 25-08-25 UXW -->					
+					{{> cp/radio rd-class="rd_btn" rd-id="radio01-2" name="radio01" labelname="1년치 한번에 내기" }}
+					<!-- e: 25-08-25 UXW -->
 				</div>
 			</div>
 		</div>
@@ -29,7 +33,9 @@
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="2" b-text="가입 조건 변경하기" }}
+		<!-- s: 25-08-25 UXW -->		
+		{{> cp/button type="1" size="2" b-text="확인" }}
+		<!-- e: 25-08-25 UXW -->
 	</div>
 </div>
 {{/ popup/popup_bottom}}
