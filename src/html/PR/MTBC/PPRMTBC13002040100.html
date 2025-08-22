@@ -8,13 +8,16 @@
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
 					<h2 class="p_title">
-						선택된 <strong>자동차정보</strong>를 확인해주세요 
+						<!-- s: 25-08-22 UXW -->
+						<!-- e: 25-08-22 UXW -->
+						선택된 <strong>차량 정보</strong>를 확인해주세요 
 					</h2>
 				</div>
-				<div class="btn_area">
-					<!--TO-DO : (25-04-11 위서진) 추후 용어사전 팝업이 완성되면, popup id를 popup props에 적용해야함-->
+				<!-- s: 25-08-22 UXW -->
+				<!-- <div class="btn_area">
 					{{> cp/button type="3" size="4" popup="" b-text="어려운 용어 설명을 보시려면" btn-title="용어사전 열기" rightIcon="arrowRightSvg" }}
-				</div>
+				</div> -->
+				<!-- e: 25-08-22 UXW -->
 			</div>
 
 			<div class="info_summary">
@@ -24,7 +27,7 @@
 						<div class="value">
 							<div class="val_price">NBC110MCF</div>
 							<div class="btn_area">
-								{{> cp/button type="3" size="5" b-text="다른차량으로"}}
+								{{> cp/button type="3" size="5" b-text="차량 정보 변경" btn-title="페이지 이동" }}
 							</div>
 						</div>
 					</div>
@@ -129,7 +132,9 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="다음" }}
+					<!-- s: 25-08-22 UXW -->
+					{{> cp/button type="1" size="1" b-text="부품 정보를 확인했어요" }}
+					<!-- e: 25-08-22 UXW -->
 				</div>
 			</div>
 			<!-- s: 하단 버튼 영역 -->
