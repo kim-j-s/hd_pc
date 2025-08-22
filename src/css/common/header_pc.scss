@@ -152,6 +152,8 @@
 	flex: none;
 	display: inline-flex;
 	align-items: center;
+	justify-content: flex-end;
+	min-width: 160px;
 	> .item {
 		// padding: 8px;
 		&.item_chatbot {

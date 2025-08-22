@@ -71,9 +71,7 @@
 		}
 	}
 	/* 전체메뉴 사용 */
-
 }
-
 
 .nld_cont {
 	position: absolute;
@@ -90,6 +88,14 @@
 	opacity: 0;
 	transform-origin: top center;
 	transform: scaleY(0);
+
+
+	// background-color: #ddd;
+	// border: 1px solid #000;
+
+
+
+
 	transition: 0.3s;
 	overflow: auto;
 	.nld_cont_inner {
@@ -250,6 +256,63 @@
 		}
 	}
 }
+
+/* 법인 */
+.nav_list_corp {
+	.nl_dept1_link {
+		width: 160px;
+	}
+
+	.nl_dept1 {
+		&.nl_dept1_corp_ty1 {
+			.nld_cont {
+				.nld_cont_inner {
+					padding-left: 302px;
+				}
+			}
+		}
+		&.nl_dept1_corp_ty2 {
+			.nld_cont {
+				.nld_cont_inner {
+					padding-left: 462px;
+				}
+			}
+		}
+		&.nl_dept1_corp_ty3 {
+			.nld_cont {
+				.nld_cont_inner {
+					padding-left: 622px;
+				}
+			}
+		}
+		&.nl_dept1_corp_ty4 {
+			.nld_cont {
+				.nld_cont_inner {
+					padding-left: 782px;
+				}
+			}
+		}
+	}
+
+
+	.nld_cont {
+		.nld_cont_inner {
+			.nld_cont_body {
+				padding: 0;
+			}
+		}
+		.nld_cont_body_list {
+			.nl_dept2 {
+				width: auto;
+				min-width: 184px;
+			}
+		} 
+	}
+
+	
+
+}
+/* 법인 */
 
 .header_pc_nd {
 	.nav_list {
