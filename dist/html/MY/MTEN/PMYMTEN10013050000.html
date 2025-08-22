@@ -2144,12 +2144,14 @@
 
 					<h3 class="title_h3">보험료 환급금 대체사용 여부 선택</h3>
 					<div class="checkbox_group_wrap column">
+						<!-- s: 25-08-22 UXW -->
 						<div class="inp_checkbox rd_box">
 							<input type="checkbox" id="checkbox01" checked />
 							<label for="checkbox01" class="chk_label chk_label_ty3">
-								<span class="label_cont">보험료 환급금 대체사용 특약<span class="sub_g_txt">보험료 환급금 대체사용 특약가입시 ECO마일리지특약과 월별 안전운전점수 평가 후환급 추가특약에서 환급금이 발생한 경우 갱신보험료에서 차감결제하실 수 있습니다.</span></span>
+								<span class="label_cont">보험료 환급금 대체사용 특약<span class="sub_g_txt">보험료 환급금 대체사용 특약가입 시, ECO마일리지특약과 월별 안전운전점수 평가 후환급 추가특약에서 환급금이 발생한 경우 갱신보험료에서 해당 액수만큼 차감해 결제하실 수 있습니다.</span></span>
 							</label>
 						</div>
+						<!-- e: 25-08-22 UXW -->
 					</div>
 
 					<h3 class="title_h3">후할인 특약(마일리지) 환급계좌 입력</h3>
@@ -2168,12 +2170,14 @@
 						<div class="form_line">
 							<div class="label_tit">계좌번호</div>
 							<div class="comp_wrap key_number">
+								<!-- s: 25-08-22 UXW -->
 								<div class="input_text">
 									<div class="inp">
-										<input type="tel" placeholder="계좌번호 입력" title="계좌번호 입력" />
+										<input type="tel" placeholder="- 없이 입력" title="계좌번호 입력" />
 										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
 								</div>
+								<!-- e: 25-08-22 UXW -->
 								<!-- s: 25-07-15 삭제 -->
 								<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
 		
@@ -2189,12 +2193,14 @@
 					</div>
 					<div class="checkbox_group_wrap column space2">
 						<!-- s: 25-08-08 -->
+						<!-- s: 25-08-22 UXW -->
 						<div class="inp_checkbox rd_box">
 							<input type="checkbox" id="checkbox02" />
 							<label for="checkbox02" class="chk_label chk_label_ty3">
-								<span class="label_cont"><strong class="point">[필수]</strong> 주행거리 기준일, 주행거리, 마일리지 환급 계좌를 확인하였습니다.</span>
+								<span class="label_cont"><strong class="point">[필수]</strong> 마일리지 환급금은 갱신계약 대체보험료로 사용하실 수 있으며, 사용하지 않을 경우 수납방법에 따라 <strong class="point">카드부분취소 또는 계좌환급</strong>으로 정산해드립니다.</span>
 							</label>
 						</div>
+						<!-- e: 25-08-22 UXW -->
 						<!-- e: 25-08-08 -->
 					</div>
 
@@ -2219,11 +2225,18 @@
 							</div>
 							<div class="acd_cont">
 								<div class="inner" style="display: block">
+									<!-- s: 25-08-22 UXW -->
 									<ul class="list_depth">
-										<li>실제운행한 '연간환산 주행거리'에 따라 보험료를 환급해드립니다.(단, 하이카서비스등 일부 특약의 보험료는 할인적용에서 제외)</li>
+										<li>
+											실제로 운행한 '연간환산 주행거리'에 따라 보험료를 환급받을 수 있습니다
+											<ul>
+												<li>하이카서비스 등 일부 특약보험료는 할인 적용에서 제외됩니다.</li>
+											</ul>
+										</li>
 										<li>사진 방식으로 마일리지특약에 가입한 경우 운행정보확인장치 방식(커넥티드 마일리지)으로 변경할 수 없습니다.</li>
-										<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
+										<li>보험계약변경을 완료하려면 계약자의 전자서명이 필요합니다.</li>
 									</ul>
+									<!-- e: 25-08-22 UXW -->
 								</div>
 							</div>
 						</div>
