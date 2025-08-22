@@ -2105,7 +2105,12 @@
 							<h2 class="p_title">
 								<strong>ECO마일리지 특약 가입</strong>
 							</h2>
-							<div class="sub_desc"><strong>특약 가입을 위한 정보</strong>를 입력해주세요</div>
+							<!-- s: 25-08-22 UXW -->
+							<div class="sub_desc">
+								특약 가입을 위해 <strong>사진</strong>을<br />
+								<strong>등록</strong>해주세요
+							</div>
+							<!-- e: 25-08-22 UXW -->
 						</div>
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="openHDPopup(this,'pop_insChk');" title="팝업 열기">
@@ -2120,7 +2125,9 @@
 						<div class="data_box df_type_w_ty5">
 							<!-- e: 25-07-24 수정 -->
 							<dl>
-								<dt>자동차번호</dt>
+								<!-- s: 25-08-22 UXW -->
+								<dt>차량번호</dt>
+								<!-- e: 25-08-22 UXW -->
 								<dd>18루**22</dd>
 							</dl>
 							<dl>
@@ -2202,32 +2209,35 @@
 									</div>
 									<div class="acd_cont">
 										<div class="inner">
-											<p class="text_sub">ECO 마일리지 특약 정산을 위한 계기판 사진과 주행거리를 등록해 주세요.</p>
+											<!-- s: 25-08-22 UXW -->
+											<p class="text_sub">ECO마일리지 특약 가입을 위한 계기판 사진과 주행거리를 등록해주세요.</p>
+											<!-- e: 25-08-22 UXW -->
 											<div class="form_group_wrap">
 												<div class="form_line">
 													<div class="label_tit">주행거리 기준일</div>
+													<!-- s: 25-08-22 UXW -->
 													<div class="input_text calendar">
 														<div class="inp">
-															<input type="tel" class="inp_picker" value="2025.01.01" title="날짜를 입력해주세요" />
+															<input type="tel" class="inp_picker" placeholder="날짜 입력" value="2025.01.01" title="날짜를 입력해주세요" />
 															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 														</div>
 													</div>
+													<!-- e: 25-08-22 UXW -->
 												</div>
 												<div class="form_line">
 													<div class="label_tit">주행거리</div>
+													<!-- s: 25-08-22 UXW -->
 													<div class="input_text comma">
 														<div class="inp">
-															<input type="tel" placeholder="숫자만" title="주행거리 입력" />
+															<input type="tel" placeholder="숫자만 입력" title="주행거리 입력" />
 															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 														</div>
 														<div class="int_txt right">km</div>
 													</div>
+													<!-- e: 25-08-22 UXW -->
 												</div>
 											</div>
 
-											<ul class="list_ty2">
-												<li>ECO 마일리지 특약 정산을 위한 계기판 사진과 주행거리를 등록해 주세요.</li>
-											</ul>
 											<!-- s: 이미지 파일 붙는 영역 -->
 											<!-- 등록 전 이미지 (등록 전/후 따라 alt값 변경 필요) -->
 											<div class="file_attach_box">
@@ -2247,10 +2257,11 @@
 													</label>
 												</div>
 											</div>
-
+											<!-- s: 25-08-22 UXW -->
 											<ul class="list_ty2">
 												<li>운행거리 증빙을 위한 계기판 사진은 ODO(총 운행거리 사진)만 인정되며 리셋된 트립 사진은 인정되지 않습니다.</li>
 											</ul>
+											<!-- e: 25-08-22 UXW -->
 										</div>
 									</div>
 								</div>
@@ -2277,11 +2288,13 @@
 									</div>
 									<div class="acd_cont">
 										<div class="inner" style="display: block">
+											<!-- s: 25-08-22 UXW -->
 											<ul class="list_depth">
-												<li>부적합한 사진(허위 및 해당 사진이 아닌 경우)으로 등록하실 경우, 특약은 무효가 되며 할인보험료를 환입하셔야 합니다.</li>
-												<li>사진은 10MB이하의 JPG, JPEG, GIF, PNG 파일만 등록이 가능합니다.</li>
-												<li>이미지 등록이 되지 않을 경우 대표콜센터(1588-5656)로 문의바랍니다.</li>
+												<li>부적합한 사진(허위 및 해당 사진이 아닌 경우)으로 변경할 경우, 특약은 무효가 되며 할인보험료를 환입하셔야 합니다.</li>
+												<li>사진은 10MB 이하의 JPG, JPEG, GIF, PNG 파일만 등록할 수 있습니다.</li>
+												<li>이미지 등록이 되지 않을 경우 대표콜센터(1588-5656)로 문의해주세요.</li>
 											</ul>
+											<!-- e: 25-08-22 UXW -->
 										</div>
 									</div>
 								</div>
@@ -2297,14 +2310,16 @@
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">휴대폰번호</div>
+									<!-- s: 25-08-22 UXW -->
 									<div class="input_text phone">
 										<div class="int_txt left">010</div>
 										<div class="inp">
-											<input type="tel" placeholder="-없이 입력하세요" maxlength="8" title="휴대폰번호 입력" />
+											<input type="tel" placeholder="- 없이 입력" maxlength="8" title="휴대폰번호 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
-									<p class="msg_info">문자를 받을 휴대폰 번호를 입력해주세요.</p>
+									<p class="msg_info">문자를 받을 휴대폰번호를 입력해주세요.</p>
+									<!-- e: 25-08-22 UXW -->
 									<div class="btn_area">
 										<!-- <button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2 full">
 		
@@ -2315,6 +2330,11 @@
 											<span class="text">등록 사진 확인</span>
 										</button>
 									</div>
+									<!-- s: 25-08-22 UXW -->
+									<ul class="list_ty2">
+										<li>버튼을 눌러 사진 등록 여부를 확인할 수 있어요.</li>
+									</ul>
+									<!-- e: 25-08-22 UXW -->
 								</div>
 							</div>
 
