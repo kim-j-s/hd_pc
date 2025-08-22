@@ -8,7 +8,9 @@
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
 					<h2 class="p_title">
-						보험료를 계산 방법을 선택해주세요.
+						<!-- s: 25-08-22 UXW -->
+						보험료 계산 방법을 선택해주세요
+						<!-- e: 25-08-22 UXW -->
 					</h2>
 				</div>
 			</div>
@@ -17,13 +19,17 @@
 				<div class="tab_wrap_list_ty1" role="tablist">
 					{{>cp/tab_btn tb-text="보유중인 이륜차보험 갱신 <span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-id="ex01" tb-active=true}}
 					{{>cp/tab_btn tb-text="신규차량 또는 구매예정" tb-id="ex02"}}
-					{{>cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
+					<!-- s: 25-08-22 UXW -->
+					{{>cp/tab_btn tb-text="최근 보험료 계산내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
+					<!-- e: 25-08-22 UXW -->
 				</div>
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<strong>어떤 자동차</strong>로 보험료를 계산할까요?
+								<!-- s: 25-08-22 UXW -->
+								보험료를 계산할 <strong>이륜차</strong>를 <strong>선택</strong>해주세요
+								<!-- e: 25-08-22 UXW -->
 							</div>
 						</div>
 						<div class="btn_area">
@@ -130,7 +136,9 @@
 							</div>
 							<!-- s: 25-07-21 수정 -->
 							<div class="btn_area center">
-								{{> cp/button type="3" size="3" b-text="만기알람 설정"  btn-title="팝업 열기" }}
+								<!-- s: 25-08-22 UXW -->
+								{{> cp/button type="3" size="3" b-text="만기알람 신청"  btn-title="팝업 열기" }}
+								<!-- e: 25-08-22 UXW -->
 							</div>
 							<!-- e: 25-07-21 수정 -->
 						</div>
@@ -138,14 +146,18 @@
 					<!-- s: 만기예정 차량이 없는 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
-						<p>현재 갱신이 가능한 자동차가 없습니다.</p>
+						<!-- s: 25-08-22 UXW -->
+						<p>현재 갱신이 가능한 이륜차가 없습니다.</p>
+						<!-- e: 25-08-22 UXW -->
 					</div>
 					<!-- e: 만기예정 차량이 없는 경우 -->
 
 					<!-- s: 보유차량 없을 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
-						<p>현재 갱신이 가능한 자동차가 없습니다.</p>
+						<!-- s: 25-08-22 UXW -->
+						<p>현재 갱신이 가능한 이륜차가 없습니다.</p>
+						<!-- e: 25-08-22 UXW -->
 					</div>
 					<!-- e: 보유차량 없을 경우 -->
 				
