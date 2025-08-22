@@ -1,13 +1,17 @@
 {{#> layout/default no-sp=true page-title="자동차 특약할인 | 상품"}}
 
 <!-- s: Full 팝업 -->
-{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<!-- s: 25-08-20 UXW -->
+{{#> popup/popup_full popup-id="pop_type01" popup-title="할인특약 조회결과" popup-active=true }}
+<!-- e: 25-08-20 UXW -->
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
 			<h2 class="title_h2">
-				<strong>할인특약</strong> 조회 결과를 확인해 주세요
+        <!-- s: 25-08-25 UXW -->
+				<strong>할인특약</strong> 조회 결과를 확인해주세요
+        <!-- e: 25-08-25 UXW -->
 			</h2>
 		</div>
 		<!-- e: popup_content_top -->
@@ -15,7 +19,9 @@
       <li>
         <dl class="card_wrap">
           <dt>
-            <strong class="title icon handlebar">안전운전 할인 특약(택1)</strong>
+            <!-- s: 25-08-25 UXW -->
+            <strong class="title icon handlebar">안전운전 할인 특약</strong>
+            <!-- e: 25-08-25 UXW -->
           </dt>
           <dd class="card_cont_list">
             <dl>
@@ -25,7 +31,8 @@
           </dd>
         </dl>
       </li>
-      <li>
+      <!-- s: 25-08-25 UXW -->
+      <!-- <li>
         <dl class="card_wrap">
           <dt>
             <strong class="title icon blackbox">블랙박스 할인특약 (택1)</strong>
@@ -37,7 +44,8 @@
             </dl>
           </dd>
         </dl>
-      </li>
+      </li> -->
+      <!-- e: 25-08-25 UXW -->
     </ul>
 		
 	</div>
