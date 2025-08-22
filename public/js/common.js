@@ -885,6 +885,9 @@ $(function(){
 	
 	nbList();//알릴고지 넘버링
 
+	// 펼치기/접히기 - 담보한번에변경하기(MPRMTPS10004001000)
+	moreLngChk();
+
 	// 스크롤 이벤트 초기화 및 동적 생성시 재 호출
 	$('.position_event_wrap').each(function () {
 		initPositionEventWrap($(this));
@@ -962,14 +965,12 @@ $(function(){
 	$(".inp_picker").datepicker();
 
 	$(".calendar_call").on("click", function (e) {
-		e.preventDefault();
-	
+		e.preventDefault();	
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker");
 		$input.datepicker("show");
 	});	
 	// 달력 호출
-
 
 	// 라디오 약관 동의
 	$('.ag_groups').each(function () {
@@ -1161,7 +1162,6 @@ $(function(){
 	});
 	/* 광고성 정보의 수신동의 - 개별 Case */
 
-
 	// 큰글씨 모드
 	// 확대 버튼 클릭 이벤트
 	$('.z_up').on('click', function() {
@@ -1181,8 +1181,7 @@ $(function(){
 			zContent.css('zoom', newFontSize);
 		}
 	});
-	// 큰글씨 모드
-	
+	// 큰글씨 모드	
 
 	//이메일 자동완성
 	function autoCompleteEmail() {
@@ -1365,20 +1364,6 @@ $(function(){
 		}
 	});
 
-
-	// 펼치기/접히기 - 담보한번에변경하기(MPRMTPS10004001000)
-	$('.acd_tg_bottom').each(function(){
-		const $this = $(this),
-					$item = $this.find('.select_radio_item'),
-					$btn = $item.find('.rd_btn');
-		let btnLength = $btn.length;
-
-		if(btnLength <= 4){
-			$this.find('.btn_area').remove();
-		}
-	});
-
-
 	// s: 상품설명서 주요 내용 스크롤 이동 버튼
 	const $popupCont = $('.popup_cont');
   const $fixedButton = $('.scroll_down');
@@ -1441,7 +1426,23 @@ $(function(){
   });
 	// e: 상품설명서 주요 내용 스크롤 버튼
 
+	// ready
+
 });
+
+function moreLngChk() {
+	// 펼치기/접히기 - 담보한번에변경하기(MPRMTPS10004001000)
+	$('.acd_tg_bottom').each(function(){
+		const $this = $(this),
+					$item = $this.find('.select_radio_item'),
+					$btn = $item.find('.rd_btn');
+		let btnLength = $btn.length;
+
+		if(btnLength <= 4){
+			$this.find('.btn_area').remove();
+		}
+	});
+}
 
 // 상품설명서 주요 내용 reset
 function resetProDesc() {
