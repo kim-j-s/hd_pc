@@ -33,6 +33,7 @@
 						transform: translateX(-50%);
 					}
 					.main_evt_tab {
+						padding-bottom: 0;
 						.tag_item {
 							> .text {
 								transition: background-color 0.3s;
@@ -446,6 +447,20 @@
 							background-image: url(../images/content/main/icon_product_travel.svg);
 						}
 
+						//법인
+						&.c_apply {
+							background-image: url(../images/content/main/icon_corp_apply.svg);
+						}
+						&.c_change {
+							background-image: url(../images/content/main/icon_corp_change.svg);
+						}
+						&.c_sign {
+							background-image: url(../images/content/main/icon_corp_sign.svg);
+						}
+						&.c_search {
+							background-image: url(../images/content/main/icon_corp_search.svg);
+						}
+
 						&:focus,
 						&:hover {
 							border-radius: var(--radius-medium4);
@@ -479,13 +494,24 @@
 
 
 .mcont_items_wrap {
+	width: 100%;
+
 	.mcont_items {
 		padding-top: var(--gap-11);
+
+		&:first-child {
+			padding-top: 20px;
+		}
 
 		.acd_item_ty5 {
 			.acd_head_title {
 				background-size: 24px auto;
 			}
+		}
+	}
+	&.main_evt_box {
+		.mcont_items {
+			padding-top: var(--gap-11);
 		}
 	}
 }
@@ -866,3 +892,101 @@
 	}
 }
 /* 알려드려요 */
+
+
+
+
+/* 법인 홈 */
+.mc_sub_bann {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-4);
+}
+
+.mc_corp_link {
+	height: 248px;
+	padding: var(--padding-8, 24px) var(--padding-7, 20px);
+	background: var(--color-surface-secondary-subtler) url(../images/content/main/img_corp_link_bg.png) no-repeat right bottom 12px / 180px auto;
+	border-radius: var(--radius-large2);
+
+	.sub_title {
+		font-size: var(--font-size-heading-xxsmall);
+		font-weight: 700;
+		color: var(--color-text-secondary-light);
+	}
+	.main_title {
+		margin-top: 4px;
+		font-size: var(--font-size-heading-xsmall);
+	}
+	.btn_area {
+		margin-top: var(--gap-5);
+	}
+}
+.mc_corp_evt {
+	display: block;
+}
+
+.main_prd_link_list {
+	display: flex;
+	gap: var(--gap-5);
+
+	.link_item {
+		flex: none;
+		position: relative;
+		top: 0;
+		width: 224px;
+		padding: 70px var(--padding-7) var(--padding-5);
+		background-color: var(--color-action-secondary-fill);
+		background-repeat: no-repeat;
+		background-position: center 20px;
+		background-size: 40px auto;
+		font-size: var(--font-size-body-medium);
+		color:  var(--color-text-basic);
+		text-align: center;
+		border-radius: var(--radius-large2);
+		border: var(--border-width-static-regular) solid var(--color-border-inverse);
+		transition: all 0.3s;
+		
+		.text {
+			padding-right: 20px;
+			background: url(../images/icon/arrow_link.svg) no-repeat right center / 16px auto;
+		}
+
+		//증명서발급
+		&.l1_it1{
+			background-image: url(../images/content/main/icon_link1_it1.svg);
+		}
+		&.l1_it2{
+			background-image: url(../images/content/main/icon_link1_it2.svg);
+		}
+		&.l1_it3{
+			background-image: url(../images/content/main/icon_link1_it3.svg);
+		}
+		&.l1_it4{
+			background-image: url(../images/content/main/icon_link1_it4.svg);
+		}
+		&.l1_it5{
+			background-image: url(../images/content/main/icon_link1_it5.svg);
+		}
+
+		//보상가이드
+		&.l2_it1{
+			background-image: url(../images/content/main/icon_link2_it1.svg);
+		}
+		&.l2_it2{
+			background-image: url(../images/content/main/icon_link2_it2.svg);
+		}
+		&.l2_it3{
+			background-image: url(../images/content/main/icon_link2_it3.svg);
+		}
+
+		&:active,
+		&:focus,
+		&:hover {
+			top: calc(-1 * var(--gap-2));
+			box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+			transition: all 0.3s;
+			border-color: var(--color-border-gray-dark);
+		}
+	}
+}
