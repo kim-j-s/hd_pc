@@ -8,7 +8,9 @@
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
 					<h2 class="p_title">
-						보험료 계산 방법을 선택해주세요.
+						<!-- s: 25-08-22 UXW -->
+						보험료 계산 방법을 선택해주세요
+						<!-- e: 25-08-22 UXW -->
 					</h2>
 				</div>
 			</div>
@@ -18,14 +20,18 @@
 					{{>cp/tab_btn tb-text="자사 보유계약 <span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-id="ex01" tb-active=true}}
 					{{>cp/tab_btn tb-text="타사 보유계약" tb-id="ex02"}}
 					{{>cp/tab_btn tb-text="신규차량 또는 구매예정" tb-id="ex03"}}
-					{{>cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
+					<!-- s: 25-08-22 UXW -->
+					{{>cp/tab_btn tb-text="최근 보험료 계산내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
+					<!-- e: 25-08-22 UXW -->
 				</div>
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
 					<div class="title_item">
 						<div class="item">
 							<!-- s: 25-07-25 수정 -->
 							<div class="title_h3 ct1">
-								보럼료를 계산할 <strong>이륜차</strong>를 <strong>선택</strong>해주세요
+								<!-- s: 25-08-22 UXW -->
+								보험료를 계산할 <strong>이륜차</strong>를 <strong>선택</strong>해주세요
+								<!-- e: 25-08-22 UXW -->
 							</div>
 							<!-- e: 25-07-25 수정 -->
 						</div>
@@ -245,8 +251,10 @@
 							<div class="label_tit">이륜차번호 7~10자리, 차대번호 17자리</div>
 							<div class="car_input_box">
 								<!-- 에러 메시지 시, error 클래스 추가 -->
-								{{> cp/text class="car_number_input error" placeholder="123가**67" minlength="7" maxlength="17" inp-title="이륜차 또는 차대번호 입력"}}
-								<p class="msg_error">이륜차번호, 또는 차대번호를 입력해 주세요.</p>
+								<!-- s: 25-08-22 UXW -->
+								{{> cp/text class="car_number_input error" placeholder="서울종로가1234" minlength="7" maxlength="17" inp-title="자동차 또는 차대번호 입력"}}
+								<p class="msg_error">차량번호 또는 차대번호를 입력해주세요.</p>
+								<!-- e: 25-08-22 UXW -->
 							</div>
 						</div>
 					</div>
@@ -277,8 +285,9 @@
 						<div class="btn_area">
 							{{> cp/button type="3" size="1" b-text="이전"}}
 							<!-- {{> cp/button type="1" size="1" b-text="차량 종류를 선택 중이에요" }} -->
-							{{> cp/button type="1" size="1" b-text="이륜차로 알아볼게요" }}
-						</div>
+							<!-- s: 25-08-22 UXW -->
+							{{> cp/button type="1" size="1" b-text="신규차량으로 알아볼게요" }}
+							<!-- e: 25-08-22 UXW -->						</div>
 					</div>
 					<!-- e: 하단 버튼 영역 -->
 				</div>
@@ -286,12 +295,14 @@
 				<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex04">
 					<div class="title_item">
 						<div class="item">
+							<!-- s: 25-08-22 UXW -->
 							<div class="title_h3 ct1">
-								<strong>최근 25일간 보험료를 계산한 내역이에요.</strong>
+								<strong>최근에 저장된 보험료 계산 내역을 선택해 이어서 진행할 수 있습니다</strong>
 							</div>
-							<p class="title_sub">
+							<!-- <p class="title_sub">
 								목록에서 선택해 이어서 진행할 수 있어요.
-							</p>
+							</p> -->
+							<!-- e: 25-08-22 UXW -->
 						</div>
 					</div>
 
