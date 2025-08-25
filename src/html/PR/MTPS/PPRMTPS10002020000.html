@@ -7,9 +7,11 @@
 				<div class="title_view_wrap">
 					<div class="page_title">
 						<div class="p_info">차량 정보</div>
+						<!-- s: 25-08-25 UXW -->
 						<h2 class="p_title">
-							<strong>보험기간</strong>을 입력해 주세요
+							<strong>보험기간</strong>을 입력해주세요
 						</h2>
+						<!-- e: 25-08-25 UXW -->
 					</div>
 				</div>
 	 
@@ -28,11 +30,15 @@
 						<!-- s: 25-04-15 수정 -->
 						<div class="form_line grow">
 							<div class="label_tit">보험시작일</div>
-							{{> cp/text cal=true }}
+							<!-- s: 25-08-25 UXW -->
+							{{> cp/text placeholder="날짜 선택" cal=true }}
+							<!-- e: 25-08-25 UXW -->
 						</div>
 						<div class="form_line grow">
 							<div class="label_tit">보험종료일</div>
-							{{> cp/text cal=true }}
+							<!-- s: 25-08-25 UXW -->
+							{{> cp/text placeholder="날짜 선택" cal=true }}
+							<!-- e: 25-08-25 UXW -->
 						</div>
 						<!-- e: 25-04-15 수정 -->
 					</div>
@@ -43,8 +49,10 @@
 				<div class="bottom_fix_wrap">
 					<div class="btn_area">
 						{{> cp/button type="3" size="1" b-text="이전"}}
-						{{> cp/button type="1" size="1" b-text="1년 계약으로"}}
-						<!-- {{> cp/button type="1" size="1" b-text="1년 미만 계약으로"}} -->
+						<!-- s: 25-08-25 UXW -->
+						{{> cp/button type="1" size="1" b-text="1년 계약으로 가입할게요"}}
+						<!-- {{> cp/button type="1" size="1" b-text="1년 미만 계약으로 가입할게요"}} -->
+						<!-- e: 25-08-25 UXW -->
 					</div>
 				</div>
 				<!-- e: 하단 버튼 영역 -->
