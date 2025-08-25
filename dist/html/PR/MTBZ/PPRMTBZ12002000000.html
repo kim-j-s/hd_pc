@@ -81,7 +81,9 @@
 					<div class="title_view_wrap">
 						<div class="page_title">
 							<div class="p_info">차량 정보</div>
-							<h2 class="p_title">보험료를 계산 방법을 선택해주세요.</h2>
+							<!-- s: 25-08-25 UXW -->
+							<h2 class="p_title">보험료 계산 방법을 선택해주세요</h2>
+							<!-- e: 25-08-25 UXW -->
 						</div>
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
@@ -351,13 +353,18 @@
 									<!-- e: 25-07-21 수정 -->
 								</div>
 							</div>
-							<ul class="list_ty2">
+							<!-- s: 25-08-25 UXW -->
+							<!-- <ul class="list_ty2">
 								<li>현재일 기준 보험료 계산이 가능한 계약만 조회됩니다.</li>
-							</ul>
+							</ul> -->
+							<!-- e: 25-08-25 UXW -->
 							<!-- s: 만기예정 차량이 없는 경우 -->
 							<div class="no_list_area">
 								<i class="hd_icon exclamationSvg"></i>
-								<p>현재 갱신이 가능한 자동차가 없습니다.</p>
+								<p>
+									고객님이 보유한 타사 계약을 조회합니다.<br />
+									보유 차량이 많을 경우 조회 시간이 오래 걸릴 수 있습니다.
+								</p>
 								<div class="btn_area center">
 									<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2">
 										<span class="text">보유계약 조회하기</span>
@@ -378,7 +385,11 @@
 						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab03" id="tabPanelex03">
 							<div class="title_item">
 								<div class="item">
-									<div class="title_h3 ct1"><strong>자동차번호</strong> 또는 <strong>차대번호</strong>를 입력해주세요</div>
+									<div class="title_h3 ct1">
+										<!-- s: 25-08-25 UXW -->
+										<strong>차량번호</strong> 또는 <strong>차대번호</strong>를 입력해주세요
+										<!-- e: 25-08-25 UXW -->
+									</div>
 								</div>
 								<div class="btn_area">
 									<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" title="팝업 열기">
@@ -389,16 +400,20 @@
 							</div>
 							<div class="form_group_wrap full">
 								<div class="form_line">
-									<div class="label_tit">자동차번호 7~9자리, 차대번호 17자리</div>
+									<!-- s: 25-08-25 UXW -->
+									<div class="label_tit">차량번호 7~9자리, 차대번호 17자리</div>
+									<!-- e: 25-08-25 UXW -->
 									<div class="car_input_box">
 										<!-- 에러 메시지 시, error 클래스 추가 -->
+										<!-- s: 25-08-25 UXW -->
 										<div class="input_text car_number_input error">
 											<div class="inp">
-												<input type="text" placeholder="123가**67" minlength="7" maxlength="17" title="자동차 또는 차대번호 입력" />
+												<input type="text" placeholder="123가**67" minlength="7" maxlength="17" title="차량번호 또는 차대번호 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 										</div>
-										<p class="msg_error">자동차 번호, 또는 차대번호를 입력해 주세요.</p>
+										<p class="msg_error">차량번호, 또는 차대번호를 입력해 주세요.</p>
+										<!-- e: 25-08-25 UXW -->
 									</div>
 								</div>
 							</div>
@@ -415,7 +430,9 @@
 									<div class="label_area">
 										<span class="label_cont">
 											차량을 구매예정이신가요?
-											<span class="sub_g_txt">이륜차번호, 차대번호를 모르는 경우</span>
+											<!-- s: 25-08-25 UXW -->
+											<span class="sub_g_txt">차량번호, 차대번호를 모르는 경우</span>
+											<!-- e: 25-08-25 UXW -->
 										</span>
 									</div>
 								</div>
@@ -470,10 +487,14 @@
 						<div class="tab_wrap_content" role="tabpanel" tabindex="0" aria-labelledby="tab04" id="tabPanelex04">
 							<div class="title_item">
 								<div class="item">
+									<!-- s: 25-08-25 UXW -->
 									<div class="title_h3 ct1">
-										<strong>최근 25일간 보험료를 계산한 내역이에요.</strong>
+										<strong>최근에 저장된 보험료 계산 내역을 선택해 이어서 진행할 수 있습니다</strong>
 									</div>
-									<p class="title_sub">목록에서 선택해 이어서 진행할 수 있어요.</p>
+									<!-- <p class="title_sub">
+										목록에서 선택해 이어서 진행할 수 있어요.
+									</p> -->
+									<!-- e: 25-08-25 UXW -->
 								</div>
 							</div>
 
