@@ -11,7 +11,9 @@
 					<div class="page_title">
 						<div class="p_info">피보험자 정보</div>
 						<h2 class="p_title">
-							피보험자/계약자 <strong>정보를 입력</strong>해 주세요
+							<!-- s: 25-08-25 UXW -->
+							피보험자/계약자 <strong>정보를 입력</strong>해주세요
+							<!-- e: 25-08-25 UXW -->
 						</h2>
 					</div>
 					<!-- s: 25-07-17 추가 -->
@@ -28,8 +30,10 @@
 								<div class="label_tit">
 									피보험자(자동차 소유자)와 계약자(보험료 납입자) 관계{{#> cp/tooltip trigger-icon="popover_help" tw-class="al_right" title="피보험자/계약자 관계 안내"}}
 							<!-- e: 25-07-16 -->
-									<p>계약자가 계약변경/환급금수령/소득공제 권한을 갖습니다</p>
-									<p>당사에 등록된 개인정보가 보험가입 시 입력하신 정보(주소, 휴대폰번호, 이메일 등)로 업데이트 되오니 이 점 유의하시기 바랍니다.</p>
+									<!-- s: 25-08-25 UXW -->
+									<p>계약자가 계약변경/환급금수령/소득공제 권한을 갖습니다.</p>
+									<p>현대해상에 등록된 개인정보가 보험가입 시 입력하신 정보(주소, 휴대폰번호, 이메일 등)로 업데이트되는 점 유의해주세요.</p>
+									<!-- e: 25-08-25 UXW -->
 									{{/ cp/tooltip}}
 								</div>
 								{{#> cp/selectbox_pc s-title="피보험자와 계약자 관계 선택" sb-ph="피보험자(자동차소유자)와 동일" }}
@@ -63,18 +67,24 @@
 					<div class="form_group_wrap">
 						<div class="form_line">
 							<div class="label_tit">이메일</div>
-							{{> cp/text type="email" inpclass="email_auto" placeholder="이메일을 입력하세요" inp-title="이메일 입력" }}
+							<!-- s: 25-08-25 UXW -->
+							{{> cp/text type="email" inpclass="email_auto" placeholder="이메일을 입력" inp-title="이메일 입력" }}
+							<!-- e: 25-08-25 UXW -->
 						</div>
 					
 						<div class="form_line full">
 							<div class="label_tit">우편물 수령지</div>
 							<div class="radio_group_wrap" role="radiogroup">
-								{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="자택" checked=true }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" checked=true }}
+								<!-- e: 25-08-25 UXW -->
 								{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
 							</div>
 							{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
 							<ul class="list_ty2">
-								<li>소득세법에서 규정한 <strong>장애인전용 보험전환 특약</strong> 가입 대상인 경우 '할인특약' 단계에서 가입이 가능합니다.</li>
+								<!-- s: 25-08-25 UXW -->
+								<li>「소득세법」에서 규정한 <strong>장애인전용보험전환 특약</strong> 가입 대상인 경우 ‘할인특약’ 단계에서 가입할 수 있습니다.</li>
+								<!-- e: 25-08-25 UXW -->
 							</ul>
 						</div>
 					</div>
@@ -88,16 +98,22 @@
 						<div class="form_group_wrap">
 							<div class="form_line full_half">
 								<div class="label_tit">피보험자와의 관계</div>
-								{{> cp/text type="text" placeholder="입력해주세요" inp-title="이름 입력" }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text type="text" placeholder="관계 입력" inp-title="관계 입력" }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 							<div class="form_line">
 								<div class="label_tit">이름</div>
-								{{> cp/text type="text" placeholder="입력해주세요" inp-title="이름 입력" }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text type="text" placeholder="이름 입력" inp-title="이름 입력" }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 							<div class="form_line">
 								<div class="label_tit">주민등록번호</div>
 								<div class="comp_wrap birth">
-									{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞자리" inp-title="주민등록번호 앞자리 입력" }}
+									<!-- s: 25-08-25 UXW -->
+									{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞 6자리 입력" }}
+									<!-- e: 25-08-25 UXW -->
 									<span class="dash">-</span>
 									<!-- s: 25-08-12 수정 -->
 									{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
@@ -106,24 +122,36 @@
 							</div>
 							<div class="form_line">
 								<div class="label_tit">휴대폰번호</div>
-								{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text class="phone" type="tel" placeholder="- 없이 입력" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 							<div class="form_line">
 								<div class="label_tit">이메일</div>
-								{{> cp/text type="email" inpclass="email_auto" placeholder="이메일을 입력하세요" inp-title="이메일 입력" }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
-							<div class="form_line full">
-								<div class="label_tit">우편물 수령지</div>
+							<div class="form_line">
+								<!-- s: 25-08-25 UXW -->
+								<div class="label_tit">주소</div>
+								<!-- e: 25-08-25 UXW -->
 								<div class="checkbox_group_wrap">
-									{{> cp/checkbox id="checkbox01-13" labelname="피보험자(자동차 소유주) 주소와 동일" }}
+									<!-- s: 25-08-25 UXW -->
+									{{> cp/checkbox id="checkbox01-13" labelname="피보험자(자동차 소유주) 주소와 같음" }}
+									<!-- e: 25-08-25 UXW -->
 								</div>
 								<div class="radio_group_wrap" role="radiogroup">
-									{{> cp/radio rd-class="rd_btn" rd-id="addSel_01" name="addSel" labelname="자택" checked=true }}
+									<!-- s: 25-08-25 UXW -->
+									{{> cp/radio rd-class="rd_btn" rd-id="addSel_01" name="addSel" labelname="집" checked=true }}
+									<!-- e: 25-08-25 UXW -->
 									{{> cp/radio rd-class="rd_btn" rd-id="addSel_02" name="addSel" labelname="직장" }}
 								</div>
 								{{> cp/address ad_ph="주소를 입력해 주세요." case2=true}}
 								<ul class="list_ty2">
-									<li>소득세법에서 규정한 <strong>장애인전용 보험전환 특약</strong> 가입 대상인 경우 '할인특약' 단계에서 가입이 가능합니다.</li>
+									<!-- s: 25-08-25 UXW -->
+									<li>「소득세법」에서 규정한 <strong>장애인전용보험전환 특약</strong> 가입 대상인 경우 ‘할인특약’ 단계에서 가입할 수 있습니다.</li>
+									<!-- e: 25-08-25 UXW -->
 								</ul>
 							</div>
 						</div>
@@ -135,14 +163,19 @@
 					<!-- e: 25-07-16 -->
 					<div class="form_group_wrap full">
 						<div class="form_line full_half">
-							<div class="label_tit">보험증권 수령방법을 선택해주세요.</div>
+							<!-- s: 25-08-25 UXW -->
+							<div class="label_tit">보험증권 받는 방법을 선택해주세요.</div>
+							<!-- e: 25-08-25 UXW -->
 							<div class="radio_group_wrap" role="radiogroup">
 								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_01" name="receiveSel02" labelname="모바일" checked=true }}
 								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="이메일" }}
-								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_04" name="receiveSel02" labelname="직장" }}
-							</div>
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_04" name="receiveSel02" labelname="우편" }}
+								<!-- e: 25-08-25 UXW -->							</div>
 							<ul class="list_ty2">
-								<li>보험계약자료를 우편으로 수령하시려면, 보험료 계산 단계에서 그린서비스특약 미가입으로 선택해주시기 바랍니다.</li>
+								<!-- s: 25-08-25 UXW -->
+								<li>보험계약자료를 우편으로 받으려면, 보험료계산 단계에서 하이카그린서비스 특약을 미가입으로 선택해주세요.</li>
+								<!-- e: 25-08-25 UXW -->
 							</ul>
 						</div>
 					</div>
@@ -163,9 +196,12 @@
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active="active" }}
 					<ul class="list_ty1">
-						<li>이전에 현대해상에서 설계/가입한 이력이 있는 경우, 이력 기준으로 개인정보(연락처, 이메일 등)를 자동으로 등록합니다.<br>고객님의 현재 정보와 일치하는지 반드시 확인해 주시기 바랍니다.</li>
-						<li>개인정보(주소, 연락처, 이메일 등)는 입력하신 정보로 업데이트 되오니 이점 유의하시기 바랍니다.</li>
-						<li>휴대폰 번호 수정이 필요한 경우 고객정보 입력 단계에서 재입력해 주세요.</li>
+						<!-- s: 25-08-25 UXW -->
+						<li>이전에 현대해상에서 설계/가입한 이력이 있는 경우, 이력기준으로 개인정보(연락처, 이메일 등)를 자동으로 등록합니다.<br>고객님의 현재 정보와 일치하는지 반드시 확인해주세요.</li>
+						<li>개인정보(주소, 연락처, 이메일 등)는 입력하신 정보로 업데이트되는 점 유의해주세요.</li>
+						<li>휴대폰번호 수정이 필요한 경우 고객정보 입력 단계에서 다시 입력해주세요.</li>
+						<li>자동차보험 계약에 질권설정(리스,대출 등)이 필요하신 경우 계약체결 후 다이렉트 고객센터(1588-5656)로 연락해주세요.</li>
+						<!-- e: 25-08-25 UXW -->
 					</ul>
 				{{/ cp/notice }}
 				<!-- e: 꼭 알아두세요 -->
