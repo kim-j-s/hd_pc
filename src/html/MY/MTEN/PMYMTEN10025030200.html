@@ -14,8 +14,9 @@
 						<strong>계약내용 및 계약주요사항</strong>을 확인해주세요
 					</div>
 				</div>
-
 			</div>
+
+			<!-- s: 25-08-25 수정 -->
 			<div class="title_item">
 				<div class="item">
 					<div class="title_h5 ct1">
@@ -26,62 +27,14 @@
 					{{> cp/button type="1" size="3" b-text="계약주요사항 확인"}}
 				</div>
 			</div>
-			<!-- s: 개인 -->
-			<div class="info_gray summary">
-				<h2 class="title_h2">Hicar 업무용(CM)</h2>
-				<div class="data_box df_type_w_ty9">
-					<dl>
-						<dt>자동차번호</dt>
-						<dd><strong>123가**67</strong></dd>
-					</dl>
-					<dl>
-						<dt>
-							총 보험료
-						</dt>
-						<dd>
-							<strong>200,000 원</strong>
-						</dd>
-					</dl>
-					<dl>
-						<dt>보험기간</dt>
-						<dd><strong>2025.01.01 ~2026.01.01</strong></dd>
-					</dl>
-					<dl>
-						<dt>초회보험료</dt>
-						<dd>208,260원(6회납)</dd>
-					</dl>
-					<dl>
-						<dt>차량정보(연식)</dt>
-						<dd><strong>더 뉴 EV6(롱레인지)(2025)</strong></dd>
-					</dl>
-					<dl>
-						<dt>계약자/피보험자</dt>
-						<dd><strong>김*대/김*대</strong></dd>
-					</dl>
-					<dl>
-						<dt>운전자범위</dt>
-						<dd><strong>임직원 한정</strong></dd>
-					</dl>
-					<dl>
-						<dt>연령한정</dt>
-						<dd>
-							<strong>만43세 이상 만 48세 이상 연령한정 <br>(자동변경 예정: 2025.07.01)</strong>
-						</dd>
-					</dl>
-				</div>
-				<div class="btn_area center">
-					{{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
-				</div>
-			</div>
-			<!-- e: 개인 -->
-			<!-- s: 다수 -->
+
 			<!-- 가입설계서 확인 전 -->
 			<div class="info_gray summary">
 				<h2 class="title_h2">
 					다이렉트 자동차보험(CM개인용)
 					<!-- <span class="badge_wrap">
-							<span class="hd_badge outline solid_pastel c_primary size_m">확인완료</span>
-						</span> -->
+						<span class="hd_badge outline solid_pastel c_primary size_m">확인완료</span>
+					</span> -->
 				</h2>
 				<div class="data_box df_type_w_ty9">
 					<dl>
@@ -124,7 +77,9 @@
 					</dl>
 				</div>
 				<div class="btn_area center">
+					<!-- s: 25-07-29 수정 -->
 					{{> cp/button type="3" size="3" rightIcon="documentSvg" b-text="가입 설계 보기"}}
+					<!-- e: 25-07-29 수정 -->
 					{{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
 				</div>
 			</div>
@@ -182,49 +137,30 @@
 					{{> cp/button type="3" size="3" rightIcon="documentChkSvg" b-text="가입 내용 자세히 보기"}}
 				</div>
 			</div>
-			<!-- e: 다수 -->
 
-
-			<!-- s: 계약서류 확인 후 -->
 			<div class="acd_item acd_item_ty2">
 				{{#> cp/accordion ac-title="계약 주요 사항을 모두 확인하였습니다." cont-class="" ac-active=true }}
-					<!-- s: 단건만 -->
-					{{> cp/checkbox labelname="가입설계서 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-1" checked=true disabled=true }}
-					<!-- e: 단건만 -->
+					<!-- s: 25-07-29 수정 -->
+					<!-- 삭제 {{> cp/checkbox labelname="가입설계서 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-1" checked=true disabled=true }} -->
 					{{> cp/checkbox labelname="상품설명서 확인" label_class="chk_label_ty3" ag_more=true id="checkbox01-2" checked=true disabled=true }}
 					{{> cp/checkbox labelname="상품설명서 주요 내용 확인" label_class="chk_label_ty3" ag_more=true id="checkbox01-3" checked=true disabled=true }}
+					{{> cp/checkbox labelname="개인용 상품 약관 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-4" }}
 					{{> cp/checkbox labelname="업무용 상품 약관 보기" label_class="chk_label_ty3" ag_more=true id="checkbox01-5" }}   	
+					<!-- s: 25-07-29 수정 -->
 				{{/ cp/accordion }}
 			</div>
 			<div class="checkbox_group_wrap">
-				{{> cp/checkbox checkbox_class="rd_box" id="checkbox02" label_class="chk_label_ty3" labelname="보험계약 해지 시 통신수단(다이렉트콜센터, 1588-5656)을 이용한 보험계약 해지에 동의합니다."}}
+				{{> cp/checkbox id="checkbox100_1" checkbox_class="rd_box" label_class="chk_label_ty3" labelname="보험계약 해지 시 통신수단(고객콜센터, 1899-6782)을 이용한 보험계약 해지에 동의합니다." }}
 			</div>
-
-			<!-- s: 꼭 알아두세요 -->
-			{{#> cp/notice dp-active="active" }}
-			<ul class="list_ty1">
-				<li>
-					청약서(가입설계서), 상품설명서, 상품약관을 읽고 확인하신 경우, 회사는 약관을 전달하고 상품의 중요 내용을 설명한 것으로 간주합니다.
-				</li>
-				<li>또한, 본인이 가입하는 보험계약의 예금자보호여부 및 보호한도에 대하여 이해하였음을 확인 합니다.</li>
-				<li>가입완료 후 고객님이 가입하신 특약만 포함된 맞춤형약관이 추가 발송됩니다. (모바일 또는 이메일)</li>
-				<li>
-					보험계약 후 청약에 대한 철회신청 및 각종 계약에 대한 변경은 현대해상 홈페이지(www.hi.co.kr) 또는 대표콜센터 (1588-5656)로 문의주시기 바랍니다.
-				</li>
-			</ul>
-			{{/ cp/notice }}
-			<!-- e: 꼭 알아두세요 -->
-			<!-- e: 계약서류 확인 후 -->
-
+			
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					{{> cp/button type="1" size="1" b-text="계약주요사항을 차례대로 확인합니다" }}
-					<!-- {{> cp/button type="1" size="1" b-text="주요 내용을 확인 중이에요" disabled=true }} -->
-					<!-- {{> cp/button type="1" size="1" b-text="네, 모두 확인 했습니다" }} -->
+					{{> cp/button type="1" size="1" b-text="결제하기" disabled=true }}
 				</div>
 			</div>
-		</div>
+			<!-- e: 25-08-25 수정 -->
+
 	</div>
 
 	<!-- footer -->
