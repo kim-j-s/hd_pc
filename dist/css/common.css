@@ -6286,6 +6286,13 @@ strong {
 	color: var(--color-text-information);
 	color: #58616a;
 }
+.card_item_wrap .card_item .item_top .desc_ty2 {
+	margin-top: var(--gap-4);
+	font-size: var(--font-size-body-medium);
+}
+.card_item_wrap .card_item .item_top .desc_ty2 + .list_depth_ty2 {
+	margin-top: var(--gap-4);
+}
 .card_item_wrap .card_item .item_top + .card_list_ty1 > li:first-child {
 	margin-top: var(--gap-5);
 	padding-top: var(--gap-5);
@@ -9159,6 +9166,17 @@ strong {
 	-ms-flex-align: end;
 	align-items: end;
 }
+.form_group_wrap [class^="form_line"] .label_tit.box_column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 4px;
+	margin-bottom: 16px;
+}
 .form_group_wrap [class^="form_line"] .label_tit + .address_item {
 	margin-top: 0;
 }
@@ -9349,6 +9367,9 @@ strong {
 }
 .form_group_wrap .list_ty2 + .info_gray.ty2 {
 	margin-top: var(--gap-5);
+}
+.form_group_wrap:has(.box_column) .checkbox_group_wrap.column .list_ty2 {
+	margin-top: 0;
 }
 .form_group_wrap .list_depth_ty2,
 .form_group_wrap .title_sub {
@@ -10138,6 +10159,9 @@ strong {
 }
 .list_depth + .inp_checkbox {
 	margin-top: var(--gap-8);
+}
+.list_depth .btn_gap {
+	margin-left: var(--gap-4);
 }
 .list_depth_ty2 .sub_title {
 	font-size: var(--font-size-body-small);
