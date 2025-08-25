@@ -717,6 +717,13 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: end;
+
+				&_column {
+					display: flex;
+					flex-direction: column;
+					gap: 4px;
+					margin-bottom: 16px;
+				}
 			}
 
 			& + .address_item {
@@ -930,6 +937,14 @@
 
 		& + .info_gray.ty2 {
 			margin-top: var(--gap-5);
+		}
+	}
+
+	&:has(.box_column) {
+		.checkbox_group_wrap.column {
+			.list_ty2 {
+				margin-top: 0;
+			}
 		}
 	}
 

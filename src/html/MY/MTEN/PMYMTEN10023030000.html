@@ -21,7 +21,9 @@
 				<div class="info_gray df_type">
 					<div class="data_box df_type_w_ty1">
 						<dl>
-							<dt>자동차번호</dt>
+							<!-- s: 25-08-25 UXW -->
+							<dt>차량번호</dt>
+							<!-- e: 25-08-25 UXW -->
 							<dd>18루**22</dd>
 						</dl>
 						<dl>
@@ -36,11 +38,15 @@
 						<div class="row">
 							<div class="form_line">
 								<div class="label_tit">시작일(00시)</div>
-								{{> cp/text cal=true }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text placeholder="날짜 입력" cal=true }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 							<div class="form_line">
 								<div class="label_tit">종료일(24시)</div>
-								{{> cp/text cal=true }}
+								<!-- s: 25-08-25 UXW -->
+								{{> cp/text placeholder="날짜 입력" cal=true }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 						</div>
 						<ul class="list_ty2">
@@ -61,9 +67,11 @@
 
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice dp-active=true }}
+				<!-- s: 25-08-25 UXW -->
 				<ul class="list_depth">
-					<li>신청일 당일은 가입이 불가능하며, 가입기간은 최소 1일~최대 60일입니다.</li>
+					<li>신청일 당일은 가입할 수 없으며, 가입기간은 최소 1일~최대 60일입니다.</li>
 				</ul>
+				<!-- e: 25-08-25 UXW -->
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 -->
 			</div>

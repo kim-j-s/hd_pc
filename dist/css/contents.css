@@ -2091,6 +2091,7 @@
 	top: 8px;
 }
 .progress_box_ty2 i .spot {
+	position: relative;
 	display: block;
 	width: 34px;
 	padding: 2px 4px;
@@ -2155,12 +2156,6 @@
 	background-color: var(--color-border-secondary);
 	text-align: center;
 	right: 0;
-}
-.progress_box_ty2 .ing.full .newStart {
-	left: 33px;
-}
-.progress_box_ty2 .ing.full .newStart em {
-	left: -38px;
 }
 .card_item .insurance_policyBox {
 	margin-top: var(--gap-5);
