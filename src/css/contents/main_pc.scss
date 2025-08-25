@@ -904,17 +904,20 @@
 }
 
 .mc_corp_link {
+	display: block;
 	height: 248px;
 	padding: var(--padding-8, 24px) var(--padding-7, 20px);
 	background: var(--color-surface-secondary-subtler) url(../images/content/main/img_corp_link_bg.png) no-repeat right bottom 12px / 180px auto;
 	border-radius: var(--radius-large2);
 
 	.sub_title {
-		font-size: var(--font-size-heading-xxsmall);
+		display: block;
 		font-weight: 700;
+		font-size: var(--font-size-heading-xxsmall);
 		color: var(--color-text-secondary-light);
 	}
 	.main_title {
+		display: block;
 		margin-top: 4px;
 		font-size: var(--font-size-heading-xsmall);
 	}
