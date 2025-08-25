@@ -84,7 +84,11 @@
 					<div class="title_view_wrap">
 						<div class="page_title">
 							<div class="p_info">피보험자 정보</div>
-							<h2 class="p_title">피보험자/계약자 <strong>정보를 입력</strong>해 주세요</h2>
+							<h2 class="p_title">
+								<!-- s: 25-08-25 UXW -->
+								피보험자/계약자 <strong>정보를 입력</strong>해주세요
+								<!-- e: 25-08-25 UXW -->
+							</h2>
 						</div>
 						<!-- s: 25-07-17 추가 -->
 						<div class="btn_area">
@@ -110,8 +114,10 @@
 												<div class="inner">
 													<div class="inner_contents">
 														<!-- e: 25-07-16 -->
-														<p>계약자가 계약변경/환급금수령/소득공제 권한을 갖습니다</p>
-														<p>당사에 등록된 개인정보가 보험가입 시 입력하신 정보(주소, 휴대폰번호, 이메일 등)로 업데이트 되오니 이 점 유의하시기 바랍니다.</p>
+														<!-- s: 25-08-25 UXW -->
+														<p>계약자가 계약변경/환급금수령/소득공제 권한을 갖습니다.</p>
+														<p>현대해상에 등록된 개인정보가 보험가입 시 입력하신 정보(주소, 휴대폰번호, 이메일 등)로 업데이트되는 점 유의해주세요.</p>
+														<!-- e: 25-08-25 UXW -->
 													</div>
 
 													<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
@@ -154,23 +160,27 @@
 						<div class="form_group_wrap">
 							<div class="form_line">
 								<div class="label_tit">이메일</div>
+								<!-- s: 25-08-25 UXW -->
 								<div class="input_text">
 									<div class="inp">
-										<input type="email" class="email_auto" placeholder="이메일을 입력하세요" title="이메일 입력" />
+										<input type="email" class="email_auto" placeholder="이메일을 입력" title="이메일 입력" />
 										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
 								</div>
+								<!-- e: 25-08-25 UXW -->
 							</div>
 
 							<div class="form_line full">
 								<div class="label_tit">우편물 수령지</div>
 								<div class="radio_group_wrap" role="radiogroup">
+									<!-- s: 25-08-25 UXW -->
 									<div class="inp_radio rd_btn">
 										<input type="radio" id="addSel01_01" name="addSel01" checked />
 										<label for="addSel01_01">
-											<span class="label_cont">자택</span>
+											<span class="label_cont">집</span>
 										</label>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 									<div class="inp_radio rd_btn">
 										<input type="radio" id="addSel01_02" name="addSel01" />
 										<label for="addSel01_02">
@@ -188,7 +198,9 @@
 									</div>
 								</div>
 								<ul class="list_ty2">
-									<li>소득세법에서 규정한 <strong>장애인전용 보험전환 특약</strong> 가입 대상인 경우 '할인특약' 단계에서 가입이 가능합니다.</li>
+									<!-- s: 25-08-25 UXW -->
+									<li>「소득세법」에서 규정한 <strong>장애인전용보험전환 특약</strong> 가입 대상인 경우 ‘할인특약’ 단계에서 가입할 수 있습니다.</li>
+									<!-- e: 25-08-25 UXW -->
 								</ul>
 							</div>
 						</div>
@@ -200,31 +212,37 @@
 							<div class="form_group_wrap">
 								<div class="form_line full_half">
 									<div class="label_tit">피보험자와의 관계</div>
+									<!-- s: 25-08-25 UXW -->
 									<div class="input_text">
 										<div class="inp">
-											<input type="text" placeholder="입력해주세요" title="이름 입력" />
+											<input type="text" placeholder="관계 입력" title="관계 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">이름</div>
+									<!-- s: 25-08-25 UXW -->
 									<div class="input_text">
 										<div class="inp">
-											<input type="text" placeholder="입력해주세요" title="이름 입력" />
+											<input type="text" placeholder="이름 입력" title="이름 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">주민등록번호</div>
 									<div class="comp_wrap birth">
+										<!-- s: 25-08-25 UXW -->
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="앞자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+												<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞 6자리 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 										</div>
+										<!-- e: 25-08-25 UXW -->
 										<span class="dash">-</span>
 										<!-- s: 25-08-12 수정 -->
 										<div class="comp_wrap_keypad_call form_key_pc">
@@ -240,40 +258,50 @@
 								</div>
 								<div class="form_line">
 									<div class="label_tit">휴대폰번호</div>
+									<!-- s: 25-08-25 UXW -->
 									<div class="input_text phone">
 										<div class="int_txt left">010</div>
 										<div class="inp">
-											<input type="tel" placeholder="-없이 입력하세요" maxlength="8" title="휴대폰번호 입력" />
+											<input type="tel" placeholder="- 없이 입력" maxlength="8" title="휴대폰번호 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">이메일</div>
+									<!-- s: 25-08-25 UXW -->
 									<div class="input_text">
 										<div class="inp">
-											<input type="email" class="email_auto" placeholder="이메일을 입력하세요" title="이메일 입력" />
+											<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 								</div>
-								<div class="form_line full">
-									<div class="label_tit">우편물 수령지</div>
+								<div class="form_line">
+									<!-- s: 25-08-25 UXW -->
+									<div class="label_tit">주소</div>
+									<!-- e: 25-08-25 UXW -->
 									<div class="checkbox_group_wrap">
+										<!-- s: 25-08-25 UXW -->
 										<div class="inp_checkbox">
 											<input type="checkbox" id="checkbox01-13" />
 											<label for="checkbox01-13" class="chk_label">
-												<span class="label_cont">피보험자(자동차 소유주) 주소와 동일</span>
+												<span class="label_cont">피보험자(자동차 소유주) 주소와 같음</span>
 											</label>
 										</div>
+										<!-- e: 25-08-25 UXW -->
 									</div>
 									<div class="radio_group_wrap" role="radiogroup">
+										<!-- s: 25-08-25 UXW -->
 										<div class="inp_radio rd_btn">
 											<input type="radio" id="addSel_01" name="addSel" checked />
 											<label for="addSel_01">
-												<span class="label_cont">자택</span>
+												<span class="label_cont">집</span>
 											</label>
 										</div>
+										<!-- e: 25-08-25 UXW -->
 										<div class="inp_radio rd_btn">
 											<input type="radio" id="addSel_02" name="addSel" />
 											<label for="addSel_02">
@@ -291,7 +319,9 @@
 										</div>
 									</div>
 									<ul class="list_ty2">
-										<li>소득세법에서 규정한 <strong>장애인전용 보험전환 특약</strong> 가입 대상인 경우 '할인특약' 단계에서 가입이 가능합니다.</li>
+										<!-- s: 25-08-25 UXW -->
+										<li>「소득세법」에서 규정한 <strong>장애인전용보험전환 특약</strong> 가입 대상인 경우 ‘할인특약’ 단계에서 가입할 수 있습니다.</li>
+										<!-- e: 25-08-25 UXW -->
 									</ul>
 								</div>
 							</div>
@@ -303,7 +333,9 @@
 						<!-- e: 25-07-16 -->
 						<div class="form_group_wrap full">
 							<div class="form_line full_half">
-								<div class="label_tit">보험증권 수령방법을 선택해주세요.</div>
+								<!-- s: 25-08-25 UXW -->
+								<div class="label_tit">보험증권 받는 방법을 선택해주세요.</div>
+								<!-- e: 25-08-25 UXW -->
 								<div class="radio_group_wrap" role="radiogroup">
 									<div class="inp_radio rd_btn">
 										<input type="radio" id="receiveSel02_01" name="receiveSel02" checked />
@@ -317,15 +349,19 @@
 											<span class="label_cont">이메일</span>
 										</label>
 									</div>
+									<!-- s: 25-08-25 UXW -->
 									<div class="inp_radio rd_btn">
 										<input type="radio" id="receiveSel02_04" name="receiveSel02" />
 										<label for="receiveSel02_04">
-											<span class="label_cont">직장</span>
+											<span class="label_cont">우편</span>
 										</label>
 									</div>
+									<!-- e: 25-08-25 UXW -->
 								</div>
 								<ul class="list_ty2">
-									<li>보험계약자료를 우편으로 수령하시려면, 보험료 계산 단계에서 그린서비스특약 미가입으로 선택해주시기 바랍니다.</li>
+									<!-- s: 25-08-25 UXW -->
+									<li>보험계약자료를 우편으로 받으려면, 보험료계산 단계에서 하이카그린서비스 특약을 미가입으로 선택해주세요.</li>
+									<!-- e: 25-08-25 UXW -->
 								</ul>
 							</div>
 						</div>
@@ -358,9 +394,12 @@
 							<div class="acd_cont">
 								<div class="inner" style="display: block">
 									<ul class="list_ty1">
-										<li>이전에 현대해상에서 설계/가입한 이력이 있는 경우, 이력 기준으로 개인정보(연락처, 이메일 등)를 자동으로 등록합니다.<br />고객님의 현재 정보와 일치하는지 반드시 확인해 주시기 바랍니다.</li>
-										<li>개인정보(주소, 연락처, 이메일 등)는 입력하신 정보로 업데이트 되오니 이점 유의하시기 바랍니다.</li>
-										<li>휴대폰 번호 수정이 필요한 경우 고객정보 입력 단계에서 재입력해 주세요.</li>
+										<!-- s: 25-08-25 UXW -->
+										<li>이전에 현대해상에서 설계/가입한 이력이 있는 경우, 이력기준으로 개인정보(연락처, 이메일 등)를 자동으로 등록합니다.<br />고객님의 현재 정보와 일치하는지 반드시 확인해주세요.</li>
+										<li>개인정보(주소, 연락처, 이메일 등)는 입력하신 정보로 업데이트되는 점 유의해주세요.</li>
+										<li>휴대폰번호 수정이 필요한 경우 고객정보 입력 단계에서 다시 입력해주세요.</li>
+										<li>자동차보험 계약에 질권설정(리스,대출 등)이 필요하신 경우 계약체결 후 다이렉트 고객센터(1588-5656)로 연락해주세요.</li>
+										<!-- e: 25-08-25 UXW -->
 									</ul>
 								</div>
 							</div>

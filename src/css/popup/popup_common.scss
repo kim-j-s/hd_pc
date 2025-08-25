@@ -251,6 +251,11 @@
 							margin-top: var(--gap-5);
 						}
 					}
+					.call_box {
+						& + .radio_group_wrap {
+							margin-top: var(--gap-8);
+						}
+					}
 				}
 
 				.popup_content.ty2 {
