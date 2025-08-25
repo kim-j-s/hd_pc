@@ -414,6 +414,16 @@
 				color: var(--color-text-information);color: #58616A;
 			}
 
+			// 보안프로그램 설치안내 에서 사용됨
+			.desc_ty2 {
+				margin-top: var(--gap-4);
+				font-size: var(--font-size-body-medium);
+				
+				& + .list_depth_ty2 {
+					margin-top: var(--gap-4);
+				}
+			}
+
 			& + .card_list_ty1 {
 				// margin-top: var(--gap-5);
 				// padding-top: 16px;
