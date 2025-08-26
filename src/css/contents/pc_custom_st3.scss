@@ -153,13 +153,12 @@
 	
 						~ dt {
 							padding-left: 32px;
+							// padding-left: 24px;
 						}
 	
 						~ dd {
-							// max-width: 212px;
-							max-width: 240px;
-							// padding-left: 12px;
-							padding-right: var(--padding-5);
+							max-width: 212px;
+							padding-left: 12px;
 						}
 					}
 					dd {
@@ -1489,12 +1488,6 @@
 			.bit_inner_text {
 				display: block;
 				font-size: var(--font-size-heading-xxlarge);
-
-				// 배서
-				&.sub_desc {
-					padding-top: var(--gap-3);
-					font-size: var(--font-size-body-small);
-				}
 			}
 			&.active {
 				.bit_inner_text {
