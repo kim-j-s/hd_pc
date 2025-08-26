@@ -995,24 +995,38 @@
 				}
 			}
 
-			// 플랜 선택 disabled 상태값 추가 예시 - 디자인 적용 후 보정 필요
+			// 플랜 선택 disabled 상태값
 			input {
 				&:disabled {
 					+ label {
-						&::before {
-							content: '';
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							border-radius: var(--radius-large2);
-							background: rgba($color: #ddd, $alpha: 0.6);
+						background-color: var(--color-surface-gray-subtler);
+						border-color: var(--color-border-secondary-light);
+
+						.badge_wrap {
+							.hd_badge {
+								background-color: var(--color-element-disabled-light);
+								border-color: var(--color-border-disabled);
+								.text {
+									background-image: url(../images/icon/icon_badge_disabled.svg);
+									color: var(--color-text-disabled-on);
+								}
+							}
+						}
+
+						.item_top,
+						.item_desc {
+							color: var(--color-text-disabled-on);
+						}
+
+						.item_top {
+							.top_info {
+								line-height: 1.5;
+							}
 						}
 					}
 				}
 			}
-			// 플랜 선택 disabled 상태값 추가 예시 - 디자인 적용 후 보정 필요
+			// 플랜 선택 disabled 상태값 추가
 
 
 		}
@@ -1124,7 +1138,7 @@
 						content: '';
 						position: absolute;
 						right: 20px;
-						bottom: 24px;
+						bottom: 34px;
 						width: 110px;
 						height: 100px;
 						background-repeat: no-repeat;
