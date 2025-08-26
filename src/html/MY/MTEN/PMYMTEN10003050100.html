@@ -128,7 +128,9 @@
 									<!-- 제조사 -->
 									<div class="opts_area" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
 										<div class="autocomplete_wrap">
-											{{> cp/text inp-search=true placeholder="ex) 그랜져" inp-title="검색어를 입력하세요." auto=true }}
+											<!-- s: 25-08-26 수정 -->
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어를 입력하세요." auto=true }}
+											<!-- e: 25-08-26 수정 -->
 											<div class="autocomplete_wrap_list">
 												<ul class="autocomplete_list"></ul>
 											</div>
@@ -436,6 +438,84 @@
  	<!-- s: 자동차 배서 메뉴 -->
 	 {{> pages/pop1 }}
 	 <!-- e: 자동차 배서 메뉴 -->
+
+<!-- s: 25-08-26 수정 -->
+<!-- s: 차명검색 Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<!-- s: 25-07-23 수정 -->
+<div class="popup_cont search_list_type">
+	<div class="popup_content">
+		<!-- s: popup_content_top -->
+		<div class="popup_content_top">
+			<h2 class="title_h2">
+				<strong>대표차명</strong>을<br>
+				입력해 주세요
+			</h2>
+		</div>
+		<!-- e: popup_content_top -->
+		 
+		<!-- s: 25-08-06 수정 -->
+		<div class="autocomplete_wrap">
+			{{> cp/text inp-search=true placeholder="ex) 그랜져" inp-title="검색어를 입력하세요." auto=true }}
+			<div class="autocomplete_wrap_list">
+				<ul class="autocomplete_list"></ul>
+			</div>
+		</div>
+		<!-- e: 25-08-06 수정 -->
+
+		<!-- 최초 진입 시 노출 -->
+		<!-- s: 25-04-21 수정 -->
+		<div class="suggestion_list_wrap">			
+			<div class="title_h3"><strong>인기검색어</strong></div>			
+			<div class="item_wrap">
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">그랜져</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘렌토</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘나타</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">아반떼</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">모닝</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">카니발</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">투싼</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">싼타페</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">코나</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">티볼리</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘울</span></button>
+				<button type="button" class="tag_item size_m c_ty01"><span class="text">무쏘</span></button>
+			</div>
+		</div>
+		<!-- e: 25-04-21 수정 -->
+		<!-- 최초 진입 시 노출 -->
+
+		<!-- s: 검색 결과 리스트 -->
+		<div class="search_result_count">
+			<p>검색결과 <strong class="point">2,117</strong>건</p>
+		</div>
+		<div class="search_reult_list_container">
+			<ul class="search_reult_list">
+				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
+				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
+				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
+				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
+				<li class="search_reult_list_item">
+					<div class="no_list_area">
+						{{> cp/icon iconClass="exclamationSvg"}}
+						<p>내역이 없어요</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- e: 검색 결과 리스트 -->
+		<!-- e: 25-07-23 수정 -->
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="취소"}}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: 차명검색 Full 팝업 -->
+<!-- e: 25-08-26 수정 -->
+
 <!-- e: popup area -->
 
 {{/ layout/default }}

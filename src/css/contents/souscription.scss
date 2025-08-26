@@ -350,7 +350,7 @@ ul + .form_group_wrap {
 			margin-top: var(--gap-5);
 		}
 	}
-	.text_sub {
+	.text_sub:not(:first-child) {
 		margin-top: var(--gap-7);
 	}
 	h2,
@@ -380,6 +380,12 @@ ul + .form_group_wrap {
 		& + ul,
 		& + ol {
 			margin-top: var(--gap-6);
+		}
+	}
+	
+	.pop_title_h2 {
+		& + p {
+			margin-top: var(--gap-5);
 		}
 	}
 
@@ -419,6 +425,9 @@ ul + .form_group_wrap {
 	.text_head {
 		& + .info_gray {
 			margin-top: var(--gap-8);
+		}
+		& + .pop_title_h2 {
+			margin-top: var(--gap-5);
 		}
 	}
 	p,
@@ -640,6 +649,7 @@ ul + .form_group_wrap {
 	}
 }
 .banner_box {
+	font-size: 0;
 	a {
 		display: block;
 		img {
@@ -674,7 +684,8 @@ ul + .form_group_wrap {
 .info_text {
 	font-size: var(--font-size-body-medium);
 	& + .file_attach_box {
-		margin-top: var(--gap-6);
+		//margin-top: var(--gap-6);
+		margin-top: var(--gap-5);
 	}
 }
 .info_gray {
