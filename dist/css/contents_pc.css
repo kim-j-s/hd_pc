@@ -3060,8 +3060,8 @@ body {
 	padding-left: 32px;
 }
 .info_summary .summery_inner .detail_wrap .dt_table > dl dt ~ dd {
-	max-width: 212px;
-	padding-left: 12px;
+	max-width: 240px;
+	padding-right: var(--padding-5);
 }
 .info_summary .summery_inner .detail_wrap .dt_table > dl dd {
 	display: table-cell;

@@ -416,7 +416,7 @@
 	width: 100%;
 	height: 100%;
 }
-.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_head {
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.load_cont, .load_cont_ty2)) .popup_head {
 	margin-bottom: var(--gap-5);
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont {
