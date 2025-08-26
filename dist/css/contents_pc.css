@@ -2930,7 +2930,7 @@ body {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	gap: var(--gap-8);
+	gap: var(--gap-6);
 }
 .info_summary .summery_inner:has(.output_wrap) {
 	-webkit-box-align: stretch;
@@ -2989,7 +2989,7 @@ body {
 }
 .info_summary .summery_inner .total_wrap .value .val_discount {
 	padding-bottom: var(--gap-3);
-	font-size: var(--font-size-body-large);
+	font-size: var(--font-size-body-medium);
 	color: var(--color-text-disabled-on);
 	text-decoration: line-through;
 }
@@ -3058,9 +3058,10 @@ body {
 }
 .info_summary .summery_inner .detail_wrap .dt_table > dl dt ~ dt {
 	padding-left: 32px;
+	padding-left: var(--gap-6);
 }
 .info_summary .summery_inner .detail_wrap .dt_table > dl dt ~ dd {
-	max-width: 212px;
+	max-width: 240px;
 	padding-left: 12px;
 }
 .info_summary .summery_inner .detail_wrap .dt_table > dl dd {

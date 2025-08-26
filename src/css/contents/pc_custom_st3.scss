@@ -31,7 +31,8 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		gap: var(--gap-8);
+		// gap: var(--gap-8);
+		gap: var(--gap-6);
 
 		&:has(.output_wrap){
 			align-items: stretch;
@@ -68,7 +69,7 @@
 				}
 				.val_discount {
 					padding-bottom: var(--gap-3);
-					font-size: var(--font-size-body-large);
+					font-size: var(--font-size-body-medium);
 					color: var(--color-text-disabled-on);
 					text-decoration: line-through;
 				}
@@ -153,11 +154,13 @@
 	
 						~ dt {
 							padding-left: 32px;
+							padding-left: var(--gap-6);
 							// padding-left: 24px;
 						}
 	
 						~ dd {
-							max-width: 212px;
+							// max-width: 212px;
+							max-width: 240px;
 							padding-left: 12px;
 						}
 					}
