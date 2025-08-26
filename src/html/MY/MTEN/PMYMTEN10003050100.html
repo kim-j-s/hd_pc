@@ -128,7 +128,9 @@
 									<!-- 제조사 -->
 									<div class="opts_area" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
 										<div class="autocomplete_wrap">
-											{{> cp/text inp-search=true placeholder="ex) 그랜져" inp-title="검색어를 입력하세요." auto=true }}
+											<!-- s: 25-08-26 수정 -->
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어를 입력하세요." auto=true }}
+											<!-- e: 25-08-26 수정 -->
 											<div class="autocomplete_wrap_list">
 												<ul class="autocomplete_list"></ul>
 											</div>
@@ -437,7 +439,8 @@
 	 {{> pages/pop1 }}
 	 <!-- e: 자동차 배서 메뉴 -->
 
-	 <!-- s: 차명검색 Full 팝업 -->
+<!-- s: 25-08-26 수정 -->
+<!-- s: 차명검색 Full 팝업 -->
 {{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
 <!-- s: 25-07-23 수정 -->
 <div class="popup_cont search_list_type">
@@ -511,6 +514,7 @@
 </div>
 {{/ popup/popup_full}}
 <!-- e: 차명검색 Full 팝업 -->
+<!-- e: 25-08-26 수정 -->
 
 <!-- e: popup area -->
 
