@@ -2218,12 +2218,14 @@
 											<!-- 제조사 -->
 											<div class="opts_area" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
 												<div class="autocomplete_wrap">
+													<!-- s: 25-08-26 수정 -->
 													<div class="input_text search">
 														<div class="inp">
-															<input type="search" class="autocomplete_input" placeholder="ex) 그랜져" title="검색어를 입력하세요." autocomplete="off" />
+															<input type="search" class="autocomplete_input" placeholder="검색어 입력" title="검색어를 입력하세요." autocomplete="off" />
 															<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
 														</div>
 													</div>
+													<!-- e: 25-08-26 수정 -->
 													<div class="autocomplete_wrap_list">
 														<ul class="autocomplete_list"></ul>
 													</div>
@@ -2813,6 +2815,110 @@
 		<!-- e: 25-07-10 메뉴, 클래스 수정 -->
 		<!-- e: 자동차 계약변경 -->
 		<!-- e: 자동차 배서 메뉴 -->
+
+		<!-- s: 25-08-26 수정 -->
+		<!-- s: 차명검색 Full 팝업 -->
+		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title"></div>
+					</div>
+					<!-- s: 25-07-23 수정 -->
+					<div class="popup_cont search_list_type">
+						<div class="popup_content">
+							<!-- s: popup_content_top -->
+							<div class="popup_content_top">
+								<h2 class="title_h2">
+									<strong>대표차명</strong>을<br />
+									입력해 주세요
+								</h2>
+							</div>
+							<!-- e: popup_content_top -->
+
+							<!-- s: 25-08-06 수정 -->
+							<div class="autocomplete_wrap">
+								<div class="input_text search">
+									<div class="inp">
+										<input type="search" class="autocomplete_input" placeholder="ex) 그랜져" title="검색어를 입력하세요." autocomplete="off" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn btn_search" title="검색"></button>
+									</div>
+								</div>
+								<div class="autocomplete_wrap_list">
+									<ul class="autocomplete_list"></ul>
+								</div>
+							</div>
+							<!-- e: 25-08-06 수정 -->
+
+							<!-- 최초 진입 시 노출 -->
+							<!-- s: 25-04-21 수정 -->
+							<div class="suggestion_list_wrap">
+								<div class="title_h3"><strong>인기검색어</strong></div>
+								<div class="item_wrap">
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">그랜져</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘렌토</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘나타</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">아반떼</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">모닝</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">카니발</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">투싼</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">싼타페</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">코나</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">티볼리</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘울</span></button>
+									<button type="button" class="tag_item size_m c_ty01"><span class="text">무쏘</span></button>
+								</div>
+							</div>
+							<!-- e: 25-04-21 수정 -->
+							<!-- 최초 진입 시 노출 -->
+
+							<!-- s: 검색 결과 리스트 -->
+							<div class="search_result_count">
+								<p>검색결과 <strong class="point">2,117</strong>건</p>
+							</div>
+							<div class="search_reult_list_container">
+								<ul class="search_reult_list">
+									<li class="search_reult_list_item">
+										<a href="#"><span class="item_text">쏘나타</span></a>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"><span class="item_text">쏘나타</span></a>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"><span class="item_text">쏘나타</span></a>
+									</li>
+									<li class="search_reult_list_item">
+										<a href="#"><span class="item_text">쏘나타</span></a>
+									</li>
+									<li class="search_reult_list_item">
+										<div class="no_list_area">
+											<i class="hd_icon exclamationSvg"></i>
+											<p>내역이 없어요</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 검색 결과 리스트 -->
+							<!-- e: 25-07-23 수정 -->
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">취소</span>
+							</button>
+						</div>
+					</div>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 차명검색 Full 팝업 -->
+		<!-- e: 25-08-26 수정 -->
+
 		<!-- e: popup area -->
 	</body>
 </html>
