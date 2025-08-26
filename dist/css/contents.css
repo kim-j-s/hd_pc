@@ -1663,6 +1663,7 @@
 .autocomplete_wrap {
 	position: relative;
 	z-index: 1;
+	width: 100%;
 }
 .autocomplete_wrap_list {
 	position: absolute;
@@ -4122,7 +4123,7 @@ ul + .form_group_wrap {
 .info_cont .img_box + ol {
 	margin-top: var(--gap-5);
 }
-.info_cont .text_sub {
+.info_cont .text_sub:not(:first-child) {
 	margin-top: var(--gap-7);
 }
 .info_cont h2,
@@ -4156,6 +4157,9 @@ ul + .form_group_wrap {
 .info_cont .pop_title_h1 + ul,
 .info_cont .pop_title_h1 + ol {
 	margin-top: var(--gap-6);
+}
+.info_cont .pop_title_h2 + p {
+	margin-top: var(--gap-5);
 }
 .info_cont .pop_title_h3,
 .info_cont h3 {
@@ -4196,6 +4200,9 @@ ul + .form_group_wrap {
 }
 .info_cont .text_head + .info_gray {
 	margin-top: var(--gap-8);
+}
+.info_cont .text_head + .pop_title_h2 {
+	margin-top: var(--gap-5);
 }
 .info_cont p + .pop_title_h1,
 .info_cont ol + .pop_title_h1,
@@ -4397,6 +4404,9 @@ ul + .form_group_wrap {
 .address_item + .list_ty2 {
 	margin-top: var(--gap-5);
 }
+.banner_box {
+	font-size: 0;
+}
 .banner_box a {
 	display: block;
 }
@@ -4427,7 +4437,7 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-body-medium);
 }
 .info_text + .file_attach_box {
-	margin-top: var(--gap-6);
+	margin-top: var(--gap-5);
 }
 .info_gray + .pop_title_h1 {
 	margin-top: var(--gap-11);
