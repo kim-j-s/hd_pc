@@ -156,8 +156,10 @@
 						}
 	
 						~ dd {
-							max-width: 212px;
-							padding-left: 12px;
+							// max-width: 212px;
+							max-width: 240px;
+							// padding-left: 12px;
+							padding-right: var(--padding-5);
 						}
 					}
 					dd {
