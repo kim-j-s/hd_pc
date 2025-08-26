@@ -197,6 +197,18 @@ function closeHDPopup(target, returnTarget = null) {
 			$target.find(".popup_inner").attr("aria-hidden", "true").removeAttr("tabindex", 0);
 			if(focusTarget) {
 				focusTarget.focus();
+				
+				// 스크롤 위치 자동 조정
+				const el = focusTarget[0];
+				if (el && typeof el.scrollIntoView === "function") {
+					setTimeout(() => {
+						if (typeof el.scrollIntoViewIfNeeded === "function") {
+							el.scrollIntoViewIfNeeded();
+						} else {
+							el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+						}
+					}, 100);
+				}
 				focusTarget.attr("aria-live", "assertive"); //포커스 이동을 스크린 리더에 알림
 				setTimeout(() => {
 					focusTarget.attr("aria-live", null);
@@ -227,6 +239,18 @@ function closeHDPopup(target, returnTarget = null) {
 
 		setTimeout(() => {
 			focusTarget.attr("tabindex", 0).focus();
+			
+			// 스크롤 위치 자동 조정
+			const el = focusTarget[0];
+			if (el && typeof el.scrollIntoView === "function") {
+				setTimeout(() => {
+					if (typeof el.scrollIntoViewIfNeeded === "function") {
+						el.scrollIntoViewIfNeeded();
+					} else {
+						el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+					}
+				}, 100);
+			}
 		}, 350);
 	}
 }
