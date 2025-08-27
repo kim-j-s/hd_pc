@@ -974,6 +974,31 @@
 		// 	width: 100% !important;
 		// }
 
+		&:has(.btn_area){
+			.item_radio {
+				input{
+					& + label {
+						height: 284px;
+						.item_top {
+							// padding-bottom: 28px;
+						}
+					}
+
+					&:checked {
+						& + label {
+							.item_top {
+								padding-bottom: 28px;
+							}
+						}
+					}
+				}
+				> .btn_area {
+					left: 20px;
+					bottom: 74px;
+				}
+			}
+		}
+
 		.item_radio	{
 			position: relative;
 			height: 100%;
@@ -1159,10 +1184,29 @@
 						background-size: 110px auto;
 						opacity: 0;
 					}
-				}
 
+					.item_top {
+						padding-bottom: 0;
+					}
+	
+				}
 				> .btn_area {
 					display: none;
+				}
+
+				input {
+					&:checked {
+						+ label {
+							width: 410px;
+							
+							.item_top {
+								padding-bottom: 28px;
+							}
+							& + .btn_area {
+								display: block;
+							}
+						}
+					}
 				}
 			}
 
@@ -1364,40 +1408,6 @@
 				}
 			}
 		}
-			
-		&:has(.btn_area){
-			.select_item {
-				.item_radio {
-					> .btn_area {
-						left: 20px;
-						bottom: 74px;
-					}
-				}
-			}
-		}
-
-		&:has(.btn_area){
-			.item_radio {
-				label {
-					height: 284px;
-				}
-				input{
-					& + label {
-						.item_top {
-							// padding-bottom: 28px;
-						}
-					}
-
-					&:checked {
-						& + label {
-							.item_top {
-								padding-bottom: 28px;
-							}
-						}
-					}
-				}
-			}
-		}
 		
 		&:has(input:checked) {
 			.select_item {
@@ -1406,10 +1416,6 @@
 						& + label {
 							width: 197px;
 							transition: all .3s;
-
-							.item_top {
-								padding-bottom: 0;
-							}
 							
 							.item_desc {
 								display: none;
@@ -1419,26 +1425,15 @@
 								// transition: opacity .5s;
 								// transition-delay: .2s;
 							}
-							& + .btn_area {
-								display: none;
-							}
 						}
 						&:checked {
 							+ label {
 								width: 410px;
-								
-								.item_top {
-									padding-bottom: 28px;
-								}
-							
+
 								.item_desc {
 									display: block;
 									// opacity: 1;
 									// height: 40px;
-								}
-
-								& + .btn_area {
-									display: block;
 								}
 							}
 						}
