@@ -3,7 +3,7 @@
 //타이틀 중복 스타일 정의
 [class^="title_h"] {
 	font-weight: 700;
-	line-height: 150%; /* 36px */
+	// line-height: 150%; /* 36px */
 	letter-spacing: var(--typo-letter-spacing-0);
 	.ext {
 		font-weight: 400;

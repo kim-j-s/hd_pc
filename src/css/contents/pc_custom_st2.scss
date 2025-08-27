@@ -776,18 +776,32 @@
 			margin-top: var(--gap-8);
 		}
 	}
+	& + .info_gray_wrap {
+		&.summary_type {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 
 // info_gray
 .info_gray {
-
+	&.bg_primary {
+		background: var(--color-surface-primary-subtler);
+	}
+	img {
+		display: block;
+	}
 	&.summary {
 		.title_h2 {
 			font-weight: 700;
 
 			.badge_wrap {
-				display: inline;
+				// display: inline;
+				display: inline-block;
+				width: auto;
+				vertical-align: bottom;
+				// background-color: blue;
 			}
 		}
 		[class^=title_h]{
@@ -803,18 +817,20 @@
 		}
 	}
 
-	& + .acd_item_ty2 {
-		margin-top: var(--gap-11);
+	& + .banner_box {
+		margin-top: var(--gap-5);
 	}
-	& + .form_box {
-		margin-top: var(--gap-8);
-	}
+
 	& + .table_wrap {
 		margin-top: var(--gap-7);
 	}
 
-	& + .banner_box {
-		margin-top: var(--gap-5);
+	& + .form_box {
+		margin-top: var(--gap-8);
+	}
+
+	& + .acd_item_ty2 {
+		margin-top: var(--gap-11);
 	}
 
 	.badge_wrap {
@@ -1036,6 +1052,19 @@
 					border-right-color: var(--color-divider-gray-light);
 				}
 			}
+		}
+	}
+}
+
+.info_gray_wrap {
+	&.wrap_type1 {
+		& + .acd_item_ty2 {
+			margin-top: var(--gap-11);
+		}
+	}
+	&.wrap_type2 {
+		& + .info_gray {
+			margin-top: var(--gap-5);
 		}
 	}
 }
@@ -1610,16 +1639,54 @@
 	// 		}
 	// 	}
 	// }
+	&.high_work {
+		.card_item {
+			padding: var(--padding-8) var(--padding-8) var(--padding-8) var(--padding-12);
+			background-position: 24px center;
+		}
+	}
 }
 //my-top
 .cd_top_wrap {
 	margin: 0;
-	padding: 0;
-	background: transparent;
-	.cd_top {
-		background: var(--color-surface-gray-subtler);
+	&:not(.ty2) {
+		padding: 0;
+		background: transparent;
+		.cd_top {
+			background: var(--color-surface-gray-subtler);
+		}
+	}
+	&.ty2 {
+		border-radius: var(--radius-large2);
+		.cd_top {
+			.number_list {
+				display: flex;
+				li {
+					margin: 0;
+					flex: 1;
+				}
+			}
+			.cd_top_name {
+				+ .work_number {
+					margin-top: var(--gap-3);
+				}
+			}
+			.icon_right {
+				display: flex;
+				align-items: center;
+				min-height: 40px;
+			}
+		}
+		+ .title_h3,
+		+ .info_gray {
+			margin-top: var(--gap-11);
+			+ .title_h3 {
+				margin-top: var(--gap-11);
+			}
+		}
 	}
 }
+
 
 // calendar
 .ui-datepicker {
@@ -2661,3 +2728,12 @@
 
 
 
+.info_gray {
+	.icon_text_area {
+		background-size: 48px auto;
+		background-position: left top;
+		&.hihealth {
+			background-image: url(../images/content/bn/img_logo_hihealth.png);
+		}
+	}
+}
