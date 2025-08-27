@@ -776,12 +776,16 @@
 			margin-top: var(--gap-8);
 		}
 	}
+	& + .info_gray_wrap {
+		&.summary_type {
+			margin-top: var(--gap-8);
+		}
+	}
 }
 
 
 // info_gray
 .info_gray {
-
 	&.summary {
 		.title_h2 {
 			font-weight: 700;
@@ -807,18 +811,20 @@
 		}
 	}
 
-	& + .acd_item_ty2 {
-		margin-top: var(--gap-11);
+	& + .banner_box {
+		margin-top: var(--gap-5);
 	}
-	& + .form_box {
-		margin-top: var(--gap-8);
-	}
+
 	& + .table_wrap {
 		margin-top: var(--gap-7);
 	}
 
-	& + .banner_box {
-		margin-top: var(--gap-5);
+	& + .form_box {
+		margin-top: var(--gap-8);
+	}
+
+	& + .acd_item_ty2 {
+		margin-top: var(--gap-11);
 	}
 
 	.badge_wrap {
@@ -1040,6 +1046,19 @@
 					border-right-color: var(--color-divider-gray-light);
 				}
 			}
+		}
+	}
+}
+
+.info_gray_wrap {
+	&.wrap_type1 {
+		& + .acd_item_ty2 {
+			margin-top: var(--gap-11);
+		}
+	}
+	&.wrap_type2 {
+		& + .info_gray {
+			margin-top: var(--gap-5);
 		}
 	}
 }
