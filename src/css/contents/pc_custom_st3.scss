@@ -872,11 +872,21 @@
 					font-size: var(--font-size-display-medium);
 					// vertical-align: top;
 				}
+
+				& + .btn_area {
+					margin-top: var(--gap-2);
+				}
+			}
+			.btn_area {
+				& + .desc {
+					margin-top: var(--gap-3);
+				}
 			}
 			.desc {
 				padding-top: var(--gap-2);
 				font-size: var(--font-size-body-small);
 			}
+			
 		}
 	}
 	.view_right {
@@ -965,6 +975,7 @@
 		// }
 
 		.item_radio	{
+			position: relative;
 			height: 100%;
 
 			input {
@@ -1149,6 +1160,10 @@
 						opacity: 0;
 					}
 				}
+
+				> .btn_area {
+					display: none;
+				}
 			}
 
 			.badge_wrap {
@@ -1172,6 +1187,7 @@
 	}
 
 	.select_item {
+		position: relative;
 		background: none;
 
 		&.t1 {
@@ -1323,8 +1339,11 @@
 					}
 				}
 			}
+			> .btn_area {
+				display: none;
+				position: absolute;
+			}
 		}
-
 	}
 
 	& + .dc_info_box {
@@ -1345,13 +1364,52 @@
 				}
 			}
 		}
+			
+		&:has(.btn_area){
+			.select_item {
+				.item_radio {
+					> .btn_area {
+						left: 20px;
+						bottom: 74px;
+					}
+				}
+			}
+		}
+
+		&:has(.btn_area){
+			.item_radio {
+				label {
+					height: 284px;
+				}
+				input{
+					& + label {
+						.item_top {
+							// padding-bottom: 28px;
+						}
+					}
+
+					&:checked {
+						& + label {
+							.item_top {
+								padding-bottom: 28px;
+							}
+						}
+					}
+				}
+			}
+		}
+		
 		&:has(input:checked) {
 			.select_item {
 				.item_radio {
 					input {
 						& + label {
 							width: 197px;
-							transition: all 0.5s;
+							transition: all .3s;
+
+							.item_top {
+								padding-bottom: 0;
+							}
 							
 							.item_desc {
 								display: none;
@@ -1361,15 +1419,26 @@
 								// transition: opacity .5s;
 								// transition-delay: .2s;
 							}
+							& + .btn_area {
+								display: none;
+							}
 						}
 						&:checked {
 							+ label {
 								width: 410px;
+								
+								.item_top {
+									padding-bottom: 28px;
+								}
 							
 								.item_desc {
 									display: block;
 									// opacity: 1;
 									// height: 40px;
+								}
+
+								& + .btn_area {
+									display: block;
 								}
 							}
 						}
@@ -1379,6 +1448,7 @@
 		}
 	}
 }
+
 .guarantee_info {
 	display:flex;
 	justify-content: space-between;
@@ -1505,6 +1575,12 @@
 			.bit_inner_text {
 				display: block;
 				font-size: var(--font-size-heading-xxlarge);
+
+				// 배서
+				&.sub_desc {
+					padding-top: var(--gap-3);
+					font-size: var(--font-size-body-small);
+				}
 			}
 			&.active {
 				.bit_inner_text {
