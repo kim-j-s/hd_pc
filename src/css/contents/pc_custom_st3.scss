@@ -872,11 +872,21 @@
 					font-size: var(--font-size-display-medium);
 					// vertical-align: top;
 				}
+
+				& + .btn_area {
+					margin-top: var(--gap-2);
+				}
+			}
+			.btn_area {
+				& + .desc {
+					margin-top: var(--gap-3);
+				}
 			}
 			.desc {
 				padding-top: var(--gap-2);
 				font-size: var(--font-size-body-small);
 			}
+			
 		}
 	}
 	.view_right {
@@ -964,7 +974,33 @@
 		// 	width: 100% !important;
 		// }
 
+		&:has(.btn_area){
+			.item_radio {
+				input{
+					& + label {
+						height: 284px;
+						.item_top {
+							// padding-bottom: 28px;
+						}
+					}
+
+					&:checked {
+						& + label {
+							.item_top {
+								padding-bottom: 28px;
+							}
+						}
+					}
+				}
+				> .btn_area {
+					left: 20px;
+					bottom: 74px;
+				}
+			}
+		}
+
 		.item_radio	{
+			position: relative;
 			height: 100%;
 
 			input {
@@ -1148,6 +1184,29 @@
 						background-size: 110px auto;
 						opacity: 0;
 					}
+
+					.item_top {
+						padding-bottom: 0;
+					}
+	
+				}
+				> .btn_area {
+					display: none;
+				}
+
+				input {
+					&:checked {
+						+ label {
+							width: 410px;
+							
+							.item_top {
+								padding-bottom: 28px;
+							}
+							& + .btn_area {
+								display: block;
+							}
+						}
+					}
 				}
 			}
 
@@ -1172,6 +1231,7 @@
 	}
 
 	.select_item {
+		position: relative;
 		background: none;
 
 		&.t1 {
@@ -1323,8 +1383,11 @@
 					}
 				}
 			}
+			> .btn_area {
+				display: none;
+				position: absolute;
+			}
 		}
-
 	}
 
 	& + .dc_info_box {
@@ -1345,13 +1408,14 @@
 				}
 			}
 		}
+		
 		&:has(input:checked) {
 			.select_item {
 				.item_radio {
 					input {
 						& + label {
 							width: 197px;
-							transition: all 0.5s;
+							transition: all .3s;
 							
 							.item_desc {
 								display: none;
@@ -1365,7 +1429,7 @@
 						&:checked {
 							+ label {
 								width: 410px;
-							
+
 								.item_desc {
 									display: block;
 									// opacity: 1;
@@ -1379,6 +1443,7 @@
 		}
 	}
 }
+
 .guarantee_info {
 	display:flex;
 	justify-content: space-between;
