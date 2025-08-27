@@ -787,7 +787,11 @@
 			font-weight: 700;
 
 			.badge_wrap {
-				display: inline;
+				// display: inline;
+				display: inline-block;
+				width: auto;
+				vertical-align: bottom;
+				// background-color: blue;
 			}
 		}
 		[class^=title_h]{
