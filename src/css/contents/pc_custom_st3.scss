@@ -872,11 +872,21 @@
 					font-size: var(--font-size-display-medium);
 					// vertical-align: top;
 				}
+
+				& + .btn_area {
+					margin-top: var(--gap-2);
+				}
+			}
+			.btn_area {
+				& + .desc {
+					margin-top: var(--gap-3);
+				}
 			}
 			.desc {
 				padding-top: var(--gap-2);
 				font-size: var(--font-size-body-small);
 			}
+			
 		}
 	}
 	.view_right {
