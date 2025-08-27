@@ -1505,6 +1505,12 @@
 			.bit_inner_text {
 				display: block;
 				font-size: var(--font-size-heading-xxlarge);
+
+				// 배서
+				&.sub_desc {
+					padding-top: var(--gap-3);
+					font-size: var(--font-size-body-small);
+				}
 			}
 			&.active {
 				.bit_inner_text {
