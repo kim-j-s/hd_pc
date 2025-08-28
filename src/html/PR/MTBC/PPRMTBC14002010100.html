@@ -213,19 +213,40 @@
 							</div>
 						</div>
 					</div>
-					<ul class="list_ty2">
+					<!-- s: 25-08-28 수정 -->
+					<!-- 삭제 <ul class="list_ty2">
 						<li>현재일 기준 보험료 계산이 가능한 계약만 조회됩니다.</li>
-					</ul>
+					</ul> -->
+					<!-- e: 25-08-28 수정 -->
 
 					<!-- s: 만기예정 차량이 없는 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
+						<!-- s: 25-08-28 수정 -->
 						<p>현재 갱신이 가능한 이륜차가 없습니다.</p>
+						<!-- e: 25-08-28 수정 -->
 						<div class="btn_area center">
-							{{> cp/button type="2" size="2" b-text="보유계약 조회하기" }}
+							{{> cp/button type="2" size="3" b-text="신규차량 보험가입"}}
 						</div>
 					</div>
 					<!-- e: 만기예정 차량이 없는 경우 -->
+
+					<!-- s: 25-08-28 수정 -->
+					<!-- 페이지 진입 시 조회 버튼 -->
+					<div class="no_list_area">
+						{{> cp/icon iconClass="exclamationSvg"}}
+						<p>
+							고객님이 보유한 타사 계약을 조회합니다.<br>
+							보유 차량이 많을 경우 조회 시간이 오래 걸릴 수 있습니다.
+						</p>
+						<div class="btn_area center">
+							{{> cp/button type="2" size="3" b-text="보유계약 조회하기" }}
+						</div>
+					</div>
+					<!-- 페이지 진입 시 조회 버튼 -->
+					<!-- e: 25-08-28 수정 -->
+					
+					
 				
 					<div class="bottom_fix_wrap">
 						<div class="btn_area">
