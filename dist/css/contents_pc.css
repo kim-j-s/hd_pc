@@ -3885,17 +3885,24 @@ body {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 410px;
-	height: 100%;
+	height: 256px;
 	padding: var(--padding-8) var(--padding-7);
 	background: none;
 	border: var(--border-width-static-regular, 1px) solid var(--color-border-secondary-light);
 	border-radius: var(--radius-large2);
 }
-.guarantee_select_wrap .select_item .item_radio label .hd_badge.class_type .text em {
+.guarantee_select_wrap .select_item .item_radio label .badge_wrap {
+	height: 56px;
+}
+.guarantee_select_wrap .select_item .item_radio label .badge_wrap .hd_badge.class_type .text em {
 	display: none;
 }
 .guarantee_select_wrap .select_item .item_radio label .item_desc {
-	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* 보여줄 줄 수 */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .guarantee_select_wrap .select_item .item_radio input:disabled + label {
 	background-color: var(--color-surface-gray-subtler);
@@ -3928,6 +3935,7 @@ body {
 }
 .guarantee_select_wrap .select_item .item_top .top_title {
 	font-size: var(--font-size-body-medium);
+	white-space: nowrap;
 }
 .guarantee_select_wrap .select_item .item_top .top_info {
 	display: -webkit-box;
@@ -4038,7 +4046,7 @@ body {
 	width: 410px;
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label .item_top {
-	padding-bottom: 28px;
+	width: 228px;
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label + .btn_area {
 	display: block;
@@ -4077,8 +4085,6 @@ body {
 	-ms-flex-pack: start;
 	justify-content: flex-start;
 	text-align: left;
-	-webkit-transition: width 0.3s;
-	transition: width 0.3s;
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label:before {
 	position: absolute;
@@ -4135,9 +4141,6 @@ body {
 .guarantee_select_wrap .select_item .item_radio input:checked + label .badge_wrap .hd_badge.class_type.class_type03 .text em:before {
 	background-color: var(--color-border-success-light);
 }
-.guarantee_select_wrap .select_item .item_radio input:checked + label .item_top {
-	margin-top: 56px;
-}
 .guarantee_select_wrap .select_item .item_radio input:checked + label .item_top .top_info {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
@@ -4150,8 +4153,7 @@ body {
 	display: block;
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label .item_desc {
-	display: block;
-	max-width: 254px;
+	max-width: 228px;
 }
 .guarantee_select_wrap .select_item .item_radio > .btn_area {
 	display: none;
@@ -4165,7 +4167,6 @@ body {
 }
 .guarantee_select_wrap.guarantee_select_wrap_n3 .select_item .item_radio label {
 	width: 268px;
-	height: 256px;
 }
 .guarantee_select_wrap.guarantee_select_wrap_n3:has(input:checked) .select_item .item_radio input + label {
 	width: 197px;
