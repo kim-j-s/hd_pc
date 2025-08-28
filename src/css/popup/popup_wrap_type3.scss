@@ -40,6 +40,12 @@
 						.hd_btn {
 							flex: 1;
 						}
+
+						&.column {
+							.hd_btn {
+								width: 100%
+							}
+						}
 					}
 				}
 
