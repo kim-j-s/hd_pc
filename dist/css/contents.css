@@ -6775,6 +6775,9 @@ ul + .form_group_wrap {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
+.prd_view .recommend_area .card_list_wrap_ty2 .card_item {
+	cursor: auto;
+}
 .prd_view .notice_area .info_gray + .list_ty2 {
 	margin-top: var(--gap-11);
 }
@@ -6854,6 +6857,9 @@ ul + .form_group_wrap {
 	width: auto;
 	border: 0;
 	border-radius: inherit;
+}
+.review_wrap .review_acd_item .review_star_item .star {
+	cursor: auto;
 }
 .prd_link_area {
 	position: absolute;

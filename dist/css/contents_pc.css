@@ -2955,6 +2955,40 @@ body {
 .info_gray .icon_text_area.hihealth {
 	background-image: url(../images/content/bn/img_logo_hihealth.png);
 }
+.pew_exception .val_price {
+	color: var(--color-text-primary-bold);
+}
+.pew_exception .sub_info span + span {
+	font-weight: 700;
+}
+.simple_info_wrap.ty2 .simple_info_item {
+	padding-top: 24px;
+	padding-bottom: var(--padding-7);
+}
+.simple_info_wrap.ty2 .simple_info_item .sii_list > li + li {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	border-color: var(--color-divider-gray-light);
+}
+.simple_info_wrap.ty2 .simple_info_item .sii_list > li + li .trend.up {
+	color: var(--color-text-point);
+}
+.simple_info_wrap.ty2 .simple_info_item .sii_list > li + li .price {
+	color: var(--color-text-primary-bold);
+}
+.simple_info_wrap.ty2 .simple_info_item .sii_list_l {
+	color: var(--color-text-subtle);
+}
+.simple_info_wrap.ty2 .simple_info_item .sii_list_r {
+	font-size: 16px;
+}
+.simple_info_wrap.ty2 + .sticky.tag_item_wrap.active {
+	padding-bottom: var(--padding-7);
+}
+.popup_wrap.popup_wrap_type4:has(.simple_info_item.active) .pew_exception {
+	padding-bottom: 0;
+}
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
 .info_summary {

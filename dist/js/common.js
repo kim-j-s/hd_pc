@@ -521,21 +521,31 @@
 		const $contents = $wrap.find('.position_event_content .pec_point');
 		const $scrollArea = $wrap.find('.position_event_content');
 
+
 		const idx = $tab.index();
 		const $target = $contents.eq(idx);
 
 		let expHeight = 0;
 
-		if ($wrap.find('.pew_exception').length) {
-			const $exception = $wrap.find('.pew_exception');
-			const exceptionHeight = $exception.outerHeight();
+		let tab1Scroll = null;
 
-			if ($wrap.find('.tag_item_wrap_po_etc1').length) {
-				expHeight = exceptionHeight + 64;
-			} else {
-				expHeight = exceptionHeight;
-			}
+		if ($wrap.find('.pew_exception').length) {
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			const $tagItemWrap = $wrap.find('.tag_item_wrap');
+			const $titleWrap = $wrap.find('.pec_point .title_h3');
+			const hasActivePoEtc1 = $wrap.find('.tag_item_wrap_po_etc1.active').length > 0;
+
+			const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
+			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
+			const titleWrapHeight = $titleWrap.outerHeight() || 0;
+
+			const exceptionHeight = simpleInfoHeight + tagItemHeight;
+
+			expHeight = hasActivePoEtc1
+				? exceptionHeight - titleWrapHeight * 2
+				: exceptionHeight + titleWrapHeight + 2;
 		}
+		
 
 		if ($target.length) {
 			$wrap.data('scrolling', true);
@@ -546,6 +556,7 @@
 			const containerTop = $scrollArea.offset().top;
 			const targetTop = $target.offset().top;
 			const scrollY = targetTop - containerTop + expHeight;
+		
 
 			if ($(this).closest('.amc_nav').length && scrollY == 0 ) {
 				$('.amc_nav').removeClass('active');
@@ -604,94 +615,39 @@ function tabScroll(){
 // 간편정보 노출 방식
 function simpleInfo(){
 	$('#container, .popup_cont, .container_form').on('scroll', function() {
-		const $bigTarget = $(this);
-		const $headHeight = $('#header').outerHeight();
-		const $pop_headHeight = $('.popup_head').outerHeight();
-		const scrollTop = $('#container').scrollTop();
-		const pop_scrollTop = $('.popup_cont').scrollTop();
-		const pop_height = $('.popup_cont').height();
-
-		// console.log('scroll!! : '+ scrollTop);
-
-		if ($('.simple_info_wrap').length) {
-			const $target = $(this).find('.simple_info_wrap');
-			let targetOffsetTop = null;
-			const $targetChild = $(this).find('.simple_info_wrap').children('.simple_info_item');
-			let new_headHeight = 0;
-			let simpleHeight = $(this).find('.simple_info_wrap').find('.simple_info_item').innerHeight();
+		if ($('.simple_info_wrap.ty2').length) {
+			const $wrapper = $(this);
+			const $target = $wrapper.find('.simple_info_wrap.ty2');
+			const $targetChild = $target.children('.simple_info_item');
 			
-			if ($target.length && $target.css('display') !== 'none') {
-				targetOffsetTop = $target.offset().top;
-			}
-			// console.log('기준 위치 : ', targetOffsetTop);
+			const simpleHeight = $targetChild.height();
 
-			if($('.gd_middle_b').length){
-				targetOffsetTop = targetOffsetTop - 50
-			}
+			// 보여지는 상태일 때만 위치 계산
+			let targetOffsetTop = ($target.css('display') !== 'none') ? $target.position().top : null;
+			
+			if ($target.length) {
+				$target.parent().css('position', 'relative');
 
-			if($('.popup_head').length){
-				new_headHeight = $pop_headHeight;
-			}else {
-				new_headHeight = $headHeight;
-			}
+				// 펼치기
+				if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
+					$targetChild.addClass('active').stop().show();
+					$target.closest('.position_event_wrap')
+						.find('.tag_item_wrap.sticky')
+						.css('top', simpleHeight)
+						.addClass('active');
 
-			// console.log('target 위치 : ' + targetOffsetTop);
-			// console.log('컨텐츠 스크롤 위치 : ' + scrollTop);
-			// console.log('팝업 컨텐츠 스크롤 위치 : ' + pop_scrollTop);
-
-			// if (targetOffsetTop <= new_headHeight + 30 && !$targetChild.hasClass('active')) {
-			if (targetOffsetTop <= new_headHeight && !$targetChild.hasClass('active')) {
-				// console.log('펴기');
-				$targetChild.addClass('active');
-
-				if(!$target.hasClass('ty2')){
-					$targetChild.stop().slideDown(300);
-				}else {
-					$targetChild.stop().show();
-				}
-
-				if($('.tag_item_wrap.sticky').length){
-					$('.tag_item_wrap.sticky').css('top', simpleHeight - 50).addClass('active');
-				}
-
-			// } else if (targetOffsetTop > new_headHeight + 30 && $targetChild.hasClass('active')) {
-			} else if (targetOffsetTop > new_headHeight && $targetChild.hasClass('active')) {
-				// console.log('접기');
-				$target.removeAttr('style').removeClass('active');
-				$targetChild.removeClass('active');
-
-				if(!$target.hasClass('ty2')){
-					$targetChild.stop().slideUp(300);
-				}else {
-					$targetChild.stop().hide();
-				}
-
-				if($('.tag_item_wrap.sticky').length){
-					$('.tag_item_wrap.sticky').removeClass('active');
+				// 접기
+				} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+					$target.removeAttr('style').removeClass('active');
+					$targetChild.removeClass('active').stop().hide();
+					$target.closest('.position_event_wrap')
+						.find('.tag_item_wrap.sticky')
+						.css('top', 0)
+						.removeClass('active');
 				}
 			}
 		}
 
-		if($('.tag_item_wrap.sticky').length){
-			$('.tag_item_move .tag_move').each(function(idx) {
-				const $target = $(this);
-				const targetTop = $target.position().top;
-				const targetHeight = $target.height();
-				const simpleHeight = $('.simple_info_wrap').height();
-				let isLast = 0;
-				isLast = $('.tag_item_move .tag_move').length - 1;
-
-				// console.log(pop_scrollTop, pop_height, $bigTarget[0].scrollHeight)
-
-				if( pop_scrollTop + 100 >= targetTop + targetHeight + simpleHeight ){
-					$('.tag_item').removeClass('active');
-					$('.tag_item').eq(idx).addClass('active');
-				}else if (pop_scrollTop + pop_height + 145 >= $bigTarget[0].scrollHeight){
-					$('.tag_item').removeClass('active');
-					$('.tag_item').eq(isLast).addClass('active');
-				}
-			});
-		}
 	});
 }
 // 간편정보 노출 방식
@@ -754,16 +710,21 @@ function initPositionEventWrap($wrap) {
 			$('.amc_nav').addClass('active');
 		}
 
-		if ($wrap.find('.pew_exception').length) {
-			const $exception = $wrap.find('.pew_exception');
-			const exceptionHeight = $exception.outerHeight();
 
-			if ($wrap.find('.tag_item_wrap_po_etc1').length) {
-				expHeight = exceptionHeight + 64;
-			} else {
-				expHeight = exceptionHeight;
-			}
+		if ($wrap.find('.pew_exception').length) {
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			const $tagItemWrap = $wrap.find('.tag_item_wrap');
+			const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
+			const $titWrap = $wrap.find('.pec_point .title_h3');
+
+			const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
+			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
+			const titWrapHeight = $titWrap.outerHeight() || 0;
+
+			const exceptionHeight = simpleInfoHeight + tagItemHeight;
+			expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
 		}
+
 
 		let activeIdx = -1;
 
@@ -893,7 +854,7 @@ $(function(){
 		initPositionEventWrap($(this));
 	});
 
-	// simpleInfo();
+	simpleInfo();
 
 
 	//input disabled&readonly

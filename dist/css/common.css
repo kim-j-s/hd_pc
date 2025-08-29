@@ -462,6 +462,9 @@ strong {
 	line-height: 0;
 	border-radius: var(--radius-medium3);
 }
+.file_attach_box .file_thumbnail.load:before {
+	content: none;
+}
 .file_attach_box .file_thumbnail:before {
 	content: "";
 	position: absolute;
