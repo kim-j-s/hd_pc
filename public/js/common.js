@@ -171,9 +171,10 @@
 		if( $this.closest('.input_text').hasClass('phone') && !$this.prop('readonly') && !$this.prop('disabled') ){
 			$this.attr('maxlength', 14);
 			if(val){
-				val = val.replace(/[^0-9]/g, '');
-				newVal = ' - ' + val.replace(/(\d{4})(?=\d)/g, '$1 - ');
+				val = val.replace(/[^0-9*]/g, '');
+				newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
 				$this.val(newVal).addClass('isVal');
+				console.log(newVal);
 			}else {
 				$this.removeClass('isVal');
 			}
@@ -756,7 +757,7 @@ function inputState() {
 				const lngInpDisabled = $parent.find('.input_text input[disabled]').length;
 				const $keyPad = $parent.find('.comp_wrap_keypad_call');
 				if( lngInp === lngInpReadonly && $keyPad.attr('aria-disabled') === 'true' ) {
-					$(this).closest('.comp_wrap').addClass('readonly sdfsf');
+					$(this).closest('.comp_wrap').addClass('readonly');
 				} else if (lngInp === lngInpDisabled && $keyPad.attr('aria-disabled') === 'true') {
 					$(this).closest('.comp_wrap').addClass('disabled');
 				}
@@ -809,6 +810,19 @@ function inputState() {
 					$wrapBox.addClass('disabled');
 				}
 			}
+		}
+	});
+	inpPhoneFormat();
+}
+
+function inpPhoneFormat() {
+	$('.input_text').each(function() {
+		if( $(this).hasClass('phone') && $(this).hasClass('readonly') || $(this).hasClass('phone') && $(this).hasClass('disabled') ){
+			const $inp = $(this).children('.inp').find('input');
+			let val = $inp.val();
+			val = val.replace(/[^0-9*]/g, '');
+			newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
+			$inp.val(newVal).addClass('isVal');
 		}
 	});
 }
@@ -1241,16 +1255,18 @@ $(function(){
 
 
 	// 진입 시 전화번호 포맷 - readonly만 적용
-	$('.input_text').each(function() {
-		if( $(this).hasClass('phone') && $(this).hasClass('readonly') ){
-			const $inp = $(this).children('.inp').find('input');
-			let val = $inp.val();
-			console.log(val);
-			val = val.replace(/[^0-9]/g, '');
-			newVal = ' - ' + val.replace(/(\d{4})(?=\d)/g, '$1 - ');
-			$inp.val(newVal).addClass('isVal');
-		}
-	});
+	// $('.input_text').each(function() {
+	// 	if( $(this).hasClass('phone') && $(this).hasClass('readonly') ){
+	// 		const $inp = $(this).children('.inp').find('input');
+	// 		let val = $inp.val();
+	// 		// console.log(val);
+	// 		// val = val.replace(/[^0-9]/g, '');
+	// 		// newVal = ' - ' + val.replace(/(\d{4})(?=\d)/g, '$1 - ');
+	// 		// val = val.replace(/[^0-9*]/g, '');
+	// 		// newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
+	// 		$inp.val(newVal).addClass('isVal');
+	// 	}
+	// });
 
 
 	/* 페이지 내 스크롤 이벤트 */
