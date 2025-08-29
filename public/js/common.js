@@ -174,7 +174,6 @@
 				val = val.replace(/[^0-9*]/g, '');
 				newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
 				$this.val(newVal).addClass('isVal');
-				console.log(newVal);
 			}else {
 				$this.removeClass('isVal');
 			}
@@ -1262,8 +1261,6 @@ $(function(){
 	// 		// console.log(val);
 	// 		// val = val.replace(/[^0-9]/g, '');
 	// 		// newVal = ' - ' + val.replace(/(\d{4})(?=\d)/g, '$1 - ');
-	// 		// val = val.replace(/[^0-9*]/g, '');
-	// 		// newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
 	// 		$inp.val(newVal).addClass('isVal');
 	// 	}
 	// });
