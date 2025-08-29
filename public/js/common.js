@@ -527,13 +527,14 @@
 		let expHeight = 0;
 
 		if ($wrap.find('.pew_exception').length) {
-			const $exception = $wrap.find('.pew_exception');
-			const exceptionHeight = $exception.outerHeight();
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			const $tagItemWrap = $wrap.find('.tag_item_wrap');
+			const exceptionHeight = $simpleInfoWrap.outerHeight() + $tagItemWrap.outerHeight();
 
 			if ($wrap.find('.tag_item_wrap_po_etc1').length) {
-				expHeight = exceptionHeight + 64;
+				expHeight = exceptionHeight - 64;		
 			} else {
-				expHeight = exceptionHeight;
+				expHeight = exceptionHeight + 32;
 			}
 		}
 
@@ -611,86 +612,63 @@ function simpleInfo(){
 		const pop_scrollTop = $('.popup_cont').scrollTop();
 		const pop_height = $('.popup_cont').height();
 
-		// console.log('scroll!! : '+ scrollTop);
-
-		if ($('.simple_info_wrap').length) {
+		if ($('.simple_info_wrap.ty2').length) {
 			const $target = $(this).find('.simple_info_wrap');
 			let targetOffsetTop = null;
 			const $targetChild = $(this).find('.simple_info_wrap').children('.simple_info_item');
-			let new_headHeight = 0;
-			let simpleHeight = $(this).find('.simple_info_wrap').find('.simple_info_item').innerHeight();
+			
+			let simpleHeight = $(this).find('.simple_info_wrap').find('.simple_info_item').height();
 			
 			if ($target.length && $target.css('display') !== 'none') {
-				targetOffsetTop = $target.offset().top;
+				targetOffsetTop = $target.position().top;
 			}
-			// console.log('기준 위치 : ', targetOffsetTop);
-
-			if($('.gd_middle_b').length){
-				targetOffsetTop = targetOffsetTop - 50
-			}
-
-			if($('.popup_head').length){
-				new_headHeight = $pop_headHeight;
-			}else {
-				new_headHeight = $headHeight;
-			}
+			
+			// console.log('기준 위치 : ', targetOffsetTop, '스크롤 위치' + scrollTop, pop_scrollTop);
 
 			// console.log('target 위치 : ' + targetOffsetTop);
 			// console.log('컨텐츠 스크롤 위치 : ' + scrollTop);
 			// console.log('팝업 컨텐츠 스크롤 위치 : ' + pop_scrollTop);
 
-			// if (targetOffsetTop <= new_headHeight + 30 && !$targetChild.hasClass('active')) {
-			if (targetOffsetTop <= new_headHeight && !$targetChild.hasClass('active')) {
-				// console.log('펴기');
-				$targetChild.addClass('active');
+			if($target.hasClass('ty2')){
+				$target.parent().css('position', 'relative');
+				
+				
+				if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
+					// console.log('펴기');
+					$targetChild.addClass('active');
 
-				if(!$target.hasClass('ty2')){
-					$targetChild.stop().slideDown(300);
-				}else {
-					$targetChild.stop().show();
+					if(!$target.hasClass('ty2')){
+						// $targetChild.stop().slideDown(300);
+						// console.log('slideDown');
+						// console.log('ty2 no');
+					}else {
+						$targetChild.stop().show();
+						$target.closest('.position_event_wrap').find('.tag_item_wrap.sticky').css('top', simpleHeight).addClass('active');
+						
+					}
+
+				} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+					
+					console.log('접기');
+					$target.removeAttr('style').removeClass('active');
+					$targetChild.removeClass('active');
+
+					if(!$target.hasClass('ty2')){
+						// $targetChild.stop().slideUp(300);
+						// console.log('slideUp');
+					}else {
+						$targetChild.stop().hide();
+						$target.closest('.position_event_wrap').find('.tag_item_wrap.sticky').css('top', simpleHeight).removeClass('active');
+
+					}
+
+					// if($('.tag_item_wrap.sticky').length){
+					// 	$('.tag_item_wrap.sticky').removeClass('active');
+					// }
 				}
 
-				if($('.tag_item_wrap.sticky').length){
-					$('.tag_item_wrap.sticky').css('top', simpleHeight - 50).addClass('active');
-				}
-
-			// } else if (targetOffsetTop > new_headHeight + 30 && $targetChild.hasClass('active')) {
-			} else if (targetOffsetTop > new_headHeight && $targetChild.hasClass('active')) {
-				// console.log('접기');
-				$target.removeAttr('style').removeClass('active');
-				$targetChild.removeClass('active');
-
-				if(!$target.hasClass('ty2')){
-					$targetChild.stop().slideUp(300);
-				}else {
-					$targetChild.stop().hide();
-				}
-
-				if($('.tag_item_wrap.sticky').length){
-					$('.tag_item_wrap.sticky').removeClass('active');
-				}
 			}
-		}
-
-		if($('.tag_item_wrap.sticky').length){
-			$('.tag_item_move .tag_move').each(function(idx) {
-				const $target = $(this);
-				const targetTop = $target.position().top;
-				const targetHeight = $target.height();
-				const simpleHeight = $('.simple_info_wrap').height();
-				let isLast = 0;
-				isLast = $('.tag_item_move .tag_move').length - 1;
-
-				// console.log(pop_scrollTop, pop_height, $bigTarget[0].scrollHeight)
-
-				if( pop_scrollTop + 100 >= targetTop + targetHeight + simpleHeight ){
-					$('.tag_item').removeClass('active');
-					$('.tag_item').eq(idx).addClass('active');
-				}else if (pop_scrollTop + pop_height + 145 >= $bigTarget[0].scrollHeight){
-					$('.tag_item').removeClass('active');
-					$('.tag_item').eq(isLast).addClass('active');
-				}
-			});
+			
 		}
 	});
 }
@@ -893,7 +871,7 @@ $(function(){
 		initPositionEventWrap($(this));
 	});
 
-	// simpleInfo();
+	simpleInfo();
 
 
 	//input disabled&readonly
