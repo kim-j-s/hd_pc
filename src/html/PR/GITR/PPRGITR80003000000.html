@@ -111,8 +111,28 @@
 				</ul>
 			</div>
 
+			
+			
+
 			<!-- s: 25-08-21 수정 -->
-			<div class="dc_data_area">
+			<!-- s: 25-09-01 수정 -->
+			<div class="guarantee_info"> 
+				<div class="item_right">
+					<ul class="list_ty4">
+						<li>
+							<span class="text">보험 기간</span>
+							<strong class="data">2025.04.16~2026.04.16</strong>
+							{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+						</li>
+						<li>
+							<span class="text">보험에 가입하실 분</span>
+							<strong class="data">혼자</strong>
+							{{> cp/button type="3" size="5" b-text="변경" rightIcon="resetSvg" btn-title="가입조건 변경 팝업열기"}}
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 삭제 <div class="dc_data_area">
 				<ul class="list_ty4">
 					<li>
 						<div class="txt">
@@ -129,7 +149,8 @@
 						{{> cp/button type="3" size="5" rightIcon="resetSvg" b-text="변경"}}
 					</li>
 				</ul>
-			</div>
+			</div> -->
+			<!-- e: 25-09-01 수정 -->
 			<!-- e: 25-08-21 수정 -->
 
 			<!-- s: 상세 보장 목록 -->
@@ -299,6 +320,18 @@
 										<span class="point">3만원</span>
 									</div>
 								</li>
+								<!-- s: 25-09-01 추가 -->
+								<li class="list">
+									<div class="detail_list">  
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-3" sct="지수형 항공기 지연(누적지연시간별 정액보상)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">10만원</span>
+									</div>
+								</li>
+								<!-- e: 25-09-01 추가 -->
 							</ul>
 						{{/ cp/accordion }}
 					</div>
@@ -371,7 +404,9 @@
 				<!-- e: 25-08-08 UXW -->
 				<li>실손의료보험에 이미 가입한 경우, 해외여행보험의 '국내치료비' 담보는 실제 손해액을 한도로 비례 보상하므로 가입 실익이 낮습니다.</li>
 				<!-- s: 25-08-08 UXW -->
-				<li>보험시작 4시간 전에 보험에 가입할 경우에는 출국항공기 지연손해보장 특약이 제한됩니다.(출발시간을 현재시간 기준으로 4시간 이후로 설정할 경우 가입 가능)</li>
+				<!-- s: 25-09-01 수정 -->
+				<li>보험시작 4시간 전에 보험에 가입할 경우에는 지수형 항공기 지연 특약, 출국항공기지연(2~4시간)손해 보장 특약 가입이 제한됩니다.(출발시간을 현재시간 기준으로 4시간 이후로 설정할 경우 가입 가능)</li>
+				<!-- e: 25-09-01 수정 -->
 				<!-- e: 25-08-08 UXW -->
 			</ul>
 			{{/ cp/notice }}
