@@ -4279,12 +4279,15 @@ body {
 	color: var(--color-text-subtle);
 }
 .guarantee_info .item_right .list_ty4 > li .hd_btn {
-	margin-left: var(--gap-5);
+	margin-left: var(--gap-4);
 }
 .guarantee_info .item_right .data {
 	font-size: var(--font-size-body-small);
 	font-weight: 700;
 	color: var(--color-text-subtle);
+}
+.guarantee_info .item_right .select_option_box + .data {
+	margin-left: var(--gap-3);
 }
 .guarantee_btn_area {
 	margin: var(--gap-11) 0 var(--gap-8);
