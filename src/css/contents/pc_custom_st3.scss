@@ -1519,7 +1519,12 @@
 			font-size: var(--font-size-body-small);
 			font-weight: 700;
 			color: var(--color-text-subtle);
-		}		
+		}
+		.select_option_box {
+			& + .data {
+				margin-left: var(--gap-3);
+			}
+		}
 	}	
 }
 .guarantee_btn_area {
