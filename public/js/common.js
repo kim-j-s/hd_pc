@@ -6,8 +6,8 @@
 	$(document).on('keydown', function(e) {
 		if (e.key === 'Enter') {
 			const focusedElement = document.activeElement; // 현재 포커스된 요소
-			console.log('현재 포커스된 요소:', focusedElement);
-			console.log('jQuery this로는:', $(focusedElement));
+			// console.log('현재 포커스된 요소:', focusedElement);
+			// console.log('jQuery this로는:', $(focusedElement));
 		}
 	});
 
@@ -496,7 +496,7 @@
 		$snsTarget.toggleClass('active');
 		
 		const isActive = $snsTarget.hasClass('active');
-		console.log('SNS 목록 : ' + isActive);
+		// console.log('SNS 목록 : ' + isActive);
 		$this.attr('aria-expanded', isActive);
 		// $this.text(isActive ? '메뉴검색 팝업 닫기' : '메뉴검색 팝업 열기');
 		$this.attr('title', isActive ? '다이렉트 SNS 목록닫기' : '다이렉트 SNS 목록보기');
@@ -1030,7 +1030,7 @@ $(function(){
 				if (!$this.is(':checked')) return;
 
 				const index = $this.closest('.inp_radio').index();
-				console.log(index);
+				// console.log(index);
 			
 				const $agGroupCont = $this.closest('.ag_group_cont');
 
@@ -1112,9 +1112,9 @@ $(function(){
 			});
 	
 			const isAllAgreed = allGroups.length === agreedGroups.length;
-			console.log('체크 : ' + allGroups.length + ' : ', + agreedGroups.length);
+			// console.log('체크 : ' + allGroups.length + ' : ', + agreedGroups.length);
 			$totalCheck.prop('checked', isAllAgreed);
-			console.log('$totalCheck : ' + $totalCheck);
+			// console.log('$totalCheck : ' + $totalCheck);
 		}
 	});
 	// 라디오 약관 동의
