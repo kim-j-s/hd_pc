@@ -151,9 +151,10 @@
 					}
 					&.start {
 						.motion {
-							&.car {
-								right: -40px;
-							}
+							right: -40px;
+							// &.car {
+							// 	right: -40px;
+							// }
 						}
 					}
 					&.end {
