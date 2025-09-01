@@ -22,11 +22,6 @@ const $stepper = {
 			$stepper.data.nowStep = (value + 1);
 			$('.bi_wrap').attr('data-now', value);
 			
-			// 2025-08-07 버튼텍스트 영역 selected 클래스 add/remove
-			const _btnGroup = $('.bit_history_inner').find('.selected_case');
-			_btnGroup.removeClass('selected');
-			_btnGroup.eq(value).addClass('selected');
-			
 			if(typeof stepIngCheck === 'function') {	// 일반 - 펫보험
 				stepIngCheck(value); //스텝 진행시 처리해야할 내용이 있을경우 호출 함수 - 업무화면에 존재
 			}
@@ -102,13 +97,7 @@ const $stepper = {
 		_contentsTab.eq(nowIdx).removeClass('active');
 
 		// 진행 퍼센트 계산
-<<<<<<< HEAD
-		// const progress = Math.floor(((nowIdx + 1) / $stepper.get('totalStep')) * 100);
-		const progress = Math.floor(((nowIdx) / $stepper.get('totalStep')) * 100);
-=======
-//		const progress = Math.floor(((nowIdx + 1) / $stepper.get('totalStep')) * 100);
-		const progress = Math.floor((nowIdx / $stepper.get('totalStep')) * 100);
->>>>>>> 0a737260f87f588e0ec8dc9188cd21d0b26f13e7
+		const progress = Math.floor(((nowIdx + 1) / $stepper.get('totalStep')) * 100);
 		$('.pgs_per').css('width', `${progress}%`);
 
 		// 시작 및 완료 상태 클래스 추가/제거
@@ -169,8 +158,6 @@ const $stepper = {
 			//[[변경필요]] 동적 radio button들이 이벤트를 안탐
 			$(document).on('click', '.opts_area_item .opts_area_btn', function(e) {
 				const _target = $(e.currentTarget);
-				_target.siblings().removeClass('selected');
-				_target.addClass('selected');
 				const _stepIdx = _target.closest('.opts_area').index();
 				const _selectedText = _target.find('span').text().trim();
 				
@@ -188,8 +175,6 @@ const $stepper = {
 			
 			$(_targetArea).find('.opts_area_item .opts_area_btn').on('click', (e) => {
 				const _target = $(e.currentTarget);
-				_target.siblings().removeClass('selected');
-				_target.addClass('selected');
 				const _stepIdx = _target.closest('.opts_area').index();
 				const _selectedText = _target.find('span').text().trim();
 				
@@ -216,9 +201,6 @@ const $stepper = {
 			// 현재 선택된 인덱스를 기준으로 다음 단계에 있는 selected_case 텍스트를 빈 값으로 초기화
 			const _otherBtn = $('.bit_history_inner').children('.selected_case').slice(stepIdx + 1);
 			_otherBtn.text('');
-
-			const _otherArea = $('.bi_opts_wrap').find('.opts_area').slice(stepIdx + 1);
-			_otherArea.find('.opts_area_btn').removeClass('selected');
 		}
 	},
 	setHistory: function(target) {
