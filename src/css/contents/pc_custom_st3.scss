@@ -1676,6 +1676,10 @@
 				margin-top: 0;
 				padding-bottom: 0;
 			}
+
+			.search_reult_list_container {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -1686,22 +1690,6 @@
 	.full_half {
 		.form_line.fix_w_case02 {
 			width: 102px;;
-		}
-	}
-}
-
-
-//게시판형태_PC
-.view_wrap {
-	.view_cont + .btn_area {
-		margin-top: var(--gap-5);
-
-		& + .view_navigation {
-			margin-top: var(--gap-11);
-		}
-
-		& > .hd_btn {
-			min-width: 120px;
 		}
 	}
 }
