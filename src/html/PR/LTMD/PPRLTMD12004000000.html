@@ -71,26 +71,33 @@
 				<!-- e: 25-08-25 UXW -->
 
 				<div class="form_group_wrap">
+
 					<!-- s: 25-07-03 수정 -->
-					<div class="form_line full_half">
-						<div class="label_tit box">
-							<div>
-								자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
+					<!-- hidden을 위한 inner grouping -->
+					<div class="form_line full">
+						<div class="form_group_wrap">
+							<div class="form_line full_half">
+								<div class="label_tit box">
+									<div>
+										자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
+									</div>
+								</div>
+								{{> cp/checkbox id="checkbox1" labelname="이혼이나 사별 등으로 공동 친권자가 없음" }}
+								<div class="radio_group_wrap" role="radiogroup">
+									{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
+									{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
+								</div>
+							</div>
+							<!-- s: “예”를 선택하면 배우자 이름 입력 필드 Show -->
+							<div class="form_line full_half">
+								<!-- s: 25-08-25 UXW -->
+								<div class="label_tit">공동친권자 이름(배우자)</div>
+								{{> cp/text placeholder="공동친권자 이름 입력" inp-title="성명을 입력해 주세요" }}
+								<!-- e: 25-08-25 UXW -->
 							</div>
 						</div>
-						{{> cp/checkbox id="checkbox1" labelname="이혼이나 사별 등으로 공동 친권자가 없음" }}
-						<div class="radio_group_wrap" role="radiogroup">
-							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_01" name="receiveSel03" labelname="예" }}
-							{{> cp/radio rd-class="rd_btn" rd-id="receiveSel03_02" name="receiveSel03" labelname="아니요" }}
-						</div>
 					</div>
-					<!-- s: “예”를 선택하면 배우자 이름 입력 필드 Show -->
-					<div class="form_line full_half">
-						<!-- s: 25-08-25 UXW -->
-						<div class="label_tit">공동친권자 이름(배우자)</div>
-						{{> cp/text placeholder="공동친권자 이름 입력" inp-title="성명을 입력해 주세요" }}
-						<!-- e: 25-08-25 UXW -->
-					</div>
+					<!-- hidden을 위한 inner grouping -->
 					<!-- e: “예”를 선택하면 배우자 이름 입력 필드 Show -->
 					<!-- e: 25-07-03 수정 -->
 
