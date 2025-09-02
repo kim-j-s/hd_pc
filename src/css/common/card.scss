@@ -289,6 +289,8 @@
 				position: static;
 
 				.chk_label {
+					position: static;
+
 					&:before {
 						top: 26px;
 						left: 20px;
@@ -341,6 +343,11 @@
 			}
 		}
 
+		.btn_link,
+		button {
+			position: relative;
+			z-index: 20;
+		}
 
 		// card 상단영역
 		.item_top {
