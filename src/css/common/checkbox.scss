@@ -253,6 +253,12 @@
 						background-size: 10px auto;
 					}
 				}
+				&.text_empty {
+					padding-left: 32px;
+					&.lg {
+						padding-left: 40px;
+					}
+				}
 			}
 		}
 
