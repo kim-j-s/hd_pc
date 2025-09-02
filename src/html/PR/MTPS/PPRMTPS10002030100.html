@@ -157,11 +157,19 @@
 									<!-- 자동차명 -->
 									<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
 										<!-- s: 25-07-23 수정 -->
-										<div class="search_inp_box">
-											<!-- s: 25-08-25 UXW -->
+										<!-- s: 25-09-02 수정 -->
+										<!-- <div class="search_inp_box">
+											s: 25-08-25 UXW
 											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어 입력" }}	
-											<!-- e: 25-08-25 UXW -->
+											e: 25-08-25 UXW
+										</div> -->
+										<div class="autocomplete_wrap">
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어 입력" auto=true }}
+											<div class="autocomplete_wrap_list">
+												<ul class="autocomplete_list"></ul>
+											</div>
 										</div>
+										<!-- e: 25-09-02 수정 -->
 										<!-- e: 25-07-23 수정 -->
 										<div class="opts_area_item">
 											<button type="button" class="opts_area_btn hd_btn">
@@ -371,6 +379,7 @@
 </script>
 
 
+<!-- s: 25-09-02 수정 -->
 <script>
   $(function () {
 		const keywords = [
@@ -379,59 +388,63 @@
 			"쏘울", "무쏘", "무쏘1", "무쏘2", "무쏘3", "무쏘4", "무쏘5", "무쏘6", "무쏘8"
 		];
 
-		const $wrap = $('.autocomplete_wrap');
-		const $input = $('.autocomplete_input');
-		const $listWrap = $('.autocomplete_wrap_list');
-		const $list = $('.autocomplete_list');
+		$('.autocomplete_wrap').each(function () {
+			const $wrap = $(this);
+			const $input = $wrap.find('.autocomplete_input');
+      const $listWrap = $wrap.find('.autocomplete_wrap_list');
+      const $list = $wrap.find('.autocomplete_list');
+      const $delBtn = $wrap.find('.del');
 
-		$input.on('input', function () {
-			const query = $(this).val().trim();
-			$list.empty();
+			$input.on('input', function () {
+				const query = $(this).val().trim();
+				$list.empty();
 
-			if (query === '') {
-				$listWrap.removeClass('active');
-				return;
-			}
+				if (query === '') {
+					$listWrap.removeClass('active');
+					return;
+				}
 
-			const results = keywords.filter(word => word.includes(query));
+				const results = keywords.filter(word => word.includes(query));
 
-			if (results.length > 0) {
-				results.forEach(word => {
-					const highlighted = word.replace(
-						new RegExp(query, 'gi'),
-						match => `<span class="mark">${match}</span>`
-					);
+				if (results.length > 0) {
+					results.forEach(word => {
+						const highlighted = word.replace(
+							new RegExp(query, 'gi'),
+							match => `<span class="mark">${match}</span>`
+						);
 
-					$list.append(`<li><a href="#">${highlighted}</a></li>`);
-				});
+						$list.append(`<li><a href="#">${highlighted}</a></li>`);
+					});
 
-				$listWrap.addClass('active');
-			} else {
-				$listWrap.removeClass('active');
-			}
-		});
-
-		// 삭제 버튼 클릭 시 input 초기화 및 리스트 닫기
-		$('.del').on('click', function () {
-			$input.val('').trigger('input');
-		});
-
-		// 포커스 아웃 시 자동완성 리스트 닫기
-		$wrap.on('focusout', function (e) {
-			// 약간의 지연을 주면 클릭 등 다른 이벤트와 충돌 방지 가능
-			setTimeout(() => {
-				if (!$(document.activeElement).closest('.autocomplete_wrap').length) {
+					$listWrap.addClass('active');
+				} else {
 					$listWrap.removeClass('active');
 				}
-			}, 100);
+			});
+
+			// 삭제 버튼 클릭 시 input 초기화 및 리스트 닫기
+			$delBtn.on('click', function () {
+				$input.val('').trigger('input');
+			});
+
+			// 포커스 아웃 시 자동완성 리스트 닫기
+			$wrap.on('focusout', function (e) {
+				// 약간의 지연을 주면 클릭 등 다른 이벤트와 충돌 방지 가능
+				setTimeout(() => {
+					if (!$(document.activeElement).closest('.autocomplete_wrap').length) {
+						$listWrap.removeClass('active');
+					}
+				}, 100);
+			});
 		});
 	});
 </script>
+<!-- e: 25-09-02 수정 -->
 
 
 <!-- s: popup area -->
 <!-- s: 차명검색 Full 팝업 -->
-{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+{{#> popup/popup_full popup-id="pop_type01" }}
 <!-- s: 25-07-23 수정 -->
 <div class="popup_cont search_list_type">
 	<div class="popup_content">

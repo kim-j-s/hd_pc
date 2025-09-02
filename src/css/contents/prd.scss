@@ -44,7 +44,13 @@
 			align-items: flex-start;
 			gap: var(--gap-3);
 		}
+
+		.badge_wrap {
+			gap: var(--gap-2);
+			margin-bottom: var(--gap-3);
+		}
 	}
+	
 	// 컨텐츠 영역
 	.content_body {
 		display: flex;
@@ -80,7 +86,7 @@
     	background-position: center center;
     	background-size: contain;
 		}
-		@for $i from 1 through 16 {
+		@for $i from 1 through 18 {
 			&.bg_intro#{$i}::after {
 					background-image: url('../images/content/prd/bg_intro#{$i}.png');
 			}
@@ -88,7 +94,7 @@
 
 		.info_list {
 			.item {
-				@for $i from 1 through 17 {
+				@for $i from 1 through 19 {
 					&.ico_intro#{$i} {
 							background-image: url('../images/content/prd/ico_intro#{$i}.svg');
 					}
@@ -135,7 +141,7 @@
 				.titie_wrap {
 					padding-left: 44px;
 					@extend %background_set;
-					@for $i from 1 through 75 {
+					@for $i from 1 through 78 {
 						&.item_ico_ty#{$i} {
 								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 						}  
@@ -225,7 +231,7 @@
 					transform: translateY(-50%);
 					z-index: -1;
 				}
-				@for $i from 1 through 19 {
+				@for $i from 1 through 22 {
 					&.ico_benefit#{$i} {
 						background-image: url('../images/content/prd/ico_benefit#{$i}.svg');
 					}
@@ -520,7 +526,7 @@
 				@extend %background_set;
 				z-index: 2;
 			}
-			@for $i from 1 through 75 {
+			@for $i from 1 through 78 {
 				&.item_ico_ty#{$i}::after {
 						background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 				}

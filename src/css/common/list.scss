@@ -105,7 +105,7 @@
 	}
 
 	& + .title_h4 {
-		margin-top: var(--gap-9);
+		margin-top: var(--gap-6)//var(--gap-9);
 	}
 
 	+ .title_h5 {
@@ -472,6 +472,10 @@
 					&::after{
 						background-image: url(../images/icon/arrowRight_disabled_ty2.svg);
 					}
+				}
+				.mark {
+					font-weight: 700;
+					color: var(--color-text-primary-bold);
 				}
 			}
 

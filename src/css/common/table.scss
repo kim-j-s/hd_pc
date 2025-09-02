@@ -8,15 +8,19 @@
 		margin-top: var(--gap-5);
 	}
 
-	& + .title_h4 {
-		margin-top: var(--gap-9);
-	}
-
 	& + .btn_area {
 		margin-top: var(--gap-5);
 		&.ty2 {
 			margin-top: var(--gap-5);
 		}
+	}
+
+	& + .title_h3 {
+		margin-top: var(--gap-11); 
+	}
+
+	& + .title_h4 {
+		margin-top: var(--gap-6); //var(--gap-9);
 	}
 
 	& + .title_h5 {
@@ -193,6 +197,7 @@
 			font-size: var(--font-size-heading-xxsmall);
 			text-align: left; 
 			font-weight: 700;
+			word-break: keep-all;
 			background-color: var(--color-surface-gray-subtler);			
 		}
 		td {
