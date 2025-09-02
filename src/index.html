@@ -22670,6 +22670,7 @@
 								<li>25-07-24</li>
 								<li>25-07-29</li>
 								<li>25-08-25</li>
+								<li>25-09-02</li>
 							</ul>
 						</td>
 					</tr>
@@ -36624,12 +36625,12 @@
 
 			// 'no_count' 클래스를 가진 tr을 제외하고 tr의 갯수를 계산
 			const trCount = $tbody.find("tr").not(".no_count").length;
-			$tbody.find("tr").not(".no_count").each(function(i){
-				$(this).find('.idx_dept1').text(i + 1);
-			});
-			$tbody.find("tr").not(".no_count").find(".complete.ok").closest("tr").each(function(i){
-				$(this).find('.idx_dept2').text(i + 1);
-			});
+			// $tbody.find("tr").not(".no_count").each(function(i){
+			// 	$(this).find('.idx_dept1').text(i + 1);
+			// });
+			// $tbody.find("tr").not(".no_count").find(".complete.ok").closest("tr").each(function(i){
+			// 	$(this).find('.idx_dept2').text(i + 1);
+			// });
 
 			// 이전 thead 안의 rate_total에 trCount를 텍스트로 설정
 			$tbody.prev("thead").find(".rate_total").text(trCount);
