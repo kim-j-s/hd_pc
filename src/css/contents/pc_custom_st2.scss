@@ -1431,6 +1431,8 @@
 							gap: var(--gap-4);
 
 							.hd_btn {
+								position: relative;
+								z-index: 20;
 								margin-left: auto;
 							}
 
@@ -1498,6 +1500,11 @@
 
 					.btn_area {
 						margin-top: 0;
+		
+						button {
+							position: relative;
+							z-index: 20;
+						}
 					}
 					
 					.msg_success {
@@ -1525,7 +1532,7 @@
 					margin-top: 3px;
 					padding-left: 0;
 					&:before {
-						top:0;
+						// top:0;
 					}
 				}
 			}
