@@ -197,6 +197,7 @@
 			font-size: var(--font-size-heading-xxsmall);
 			text-align: left; 
 			font-weight: 700;
+			word-break: keep-all;
 			background-color: var(--color-surface-gray-subtler);			
 		}
 		td {
