@@ -557,6 +557,7 @@
 	}
 
 	.btn_area {
+		flex: 0 0 auto;
 		&:not(.column){
 			&:has(button.hd_btn_s_4, button.hd_btn_s_5){
 				gap: var(--gap-3);
@@ -1675,6 +1676,10 @@
 			.opts_area_item {
 				margin-top: 0;
 				padding-bottom: 0;
+
+				& + * {
+					margin-top: var(--gap-8);
+				}
 			}
 
 			.search_reult_list_container {
