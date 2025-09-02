@@ -19,7 +19,9 @@
     <!-- 사진 마일리지인 경우 노출-->
     <div class="table_wrap">
       <table class="table">
-        <caption>캡션값</caption>
+        <!-- s: 25-09-02 수정 -->
+        <caption>대체 전 차량과 대체 후 차량 최초 주행거리 제공</caption>
+        <!-- e: 25-09-02 수정 -->
         <colgroup>
           <col style="width:40%;">
           <col style="width:30%;">
@@ -343,7 +345,9 @@
         <div class="form_group_wrap">
           <div class="form_line">
             <div class="label_tit">휴대폰번호</div>
-            {{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" msg3="문자를 받을 휴대폰 번호를 입력해주세요." }}
+            <!-- s: 25-09-02 수정 -->
+            {{> cp/text class="phone" type="tel" placeholder="- 없이 입력" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" msg3="문자를 받을 휴대폰 번호를 입력해주세요." }}
+            <!-- e: 25-09-02 수정 -->
           </div>
         </div>
 
