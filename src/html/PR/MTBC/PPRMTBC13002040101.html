@@ -1,15 +1,20 @@
 {{#> layout/default no-sp=true page-title="차량정보 조회 | 상품"}}
 
 <!-- s: Full 팝업 -->
-{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<!-- s: 25-09-02 수정 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-title="차량 정보 확인" popup-active=true }}
+<!-- e: 25-09-02 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
 		<div class="popup_content_top">
+			<!-- s: 25-09-02 수정 -->
 			<h2 class="title_h2">
-				<strong>6008</strong>의<br />
-				<strong>이륜차정보</strong>가 <strong>자동 선택</strong>됐어요
+				<strong>1234</strong>의<br />
+				<strong>차량 정보</strong>를 조회했어요
 			</h2>
+			<p class="title_sub">이륜차가 자동으로 선택됐어요.</p>
+			<!-- e: 25-09-02 수정 -->
 		</div>
 		<!-- e: popup_content_top -->
 		
@@ -48,10 +53,12 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="etc_area_ty1">
-			<p class="etc_title">자동차 정보가 일치하지 않으면</p>
-			{{> cp/button type="3" size="3" b-text="자동차정보 직접 선택하기" }}
+			<!-- s: 25-09-02 수정 -->
+			<p class="etc_title">차량 정보가 일치하지 않으면</p>
+			{{> cp/button type="3" size="3" b-text="차량정보 직접 선택하기" }}
+			<!-- e: 25-09-02 수정 -->
 		</div>
 
 		<div class="etc_area_ty1">
@@ -68,7 +75,9 @@
 
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="2" b-text="차량정보 일치해요"}}
+		<!-- s: 25-09-02 수정 -->
+		{{> cp/button type="1" size="2" b-text="차량 정보가 일치해요"}}
+		<!-- e: 25-09-02 수정 -->
 	</div>
 </div>
 {{/ popup/popup_full}}

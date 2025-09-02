@@ -1,18 +1,24 @@
 {{#> layout/default no-sp=true page-title="블랙박스 할인특약 | 상품"}}
 <!-- s: 블랙박스 할인특약 Full 팝업 -->
-{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
+<!-- s: 25-09-02 수정 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-title="블랙박스 할인특약" popup-active=true }}
+<!-- e: 25-09-02 수정 -->
 <div class="popup_cont">
   <div class="popup_content">
     <!-- s: popup_content_top -->
     <div class="popup_content_top">
       <h2 class="title_h2">
-        <strong>블랙박스</strong> 할인특약 가입 내용을 확인해주세요
+        <!-- s: 25-09-02 수정 -->
+        <strong>블랙박스 종류</strong>를 선택해주세요
+        <!-- e: 25-09-02 수정 -->
       </h2>
       <div class="btn_area basic">
         {{> cp/button type="3" size="5" b-text="자세히 보기" rightIcon="arrowRightSvg" popup="ex_popup_bottom"}}
       </div>
       <!-- s: 25-08-25 UXW -->
-      <p class="text_sub">블랙박스 종류를 선택해주세요.</p>
+      <!-- s: 25-09-02 수정 -->
+      <!-- <p class="text_sub">블랙박스 종류를 선택해주세요.</p> -->
+      <!-- e: 25-09-02 수정 -->
       <!-- e: 25-08-25 UXW -->
     </div>
     <!-- e: popup_content_top -->
@@ -61,7 +67,9 @@
     <!-- s: popup_content_top -->
     <div class="popup_content_top">
       <!-- s: 25-08-25 UXW -->
-      <p class="text_sub">블랙박스 정보를 입력해주세요</p>
+      <!-- s: 25-09-02 수정 -->
+      <!-- <p class="text_sub">블랙박스 정보를 입력해주세요</p> -->
+      <!-- e: 25-09-02 수정 -->
       <!-- e: 25-08-25 UXW -->
     </div>
     <!-- e: popup_content_top -->
@@ -80,7 +88,9 @@
         </div>
         <div class="form_line grow">
           <div class="label_tit">구입가격</div>
-          {{> cp/text type="tel" class="price" placeholder="숫자만" r-text="만원" inp-title="구입가격 입력"}}
+          <!-- s: 25-09-02 수정 -->
+          {{> cp/text type="tel" class="price" placeholder="0" r-text="만원" inp-title="구입가격 입력"}}
+          <!-- e: 25-09-02 수정 -->
         </div>
       </div>
       
