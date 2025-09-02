@@ -94,7 +94,7 @@
 
 		.info_list {
 			.item {
-				@for $i from 1 through 19 {
+				@for $i from 1 through 20 {
 					&.ico_intro#{$i} {
 							background-image: url('../images/content/prd/ico_intro#{$i}.svg');
 					}
@@ -231,7 +231,7 @@
 					transform: translateY(-50%);
 					z-index: -1;
 				}
-				@for $i from 1 through 22 {
+				@for $i from 1 through 23 {
 					&.ico_benefit#{$i} {
 						background-image: url('../images/content/prd/ico_benefit#{$i}.svg');
 					}

@@ -1088,7 +1088,10 @@
 
 			.top_title {
 				font-size: var(--font-size-body-medium);
-				white-space: nowrap;
+				// white-space: nowrap;
+				br {
+					display: block;
+				}
 			}
 
 			.top_info {
@@ -1216,6 +1219,11 @@
 								width: 228px;
 								// padding-right: 142px;
 								// margin-top: 56px;
+								.top_title {
+									br {
+										display: none;
+									}
+								}
 							}
 							& + .btn_area {
 								display: block;
