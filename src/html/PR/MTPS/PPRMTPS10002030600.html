@@ -1,136 +1,471 @@
-{{#> layout/default page-title="자동차 상세정보 | 상품"}}
+{{#> layout/default no-gnb=true page-title="기초 정보 입력 | 자동차보험"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="자동차보험" }}
+	
+	<div id="container" class="container">
+		<div class="content">
+			<div class="car_step_layout">
+				<div class="title_view_wrap">
+					<div class="page_title">
+						<div class="p_info">차량 정보</div>
+						<!-- bit -->
+						<!-- s: focus 적용 위치 - bit_within 클래스 추가 -->
+						<div class="bit bit_within">
+						<!-- e: focus 적용 위치 - bit_within 클래스 추가 -->
+							<!-- 제조사 -->
+							<div class="bit_inner" data-pickitem="step1">
+								<!-- s: 25-08-25 UXW -->
+								<p class="bit_inner_text">
+									<span class="bold">제조사</span>를 선택해주세요
+								</p>
+								<!-- e: 25-08-25 UXW -->
+								<!-- <div class="bit_btn_scrollx">
+									<button type="button" class="btn_link short_cut sm rd_box search_type">
+										<span class="text">차명 검색</span>
+									</button>
+								</div> -->
+							</div>
+							<!-- 제조사 -->
 
-<!-- s: Full 팝업 -->
-{{#> popup/popup_full popup-id="pop_type01" popup-active=true }}
-<!-- s: 25-07-23 수정 -->
-<div class="popup_cont search_list_type">
-	<div class="popup_content">
-		<!-- s: popup_content_top -->
-		<div class="popup_content_top">
-			<h2 class="title_h2">
-				<strong>대표차명</strong>을<br>
-				입력해 주세요
-			</h2>
-		</div>
-		<!-- e: popup_content_top -->
-		 
-		<!-- s: 25-08-06 수정 -->
-		<div class="autocomplete_wrap">
-			{{> cp/text inp-search=true placeholder="ex) 그랜져" inp-title="검색어를 입력하세요." auto=true }}
-			<div class="autocomplete_wrap_list">
-				<ul class="autocomplete_list"></ul>
-			</div>
-		</div>
-		<!-- e: 25-08-06 수정 -->
+							<!-- 자동차명 -->
+							<div class="bit_inner active" data-pickitem="step2">
+								<!-- s: 25-08-25 UXW -->
+								<p class="bit_inner_text">
+									<span class="bold">자동차명</span>을 선택해주세요
+								</p>
+								<!-- e: 25-08-25 UXW -->
+								<!-- <div class="bit_btn_scrollx">
+									<button type="button" class="btn_link short_cut sm rd_box search_type">
+										<span class="text">차명 검색</span>
+									</button>
+								</div> -->
+								<!-- <div class="bit_btn_scrollx">
+									{{> cp/linkButton bl_class="short_cut sm rd_box" bl_text="본인이 아닌 다른 사람의 보험을 가입하는 방법" role_b=true }}
+								</div> -->
+							</div>
+							<!-- 자동차명 -->
 
-		<!-- 최초 진입 시 노출 -->
-		<!-- s: 25-04-21 수정 -->
-		<div class="suggestion_list_wrap">			
-			<div class="title_h3"><strong>인기검색어</strong></div>			
-			<div class="item_wrap">
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">그랜져</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘렌토</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘나타</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">아반떼</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">모닝</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">카니발</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">투싼</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">싼타페</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">코나</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">티볼리</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">쏘울</span></button>
-				<button type="button" class="tag_item size_m c_ty01"><span class="text">무쏘</span></button>
-			</div>
-		</div>
-		<!-- e: 25-04-21 수정 -->
-		<!-- 최초 진입 시 노출 -->
+							<!-- 등록연도 -->
+							<div class="bit_inner active" data-pickitem="step3">
+								<!-- s: 25-08-25 UXW -->
+								<p class="bit_inner_text">
+									<span class="bold">등록연도</span>를 선택해주세요
+								</p>
+								<div class="bit_btn_scrollx">
+									<button type="button" class="btn_link short_cut sm rd_box">
+										<span class="text">차량연식/최초등록일 안내</span>
+									</button>
+								</div>
+								<!-- e: 25-08-25 UXW -->
+							</div>
+							<!-- 등록연도 -->
 
-		<!-- s: 검색 결과 리스트 -->
-		<div class="search_result_count">
-			<p>검색결과 <strong class="point">2,117</strong>건</p>
-		</div>
-		<div class="search_reult_list_container">
-			<ul class="search_reult_list">
-				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
-				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
-				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
-				<li class="search_reult_list_item"><a href="#"><span class="item_text">쏘나타</span></a></li>
-				<li class="search_reult_list_item">
-					<div class="no_list_area">
-						{{> cp/icon iconClass="exclamationSvg"}}
-						<p>내역이 없어요</p>
+							<!-- 세부차명 -->
+							<div class="bit_inner active" data-pickitem="step4">
+								<!-- s: 25-08-25 UXW -->
+								<p class="bit_inner_text">
+									<span class="bold">세부차명</span>을 선택해주세요
+								</p>
+								<!-- e: 25-08-25 UXW -->
+							</div>
+							<!-- 세부차명 -->
+
+							<!-- 세부형식 -->
+							<div class="bit_inner active" data-pickitem="step5">
+								<!-- s: 25-08-25 UXW -->
+								<p class="bit_inner_text">
+									<span class="bold">세부형식</span>을 선택해주세요
+								</p>
+								<!-- e: 25-08-25 UXW -->
+							</div>
+							<!-- 세부형식 -->
+						</div>
+						<!-- bit -->
 					</div>
-				</li>
-			</ul>
-		</div>
-		<!-- e: 검색 결과 리스트 -->
-		<!-- e: 25-07-23 수정 -->
-	</div>
-</div>
-<div class="popup_bottom">
-	<div class="btn_area">
-		{{> cp/button type="1" size="2" b-text="취소"}}
-	</div>
-</div>
-{{/ popup/popup_full}}
-<!-- e: Full 팝업 -->
+				</div>
 
+				<div class="plan_select_car">
+					<form action="" class="bi_form">
+						<div class="bi_wrap">
+							<div class="layout_bg_box">
+								<div class="stepper_wrap">
+									<div class="stepper" role="img">
+										<div class="pgs">
+											<span class="pgs_per" style="width: 0%;"><span class="motion car"></span></span>
+										</div>
+									</div>
+									<button type="button" class="stm_btn stm_l" onclick="$stepper.stepBack();">이전 단계</button>
+									<button type="button" class="stm_btn stm_r" onclick="$stepper.stepNext();">다음 단계</button>
+								</div>
+								<div class="bi_top">
+									<!-- bit_history -->
+									<div class="bit_history">
+										<div class="bit_history_inner">
+											<button type="button" class="selected_case step1 maker" title="제조사 수정">1</button>
+											<button type="button" class="selected_case step2 car" title="자동차명 수정">1</button>
+											<button type="button" class="selected_case step3 date" title="등록연도 수정">1</button>
+											<button type="button" class="selected_case step4 detail1" title="세부차명 수정">1</button>
+											<button type="button" class="selected_case step5 detail2" title="세부형식 수정">1</button>
+										</div>
+									</div>
+									<!-- bit_history -->
+								</div>
+							</div>
+							
+							<div class="bi_stepper">
+								<div class="bi_opts_wrap">
+									<!-- 제조사 -->
+									<div class="opts_area" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step1">
+										<!-- s: 25-08-26 수정 -->
+										<div class="autocomplete_wrap">
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어를 입력하세요." auto=true }}
+											<div class="autocomplete_wrap_list">
+												<ul class="autocomplete_list"></ul>
+											</div>
+										</div>
+										<!-- <div class="search_inp_box">
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어 입력" }}	
+										</div> -->
+										<!-- e: 25-08-26 수정 -->
+										<!-- s: 25-07-03 수정 -->
+										<!-- s: 25-09-02 삭제 -->
+										<!-- <div class="opts_area_item">
+											<button type="button" class="opts_area_btn hd_btn logo_add la_1">
+												<span class="text">현대</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn logo_add la_2">
+												<span class="text">기아</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn logo_add la_3">
+												<span class="text">르노삼성</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn logo_add la_4">
+												<span class="text">쉐보레
+													<small class="sm_txt">GM대우</small>
+												</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn logo_add la_5">
+												<span class="text">KG모빌리티</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn logo_add la_6">
+												<span class="text">외제차</span>
+											</button>										
+										</div> -->
+										<!-- e: 25-07-03 수정 -->
+										<!-- e: 25-09-02 삭제 -->
+
+										<!-- s: 검색 결과 리스트 -->
+										<div class="search_result_count">
+											<p>검색결과 <strong class="point">2,117</strong>건</p>
+										</div>
+										<div class="search_reult_list_container">
+											<ul class="search_reult_list">
+												<li class="search_reult_list_item"><a href="#"><span class="item_text"><em class="mark">쏘</em>나타</span></a></li>
+												<li class="search_reult_list_item"><a href="#"><span class="item_text"><em class="mark">쏘</em>렌토</span></a></li>
+												<li class="search_reult_list_item"><a href="#"><span class="item_text"><em class="mark">쏘</em>나타</span></a></li>
+												<li class="search_reult_list_item"><a href="#"><span class="item_text"><em class="mark">쏘</em>렌토</span></a></li>
+												<li class="search_reult_list_item">
+													<div class="no_list_area">
+														{{> cp/icon iconClass="exclamationSvg"}}
+														<p>내역이 없어요</p>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- e: 검색 결과 리스트 -->
+									</div>
+									<!-- 제조사 -->
+				
+									<!-- 자동차명 -->
+									<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step2">
+										<!-- s: 25-07-23 수정 -->
+
+										<!-- s: 25-09-02 수정 -->
+										<!-- 삭제 <div class="search_inp_box">
+											s: 25-08-25 UXW
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어 입력" }}	
+											e: 25-08-25 UXW
+										</div> -->
+										<div class="autocomplete_wrap">
+											{{> cp/text inp-search=true placeholder="검색어 입력" inp-title="검색어를 입력하세요." auto=true }}
+											<div class="autocomplete_wrap_list">
+												<ul class="autocomplete_list"></ul>
+											</div>
+										</div>
+										<!-- e: 25-09-02 수정 -->
+										<!-- e: 25-07-23 수정 -->
+										<div class="opts_area_item">
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">EV3</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">EV6</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">EV9</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K3</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K5</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7</span>
+											</button>
+												<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K8</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K9</span>
+											</button>
+										</div>
+									</div>
+									<!-- 자동차명 -->
+				
+									<!-- 등록연도 -->
+									<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step3">
+										<!-- s: 25-07-03 수정 -->
+										<div class="opts_area_item">
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2023년
+													<small class="sm_txt">(09월07일 이후)</small>
+												</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2023년 
+														<small class="sm_txt">(09월06일 이전)</small>
+												</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2022년</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2021년</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2020년</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2019년</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2018년</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">2017년</span>
+											</button>
+										</div>
+										<!-- e: 25-07-03 수정 -->
+									</div>
+									<!-- 등록연도 -->
+				
+									<!-- 세부차명 -->
+									<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step4">
+										<div class="opts_area_item">
+											<div class="oai_block oai_filter">
+												{{#> cp/selectbox_pc s-class="sm" s-title="배기량 선택" }}
+													<option value="" selected>배기량</option>
+													<option value="">800cc 이하</option>
+													<option value="">800cc 초과 ~ 1000cc 이하</option>
+													<option value="">1000cc 초과 ~ 1000cc 이하</option>
+													<option value="">3000cc 초과</option>
+													<option value="">다인승 비전방</option>
+												{{/ cp/selectbox_pc}}
+												{{#> cp/selectbox_pc s-class="sm" s-title="인승 선택" }}
+													<option value="" selected>인승</option>
+													<option value="">6인 이하</option>
+													<option value="">7인 이상~8인 이하</option>
+													<option value="">9인 이상~10인 이하</option>
+													<option value="">11인 이상</option>
+												{{/ cp/selectbox_pc}}
+												<div class="oai_filter_reset">
+													<button type="button" class="hd_btn reset" disabled><span class="text">초기화</span></button>
+												</div>
+											</div>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 2.5 GDi</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 3.0 GDi</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 3.0 LPi</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 3.0 LPi(렌터카)</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 하이브리드</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">K7 Premier 하이브리드</span>
+											</button>
+										
+											<div class="no_list_area">
+												<i class="hd_icon exclamationSvg"></i>
+												<!-- s: 25-08-25 UXW -->
+												<p>
+													해당 조건으로 결과를 조회하지 못했어요.<br>
+													초기화나 다른 조건으로 조회해보세요.
+												</p>
+												<!-- e: 25-08-25 UXW -->
+											</div>
+										</div>
+									</div>
+									<!-- 세부차명 -->
+				
+									<!-- 세부형식 -->
+									<div class="opts_area active" tabindex="0" aria-label="선택 시 다음단계로 이동합니다." data-pickitem="step5">
+										<div class="opts_area_item">
+											<div class="oai_block oai_filter">
+												{{#> cp/selectbox_pc s-class="sm" s-title="배기량 선택" }}
+													<option value="" selected>배기량</option>
+													<option value="">800cc 이하</option>
+													<option value="">800cc 초과 ~ 1000cc 이하</option>
+													<option value="">1000cc 초과 ~ 1000cc 이하</option>
+													<option value="">3000cc 초과</option>
+													<option value="">다인승 비전방</option>
+												{{/ cp/selectbox_pc}}
+												{{#> cp/selectbox_pc s-class="sm" s-title="인승 선택" }}
+													<option value="" selected>인승</option>
+													<option value="">6인 이하</option>
+													<option value="">7인 이상~8인 이하</option>
+													<option value="">9인 이상~10인 이하</option>
+													<option value="">11인 이상</option>
+												{{/ cp/selectbox_pc}}
+												<div class="oai_filter_reset">
+													<button type="button" class="hd_btn reset"><span class="text">초기화</span></button>
+												</div>
+											</div>
+
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">
+													<strong class="point">5인승</strong>, 2999cc, 노블레스, 오토, 에어컨, P/S, ABS, AIR-D, IM <strong class="point">1,968만원</strong>
+												</span>
+											</button>
+											<button type="button" class="opts_area_btn hd_btn">
+												<span class="text">
+													<strong class="point">5인승</strong>, 2999cc, 시그니처, 오토, 에어컨, P/S, ABS, AIR-D, IM <strong class="point">2,079만원</strong>
+												</span>
+											</button>
+				
+											<div class="no_list_area">
+												<i class="hd_icon exclamationSvg"></i>
+												<!-- s: 25-08-25 UXW -->
+												<p>
+													해당 조건으로 결과를 조회하지 못했어요.<br>
+													초기화나 다른 조건으로 조회해보세요.
+												</p>
+												<!-- e: 25-08-25 UXW -->
+											</div>
+										</div>
+									</div>
+									<!-- 세부형식 -->
+								</div>
+							</div>
+				
+						</div>
+					</form>
+				</div>
+
+				<!-- s: 25-07-17 수정 -->
+				<div class="bottom_fix_wrap">
+					<div class="btn_area">
+						{{> cp/button type="3" size="1" b-text="이전" btn-title="이전 페이지로 이동" }}
+					</div>
+				</div>
+				<!-- e: 25-07-17 수정 -->
+			</div>
+		</div>
+
+		<!-- s: 사이드 패널 -->
+		{{> cp/panel_자동차개인 step5=true panel-title="고객 정보" }}
+		<!-- e: 사이드 패널 -->
+	</div>
+
+	<!-- footer -->
+	{{> layout/footer no-footer=true }}
+	<!-- footer -->
+</div>
+
+<script>
+	$(document).ready(function() {
+		// 1. 콜백 받을 함수를 세팅
+		$stepper.setCallback(() => {
+			$stepper.stepNext();
+		});
+	
+		// 2. 최대 step카운트로 초기화
+		$stepper.init();
+	});
+</script>
+
+
+<!-- s: 25-09-02 수정 -->
 <script>
   $(function () {
 		const keywords = [
 			"그랜져", "쏘렌토", "쏘나타", "아반떼", "모닝",
 			"카니발", "투싼", "싼타페", "코나", "티볼리",
-			"쏘울", "무쏘"
+			"쏘울", "무쏘", "무쏘1", "무쏘2", "무쏘3", "무쏘4", "무쏘5", "무쏘6", "무쏘8"
 		];
 
-		const $wrap = $('.autocomplete_wrap');
-		const $input = $('.autocomplete_input');
-		const $listWrap = $('.autocomplete_wrap_list');
-		const $list = $('.autocomplete_list');
+		$('.autocomplete_wrap').each(function () {
+			const $wrap = $(this);
+			const $input = $wrap.find('.autocomplete_input');
+      const $listWrap = $wrap.find('.autocomplete_wrap_list');
+      const $list = $wrap.find('.autocomplete_list');
+      const $delBtn = $wrap.find('.del');
 
-		$input.on('input', function () {
-			const query = $(this).val().trim();
-			$list.empty();
+			$input.on('input', function () {
+				const query = $(this).val().trim();
+				$list.empty();
 
-			if (query === '') {
-				$listWrap.removeClass('active');
-				return;
-			}
+				if (query === '') {
+					$listWrap.removeClass('active');
+					return;
+				}
 
-			const results = keywords.filter(word => word.includes(query));
+				const results = keywords.filter(word => word.includes(query));
 
-			if (results.length > 0) {
-				results.forEach(word => {
-					const highlighted = word.replace(
-						new RegExp(query, 'gi'),
-						match => `<span class="mark">${match}</span>`
-					);
+				if (results.length > 0) {
+					results.forEach(word => {
+						const highlighted = word.replace(
+							new RegExp(query, 'gi'),
+							match => `<span class="mark">${match}</span>`
+						);
 
-					$list.append(`<li><a href="#">${highlighted}</a></li>`);
-				});
+						$list.append(`<li><a href="#">${highlighted}</a></li>`);
+					});
 
-				$listWrap.addClass('active');
-			} else {
-				$listWrap.removeClass('active');
-			}
-		});
-
-		// 삭제 버튼 클릭 시 input 초기화 및 리스트 닫기
-		$('.del').on('click', function () {
-			$input.val('').trigger('input');
-		});
-
-		// 포커스 아웃 시 자동완성 리스트 닫기
-		$wrap.on('focusout', function (e) {
-			// 약간의 지연을 주면 클릭 등 다른 이벤트와 충돌 방지 가능
-			setTimeout(() => {
-				if (!$(document.activeElement).closest('.autocomplete_wrap').length) {
+					$listWrap.addClass('active');
+				} else {
 					$listWrap.removeClass('active');
 				}
-			}, 100);
+			});
+
+			// 삭제 버튼 클릭 시 input 초기화 및 리스트 닫기
+			$delBtn.on('click', function () {
+				$input.val('').trigger('input');
+			});
+
+			// 포커스 아웃 시 자동완성 리스트 닫기
+			$wrap.on('focusout', function (e) {
+				// 약간의 지연을 주면 클릭 등 다른 이벤트와 충돌 방지 가능
+				setTimeout(() => {
+					if (!$(document.activeElement).closest('.autocomplete_wrap').length) {
+						$listWrap.removeClass('active');
+					}
+				}, 100);
+			});
 		});
 	});
 </script>
+<!-- e: 25-09-02 수정 -->
 
+
+<!-- s: popup area -->
+<!-- e: popup area -->
 
 {{/ layout/default }}

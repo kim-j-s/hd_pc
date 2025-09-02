@@ -387,7 +387,7 @@
 	-webkit-transition: all var(--t-time);
 	transition: all var(--t-time);
 }
-.bi_wrap .stepper_wrap .stepper .pgs .pgs_per.start .motion.car {
+.bi_wrap .stepper_wrap .stepper .pgs .pgs_per.start .motion {
 	right: -40px;
 }
 .bi_wrap .stepper_wrap .stepper .pgs .pgs_per.end .motion {
@@ -4792,6 +4792,9 @@ ul + .form_group_wrap {
 .info_cont_wrap + .info_cont_wrap {
 	margin-top: 52px;
 }
+.appendix_item {
+	margin-top: var(--gap-11);
+}
 /* 운전자보험 - 보험료 결제 */
 .insurance_payment_area {
 	position: relative;
@@ -6134,6 +6137,10 @@ ul + .form_group_wrap {
 	-ms-flex-align: start;
 	align-items: flex-start;
 	gap: var(--gap-3);
+}
+.prd_view .title_view_wrap .badge_wrap {
+	gap: var(--gap-2);
+	margin-bottom: var(--gap-3);
 }
 .prd_view .content_body {
 	display: -webkit-box;

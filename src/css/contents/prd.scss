@@ -44,7 +44,13 @@
 			align-items: flex-start;
 			gap: var(--gap-3);
 		}
+		
+		.badge_wrap {
+			gap: var(--gap-2);
+			margin-bottom: var(--gap-3);
+		}
 	}
+	
 	// 컨텐츠 영역
 	.content_body {
 		display: flex;
