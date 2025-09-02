@@ -1969,6 +1969,8 @@ body {
 	gap: var(--gap-4);
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list .hd_btn {
+	position: relative;
+	z-index: 20;
 	margin-left: auto;
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl {
@@ -2035,6 +2037,10 @@ body {
 .container .card_item_wrap.ty7 .card_item .item_result .btn_area {
 	margin-top: 0;
 }
+.container .card_item_wrap.ty7 .card_item .item_result .btn_area button {
+	position: relative;
+	z-index: 20;
+}
 .container .card_item_wrap.ty7 .card_item .item_result .msg_success {
 	margin-top: 0;
 }
@@ -2048,10 +2054,6 @@ body {
 	height: 20px;
 	margin-top: 3px;
 	padding-left: 0;
-}
-.card_item_wrap .card_item .item_inner > .inp_checkbox .chk_label:before,
-.card_item_wrap .card_item .item_inner > .inp_radio .chk_label:before {
-	top: 0;
 }
 .card_item_wrap .card_item .card_list_ty1 > li.list_title {
 	padding-bottom: 16px;
@@ -3510,6 +3512,11 @@ body {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
+.title_view_wrap .btn_area {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
 .title_view_wrap .btn_area:not(.column):has(button.hd_btn_s_4, button.hd_btn_s_5) {
 	gap: var(--gap-3);
 }
@@ -3966,7 +3973,9 @@ body {
 }
 .guarantee_select_wrap .select_item .item_top .top_title {
 	font-size: var(--font-size-body-medium);
-	white-space: nowrap;
+}
+.guarantee_select_wrap .select_item .item_top .top_title br {
+	display: block;
 }
 .guarantee_select_wrap .select_item .item_top .top_info {
 	display: -webkit-box;
@@ -4078,6 +4087,9 @@ body {
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label .item_top {
 	width: 228px;
+}
+.guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label .item_top .top_title br {
+	display: none;
 }
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label + .btn_area {
 	display: block;
@@ -4408,6 +4420,9 @@ body {
 .car_step_layout .bi_stepper .opts_area .opts_area_item {
 	margin-top: 0;
 	padding-bottom: 0;
+}
+.car_step_layout .bi_stepper .opts_area .opts_area_item + * {
+	margin-top: var(--gap-8);
 }
 .car_step_layout .bi_stepper .opts_area .search_reult_list_container {
 	width: 100%;

@@ -1569,6 +1569,15 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty75 {
 	background-image: url(../images/content/bi/visual/bg_exp_ty75.png);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty76 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty76.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty77 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty77.png);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item.item_ico_ty78 {
+	background-image: url(../images/content/bi/visual/bg_exp_ty78.png);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details:has(.bottom_info_wrap) {
 	padding-bottom: var(--padding-8);
 }
@@ -4536,7 +4545,7 @@ ul + .form_group_wrap {
 	margin-top: var(--gap-4);
 }
 .address_detail_cont + .list_ty2 {
-	margin-top: var(--gap-4);
+	margin-top: var(--gap-5);
 }
 .sns_box {
 	margin-bottom: var(--gap-4);
@@ -4953,7 +4962,8 @@ ul + .form_group_wrap {
 	background-size: 24px auto;
 }
 .cert_select_list .cert_select_item > .text .tip_item {
-	width: 100%;
+	--tl: 35px;
+	padding-right: 0;
 }
 .cert_select_list .cert_select_item.pin > .text::before {
 	background-image: url(../images/common/cert/icon_cert_pin.svg);
@@ -4987,6 +4997,9 @@ ul + .form_group_wrap {
 }
 .cert_select_list .cert_select_item.naver_cert > .text::before {
 	background-image: url(../images/common/cert/icon_cert_naver_cert.svg);
+}
+.cert_select_list .cert_select_item.company_cert > .text::before {
+	background-image: url(../images/common/cert/icon_cert_company_cert.svg);
 }
 /* PIN 인증 */
 .pin_enter {
@@ -6236,6 +6249,12 @@ ul + .form_group_wrap {
 .prd_view .intro_info.bg_intro16::after {
 	background-image: url("../images/content/prd/bg_intro16.png");
 }
+.prd_view .intro_info.bg_intro17::after {
+	background-image: url("../images/content/prd/bg_intro17.png");
+}
+.prd_view .intro_info.bg_intro18::after {
+	background-image: url("../images/content/prd/bg_intro18.png");
+}
 .prd_view .intro_info .info_list .item.ico_intro1 {
 	background-image: url("../images/content/prd/ico_intro1.svg");
 }
@@ -6286,6 +6305,15 @@ ul + .form_group_wrap {
 }
 .prd_view .intro_info .info_list .item.ico_intro17 {
 	background-image: url("../images/content/prd/ico_intro17.svg");
+}
+.prd_view .intro_info .info_list .item.ico_intro18 {
+	background-image: url("../images/content/prd/ico_intro18.svg");
+}
+.prd_view .intro_info .info_list .item.ico_intro19 {
+	background-image: url("../images/content/prd/ico_intro19.svg");
+}
+.prd_view .intro_info .info_list .item.ico_intro20 {
+	background-image: url("../images/content/prd/ico_intro20.svg");
 }
 .prd_view .guarantee_area {
 	position: relative;
@@ -6548,6 +6576,15 @@ ul + .form_group_wrap {
 .prd_view .guarantee_area .guarantee_list .item .titie_wrap.item_ico_ty75 {
 	background-image: url("../images/content/bi/visual/bg_exp_ty75.png");
 }
+.prd_view .guarantee_area .guarantee_list .item .titie_wrap.item_ico_ty76 {
+	background-image: url("../images/content/bi/visual/bg_exp_ty76.png");
+}
+.prd_view .guarantee_area .guarantee_list .item .titie_wrap.item_ico_ty77 {
+	background-image: url("../images/content/bi/visual/bg_exp_ty77.png");
+}
+.prd_view .guarantee_area .guarantee_list .item .titie_wrap.item_ico_ty78 {
+	background-image: url("../images/content/bi/visual/bg_exp_ty78.png");
+}
 .prd_view .guarantee_area .guarantee_list .item .desc {
 	padding-top: var(--gap-2);
 	font-size: var(--font-size-body-small);
@@ -6660,6 +6697,18 @@ ul + .form_group_wrap {
 }
 .prd_view .benefit_area .info_list .item.ico_benefit19 {
 	background-image: url("../images/content/prd/ico_benefit19.svg");
+}
+.prd_view .benefit_area .info_list .item.ico_benefit20 {
+	background-image: url("../images/content/prd/ico_benefit20.svg");
+}
+.prd_view .benefit_area .info_list .item.ico_benefit21 {
+	background-image: url("../images/content/prd/ico_benefit21.svg");
+}
+.prd_view .benefit_area .info_list .item.ico_benefit22 {
+	background-image: url("../images/content/prd/ico_benefit22.svg");
+}
+.prd_view .benefit_area .info_list .item.ico_benefit23 {
+	background-image: url("../images/content/prd/ico_benefit23.svg");
 }
 .prd_view .faq_area .item_wrap_faq {
 	border-top: 0;
@@ -7162,6 +7211,15 @@ ul + .form_group_wrap {
 }
 .prd_link_area .prd_link .prd_item.item_ico_ty75::after {
 	background-image: url("../images/content/bi/visual/bg_exp_ty75.png");
+}
+.prd_link_area .prd_link .prd_item.item_ico_ty76::after {
+	background-image: url("../images/content/bi/visual/bg_exp_ty76.png");
+}
+.prd_link_area .prd_link .prd_item.item_ico_ty77::after {
+	background-image: url("../images/content/bi/visual/bg_exp_ty77.png");
+}
+.prd_link_area .prd_link .prd_item.item_ico_ty78::after {
+	background-image: url("../images/content/bi/visual/bg_exp_ty78.png");
 }
 .prd_link_area .prd_link .prd_item .tit {
 	font-weight: 700;

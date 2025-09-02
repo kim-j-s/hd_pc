@@ -73,7 +73,7 @@
 	/* padding-left: 12px; */
 	padding-bottom: 10px;
 	font-size: var(--font-size-body-medium);
-	line-height: 24px;
+	line-height: 1.5;
 	border-bottom: 1px solid #000;
 }
 /* .guide_discription::before {
@@ -113,7 +113,7 @@
 
 .guide_text_smp {
 	font-size: var(--font-size-body-medium);
-	line-height: 24px;
+	line-height: 1.5;
 }
 
 .b_case {
