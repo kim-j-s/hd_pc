@@ -1658,13 +1658,13 @@
 			flex-direction: column;
 			align-items: flex-start;
 			transition:none;
-			gap: var(--gap-8);
+			// gap: var(--gap-8);
 
 			.search_inp_box {
 				position: static;
 				z-index: 10;
 				width: 100%;
-				& + .opts_area {
+				& + * {
 					margin-top: var(--gap-8);
 				}
 			}
@@ -1679,6 +1679,21 @@
 
 			.search_reult_list_container {
 				width: 100%;
+
+			}
+
+			.autocomplete_wrap {
+				& + * {
+					margin-top: var(--gap-8);
+
+					&.search_result_count {
+						margin-top: var(--gap-11);
+					}
+				}
+			}
+
+			.no_list_area {
+				min-height: auto;
 			}
 		}
 	}
