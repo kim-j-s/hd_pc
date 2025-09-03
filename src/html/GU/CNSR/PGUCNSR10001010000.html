@@ -173,15 +173,15 @@
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_gt3_02" name="radio_gt3" labelname="예" }}
 							</div>
 						</div>
-						<div class="form_line full">
+						<!-- s: 25-09-04 수정 -->
+						<div class="form_line full_half">
 							<div class="label_tit">지원경로</div>
-							<div class="row_ty2">
-								{{#> cp/selectbox_pc s-title="지원경로 선택" }} 
-									<option value="">지원경로</option>
-								{{/ cp/selectbox_pc}}
-								{{> cp/text inp-title="지원경로 입력" placeholder="지원경로 입력" }}
-							</div>
+							{{#> cp/selectbox_pc s-title="지원경로 선택" }} 
+							<option value="">지원경로</option>
+							{{/ cp/selectbox_pc}}
+							{{> cp/text inp-title="지원경로 입력" placeholder="지원경로 입력" }}
 						</div>
+						<!-- e: 25-09-04 수정 -->
 					</div>
 				</div>
 
@@ -348,6 +348,9 @@
 				</div>
 				<div class="bottom_fix_wrap">
 					<div class="btn_area center">
+						<!-- s: 25-09-04 수정 -->
+						{{> cp/button type="3" size="1" b-text="지원서 저장"}}
+						<!-- e: 25-09-04 수정 -->
 						{{> cp/button type="1" size="1" b-text="지원서 제출하기"}}
 					</div>
 				</div>
