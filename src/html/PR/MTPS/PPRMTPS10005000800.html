@@ -64,7 +64,9 @@
       
           <div class="form_line">
             <div class="label_tit">질권설정금액(단위: 만원)</div>
-            {{> cp/text type="tel" placeholder="금액을 입력하세요" class="price" r-text="만원" inp-title="질권설정금액 입력"}}
+            <!-- s: 25-09-03 수정 -->
+            {{> cp/text type="tel" placeholder="0" class="price" r-text="만원" inp-title="질권설정금액 입력"}}
+            <!-- e: 25-09-03 수정 -->
             <!-- s: 25-08-25 UXW -->
             <p class="info_text2">(<strong>6280</strong>만원 내에서 설정할 수 있습니다.)</p>
             <!-- e: 25-08-25 UXW -->
