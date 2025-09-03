@@ -753,8 +753,8 @@
 	&.acd_item_ty8 { // money
 		.acd_head {
 			position: relative;
-			padding-bottom: 20px;
-			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+			//padding-bottom: 20px;
+			//border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			.acd_btn {
 				position: relative;
 				width: 100%;
@@ -764,11 +764,12 @@
 	
 				&:after {
 					position: absolute;
-					top: calc(50% - 12px);
+					top: 0;//calc(50% - 12px);
 					right:0;
 					content: '';
 					width: 24px;
 					height: 24px;
+					margin: 4px;
 					background: url(../images/icon/arrowDown_ty3.svg) no-repeat center /24px auto;
 					box-sizing: border-box;
 					transition: all 0.3s;
@@ -785,6 +786,8 @@
 			}
 	
 			&.active {
+				padding-bottom: 20px;
+				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 				& + .acd_cont {
 					padding: 20px 0 0;
 					&::before {

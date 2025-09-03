@@ -106,19 +106,19 @@ body {
 			}
 			&.qm_btn_chatbot {
 				&::before {
-					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
-					background-color: var(--color-button-tertiary-fill);
+					// border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+					background-color: var(--color-button-brand-fill);
 					background-image: url(../images/common/icon_qm_chatbot.png);
 				}
 				&:focus,
 				&:hover {
 					&::before {
-						background-color: var(--color-button-tertiary-fill-hover);
+						background-color: var(--color-button-brand-fill-hover);
 					}
 				}
 				&:active {
 					&::before {
-						background-color: var(--color-button-tertiary-fill-pressed);
+						background-color: var(--color-button-brand-fill-pressed);
 					}
 				}
 			}
