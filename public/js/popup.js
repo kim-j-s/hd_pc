@@ -35,6 +35,7 @@ function openHDPopup($triggerEl, target) {
 	}
 	
 	const $target = $("#" + target);
+	$target.removeAttr('aria-hidden');
 
 	let $header = $target.find(".popup_head_title").length > 0 ? $target.find(".popup_head_title") : null;
 	let $content = $target.find(".popup_cont").length > 0 ? $target.find(".popup_cont") : null;
@@ -138,6 +139,28 @@ function openHDPopup($triggerEl, target) {
 			setTabindex($target);
 			//팝업 내부에서 focus순환
 			focusTrap($target);
+			// --- iframe 포커스 처리 추가 ---
+			const $iframe = $target.find('iframe');
+			if ($iframe.length) {
+				$iframe.attr('tabindex', '0').focus(); // iframe 자체 포커스
+				if($target.find('.sentinel').length === 0) {
+					$target.prepend('<div class="sentinel first" tabindex="0"></div>');
+					$target.append('<div class="sentinel last" tabindex="0"></div>');
+				}
+				// const iframeEl = $iframe[0];
+				// iframeEl.addEventListener('load', function() {
+				// 	try {
+				// 	const innerDoc = iframeEl.contentWindow.document;
+				// 	const firstFocusable = innerDoc.querySelector('input, button, a, textarea, select');
+				// 	if (firstFocusable) {
+				// 		firstFocusable.focus();
+				// 	}
+				// 	} catch (e) {
+				// 	console.warn('iframe 내부 접근 불가:', e);
+				// 	}
+				// }, { once: true });
+			}
+			// --- iframe 포커스 처리 끝 ---
 		},100);
 	}, 350);
 }
@@ -314,24 +337,44 @@ function setTabindex($target){
 
 
 //팝업 내부에서 focus순환
-function focusTrap($target){
-	$target.find('.popup_inner, .event_pop_ele_inner').off('keydown.focusTraversal').on('keydown.focusTraversal', function(e) {
-		if (e.key === 'Tab') {
-			const focusableEle = $target.find('button, input, select, textarea, a, .popup_inner').filter(':not([disabled])'); // 포커스 가능한 요소들만
-			const firstEle = focusableEle.first();
-			const lastEle = focusableEle.last();
-			
-			if (e.shiftKey) {
-				if (document.activeElement === firstEle[0]) {
-					lastEle.focus();
-					e.preventDefault();
-				}
-			} else {
-				if (document.activeElement === lastEle[0]) {
-					firstEle.focus();
-					e.preventDefault();
-				}
-			}
-		}
-	});
+function focusTrap($target) {
+  const focusable_selector= 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  $target.off('keydown.focusTraversal').on('keydown.focusTraversal', function(e) {
+    if (e.key !== 'Tab') return;
+
+    const focusableElements = $target.find(focusable_selector).filter(':visible');
+    const firstElement = focusableElements.first()[0];
+    const lastElement = focusableElements.last()[0];
+
+    if (e.shiftKey) {
+      if (document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  });
+
+  // Sentinel 방식 지원 (iframe이 있을 경우)
+  if ($target.find('iframe').length) {
+    const $firstSentinel = $target.find('.sentinel.first');
+    const $lastSentinel = $target.find('.sentinel.last');
+
+    if ($firstSentinel.length && $lastSentinel.length) {
+      $firstSentinel.on('focus', () => {
+        const focusable = $target.find(focusable_selector).filter(':visible');
+        focusable.last().focus();
+      });
+
+      $lastSentinel.on('focus', () => {
+        const focusable = $target.find(focusable_selector).filter(':visible');
+        focusable.first().focus();
+      });
+    }
+  }
 }
