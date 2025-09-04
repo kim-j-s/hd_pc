@@ -247,6 +247,11 @@
 	& + .btn_area {
 		margin-top: var(--gap-3);
 	}
+
+	//폰트 medium 사이즈
+	&.md {
+		font-size: var(--font-size-body-medium);
+	}
 }
 
 .title_sub2 {
