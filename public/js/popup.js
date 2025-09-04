@@ -143,8 +143,10 @@ function openHDPopup($triggerEl, target) {
 			const $iframe = $target.find('iframe');
 			if ($iframe.length) {
 				$iframe.attr('tabindex', '0').focus(); // iframe 자체 포커스
-				$target.prepend('<div class="sentinel-first" tabindex="0"></div>');
-				$target.append('<div class="sentinel-last" tabindex="0"></div>');
+				if($target.find('.sentinel').length === 0) {
+					$target.prepend('<div class="sentinel first" tabindex="0"></div>');
+					$target.append('<div class="sentinel last" tabindex="0"></div>');
+				}
 				// const iframeEl = $iframe[0];
 				// iframeEl.addEventListener('load', function() {
 				// 	try {
@@ -360,8 +362,8 @@ function focusTrap($target) {
 
   // Sentinel 방식 지원 (iframe이 있을 경우)
   if ($target.find('iframe').length) {
-    const $firstSentinel = $target.find('.sentinel-first');
-    const $lastSentinel = $target.find('.sentinel-last');
+    const $firstSentinel = $target.find('.sentinel.first');
+    const $lastSentinel = $target.find('.sentinel.last');
 
     if ($firstSentinel.length && $lastSentinel.length) {
       $firstSentinel.on('focus', () => {
