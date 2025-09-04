@@ -76,10 +76,18 @@
 			// & ~ .option {
 			// 	margin-top: 10px;
 			// }
-
-
 		}
 	
+		&.sm {
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+			.option {
+				> .text {
+					padding:var(--padding-6) calc(24px + var(--padding-6)) var(--padding-6) 0;
+					background-size: 20px auto; 
+					background-position-x: calc(100% - 2px);
+				}
+			}
+		}
 	}
 	// opt_case3 
 	&.opt_case3 {

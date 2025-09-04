@@ -745,12 +745,14 @@
 			width: auto;
 			padding: 8px var(--padding-6);
 			border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-			background: none;
-			> .text {
-				display: inline-block;
-				padding-right: 24px;
-				background: url(../images/icon/icon_new_open.svg) no-repeat right center / 20px auto;
-			}
+			background-size: 20px auto;
+			background-position: right 16px center;
+			// background: none;
+			// > .text {
+			// 	display: inline-block;
+			// 	padding-right: 24px;
+			// 	background: url(../images/icon/icon_new_open.svg) no-repeat right center / 20px auto;
+			// }
 			&.tel {
 				> .text {
 					padding-right: 0;
