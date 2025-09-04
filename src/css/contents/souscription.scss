@@ -976,6 +976,10 @@ ul + .form_group_wrap {
 			}
 		}
 	}
+
+	& + .checkbox_group_wrap {
+		margin-top: var(--gap-11);
+	}
 }
 
 .link_flex_box {

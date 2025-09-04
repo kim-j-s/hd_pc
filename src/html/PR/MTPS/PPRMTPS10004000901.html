@@ -557,7 +557,8 @@
 								</div>
 							</div>
 						</li>
-						<li>
+						<!-- s: 25-09-05 수정 -->
+						<!-- <li>
 							<div class="check_flex_box">
 								<div class="check_box">
 									{{> cp/checkbox id="agreement01-24" labelname="분할납부" }}
@@ -566,9 +567,7 @@
 									<div class="money">
 										<span>5,100</span>원
 									</div>
-									<!-- s: 25-09-01 수정 -->
 									{{> cp/button_question question-icon="arrow" pop_id="" question_tit="분할납부" }}
-									<!-- e: 25-09-01 수정 -->
 								</div>
 							</div>
 							<div class="btn_add">
@@ -577,8 +576,19 @@
 							<div class="info_gray">
 								<p>기본형</p>
 							</div>
-						</li>
+						</li> -->
 					</ul>
+					<div class="checkbox_group_wrap column">
+						{{#> cp/checkbox checkbox_class="rd_box" id="checkbox01-1" labelname="분할납부 <span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>추가정보입력</span></span>" }}
+
+						<div class="chk_lby3">
+							<div class="info_gray">
+								<p class="info_text">2회납(자동이체)</p>
+							</div>
+						</div>
+						{{/ cp/checkbox}}
+					</div>
+					<!-- e: 25-09-05 수정 -->
 				</div>
 			</div>
 		</div>
