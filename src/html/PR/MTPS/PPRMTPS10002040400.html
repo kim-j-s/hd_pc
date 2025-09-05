@@ -28,7 +28,9 @@
 				<div class="form_line grow">
 					<div class="label_tit">구입가격</div>
 					<!-- s: 25-08-25 UXW -->
-					{{> cp/text type="tel" class="price" placeholder="숫자만 입력" r-text="만원" inp-title="구입가격 입력"}}
+					 <!-- s: 25-09-05 수정 -->
+					 {{> cp/text type="tel" class="price" placeholder="0" r-text="만원" inp-title="구입가격 입력"}}
+					 <!-- e: 25-09-05 수정 -->
 					<!-- e: 25-08-25 UXW -->
 				</div>
 			</div>
@@ -75,7 +77,9 @@
 			<div class="row">
 				<div class="form_line grow">
 					<div class="label_tit">구입가격</div>
-					{{> cp/text type="tel" class="price" placeholder="숫자만" r-text="만원" inp-title="구입가격 입력"}}
+					<!-- s: 25-09-05 수정 -->
+					{{> cp/text type="tel" class="price" placeholder="0" r-text="만원" inp-title="구입가격 입력"}}
+					<!-- e: 25-09-05 수정 -->
 				</div>
 			</div>
 			<div class="total_price_display_ty1">
@@ -94,7 +98,9 @@
 
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="2" b-text="구매가격을 입력 중이에요" disabled=true}}
+		<!-- s: 25-09-05 수정 -->
+		{{> cp/button type="1" size="2" b-text="부품 정보를 입력 중이에요" disabled=true}}
+		<!-- e: 25-09-05 수정 -->
 		<!-- {{> cp/button type="1" size="2" b-text="부품정보 저장하기"}} -->
 	</div>
 </div>
