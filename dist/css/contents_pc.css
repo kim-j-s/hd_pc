@@ -4777,9 +4777,34 @@ body {
 	display: block;
 }
 .qr_code_box {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	min-height: 96px;
-	padding-right: 100px;
-	background: url("../images/content/gu/install_qr.png") no-repeat right center/96px auto;
+	padding-right: 116px;
+}
+.qr_code_box::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 96px;
+	height: 96px;
+	border-radius: var(--radius-medium3);
+	background: var(--color-surface-white-subtle) url("../images/content/gu/install_qr.png") no-repeat center center;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .space_gap_8 {
 	margin-top: var(--gap-8);
