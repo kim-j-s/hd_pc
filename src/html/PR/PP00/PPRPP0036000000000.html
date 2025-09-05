@@ -1,0 +1,38 @@
+{{#> layout/default no-sp=true page-title="보험인수불가 안내 | 상품공통"}}
+
+<!-- s: Full 팝업 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="가입 중단 안내" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<div class="process_info_area">
+			<div class="complete_info" aria-hidden="true">
+					<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
+				</div>
+			<h2 class="process_title">
+				<strong>가입을 잠시 중단합니다</strong>
+			</h2>
+			<div class="process_desc">
+				고객님께서 선택하신 조건으로는<br>$prodNm$ 보험 가입을 진행할 수 없습니다.
+			</div>	
+		</div>
+
+		<div class="info_gray ty2">
+				<ul class="list_ty3">
+					<li>홈페이지에서의 보험가입은 더 이상 진행이 불가합니다.</li>
+					<li>고지사항, 직업 관련 보험 가입이 제한될 수 있습니다.</li>
+				</ul>  
+			</div>
+	</div>
+</div>
+
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="3" size="2" b-text="홈으로" }}
+		{{> cp/button type="1" size="2" b-text="변경 조건으로 다시 계산" }}
+	</div>
+</div>
+{{/ popup/popup_full}}
+<!-- e: Full 팝업 -->
+
+
+{{/ layout/default }}
