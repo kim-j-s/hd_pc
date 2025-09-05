@@ -2255,6 +2255,7 @@ strong {
 	display: block;
 	font-size: var(--font-size-body-xsmall);
 	color: var(--color-text-subtle);
+	text-align: left;
 }
 .footer .footer_bottom .fb_right > a.fi_ty1 {
 	padding-left: 40px;
