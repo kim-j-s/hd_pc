@@ -9864,6 +9864,9 @@ strong {
 .popup_cont.search_list_type2 .search_inp_box:has(.desc) {
 	gap: var(--gap-5);
 }
+.popup_cont.search_list_type2 .search_inp_box:has(.desc) .point {
+	font-weight: 700;
+}
 .popup_cont.search_list_type2 .search_inp_box .search_letter_btn_list .keypad_chip_item {
 	padding: 0;
 }
@@ -13659,6 +13662,7 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .coverage_type dt {
 	font-weight: 700;
+	color: var(--color-text-bolder);
 }
 .coverage_type dt ~ dt {
 	margin-top: var(--gap-6);
