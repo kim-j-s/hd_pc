@@ -2049,9 +2049,25 @@
 
 //qr코드
 .qr_code_box {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
 	min-height: 96px;
-	padding-right: 100px;
-	background: url('../images/content/gu/install_qr.png') no-repeat right center / 96px auto;
+	padding-right: 116px;
+	
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 96px;
+		height: 96px;
+		border-radius: var(--radius-medium3);
+		background: var(--color-surface-white-subtle) url('../images/content/gu/install_qr.png') no-repeat center center;
+		transform: translateY(-50%);
+	}
 }
 
 // 간격 전역변수 필요시 사용
