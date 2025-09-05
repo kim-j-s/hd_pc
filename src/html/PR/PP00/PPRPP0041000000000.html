@@ -1,0 +1,28 @@
+{{#> layout/default no-sp=true page-title="보험인수불가 안내 | 상품공통"}}
+
+<!-- s: alert -->
+{{#> popup/popup_confirm popup-active=true popup-id="pop_type01" popup-title="고객 정보 초기화 안내" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- info Case -->
+
+		<div class="msg_icon mi_info"></div>
+		<div>
+			<!-- html -->
+			<p class="info_text">고객 정보 수정 시 기존 입력된 정보는 삭제됩니다.<br>이동하시겠습니까?</p>
+			<!-- html -->
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="3" size="2" b-text="취소" }}
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_confirm}}
+	<!-- e: alert -->
+
+
+{{/ layout/default }}
