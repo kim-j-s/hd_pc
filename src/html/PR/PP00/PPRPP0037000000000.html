@@ -1,0 +1,27 @@
+{{#> layout/default no-sp=true page-title="보험인수불가 안내 | 상품공통"}}
+
+<!-- s: alert -->
+{{#> popup/popup_confirm popup-active=true popup-id="pop_type01" popup-title="가입 연령 안내" }}
+<div class="popup_cont">
+	<div class="popup_content">
+		<!-- info Case -->
+
+		<div class="msg_icon mi_info"></div>
+		<div>
+			<!-- html -->
+			<p class="info_text">가입 가능 연령은 만 19세~79세입니다.</p>
+			<!-- html -->
+		</div>
+
+	</div>
+</div>
+<div class="popup_bottom">
+	<div class="btn_area">
+		{{> cp/button type="1" size="2" b-text="확인" }}
+	</div>
+</div>
+{{/ popup/popup_confirm}}
+	<!-- e: alert -->
+
+
+{{/ layout/default }}
