@@ -7089,7 +7089,7 @@ strong {
 	border-radius: 999px;
 }
 .card_item.donation .inner_cont .progress .progress_info {
-	margin-top: var(--gap-2);
+	margin-top: var(--gap-3);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -7097,7 +7097,7 @@ strong {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	font-size: var(--font-size-body-xsmall);
-	color: var(--color-text-subtle);
+	color: var(--color-text-disabled-on);
 }
 .card_item.donation .item_btn_wrap {
 	margin-top: var(--gap-5);
