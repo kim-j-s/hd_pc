@@ -146,7 +146,8 @@ strong {
 	min-width: 1280px;
 	height: auto;
 	min-height: 100%;
-	padding: 120px 0 203px 0;
+	//padding: 120px 0 203px 0;
+	padding: 120px 0 0 0;
 	&:has(.header_pc_nd) {
 		padding: 72px 0 64px 0;
 	}
@@ -183,6 +184,7 @@ strong {
 		width: 1188px;
 		margin: 0 auto;
 		padding: 0 0 var(--padding-12);
+		min-height: calc(100vh - 375px);
 		&.main_container {
 			display: block;
 			width: auto;
