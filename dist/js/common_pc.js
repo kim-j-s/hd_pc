@@ -21,6 +21,13 @@ $(function() {  // DOM이 준비되었을 때 실행
 
 	function floatingItem() {
 		// console.log(wrapHeight, footerHeight, sTop, wHeight);
+
+		const footerIs = $('.footer').css('display');
+		if(footerIs === 'none') {
+			// $FLOATING_ITEM.addClass('active');
+			return; // 푸터가 없으면 항상 활성화 상태로 유지
+		}
+
 		if (wrapHeight - footerHeight < sTop + wHeight) {
 			$FLOATING_ITEM.addClass('active');
 		} else {
@@ -44,7 +51,7 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	// 헤더 이벤트 스크립트
-	if($('.main_cont_wrap').length){
+	if($('.hpi_top').length){
 		let lastScrollTop = 0;
 		
 		if(!$('.main_evt_tab.main_sticky').length){
@@ -59,7 +66,6 @@ $(function() {  // DOM이 준비되었을 때 실행
 						// 위로 스크롤
 						$('body').removeClass('sc_down').addClass('sc_up');
 					}
-			
 					lastScrollTop = st;
 			});
 		}

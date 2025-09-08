@@ -39,12 +39,12 @@
       $click_item.children('.acd_head').removeClass('active').children('.acd_btn').attr('aria-expanded', 'false');
       $click_item.children('.acd_cont').children('.inner').hide();
       $head.addClass('active');
-			$this.attr('aria-expanded', 'true');
       $inner.slideDown();
+			$this.attr('aria-expanded', 'true');
     }else {
 			$this.attr('aria-expanded', 'false');
-      $head.removeClass('active');
       $inner.slideUp();
+			$head.removeClass('active');
     }
   });
 

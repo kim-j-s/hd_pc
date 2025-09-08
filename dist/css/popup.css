@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /* popup_common */
 /* Popup */
-.scroll_lock {
-	height: 100%;
-	overflow: hidden;
-}
 .popup_wrap {
 	position: fixed;
 	top: 0;

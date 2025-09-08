@@ -4141,6 +4141,7 @@ ul + .form_group_wrap {
 .info_cont .title_h2 {
 	font-size: var(--font-size-heading-small);
 	font-weight: 700;
+	color: var(--color-text-bolder);
 }
 .info_cont h2 + .table_wrap,
 .info_cont h2 + .info_gray,
@@ -4176,6 +4177,7 @@ ul + .form_group_wrap {
 .info_cont h3 {
 	font-size: var(--font-size-heading-xsmall);
 	font-weight: 700;
+	color: var(--color-text-bolder);
 }
 .info_cont .pop_title_h3 + h4,
 .info_cont h3 + h4 {
@@ -4689,7 +4691,6 @@ ul + .form_group_wrap {
 }
 .special_contract_list > li .check_flex_box .money_box .question_mark_btn {
 	position: relative;
-	top: 1px;
 }
 .special_contract_list > li .check_flex_box.disabled .money_box .money {
 	color: var(--color-text-disabled);
@@ -6784,8 +6785,13 @@ ul + .form_group_wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-align: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
 	gap: var(--gap-4);
 }
 .prd_view .recommend_area .card_list_wrap_ty2 > li {
@@ -6795,6 +6801,9 @@ ul + .form_group_wrap {
 	-ms-flex-preferred-size: calc(50% - 6px);
 	flex-basis: calc(50% - 6px);
 	margin: 0;
+}
+.prd_view .recommend_area .card_list_wrap_ty2 > li .card_item {
+	height: 100%;
 }
 .prd_view .recommend_area .card_list_wrap_ty2 > li .info_area {
 	width: 100%;
