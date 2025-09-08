@@ -25,14 +25,18 @@
 					{{> cp/tab_btn tb-text="타사 보유계약" tb-class="" tb-id="ex02"}}
 					<!-- e: 25-07-25 추가 -->
 					{{> cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-class="" tb-id="ex03"}}
-					{{> cp/tab_btn tb-text="최근 보험료 계산 내역<span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-class="" tb-id="ex04"}}
+					<!-- s: 25-09-08 수정 -->
+					{{> cp/tab_btn tb-text="최근 보험료 계산내역<span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-class="" tb-id="ex04"}}
+					<!-- e: 25-09-08 수정 -->
 				</div>
 
 				<div class="tab_wrap_content active" role="tabpanel" tabindex="0" aria-labelledby="tab01" id="tabPanelex01">
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<strong>어떤 자동차</strong>로 보험료를 계산할까요?
+								<!-- s: 25-09-08 수정 -->
+								보험료를 계산할 <strong>자동차</strong>를 <strong>선택</strong>해주세요
+								<!-- e: 25-09-08 수정 -->
 							</div>
 						</div>
 						<div class="btn_area">
@@ -191,7 +195,9 @@
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<strong>어떤 자동차</strong>로 보험료를 계산할까요?
+								<!-- s: 25-09-08 수정 -->
+								보험료를 계산할 <strong>자동차</strong>를 <strong>선택</strong>해주세요
+								<!-- e: 25-09-08 수정 -->
 							</div>
 						</div>
 						<div class="btn_area">
@@ -444,7 +450,9 @@
 					<!-- s: 만기예정 차량이 없는 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
-						<p>현재 갱신이 가능한 자동차가 없습니다.</p>
+						<!-- s: 25-09-08 수정 -->
+						<p>최근 설계 내역이 없습니다.</p>
+						<!-- e: 25-09-08 수정 -->
 					</div>
 					<!-- e: 만기예정 차량이 없는 경우 -->
 					<div class="bottom_fix_wrap">
