@@ -31,8 +31,15 @@
 				</div>
 				<!-- e: content_top -->
 				 
-				<div style="height:400px; background-color: #f8f8f8;"></div>
+				<!-- <div style="height:400px; background-color: #f8f8f8;"></div> -->
+				<!-- <div style="height:400px; background-color: #ddd;"></div> -->
+
+				<br><br>
+				{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="치과용어 알아보기" popup="ex_popup_full"}}
+				<br><br>
+				<br><br>
 				<div style="height:400px; background-color: #ddd;"></div>
+				<br><br>
 				
 				<!-- s: 꼭 알아두세요 -->
 				{{#> cp/notice }}
@@ -55,6 +62,51 @@
 	</div>
 
 	<!-- s: popup area -->
+
+	<!-- s: Full 팝업 -->
+	{{#> popup/popup_full popup-id="ex_popup_full" popup-title="치과용어 알아보기" }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<ul class="space_list_ty4">
+				<li>
+					<h3 class="title_h3">보존치료(발치없이 치료)</h3>
+					<ul class="list_depth">
+						<li>충치나 잇몸질환으로 때우거나 씌우는 치료.</li>
+						<li>충전치료 : 충전물로 <strong>때워줌</strong> (아말감, 레진, 인레이,온레이 등)</li>
+						<li>크라운치료 : 치아를 덮어 <strong>씌워줌</strong></li>
+					</ul>
+					<div class="info_gray ty3">
+						<ul class="tooth_list">
+							<li class="ico_tooth1">인레이</li>
+							<li class="ico_tooth2">온레이</li>
+							<li class="ico_tooth3">크라운</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<h3 class="title_h3">보철치료(인공치아 대체)</h3>
+					<ul class="list_depth">
+						<li>충치나 잇몸질환 또는 상해로 인해 치아를 발거 한 후, 발거한 부위에 하는 치료</li>
+						<li>브릿지, 임플란트, 가철성의치(틀니)</li>
+					</ul>
+					<div class="info_gray ty3">
+						<ul class="tooth_list">
+							<li class="ico_tooth4">브릿지</li>
+							<li class="ico_tooth5">임플란트</li>
+							<li class="ico_tooth6">가철성의치(틀니)</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="1" size="2" b-text="다음" disabled="true" }}
+		</div>
+	</div>
+	{{/ popup/popup_full}}
+	<!-- e: Full 팝업 -->
 	 
 	<!-- e: popup area -->
 
