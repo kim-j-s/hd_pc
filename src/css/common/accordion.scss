@@ -945,11 +945,13 @@
 			.acd_btn {
 				position: relative;
 				width: 100%;
+				// margin-bottom: 16px;
 				padding: 12px 32px 8px 0;  
 				min-height: 48px;
 				background-color: #fff;
 				font-size: var(--font-size-body-medium);
 				color: var(--color-text-bolder);
+
 				&::before {
 					content: '';
 					position: absolute;
@@ -958,7 +960,7 @@
 					width: 24px;
 					height: 24px;
 					background: transparent url(../images/icon/arrowDown_ty3.svg) no-repeat center / 20px auto;
-					transition: all 0.3s;
+					// transition: all 0.3s;
 					transform: translateY(-50%);
 				}
 				.sub_g_txt {
@@ -974,14 +976,17 @@
 			&.active {
 				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
 				.acd_btn {
+					margin-bottom: 0;
 					//background: var(--color-action-secondary-pressed);
 					&::before {
 						transform: translateY(-50%) rotate(180deg);
 					}
 				}
 				& + .acd_cont {
-					padding: 16px 0;
-					font-size: var(--font-size-body-medium);
+					margin-top: 0;
+					.inner {
+						margin: 16px 0;
+					}
 					&::before {
 						opacity: 1;
 					}
@@ -990,7 +995,11 @@
 		}
 		.acd_cont {
 			position: relative;
-			transition: all 0.3s;
+			font-size: var(--font-size-body-medium);
+			.inner {
+				padding: 0;
+			}
+			// transition: all 0.3s;
 		}
 
 	}
