@@ -72,93 +72,6 @@
 								</li>
 							</ul>
 						</div>
-
-						<!-- swiper case -->
-						<div class="main_recommend_box">
-							<div class="title">이런 상품 어떠세요?</div>
-							<div class="swiper">
-								<ul class="re_product_list swiper-wrapper">
-									<li class="swiper-slide">
-										<a href="#" class="re_link driver">
-											<!-- s: 25-08-21 수정 -->
-											운전자
-											<!-- e: 25-08-21 수정 -->
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 자동차보험 고객 매월 7% 할인</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link children">
-											어린이/태아           
-											<span class="tip_item top">
-												<span class="tip_item_cont">우리 아이 보험은 역시 현대해상! 오프라인 대비 평균 5% 저렴</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link pet">
-											펫
-											<span class="tip_item top">
-												<span class="tip_item_cont">반려생활 필수템, 펫 실손보험! 최대 13% 할인 가능</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link home">
-											주택
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 자동차보험 고객 매월 5% 할인(1년간)</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link travel">
-											해외여행
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 오프라인 대비 평균 59% 저렴, <br>동반가입시 10%추가할인</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link travel">
-											임시1
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 오프라인 대비 평균 59% 저렴</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link travel">
-											임시2
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 오프라인 대비 평균 59% 저렴</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link travel">
-											임시3
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 오프라인 대비 평균 59% 저렴</span>
-											</span>
-										</a>
-									</li>
-									<li class="swiper-slide">
-										<a href="#" class="re_link travel">
-											임시4
-											<span class="tip_item top">
-												<span class="tip_item_cont">현대해상 오프라인 대비 평균 59% 저렴</span>
-											</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-							<div class="swiper_control">
-								<button class="swiper_button sbc_02 sbs_02 swiper_button_left pro_left"></button>
-								<button class="swiper_button sbc_02 sbs_02 swiper_button_right pro_right"></button>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -1127,32 +1040,6 @@
 	}
 
 	$(document).ready(function(){
-
-		// s: 25-09-05 수정
-		let proSwiper = new Swiper('.main_recommend_box .swiper', {
-			slidesPerView: 'auto',
-			updateOnWindowResize:true,
-			navigation: {
-				nextEl: ".pro_right",
-				prevEl: ".pro_left",
-			},
-			a11y: {
-				enabled: true,
-				prevSlideMessage: '이전 항목으로 이동',
-				nextSlideMessage: '다음 항목으로 이동',
-			},
-			on: {
-				init: function () {
-					updateSlideStates(this);
-					console.log('초기');
-				},
-				slideChange: function () {
-					updateSlideStates(this);
-					console.log('움직임');
-				}
-			}
-		})
-		// e: 25-09-05 수정
 
 		let bannerSwiper = new Swiper('.mc_bann_wrap .swiper', {
 			slidesPerView: 1,
