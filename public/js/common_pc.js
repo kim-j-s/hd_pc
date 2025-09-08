@@ -21,6 +21,13 @@ $(function() {  // DOM이 준비되었을 때 실행
 
 	function floatingItem() {
 		// console.log(wrapHeight, footerHeight, sTop, wHeight);
+
+		const footerIs = $('.footer').css('display');
+		if(footerIs === 'none') {
+			// $FLOATING_ITEM.addClass('active');
+			return; // 푸터가 없으면 항상 활성화 상태로 유지
+		}
+
 		if (wrapHeight - footerHeight < sTop + wHeight) {
 			$FLOATING_ITEM.addClass('active');
 		} else {
