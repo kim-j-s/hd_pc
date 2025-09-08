@@ -7,8 +7,10 @@
 			<!-- s: popup_content_top -->
 			<div class="popup_content_top">
 				<h2 class="title_h2">					
-					<!-- s: 25-08-20 수정 -->					
-					<strong><span class="point">[필수]</span> 쿠폰발송을 위한 개인(신용)정보 처리 상세 동의</strong>
+					<!-- s: 25-08-20 수정 -->			
+					<!-- s: 25-09-08 수정 -->
+					<strong><span class="secondary">[선택]</span> 쿠폰발송을 위한 개인(신용)정보 처리 상세 동의</strong>
+					<!-- e: 25-09-08 수정 -->		
 					<!-- e: 25-08-20 수정 -->					
 				</h2>
 			</div>
@@ -58,10 +60,12 @@
 	</div>
 	<div class="popup_bottom">
 		<div class="btn_area">
-			{{> cp/button type="1" size="2" b-text="확인" disabled=true }}
+			<!-- s: 25-09-08 수정 -->
+			{{> cp/button type="1" size="2" b-text="다음" disabled=true }}
 			<!-- s: 모두 동의 상태에서만 버튼 활성화 -->
-			<!--{{> cp/button type="1" size="2" b-text="확인" }}-->
+			<!--{{> cp/button type="1" size="2" b-text="다음" }}-->
 			<!-- e: 모두 동의 상태에서만 버튼 활성화 -->
+			<!-- e: 25-09-08 수정 -->
 		</div>
 	</div>
 	{{/ popup/popup_full}}
