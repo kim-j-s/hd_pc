@@ -175,7 +175,7 @@ strong {
 		// padding: var(--padding-6) var(--padding-8) var(--padding-12);
 		// old
 
-		overflow: inherit;
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -185,6 +185,7 @@ strong {
 		margin: 0 auto;
 		padding: 0 0 var(--padding-12);
 		min-height: calc(100vh - 375px);
+		overflow: inherit;
 		&.main_container {
 			display: block;
 			width: auto;
