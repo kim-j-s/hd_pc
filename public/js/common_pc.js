@@ -44,7 +44,7 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	// 헤더 이벤트 스크립트
-	if($('.main_cont_wrap').length){
+	if($('.hpi_top').length){
 		let lastScrollTop = 0;
 		
 		if(!$('.main_evt_tab.main_sticky').length){
@@ -59,7 +59,6 @@ $(function() {  // DOM이 준비되었을 때 실행
 						// 위로 스크롤
 						$('body').removeClass('sc_down').addClass('sc_up');
 					}
-			
 					lastScrollTop = st;
 			});
 		}
