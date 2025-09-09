@@ -82,10 +82,10 @@
 			{{#if petmode}}
 			<div class="change_mode">
 				<div class="item">
-					<button type="button" class="cm_btn cm_btn_dog active"><span class="text">강아지<span class="sr_only">정보입력으로 전환</span></span></button>
+					<button type="button" class="cm_btn cm_btn_dog{{#if petmode-dog}} active{{/if}}"><span class="text">강아지<span class="sr_only">정보입력으로 전환</span></span></button>
 				</div>
 				<div class="item">
-					<button type="button" class="cm_btn cm_btn_cat"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
+					<button type="button" class="cm_btn cm_btn_cat{{#if petmode-cat}} active{{/if}}"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
 				</div>
 			</div>
 			{{/if}}
@@ -568,11 +568,34 @@
 				{{/if}}
 			</div>
 			{{/unless}}
-
-
 		</div>
-
 	</div>
+
+	{{!-- 헤더 qr 팝업 --}}
+	{{!-- <div class="popup_wrap popup_wrap_type1" id="qr_popup1" role="dialog">
+		<div class="popup_container">
+			<div class="popup_dim"></div>
+			<div class="popup_inner">
+				<div class="popup_head">
+					<div class="popup_head_title">포커스 없는 캐이스</div>
+				</div>
+				<div class="popup_cont">
+					<div class="popup_content">포커스 body로 이동</div>
+				</div>
+				<div class="popup_bottom">
+					<div class="btn_area">
+						<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_popup1', '#skipNavi');">
+							<span class="text">확인</span>
+						</button>
+					</div>
+				</div>
+				<button type="button" class="popup_close" onclick="closeHDPopup('qr_popup1', '#skipNavi');"><span class="blind">팝업 닫기</span></button>
+			</div>
+		</div>
+	</div> --}}
+	{{!-- 헤더 qr 팝업 --}}
+
+
 </div>
 {{#if bc}}
 {{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}
