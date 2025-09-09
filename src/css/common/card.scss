@@ -405,6 +405,10 @@
 							font-weight: 400;
 						}
 					}
+					.hd_badge {
+						font-weight: 400;
+						vertical-align: 2px;
+					}
 
 					&.tooltip_add {
 						display: flex;
@@ -682,7 +686,6 @@
 
 		//비활성화 케이스
 		&.disabled {
-			border-color: transparent;
 			background-color: var(--color-surface-gray-subtler);
 			overflow: hidden;
 
@@ -765,6 +768,9 @@
 						}
 					}
 				}
+			}
+			&.disabled {
+				border-color: transparent;
 			}
 		}
 	}

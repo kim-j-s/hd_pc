@@ -536,7 +536,8 @@
 	// 단순 문구형 버튼 정의
 	&.short_cut {
 		display: inline-block;
-		padding-right: 16px;
+		// padding-right: 16px;
+		padding: 0 16px 0 0;
 		font-size: var(--font-size-button-medium);
 		line-height: 1.5;
 		background: url(../images/icon/arrowRight_ty4.svg) no-repeat right center / 16px auto;
