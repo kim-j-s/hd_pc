@@ -770,7 +770,7 @@
 				}
 			}
 			&.disabled {
-				border-color: transparent;
+				border-color: var(--color-border-primary-light);
 			}
 		}
 	}
