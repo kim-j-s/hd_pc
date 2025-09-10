@@ -4510,6 +4510,7 @@ strong {
 	width: 100%;
 	font-size: var(--font-size-body-xsmall);
 	text-align: left;
+	color: var(--color-text-subtle);
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -8137,7 +8138,7 @@ strong {
 	background-image: url(../images/icon/icon_gif.svg);
 }
 .hd_icon.bmpSvg {
-	background-image: url(../images/icon/icon_png.svg);
+	background-image: url(../images/icon/icon_bmp.svg);
 }
 .hd_icon.pm {
 	width: 20px;
