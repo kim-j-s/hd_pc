@@ -84,18 +84,10 @@
 	text-align: center;
 	border-radius: 0px 0px var(--radius-xxlarge) var(--radius-xlarge2);
 	background-color: var(--color-background-white);
-	visibility: hidden;
+	// visibility: hidden;
 	opacity: 0;
 	transform-origin: top center;
 	transform: scaleY(0);
-
-
-	// background-color: #ddd;
-	// border: 1px solid #000;
-
-
-
-
 	transition: 0.3s;
 	overflow: auto;
 	.nld_cont_inner {
@@ -165,7 +157,6 @@
 			padding: var(--gap-6) 0 0 var(--padding-10);
 		}
 	}
-
 
 	.nld_cont_body_list {
 		display: flex;
