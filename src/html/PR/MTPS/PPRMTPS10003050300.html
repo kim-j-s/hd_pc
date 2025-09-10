@@ -182,7 +182,7 @@
 <!-- e: 첨단안전장치 할인특약 Full 팝업 -->
 
 <!-- s: 첨단안전장치 정보 입력 bottom 팝업 -->
-{{#> popup/popup_bottom popup-id="pop_type02" popup-title="첨단안전장치 정보 입력"}}
+{{#> popup/popup_bottom popup-id="pop_type03" popup-title="첨단안전장치 정보 입력"}}
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
@@ -238,7 +238,7 @@
 <!-- e: 첨단안전장치 정보 입력 bottom 팝업 -->
  
 <!-- s: 차선이탈 경고장치 정보 입력 bottom 팝업 -->
-{{#> popup/popup_bottom popup-id="pop_type03" popup-active=true popup-title="차선이탈 경고장치 정보 입력"}}
+{{#> popup/popup_bottom popup-id="pop_type02" popup-active=true popup-title="차선이탈 경고장치 정보 입력"}}
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
@@ -251,7 +251,9 @@
 			<div class="row">
 				<div class="form_line grow">
 					<div class="label_tit">구입가격</div>
-					{{> cp/text type="tel" class="price" placeholder="숫자만" r-text="만원" inp-title="구입가격 입력"}}
+					<!-- s: 25-09-10 수정 -->
+					{{> cp/text type="tel" class="price" placeholder="0" r-text="만원" inp-title="구입가격 입력"}}
+					<!-- e: 25-09-10 수정 -->
 				</div>
 			</div>
 			<!-- e: 첨단안전장치만 있는 Case -->
