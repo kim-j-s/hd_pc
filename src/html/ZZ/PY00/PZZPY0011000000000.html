@@ -250,6 +250,15 @@
 					<!-- {{> cp/button type="1" size="1" b-text="보험료 결제하고 가입하기" }} -->
 				</div>
 			</div>
+
+			<!-- 이전 버튼이 없는 경우 -->
+			<div class="bottom_fix_wrap">
+				<div class="btn_area center">
+					{{> cp/button type="1" size="1" b-text="결제 정보를 입력 중이에요" disabled=true }}
+				</div>
+			</div>
+			<!-- 이전 버튼이 없는 경우 -->
+
 		</div>
 		<!-- s: 사이드 패널 -->
 		{{> cp/panel_건강 step5=true panel-title="고객 정보" }}
