@@ -3501,6 +3501,9 @@ body {
 .select_option_box + .input_text {
 	margin-top: var(--gap-5);
 }
+.select_option_box.ty2:not(.sm) .selectbox:required:valid {
+	color: var(--color-text-basic);
+}
 .select_option_box.ty2 .selectbox {
 	width: auto;
 	padding: 0 28px 0 0;

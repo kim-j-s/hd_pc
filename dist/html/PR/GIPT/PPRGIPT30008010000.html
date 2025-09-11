@@ -60,14 +60,16 @@
 		</ul>
 
 		<!-- s: Bottom 팝업 -->
+		<!-- s: 25-09-11 수정 -->
 		<div class="popup_wrap popup_wrap_type3 active" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title">동물정보 등록</div>
+						<div class="popup_head_title">동물 정보 등록</div>
 					</div>
 
+					<!-- e: 25-09-11 수정 -->
 					<div class="popup_cont">
 						<div class="popup_content">
 							<!-- s: 25-04-22 수정-->
@@ -82,12 +84,19 @@
 										<!-- e: 25-05-15 수정 -->
 									</div>
 
-									<div class="input_text">
-										<div class="inp">
-											<input type="number" placeholder="15자리 숫자 입력" minlength="15" maxlength="15" title="동물번호 입력" />
-											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									<!-- s: 25-09-11 수정 -->
+									<div class="comp_wrap count_number length_check">
+										<div class="input_text count">
+											<div class="inp">
+												<input type="tel" placeholder="15자리 숫자 입력" minlength="15" maxlength="15" title="동물번호 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</div>
+										<div class="counter" aria-live="polite" aria-label="15개 중 0개 입력">
+											<div aria-hidden="true"><em class="c_input">0</em>/<span class="count_total">15</span></div>
 										</div>
 									</div>
+									<!-- e: 25-09-11 수정 -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit box">
@@ -146,7 +155,9 @@
 													<!-- s: 25-07-31 수정 -->
 													<span class="hd_btn hd_btn_ty_2 hd_btn_s_3">
 														<i class="hd_icon carmeraSvg"></i>
-														사진 등록
+														<!-- s: 25-09-11 수정 -->
+														사진 등록하기
+														<!-- e: 25-09-11 수정 -->
 													</span>
 													<!-- e: 25-07-31 수정 -->
 												</label>

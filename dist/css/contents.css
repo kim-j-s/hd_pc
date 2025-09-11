@@ -5007,6 +5007,9 @@ ul + .form_group_wrap {
 .cert_select_list .cert_select_item.company_cert > .text::before {
 	background-image: url(../images/common/cert/icon_cert_company_cert.svg);
 }
+.cert_select_list + .btn_area {
+	margin-top: var(--gap-8);
+}
 /* PIN 인증 */
 .pin_enter {
 	position: relative;
@@ -6106,7 +6109,7 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-label-small);
 	color: var(--color-text-subtle);
 }
-.info_gray.ty3 .point {
+.info_gray.ty3 .primary {
 	padding: 0 var(--padding-1);
 	font-size: var(--font-size-button-large);
 }
