@@ -53,6 +53,7 @@
 			<li><a href="#gnb">주메뉴바로가기</a></li>
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
+
 		<div id="wrap" class="wrap">
 			<div id="header" class="header_pc">
 				<div class="header_pc_inner">
@@ -115,7 +116,7 @@
 																	<a href="#"><span class="text">이륜차보험</span></a>
 																</li>
 																<li class="item">
-																	<a href="#"><span class="text">타임쉐어 자동차보험</span></a>
+																	<a href="javascript:void(0);" id="open_qr_timeshare" onclick="openHDPopup('','qr_timeshare');"><span class="text">타임쉐어 자동차보험</span></a>
 																</li>
 																<li class="item">
 																	<a href="#"><span class="text">영업용 자동차보험</span></a>
@@ -157,7 +158,7 @@
 																	<a href="#"><span class="text">운전자보험</span></a>
 																</li>
 																<li class="item">
-																	<a href="#"><span class="text">오토바이운전자보험</span></a>
+																	<a href="javascript:void(0);" id="open_qr_motorcycle" onclick="openHDPopup('','qr_motorcycle');"><span class="text">오토바이운전자보험</span></a>
 																</li>
 															</ul>
 														</div>
@@ -197,10 +198,10 @@
 															<strong class="nl_dept2_tit">어린이</strong>
 															<ul class="nl_dept2_list">
 																<li class="item">
-																	<a href="#"><span class="text">어린이보험(0~15세)</span></a>
+																	<a href="javascript:void(0);" id="open_qr_fetus" onclick="openHDPopup('','qr_fetus');"><span class="text">어린이보험(태아)</span></a>
 																</li>
 																<li class="item">
-																	<a href="#"><span class="text">어린이보험(태아)</span></a>
+																	<a href="javascript:void(0);" id="open_qr_child" onclick="openHDPopup('','qr_child');"><span class="text">어린이보험(0~15세)</span></a>
 																</li>
 																<li class="item">
 																	<a href="#"><span class="text">어린이치아보험</span></a>
@@ -235,7 +236,7 @@
 																	<a href="#"><span class="text">연금보험</span></a>
 																</li>
 																<li class="item">
-																	<a href="#"><span class="text">저축보험</span></a>
+																	<a href="javascript:void(0);" id="open_qr_saving" onclick="openHDPopup('','qr_saving');"><span class="text">저축보험</span></a>
 																</li>
 															</ul>
 														</div>
@@ -1367,7 +1368,7 @@
 																								<a href="#"><span class="text">이륜차보험</span></a>
 																							</li>
 																							<li class="item">
-																								<a href="#"><span class="text">타임쉐어 자동차보험</span></a>
+																								<a href="javascript:void(0);" id="open_qr_timeshare" onclick="openHDPopup('','qr_timeshare');"><span class="text">타임쉐어 자동차보험</span></a>
 																							</li>
 																							<li class="item">
 																								<a href="#"><span class="text">영업용 자동차보험</span></a>
@@ -1409,7 +1410,7 @@
 																								<a href="#"><span class="text">운전자보험</span></a>
 																							</li>
 																							<li class="item">
-																								<a href="#"><span class="text">오토바이운전자보험</span></a>
+																								<a href="javascript:void(0);" id="open_qr_motorcycle" onclick="openHDPopup('','qr_motorcycle');"><span class="text">오토바이운전자보험</span></a>
 																							</li>
 																						</ul>
 																					</div>
@@ -1449,10 +1450,10 @@
 																						<strong class="nl_dept2_tit">어린이</strong>
 																						<ul class="nl_dept2_list">
 																							<li class="item">
-																								<a href="#"><span class="text">어린이보험(0~15세)</span></a>
+																								<a href="javascript:void(0);" id="open_qr_fetus" onclick="openHDPopup('','qr_fetus');"><span class="text">어린이보험(태아)</span></a>
 																							</li>
 																							<li class="item">
-																								<a href="#"><span class="text">어린이보험(태아)</span></a>
+																								<a href="javascript:void(0);" id="open_qr_child" onclick="openHDPopup('','qr_child');"><span class="text">어린이보험(0~15세)</span></a>
 																							</li>
 																							<li class="item">
 																								<a href="#"><span class="text">어린이치아보험</span></a>
@@ -1487,7 +1488,7 @@
 																								<a href="#"><span class="text">연금보험</span></a>
 																							</li>
 																							<li class="item">
-																								<a href="#"><span class="text">저축보험</span></a>
+																								<a href="javascript:void(0);" id="open_qr_saving" onclick="openHDPopup('','qr_saving');"><span class="text">저축보험</span></a>
 																							</li>
 																						</ul>
 																					</div>
@@ -2268,20 +2269,24 @@
 								</ul>
 							</div>
 							<!-- s: 꼭 알아두세요 -->
-							<div class="acd_item acd_item_ty4">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>이용안내</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<ul class="list_depth">
-											<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
-											<li>신용카드사의 정책에 따라 최소 결제금액에 제한이 있을 수 있습니다.</li>
-											<li>최근 카드정보 불러오기는 이전 계약체결동의 내역에 따라 최근 결제이력을 자동으로 불러오는 기능입니다.</li>
-										</ul>
+							<!-- s: 25-09-10 수정 -->
+							<div class="bottom_fix_notice">
+								<div class="acd_item">
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner" style="display: block">
+											<ul class="list_depth">
+												<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
+												<li>신용카드사의 정책에 따라 최소 결제금액에 제한이 있을 수 있습니다.</li>
+												<li>이전 카드정보 불러오기는 이전 계약체결동의 내역에 따라 최근 결제이력을 자동으로 불러오는 기능입니다.</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- e: 25-09-10 수정 -->
 							<!-- e: 꼭 알아두세요 -->
 						</div>
 
@@ -2440,9 +2445,11 @@
 							<div class="btn_area end">
 								<!-- s: 25-08-14 수정 -->
 								<!-- s: 25-08-21 UXW -->
+								<!-- s: 25-09-10 수정 -->
 								<a href="javascript:void(0)" class="btn_link short_cut" role="button" onclick="openHDPopup(this,'pop_type07');">
-									<span class="text">이전 결제 정보 불러오기</span>
+									<span class="text">이전 계좌 정보 불러오기</span>
 								</a>
+								<!-- e: 25-09-10 수정 -->
 								<!-- e: 25-08-21 UXW -->
 								<!-- e: 25-08-14 수정 -->
 							</div>
@@ -2472,24 +2479,30 @@
 										<li><strong class="point">김*대(계약자)님의 본인 계좌만 이용 가능합니다.</strong></li>
 										<!-- e: 25-08-14 UXW -->
 										<!-- s: 25-08-21 UXW -->
-										<li>즉시 이체 가능 시간: 09:00~21:50</li>
+										<!-- s: 25-09-10 수정 -->
+										<li>즉시 이체 가능 시간: 00:30~23:50, 최소금액 2,000원 이상</li>
+										<!-- e: 25-09-10 수정 -->
 										<!-- e: 25-08-21 UXW -->
 									</ul>
 								</div>
 							</div>
 							<!-- s: 꼭 알아두세요 -->
-							<div class="acd_item acd_item_ty4">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>이용안내</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<ul class="list_depth">
-											<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
-										</ul>
+							<!-- s: 25-09-10 수정 -->
+							<div class="bottom_fix_notice">
+								<div class="acd_item">
+									<div class="acd_head active">
+										<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 알아두세요</span></button>
+									</div>
+									<div class="acd_cont">
+										<div class="inner" style="display: block">
+											<ul class="list_depth">
+												<li>보험계약변경 완료를 위해서는 계약자의 전자서명이 필요합니다.</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- e: 25-09-10 수정 -->
 							<!-- e: 꼭 알아두세요 -->
 						</div>
 					</div>
@@ -2569,9 +2582,11 @@
 								<span class="text">이전</span>
 							</button>
 							<!-- s: 25-08-21 UXW -->
+							<!-- s: 25-09-10 수정 -->
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1" disabled>
-								<span class="text">결제 정보를 입력 중이에요</span>
+								<span class="text">전자서명하고 결제하기</span>
 							</button>
+							<!-- e: 25-09-10 수정 -->
 							<!-- e: 25-08-21 UXW -->
 							<!-- <button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_1">
 		
@@ -2764,5 +2779,208 @@
 		<!-- e: 자동이체 약관 동의 -->
 
 		<!-- e: popup area -->
+
+		<!-- gnb 호출 qr 팝업 -->
+		<!-- 타임쉐어 자동차보험 -->
+		<div class="popup_wrap popup_wrap_type4" id="qr_timeshare" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('qr_timeshare');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">모바일 바로가기</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="link_qr_box">
+								<div class="link_qr_box_img">
+									<span class="qr_inner">
+										<img src="../../../../images/common/qr_timeshare.png" alt="타임쉐어 자동차보험 바로가기 QR코드" />
+									</span>
+								</div>
+								<h3 class="link_qr_box_title">타임쉐어 자동차보험</h3>
+								<p class="link_qr_box_desc">
+									보험료 계산 및 가입은<br />
+									현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_timeshare', '#open_qr_timeshare');">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare', '#open_qr_timeshare');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- 타임쉐어 자동차보험 -->
+
+		<!-- 오토바이운전자보험 -->
+		<div class="popup_wrap popup_wrap_type4" id="qr_motorcycle" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('qr_motorcycle');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">모바일 바로가기</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="link_qr_box">
+								<div class="link_qr_box_img">
+									<span class="qr_inner">
+										<img src="../../../../images/common/qr_motorcycle.png" alt="타임쉐어 자동차보험 바로가기 QR코드" />
+									</span>
+								</div>
+								<h3 class="link_qr_box_title">오토바이운전자보험</h3>
+								<p class="link_qr_box_desc">
+									보험료 계산 및 가입은<br />
+									현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_motorcycle', '#open_qr_motorcycle');">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle', '#open_qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- 오토바이운전자보험 -->
+
+		<!-- 어린이보험(태아) -->
+		<div class="popup_wrap popup_wrap_type4" id="qr_fetus" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('qr_fetus');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">모바일 바로가기</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="link_qr_box">
+								<div class="link_qr_box_img">
+									<span class="qr_inner">
+										<img src="../../../../images/common/qr_fetus.png" alt="타임쉐어 자동차보험 바로가기 QR코드" />
+									</span>
+								</div>
+								<h3 class="link_qr_box_title">어린이보험(태아)</h3>
+								<p class="link_qr_box_desc">
+									보험료 계산 및 가입은<br />
+									현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_fetus', '#open_qr_fetus');">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus', '#open_qr_fetus');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- 어린이보험(태아) -->
+
+		<!-- 어린이보험(0~15세) -->
+		<div class="popup_wrap popup_wrap_type4" id="qr_child" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('qr_child');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">모바일 바로가기</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="link_qr_box">
+								<div class="link_qr_box_img">
+									<span class="qr_inner">
+										<img src="../../../../images/common/qr_child.png" alt="타임쉐어 자동차보험 바로가기 QR코드" />
+									</span>
+								</div>
+								<h3 class="link_qr_box_title">어린이보험(0~15세)</h3>
+								<p class="link_qr_box_desc">
+									보험료 계산 및 가입은<br />
+									현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_child', '#open_qr_child');">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child', '#open_qr_child');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- 어린이보험(0~15세) -->
+
+		<!-- 저축보험 -->
+		<div class="popup_wrap popup_wrap_type4" id="qr_saving" role="dialog" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('qr_saving');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">모바일 바로가기</div>
+					</div>
+					<div class="popup_cont">
+						<div class="popup_content">
+							<div class="link_qr_box">
+								<div class="link_qr_box_img">
+									<span class="qr_inner">
+										<img src="../../../../images/common/qr_saving.png" alt="타임쉐어 자동차보험 바로가기 QR코드" />
+									</span>
+								</div>
+								<h3 class="link_qr_box_title">저축보험</h3>
+								<p class="link_qr_box_desc">
+									보험료 계산 및 가입은<br />
+									현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="closeHDPopup('qr_saving', '#open_qr_saving');">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving', '#open_qr_saving');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 25-08-07 수정 -->
+					<!-- e: 25-08-07 수정 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- 저축보험 -->
+
+		<!-- gnb 호출 qr 팝업 -->
 	</body>
 </html>

@@ -1,4 +1,4 @@
-{{#> layout/default page-title="보험료 결제 | 자동차보험"}}
+{{#> layout/default gnbis=true page-title="보험료 결제 | 자동차보험"}}
 <div id="wrap" class="wrap">
 	{{> layout/header_pc bc=true }}
     
@@ -110,7 +110,9 @@
 			</div>
 			<!-- s: 꼭 알아두세요 카드만 노출 -->
 			{{#> cp/notice dp-active=true }}
-				{{> pay/card_info }}
+				<!-- s: 25-09-11 수정 -->
+				{{> pay/card_info corporate=true time=true }}
+				<!-- e: 25-09-11 수정 -->
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 카드만 노출 -->
 		</div>

@@ -252,9 +252,9 @@
 		<!-- e: 첨단안전장치 할인특약 Full 팝업 -->
 
 		<!-- s: 첨단안전장치 정보 입력 bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="true">
+		<div class="popup_wrap popup_wrap_type3" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="true">
 			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
 						<div class="popup_head_title">첨단안전장치 정보 입력</div>
@@ -288,13 +288,15 @@
 									<div class="form_line grow">
 										<div class="label_tit">구입가격</div>
 										<!-- s: 25-08-26 UXW -->
+										<!-- s: 25-09-09 수정 -->
 										<div class="input_text price">
 											<div class="inp">
-												<input type="tel" placeholder="숫자만 입력" title="구입가격 입력" />
+												<input type="tel" placeholder="0" title="구입가격 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 											<div class="int_txt right">만원</div>
 										</div>
+										<!-- e: 25-09-09 수정 -->
 										<!-- e: 25-08-26 UXW -->
 									</div>
 								</div>
@@ -347,16 +349,16 @@
 					</button> -->
 						</div>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
 		<!-- e: 첨단안전장치 정보 입력 bottom 팝업 -->
 
 		<!-- s: 차선이탈 경고장치 정보 입력 bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type03" role="dialog" aria-modal="true" aria-hidden="false">
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_type02" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type03');"></div>
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type02');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
 						<div class="popup_head_title">차선이탈 경고장치 정보 입력</div>
@@ -373,22 +375,26 @@
 								<div class="row">
 									<div class="form_line grow">
 										<div class="label_tit">구입가격</div>
+										<!-- s: 25-09-10 수정 -->
 										<div class="input_text price">
 											<div class="inp">
-												<input type="tel" placeholder="숫자만" title="구입가격 입력" />
+												<input type="tel" placeholder="0" title="구입가격 입력" />
 												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 											</div>
 											<div class="int_txt right">만원</div>
 										</div>
+										<!-- e: 25-09-10 수정 -->
 									</div>
 								</div>
 								<!-- e: 첨단안전장치만 있는 Case -->
 								<div class="total_price_display_ty1">
 									<p class="price_label">총 차량가액</p>
 									<p class="price_val">
-										<strong>
-											<span class="primary">2,179만원</span>
+										<!-- s: 25-09-10 수정 -->
+										<strong class="primary_bold">
+											<span>2,179만원</span>
 										</strong>
+										<!-- e: 25-09-10 수정 -->
 									</p>
 								</div>
 								<!-- <div class="form_line"><div class="input_text price big">
@@ -430,7 +436,7 @@
 					</button> -->
 						</div>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type03');"><span class="blind">팝업 닫기</span></button>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type02');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>

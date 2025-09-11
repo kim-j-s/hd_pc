@@ -1,4 +1,4 @@
-{{#> layout/default page-title="원리금영수증 | 마이페이지"}}
+{{#> layout/default gnbis=true page-title="원리금영수증 | 마이페이지"}}
 	<div id="wrap" class="wrap">
 		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
@@ -36,11 +36,13 @@
 				<div class="card_item_wrap">
 					<div class="card_item">
 						<div class="item_inner">
-              <div class="inp_checkbox">
-                  <input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont">
-                  <label for="card_chk1" class="chk_label"></label>
-                  <i></i>
-              </div>
+              <!-- s: 25-09-10 삭제 -->
+              <!-- <div class="inp_checkbox">
+                <input type="checkbox" id="card_chk1" name="name1" aria-labelledby="card_chk1_cont">
+                <label for="card_chk1" class="chk_label"></label>
+                <i></i>
+              </div> -->
+              <!-- e: 25-09-10 삭제 -->
 							<div class="inner_cont">
                 <div class="item_top" id="card_chk1_cont">
                   <span class="badge_wrap">
@@ -73,11 +75,13 @@
 					</div>
 					<div class="card_item">
 						<div class="item_inner">
-              <div class="inp_checkbox">
+              <!-- s: 25-09-10 삭제 -->
+              <!-- <div class="inp_checkbox">
                 <input type="checkbox" id="card_chk2" name="name1" aria-labelledby="card_chk2_cont">
                 <label for="card_chk2" class="chk_label"></label>
                 <i></i>
-              </div>
+              </div> -->
+              <!-- e: 25-09-10 삭제 -->
 							<div class="inner_cont">
                 <div class="item_top" id="card_chk2_cont">
                   <span class="badge_wrap">
@@ -122,10 +126,12 @@
 
         <div class="bottom_fix_wrap">
           <div class="btn_area center">
+            <!-- s: 25-09-10 수정 -->
             <!-- 비활성화 -->
-            {{> cp/button type="1" size="1" b-text="내역을 선택 중이에요" disabled=true }}
+            <!-- 삭제 {{> cp/button type="1" size="1" b-text="내역을 선택 중이에요" disabled=true }} -->
             <!-- 내역 선택 시 활성화 -->
-            <!-- {{> cp/button type="1" size="1" b-text="발급방법을 선택할게요" }} -->
+            {{> cp/button type="1" size="1" b-text="발급방법을 선택할게요" }}
+            <!-- e: 25-09-10 수정 -->
 
             <!-- s: 조회 내역이 없는 경우 -->
             <!-- {{> cp/button type="1" size="1" b-text="홈으로"  }} -->

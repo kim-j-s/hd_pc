@@ -1,4 +1,4 @@
-{{#> layout/default no-sp=true page-title="로그인"}}
+{{#> layout/default gnbis=true no-sp=true page-title="로그인"}}
 	<div id="wrap" class="wrap">
 		{{> layout/header_pc bc=true }}
 		<div id="container" class="container">
@@ -43,6 +43,12 @@
 						
 						</button>
 					</li>
+					<!-- s: 25-09-11 수정 -->
+					<li>
+						<button type="button" class="cert_select_item phone">
+							<span class="text">휴대폰인증</span>
+						</button>
+					</li>
 					<li>
 						<button type="button" class="cert_select_item kakao">
 							<span class="text">카카오인증</span>
@@ -54,21 +60,23 @@
 						</button>
 					</li>
 					<li>
-						<button type="button" class="cert_select_item common_cert">
-							<span class="text">공동인증</span>
-						</button>
-					</li>
-					<li>
 						<button type="button" class="cert_select_item fin_cert">
 							<span class="text">금융인증</span>
 						</button>
 					</li>
 					<li>
-						<button type="button" class="cert_select_item phone">
-							<span class="text">휴대폰인증</span>
+						<button type="button" class="cert_select_item common_cert">
+							<span class="text">공동인증</span>
 						</button>
 					</li>
+					<!-- e: 25-09-11 수정 -->
 				</ul>
+
+				<!-- s: 25-09-11 수정 -->
+				<div class="btn_area basic">
+					{{> cp/linkButton bl_class="short_cut" bl_text="인터넷회원 로그인" }}
+				</div>
+				<!-- e: 25-09-11 수정 -->
 
 				<div class="banner_box">
 					<a href="#">

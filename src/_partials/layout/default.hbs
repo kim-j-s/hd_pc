@@ -5,13 +5,20 @@
 	{{!-- <script type="text/javascript" src="../../../js/common_pc.js"></script> --}}
 	{{!-- <script type="text/javascript" src="../../../js/popup_pc.js"></script> --}}
 	</head>
-  <body {{#if bd-class}} class="{{bd-class}}"{{/if}}>
+  <body{{#if bd-class}} class="{{bd-class}}"{{/if}}>
 		{{#unless no-skip}}
 		<ul id="skipNavi" class="skipNavi">
 			{{#unless no-gnb}}<li><a href="#gnb">주메뉴바로가기</a></li>{{/unless}}
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 		{{/unless}}
+		
 		{{> @partial-block }}
+
+		{{#if gnbis}}
+		<!-- gnb 호출 qr 팝업 -->
+		{{> popup/qrpopup}}
+		<!-- gnb 호출 qr 팝업 -->
+		{{/if}}
   </body>
 </html>

@@ -82,10 +82,10 @@
 			{{#if petmode}}
 			<div class="change_mode">
 				<div class="item">
-					<button type="button" class="cm_btn cm_btn_dog active"><span class="text">강아지<span class="sr_only">정보입력으로 전환</span></span></button>
+					<button type="button" class="cm_btn cm_btn_dog{{#if petmode-dog}} active{{/if}}"><span class="text">강아지<span class="sr_only">정보입력으로 전환</span></span></button>
 				</div>
 				<div class="item">
-					<button type="button" class="cm_btn cm_btn_cat"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
+					<button type="button" class="cm_btn cm_btn_cat{{#if petmode-cat}} active{{/if}}"><span class="text">고양이<span class="sr_only">정보입력으로 전환</span></span></button>
 				</div>
 			</div>
 			{{/if}}
@@ -568,11 +568,10 @@
 				{{/if}}
 			</div>
 			{{/unless}}
-
-
 		</div>
-
 	</div>
+
+
 </div>
 {{#if bc}}
 {{> cp/breadcrumb bc1="dept1" bc2="dept2" bc3="dept3" bc4="dept4"}}

@@ -405,6 +405,10 @@
 							font-weight: 400;
 						}
 					}
+					.hd_badge {
+						font-weight: 400;
+						vertical-align: 2px;
+					}
 
 					&.tooltip_add {
 						display: flex;
@@ -766,7 +770,7 @@
 				}
 			}
 			&.disabled {
-				border-color: transparent;
+				border-color: var(--color-border-primary-light);
 			}
 		}
 	}
@@ -1040,6 +1044,33 @@
 					}
 					&.house_fire {
 						background-image: url(../images/icon/icon_house_fire.svg);
+					}
+					&.business {
+						background-image: url(../images/icon/icon_business.svg);
+					}
+					&.bicycle {
+						background-image: url(../images/icon/icon_bicycle.svg);
+					}
+					&.timeshare {
+						background-image: url(../images/icon/icon_timeshare.svg);
+					}
+					&.helmet {
+						background-image: url(../images/icon/icon_helmet.svg);
+					}
+					&.fetus {
+						background-image: url(../images/icon/icon_fetus.svg);
+					}
+					&.tooth {
+						background-image: url(../images/icon/icon_tooth.svg);
+					}
+					&.cancer {
+						background-image: url(../images/icon/icon_cancer.svg);
+					}
+					&.health_losss {
+						background-image: url(../images/icon/icon_health_losss.svg);
+					}
+					&.pension {
+						background-image: url(../images/icon/icon_pension.svg);
 					}
 					> button {
 						width: 100%;
