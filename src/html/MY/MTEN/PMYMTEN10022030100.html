@@ -110,7 +110,9 @@
 			</div>
 			<!-- s: 꼭 알아두세요 카드만 노출 -->
 			{{#> cp/notice dp-active=true }}
-				{{> pay/card_info }}
+				<!-- s: 25-09-11 수정 -->
+				{{> pay/card_info corporate=true time=true }}
+				<!-- e: 25-09-11 수정 -->
 			{{/ cp/notice }}
 			<!-- e: 꼭 알아두세요 카드만 노출 -->
 		</div>

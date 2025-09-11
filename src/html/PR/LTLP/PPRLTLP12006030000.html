@@ -14,7 +14,14 @@
 					{{> cp/linkButton bl_class="new_open sm" bl_text="우리 아이 동물번호 찾기" blank="true" href="http://www.animal.go.kr" }}
 					<!-- e: 25-05-15 수정 -->
 				</div>
-				{{> cp/text type="number" placeholder="15자리 숫자 입력" minlength="15" maxlength="15" inp-title="동물번호 입력" }}
+				<!-- s: 25-09-11 수정 -->
+				<div class="comp_wrap count_number length_check">
+					{{> cp/text class="count" type="tel" placeholder="15자리 숫자 입력" minlength="15" maxlength="15" inp-title="동물번호 입력" }}
+					<div class="counter" aria-live="polite" aria-label="15개 중 0개 입력">
+						<div aria-hidden="true"><em class="c_input">0</em>/<span class="count_total">15</span></div>
+					</div>
+				</div>
+				<!-- e: 25-09-11 수정 -->
 			</div>
 			<div class="form_line">
 				<div class="label_tit box">
@@ -84,7 +91,9 @@
 </div>
 <div class="popup_bottom">
 	<div class="btn_area">
-		{{> cp/button type="1" size="2" b-text="입력 중이에요" disabled=true }}
+		<!-- s: 25-09-11 수정 -->
+		{{> cp/button type="1" size="2" b-text="정보를 입력 중이에요" disabled=true }}
+		<!-- e: 25-09-11 수정 -->
 		<!-- {{> cp/button type="1" size="2" b-text="모두 입력했어요" }} -->
 	</div>
 </div>

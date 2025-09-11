@@ -641,6 +641,11 @@
 	}
 
 	&.ty2 {
+		&:not(.sm) {
+			.selectbox:required:valid {
+				color: var(--color-text-basic);
+			}
+		}
 		.selectbox {
 			width: auto;
 			padding: 0 28px 0 0;
