@@ -2128,12 +2128,11 @@
 								</div>
 							</div>
 							<div class="btn_area">
-								<a href="#anchor_move" class="btn_link short_cut anchor_btn" role="button">
+								<!-- s: 25-09-11 수정 -->
+								<a href="#anchor_move" class="btn_link short_cut">
 									<span class="text">가입후기 100개 이상</span>
 								</a>
-								<!-- <a href="#anchor_move" class="btn_link short_cut anchor_btn">
-									<span class="text">가입후기 100개 이상</span>
-								</a> -->
+								<!-- e: 25-09-11 수정 -->
 							</div>
 						</div>
 						<!-- e: review -->
@@ -2374,7 +2373,9 @@
 					<!-- e: 자주하는 질문 -->
 
 					<!-- s: 가입후기 -->
-					<div class="recommend_area" id="anchor_move">
+					<!-- s: 25-09-11 수정 -->
+					<div class="recommend_area smt_ty1" id="anchor_move">
+						<!-- e: 25-09-11 수정 -->
 						<div class="in_sec">
 							<div class="cont_head">
 								<h5 class="title_h5"><strong class="point">가입후기</strong></h5>
@@ -2794,7 +2795,9 @@
 			$(function () {
 				toggleView();
 				prdFixed();
-				anchorMove();
+				/* s: 25-09-11 수정 */
+				// anchorMove();
+				/* e: 25-09-11 수정 */
 			});
 
 			function toggleView() {
@@ -2829,24 +2832,25 @@
 				});
 			}
 
-			function anchorMove() {
-				$(".anchor_btn").on("click", function (e) {
-					e.preventDefault();
-					const targetId = $(this).attr("href");
-					const target = $(targetId);
-
-					if (target.length) {
-						const targetOffset = target.offset().top - 100;
-
-						$("html, body").stop().animate(
-							{
-								scrollTop: targetOffset,
-							},
-							500,
-						);
-					}
-				});
-			}
+			/* s: 25-09-11 수정 */
+			// function anchorMove() {
+			//   $(".anchor_btn").on("click", function () {
+			//     const targetId = $(this).attr("href");
+			//     const target = $(targetId);
+			//
+			//     if (target.length) {
+			//       const targetOffset = target.offset().top - 100;
+			//
+			//       $("html, body").stop().animate(
+			// 				{
+			// 					scrollTop: targetOffset
+			//         },
+			//         500
+			//       );
+			//     }
+			//   });
+			// }
+			/* e: 25-09-11 수정 */
 		</script>
 
 		<!-- gnb 호출 qr 팝업 -->

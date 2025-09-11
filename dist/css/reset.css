@@ -963,6 +963,10 @@ button {
 	text-align: initial;
 	background-color: transparent;
 }
+label,
+select {
+	cursor: pointer;
+}
 a:focus,
 button:focus {
 	background-color: inherit;
