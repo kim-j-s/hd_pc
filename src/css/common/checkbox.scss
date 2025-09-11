@@ -350,6 +350,16 @@
 					}
 				}
 			}
+
+			&:checked {
+				& + .chk_label {
+					&.chk_label_ty4 {
+						.label_cont {
+							color: var(--color-text-basic);
+						}
+					}
+				}
+			}
 		}
 
 
