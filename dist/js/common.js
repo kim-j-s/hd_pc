@@ -533,6 +533,7 @@
 		const $target = $contents.eq(idx);
 
 		let expHeight = 0;
+		let sHeight = 0;
 
 		let tab1Scroll = null;
 
@@ -552,6 +553,21 @@
 				? exceptionHeight - titleWrapHeight * 2
 				: exceptionHeight + titleWrapHeight + 2;
 		}
+
+		// if($wrap.find('.sii_wrap').length){
+		// 	const $sii = $wrap.find('.sii_wrap').children('.position_event_tab');
+		// 	let siiHeight = 0;
+			
+		// 	if($('.position_event_content').hasClass('summary_ii')){
+		// 		// siiHeight = parseFloat($sii.css('padding-bottom'));
+		// 		siiHeight = parseFloat($scrollArea.css('margin-top'));
+		// 	}else {
+		// 		const silSickty = parseFloat($wrap.find('.position_event_tab').css('top'))
+		// 		const mTop = parseFloat($contents.css('margin-bottom'));
+		// 		siiHeight = parseFloat($sii.css('padding-bottom')) + mTop + 16 - silSickty;
+		// 	}
+		// 	sHeight = siiHeight;
+		// }
 		
 
 		if ($target.length) {
@@ -562,7 +578,7 @@
 
 			const containerTop = $scrollArea.offset().top;
 			const targetTop = $target.offset().top;
-			const scrollY = targetTop - containerTop + expHeight;
+			const scrollY = targetTop - containerTop + expHeight + sHeight;
 		
 
 			if ($(this).closest('.amc_nav').length && scrollY == 0 ) {
@@ -579,10 +595,12 @@
 				// 포커스 가능한 첫 요소 탐색
 				const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
 
-				if ($focusable.length) {
-					$focusable.focus();
-				} else {
-					$target.attr('tabindex', '-1').focus();
+				if (!$wrap.hasClass('prd_car')) {
+					if ($focusable.length) {
+						$focusable.focus();
+					} else {
+						$target.attr('tabindex', '-1').focus();
+					}
 				}
 			});
 		}

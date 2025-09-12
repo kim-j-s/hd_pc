@@ -9369,6 +9369,7 @@ strong {
 .form_group_wrap > * ~ .row {
 	margin-top: var(--gap-8);
 }
+.form_group_wrap + .form_card_wrap,
 .form_group_wrap + .acd_item,
 .form_group_wrap + .info_gray,
 .form_group_wrap + .bann_wrap,
@@ -9378,7 +9379,6 @@ strong {
 	margin-top: var(--gap-8);
 }
 .form_group_wrap + .text_sub,
-.form_group_wrap + .form_card_wrap,
 .form_group_wrap + .form_card_case {
 	margin-top: var(--gap-7);
 }
@@ -13947,6 +13947,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .title_h3 + .call_box,
 .title_h3 + .info_gray {
 	margin-top: var(--gap-8);
+}
+.title_h3 + .table_wrap {
+	margin-top: var(--gap-5);
 }
 .title_h3 .light {
 	font-weight: 400;

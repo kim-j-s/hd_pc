@@ -2854,13 +2854,14 @@
 	padding-bottom: 60px;
 }
 .sii_wrap .tag_item_wrap {
-	padding-bottom: 16px;
 	background-color: #fff;
 }
 .sii_wrap .tag_item_wrap.sticky {
 	position: sticky;
 	top: 0;
 	z-index: 1;
+	padding-bottom: 16px;
+	margin-bottom: 0;
 }
 .sii_wrap .tag_item_wrap.sticky::before {
 	content: "";
