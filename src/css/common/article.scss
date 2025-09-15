@@ -20,6 +20,9 @@
 			.title_info .main_title {
 				font-size: var(--font-size-heading-small);//스타일우선 순위 문제로 중복선언함
 			}
+			.item_inner {
+				cursor: default;
+			}
 		}
 
 		.title_info {
