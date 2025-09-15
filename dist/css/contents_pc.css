@@ -4004,9 +4004,6 @@ body {
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label {
 	width: 410px;
 }
-.guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label .item_top {
-	width: 228px;
-}
 .guarantee_select_wrap:has(input:checked) .select_item .item_radio input:checked + label .item_top .top_title br {
 	display: none;
 }
@@ -4738,20 +4735,6 @@ body {
 .link_qr_box {
 	text-align: center;
 }
-.link_qr_box .link_qr_box_img {
-	font-size: 0;
-}
-.link_qr_box .link_qr_box_img .qr_inner {
-	display: inline-block;
-	padding: calc(var(--padding-3) - 1px);
-	border-radius: var(--radius-medium3);
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-	background: var(--color-surface-white-subtle);
-}
-.link_qr_box .link_qr_box_img .qr_inner img {
-	display: block;
-	width: 80px;
-}
 .link_qr_box .link_qr_box_title {
 	padding-top: var(--gap-5);
 	font-weight: 700;
@@ -4762,6 +4745,20 @@ body {
 	padding-top: var(--gap-3);
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
+}
+.link_qr_box_img {
+	font-size: 0;
+}
+.link_qr_box_img .qr_inner {
+	display: inline-block;
+	padding: calc(var(--padding-3) - 1px);
+	border-radius: var(--radius-medium3);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+}
+.link_qr_box_img .qr_inner img {
+	display: block;
+	width: 80px;
 }
 /* qr 팝업 */
 /* PC용 component  */
