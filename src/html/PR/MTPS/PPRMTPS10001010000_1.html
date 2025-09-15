@@ -1,0 +1,85 @@
+{{#> layout/default no-gnb=true page-title="자동차 기본정보 | 상품"}}
+<div id="wrap" class="wrap">
+	{{> layout/header_pc h-prd="자동차보험" h-title="자동차보험" }}
+
+	<div id="container" class="container">
+		<div class="content content_st1">
+			<div class="prd_bi_wrap case1">
+				<div class="prd_bi_wrap_l">
+					<!-- s: 등록된 배너 노출 Case -->
+					<!-- 링크 있을 시 -->
+					<div class="prd_bann_box">
+						<a href="#" title="페이지 이동">
+							<img src="../../../images/temp/img_pc_summary.png" alt="관리자 등록 배너 이미지 설명 문구">
+						</a>
+					</div>
+					<!-- 링크 없을 시 -->
+					<!-- <div class="prd_bann_box">
+						<img src="../../../images/temp/img_pc_summary.png" alt="관리자 등록 배너 이미지 설명 문구">
+					</div> -->
+					<!-- e: 등록된 배너 노출 Case -->
+				</div>
+
+				<div class="prd_bi_wrap_r">
+					<div class="bi_wrap">
+						<div class="bi_wrap_header">
+							<h3 class="bi_wrap_tit">자동차 소유(예정)자 정보</h3>
+						</div>
+
+						<div class="bi_wrap_content">
+							<div class="form_group_wrap full">
+								<div class="form_line">
+									<div class="label_tit">이름</div>
+									{{> cp/text class="big" placeholder="이름 입력" inp-title="자동차 소유(예정)자 입력" }}
+								</div>
+								<div class="form_line">
+									<div class="label_tit">주민등록번호</div>
+									<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
+									<div class="comp_wrap birth active">
+										{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞 6자리 입력" }}
+										<span class="dash">-</span>
+										{{> cp/keypad7 kp-class="big" case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">휴대폰번호</div>
+									{{> cp/text class="phone big" type="tel" placeholder="- 없이 입력" maxlength="8" l-text="010" inp-title="휴대폰번호 입력" }}
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 버튼 영역 -->
+						<div class="bottom_fix_wrap">
+							<div class="btn_area">
+								{{> cp/button type="1" size="1" b-text="설계 정보를 입력 중이에요" disabled=true }}
+								<!-- {{> cp/button type="1" size="1" b-text="내 보험료를 알아볼게요" }} -->
+							</div>
+						</div>
+						<!-- e: 하단 버튼 영역 -->
+					</div>
+					<!-- s: 꼭 알아두세요 -->
+					{{#> cp/notice dp-active=true }}
+					<ul class="list_ty1">
+						<li>고객님의 자동차보험료를 계산하기 위해 개인(신용)정보 동의 및 본인인증이 필요합니다.</li>
+						<li>가입 가능한 연령은 만 19세 이상입니다.</li>
+					</ul>
+					{{/ cp/notice }}
+					<!-- e: 꼭 알아두세요 -->
+				</div>
+			</div>
+		</div>
+		
+		<!-- s: aside 영역 -->
+		{{> layout/aside_pc }}
+		<!-- e: aside 영역 -->
+	</div>
+
+	<!-- footer -->
+	{{> layout/footer no-footer=true }}
+	<!-- footer -->
+</div>
+
+<!-- s: popup area -->
+<!-- e: popup area -->
+
+{{/ layout/default }}

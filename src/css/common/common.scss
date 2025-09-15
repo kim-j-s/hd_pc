@@ -1294,3 +1294,15 @@ strong {
 .and {
 	margin-top: var(--gap-5) !important;
 }
+
+// 관리자_다이나믹 랜딩 배너
+.prd_bann_box {
+	> a {
+		display: block;
+	}
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
