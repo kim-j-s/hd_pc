@@ -2090,20 +2090,6 @@
 /* qr 팝업 */
 .link_qr_box {
 	text-align: center;
-	.link_qr_box_img {
-		font-size: 0;
-		.qr_inner {
-			display: inline-block;
-			padding: calc(var(--padding-3) - 1px);
-			border-radius: var(--radius-medium3);
-			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-			background: var(--color-surface-white-subtle);
-			img {
-				display: block;
-				width: 80px;
-			}
-		}
-	}
 
 	.link_qr_box_title {
 		padding-top: var(--gap-5);
@@ -2117,6 +2103,20 @@
 		font-size: var(--font-size-body-medium);
 		color: var(--color-text-basic);
 	}
+}
 
+.link_qr_box_img {
+	font-size: 0;
+	.qr_inner {
+		display: inline-block;
+		padding: calc(var(--padding-3) - 1px);
+		border-radius: var(--radius-medium3);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		background: var(--color-surface-white-subtle);
+		img {
+			display: block;
+			width: 80px;
+		}
+	}
 }
 /* qr 팝업 */
