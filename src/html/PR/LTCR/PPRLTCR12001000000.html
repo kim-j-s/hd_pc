@@ -63,14 +63,34 @@
 					</div>
 				</div>
 				<!-- e: intro_info -->
+
+				<!-- s: 25-09-15 수정 -->
+				<!-- s: qr코드 영역 -->
+				<div class="info_gray bg_primary space_between">
+					<div>
+						<h3 class="title_h3">굿앤굿어린이종합보험Q(태아) 지금 모바일에서 가입하세요!</h3>
+						<p class="info_text">
+							현대해상 다이렉트 모바일(앱)에서만 보험료 계산 및 가입가능합니다.
+						</p>
+					</div>
+					<div class="link_qr_box">
+						<div class="link_qr_box_img">
+							<span class="qr_inner">
+								<img src="../../../../images/common/qr_fetus.png" alt="굿앤굿어린이종합보험Q(태아) 바로가기 QR코드">
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- e: qr코드 영역 -->
 				
 				<!-- s: btn area -->
-				<div class="btn_area center">
+				<!-- 삭제 <div class="btn_area center">
 					<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
 						<span class="text">보험료 확인하기</span>
 					</a>
-				</div>
+				</div> -->
 				<!-- e: btn area -->
+				<!-- e: 25-09-15 수정 -->
 			</div>
 
 			<!-- s: event banner -->
@@ -463,7 +483,9 @@
 				<p class="tit">무배당 현대해상다이렉트 굿앤굿어린이종합보험Q(태아)</p>
 			</div>
 			<div class="btn_area">
-				<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+				<!-- s: 25-09-15 수정 -->
+				<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="openHDPopup('','pop_type01');">
+				<!-- e: 25-09-15 수정 -->
 					<span class="text">보험료 확인하기</span>
 				</a>
 			</div>
@@ -478,8 +500,33 @@
 </div>
 
 <!-- s: popup area -->
-
-
+<!-- s: 25-09-15 수정 -->
+{{#> popup/popup_full popup-id="pop_type01" popup-title="굿앤굿어린이종합보험Q(태아)"}}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<div class="link_qr_box">
+				<div class="link_qr_box_img">
+					<span class="qr_inner">
+						<img src="../../../../images/common/qr_fetus.png" alt="굿앤굿어린이종합보험Q(태아) 바로가기 QR코드">
+					</span>
+				</div>			 
+				<h3 class="link_qr_box_title">
+					굿앤굿어린이종합보험Q(태아)
+				</h3>
+				<p class="link_qr_box_desc">
+					보험료 계산 및 가입은<br>
+					현대해상 다이렉트 모바일(앱)에서만 가능합니다.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="popup_bottom">
+		<div class="btn_area">
+			{{> cp/button type="1" size="2" b-text="확인" }}
+		</div>
+	</div>
+{{/ popup/popup_full}}
+<!-- e: 25-09-15 수정 -->
 <!-- e: popup area -->
 
 
