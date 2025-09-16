@@ -4248,6 +4248,10 @@ strong {
 	-ms-flex-preferred-size: calc(50% - 4px);
 	flex-basis: calc(50% - 4px);
 }
+.btn_area.ty2.basic .hd_btn {
+	-ms-flex-preferred-size: auto;
+	flex-basis: auto;
+}
 .btn_area.ty3 .hd_btn {
 	-ms-flex-preferred-size: calc(33.3% - 10px);
 	flex-basis: calc(33.3% - 10px);
@@ -9821,6 +9825,9 @@ strong {
 .list_ty2 + .btn_area:has(button.hd_btn_s_6) {
 	margin-top: var(--gap-8);
 }
+.list_ty2 + .btn_area.ty2 {
+	margin-top: var(--gap-8);
+}
 .list_ty3 > li {
 	position: relative;
 	margin: 0;
@@ -9864,6 +9871,7 @@ strong {
 }
 .list_ty3 + .file_attach_box,
 .list_ty3 + .info_gray,
+.list_ty3 + .list_ty2,
 .list_ty3 + .btn_area {
 	margin-top: var(--gap-5);
 }
@@ -10628,6 +10636,9 @@ strong {
 .number_list .list_depth_ty2 > li ~ li {
 	margin-top: var(--gap-3);
 }
+.number_list + .list_ty3 {
+	margin-top: var(--gap-5);
+}
 .circle_list {
 	counter-reset: circle 0;
 }
@@ -11246,6 +11257,17 @@ ul li .table_wrap + .list_ty2 li + li,
 ol li .table_wrap + .list_ty2 li + li {
 	margin-top: var(--gap-3);
 }
+/* 유의사항 */
+.note_wrap .note_cont ~ .note_cont {
+	margin-top: var(--gap-11);
+}
+.note_wrap .title_h3 + .info_gray {
+	margin-top: var(--gap-6);
+}
+.note_wrap .list_ty3 > li > .list_ty2 {
+	margin-left: -8px;
+}
+/* 유의사항 */
 /* list_box */
 /* box_list(목록형) */
 .box_list_wrap .box_list li.box_list_item {

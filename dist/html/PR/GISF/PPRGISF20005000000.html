@@ -93,16 +93,66 @@
 					<div class="form_box">
 						<h3 class="title_h3">연락처 정보</h3>
 						<div class="form_group_wrap">
+							<!-- 25-09-16 수정 -->
+
+							<!-- 법인 -->
 							<div class="form_line">
-								<div class="label_tit">휴대폰번호</div>
-								<div class="input_text phone">
-									<div class="int_txt left">010</div>
+								<div class="label_tit">법인명</div>
+								<div class="input_text">
 									<div class="inp">
-										<input type="tel" placeholder="-없이 입력하세요" value="- 1234 - 5678" maxlength="8" readonly title="휴대폰번호" />
+										<input type="text" placeholder="법인명 입력" value="한국산업" readonly title="법인명 입력" />
 										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
 								</div>
 							</div>
+
+							<div class="form_line">
+								<div class="label_tit">사업자번호</div>
+								<div class="input_text">
+									<div class="inp">
+										<input type="text" placeholder="사업자번호 입력" value="123-45-67890" readonly title="사업자번호 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+							</div>
+							<!-- 법인 -->
+
+							<div class="form_line">
+								<div class="label_tit">연락처</div>
+								<div class="row">
+									<div class="form_line fix_w_case02">
+										<div class="select_option_box">
+											<select name="" id="" title="연락처 선택" class="selectbox" required>
+												<option value="" hidden disabled>선택</option>
+												<option value="" selected>휴대폰</option>
+												<option value="">집</option>
+											</select>
+										</div>
+									</div>
+									<!-- CASE2. 집 or 직장 선택 시 노출 -->
+									<!-- <div class="form_line fix_w_case02">
+		<div class="select_option_box">
+			<select name="" id="" title="국번 선택 선택" class="selectbox"  required>
+				<option value="" hidden disabled>선택</option>
+													<option value="" selected>02</option>
+													<option value="">031</option>
+													<option value="">032</option>
+													<option value="">053</option>
+			</select>
+		</div>							</div> -->
+									<!-- CASE2. 집 or 직장 선택 시 노출 -->
+									<div class="form_line grow">
+										<div class="input_text">
+											<div class="inp">
+												<input type="tel" placeholder="-없이 숫자만 입력" title="휴대폰번호 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 25-09-16 수정 -->
+
 							<div class="form_line">
 								<div class="label_tit">이메일</div>
 								<!-- s: 25-05-12 수정 -->
