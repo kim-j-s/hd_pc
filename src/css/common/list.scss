@@ -1800,3 +1800,30 @@ ol li .table_wrap {
 		}
 	}
 }
+
+
+/* 유의사항 */
+.note_wrap {
+	.note_cont {
+		~ .note_cont {
+			margin-top: var(--gap-11);
+		}
+	}
+
+
+	.title_h3 {
+		+ .info_gray {
+			margin-top: var(--gap-6);
+		}
+	}
+
+	.list_ty3 {
+		> li {
+			> .list_ty2 {
+				margin-left: -8px;
+			}
+		}
+	}
+
+}
+/* 유의사항 */
