@@ -19,10 +19,51 @@
 			<div class="form_box">
 				<h3 class="title_h3">연락처 정보</h3>
 				<div class="form_group_wrap">
+					<!-- 25-09-16 수정 -->
+
+					<!-- 법인 -->
 					<div class="form_line">
-						<div class="label_tit">휴대폰번호</div>
-						{{> cp/text class="phone" type="tel" placeholder="-없이 입력하세요" maxlength="8" l-text="010" value="- 1234 - 5678" inp-title="휴대폰번호" readonly=true }}
+						<div class="label_tit">법인명</div>
+						{{> cp/text placeholder="법인명 입력" inp-title="법인명 입력" value="한국산업" readonly=true}}
 					</div>
+
+					<div class="form_line">
+						<div class="label_tit">사업자번호</div>
+						{{> cp/text placeholder="사업자번호 입력" inp-title="사업자번호 입력" value="123-45-67890" readonly=true}}
+					</div>
+					<!-- 법인 -->
+
+
+					<div class="form_line">
+						<div class="label_tit">연락처</div>
+						<div class="row">
+							<div class="form_line fix_w_case02">
+									{{#> cp/selectbox_pc s-title="연락처 선택" }} 
+											<option value="" selected>휴대폰</option>
+											<option value="">집</option>
+									{{/ cp/selectbox_pc}}
+							</div>
+							<!-- CASE2. 집 or 직장 선택 시 노출 -->
+							<!-- <div class="form_line fix_w_case02">
+								{{#> cp/selectbox_pc s-title="국번 선택 선택" }} 
+									<option value="" selected>02</option>
+									<option value="">031</option>
+									<option value="">032</option>
+									<option value="">053</option>
+								{{/ cp/selectbox_pc}}
+							</div> -->
+							<!-- CASE2. 집 or 직장 선택 시 노출 -->
+							<div class="form_line grow">
+									{{> cp/text type="tel" placeholder="-없이 숫자만 입력" inp-title="휴대폰번호 입력" }}
+							</div>
+						</div>
+					</div>
+					<!-- 25-09-16 수정 -->
+
+
+
+
+
 					<div class="form_line">
 						<div class="label_tit">이메일</div>
 						<!-- s: 25-05-12 수정 -->
