@@ -750,41 +750,42 @@
 				}
 
 				// new_chk
-				// .mpc_title {
-				// 	display: flex;
-				// 	flex-direction: column;
+				.mpc_title {
+					display: flex;
+					flex-direction: column;
 				
-				// 	.badge_wrap {
-				// 		display: inline;
-				// 		vertical-align: middle;
-				// 		padding-left: var(--gap-3);
+					.badge_wrap {
+						display: inline;
+						vertical-align: middle;
+						padding-left: var(--gap-3);
 						
-				// 		.hd_badge {
-				// 			font-weight: 400;
-				// 		}
+						.hd_badge {
+							font-weight: 400;
+						}
 
-				// 		+ .title {
-				// 			margin-top: var(--gap-4);
-				// 		}
-				// 	}
+						+ .title {
+							margin-top: var(--gap-4);
+						}
+					}
 
-				// 	> .title {
-				// 		font-size: 0;
-				// 		.t_name {
-				// 			font-weight: 700;
-				// 			color: var(--color-text-bolder);
-				// 			font-size: var(--font-size-heading-small);
-				// 			line-height: 150%;
-				// 			vertical-align: middle;
-				// 		}
-				// 	}
-				// 	> .text {
-				// 		padding-top: var(--gap-2);
-				// 		color: var(--color-text-subtle);
-				// 		font-size: var(--font-size-body-medium);
-				// 	}
-				// }
+					> .title {
+						font-size: 0;
+						.t_name {
+							font-weight: 700;
+							color: var(--color-text-bolder);
+							font-size: var(--font-size-heading-small);
+							line-height: 150%;
+							vertical-align: middle;
+						}
+					}
+					> .text {
+						padding-top: var(--gap-2);
+						color: var(--color-text-subtle);
+						font-size: var(--font-size-body-medium);
+					}
+				}
 				// new_chk
+				
 				.fb_c {
 					// new_chk
 					padding-top: var(--gap-5);
