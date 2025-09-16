@@ -177,6 +177,7 @@
 
 	& + .file_attach_box,
 	& + .info_gray,
+	& + .list_ty2,
 	& + .btn_area {
 		margin-top: var(--gap-5);
 	}
@@ -1042,6 +1043,10 @@
 				margin-top: var(--gap-3);
 			}
 		}
+	}
+
+	& + .list_ty3 {
+		margin-top: var(--gap-5);
 	}
 }
 
