@@ -8,6 +8,124 @@
 			}
 		}
 
+		&.bann {
+			position: absolute;
+			top: 321px;
+			left: calc(50% - 220px);
+			z-index: 49;
+			// width: 1188px;
+			// margin-left: -594px;
+			width: auto;
+			height: auto;
+			padding: 0;
+			background: transparent;
+			box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+			border-radius: 10px;
+
+			.popup_container {
+				.popup_inner {
+					padding-bottom: 0;
+
+					.popup_bottom {
+						.btn_area {
+							&.between {
+								justify-content: space-between;
+		
+								.hd_btn {
+									flex: none;
+								}
+							}
+						}
+					}
+
+					.popup_cont {
+						padding: 0;
+					}
+				}
+			}
+		}
+		
+		// 관리자 등록 배너
+		.register_bann {
+			position: relative;
+			text-align: center;
+		
+			.swiper {
+				width: 100%;
+				border-radius: var(--radius-large2) var(--radius-large2) 0 0;
+		
+				.swiper-wrapper {
+					.swiper-slide {
+						img {
+							vertical-align: top;
+							width: 100%;
+							height: 100%;
+						}
+
+						> a {
+							display: block;
+						}
+					}
+				}
+			}
+		
+			.swiper_control {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 16px;
+				z-index: 10;
+				padding: 0 24px;
+		
+				.pop_pager {
+					position: relative;
+					width: auto;
+					left: auto;
+					top: auto;
+					bottom: auto;
+					padding: var(--padding-3);
+					display: flex;
+					gap: var(--gap-2);
+		
+					&.sp_ty1 {
+						.swiper-pagination-bullet {
+							margin: 0;
+						}
+					}
+				}
+		
+				.swiper_button {
+					position: absolute;
+					width: 24px;
+					height: 24px;
+					top: 50%;
+					transform: translateY(-50%);
+					background-color: transparent;
+					background-size: 16px;
+		
+					&.swiper_button_left {
+						left: 0;
+					}
+					&.swiper_button_right {
+						right: 0;
+					}
+				}
+		
+				.swiper-button-play-pause {
+					width: 24px;
+					height: 24px;
+					font-size: 0;
+					background: url(../images/icon/icon_stop.svg) no-repeat center / 16px;
+		
+					&.active {
+						background-image: url(../images/icon/icon_play.svg);
+					}
+				}
+			}
+		}
+
 		.popup_container {
 			align-items: center;
 			width: 440px;
