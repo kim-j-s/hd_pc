@@ -138,6 +138,12 @@
 				// width: calc(50% - 4px);
 			}
 		}
+
+		&.basic {
+			.hd_btn {
+				flex-basis: auto;
+			}
+		}
 	}
 
 	&.ty3 {
