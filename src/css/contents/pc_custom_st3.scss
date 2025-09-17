@@ -1765,18 +1765,6 @@
 	}
 }
 
-.img_box.ty2 {
-	width: 100%;
-	background: var(--color-surface-gray-subtler);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 50px 0;
-	border-radius: var(--radius-large2);
-
-	img { width: auto;}
-}
-
 .item_info {
 	&:has(.grid_list_ty1),
 	&.ty2 {
