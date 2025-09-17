@@ -393,7 +393,7 @@
 
 <!-- s: popup area -->
 <!-- s: Full 팝업 -->
-	{{#> popup/popup_full popup-id="ex_popup_full" popup-title="치과용어 알아보기" popup-active=true }}
+	{{#> popup/popup_full popup-id="ex_popup_full" popup-title="치과용어 알아보기" }}
 	<div class="popup_cont">
 		<div class="popup_content">
 			<ul class="space_list_ty4">
@@ -468,6 +468,7 @@
 		});
 	}
 	
+	/* s: 25-09-17 수정 */
 	function prdFixed() {
 		let lastScrollTop = 0;
 		$(window).on("scroll", function () {
@@ -477,15 +478,21 @@
 			const scrollBottom = scrollHeight - windowHeight - st;
 	
 			// 위치 임시값
+			// if (st >= 500) {
+			// 	$('.prd_link_area').addClass('fixed')
+			// }
+			// if (st < 400 || scrollBottom <= 203) {
+			// 	$('.prd_link_area').removeClass('fixed')
+			// }
 			if (st >= 500) {
-				$('.prd_link_area').addClass('fixed')
-			}
-			if (st < 400 || scrollBottom <= 203) {
-				$('.prd_link_area').removeClass('fixed')
+				$('.prd_link_area').show();
+			}else {
+				$('.prd_link_area').hide();
 			}
 			lastScrollTop = st <= 0 ? 0 : st;
 		});
 	}
+	/* e: 25-09-17 수정 */
 	
 		/* s: 25-09-11 수정 */
 		// function anchorMove() {

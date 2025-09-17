@@ -2643,8 +2643,38 @@
 	padding: 50px 0;
 	border-radius: var(--radius-large2);
 
-	img { width: auto;}
+	img {
+		width: auto;
+	}
+
+	&.coupon {
+		position: relative;
+			
+		&:before {
+			content:'';
+			position: absolute;
+			left: 50%;
+			top: 32px;
+			z-index: 1;
+			width: 1px;
+			height: calc(100% - 64px);
+			background-color: var(--color-divider-gray-light);
+		}
+
+		> * {
+			flex: 0 0 50%;
+		}
+		.c_img {
+			img {
+				margin: 0 auto;
+			}
+		}
+		.list_depth {
+			padding-left: var(--padding-9);
+		}
+	}
 }
+
 
 .btn_link {
 	&.short_cut_icon_ty5 > .text dl dt {

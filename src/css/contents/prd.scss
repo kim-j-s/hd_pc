@@ -462,16 +462,21 @@
 
 // 상품바로가기
 .prd_link_area {
-	position: absolute;
+	position: sticky;
+	bottom: 0;
+	// position: absolute;
 	left: 0;
 	// bottom: 0;
-	bottom: 203px;
-	display: block;
+	// bottom: 203px;
+	// display: block;
+	display: none;
 	width: 100%;
-	&.fixed {
-		position: fixed;
-		bottom: 0;
-	}
+
+	// &.fixed {
+	// 	position: fixed;
+	// 	bottom: 0;
+	// }
+	
 	&::before {
 		content: '';
 		display: block;
