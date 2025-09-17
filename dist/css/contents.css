@@ -6946,15 +6946,11 @@ ul + .form_group_wrap {
 	cursor: auto;
 }
 .prd_link_area {
-	position: absolute;
-	left: 0;
-	bottom: 203px;
-	display: block;
-	width: 100%;
-}
-.prd_link_area.fixed {
-	position: fixed;
+	position: sticky;
 	bottom: 0;
+	left: 0;
+	display: none;
+	width: 100%;
 }
 .prd_link_area::before {
 	content: "";
