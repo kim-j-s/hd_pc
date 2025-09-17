@@ -24348,6 +24348,7 @@
 								<ul class="m-list">
 									<li>25-09-02</li>
 									<li>25-09-11</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -29856,6 +29857,7 @@
 									<li>25-07-14</li>
 									<li>25-07-21</li>
 									<li>25-07-24</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -29894,6 +29896,7 @@
 									<li>25-07-24</li>
 									<li>25-08-07</li>
 									<li>25-08-11</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -29917,6 +29920,7 @@
 									<li>25-07-14</li>
 									<li>25-07-24</li>
 									<li>25-08-07</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -30855,7 +30859,7 @@
 							<td class="link"><a href="html/PR/GIPC/PPRGIPC50005000000.html" target="_blank" title="이석우">PPRGIPC50005000000</a></td>
 							<td class="complete ok"></td>
 							<td class="bigo"></td>
-							<td class="bigo2">달력 추후 적용예정</td>
+							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
 									<li>25-07-02</li>
@@ -30863,6 +30867,7 @@
 									<li>25-07-15</li>
 									<li>25-07-24</li>
 									<li>25-08-11</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -30919,6 +30924,7 @@
 									<li>25-08-07</li>
 									<li>25-08-11</li>
 									<li>25-08-12</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -30934,7 +30940,7 @@
 							<td class="link"><a href="html/PR/GIPC/PPRGIPC50006010000.html" target="_blank" title="이석우">PPRGIPC50006010000</a></td>
 							<td class="complete ok"></td>
 							<td class="bigo"></td>
-							<td class="bigo2">달력 추후 적용예정</td>
+							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
 									<li>25-07-03</li>
@@ -30942,6 +30948,7 @@
 									<li>25-08-07</li>
 									<li>25-08-11</li>
 									<li>25-08-12</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -32534,7 +32541,7 @@
 							<td class="link"><a href="html/PR/GIPC/PPRGIPC30005000000.html" target="_blank" title="김연희">PPRGIPC30005000000</a></td>
 							<td class="complete ok"></td>
 							<td class="bigo"></td>
-							<td class="bigo2">달력 추후 적용예정</td>
+							<td class="bigo2"></td>
 							<td class="note">
 								<ul class="m-list">
 									<li>25-07-02</li>
@@ -36419,6 +36426,7 @@
 								<ul class="m-list">
 									<li>25-08-07</li>
 									<li>25-08-27</li>
+									<li>25-09-17</li>
 								</ul>
 							</td>
 						</tr>
@@ -37011,57 +37019,9 @@
 				</table>
 				<!-- // table -->
 			</div>
-
-			<button type="button" class="set ss">검수항목 검색</button>
-			<button type="button" class="set rs">검수항목 초기화</button>
-
-			<style>
-				.set {
-					position: fixed;
-					top: 5px;
-					left: 50%;
-					z-index: 20;
-					width: 200px;
-					height: 36px;
-					font-weight: 700;
-					border-radius: 16px;
-
-					background: #ddd;
-					-webkit-transform: translateX(-50%);
-					transform: translateX(-50%);
-					cursor: pointer;
-					-webkit-transition: 0.3s;
-					transition: 0.3s;
-				}
-				.set:hover {
-					background-color: #fff;
-				}
-				.set.ss {
-					margin-left: -100px;
-				}
-				.set.rs {
-					margin-left: 100px;
-				}
-				.dp_none {
-					display: none;
-				}
-			</style>
 		</div>
 		<script src="js/libs/jquery-1.8.3.min.js"></script>
 		<script>
-			$(".set.ss").on("click", function () {
-				$("tr").each(function () {
-					if ($(this).find(".complete").hasClass("ok") || !$(this).find(".complete").hasClass("chk")) {
-						$(this).addClass("dp_none");
-					}
-				});
-			});
-			$(".set.rs").on("click", function () {
-				$("tr").each(function () {
-					$(this).removeClass("dp_none");
-				});
-			});
-
 			document.querySelector(".control_list .close_all").onclick = function () {
 				var el = document.querySelectorAll(".title");
 				var len = el.length;
