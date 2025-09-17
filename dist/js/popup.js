@@ -76,12 +76,25 @@ function openHDPopup($triggerEl, target) {
 
 	// scrollTop 저장
   openScrollTop = $(window).scrollTop();
+	const $winHeight = $(window).height();
+	const $docHeight = $(document).height();
 
 	// console.log('마지막 저장 위치 : ', openScrollTop);
 
 	//팝업 열기
 	$('#wrap').addClass('scroll_lock');
 	$target.addClass('active');
+
+	const $prd = $('.prd_link_area');
+	if($prd.length){
+		setTimeout(function(){
+			$prd.removeAttr().show();
+	
+			if(openScrollTop + $winHeight >= $docHeight){
+				$prd.css('position', 'relative');
+			}
+		},100);
+	}
 
 	// scrollTop 복원
 	if (openScrollTop !== null) {
@@ -257,6 +270,11 @@ function closeHDPopup(target, returnTarget = null) {
 			closeScrollTop = null; // 초기화
 		}
 		$target.find(".popup_inner").removeAttr("tabindex").off('keydown.focusTraversal');
+
+		const $prd = $('.prd_link_area');
+		if($prd.length){
+			$prd.removeAttr('style');
+		}
 
 		const focusTarget = $triggerEl || $("body");
 

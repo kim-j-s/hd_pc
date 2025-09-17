@@ -4150,6 +4150,7 @@ strong {
 .btn_area + .space_list_ty2 {
 	margin-top: var(--gap-8);
 }
+.btn_area + .space_list_ty4,
 .btn_area + .info_gray {
 	margin-top: var(--gap-11);
 }
