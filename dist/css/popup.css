@@ -297,6 +297,16 @@
 .popup_wrap .popup_container .popup_inner .popup_bottom .btn_area.column:has(.hd_btn_s_1) {
 	gap: var(--gap-4);
 }
+.popup_wrap .popup_container .popup_inner .popup_bottom .btn_area.space_between {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.popup_wrap .popup_container .popup_inner .popup_bottom .btn_area.space_between > .inp_checkbox {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
 .popup_wrap .popup_container .popup_inner .popup_bottom .btn_area + .btn_area {
 	margin-top: 28px;
 }

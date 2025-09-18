@@ -96,58 +96,151 @@
 							<div class="form_box space2">
 								<h2 class="pop_title_h2">대중교통 이용 조회</h2>
 								<div class="form_group_wrap">
-									<div class="form_line">
-										<div class="label_tit">통신사</div>
-										<div class="select_option_box">
-											<select name="" id="" title="통신사 선택" class="selectbox" required>
-												<option value="" hidden disabled selected>통신사 선택</option>
-												<option value="">SKT</option>
-												<option value="">KT</option>
-												<option value="">LG U+</option>
-												<option value="">SKT알뜰</option>
-												<option value="">KT알뜰</option>
-												<option value="">LG U+알뜰</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="form_line">
-										<div class="label_tit">휴대폰번호</div>
-										<div class="comp_wrap key_number">
-											<div class="input_text phone">
-												<div class="int_txt left">010</div>
-												<div class="inp">
-													<input type="tel" placeholder="-없이 입력하세요" value="- 1234 - 5678" maxlength="8" readonly title="휴대폰번호 입력" />
-													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									<!-- s: 25-09-18 수정 -->
+									<!-- <div class="form_line">
+											<div class="label_tit">통신사</div>
+					<div class="select_option_box">
+						<select name="" id="" title="통신사 선택" class="selectbox"  required>
+							<option value="" hidden disabled selected>통신사 선택</option>
+														<option value="">SKT</option>
+														<option value="">KT</option>
+														<option value="">LG U+</option>
+														<option value="">SKT알뜰</option>
+														<option value="">KT알뜰</option>
+														<option value="">LG U+알뜰</option>
+						</select>
+					</div>					</div>
+					
+										<div class="form_line">
+											<div class="label_tit">휴대폰번호</div>
+											<div class="comp_wrap key_number">
+												<div class="input_text phone">
+												  <div class="int_txt left">010</div>
+												  <div class="inp">
+												    <input 
+																type="tel"
+												      
+												      
+																	
+												      placeholder="-없이 입력하세요"
+												      value="- 1234 - 5678"
+												      
+												      maxlength="8"
+												      
+												      readonly
+												      title="휴대폰번호 입력"
+															
+												      
+												    >
+												    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												  </div>
+												  
+													
 												</div>
-											</div>
-											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-												<span class="text">인증번호요청</span>
-											</button>
-										</div>
-									</div>
+												<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+												
+													<span class="text">인증번호요청</span>
+												
+												</button>						</div>
+										</div> -->
 
 									<!-- s: 인증번호 발송 후 인증번호 입력 영역 노출 -->
+									<!-- <div class="form_line">
+											<div class="label_tit">인증번호</div>
+											<div class="comp_wrap key_number">
+												<div class="input_text">
+												  
+												  <div class="inp">
+												    <input 
+																type="tel"
+												      
+												      
+																	
+												      placeholder="숫자 6자리 입력"
+												      
+												      minlength="6"
+												      maxlength="6"
+												      
+												      
+												      title="인증번호 입력"
+															
+												      
+												    >
+												    <button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												  </div>
+												  <div class="int_txt right">00:00</div>
+													
+												</div>
+												<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+												
+													<span class="text">시간연장</span>
+												
+												</button>							<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
+												
+													<span class="text">재요청</span>
+												
+												</button>						</div>
+										</div> -->
+									<!-- e: 인증번호 발송 후 인증번호 입력 영역 노출 -->
 									<div class="form_line">
-										<div class="label_tit">인증번호</div>
-										<div class="comp_wrap key_number">
+										<div class="radio_group_wrap" role="radiogroup">
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="card01_1" name="card01" checked />
+												<label for="card01_1">
+													<span class="label_cont">실물카드</span>
+												</label>
+											</div>
+											<div class="inp_radio rd_btn">
+												<input type="radio" id="card01_2" name="card01" />
+												<label for="card01_2">
+													<span class="label_cont">모바일카드</span>
+												</label>
+											</div>
+										</div>
+										<ul class="list_ty2">
+											<li><strong class="point">후불교통 결제 기능이 포함되어 대중교통 이용이 가능한 카드</strong></li>
+										</ul>
+									</div>
+									<div class="form_line">
+										<div class="label_tit">카드번호</div>
+										<div class="comp_wrap card">
 											<div class="input_text">
 												<div class="inp">
-													<input type="tel" placeholder="숫자 6자리 입력" minlength="6" maxlength="6" title="인증번호 입력" />
-													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+													<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드 첫번째 4자리 입력" />
 												</div>
-												<div class="int_txt right">00:00</div>
 											</div>
-											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-												<span class="text">시간연장</span>
-											</button>
-											<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4">
-												<span class="text">재요청</span>
-											</button>
+											<span class="dash">-</span>
+											<div class="input_text">
+												<div class="inp">
+													<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드 두번째 4자리 입력" />
+												</div>
+											</div>
+											<span class="dash">-</span>
+											<div class="input_text">
+												<div class="inp">
+													<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드 세번째 4자리 입력" />
+												</div>
+											</div>
+											<span class="dash">-</span>
+											<div class="comp_wrap_keypad_call form_key_pc">
+												<input type="password" name="" id="" title="카드번호 마지막 4(3자리) 입력" placeholder="4(3자리)" maxlength="4" />
+												<span>
+													<input type="checkbox" name="" id="kp1" />
+													<label for="kp1">마우스입력기사용</label>
+												</span>
+											</div>
 										</div>
 									</div>
-									<!-- e: 인증번호 발송 후 인증번호 입력 영역 노출 -->
-
+									<div class="form_line">
+										<div class="label_tit">유효기간</div>
+										<div class="input_text">
+											<div class="inp">
+												<input type="tel" placeholder="MMYY" title="유효기간 입력" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+											</div>
+										</div>
+									</div>
+									<!-- e: 25-09-18 수정 -->
 									<div class="form_line">
 										<div class="inp_checkbox">
 											<input type="checkbox" id="checkbox_size2_1" />
