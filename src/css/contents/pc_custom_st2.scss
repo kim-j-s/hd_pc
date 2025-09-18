@@ -2734,6 +2734,22 @@
 			justify-content: flex-start;
 		}
 	}
+	
+	.card_item_wrap {
+		&.ty4 {
+			.card_item {
+				.item_inner {
+					.sub_title {
+						font-weight: 700;
+					}
+					.hd_icon {
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .process_info_area {	
