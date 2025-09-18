@@ -626,11 +626,6 @@
 function tabScroll(){
 	let scrollPosition = 0;
 
-	// $('[class^=tab_scroll_box]').on('scroll', function() {
-	// 	scrollPosition = $(this).scrollLeft();
-	// 	$('#scroll_position span').text(scrollPosition);
-	// });
-
 	$('[class^=tab_scroll_box] .tab_btn').on('click', function(){
 		const $this = $(this),
 					$scrollBox = $this.closest('[class^=tab_scroll_box]')
@@ -863,6 +858,23 @@ function inpPhoneFormat() {
 	});
 }
 
+// 상품안내 스크롤 이벤트
+function prdFixed() {
+	let lastScrollTop = 0;
+	$(window).on("scroll", function () {
+		const st = $(this).scrollTop();
+		const scrollHeight = $(document).height();
+		const windowHeight = $(this).height();
+		// const scrollBottom = scrollHeight - windowHeight - st;
+		if (st >= 500) {
+			$('.prd_link_area').show();
+		}else {
+			$('.prd_link_area').hide();
+		}
+		lastScrollTop = st <= 0 ? 0 : st;
+	});
+}
+
 $(window).on('load', function() {
 	inputState();
 	
@@ -907,6 +919,9 @@ $(function(){
 	});
 
 	simpleInfo();
+
+	// 상품안내 스크롤 이벤트
+	prdFixed();
 
 
 	//input disabled&readonly
