@@ -353,6 +353,14 @@
 							gap: var(--gap-4);
 						}
 					}
+
+					&.space_between {
+						justify-content: space-between;
+
+						> .inp_checkbox {
+							flex: 0 0 auto;
+						}
+					}
 					
 					& + .btn_area {
 						margin-top: 28px;
