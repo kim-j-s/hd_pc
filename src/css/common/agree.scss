@@ -116,7 +116,15 @@
 			border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		}
 	}
-
+	.table {
+		td {
+			.list_depth_ty2 {
+				> li {
+					color: var(--color-text-basic);
+				}
+			}
+		}
+	}
 	.ag_group_cont {
 		padding: var(--padding-8) 0;
 		.info_gray {
