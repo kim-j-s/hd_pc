@@ -752,7 +752,8 @@
 			display: block;
 			text-align: center;
 			width: auto;
-			padding: 8px var(--padding-6);
+			// padding: 8px var(--padding-6);
+			padding: var(--padding-3) var(--padding-10) var(--padding-3) var(--padding-6);
 			border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
 			background-size: 20px auto;
 			background-position: right 16px center;
