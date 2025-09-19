@@ -684,6 +684,7 @@
 			// padding: var(--padding-8) 80px var(--padding-8) var(--padding-7);
 			padding: var(--padding-8) 120px var(--padding-8) var(--padding-7);
 			border-radius: var(--radius-large2);
+			border: var(--border-width-static-regular) solid #fff;
 			background-repeat: no-repeat;
 			background-position: right center;
 			background-size: 160px auto;
@@ -693,9 +694,8 @@
 			&:hover,
 			&:active {
 				top: calc(-1 * var(--gap-2));
-				box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.20));
-				transition: top 0.3s;
 				border: var(--border-width-static-regular) solid var(--color-border-primary);
+				box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.20));
 			}
 
 			&.mpc_item_ty1 {

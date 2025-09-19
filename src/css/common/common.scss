@@ -49,10 +49,10 @@
 }
 /* scroll margin top */
 
-body {
-	overflow: hidden;
-	color: var(--color-text-basic);
-}
+// body {
+	// overflow: hidden;
+	
+// }
 
 html {
 	// scroll-behavior: smooth;
@@ -1295,6 +1295,7 @@ strong {
 	margin-top: var(--gap-5) !important;
 }
 
+
 // 관리자_다이나믹 랜딩 배너
 .prd_bann_box {
 	> a {
@@ -1304,5 +1305,20 @@ strong {
 		display: block;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+
+// 가입 이벤트
+.event_img_box {
+	overflow: hidden;
+	border-radius: var(--radius-large2);
+
+	img {
+		display: block;
+	}
+
+	& + .form_group_wrap {
+		margin-top: var(--gap-8);
 	}
 }

@@ -14,11 +14,11 @@
 	}
 	.prd_link_area {
 		// 퀵메뉴 위치 조정
-		&.fixed {
+		// &.fixed {
 			+.quick_menu {
 				bottom: calc(64px + 64px);
 			}
-		}
+		// }
 		&:not(:has(.fixed)) {
 			+.quick_menu {
 				&.active {
