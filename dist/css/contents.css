@@ -6142,7 +6142,7 @@ ul + .form_group_wrap {
 	gap: 0;
 	padding-bottom: 0;
 }
-.wrap .prd_link_area.fixed + .quick_menu {
+.wrap .prd_link_area + .quick_menu {
 	bottom: 128px;
 }
 .wrap .prd_link_area:not(:has(.fixed)) + .quick_menu.active {

@@ -4,7 +4,6 @@
 /* Layout */
 body {
 	position: relative;
-	overflow: auto;
 }
 /* skipNavi */
 .skipNavi {
@@ -5530,6 +5529,7 @@ body {
 	align-items: center;
 	padding: var(--padding-8) 120px var(--padding-8) var(--padding-7);
 	border-radius: var(--radius-large2);
+	border: var(--border-width-static-regular) solid #fff;
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: 160px auto;
@@ -5540,11 +5540,9 @@ body {
 .main_prd .main_prd_cont .mpc_item:hover,
 .main_prd .main_prd_cont .mpc_item:active {
 	top: calc(-1 * var(--gap-2));
+	border: var(--border-width-static-regular) solid var(--color-border-primary);
 	-webkit-box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.2));
 	box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.2));
-	-webkit-transition: top 0.3s;
-	transition: top 0.3s;
-	border: var(--border-width-static-regular) solid var(--color-border-primary);
 }
 .main_prd .main_prd_cont .mpc_item.mpc_item_ty1 {
 	background-color: var(--color-action-primary-fill);
