@@ -854,7 +854,9 @@ html {
 body {
 	position: relative;
 	font-family: "Pretendard", Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+	color: var(--color-text-basic);
 	line-height: 1.5;
+	overflow: auto;
 }
 html,
 body {
