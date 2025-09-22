@@ -2109,3 +2109,17 @@
 	}
 }
 /* qr 팝업 */
+
+/* qr 이미지 박스 */
+.qr_code_imgbox {
+	width: 96px;
+	height: 96px;
+	padding: var(--padding-3);
+	background: var(--color-surface-white-subtle);
+	border-radius: var(--radius-medium3);
+	img {
+		width: 80px;
+		height: 80px;
+	}
+}
+/* qr 이미지 박스 */
