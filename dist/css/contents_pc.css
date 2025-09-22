@@ -4773,6 +4773,19 @@ body {
 	width: 80px;
 }
 /* qr 팝업 */
+/* qr 이미지 박스 */
+.qr_code_imgbox {
+	width: 96px;
+	height: 96px;
+	padding: var(--padding-3);
+	background: var(--color-surface-white-subtle);
+	border-radius: var(--radius-medium3);
+}
+.qr_code_imgbox img {
+	width: 80px;
+	height: 80px;
+}
+/* qr 이미지 박스 */
 /* PC용 component  */
 /* 개발 요청 생성 별도 wrap */
 .custom_wrap.custom_wrap_ty1 {
@@ -5716,6 +5729,8 @@ body {
 	font-weight: 700;
 }
 .main_banner.main_banner_qr .main_banner_qr_box {
+	width: 96px;
+	height: 96px;
 	padding: var(--padding-3);
 	background: var(--color-surface-white-subtle);
 	border-radius: var(--radius-medium3);

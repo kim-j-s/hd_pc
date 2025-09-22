@@ -11662,6 +11662,15 @@ ol li .table_wrap + .list_ty2 li + li {
 .progress_bar.progress_bar_ty1.expired .per_bar.active {
 	background-color: var(--color-element-danger);
 }
+.progress_bar.progress_bar_ty1.expired .per_bar .per_bar_dp {
+	background-color: var(--color-element-point);
+	-webkit-box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.2));
+	box-shadow: 0 4px 8px 0 var(--color-alpha-shadow5, rgba(248, 99, 60, 0.2));
+}
+.progress_bar.progress_bar_ty1.expired .per_bar .per_bar_dp .text {
+	font-weight: 700;
+	color: var(--color-text-bolder-inverse);
+}
 .progress_bar_ty2 .progress_bar_per {
 	position: relative;
 	border-radius: 50px;
