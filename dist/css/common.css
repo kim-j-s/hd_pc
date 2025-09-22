@@ -13955,6 +13955,9 @@ ol li .table_wrap + .list_ty2 li + li {
 [class^="title_h"] + .text_sub + * {
 	margin-top: var(--gap-8);
 }
+[class^="title_h"] + .text_sub + .info_white {
+	margin-top: var(--gap-5);
+}
 [class^="title_h"] + [class^="file_upload_wrap_ty"],
 [class^="title_h"] + .form_group_wrap,
 [class^="title_h"] + .card_item_wrap,
@@ -14080,6 +14083,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .title_h5 + .view_img_list,
 .title_h5 + .special_contract_list,
 .title_h5 + .table_wrap,
+.title_h5 + .list_ty3,
 .title_h5 + .list_depth {
 	margin-top: var(--gap-5);
 }
@@ -14927,6 +14931,18 @@ ol li .table_wrap + .list_ty2 li + li {
 .info_gray .updown {
 	width: 12px;
 	height: 12px;
+}
+.info_white {
+	padding: calc(var(--padding-8) - 1px) calc(var(--padding-7) - 1px);
+	border-radius: var(--radius-large2);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+}
+.info_white + .info_white {
+	margin-top: var(--gap-5);
+}
+.info_white + .title_h4 {
+	margin-top: var(--gap-9);
 }
 .call_box {
 	margin-top: var(--gap-11);
