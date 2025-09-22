@@ -486,6 +486,19 @@
 	}
 }
 
+.info_white {
+	padding: calc(var(--padding-8) - 1px) calc(var(--padding-7) - 1px);
+	border-radius: var(--radius-large2);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+	& + & {
+		margin-top: var(--gap-5);
+	}
+	& + .title_h4 {
+		margin-top: var(--gap-9);
+	}
+}
+
 .call_box {
 	margin-top: var(--gap-11);
 	.info_text + .info_gray {
