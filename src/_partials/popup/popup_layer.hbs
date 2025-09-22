@@ -3,8 +3,10 @@
 --}}
 <div class="popup_wrap popup_wrap_type1{{#if popup-class}} {{popup-class}}{{/if}}{{#if popup-active}} active{{/if}}" {{#if popup-id}} id="{{popup-id}}"{{/if}}{{#if close-btn}}{{/if}} role="dialog">
 	<div class="popup_container">
-		{{!-- <div class="popup_dim" aria-hidden="true"{{#if popup-id}} onclick="closeHDPopup('{{popup-id}}');"{{/if}}></div> --}}
-		<div class="popup_dim"></div>
+		{{!-- 25-09-22 모바일과 다른 상태 확인, 딤드영역 클릭 시 닫는 기능 활성화로 전환, 모바일은 적용 상태 --}}
+		<div class="popup_dim" aria-hidden="true"{{#if popup-id}} onclick="closeHDPopup('{{popup-id}}');"{{/if}}></div>
+		{{!-- <div class="popup_dim"></div> --}}
+		{{!-- 25-09-22 모바일과 다른 상태 확인, 딤드영역 클릭 시 닫는 기능 활성화로 전환, 모바일은 적용 상태 --}}
 		<div class="popup_inner{{#if in-class}} {{in-class}}{{/if}}">
 			<div class="popup_head">
 				{{#unless no-header}}
