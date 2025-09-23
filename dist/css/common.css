@@ -14291,6 +14291,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .text_sub + .btn_area.basic.center {
 	margin-top: var(--gap-5);
 }
+.text_sub + .call_box,
 .text_sub + .text_sub_ty3,
 .text_sub + .list_depth {
 	margin-top: var(--gap-4);
@@ -14640,6 +14641,9 @@ ol li .table_wrap + .list_ty2 li + li {
 	margin-top: var(--gap-11);
 }
 .info_gray + .info_gray.ty2.msg_box {
+	margin-top: var(--gap-8);
+}
+.info_gray + .btn_area.ty2 {
 	margin-top: var(--gap-8);
 }
 .info_gray + .text_sub,
@@ -15076,6 +15080,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .call_box .info_gray.ty2 .center_info .title_h4 {
 	padding-bottom: var(--gap-3);
+}
+.call_box .info_gray.ty2 .center_info + .list_ty5 {
+	margin-top: var(--gap-3);
 }
 .call_box.call_box_space2 {
 	margin-top: var(--gap-5);
