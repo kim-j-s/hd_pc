@@ -1767,7 +1767,14 @@ body {
 .container .card_item_wrap.ty3 + .info_summary {
 	margin-top: var(--gap-8);
 }
-.container .card_item_wrap.ty5 .card_item .item_inner .cont .result {
+.container .card_item_wrap.ty5 .card_item .item_inner {
+	position: static;
+}
+.container .card_item_wrap.ty5 .card_item .item_inner .inner_cont {
+	position: static;
+	width: 100%;
+}
+.container .card_item_wrap.ty5 .card_item .item_inner .inner_cont .cont .result {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1776,11 +1783,11 @@ body {
 	align-items: center;
 	gap: var(--gap-3);
 }
-.container .card_item_wrap.ty5 .card_item .item_inner .cont .result .title {
+.container .card_item_wrap.ty5 .card_item .item_inner .inner_cont .cont .result .title {
 	font-size: var(--font-size-body-small);
 	font-weight: 400;
 }
-.container .card_item_wrap.ty5 .card_item .item_inner .cont .result .price {
+.container .card_item_wrap.ty5 .card_item .item_inner .inner_cont .cont .result .price {
 	width: auto;
 	font-size: var(--font-size-body-large);
 	color: var(--color-text-primary-bold);
@@ -1873,7 +1880,11 @@ body {
 	-ms-flex-align: stretch;
 	align-items: stretch;
 }
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .inp_checkbox {
+	height: auto;
+}
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list {
+	margin-left: 30px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1892,6 +1903,9 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	gap: var(--gap-4);
 	padding: 1px 0;
 }
@@ -1906,6 +1920,9 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 	font-size: var(--font-size-body-small);
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .item_top {
@@ -2669,7 +2686,7 @@ body {
 	position: sticky;
 	bottom: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 30;
 	-webkit-box-shadow: 0px var(--shadow-y-minus2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0px var(--shadow-y-minus2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 }

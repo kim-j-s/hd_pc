@@ -58,21 +58,20 @@
 			<div class="card_item selected">
 				<!-- e: 선택 불가한 기본 옵션에 selected 클래스 추가 -->
 				<div class="item_inner">
-					<div class="inp_checkbox">
-						<input type="checkbox" id="card_chk_opt2_1" name="name2" aria-labelledby="card_chk_opt2_1_cont" checked disabled />
-						<label for="card_chk_opt2_1" class="chk_label"></label>
-						<i></i>
-					</div>
-					<div class="inner_cont">
-						<div class="item_top" id="card_chk_opt2_1_cont">
-							<div class="title_info">
-								<div class="main_title">
-									차선이탈 경고장치
-									<span class="badge_wrap">
-										<span class="hd_badge outline solid_pastel c_success size_m badge">기본장착</span>
+					<div class="tit_item">
+						<div class="inp_checkbox">
+							<input type="checkbox" id="card_chk_opt2_1" name="name2" aria-labelledby="card_chk_opt2_1_cont" checked disabled />
+							<label for="card_chk_opt2_1" class="chk_label">
+								<span class="title_info">
+									<span class="main_title">
+										차선이탈 경고장치
+										<span class="badge_wrap">
+											<span class="hd_badge outline solid_pastel c_success size_m badge">기본장착</span>
+										</span>
 									</span>
-								</div>
-							</div>
+								</span>
+							</label>
+							<i></i>
 						</div>
 					</div>
 				</div>
@@ -82,7 +81,7 @@
 				<!-- 변경불가 항목: 'disabled'클래스 추가-->
 				<div class="item_inner">
 					<div class="inner_cont">
-						<div role="button" class="card_link" tabindex="0">
+						<div role="button" class="card_link" tabindex="0" title="팝업 열기">
 							<div class="item_top">
 								<div class="title_info">
 									<div class="main_title">대인배상Ⅰ<span class="point">(의무)</span></div>
@@ -101,7 +100,7 @@
 				<!-- 변경불가 항목 중 자세히보기 팝업이 있는 경우: 'disabled2'클래스 추가 -->
 				<div class="item_inner">
 					<div class="inner_cont">
-						<div role="button" class="card_link" tabindex="0">
+						<div role="button" class="card_link" tabindex="0" title="팝업 열기">
 							<div class="item_top">
 								<div class="title_info">
 									<div class="main_title">대인배상Ⅱ</div>
@@ -119,7 +118,7 @@
 			<div class="card_item">
 				<div class="item_inner">
 					<div class="inner_cont">
-						<div role="button" class="card_link" tabindex="0">
+						<div role="button" class="card_link" tabindex="0" title="팝업 열기">
 							<div class="item_top">
 								<div class="badge_wrap">
 									<span class="hd_badge outline solid_pastel c_success size_m">변경됨</span>
@@ -140,7 +139,7 @@
 			<div class="card_item">
 				<div class="item_inner">
 					<div class="inner_cont">
-						<div role="button" class="card_link" tabindex="0">
+						<div role="button" class="card_link" tabindex="0" title="팝업 열기">
 							<div class="item_top">
 								<div class="title_info">
 									<div class="main_title">자기신체사고/자동차상해</div>
@@ -160,24 +159,23 @@
 			<div class="card_item_wrap ty5">
 				<div class="card_item">
 					<div class="item_inner">
-						<div class="inp_checkbox">
-							<input type="checkbox" id="card_chk_opt1_1" name="name1" aria-labelledby="card_chk_opt1_1_cont" />
-							<label for="card_chk_opt1_1" class="chk_label"></label>
-							<i></i>
-						</div>
 						<div class="inner_cont">
 							<!-- s: 25-07-03 -->
 							<div class="space_between">
 								<!-- e: 25-07-03 -->
-								<div class="item_top" id="card_chk_opt1_1_cont">
-									<div class="title_info">
-										<div class="main_title">
-											블랙박스
-											<span class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+								<div class="inp_checkbox">
+									<input type="checkbox" id="card_chk_opt1_1" name="name1" aria-labelledby="card_chk_opt1_1_cont" />
+									<label for="card_chk_opt1_1" class="chk_label">
+										<span class="title_info">
+											<span class="main_title">
+												블랙박스
+												<span class="badge_wrap">
+													<span class="hd_badge outline solid_pastel c_secondary size_m">직접입력</span>
+												</span>
 											</span>
-										</div>
-									</div>
+										</span>
+									</label>
+									<i></i>
 								</div>
 								<div class="cont">
 									<div class="result">
@@ -235,50 +233,47 @@
 		</div>
 
 		<div class="guide_h4 pc">.card_item_wrap.ty6</div>
-		<div class="card_item_wrap ty6">
-			<div class="card_item">
-				<div class="item_inner">
-					<div class="inner_cont">
-						<div class="item_top">
-							<div class="title_info">
-								<div class="main_title">대물배상</div>
-								<div class="desc">변경가능 담보 + 변경정보</div>
+		<div class="container">
+			<div class="card_item_wrap ty6">
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inner_cont">
+							<div class="item_top">
+								<div class="title_info">
+									<!-- s: 25-09-05 수정 -->
+									<div class="main_title">대인배상Ⅰ<span class="point"> 의무</span></div>
+									<!-- e: 25-09-05 수정 -->
+									<div class="desc">자동차손해배상 보장법 한도</div>
+								</div>
 							</div>
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_4">
-									<span class="text">보다 든든한 보험을 위해 대물 10억으로 변경하기</span>
-									<i class="hd_icon arrowRightSvg_ty10"></i>
-								</button>
+							<div class="item_cont">
+								<a href="javascript:void(0)" class="btn_link short_cut lg" title="담보변경 팝업 열기">
+									<span class="text">81,990원</span>
+								</a>
 							</div>
-						</div>
-						<div class="item_cont">
-							<a href="javascript:void(0)" class="btn_link short_cut lg" title="담보변경 팝업 열기">
-								<span class="text">4,220원</span>
-							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="card_item">
-				<div class="item_inner">
-					<div class="inner_cont">
-						<div class="item_top">
-							<div class="title_info">
-								<div class="main_title">자기신체사고/자동차상해</div>
-								<div class="desc">변경가능 담보</div>
+				<div class="card_item">
+					<div class="item_inner">
+						<div class="inner_cont">
+							<div class="item_top">
+								<div class="title_info">
+									<div class="main_title">자기차량손해</div>
+									<div class="desc">손해액의 20%/20만원~50만원 차량단독사고 보상 포함</div>
+								</div>
+								<div class="btn_area">
+									<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_4">
+										<span class="text">자기차량손해만 가입하면 보험료는 얼마나 절감될까?</span>
+										<i class="hd_icon arrowRightSvg_ty2"></i>
+									</button>
+								</div>
 							</div>
-							<div class="btn_area">
-								<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_4">
-									<span class="text">81% 고객의 선택 자동차상해3억으로 변경하기</span>
-									<i class="hd_icon arrowRightSvg_ty10"></i>
-								</button>
+							<div class="item_cont">
+								<a href="javascript:void(0)" class="btn_link short_cut lg" title="담보변경 팝업 열기">
+									<span class="text">294,830원</span>
+								</a>
 							</div>
-						</div>
-						<div class="item_cont">
-							<a href="javascript:void(0)" class="btn_link short_cut lg" title="담보변경 팝업 열기">
-								<span class="text">4,220원</span>
-							</a>
 						</div>
 					</div>
 				</div>
@@ -321,21 +316,22 @@
 			<div class="card_item_wrap ty7">
 				<div class="card_item">
 					<div class="item_inner">
-						<div class="inp_checkbox">
-							<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
-							<label for="card_chk_opt1111_1" class="chk_label"></label>
-							<i></i>
-						</div>
 						<div class="inner_cont">
 							<div class="space_between">
-								<div class="item_top" id="card_chk_opt1111_1_cont">
-									<div class="title_info">
-										<div class="main_title">
-											111가1111(현대)
-											<span class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+								<div class="item_top">
+									<div class="inp_checkbox">
+										<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+										<label for="card_chk_opt1111_1" class="chk_label">
+											<span class="title_info">
+												<span class="main_title">
+													111가1111(현대)
+													<span class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+													</span>
+												</span>
 											</span>
-										</div>
+										</label>
+										<i></i>
 									</div>
 									<div class="data_info_list">
 										<dl>
@@ -383,21 +379,22 @@
 			<div class="card_item_wrap ty7">
 				<div class="card_item">
 					<div class="item_inner">
-						<div class="inp_checkbox">
-							<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
-							<label for="card_chk_opt1111_1" class="chk_label"></label>
-							<i></i>
-						</div>
 						<div class="inner_cont">
 							<div class="space_between">
-								<div class="item_top" id="card_chk_opt1111_1_cont">
-									<div class="title_info">
-										<div class="main_title">
-											111가1111(현대)
-											<span class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+								<div class="item_top">
+									<div class="inp_checkbox">
+										<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
+										<label for="card_chk_opt1111_1" class="chk_label">
+											<span class="title_info">
+												<span class="main_title">
+													111가1111(현대)
+													<span class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+													</span>
+												</span>
 											</span>
-										</div>
+										</label>
+										<i></i>
 									</div>
 									<div class="data_info_list">
 										<dl>
@@ -485,21 +482,22 @@
 			<div class="card_item_wrap ty7">
 				<div class="card_item">
 					<div class="item_inner">
-						<div class="inp_checkbox">
-							<input type="checkbox" id="card_chk_opt1111_1" name="name1" aria-labelledby="card_chk_opt1111_1_cont" />
-							<label for="card_chk_opt1111_1" class="chk_label"></label>
-							<i></i>
-						</div>
 						<div class="inner_cont">
 							<div class="space_between">
-								<div class="item_top" id="card_chk_opt1111_1_cont">
-									<div class="title_info">
-										<div class="main_title">
-											111가1111(현대)
-											<span class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+								<div class="item_top">
+									<div class="inp_checkbox">
+										<input type="checkbox" name="name1" />
+										<label for="card_chk_opt1111_1" class="chk_label">
+											<span class="title_info">
+												<span class="main_title">
+													111가1111(현대)
+													<span class="badge_wrap">
+														<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+													</span>
+												</span>
 											</span>
-										</div>
+										</label>
+										<i></i>
 									</div>
 									<div class="data_info_list">
 										<dl>
@@ -561,6 +559,197 @@
 					</div>
 				</div>
 			</div>
+			<div class="guide_h4">카드혜택 > 이벤트 (ul.card_list_wrap_ty2.event_list)</div>
+			<ul class="card_list_wrap_ty2 event_list">
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_MBNEVNT10000000000.svg" alt="이벤트이미지" />
+							</div>
+							<div class="inner_cont">
+								<h3 class="item_title">다이렉트 보험 가입 이벤트 (운전자/어린이/주택 등)</h3>
+								<p class="item_preview">가입 시 최대 3만원 신세계상품권! (월 보험료별 경품 상이) 내 인생 보험이 필요할 땐 현대해상 다이렉트</p>
+								<div class="item_meta">
+									<span class="date">2025.02.28~2025.03.04</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box no_img">no Image</div>
+							<div class="inner_cont">
+								<h3 class="item_title">다이렉트 보험 가입 이벤트 (운전자/어린이/주택 등)</h3>
+								<p class="item_preview">가입 시 최대 3만원 신세계상품권! (월 보험료별 경품 상이) 내 인생 보험이 필요할 땐 현대해상 다이렉트</p>
+								<div class="item_meta">
+									<span class="date">2025.02.28~2025.03.04</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div class="guide_h4">예외 Case - 카드혜택 > 이벤트 > 기부하기(ul.card_list_wrap_ty3)</div>
+			<ul class="card_list_wrap_ty3">
+				<li>
+					<div class="card_item donation">
+						<div class="item_inner" role="button" tabindex="0">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_donation_card.svg" alt="이미지" />
+							</div>
+							<div class="inner_cont">
+								<div class="title_info">
+									<div class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">D-57</span>
+										<span class="organ">초록우산 어린이재단</span>
+									</div>
+									<div class="main_title">다훈이가 밝은 미래를 향해 나아갈 수 있도록 따뜻하게 지켜주세요.</div>
+								</div>
+								<div class="progress">
+									<div class="bar">
+										<div class="guage"></div>
+									</div>
+									<div class="progress_info">
+										<strong class="point">30% 달성</strong>
+										<span>3,000,000원</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item_btn_wrap">
+							<!-- s: 25-07-21 수정 -->
+							<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+								<span class="text">보험료 계산하고 기부하기</span>
+							</button>
+							<!-- e: 25-07-21 수정 -->
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item donation">
+						<div class="item_inner" role="button" tabindex="0">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_donation_card.svg" alt="이미지" />
+							</div>
+							<div class="inner_cont">
+								<div class="title_info">
+									<div class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">D-57</span>
+										<span class="organ">초록우산 어린이재단</span>
+									</div>
+									<div class="main_title">다훈이가 밝은 미래를 향해 나아갈 수 있도록 따뜻하게 지켜주세요.</div>
+								</div>
+								<div class="progress">
+									<div class="bar">
+										<div class="guage"></div>
+									</div>
+									<div class="progress_info">
+										<strong class="point">30% 달성</strong>
+										<span>3,000,000원</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item_btn_wrap">
+							<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_3">
+								<span class="text">보험료 계산하고 기부하기</span>
+							</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="guide_discription">기부카드 유형 - small (ul.card_list_wrap_ty3.view_navigation)</div>
+			<!-- 다른 목록 보기 -->
+			<ul class="card_list_wrap_ty3 view_navigation">
+				<li>
+					<div class="card_item donation small" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_donation_card_small.svg" alt="이미지" />
+							</div>
+							<div class="inner_cont">
+								<div class="title_info">
+									<div class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">D-57</span>
+										<span class="organ">초록우산 어린이재단</span>
+									</div>
+									<div class="main_title">다훈이가 밝은 미래를 향해 나아갈 수 있도록 따뜻하게 지켜주세요.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item donation small" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_donation_card_small.svg" alt="이미지" />
+							</div>
+							<div class="inner_cont">
+								<div class="title_info">
+									<div class="badge_wrap">
+										<span class="hd_badge outline solid_pastel c_primary size_m">D-57</span>
+										<span class="organ">초록우산 어린이재단</span>
+									</div>
+									<div class="main_title">다훈이가 밝은 미래를 향해 나아갈 수 있도록 따뜻하게 지켜주세요.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="guide_h4">예외 Case - 이용안내 > 고객센터 > 보험팁(ul.card_list_wrap_ty2.row)</div>
+			<ul class="card_list_wrap_ty2 row">
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex01.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex02.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card_item" role="button" tabindex="0">
+						<div class="item_inner">
+							<div class="img_box">
+								<img src="../../../images/content/bn/img_instip_ex01.svg" alt="보험팁이미지" />
+							</div>
+							<div class="inner_cont ty2">
+								<div class="badge_wrap">
+									<span class="hd_badge outline solid_pastel c_primary size_m c_tab01">자동차</span>
+								</div>
+								<h3 class="item_title">마일리지 환급금 바로 사용 가능해요!</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>
