@@ -20,7 +20,8 @@
 			padding: 0;
 			background: transparent;
 			box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
-			border-radius: 10px;
+			// border-radius: 10px;
+			border-radius: var(--radius-large2);
 
 			.popup_container {
 				.popup_inner {
