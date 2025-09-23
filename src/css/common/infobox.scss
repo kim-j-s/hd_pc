@@ -518,6 +518,10 @@
 			.title_h4 {
 				padding-bottom: var(--gap-3);
 			}
+
+			& + .list_ty5 {
+				margin-top: var(--gap-3);
+			}
 		}
 	}
 
