@@ -213,9 +213,29 @@
 				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			}
 		}
+
 		a.option {
 			padding: 16px 32px 16px 0;
-			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px;
+			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 17px;
+			
+			&.disabled {
+				pointer-events: none;
+				background-color: var(--color-surface-gray-subtler);
+				
+				.item {
+					.data_l {
+						.name,
+						.date {
+							color: var(--color-text-disabled-on);
+						}
+					}
+					.data_r {
+						.price {
+							color: var(--color-text-disabled-on);
+						}
+					}
+				}
+			}
 		}
 
 		+ .info_gray {
