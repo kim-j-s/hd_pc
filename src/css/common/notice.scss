@@ -76,10 +76,13 @@
 							&::before {
 								color: var(--color-icon-gray-light);
 							}
+							
 							.number_list {
+								margin-top: var(--gap-2);
 								> li {
-									color: inherit;
-									font-size: inherit;
+									margin-top: var(--gap-3);
+									font-size: var(--font-size-body-xsmall);
+									color: var(--color-text-information);
 									&::before {
 										color: inherit;
 									}

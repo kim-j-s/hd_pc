@@ -1033,6 +1033,25 @@ strong {
 .event_img_box + .form_group_wrap {
 	margin-top: var(--gap-8);
 }
+.form_title_box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.form_title_box .checkbox_group_wrap {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: auto;
+	min-width: 134px;
+	margin-top: 0;
+}
+.form_title_box + * {
+	margin-top: 10px;
+}
 /* common 인증, 로딩 등 */
 .blockUI,
 .c_loading {
@@ -6736,6 +6755,8 @@ strong {
 }
 .card_item_wrap .card_item.disabled * {
 	color: var(--color-text-disabled-on) !important;
+}
+.card_item_wrap .card_item.disabled * div:not(.cont) {
 	background-color: var(--color-surface-gray-subtler);
 }
 .card_item_wrap .card_item.disabled .input_text .inp {
@@ -11555,9 +11576,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .bottom_fix_notice .acd_cont .inner .list_depth > li > ul > li::before {
 	color: var(--color-icon-gray-light);
 }
+.bottom_fix_notice .acd_cont .inner .list_depth > li > ul > li .number_list {
+	margin-top: var(--gap-2);
+}
 .bottom_fix_notice .acd_cont .inner .list_depth > li > ul > li .number_list > li {
-	color: inherit;
-	font-size: inherit;
+	margin-top: var(--gap-3);
+	font-size: var(--font-size-body-xsmall);
+	color: var(--color-text-information);
 }
 .bottom_fix_notice .acd_cont .inner .list_depth > li > ul > li .number_list > li::before {
 	color: inherit;
@@ -13120,7 +13145,6 @@ ol li .table_wrap + .list_ty2 li + li {
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 17px;
 }
 .opt_select_list.opt_case4 a.option.disabled {
-	pointer-events: none;
 	background-color: var(--color-surface-gray-subtler);
 }
 .opt_select_list.opt_case4 a.option.disabled .item .data_l .name,

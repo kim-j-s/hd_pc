@@ -951,11 +951,18 @@
 			.text {
 				display: block;
 				padding: 6px 0 5px 0;
-				font-size: var(--font-size-body-small);
+				font-size: var(--font-size-body-large);
 				color: var(--color-text-subtle);
 
 				strong {
+					display: inline-block;
+					max-width: 100%;
 					color: var(--color-text-basic);
+					vertical-align: middle;
+				}
+				> span {
+					display: inline-block;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -963,6 +970,10 @@
 		> a.chg_item {
 			padding: var(--padding-3) 40px var(--padding-3) 52px;
 			background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center / 16px;
+		
+			.text {
+				font-size: var(--font-size-body-small);
+			}
 		}
 				
 		// change effect
