@@ -732,7 +732,9 @@
 
 			* {
 				color: var(--color-text-disabled-on) !important;
-				background-color: var(--color-surface-gray-subtler);
+				div:not(.cont){
+					background-color: var(--color-surface-gray-subtler);
+				}
 			}
 
 			.input_text {
