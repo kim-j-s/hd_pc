@@ -68,17 +68,27 @@
 						}
 					}
 				}
+
+				&.swiper-initialized {
+					& + .swiper_control {
+						display: block;
+					}	
+				}
 			}
 		
 			.swiper_control {
-				display: flex;
-				align-items: center;
+				display: none;
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
 				bottom: 16px;
 				z-index: 10;
 				padding: 0 24px;
+
+				.c_inner {
+					display: flex;
+					align-items: center;
+				}
 		
 				.pop_pager {
 					position: relative;
