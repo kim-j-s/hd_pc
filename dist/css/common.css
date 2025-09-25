@@ -6736,6 +6736,8 @@ strong {
 }
 .card_item_wrap .card_item.disabled * {
 	color: var(--color-text-disabled-on) !important;
+}
+.card_item_wrap .card_item.disabled * div:not(.cont) {
 	background-color: var(--color-surface-gray-subtler);
 }
 .card_item_wrap .card_item.disabled .input_text .inp {
