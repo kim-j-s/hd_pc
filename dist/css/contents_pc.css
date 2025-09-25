@@ -3499,6 +3499,10 @@ body {
 .title_view_wrap.bg_right.ty2 {
 	background: url(../images/content/cnsr/bg_top_ty2.png) no-repeat top right;
 }
+.title_view_wrap + .info_gray {
+	width: 100%;
+	font-size: var(--font-size-heading-medium);
+}
 .select_option_box .selectbox {
 	width: 100%;
 	min-height: 24px;
@@ -4799,8 +4803,13 @@ body {
 	border-radius: var(--radius-medium3);
 }
 .qr_code_imgbox img {
-	width: 80px;
-	height: 80px;
+	width: 100%;
+}
+.qr_code_imgbox.qr_code_imgbox_etc_ty1 {
+	width: 60px;
+	height: 60px;
+	padding: calc(var(--padding-3) - 1px);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
 /* qr 이미지 박스 */
 /* PC용 component  */
@@ -5871,15 +5880,25 @@ body {
 .prd_module_box .prd_login > .chg_item .text {
 	display: block;
 	padding: 6px 0 5px 0;
-	font-size: var(--font-size-body-small);
+	font-size: var(--font-size-body-large);
 	color: var(--color-text-subtle);
 }
 .prd_module_box .prd_login > .chg_item .text strong {
+	display: inline-block;
+	max-width: 100%;
 	color: var(--color-text-basic);
+	vertical-align: middle;
+}
+.prd_module_box .prd_login > .chg_item .text > span {
+	display: inline-block;
+	vertical-align: middle;
 }
 .prd_module_box .prd_login > a.chg_item {
 	padding: var(--padding-3) 40px var(--padding-3) 52px;
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 16px center/16px;
+}
+.prd_module_box .prd_login > a.chg_item .text {
+	font-size: var(--font-size-body-small);
 }
 .prd_module_box .prd_login .chg_item:hover,
 .prd_module_box .prd_login .chg_item:focus {
