@@ -555,7 +555,6 @@
 		font-size: var(--font-size-body-small);
 		color: var(--color-text-subtle);
 	}
-
 	.btn_area {
 		flex: 0 0 auto;
 		&:not(.column){
@@ -577,6 +576,10 @@
 		&.ty2 {
 			background: url(../images/content/cnsr/bg_top_ty2.png) no-repeat top right;
 		}
+	}
+	& + .info_gray {
+		width: 100%;
+		font-size: var(--font-size-heading-medium);
 	}
 }
 
