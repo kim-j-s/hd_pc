@@ -758,7 +758,7 @@
 		}
 
 		.input_text + .btn_link.short_cut,
-		.form_line,
+		> .form_line,
 		.btn_area {
 			margin-top: var(--gap-5);
 
