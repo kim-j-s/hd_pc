@@ -105,7 +105,8 @@
 	.table {
 		width: 100%;
 		border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-		border-collapse: separate;
+		// border-collapse: separate;
+		border-collapse: collapse;
 		&.bd_l {
 			th, td {
 				border-width: 0 0 1px 1px;
@@ -261,6 +262,15 @@
 				text-align: center;
 			}
 
+			> tr {
+				> th,
+				> td {
+					&:first-child {
+						border-left: none;
+					}
+				}
+			}
+
 			& + tbody {
 				td {
 					padding: var(--padding-5) var(--padding-3);
@@ -303,6 +313,20 @@
 			}
 			td {
 				padding: var(--padding-5);
+			}
+			> tr {
+				&:first-child {
+					th,
+					td {
+						border-top: none;
+					}
+				}
+				> th,
+				> td {
+					&:first-child {
+						border-left: none;
+					}
+				}
 			}
 		}
 
