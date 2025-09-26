@@ -156,7 +156,7 @@
 
 		th,td {
 			border: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-			border-width: 0 1px 1px 0;
+			// border-width: 0 1px 1px 0;
 			word-break: break-all;
 
 			&:last-child{
