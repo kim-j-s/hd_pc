@@ -9,24 +9,25 @@
             <!-- s: popup_content_top -->
             <div class="popup_content_top">
                 <!-- s: 25-08-26 UXW -->
+                <!-- s: 26-09-26 수정 -->
                 <h2 class="title_h2">
                     <!-- s: 25-09-05 수정 -->
                     <!-- s: 25-09-09 수정 -->
-                    제조사 전산 조회로 고객님의<br><strong>커넥티드카 정보</strong>가 조회됐어요
+                    고객님의 차량은 <strong>특약 자동가입 대상차량</strong>으로 조회되어, <br>커넥티드카 특약이 자동으로 가입되었습니다.
                     <!-- e: 25-09-09 수정 -->
                     <!-- e: 25-09-05 수정 -->
                 </h2>
-                <!-- s: 조회불가 케이스 -->
+                <!-- s: 조회불가 케이스 삭제 -->
                 <!-- <h2 class="title_h2">
                     제조사 전산 조회로 고객님의 커넥티드카 정보를 조회할 수 없습니다
                 </h2> -->
-                <!-- e: 조회불가 케이스 -->
+                <!-- e: 조회불가 케이스 삭제 -->
                 
-                <!-- s: 랜드로버/재규어 케이스 -->
+                <!-- s: 랜드로버/재규어 케이스 삭제 -->
                 <!-- <h2 class="title_h2">
                     커넥티드카 특약 가입을 위해 피보험자 정보 입력 단계에서 가입확인서 1매를 등록해주세요
                 </h2> -->
-                <!-- e: 랜드로버/재규어 케이스  -->
+                <!-- e: 랜드로버/재규어 케이스 삭제 -->
                 <!-- e: 25-08-26 UXW -->
                 <div class="btn_area basic">
                     {{> cp/button type="3" size="5" b-text="자세히 보기" rightIcon="arrowRightSvg" popup="ex_popup_bottom"}}
@@ -40,6 +41,7 @@
                 <!-- s: 추가 서류가 필요한 경우 -->
                 <!-- <p class="text_sub">커넥티드카 특약 가입을 위해 피보험자정보 입력 단계에서 가입확인서 1매를 등록해 주세요.</p> -->
                 <!-- e: 추가 서류가 필요한 경우  -->
+                <!-- e: 26-09-26 수정 -->
             </div>
             <!-- e: popup_content_top -->
             <div class="info_gray">
@@ -47,10 +49,15 @@
                     <dt>커넥티드카 서비스</dt>
                     <dd class="bold">Kia Connect</dd>
                 </dl>
+                <!-- s: 26-09-26 수정 -->
                 <dl>
+                    <dt>특약가입여부</dt>
+                    <dd class="bold">자동가입</dd>
+                </dl>
+                <!-- <dl>
                     <dt>서비스 개통일자</dt>
                     <dd class="bold">2024.01.01</dd>
-                </dl>
+                </dl> -->
                 <!-- s: 서비스 가입 조회 -->
                 <!-- <dl>
                     <dt>커넥티드카 서비스</dt>
@@ -60,10 +67,11 @@
                     <dt>서비스 개통일자</dt>
                     <dd class="">-</dd>
                 </dl> -->
-								 <div class="btn_area">
+								 <!-- <div class="btn_area">
 									{{> cp/button type="3" size="4" b-text="서비스 가입 조회" rightIcon="docSearchSvg" }}
-								</div>
+								</div> -->
                 <!-- e: 서비스 가입 조회 -->
+                <!-- e: 26-09-26 수정 -->
             </div>
         </div>
     </div>

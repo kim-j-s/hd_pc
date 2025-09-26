@@ -1733,7 +1733,7 @@ strong {
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a > .text {
 	display: inline-block;
 	font-size: var(--font-size-navigation-depth-small);
-	color: var(--color-text-subtle);
+	color: var(--color-text-basic);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
@@ -9588,12 +9588,12 @@ strong {
 	top: calc(100% + 32px);
 }
 .form_group_wrap [class^="form_line"] .input_text + .btn_link.short_cut,
-.form_group_wrap [class^="form_line"] .form_line,
+.form_group_wrap [class^="form_line"] > .form_line,
 .form_group_wrap [class^="form_line"] .btn_area {
 	margin-top: var(--gap-5);
 }
 .form_group_wrap [class^="form_line"] .input_text + .btn_link.short_cut ~ .info_gray,
-.form_group_wrap [class^="form_line"] .form_line ~ .info_gray,
+.form_group_wrap [class^="form_line"] > .form_line ~ .info_gray,
 .form_group_wrap [class^="form_line"] .btn_area ~ .info_gray {
 	margin-top: var(--gap-5);
 }
