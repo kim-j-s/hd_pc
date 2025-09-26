@@ -203,7 +203,8 @@
 					> .text {
 						display: inline-block;
 						font-size: var(--font-size-navigation-depth-small);
-						color: var(--color-text-subtle);
+						// color: var(--color-text-subtle);
+						color: var(--color-text-basic);
 						background-repeat: no-repeat;
 						background-position: right center;
 					}
