@@ -656,13 +656,11 @@
 .popup_wrap.popup_wrap_type3 .register_bann .swiper .swiper-wrapper .swiper-slide > a {
 	display: block;
 }
+.popup_wrap.popup_wrap_type3 .register_bann .swiper.swiper-initialized + .swiper_control {
+	display: block;
+}
 .popup_wrap.popup_wrap_type3 .register_bann .swiper_control {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	display: none;
 	position: absolute;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
@@ -670,6 +668,14 @@
 	bottom: 16px;
 	z-index: 10;
 	padding: 0 24px;
+}
+.popup_wrap.popup_wrap_type3 .register_bann .swiper_control .c_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 .popup_wrap.popup_wrap_type3 .register_bann .swiper_control .pop_pager {
 	position: relative;
