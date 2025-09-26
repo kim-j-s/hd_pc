@@ -855,9 +855,16 @@
 				}
 			}
 		}
+
+		&.swiper-initialized {
+			.swiper_control {
+				display: block;
+			}
+		}
 	}
 
 	.swiper_control {
+		display: none;
 		display: flex;
 		align-items: center;
 		position: absolute;
@@ -867,6 +874,11 @@
 		bottom: 8px;
 		z-index: 10;
 		padding: 0 24px;
+
+		.c_inner {
+			display: flex;
+			align-items: center;
+		}
 
 		.swiper-pagination {
 			position: relative;
