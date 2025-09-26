@@ -471,6 +471,10 @@
 	padding-bottom: 0;
 	border-radius: var(--radius-large2);
 }
+.popup_wrap.popup_wrap_type1 .popup_container .popup_inner:has(.msg_icon.mi_info) .popup_head:not(.popup_head.msg_has_title) {
+	min-height: 40px;
+	padding-bottom: 0;
+}
 .popup_wrap.popup_wrap_type1 .popup_container .popup_inner > .popup_close {
 	top: 12px;
 	right: 16px;

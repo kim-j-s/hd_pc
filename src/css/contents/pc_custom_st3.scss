@@ -2121,8 +2121,15 @@
 	background: var(--color-surface-white-subtle);
 	border-radius: var(--radius-medium3);
 	img {
-		width: 80px;
-		height: 80px;
+		// width: 80px;
+		// height: 80px;
+		width: 100%;
+	}
+	&.qr_code_imgbox_etc_ty1 {
+		width: 60px;
+		height: 60px;
+		padding: calc(var(--padding-3) - 1px);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	}
 }
 /* qr 이미지 박스 */

@@ -503,27 +503,27 @@
 		background-color: var(--color-element-primary-lighter);
 		border: var(--border-width-static-regular) solid var(--color-element-primary-light);
 		border-radius: 24px;
-		&::before,
-		&::after {
-			content: '';
-			display: inline-block;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
+		// &::before,
+		// &::after {
+		// 	content: '';
+		// 	display: inline-block;
+		// 	background-size: contain;
+		// 	background-position: center;
+		// 	background-repeat: no-repeat;
+		// }
 
-		&::before {
-			width: 32px;
-			height: 32px;  
-			vertical-align: top;
-			margin-top: 14px;
-			background-image: url('../images/content/prdcar/ico_qr_heart.png');			
-		}
-		&::after {
-			width: 60px;
-			height: 60px;
-			background-image: url('../images/content/prdcar/img_qr.png');			
-		}
+		// &::before {
+		// 	width: 32px;
+		// 	height: 32px;  
+		// 	vertical-align: top;
+		// 	margin-top: 14px;
+		// 	background-image: url('../images/content/prdcar/ico_qr_heart.png');			
+		// }
+		// &::after {
+		// 	width: 60px;
+		// 	height: 60px;
+		// 	background-image: url('../images/content/prdcar/img_qr.png');			
+		// }
 		.item {
 			flex: 1;
 			display: flex;

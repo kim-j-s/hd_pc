@@ -5065,7 +5065,8 @@ ul + .form_group_wrap {
 	padding-left: 20px;
 	font-size: var(--font-size-label-medium);
 	color: var(--color-text-danger);
-	background: url(../images/icon/icon_error_red.svg) no-repeat left center/16px auto;
+	text-align: left;
+	background: url(../images/icon/icon_error_red.svg) no-repeat left top 2px/16px auto;
 }
 /* PIN 인증 */
 /* 회원탈퇴 */
@@ -7935,26 +7936,6 @@ ul + .form_group_wrap {
 	background-color: var(--color-element-primary-lighter);
 	border: var(--border-width-static-regular) solid var(--color-element-primary-light);
 	border-radius: 24px;
-}
-.prd_car .banner_qr::before,
-.prd_car .banner_qr::after {
-	content: "";
-	display: inline-block;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.prd_car .banner_qr::before {
-	width: 32px;
-	height: 32px;
-	vertical-align: top;
-	margin-top: 14px;
-	background-image: url("../images/content/prdcar/ico_qr_heart.png");
-}
-.prd_car .banner_qr::after {
-	width: 60px;
-	height: 60px;
-	background-image: url("../images/content/prdcar/img_qr.png");
 }
 .prd_car .banner_qr .item {
 	-webkit-box-flex: 1;

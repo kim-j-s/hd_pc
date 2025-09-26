@@ -13759,6 +13759,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .table_wrap + .table_wrap {
 	margin-top: var(--gap-8);
 }
+.table_wrap + .coverage_item_list_ty3,
 .table_wrap + [class^="list_ty"],
 .table_wrap + .opt_case4 {
 	margin-top: var(--gap-5);
@@ -14037,6 +14038,14 @@ ol li .table_wrap + .list_ty2 li + li {
 	color: var(--color-text-subtle);
 	font-size: var(--font-size-body-xsmall);
 	background: var(--color-surface-white-subtle);
+}
+.table_wrap.type_mini .table_ty_mini th.ta_c,
+.table_wrap.type_mini .table_ty_mini td.ta_c {
+	text-align: center;
+}
+.table_wrap.type_mini .table_ty_mini th.bold,
+.table_wrap.type_mini .table_ty_mini td.bold {
+	font-weight: 700;
 }
 .table_wrap.type_mini .table_ty_mini thead th {
 	font-weight: 700 !important;

@@ -19,6 +19,12 @@
 				max-height: 100%;
 				padding-bottom: 0;
 				border-radius: var(--radius-large2);
+				&:has(.msg_icon.mi_info) {
+					.popup_head:not(.popup_head.msg_has_title) {
+						min-height: 40px;
+						padding-bottom: 0;
+					}
+				}
 
 				& > .popup_close {
 					top: 12px;
