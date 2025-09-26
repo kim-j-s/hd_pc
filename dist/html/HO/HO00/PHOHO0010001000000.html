@@ -2187,14 +2187,18 @@
 										</a>
 									</div>
 								</div>
+								<!-- s: 25-09-26 수정 -->
 								<div class="swiper_control">
-									<button class="swiper_button swiper_button_left"></button>
-									<button class="swiper_button swiper_button_right"></button>
-									<!-- s: 25-09-16 수정 -->
-									<div class="swiper-pagination sp_ty1 main_pager"></div>
-									<!-- e: 25-09-16 수정 -->
-									<button class="swiper-button-play-pause" aria-label="슬라이드 쇼 제어">정지</button>
+									<div class="c_inner">
+										<button class="swiper_button swiper_button_left main_l"></button>
+										<button class="swiper_button swiper_button_right main_r"></button>
+										<!-- s: 25-09-16 수정 -->
+										<div class="swiper-pagination sp_ty1 main_pager"></div>
+										<!-- e: 25-09-16 수정 -->
+										<button class="swiper-button-play-pause" aria-label="슬라이드 쇼 제어">정지</button>
+									</div>
 								</div>
+								<!-- e: 25-09-26 수정 -->
 							</div>
 
 							<!-- 로그인 영역 -->
@@ -3208,12 +3212,16 @@
 										</div>
 									</div>
 								</div>
+								<!-- s: 25-09-26 수정 -->
 								<div class="swiper_control">
-									<button class="swiper_button swiper_button_left"></button>
-									<button class="swiper_button swiper_button_right"></button>
-									<div class="swiper-pagination sp_ty1 pop_pager"></div>
-									<button class="swiper-button-play-pause" aria-label="슬라이드 쇼 제어">정지</button>
+									<div class="c_inner">
+										<button class="swiper_button swiper_button_left pop_l"></button>
+										<button class="swiper_button swiper_button_right pop_r"></button>
+										<div class="swiper-pagination sp_ty1 pop_pager"></div>
+										<button class="swiper-button-play-pause" aria-label="슬라이드 쇼 제어">정지</button>
+									</div>
 								</div>
+								<!-- e: 25-09-26 수정 -->
 							</div>
 						</div>
 					</div>
@@ -3278,6 +3286,7 @@
 
 	$(document).ready(function () {
 		// s: 25-09-16 수정
+		// s: 25-09-26 수정
 		const $swiperContainer = $(".register_bann .swiper-wrapper");
 		const slideCount = $swiperContainer.find(".swiper-slide").length;
 
@@ -3292,8 +3301,8 @@
 					disableOnInteraction: false,
 				},
 				navigation: {
-					nextEl: ".swiper_button_right",
-					prevEl: ".swiper_button_left",
+					nextEl: ".pop_r",
+					prevEl: ".pop_l",
 				},
 				a11y: {
 					enabled: true,
@@ -3324,6 +3333,7 @@
 		} else {
 			$(".register_bann").find(".swiper_control").hide();
 		}
+		// s: 25-09-26 수정
 		// e: 25-09-16 수정
 
 		let bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
@@ -3334,8 +3344,8 @@
 				disableOnInteraction: false,
 			},
 			navigation: {
-				nextEl: ".swiper_button_right",
-				prevEl: ".swiper_button_left",
+				nextEl: ".main_r",
+				prevEl: ".main_l",
 			},
 			a11y: {
 				enabled: true,
