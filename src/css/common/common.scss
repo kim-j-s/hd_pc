@@ -49,10 +49,12 @@
 }
 /* scroll margin top */
 
-// body {
-	// overflow: hidden;
-	
-// }
+body {
+	&.scroll_lock {
+		height: 100%;
+		overflow: hidden;
+	}
+}
 
 html {
 	// scroll-behavior: smooth;
