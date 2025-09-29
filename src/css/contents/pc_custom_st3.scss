@@ -681,9 +681,16 @@
 			background-position: right center;
 			background-image: url(../images/icon/arrowDown_ty6.svg);
 			font-size: var(--font-size-button-large);
-			color: var(--color-text-primary);
 			border: none;
 			border-radius: 0;
+			&:required {
+				&:valid {
+					color: var(--color-text-primary);
+				}
+			}
+			option {
+				color: var(--color-text-subtle);
+			}
 		}
 
 		&.tr {
@@ -813,6 +820,10 @@
 
 		.detail_price {
 			font-size: var(--font-size-button-large);
+			.point {
+				font-weight: normal;
+				color: var(--color-text-primary);
+			}
 		}
 	}
 	.table_wrap {

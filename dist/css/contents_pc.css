@@ -3579,9 +3579,14 @@ body {
 	background-position: right center;
 	background-image: url(../images/icon/arrowDown_ty6.svg);
 	font-size: var(--font-size-button-large);
-	color: var(--color-text-primary);
 	border: none;
 	border-radius: 0;
+}
+.select_option_box.ty3 .selectbox:required:valid {
+	color: var(--color-text-primary);
+}
+.select_option_box.ty3 .selectbox option {
+	color: var(--color-text-subtle);
 }
 .select_option_box.ty3.tr select {
 	text-align: right;
@@ -3703,6 +3708,10 @@ body {
 }
 .coverage_item_list_ty3 > .list .detail_price {
 	font-size: var(--font-size-button-large);
+}
+.coverage_item_list_ty3 > .list .detail_price .point {
+	font-weight: normal;
+	color: var(--color-text-primary);
 }
 .coverage_item_list_ty3 .table_wrap.type_mini .title {
 	margin: var(--gap-5) 0 var(--gap-4);

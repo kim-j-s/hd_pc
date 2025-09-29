@@ -82,7 +82,8 @@ function openHDPopup($triggerEl, target) {
 	// console.log('마지막 저장 위치 : ', openScrollTop);
 
 	//팝업 열기
-	$('#wrap').addClass('scroll_lock');
+	// $('#wrap').addClass('scroll_lock');
+	$("body").addClass("scroll_lock");
 	$target.addClass('active');
 
 	const $prd = $('.prd_link_area');
@@ -263,7 +264,8 @@ function closeHDPopup(target, returnTarget = null) {
 		console.log('팝업 닫기 전 위치 : ', closeScrollTop);
 
 		//팝업이 모두 닫힌 경우
-		$('#wrap').removeClass('scroll_lock');
+		$("body").removeClass("scroll_lock");
+		// $('#wrap').removeClass('scroll_lock');
 		if (closeScrollTop !== null) {
 			$(window).scrollTop(closeScrollTop);
 			// $('.wrap').scrollTop(closeScrollTop);
