@@ -918,21 +918,24 @@
 		align-items: stretch;
 		.prd_bi_wrap_l {
 			.pbw_inner {
+				background-color: var(--color-surface-brand-subtler);
+
 				.pi_bottom {
 					margin-top: 0;
-					padding-top: 40px;
+					// padding-top: 40px;
+					padding-top: 11px;
 
-					// .pb_details {
-					// 	.pb_details_inner {
-					// 		.item {
-					// 			.item_exp {
-					// 				strong {
-					// 					display: block;
-					// 				}
-					// 			}
-					// 		}
-					// 	}
-					// }
+					.pb_details {
+						.pb_details_inner {
+							.item {
+								.item_exp {
+									strong {
+										display: block;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -991,6 +994,7 @@
 			border-radius: var(--radius-large2, 24px);
 			background-repeat: no-repeat;
 			background-position: top 56px right 32px;
+			background-size: 320px auto;
 			background-color: var(--color-surface-light-blue-subtle);
 
 			&.pi_bg_ty1 { //해외여행자보험
@@ -1082,7 +1086,8 @@
 						display: block;
 						margin-bottom: 4px;
 						font-weight: 700;
-						font-size: var(--font-size-heading-medium);
+						// font-size: var(--font-size-heading-medium);
+						font-size: var(--font-size-body-xsmall);
 						color: var(--color-text-primary-bold);
 					}
 					font-size: var(--font-size-heading-xxlarge);
@@ -1112,12 +1117,23 @@
 					margin-top: var(--gap-6);
 				}
 
+				> .pb_desc {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-end;
+
+					.msg_info {
+						margin-top: 0;
+					}
+				}
+
 				.pb_details {
 					display: flex;
 					flex-direction: column;
 					// align-items: center;
 					min-height: 210px;
-					padding: var(--padding-5) var(--padding-7);
+					// padding: var(--padding-5) var(--padding-7);
+					padding: var(--padding-7);
 					border-radius: var(--radius-large2);
 					background-color: var(--color-surface-white-subtle);
 					
@@ -1136,33 +1152,103 @@
 					.pb_details_inner {
 						display: grid;
 						grid-template-columns: repeat(2, 1fr);
-						gap: 12px;
+						// gap: 12px;
 						width: 100%;
+
 						&.discount_item_box {
 							padding: 0;
 						}
+
+						// 자동차(개인)
+						&.item_car01 {
+							.item_ico_ty01 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty1.svg);
+							}
+							.item_ico_ty02 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty4.svg);
+							}
+							.item_ico_ty03 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty2.svg);
+							}
+							.item_ico_ty04 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty3.svg);
+							}
+							.item_ico_ty05 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty5.svg);
+							}
+							.item_ico_ty06 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty7.svg);
+							}
+							.item_ico_ty07 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty6.svg);
+							}
+							.item_ico_ty08 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty12.svg);
+							}
+							.item_ico_ty09 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty8.svg);
+							}
+							.item_ico_ty10 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty13.svg);
+							}
+							.item_ico_ty11 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty9.svg);
+							}
+							.item_ico_ty12 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty14.svg);
+							}
+						}
+
+
+
 						.item {
 							display: flex;
 							align-items: center;
-							padding: var(--padding-3) 0 var(--padding-3) 44px;
+							// padding: var(--padding-3) 0 var(--padding-3) 44px;
+							padding: var(--padding-6) 40px var(--padding-6) var(--padding-5);
 							font-size: var(--font-size-body-small);
 							background-repeat: no-repeat;
-							background-position: left center;
-							background-size: 32px;
+							// background-position: left center;
+							background-position: right 12px bottom 4px;
+							background-size: 40px;
+							border-right: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+							border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+							
 							.item_exp {
 								font-size: var(--font-size-body-small);
+								font-weight: 700;
+
 								> .item_sub_txt {
 									display: block;
+									max-width: 167px;
 									font-size: var(--font-size-body-xsmall);
+									font-weight: normal;
 									color: var(--color-text-subtle);
+								}
+
+								.percent {
+									display: flex;
+									align-items: center;
+									font-size: var(--font-size-heading-medium);
+									font-weight: 700;
+									color: var(--color-text-primary-bold);
+
+									&:after {
+										display: inline-block;
+										content: '%';
+										font-size: var(--font-size-heading-xsmall);
+										color: var(--color-text-primary-bold);
+									}
 								}
 							}
 
-							@for $i from 1 through 78 {
-								&.item_ico_ty#{$i} {
-									background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
-								}
-							}
+
+
+							// @for $i from 1 through 78 {
+							// 	&.item_ico_ty#{$i} {
+							// 		background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
+							// 	}
+							// }
 							// &.item_ico_ty1 {
 							// 	background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
 							// }
@@ -1285,7 +1371,21 @@
 
 					&.grid3 {
 						.pb_details_inner {
-							grid-template-columns: repeat(3, 1fr)
+							grid-template-columns: repeat(3, 1fr);
+
+							.item {
+								&:nth-child(-n+3){
+									padding-top: var(--padding-2);
+									border-top: 0;
+								}
+								&:nth-last-child(-n+3){
+									padding-bottom: var(--padding-2);
+								}
+								&:nth-child(3n){
+									background-position: right bottom 4px;
+									border-right: 0;
+								}
+							}
 						}
 					}
 				}
