@@ -104,6 +104,7 @@
 
 	.table {
 		width: 100%;
+		table-layout: fixed;
 		border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		// border-collapse: separate;
 		border-collapse: collapse;

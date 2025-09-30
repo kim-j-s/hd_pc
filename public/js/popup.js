@@ -79,7 +79,7 @@ function openHDPopup($triggerEl, target) {
 	const $winHeight = $(window).height();
 	const $docHeight = $(document).height();
 
-	// console.log('마지막 저장 위치 : ', openScrollTop);
+	console.log('마지막 저장 위치 : ', openScrollTop);
 
 	//팝업 열기
 	// $('#wrap').addClass('scroll_lock');
@@ -260,8 +260,9 @@ function closeHDPopup(target, returnTarget = null) {
 		// $target.attr("aria-hidden", "true");
 		// $target.find(".popup_inner").attr("aria-hidden", "true").removeAttr("tabindex", 0);
 
-		closeScrollTop = $('.wrap').scrollTop();
-		console.log('팝업 닫기 전 위치 : ', closeScrollTop);
+		// closeScrollTop = $('.wrap').scrollTop();
+		closeScrollTop = $(window).scrollTop();
+		// console.log('팝업 닫기 전 위치 : ', closeScrollTop);
 
 		//팝업이 모두 닫힌 경우
 		$("body").removeClass("scroll_lock");
