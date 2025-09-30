@@ -425,6 +425,9 @@
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner:not(:has(.load_cont, .load_cont_ty2)) .popup_head {
 	margin-bottom: var(--gap-5);
 }
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_head .popup_head_title {
+	padding-right: 40px;
+}
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont {
 	height: auto;
 	max-height: 100%;
@@ -623,10 +626,15 @@
 	-webkit-box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	border-radius: var(--radius-large2);
-	overflow: hidden;
 }
 .popup_wrap.popup_wrap_type3.bann .popup_container .popup_inner {
 	padding-bottom: 0;
+	border-radius: var(--radius-large2);
+}
+.popup_wrap.popup_wrap_type3.bann .popup_container .popup_inner:focus-visible {
+	outline-width: 1px;
+	outline-color: #000;
+	outline-style: solid;
 }
 .popup_wrap.popup_wrap_type3.bann .popup_container .popup_inner .popup_bottom .btn_area.between {
 	-webkit-box-pack: justify;

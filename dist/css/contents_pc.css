@@ -1030,9 +1030,6 @@ body {
 .wrap .form_group_wrap .full .radio_group_wrap:not(.full) {
 	width: calc(50% - 16px);
 }
-.wrap .form_group_wrap .full .label_tit .tooltip_wrap .tooltip_panel {
-	max-width: 836px;
-}
 .wrap .form_group_wrap .full .scp_list_r .radio_group_wrap {
 	width: auto;
 }
@@ -1296,7 +1293,9 @@ body {
 	margin-top: var(--gap-5);
 }
 .tooltip_wrap .tooltip_panel {
-	top: calc(100% + 6px);
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
 	max-width: 327px;
 	min-width: 120px;
 }
@@ -1310,9 +1309,6 @@ body {
 }
 .tooltip_wrap.al_right .tooltip_panel {
 	right: -16px;
-}
-.form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap .tooltip_panel {
-	top: calc(100% + 28px);
 }
 .file_upload_wrap {
 	display: -webkit-box;
@@ -2364,13 +2360,17 @@ body {
 	flex: 0 1 101px;
 }
 .form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap {
-	margin-left: var(--gap-2);
-	vertical-align: bottom;
+	top: 4px;
 }
-.form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap .tooltip_head button .hd_icon {
-	top: calc(50% - 3px);
+.form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap .tooltip_head .hd_icon {
 	width: 20px;
 	height: 20px;
+}
+.form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap .tooltip_head.active::after {
+	top: calc(100% - 8px);
+}
+.form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap .tooltip_panel {
+	top: calc(100% + 5px);
 }
 .form_list + .form_box {
 	margin-top: var(--gap-11);
