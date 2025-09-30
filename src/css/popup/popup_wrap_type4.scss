@@ -49,6 +49,7 @@
 			width: 600px;
 
 			.popup_inner {
+
 				padding-bottom: var(--padding-6);
 			
 				// 버튼 없을 시
@@ -64,6 +65,12 @@
 				&:not(:has(.load_cont, .load_cont_ty2)) {
 					.popup_head {
 						margin-bottom: var(--gap-5);
+					}
+				}
+
+				.popup_head {
+					.popup_head_title {
+						padding-right: 40px;
 					}
 				}
 				
