@@ -1037,6 +1037,11 @@ $(function(){
 
 		beforeShow: function () { 
 			$("body").addClass('modal_open');
+			setTimeout(function(){
+				$('#ui-datepicker-div').css({
+					position: 'absolute'
+				});
+			}, 0);
 		},
 	});
 
