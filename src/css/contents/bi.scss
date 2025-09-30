@@ -292,9 +292,9 @@
 				padding-top: 8px;
 				font-size: var(--font-size-body-small);
 				color: var(--color-text-subtle);
-				.tooltip_wrap {
-					vertical-align: top;
-				}
+				// .tooltip_wrap {
+				// 	vertical-align: top;
+				// }
 			}
 			&.active {
 				top: 30px;
@@ -1581,12 +1581,12 @@
 
 }
 
-.bit_inner_sub_text {
+// .bit_inner_sub_text {
 
-	.tooltip_wrap {
-		.tooltip_panel {
-			top: calc(100% + 32px);
-			max-width: 327px;
-		}
-	}
-}
+// 	.tooltip_wrap {
+// 		.tooltip_panel {
+// 			top: calc(100% + 32px);
+// 			max-width: 327px;
+// 		}
+// 	}
+// }
