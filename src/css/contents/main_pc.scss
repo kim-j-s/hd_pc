@@ -36,14 +36,14 @@
 			.main_sticky_cont {
 				.msc_inner {
 					position: relative;
-					overflow: hidden;
+					// overflow: hidden;
 					transition: top 0.3s;
 					&::before {
 						content: '';
 						position: absolute;
 						top: 0;
 						left: 50%;
-						width: 130vw;
+						// width: 130vw;
 						height: calc(100% - var(--calc-shadow-area));
 						transform: translateX(-50%);
 					}
@@ -62,6 +62,7 @@
 						left: 0;
 						z-index: 2;
 						&::before {
+							width: 130vw;
 							background-color: var(--color-background-white);
 							box-shadow: 0 var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0 rgba(0, 0, 0, 0.05);
 						}
@@ -844,6 +845,12 @@
 	position: relative;
 	text-align: center;
 
+	&.active {
+		.swiper_control {
+			display: flex;
+		}
+	}
+
 	.swiper {
 		width: 100%;
 		border-radius: var(--radius-large2);
@@ -865,7 +872,7 @@
 
 	.swiper_control {
 		display: none;
-		display: flex;
+		// display: flex;
 		align-items: center;
 		position: absolute;
 		// bottom: 32px;
