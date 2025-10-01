@@ -2110,6 +2110,7 @@
 
 .link_qr_box_img {
 	font-size: 0;
+	// background-color: rgba($color: #000000, $alpha: 0.3);
 	.qr_inner {
 		display: inline-block;
 		padding: calc(var(--padding-3) - 1px);
