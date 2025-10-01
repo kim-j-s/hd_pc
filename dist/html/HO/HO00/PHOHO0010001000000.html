@@ -2180,12 +2180,12 @@
 										<a class="swiper-slide bann_wrap bann_ty2" href="#">
 											<img src="../../../images/content/main/img_main_side_bann01.png" alt="배너 통 이미지1" />
 										</a>
+										<!-- <a class="swiper-slide bann_wrap bann_ty2" href="#">
+											<img src="../../../images/content/main/img_main_side_bann02.png" alt="배너 통 이미지2">
+										</a>	
 										<a class="swiper-slide bann_wrap bann_ty2" href="#">
-											<img src="../../../images/content/main/img_main_side_bann02.png" alt="배너 통 이미지2" />
-										</a>
-										<a class="swiper-slide bann_wrap bann_ty2" href="#">
-											<img src="../../../images/content/main/img_main_side_bann03.png" alt="배너 통 이미지3" />
-										</a>
+											<img src="../../../images/content/main/img_main_side_bann03.png" alt="배너 통 이미지3">
+										</a> -->
 									</div>
 								</div>
 								<!-- s: 25-09-26 수정 -->
@@ -2975,7 +2975,9 @@
 										<li>
 											<a href="#" class="item item_ico_ty1">
 												<div class="inner">
-													<strong class="tit tit_ty1">하이워크</strong>
+													<!-- s: 25-10-01 수정 -->
+													<strong class="tit tit_ty1">걷기할인</strong>
+													<!-- e: 25-10-01 수정 -->
 													<span class="text">
 														<span class="word">건강도 찾고 보험료 할인까지</span>
 													</span>
@@ -3345,35 +3347,43 @@
 		// s: 25-09-26 수정
 		// e: 25-09-16 수정
 
-		let bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
-			slidesPerView: 1,
-			updateOnWindowResize: true,
-			autoplay: {
-				delay: 6000,
-				disableOnInteraction: false,
-			},
-			navigation: {
-				nextEl: ".main_r",
-				prevEl: ".main_l",
-			},
-			a11y: {
-				enabled: true,
-				prevSlideMessage: "이전 항목으로 이동",
-				nextSlideMessage: "다음 항목으로 이동",
-			},
-			pagination: {
-				// s: 25-09-16 수정
-				el: ".main_pager",
-				// e: 25-09-16 수정
-				clickable: true,
-				type: "bullets",
-				renderBullet: function (index, className) {
-					return `<span class="${className}" aria-label="배너${index + 1}번으로 이동"></span>`;
-					// return `<span class="\${className}" aria-label="배너\${index + 1}번으로 이동"></span>`;
-					// jsp 사용시
+		/* s: 25-10-01 수정 */
+		const $swiperContainer2 = $(".mc_bann_wrap .swiper-wrapper");
+		const slideCount2 = $swiperContainer2.find(".swiper-slide").length;
+
+		if (slideCount2 > 1) {
+			$(".mc_bann_wrap").addClass("active");
+			let bannerSwiper = new Swiper(".mc_bann_wrap .swiper", {
+				slidesPerView: 1,
+				updateOnWindowResize: true,
+				autoplay: {
+					delay: 6000,
+					disableOnInteraction: false,
 				},
-			},
-		});
+				navigation: {
+					nextEl: ".main_r",
+					prevEl: ".main_l",
+				},
+				a11y: {
+					enabled: true,
+					prevSlideMessage: "이전 항목으로 이동",
+					nextSlideMessage: "다음 항목으로 이동",
+				},
+				pagination: {
+					// s: 25-09-16 수정
+					el: ".main_pager",
+					// e: 25-09-16 수정
+					clickable: true,
+					type: "bullets",
+					renderBullet: function (index, className) {
+						return `<span class="${className}" aria-label="배너${index + 1}번으로 이동"></span>`;
+						// return `<span class="\${className}" aria-label="배너\${index + 1}번으로 이동"></span>`;
+						// jsp 사용시
+					},
+				},
+			});
+		}
+		/* e: 25-10-01 수정 */
 
 		$(".mc_bann_wrap .swiper-button-play-pause").on("click", function () {
 			// bannerSwiper.autoplay.stop();

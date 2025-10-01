@@ -41,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>자동차 상세정보 | 상품 - 현대해상 다이렉트</title>
+		<title>보험료 계산결과 | 상품 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -55,70 +55,72 @@
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 
-		<!-- s: Bottom 팝업 -->
-		<div class="popup_wrap popup_wrap_type3 active" id="pop_type01" role="dialog" aria-modal="true" aria-hidden="false">
+		<div class="popup_wrap popup_wrap_type3 active" id="pop_full" role="dialog" aria-modal="true" aria-hidden="false">
 			<div class="popup_container">
-				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_full');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title">이륜차 사용용도 확인</div>
+						<div class="popup_head_title">보험료 계산결과 받기</div>
 					</div>
 
 					<div class="popup_cont">
-						<div class="popup_content ty2">
-							<div class="popup_content_top">
-								<!-- s: 25-08-22 UXW -->
-								<div class="title_h3 txt_center">
-									고객님의 이륜차 사용용도는<br />
-									<!-- s: 25-09-02 수정 -->
-									<!-- s: 25-10-01 수정 -->
-									<!-- 비유상운송 배달용 케이스 -->
-									<strong class="point">비유상운송 배달용</strong>입니다.
-									<!-- 가정용 및 기타 케이스 -->
-									<!-- <strong class="point">가정용 및 기타</strong>입니다. -->
-									<!-- e: 25-10-01 수정 -->
-									<!-- e: 25-09-02 수정 -->
+						<div class="popup_content">
+							<p class="text_sub_ty2">계산결과를 받으실 방법을 선택 후 정보를 입력해주세요.</p>
+
+							<div class="form_group_wrap">
+								<div class="form_line">
+									<div class="label_tit">발급방법</div>
+									<div class="radio_group_wrap" role="radiogroup">
+										<div class="inp_radio rd_btn">
+											<input type="radio" id="sel01_01" name="sel01" />
+											<label for="sel01_01">
+												<span class="label_cont">이메일</span>
+											</label>
+										</div>
+										<div class="inp_radio rd_btn">
+											<input type="radio" id="sel01_02" name="sel01" />
+											<label for="sel01_02">
+												<span class="label_cont">팩스</span>
+											</label>
+										</div>
+									</div>
+									<!-- s: 이메일, 팩스 선택 출력-->
+									<div class="form_group_wrap">
+										<div class="form_line">
+											<!-- 이메일 선택 -->
+											<div class="input_text">
+												<div class="inp">
+													<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
+													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												</div>
+											</div>
+											<!-- 팩스 선택 -->
+											<div class="input_text">
+												<div class="inp">
+													<input type="tel" placeholder="- 없이 입력" title="팩스 입력" />
+													<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- e: 이메일, 팩스 선택 출력-->
 								</div>
-								<!-- e: 25-08-22 UXW -->
-							</div>
-
-							<!-- s: 25-08-22 UXW -->
-							<!-- s: 25-10-01 수정 -->
-							<!-- 비유상운송 배달용 케이스 -->
-							<p class="text_sub_ty2">비유상운송 배달용으로 가입을 진행해주세요.</p>
-							<!-- 가정용 및 기타 케이스 -->
-							<!-- <p class="text_sub_ty2">가정용 및 기타용으로 가입을 진행해주세요.</p> -->
-							<!-- e: 25-10-01 수정 -->
-							<!-- e: 25-08-22 UXW -->
-
-							<div class="info_gray">
-								<p class="info_text">이륜차의 사용용도를 사실과 다르게 가입하거나, 사용용도가 변경된 것을 인지한 후 보험회사에 알리지 않거나 다르게 알릴 경우에는 보험계약이 해지될 수 있으며, 사고 시 약관에 따라 면책 처리될 수 있습니다.</p>
 							</div>
 						</div>
 					</div>
+
+					<!-- s: 하단 고정 버튼 영역 -->
 					<div class="popup_bottom">
 						<div class="btn_area">
-							<!-- s: 25-10-01 수정 -->
-							<!-- <button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_2">
-					
-						<span class="text">용도변경</span>
-					
-					</button>
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-					
-						<span class="text">아니요 선택</span>
-					
-					</button> -->
-							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">확인</span>
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2" disabled>
+								<span class="text">계산결과 받기</span>
 							</button>
-							<!-- e: 25-10-01 수정 -->
 						</div>
 					</div>
-					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
+					<!-- s: 하단 고정 버튼 영역 -->
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
-		<!-- e: Bottom 팝업 -->
 	</body>
 </html>

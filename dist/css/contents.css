@@ -1843,6 +1843,9 @@
 .bi_wrap .bi_opts_wrap .opts_area .hd_btn_s_b1 > .text {
 	text-align: center;
 }
+.bi_wrap .bi_opts_wrap .opts_area .hd_btn .text {
+	text-align: center;
+}
 /* 자동완성 */
 .autocomplete_wrap {
 	position: relative;

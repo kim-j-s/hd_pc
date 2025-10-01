@@ -4851,7 +4851,8 @@ strong {
 .btn {
 	position: relative;
 }
-.btn.calendar_call {
+.btn.calendar_call,
+.btn.calendar_call_month {
 	width: 44px;
 	height: 50px;
 	padding: 0;
@@ -4860,7 +4861,8 @@ strong {
 	line-height: 0;
 	border: none;
 }
-.btn.calendar_call::before {
+.btn.calendar_call::before,
+.btn.calendar_call_month::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -8950,6 +8952,7 @@ strong {
 }
 .input_text .del,
 .input_text .calendar_call,
+.input_text .calendar_call_month,
 .input_text .btn_search {
 	position: absolute;
 	top: 50%;
@@ -12045,6 +12048,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .radio_group_wrap + .space_list_ty2 {
 	margin-top: var(--gap-8);
 }
+.radio_group_wrap + .form_group_wrap,
 .radio_group_wrap + .list_ty2,
 .radio_group_wrap + .btn_area {
 	margin-top: var(--gap-5);

@@ -4998,7 +4998,6 @@ body {
 }
 .main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner {
 	position: relative;
-	overflow: hidden;
 	-webkit-transition: top 0.3s;
 	transition: top 0.3s;
 }
@@ -5007,7 +5006,6 @@ body {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	width: 130vw;
 	height: calc(100% - var(--calc-shadow-area));
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -5027,6 +5025,7 @@ body {
 	z-index: 2;
 }
 .main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner.active::before {
+	width: 130vw;
 	background-color: var(--color-background-white);
 	-webkit-box-shadow: 0 var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0 rgba(0, 0, 0, 0.05);
 	box-shadow: 0 var(--shadow-y-2, 6px) var(--shadow-blur-2, 8px) 0 rgba(0, 0, 0, 0.05);
@@ -5576,6 +5575,7 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	padding: var(--padding-8) 120px var(--padding-8) var(--padding-7);
+	height: 174px;
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid #fff;
 	background-repeat: no-repeat;
@@ -5622,6 +5622,7 @@ body {
 }
 .main_prd .main_prd_cont .mpc_item.mpc_item_ty2 {
 	background-color: var(--color-action-secondary-fill);
+	background-size: 160px 106px;
 }
 .main_prd .main_prd_cont .mpc_item.mpc_item_ty2.mit2_ic1 {
 	background-image: url(../images/content/main/icon_mit2_ic1.png);
@@ -5684,11 +5685,15 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	height: 118px;
+	height: 100%;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	gap: var(--gap-5);
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont > .title {
 	font-weight: 700;
@@ -5737,7 +5742,7 @@ body {
 	font-size: var(--font-size-body-medium);
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .fb_c {
-	padding-top: var(--gap-5);
+	min-height: 32px;
 }
 /* 메인 상품별 아이콘 처리 */
 /* 메인 베너별 관리 */
@@ -5789,6 +5794,11 @@ body {
 	position: relative;
 	text-align: center;
 }
+.mc_bann_wrap.active .swiper_control {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
 .mc_bann_wrap .swiper {
 	width: 100%;
 	border-radius: var(--radius-large2);
@@ -5801,9 +5811,6 @@ body {
 }
 .mc_bann_wrap .swiper_control {
 	display: none;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;

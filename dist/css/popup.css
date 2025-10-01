@@ -665,6 +665,9 @@
 .popup_wrap.popup_wrap_type3 .register_bann .swiper .swiper-wrapper .swiper-slide > a {
 	display: block;
 }
+.popup_wrap.popup_wrap_type3 .register_bann .swiper .swiper-wrapper .swiper-slide > a:focus-visible {
+	border-radius: var(--radius-large2) var(--radius-large2) 0 0;
+}
 .popup_wrap.popup_wrap_type3 .register_bann .swiper.swiper-initialized + .swiper_control {
 	display: block;
 }
