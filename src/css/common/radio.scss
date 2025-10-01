@@ -178,6 +178,7 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + .form_group_wrap,
 	& + .list_ty2,
 	& + .btn_area {
 		margin-top: var(--gap-5);
