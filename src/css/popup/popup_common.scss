@@ -163,14 +163,6 @@
 				}
 				.popup_content {
 					flex: 1;
-					// padding-bottom: 24px;
-
-					// > *:first-child {
-					// 	&.tab_wrap {
-					// 		margin-top: -16px;
-					// 	}
-					// }
-
 					.popup_content_top {
 
 						& + * {
@@ -219,7 +211,6 @@
 					}
 
 					.list_ty3 + .title_h4 {
-						// margin-top: var(--gap-8);
 						margin-top: var(--gap-9);
 					}
 					.title_h3 + .text_sub {

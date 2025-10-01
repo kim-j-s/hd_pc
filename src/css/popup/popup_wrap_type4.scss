@@ -96,6 +96,9 @@
 
 					.popup_content {
 						padding-bottom: var(--padding-12);
+						&.popup_content_qr {
+							padding-bottom: var(--padding-8);
+						}
 					}
 				}
 			}
