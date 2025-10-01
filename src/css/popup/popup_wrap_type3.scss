@@ -73,6 +73,9 @@
 
 						> a {
 							display: block;
+							&:focus-visible {
+								border-radius: var(--radius-large2) var(--radius-large2) 0 0;
+							}
 						}
 					}
 				}
