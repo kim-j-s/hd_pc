@@ -123,6 +123,21 @@ body {
 					}
 				}
 			}
+			
+			&.qm_btn_pro_info {
+				&::before {
+					border-color: rgba(0, 0, 0, 0.50);
+					background-color: rgba(0, 0, 0, 0.50);
+					background-image: url(../images/common/icon_qm_tel.png);
+				}
+				&:focus,
+				&:hover,
+				&:active {
+					&::before {
+						background-color: rgba(0, 0, 0, 0.75);
+					}
+				}
+			}
 			&.qm_btn_pagetop {
 				font-size: 0;
 				&::before {
