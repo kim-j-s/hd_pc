@@ -55,6 +55,7 @@
 	margin: 0 auto;
 }
 .popup_wrap .popup_container .popup_dim {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -449,6 +450,9 @@
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont .popup_content {
 	padding-bottom: var(--padding-12);
+}
+.popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont .popup_content.popup_content_qr {
+	padding-bottom: var(--padding-8);
 }
 .popup_wrap.popup_wrap_type4 .info_gray.ty2 + .call_box {
 	margin-top: var(--gap-11);

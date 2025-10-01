@@ -5931,6 +5931,21 @@ strong {
 	border: var(--border-width-static-regular, 1px) solid var(--color-button-tertiary-border, #b1b8be);
 }
 /* 달력 하단 버튼 */
+/* 월 선택 */
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td {
+	width: 33.3%;
+}
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody tr td:nth-child(2) {
+	width: 33.4%;
+}
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) a,
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) span {
+	color: var(--color-text-basic);
+}
+.ui-monthpicker.ui-datepicker .ui-state-default:before {
+	bottom: 4px;
+}
+/* 월 선택 */
 .modal_backdrop {
 	position: fixed;
 	z-index: 8000;
@@ -8926,6 +8941,14 @@ strong {
 }
 .input_text input:focus {
 	outline: none;
+}
+.input_text input.inp_picker:-moz-read-only,
+.input_text input.inp_picker_month:-moz-read-only {
+	background-color: var(--color-input-surface);
+}
+.input_text input.inp_picker:read-only,
+.input_text input.inp_picker_month:read-only {
+	background-color: var(--color-input-surface);
 }
 .input_text.readonly,
 .input_text.disabled {
@@ -13145,6 +13168,23 @@ ol li .table_wrap + .list_ty2 li + li {
 .opt_select_list.opt_case5 + .title_h3 {
 	margin-top: var(--gap-11);
 }
+.opt_select_list.opt_case6 {
+	margin: 0 -24px;
+	font-size: var(--font-size-body-medium);
+}
+.opt_select_list.opt_case6 a {
+	display: block;
+	padding: var(--padding-6) var(--padding-8);
+}
+.opt_select_list.opt_case6 a:hover {
+	background-color: var(--color-action-secondary-selected);
+}
+.opt_select_list.opt_case6 .option {
+	background: url(../images/icon/icon-open-window.svg) no-repeat center right 24px/20px auto;
+}
+.opt_select_list.opt_case6 .option2 {
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 24px/20px auto;
+}
 .opt_select_list_top {
 	padding-bottom: var(--gap-5);
 }
@@ -14130,6 +14170,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	margin-top: var(--gap-6);
 }
 .title_h3 + .list_ty3,
+.title_h3 + .info_gray,
 .title_h3 + .info_cont {
 	margin-top: var(--gap-6);
 }
@@ -14140,8 +14181,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .title_h3 + .invalid_msg {
 	margin-top: var(--gap-2);
 }
-.title_h3 + .call_box,
-.title_h3 + .info_gray {
+.title_h3 + .call_box {
 	margin-top: var(--gap-8);
 }
 .title_h3 + .table_wrap {

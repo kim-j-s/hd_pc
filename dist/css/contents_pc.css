@@ -108,6 +108,16 @@ body {
 .quick_menu .qm_item > a.qm_btn_chatbot:active::before {
 	background-color: var(--color-button-brand-fill-pressed);
 }
+.quick_menu .qm_item > a.qm_btn_pro_info::before {
+	border-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image: url(../images/common/icon_qm_tel.png);
+}
+.quick_menu .qm_item > a.qm_btn_pro_info:focus::before,
+.quick_menu .qm_item > a.qm_btn_pro_info:hover::before,
+.quick_menu .qm_item > a.qm_btn_pro_info:active::before {
+	background-color: rgba(0, 0, 0, 0.75);
+}
 .quick_menu .qm_item > a.qm_btn_pagetop {
 	font-size: 0;
 }
@@ -5574,7 +5584,7 @@ body {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	padding: var(--padding-8) 120px var(--padding-8) var(--padding-7);
+	padding: var(--padding-8) var(--padding-7);
 	height: 174px;
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid #fff;
@@ -5728,13 +5738,24 @@ body {
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title > .title {
 	font-size: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title > .title .t_name {
+	-webkit-box-flex: unset;
+	-ms-flex: unset;
+	flex: unset;
 	font-weight: 700;
 	color: var(--color-text-bolder);
 	font-size: var(--font-size-heading-small);
 	line-height: 150%;
 	vertical-align: middle;
+}
+.main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title > .title .badge_wrap {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title > .text {
 	padding-top: var(--gap-2);
