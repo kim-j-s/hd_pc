@@ -684,6 +684,7 @@
 			align-items: center;
 			// padding: var(--padding-8) 80px var(--padding-8) var(--padding-7);
 			padding: var(--padding-8) 120px var(--padding-8) var(--padding-7);
+			height: 174px;
 			border-radius: var(--radius-large2);
 			border: var(--border-width-static-regular) solid #fff;
 			background-repeat: no-repeat;
@@ -716,6 +717,7 @@
 				// background-position: right 36px center;
 				// border: var(--border-width-static-regular) solid var(--color-border-inverse);
 				background-color: var(--color-action-secondary-fill);
+				background-size: 160px 106px;
 				@for $i from 1 through 19 {
 					&.mit2_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
@@ -730,12 +732,10 @@
 
 			.mpc_item_cont {
 				display: flex;
-				height: 118px;
+				height: 100%;
 				flex-direction: column;
-				// new_chk
-				// justify-content: space-between;
-				// gap: var(--gap-5);
-				// new_chk
+				justify-content: space-between;
+				gap: var(--gap-5);
 
 				> .title {
 					font-weight: 700;
@@ -750,7 +750,6 @@
 					font-size: var(--font-size-body-medium);
 				}
 
-				// new_chk
 				.mpc_title {
 					display: flex;
 					flex-direction: column;
@@ -785,12 +784,10 @@
 						font-size: var(--font-size-body-medium);
 					}
 				}
-				// new_chk
 				
 				.fb_c {
-					// new_chk
-					padding-top: var(--gap-5);
-					// new_chk
+					min-height: 32px;
+					//padding-top: var(--gap-5);
 				}
 			}
 		}
