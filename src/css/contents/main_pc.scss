@@ -770,12 +770,17 @@
 
 					> .title {
 						font-size: 0;
+						display: flex;
 						.t_name {
+							flex: unset;
 							font-weight: 700;
 							color: var(--color-text-bolder);
 							font-size: var(--font-size-heading-small);
 							line-height: 150%;
 							vertical-align: middle;
+						}
+						.badge_wrap {
+							flex: 1;
 						}
 					}
 					> .text {
