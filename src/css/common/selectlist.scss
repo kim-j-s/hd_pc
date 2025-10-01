@@ -285,6 +285,27 @@
 			margin-top: var(--gap-11);
 		}
 	}
+	
+	// opt_case6
+	&.opt_case6 {
+		margin: 0 -24px;
+		font-size: var(--font-size-body-medium);
+		a {
+			display: block;
+			padding: var(--padding-6) var(--padding-8);
+			&:hover {
+				background-color: var(--color-action-secondary-selected);
+			}
+		}
+		.option {
+			background: url(../images/icon/icon-open-window.svg) no-repeat center right 24px / 20px auto;//24px auto;
+		}
+		.option2 {
+			background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 24px / 20px auto;//24px auto;
+		}
+	
+	}
+
 }
 
 
