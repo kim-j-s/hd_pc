@@ -1056,28 +1056,26 @@ $(function(){
 		showMonthAfterYear: true,
 		showButtonPanel: false,
 		showOtherMonths: true,
-		showAnim: 'slideDown',
+		// showAnim: 'slideDown',
 		duration: 300,
 		beforeShow: function () {
-			$("body").append('<div class="modal_backdrop"></div>');
-			// $("body").append('<div class="modal_backdrop"></div>');
-			// $("body").addClass('modal_open');
+			$("body").addClass('modal_open');
 			setTimeout(function(){
 				$("body").addClass('modal_open');
 				// const $dp = $("#ui-datepicker-div");
 				// $dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
 			}, 50);
     },
-    onClose: function() { 
-			// setTimeout(function(){
-			// 	$('.modal_backdrop').remove();
-			// },200);
-			// $("body").removeClass('modal_open')
-			setTimeout(function(){
-				$('.modal_backdrop').remove();
-				$('.wrap').attr('aria-hidden', 'false');
-			}, 200);
-		}
+    // onClose: function() { 
+		// 	// setTimeout(function(){
+		// 	// 	$('.modal_backdrop').remove();
+		// 	// },200);
+		// 	// $("body").removeClass('modal_open')
+		// 	setTimeout(function(){
+		// 		$('.modal_backdrop').remove();
+		// 		$('.wrap').attr('aria-hidden', 'false');
+		// 	}, 200);
+		// }
 	});
 	// 월 선택용
 
