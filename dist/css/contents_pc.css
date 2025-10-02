@@ -1101,7 +1101,7 @@ body {
 	width: calc(50% - 16px);
 }
 .wrap .form_group_wrap .c1 + .info_gray.ty2 {
-	margin-top: 16px;
+	margin-top: var(--gap-5);
 }
 .wrap .form_group_wrap .c1 + .search_reult_list_container {
 	margin-top: var(--gap-8);
@@ -2353,7 +2353,7 @@ body {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-	margin-top: 16px;
+	margin-top: var(--gap-5);
 }
 .reward_img_area + .bottom_fix_notice {
 	padding-top: var(--gap-8);
