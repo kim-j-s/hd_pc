@@ -101,6 +101,7 @@
 }
 
 .ag_group_wrap {
+	position: relative;
 	padding: 0 var(--padding-7);
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
@@ -286,13 +287,13 @@
 
 	}
 	&.zoom_wrap {
-		padding: 0;
-		border: none;
+		// padding: 0;
+		// border: none;
 
 		.zoom_content {
-			padding: var(--padding-8) var(--padding-7);//32px 20px 24px;
-			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-			border-radius: var(--radius-large2);
+			// padding: var(--padding-8) var(--padding-7);//32px 20px 24px;
+			// border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+			// border-radius: var(--radius-large2);
 
 			.table_wrap {
 				& + .title_h5 {
@@ -301,6 +302,20 @@
 			}
 		}
 	}
+
+
+	/* qr 이미지 유무 처리 */
+	&:has(.qr_box) {
+		.agree_graph {
+			padding-right: 92px;
+		}
+	}
+	/* qr 이미지 유무 처리 */
+
+
+
+
+
 }
 
 
@@ -442,21 +457,35 @@
 }
 
 .agree_qr_box {
-	margin-bottom: 16px;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	div {
-		width: calc(100% - 68px);
-	}
+	margin-bottom: 16px;
+	
+	// div {
+	// 	width: calc(100% - 68px);
+	// }
 	.qr_box {
-		width: 60px;
+		position: absolute;
+		top: 27px;
+		right: 20px;
+		width: 80px;
+		height: 80px;
+		padding: 9px;
+		background: var(--color-surface-white-subtle);
+		border-radius: var(--radius-medium3);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		img {
-			display: block;
 			width: 60px;
-			height: auto;
+			height: 60px;
 		}
+		// width: 60px;
+		// img {
+		// 	display: block;
+		// 	width: 60px;
+		// 	height: auto;
+		// }
 	}
 }
 

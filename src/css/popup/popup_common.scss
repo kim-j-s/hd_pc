@@ -162,6 +162,7 @@
 						padding: var(--padding-8) var(--padding-7);
 					}
 				}
+				
 				.popup_content {
 					flex: 1;
 					.popup_content_top {
@@ -177,9 +178,9 @@
 						& + .bottom_fix_notice {
 							margin-top: 0;
 						}
-						& + .zoom_wrap {
-							margin-top: var(--gap-3);
-						}
+						// & + .zoom_wrap {
+						// 	margin-top: var(--gap-3);
+						// }
 
 						& + .bg_area {
 							&.sticky_fix {
