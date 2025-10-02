@@ -1037,10 +1037,11 @@ $(function(){
 
 		beforeShow: function () { 
 			$("body").addClass('modal_open');
-			setTimeout(function(){
-				$('#ui-datepicker-div').css({
-					position: 'absolute'
-				});
+			setTimeout(function() {
+				if ($(input).closest('.popup_wrap').length) {
+					// popup_wrap 안에 있으면 absolute
+					$('#ui-datepicker-div').css({ position: 'absolute' });
+				}
 			}, 0);
 		},
 	});
