@@ -210,7 +210,7 @@
 						&.bpop_sub_title {
 							font-size: var(--font-size-body-medium);
 							& + * {
-								margin-top: 16px !important;
+								margin-top: var(--gap-5) !important;
 							}
 						}
 					}

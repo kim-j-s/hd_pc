@@ -203,6 +203,11 @@
 .ui-monthpicker.ui-datepicker .ui-state-default:before {
 	bottom: 4px;
 }
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) a.ui-state-default.ui-state-active, 
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) span.ui-state-default.ui-state-active {
+	color: var(--color-text-inverse-static);
+}
+// .ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td .ui-state-default.ui-state-active {
 /* 월 선택 */
 
 

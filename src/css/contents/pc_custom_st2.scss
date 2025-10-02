@@ -372,7 +372,7 @@
 			}
 		
 			& + .info_gray.ty2 {
-				margin-top: 16px;         
+				margin-top: var(--gap-5);         
 			}
 		
 			& + .search_reult_list_container {
@@ -2134,7 +2134,7 @@
 	width: 252px;
 	height: 55px;
 	justify-content: flex-start;
-	margin-top: 16px;
+	margin-top: var(--gap-5);
 	& + .bottom_fix_notice  {
 		padding-top: var(--gap-8);
 	}

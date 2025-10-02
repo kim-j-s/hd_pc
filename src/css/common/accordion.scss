@@ -334,7 +334,7 @@
 			}
 
 			.text_sub + .space_list_ty5 {
-				margin-top: 16px;
+				margin-top: var(--gap-5);
 			}
 			.space_list_ty5 {
 				.title_h5 {
@@ -342,7 +342,7 @@
 				}
 				.inp_checkbox {
 					& + .title_h5 {
-						margin-top: 16px;
+						margin-top: var(--gap-5);
 					}
 				}
 			}
