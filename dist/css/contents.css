@@ -5318,9 +5318,6 @@ ul + .form_group_wrap {
 .zoom_control > .inner .zoom_control_btns .zcb.z_down {
 	background-image: url(../images/icon/icon_minus.svg);
 }
-.zoom_content {
-	margin-top: var(--gap-8);
-}
 /* 간편비밀번호 팝업 */
 .certify_box {
 	display: -webkit-box;

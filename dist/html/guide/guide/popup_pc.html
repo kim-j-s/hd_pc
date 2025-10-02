@@ -64,56 +64,151 @@
 				}
 			}
 			.dmpdmpdmp {
+				-webkit-box-flex: 0;
+				-ms-flex: none;
+				flex: none;
+				width: 100%;
 				height: 500px;
 				background: blue;
 				&.dmpdmpdmp_ty2 {
 					background-color: red;
 				}
 			}
+			.bbb_box_pop_test {
+				-webkit-box-flex: 0;
+				-ms-flex: none;
+				flex: none;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+
+				gap: 20px;
+				width: 100%;
+				margin: 20px 0;
+			}
 		</style>
 
 		<div id="wrap" class="wrap">
 			<div id="container" class="container">
-				<div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
-				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div>
-				<div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
-				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div>
+				<!-- <div class="dmpdmpdmp dmpdmpdmp_ty1"></div> -->
+				<!-- <div class="dmpdmpdmp dmpdmpdmp_ty2"></div> -->
+				<!-- <div class="dmpdmpdmp dmpdmpdmp_ty1"></div> -->
+				<!-- <div class="dmpdmpdmp dmpdmpdmp_ty2"></div> -->
 
 				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type01');"><span>Full 팝업열기 (600px)</span></button> -->
 				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type04');"><span>Bottom 팝업열기</span></button> -->
 				<!-- <button type="button" class="btn popup_open" id="btn01" onclick="openHDPopup(this,'pop_type02');"><span>Layer 팝업열기(팝업중첩)</span></button> -->
 				<!-- <button type="button" class="btn popup_open" onclick="openHDPopup(this,'pop_type03');"><span>Layer 팝업열기</span></button> -->
 
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'if');">
-					<span class="text">iframe 테스트 (600px)</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type01');">
-					<span class="text">Full 팝업열기 (600px)</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type05');">
-					<span class="text">Full 팝업열기 (800px)</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type04');">
-					<span class="text">Bottom 팝업열기(팝업중첩)</span>
-				</button>
+				<div class="bbb_box_pop_test">
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'if');">
+						<span class="text">iframe 테스트 (600px)</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type01');">
+						<span class="text">Full 팝업열기 (600px)</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type05');">
+						<span class="text">Full 팝업열기 (800px)</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type04');">
+						<span class="text">Bottom 팝업열기(팝업중첩)</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type02');">
+						<span class="text">Layer 팝업열기(팝업중첩)</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type03');">
+						<span class="text">Layer 팝업열기</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type06');">
+						<span class="text">Confirm 팝업열기</span>
+					</button>
+					<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_iframe01');">
+						<span class="text">iframe Case 팝업열기</span>
+					</button>
+				</div>
+
+				<div class="bbb_box_pop_test">
+					<div class="input_text calendar">
+						<div class="inp">
+							<input type="tel" class="inp_picker" placeholder="날짜를 선택하세요" title="날짜를 입력해주세요" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
+						</div>
+					</div>
+				</div>
+
 				<div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
 				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div>
+
+				<div class="bbb_box_pop_test">
+					<div class="select_item select_item_case01 select_item_case01_mi si_ellipsis" role="button" tabindex="0" title="조회기간 선택" onclick="openHDPopup(this,'pop_type04');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type04');">
+						<div class="select_item_inner">
+							<div class="si_item" data-placeholder="선택해주세요.">2024.03.19~2025.03.19</div>
+							<span class="si_stat">선택됨</span>
+						</div>
+					</div>
+				</div>
+
 				<div class="dmpdmpdmp dmpdmpdmp_ty1"></div>
 				<div class="dmpdmpdmp dmpdmpdmp_ty2"></div>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type02');">
-					<span class="text">Layer 팝업열기(팝업중첩)</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type03');">
-					<span class="text">Layer 팝업열기</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_type06');">
-					<span class="text">Confirm 팝업열기</span>
-				</button>
-				<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_5" onclick="openHDPopup(this,'pop_iframe01');">
-					<span class="text">iframe Case 팝업열기</span>
-				</button>
 			</div>
 		</div>
+
+		<!-- s: 조회조건 - 연말정산선택 날짜 선택 팝업 -->
+		<div class="popup_wrap popup_wrap_type3" id="pop_type04" role="dialog" aria-modal="true" aria-hidden="true">
+			<div class="popup_container">
+				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type04');"></div>
+				<div class="popup_inner">
+					<div class="popup_head">
+						<div class="popup_head_title">조회조건</div>
+					</div>
+
+					<div class="popup_cont">
+						<div class="popup_content">
+							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+							<div class="form_group_wrap">
+								<div class="form_line">
+									<div class="label_tit">기간(최대 2년)</div>
+									<div class="range_calrendar">
+										<div class="input_text calendar">
+											<div class="inp">
+												<input type="tel" class="inp_picker_month" title="조회기간 시작 월을 입력해주세요" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call_month" title="월 선택"></button>
+											</div>
+										</div>
+										<div class="input_text calendar">
+											<div class="inp">
+												<input type="tel" class="inp_picker_month" title="조회기간 마지막 월을 입력해주세요" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call_month" title="월 선택"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form_line">
+									<div class="label_tit">기간(최대 2년)</div>
+									<div class="range_calrendar">
+										<div class="input_text calendar">
+											<div class="inp">
+												<input type="tel" class="inp_picker" placeholder="날짜를 선택하세요" title="날짜를 입력해주세요" />
+												<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+						</div>
+					</div>
+					<div class="popup_bottom">
+						<div class="btn_area">
+							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
+								<span class="text">확인</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type04');"><span class="blind">팝업 닫기</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 조회조건 - 연말정산선택 날짜 선택 팝업 -->
 
 		<!-- Full 팝업 -->
 		<div class="popup_wrap popup_wrap_type4 iframe_custom_pc" id="if" role="dialog" aria-hidden="true">

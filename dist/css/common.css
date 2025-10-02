@@ -2578,9 +2578,12 @@ strong {
 	margin-top: var(--gap-11);
 }
 .ag_group_wrap {
+	position: relative;
 	padding: 0 var(--padding-7);
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	/* qr 이미지 유무 처리 */
+	/* qr 이미지 유무 처리 */
 }
 .ag_group_wrap + .ag_group_wrap {
 	margin-top: var(--gap-5);
@@ -2725,17 +2728,11 @@ strong {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
-.ag_group_wrap.zoom_wrap {
-	padding: 0;
-	border: none;
-}
-.ag_group_wrap.zoom_wrap .zoom_content {
-	padding: var(--padding-8) var(--padding-7);
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
-	border-radius: var(--radius-large2);
-}
 .ag_group_wrap.zoom_wrap .zoom_content .table_wrap + .title_h5 {
 	margin-top: var(--gap-5);
+}
+.ag_group_wrap:has(.qr_box) .agree_graph {
+	padding-right: 92px;
 }
 .agrdo_group_sub {
 	margin-top: var(--gap-3);
@@ -2870,7 +2867,6 @@ strong {
 	border-radius: 0px 40px 40px 0px;
 }
 .agree_qr_box {
-	margin-bottom: 16px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2879,17 +2875,22 @@ strong {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-3);
-}
-.agree_qr_box div {
-	width: calc(100% - 68px);
+	margin-bottom: 16px;
 }
 .agree_qr_box .qr_box {
-	width: 60px;
+	position: absolute;
+	top: 27px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	padding: 9px;
+	background: var(--color-surface-white-subtle);
+	border-radius: var(--radius-medium3);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
 .agree_qr_box .qr_box img {
-	display: block;
 	width: 60px;
-	height: auto;
+	height: 60px;
 }
 .sep_chk_box {
 	margin-top: var(--gap-5);
@@ -5947,6 +5948,10 @@ strong {
 }
 .ui-monthpicker.ui-datepicker .ui-state-default:before {
 	bottom: 4px;
+}
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) a.ui-state-default.ui-state-active,
+.ui-monthpicker.ui-datepicker .ui-datepicker-calendar tbody td:nth-child(1):not(.ui-state-disabled) span.ui-state-default.ui-state-active {
+	color: var(--color-text-inverse-static);
 }
 /* 월 선택 */
 .modal_backdrop {

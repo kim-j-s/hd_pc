@@ -3540,7 +3540,12 @@
 
 				isClick = false;
 
-				// console.log($this.find('.text').attr('title'));
+				/* s: 25-10-10 수정 */
+				if (!$("body").hasClass("sc_up") && !$(".msc_inner").hasClass("active")) {
+					$("body").addClass("sc_down");
+					$(".main_sticky_cont").css("height", "98px");
+				}
+				/* e: 25-10-10 수정 */
 
 				if ($target.length) {
 					// scrollVal = false;
