@@ -898,13 +898,27 @@ function inputState() {
 
 function inpPhoneFormat() {
 	$('.input_text').each(function() {
-		if( $(this).hasClass('phone') && $(this).hasClass('readonly') || $(this).hasClass('phone') && $(this).hasClass('disabled') ){
+		// if( $(this).hasClass('phone') && $(this).hasClass('readonly') || $(this).hasClass('phone') && $(this).hasClass('disabled') ){
+		if( $(this).hasClass('phone') ){
 			const $inp = $(this).children('.inp').find('input');
 			let val = $inp.val();
 			val = val.replace(/[^0-9*]/g, '');
 			newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
 			$inp.val(newVal).addClass('isVal');
 		}
+		// 전화번호 입력 적용 준비 중 스크립트
+		// if( $(this).hasClass('phone_full') && $(this).hasClass('readonly') || $(this).hasClass('phone_full') && $(this).hasClass('disabled') ){
+			if( $(this).hasClass('phone_full') ) {
+				const $inp = $(this).children('.inp').find('input');
+				let val = $inp.val().replace(/[^0-9]/g, "");
+				if (val.length === 10) {
+					val = val.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+				} else if (val.length === 11) {
+					val = val.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
+				}
+				$inp.val(val);
+			}
+			// 전화번호 입력 적용 준비 중 스크립트
 	});
 }
 

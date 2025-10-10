@@ -169,6 +169,14 @@
 			gap: 6px;
 		}
 
+		// 추후 통합 예정
+		&.phone_full {
+			input {
+				padding-left: 16px;
+			}
+		}
+		// 추후 통합 예정
+
 	}
 
 	&.calendar {
