@@ -232,12 +232,14 @@ caption {
 a:focus,
 button:focus,
 select:focus,
-.select_item:focus,
-input:focus {
+// .select_item:focus,
+.select_item:focus {
+// input:focus {
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
 	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
 }
+
 input:focus {
 	+ label {
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
@@ -245,6 +247,7 @@ input:focus {
 		outline-offset: -2px;
 	}
 }
+
 .inp {
 	input:focus {
 		box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
@@ -252,6 +255,16 @@ input:focus {
 		outline-offset: -2px;
 	}
 }
+
+/*
+.input_text {
+	&:has(input:focus) {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+		outline: var(--border-width-static-medium) solid #000;
+		outline-offset: -2px;
+	}
+}
+*/
 
 
 

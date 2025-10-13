@@ -174,16 +174,12 @@ strong {
 }
 
 .wrap {
-	// display: flex;
 	display: block;
-	// flex-direction: column;
-	// height: 100%;
 	position: relative;
 	display: block;
 	min-width: 1280px;
 	height: auto;
 	min-height: 100%;
-	//padding: 120px 0 203px 0;
 	padding: 120px 0 0 0;
 	&:has(.header_pc_nd) {
 		padding: 72px 0 64px 0;
@@ -210,16 +206,6 @@ strong {
 	}
 
 	.container {
-		// old
-		// position: relative;
-		// overflow-y: auto;
-		// display: flex;
-		// flex-direction: column;
-		// flex: 1;
-		// padding: var(--padding-6) var(--padding-8) 64px;
-		// padding: var(--padding-6) var(--padding-8) var(--padding-12);
-		// old
-
 		position: relative;
 		display: flex;
 		flex-direction: row;
@@ -228,7 +214,6 @@ strong {
 		gap: var(--gap-12);
 		width: 1188px;
 		margin: 0 auto;
-		// padding: 0 0 var(--padding-12);
 		min-height: calc(100vh - 375px);
 		overflow: inherit;
 		&.main_container {
@@ -238,10 +223,6 @@ strong {
 		}
 
 		.content {
-			// old
-			// flex: 1;
-			// old
-
 			flex: none;
 			width: 836px;
 			&.content_st1 {
@@ -273,15 +254,6 @@ strong {
 		}
 
 	}
-
-	// 모바일에서 적용 케이스
-	// .container_form {
-	// 	flex: 1;
-	// 	position: relative;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	overflow-y: auto;
-	// }
 
 	&.wrap_ty2 {
 		.header {
@@ -341,11 +313,14 @@ strong {
 		}
 	}
 
-	// &.wrap_ty3 {
-	// 	.container {
-	// 		border: var(--border-width-static-regular) solid red;
-	// 	}
-	// }
+	&.service {
+		.header {
+			background-color: var(--color-surface-warning-subtler);
+		}
+		.container {
+			padding-bottom: 16px;
+		}
+	}
 
 	/* 조건별 container 상단 간격 */
 	.header_pc {
