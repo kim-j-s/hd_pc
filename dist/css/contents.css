@@ -800,7 +800,6 @@
 	display: inline-block;
 	width: 32px;
 	height: 32px;
-	margin-right: 12px;
 	border: none;
 	border-radius: var(--radius-small3);
 	background-repeat: no-repeat;
@@ -5913,12 +5912,6 @@ ul + .form_group_wrap {
 	transform: rotate(0deg);
 }
 /* 보험진단 서비스 */
-.wrap.service .header {
-	background-color: var(--color-surface-warning-subtler);
-}
-.wrap.service .container {
-	padding-bottom: 16px;
-}
 .is_diagnosis_service .service_visual {
 	height: calc(100vh - 40px);
 	margin: -16px -24px 0;

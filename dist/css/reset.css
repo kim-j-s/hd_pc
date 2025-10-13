@@ -981,8 +981,7 @@ caption {
 a:focus,
 button:focus,
 select:focus,
-.select_item:focus,
-input:focus {
+.select_item:focus {
 	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	outline: var(--border-width-static-medium) solid #000;
@@ -1000,6 +999,15 @@ input:focus + label {
 	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
 }
+/*
+.input_text {
+	&:has(input:focus) {
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+		outline: var(--border-width-static-medium) solid #000;
+		outline-offset: -2px;
+	}
+}
+*/
 /* 모바일 디바이스 분기 */
 @media screen and (max-width: 375px) {
 	html {
