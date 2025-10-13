@@ -24,9 +24,13 @@
 		}
 	}
 	
+	// margin-top 32
+	& + .selectitem_wrap,
 	& + .btn_area.ty2 {
 		margin-top: var(--gap-8);
 	}
+
+	// margin-top 16
 	& + .text_sub,
 	& + [class^=list_ty],
 	& + [class^=list_depth_ty] {
