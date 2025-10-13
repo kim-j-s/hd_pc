@@ -1,14 +1,4 @@
 //보험 진단 결과
-.wrap {
-	&.service {
-		.header {
-			background-color: var(--color-surface-warning-subtler);
-		}
-		.container {
-			padding-bottom: 16px;
-		}
-	}
-}
 .is_diagnosis_service {
 	.service_visual {
 		height: calc(100vh - 40px);
