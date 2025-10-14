@@ -620,13 +620,28 @@
 
 	// 전화번호 입력 적용 준비 중 스크립트
 	$DOM.on('focus', '.input_text.phone_full input', function () {
-		// console.log('진입');
-		let $this = $(this);
-		let val = $this.val().replace(/-/g, ""); // 하이픈 제거
+		console.log('진입');
+	
+		const $this = $(this);
+	
+		// 읽기 전용 또는 비활성화 상태일 경우 중단
+		if ($this.prop('readonly') || $this.prop('disabled')) {
+			return;
+		}
+	
+		// 값 가져오기 및 하이픈/공백 제거
+		let val = $this.val() ? $this.val().replace(/[-\s]/g, '') : '';
+	
+		// 값이 없으면 기본값 010 세팅
 		if (!val) {
-			val = "010"; // 값이 없으면 010 넣기
-		}	
-		$this.val(val);
+			val = '010';
+		}
+	
+		// 최대 입력 길이 11자리 설정
+		$this.attr('maxlength', 11);
+	
+		// 값 반영 및 상태 클래스 초기화
+		$this.val(val).removeClass('isVal');
 	});
 
 	$DOM.on("blur", ".input_text.phone_full input", function () {
@@ -1049,7 +1064,7 @@ $(function(){
 		currentText: "오늘",
 		// 닫기 버튼 추가
 
-		beforeShow: function () { 
+		beforeShow: function (input) { 
 			$("body").addClass('modal_open');
 			setTimeout(function() {
 				if ($(input).closest('.popup_wrap').length) {

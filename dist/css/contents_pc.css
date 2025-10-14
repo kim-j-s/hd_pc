@@ -2731,6 +2731,8 @@
 	position: relative;
 	padding-left: 72px;
 	font-size: var(--font-size-body-medium);
+	font-weight: 700;
+	color: var(--color-text-bolder);
 }
 .bottom_panel.ft_fix .bottom_panel_cont .total > dl dt:before {
 	position: absolute;
@@ -2745,6 +2747,9 @@
 	background-repeat: no-repeat;
 	background-size: 32px;
 	border-radius: var(--radius-medium1);
+}
+.bottom_panel.ft_fix .bottom_panel_cont .total > dl dt .sub {
+	font-size: var(--font-size-body-small);
 }
 .bottom_panel.ft_fix .bottom_panel_cont .total > dl dd {
 	font-size: var(--font-size-heading-large);
@@ -4767,7 +4772,7 @@
 	width: 96px;
 	height: 96px;
 	border-radius: var(--radius-medium3);
-	background: var(--color-surface-white-subtle) url("../images/content/gu/install_qr.png") no-repeat center center;
+	background: var(--color-surface-white-subtle) url("../images/content/gu/install_qr.png") no-repeat center center/80px auto;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
