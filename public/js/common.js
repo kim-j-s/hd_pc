@@ -1064,7 +1064,7 @@ $(function(){
 		currentText: "오늘",
 		// 닫기 버튼 추가
 
-		beforeShow: function () { 
+		beforeShow: function (input) { 
 			$("body").addClass('modal_open');
 			setTimeout(function() {
 				if ($(input).closest('.popup_wrap').length) {

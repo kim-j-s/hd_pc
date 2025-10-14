@@ -1604,6 +1604,16 @@
 					text-align: center;
 				}
 			}
+
+			.opts_area_item {
+				&.opts_align_etc01 {
+					.hd_btn {
+						.text {
+							text-align: left;
+						}
+					}
+				}
+			}
 		}
 	}
 }

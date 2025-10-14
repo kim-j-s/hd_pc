@@ -1099,6 +1099,7 @@
 							color: var(--color-text-subtle);
 						}
 						dd {
+							flex: none;
 							text-align: right;
 						}
 						& + dl {
