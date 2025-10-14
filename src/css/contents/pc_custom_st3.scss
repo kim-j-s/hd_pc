@@ -2074,7 +2074,7 @@
 		width: 96px;
 		height: 96px;
 		border-radius: var(--radius-medium3);
-		background: var(--color-surface-white-subtle) url('../images/content/gu/install_qr.png') no-repeat center center;
+		background: var(--color-surface-white-subtle) url('../images/content/gu/install_qr.png') no-repeat center center / 80px auto;
 		transform: translateY(-50%);
 	}
 }
