@@ -2551,6 +2551,8 @@
 						position: relative;
 						padding-left: 72px;
 						font-size: var(--font-size-body-medium);
+						font-weight: 700;
+						color: var(--color-text-bolder);
 
 						&:before {
 							position: absolute;
@@ -2565,6 +2567,10 @@
 							background-repeat: no-repeat;
 							background-size: 32px;
 							border-radius: var(--radius-medium1);
+						}
+
+						.sub {
+							font-size: var(--font-size-body-small);
 						}
 					}
 					dd {
