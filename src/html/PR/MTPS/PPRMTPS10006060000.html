@@ -5,16 +5,36 @@
 {{#> popup/popup_full popup-class="big" popup-id="pop_type01" popup-title="상품 약관 보기" popup-active=true }}
 <!-- e: 25-08-13 수정 -->
 <div class="popup_cont">
+	<!-- s: 25-10-16 수정 -->
 	<div class="popup_content">
-    문서 자리	
+		<!-- .process_info_area -->
+		<div class="process_info_area">
+			<div class="complete_info" aria-hidden="true">
+				<lottie-player src="../../../json/lottie_info.jso" background="transparent" speed="1" autoplay></lottie-player>
+			</div>
+			<h2 class="process_title">
+				현대해상 <strong>자동차보험(CM개인용)</strong> <br>약관은 다운로드 후에 확인이 가능합니다.
+			</h2>
+			<div class="process_desc">
+				아래 다운로드 버튼을 눌러 파일을 저장해주세요.
+			</div>
+		</div>
+		<!-- //.process_info_area -->
+
+		<div class="btn_area basic center">
+			{{> cp/button type="2" size="2" b-text="약관 다운로드"}}
+		</div>
   </div>
+	<!-- e: 25-10-16 수정 -->
 </div>
 
 <div class="popup_bottom">
 	<div class="btn_area">
-    {{> cp/button type="3" size="2" b-text="다운로드"}}
+		<!-- s: 25-10-16 수정 -->
+    {{> cp/button type="1" size="2" b-text="약관을 다운로드 해주세요" disabled=true }}
+		<!-- e: 25-10-16 수정 -->
     <!-- s: 25-08-25 UXW -->
-    {{> cp/button type="1" size="2" b-text="모두 확인했어요"}}
+    <!-- {{> cp/button type="1" size="2" b-text="모두 확인했어요"}} -->
     <!-- e: 25-08-25 UXW -->
   </div>
 </div>
