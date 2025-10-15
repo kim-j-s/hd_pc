@@ -4569,6 +4569,9 @@ ul + .form_group_wrap {
 .info_cont .data_list ul li + li {
 	margin-top: var(--gap-3);
 }
+.info_cont + .title_h3 {
+	margin-top: var(--gap-11);
+}
 /* 보험가입 진행 정보 */
 .pro_info_wrap .pro_info_item + .pro_info_item {
 	margin-top: calc(var(--gap-7) + 1px);
@@ -4990,6 +4993,15 @@ ul + .form_group_wrap {
 }
 .appendix_item {
 	margin-top: var(--gap-11);
+}
+.connected_service_list li > * {
+	vertical-align: middle;
+}
+.connected_service_list li img {
+	display: inline-block;
+	height: 20px;
+	margin-left: 2px;
+	vertical-align: middle;
 }
 /* 운전자보험 - 보험료 결제 */
 .insurance_payment_area {

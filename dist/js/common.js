@@ -712,9 +712,10 @@ function tabScroll(){
 // 간편정보 노출 방식
 function simpleInfo(){
 	$('#container, .popup_cont, .container_form').on('scroll', function() {
-		if ($('.simple_info_wrap.ty2').length) {
-			const $wrapper = $(this);
-			const $target = $wrapper.find('.simple_info_wrap.ty2');
+		const $wrapper = $(this);
+		const $target = $wrapper.find('.simple_info_wrap.ty2');
+
+		if ($target.length) {
 			const $targetChild = $target.children('.simple_info_item');
 			
 			const simpleHeight = $targetChild.height();
