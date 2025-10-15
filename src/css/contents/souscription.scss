@@ -1052,3 +1052,21 @@ ul + .form_group_wrap {
 .appendix_item {
 	margin-top: var(--gap-11);
 }
+
+
+
+// 커넥티드카 서비스
+.connected_service_list {
+	li {
+		> * {
+			vertical-align: middle;
+		}
+
+		img {
+			display: inline-block;
+			height: 20px;
+			margin-left: 2px;
+			vertical-align: middle;
+		}
+	}
+}
