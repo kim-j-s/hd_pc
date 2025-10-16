@@ -1225,7 +1225,7 @@
 
 								.item_exp {
 									flex: 1;
-									padding-right: 72px;
+									padding-right: 52px;
 									background-repeat: no-repeat;
 									background-position: right 12px center;
 									font-size: var(--font-size-body-large);
@@ -1675,7 +1675,18 @@
 							}
 						}
 
-						// 펫 (강아지)
+						// 연금
+						&.item_pension {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_pension_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 굿앤굿우리펫 (강아지)
 						&.item_pet {
 							@for $i from 1 through 4 {
 								.item_ico_ty#{$i} {
@@ -1686,12 +1697,34 @@
 							}
 						}
 
-						// 펫 (고양이)
+						// 굿앤굿우리펫 (고양이)
 						&.item_pet2 {
 							@for $i from 1 through 4 {
 								.item_ico_ty#{$i} {
 									.item_exp {
 										background-image: url(../images/icon/intro/ico_pet_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+						
+						// 하이펫 (강아지)
+						&.item_hipet {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_hipet_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 하이펫 (고양이)
+						&.item_hipet2 {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_hipet_ty#{$i}.svg);
 									}
 								}
 							}
