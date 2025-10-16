@@ -1042,6 +1042,8 @@ $(function(){
 	});
 	*/
 
+	
+
 	// 달력 호출
 	// let $lastCalendarCallBtn = null;
 	$.datepicker.setDefaults({
@@ -1065,12 +1067,21 @@ $(function(){
 		currentText: "오늘",
 		// 닫기 버튼 추가
 
-		beforeShow: function (input) { 
-			$("body").addClass('modal_open');
+		// beforeShow: function (input) { 
+		beforeShow: function (input, inst) { 
+			// $("body").addClass('modal_open');
+			const $parentWrap = $(input).closest('.popup_cont'); // ← 핵심]
 			setTimeout(function() {
-				if ($(input).closest('.popup_wrap').length) {
-					// popup_wrap 안에 있으면 absolute
-					$('#ui-datepicker-div').css({ position: 'absolute' });
+				if ($parentWrap.length) {
+					inst.dpDiv.appendTo($parentWrap);
+					inst.dpDiv.css({ 
+						position: 'fixed',
+						top: '50%',
+						left: '50%'
+					});
+				} else {
+					// 혹시 부모가 없을 경우 fallback
+					inst.dpDiv.appendTo('body');
 				}
 			}, 0);
 		},
@@ -1089,24 +1100,29 @@ $(function(){
 		showOtherMonths: true,
 		// showAnim: 'slideDown',
 		duration: 300,
-		beforeShow: function () {
-			$("body").addClass('modal_open');
-			setTimeout(function(){
-				$("body").addClass('modal_open');
-				// const $dp = $("#ui-datepicker-div");
-				// $dp.find('.ui-datepicker-prev, .ui-datepicker-next').attr('tabindex', '0');
-			}, 50);
-    },
-    // onClose: function() { 
-		// 	// setTimeout(function(){
-		// 	// 	$('.modal_backdrop').remove();
-		// 	// },200);
-		// 	// $("body").removeClass('modal_open')
+		// beforeShow: function () {
+		// 	$("body").addClass('modal_open');
 		// 	setTimeout(function(){
-		// 		$('.modal_backdrop').remove();
-		// 		$('.wrap').attr('aria-hidden', 'false');
-		// 	}, 200);
-		// }
+		// 		$("body").addClass('modal_open');
+		// 	}, 50);
+    // },
+		beforeShow: function (input, inst) { 
+			// $("body").addClass('modal_open');
+			const $parentWrap = $(input).closest('.popup_cont'); // ← 핵심]
+			setTimeout(function() {
+				if ($parentWrap.length) {
+					inst.dpDiv.appendTo($parentWrap);
+					inst.dpDiv.css({ 
+						position: 'fixed',
+						top: '50%',
+						left: '50%'
+					});
+				} else {
+					// 혹시 부모가 없을 경우 fallback
+					inst.dpDiv.appendTo('body');
+				}
+			}, 0);
+		},
 	});
 	// 월 선택용
 
@@ -1120,6 +1136,14 @@ $(function(){
 		$input.datepicker("show");
 	});
 
+	$(".calendar_call_month").on("click", function (e) {
+		e.preventDefault();	
+		const $btn = $(this);
+		const $input = $btn.siblings(".inp_picker_month");
+		$input.monthpicker("show");
+	});
+
+	/*
 	$(".calendar_call_month").on("click", function (e) {
 		e.preventDefault();
 
@@ -1151,6 +1175,7 @@ $(function(){
 			}
 		}, 400);
 	});	
+	*/
 	// 달력 호출
 
 	// 라디오 약관 동의
