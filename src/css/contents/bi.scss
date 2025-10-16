@@ -906,7 +906,8 @@
 /* 기초정보입력 레이아웃 */
 .prd_bi_wrap {
 	display: flex;
-	align-items: flex-start;
+	// align-items: flex-start;
+	align-items: stretch;
 	// background-color: blue;
 
 	&.pbw_s1 {
@@ -984,6 +985,7 @@
 	.prd_bi_wrap_l {
 		flex: 1 1 0;
 		padding-right: 32px;
+
 		.pbw_inner {
 			display: flex;
 			flex-direction: column;
@@ -994,7 +996,8 @@
 			padding: var(--padding-10) var(--padding-9) var(--padding-9) var(--padding-9);
 			border-radius: var(--radius-large2, 24px);
 			background-repeat: no-repeat;
-			background-position: top 56px right 32px;
+			// background-position: top 56px right 32px;
+			background-position: top 40px right 32px;
 			background-size: 320px auto;
 			background-color: var(--color-surface-light-blue-subtle);
 
@@ -1137,7 +1140,7 @@
 					display: flex;
 					flex-direction: column;
 					// align-items: center;
-					min-height: 210px;
+					// min-height: 210px;
 					// padding: var(--padding-5) var(--padding-7);
 					padding: var(--padding-7);
 					border-radius: var(--radius-large2);
@@ -1213,6 +1216,48 @@
 							background-color: #fff;
 						}
 
+						&.ty2 {
+
+							.item {
+								min-height: 84px;
+								padding: var(--padding-8) 0;
+								background: none;
+
+								.item_exp {
+									flex: 1;
+									padding-right: 72px;
+									background-repeat: no-repeat;
+									background-position: right 12px center;
+									font-size: var(--font-size-body-large);
+									
+									.desc {
+										display: block;
+									}
+									.item_sub_txt {
+										max-width: none;
+										font-size: var(--font-size-body-small);
+									}
+								}
+
+								&:first-child,
+								&:nth-child(2) {
+									padding: var(--padding-5) 0 var(--padding-8);
+								}
+
+								&:nth-last-child(2),
+								&:last-child {
+									padding: var(--padding-8) 0 var(--padding-5);
+								}
+
+								&:nth-child(2n){
+									.item_exp {
+										padding-left: 20px;
+										background-position-x: right;
+									}
+								}
+							}
+						}
+
 						&.discount_item_box {
 							padding: 0;
 						}
@@ -1234,7 +1279,7 @@
 								font-size: var(--font-size-body-small);
 								font-weight: 700;
 
-								> .item_sub_txt {
+								.item_sub_txt {
 									display: block;
 									max-width: 167px;
 									font-size: var(--font-size-body-xsmall);
@@ -1260,11 +1305,11 @@
 
 
 
-							@for $i from 1 through 78 {
-								&.item_ico_ty#{$i} {
-									background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
-								}
-							}
+							// @for $i from 1 through 79 {
+							// 	&.item_ico_ty#{$i} {
+							// 		background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
+							// 	}
+							// }
 							// &.item_ico_ty1 {
 							// 	background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
 							// }
@@ -1456,7 +1501,217 @@
 								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty9.svg);
 							}
 						}
+
+						// 운전자
+						&.item_driver {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_driver_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 건강
+						&.item_health {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_health_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						//암
+						&.item_cancer {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_cancer_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 실손의료비
+						&.item_indemnity {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_indemnity_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 실손의료비(전환용)
+						&.item_transfer {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_transfer_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 어린이치아
+						&.item_tooth {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_indemnity_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 태아
+						&.item_child {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_indemnity_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 주택화재
+						&.item_home {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_home_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 사업장화재
+						&.item_business {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_business_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 풍수해·지진재해(주택용)
+						&.item_disaster {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_disaster_ty#{$i}.svg);
+									}
+								}
+							}
+
+							.item {
+								padding: 24px 0 !important;
+							}
+						}
+
+						// 풍수해·지진재해(소상공인)
+						&.item_disaster2 {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_disaster2_ty#{$i}.svg);
+									}
+								}
+							}
+
+							.item {
+								padding: 24px 0 !important;
+							}
+						}
+
+						// 해외여행
+						&.item_travel {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_travel_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 해외장기체류
+						&.item_long {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_long_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 국내여행
+						&.item_domestic {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_Domestic_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 골프
+						&.item_golf {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_golf_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 펫 (강아지)
+						&.item_pet {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_pet_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 펫 (고양이)
+						&.item_pet2 {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_pet_ty#{$i}.svg);
+									}
+								}
+							}
+						}
+
+						// 개인정보보호배상책임
+						&.item_personal {
+							@for $i from 1 through 4 {
+								.item_ico_ty#{$i} {
+									.item_exp {
+										background-image: url(../images/icon/intro/ico_personal_ty#{$i}.svg);
+									}
+								}
+							}
+						}
 					}
+
+
+
+
 					&:has(.bottom_info_wrap) {
 						padding-bottom: var(--padding-8);
 					}
@@ -1508,14 +1763,33 @@
 					&:not(.full) {
 						display: grid;
 						grid-template-columns: repeat(2, 1fr);
-						gap: 12px;
+						gap: var(--gap-4);
 					}
 					.item {
+						width: 352px;
+
 						a {
+							position: relative;
 							display: block;
+							height: 77px;
 							font-size: 0;
+							border-radius: 18px;
+
 							img {
 								display: block;
+							}
+
+							&:before {
+								content: '';
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								// border: 1px solid var(--color-alpha-inverse10, rgba(0, 0, 0, 0.10));
+								border: 1px solid rgba(0, 0, 0, 0.10);
+								border-radius: 18px;
+								background: transparent;
 							}
 						}
 					}
