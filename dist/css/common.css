@@ -13145,9 +13145,6 @@ ol li .table_wrap + .list_ty2 li + li {
 	padding: 16px 32px 16px 0;
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 17px;
 }
-.opt_select_list.opt_case4 a.option.disabled {
-	background-color: var(--color-surface-gray-subtler);
-}
 .opt_select_list.opt_case4 a.option.disabled .item .data_l .name,
 .opt_select_list.opt_case4 a.option.disabled .item .data_l .date {
 	color: var(--color-text-disabled-on);
