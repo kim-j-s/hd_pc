@@ -144,8 +144,7 @@
 		}
 
 		//전화번호
-		// if($this.closest('.input_text').hasClass('phone')){
-		if( $this.closest('.input_text').hasClass('phone') && !$this.prop('readonly') && !$this.prop('disabled') ){
+		if( $this.closest('.input_text').hasClass('phone') && !$this.closest('.input_text').hasClass('phone_full') && !$this.prop('readonly') && !$this.prop('disabled') ){
 			if(val){
 				const newVal = val.replace(/ - /g, '');
 				$this.attr('maxlength', 8);
@@ -482,9 +481,14 @@
 
 	// input[type="tel"]
 	$DOM.on('keyup', 'input[type="tel"]', function() {
-		const $this = $(this),
-					val = $this.val().replace(/[^0-9]/g, ''); // 숫자만 허용
-		$this.val(val);
+		const $this = $(this);
+		// comma 클래스가 상위에 있으면 실행하지 않음
+		if ($this.closest('.comma, .price').length) {
+			return;
+		}
+		// 숫자만 허용
+		const val = $this.val().replace(/[^0-9]/g, '');
+		$this.val(val);		
 	});
 
 	// 달력 날짜 입력 항목 focus 시 attr 추가 및 blur 시 자리수 정리 기능 추가
