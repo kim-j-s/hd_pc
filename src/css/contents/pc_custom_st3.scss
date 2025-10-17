@@ -2143,5 +2143,8 @@
 		padding: calc(var(--padding-3) - 1px);
 		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	}
+	&.qr_code_imgbox_etc_ty2 {
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	}
 }
 /* qr 이미지 박스 */
