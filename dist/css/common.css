@@ -3793,6 +3793,9 @@ strong {
 	color: var(--color-text-bolder);
 	font-weight: 700;
 }
+.view_wrap .view_title .title_info .main_title.lg {
+	font-size: var(--font-size-heading-large);
+}
 .view_wrap .view_title .title_info + .desc {
 	margin-top: var(--gap-3);
 	color: var(--color-text-information);
