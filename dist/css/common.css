@@ -1438,7 +1438,7 @@ strong {
 	background-image: url(../images/header/bg_header_alarm.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_cart {
-	background-image: url(../images/header/bg_header_cart.png);
+	background-image: url(../images/header/icon_cart.svg);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search {
 	background-image: url(../images/header/bg_header_search.png);
@@ -10574,6 +10574,7 @@ strong {
 .list_depth .list_ty2 > li::before {
 	background-color: inherit;
 }
+.list_depth + .info_gray_wrap,
 .list_depth + .info_gray {
 	margin-top: var(--gap-5);
 }

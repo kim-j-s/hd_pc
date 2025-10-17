@@ -1883,6 +1883,12 @@
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .inp_checkbox {
 	height: auto;
 }
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .inp_checkbox i {
+	top: -24px;
+	left: -21px;
+	height: calc(100% + 48px);
+	width: calc(100% + 42px);
+}
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list {
 	margin-left: 30px;
 	display: -webkit-box;
