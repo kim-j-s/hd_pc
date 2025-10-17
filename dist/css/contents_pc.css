@@ -4835,6 +4835,9 @@
 	padding: calc(var(--padding-3) - 1px);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
+.qr_code_imgbox.qr_code_imgbox_etc_ty2 {
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+}
 /* qr 이미지 박스 */
 /* PC용 component  */
 /* 개발 요청 생성 별도 wrap */
