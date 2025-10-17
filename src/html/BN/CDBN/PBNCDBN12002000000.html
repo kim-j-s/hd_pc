@@ -1,6 +1,8 @@
 {{#> layout/default no-sp=true page-title="카드/포인트 혜택 | 혜택"}}
 
-{{#> popup/popup_bottom popup-id="pop_type05" popup-active=true popup-title=""}}
+<!-- s: 25-10-17 수정 -->
+{{#> popup/popup_full popup-id="pop_type05" popup-active=true popup-title=""}}
+<!-- e: 25-10-17 수정 -->
 <div class="popup_cont">
 	<div class="popup_content">
       <div class="view_wrap">
@@ -10,7 +12,9 @@
             <!-- e: 25-09-04 수정 -->
               <div class="title_info">
                   <div class="sub_title">현대카드</div>
-                  <div class="main_title">
+									<!-- s: 25-10-17 수정 -->
+                  <div class="main_title lg">
+									<!-- e: 25-10-17 수정 -->
                       M포인트 최대 3만 포인트 사용 가능
                   </div>
               </div>
@@ -34,6 +38,6 @@
 		{{> cp/button type="1" size="2" b-text="확인" }}
 	</div>
 </div>
-{{/ popup/popup_bottom}}
+{{/ popup/popup_full}}
 
 {{/ layout/default }}
