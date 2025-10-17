@@ -193,7 +193,13 @@
 							}
 						}
 
+						+ .info_gray {
+							+ .text_sub {
+								margin-top: var(--gap-8);
+							}
+						}
 						.title_h2 {
+							+ .sub_text,
 							& + .btn_area.basic {
 								margin-top: var(--gap-3);
 							}
@@ -263,6 +269,9 @@
 					}
 				}
 
+				.list_ty2 + .popup_content_top {
+					margin-top: var(--gap-11);
+				}
 				.popup_content.ty2 {
 
 					.popup_content_top {

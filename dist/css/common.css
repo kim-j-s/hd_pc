@@ -1438,7 +1438,7 @@ strong {
 	background-image: url(../images/header/bg_header_alarm.png);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_cart {
-	background-image: url(../images/header/bg_header_cart.png);
+	background-image: url(../images/header/icon_cart.svg);
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search {
 	background-image: url(../images/header/bg_header_search.png);
@@ -3792,6 +3792,9 @@ strong {
 	font-size: var(--font-size-heading-small);
 	color: var(--color-text-bolder);
 	font-weight: 700;
+}
+.view_wrap .view_title .title_info .main_title.lg {
+	font-size: var(--font-size-heading-large);
 }
 .view_wrap .view_title .title_info + .desc {
 	margin-top: var(--gap-3);
@@ -10571,6 +10574,7 @@ strong {
 .list_depth .list_ty2 > li::before {
 	background-color: inherit;
 }
+.list_depth + .info_gray_wrap,
 .list_depth + .info_gray {
 	margin-top: var(--gap-5);
 }
@@ -13779,6 +13783,7 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .table_wrap + .coverage_item_list_ty3,
 .table_wrap + [class^="list_ty"],
+.table_wrap + [class^="list_depth"],
 .table_wrap + .opt_case4 {
 	margin-top: var(--gap-5);
 }

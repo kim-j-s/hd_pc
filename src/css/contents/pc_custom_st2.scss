@@ -1429,6 +1429,12 @@
 						}
 						.inp_checkbox {
 							height: auto;
+							i {
+								top: -24px;
+								left: -21px;
+								height: calc(100% + 48px);
+								width: calc(100% + 42px);
+							}
 						}
 						.data_info_list {
 							margin-left: 30px;
