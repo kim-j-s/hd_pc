@@ -5,6 +5,7 @@
 
 	& + .coverage_item_list_ty3,
 	& + [class^=list_ty],
+	& + [class^=list_depth],
 	& + .opt_case4 {
 		margin-top: var(--gap-5);
 	}
