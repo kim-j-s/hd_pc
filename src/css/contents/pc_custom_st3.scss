@@ -747,7 +747,7 @@
 			.item_inner {
 				display: flex;
 				gap: var(--gap-3);
-				align-items: center;
+				align-items: flex-start;
 	
 				.hd_btn {
 					flex: 0 0 auto;
@@ -756,9 +756,9 @@
 					margin-top: 4px;
 				}
 
-				.inp_checkbox {
-					align-self: center;
-				}
+				// .inp_checkbox {
+				// 	align-self: center;
+				// }
 
 
 			}
