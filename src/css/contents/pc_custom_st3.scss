@@ -438,39 +438,6 @@
 	}
 }
 
-
-.panel_total {
-	padding: var(--padding-8) var(--padding-7);
-	background-color: var(--color-surface-primary-subtler);
-	border-radius: var(--radius-large2);
-
-	.inner {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--gap-4);
-
-		.title {
-			font-size: var(--font-size-body-small);
-			color: var(--color-text-subtle);
-		}
-
-		.right {
-			text-align: right;
-			del {
-				font-size: var(--font-size-body-xsmall);
-				color: var(--color-text-subtle);
-			}
-			.price {
-				display: block;
-				font-size: var(--font-size-body-small);
-				font-weight: 700;
-				color: var(--color-text-primary-bold);
-			}
-		}
-	}
-}
-
 .contact_list {
 	padding: var(--padding-8) var(--padding-7);
 	background: var(--color-surface-white);
