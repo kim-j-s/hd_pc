@@ -1112,6 +1112,11 @@
 					}
 				}
 			}
+
+			.card_link {
+				cursor: pointer;
+			}
+
 			&.ty2 {
 				display: flex;
 				justify-content: space-between;
