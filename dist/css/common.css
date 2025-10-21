@@ -7148,6 +7148,9 @@ strong {
 	color: var(--color-text-primary-bold);
 	font-weight: 700;
 }
+.card_list_wrap > li .card_wrap .card_link {
+	cursor: pointer;
+}
 .card_list_wrap > li .card_wrap.ty2 {
 	display: -webkit-box;
 	display: -ms-flexbox;
