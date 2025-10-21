@@ -92,9 +92,9 @@
 			}
 		}
 	}
-	&:focus {
-		outline: none;
-	}
+	// &:focus {
+	// 	outline: none;
+	// }
 	&[aria-disabled="true"] {
 		pointer-events: none;
 		.ad_item {

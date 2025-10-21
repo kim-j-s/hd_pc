@@ -966,6 +966,11 @@
 								input {
 									padding-left: 0;
 								}
+								&.phone_full  {
+									input {
+										padding-left: var(--padding-6);
+									}
+								}
 							}
 						}
 						.comp_wrap {
