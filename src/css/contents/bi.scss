@@ -1806,10 +1806,12 @@
 						display: grid;
 						grid-template-columns: repeat(2, 1fr);
 						gap: var(--gap-4);
+
+						.item {
+							width: 352px;
+						}
 					}
 					.item {
-						width: 352px;
-
 						a {
 							position: relative;
 							display: block;
