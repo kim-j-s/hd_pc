@@ -61,528 +61,106 @@
 			.guide_h1 + ul > li > ul .side_panel {
 				width: 288px;
 			}
+			.guide_h4.ty1 {
+				background-color: skyblue;
+			}
+			.guide_h4.ty2 {
+				background-color: yellowgreen;
+			}
+			.guide_h4.ty3 {
+				background-color: rgb(235, 217, 135);
+			}
+			.guide_h4.ty4 {
+				background-color: rgb(195, 135, 235);
+			}
+			.guide_h4.ty5 {
+				background-color: rgb(235, 135, 182);
+			}
+			body > ul > li,
+			.side_panel .step_list > li {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 288px;
+				flex: 0 0 288px;
+			}
 		</style>
 		<div class="guide_h1 pc">보험가입 진행 정보 (우측 패널) step 가이드</div>
 
+		<div class="guide_h4">전체 step 진행 상황</div>
 		<!-- *** 쓰실 땐, 사이드 패널 영역만(주석 참고) 사용! -->
 		<ul style="display: flex; gap: 40px">
 			<li>
-				<div class="guide_h4 pc">step1-1) 기초정보입력 - 가입자정보</div>
+				<div class="guide_h4 pc">step1) 기본정보입력</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<!-- s: 25-08-08 수정 -->
-						<!-- 현재 단계일 시, active 클래스 추가 -->
-						<div class="pro_info_item active">
-							<!-- e: 25-08-08 수정 -->
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<!-- <li>
-    									<dl>
-    											<dt class="birth">생년월일</dt>
-    											<dd>19790101</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="gender">성별</dt>
-    											<dd>여성</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="person">소유/거주 여부</dt>
-    											<dd>자가소유/거주중</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="home">주택 종류</dt>
-    											<dd>아파트/주상복합</dd>
-    									</dl>
-    							</li> -->
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<!-- <li>
-    									<dl>
-    											<dt class="info">전용면적</dt>
-    											<dd>99.9 ㎡ (30평)</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">층수</dt>
-    											<dd>10층</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">건축년도</dt>
-    											<dd>2008년</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">주택 종류</dt>
-    											<dd>아파트/주상복합</dd>
-    									</dl>
-    							</li> -->
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="info_gray">
-						<ol class="step_list">
-							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-							<li>
-								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										선택: <span>고급형, 15,100원</span>
-    									</li>
-    									<li>
-    										납입주기: <span>월납</span>
-    									</li>
-    									<li>
-    										보험기간: <span>10년</span>
-    									</li>
-    									<li>
-    										납입기간: <span>10년</span>
-    									</li>
-    								</ul> -->
-										<div class="info">보험료를 확인 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										입력: <span>김*전(790102-*******, 여성)</span>
-    									</li>
-    								</ul> -->
-										<div class="info">정보를 입력 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										확인: <span>가입내용 및 계약서류</span>
-    									</li>
-    								</ul> -->
-										<div class="info">내용을 확인 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">4.보험료 결제</dt>
-									<dd>
-										<div class="info">결제 진행 중이에요</div>
-									</dd>
-								</dl>
-							</li>
-						</ol>
-					</div>
-
-					<!-- 최종 보험료 -->
-					<!-- <div class="panel_total">
-    				<div class="inner">
-    					<div class="title">최종 보험료</div>
-    					<div class="right">
-    						<del>1,563,393원</del>
-    						<span class="price">7,200원</span>
-    					</div>
-    				</div>
-    			</div> -->
-
-					<!-- 다이렉트 고객센터 -->
-					<div class="customer_info">
-						<div class="contact_list">
-							<div class="list">
-								<i class="icon call"></i>
-								<span class="info">
-									다이렉트 고객센터
-									<em>1899-6782</em>
-								</span>
-							</div>
-						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
-					</div>
-				</div>
-				<!-- e: 사이드 패널 -->
-			</li>
-			<li>
-				<div class="guide_h4 pc">step1-2) 기초정보입력 - 2번째 정보</div>
-				<!-- s: 사이드 패널 -->
-				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<!-- 현재 단계일 시, active 클래스 추가 -->
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="birth">생년월일</dt>
-											<dd>19790101</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="gender">성별</dt>
-											<dd>여성</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="person">소유/거주 여부</dt>
-											<dd>자가소유/거주중</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="home">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<!-- s: 25-08-08 수정 -->
-						<div class="pro_info_item active">
-							<!-- e: 25-08-08 수정 -->
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<!-- <li>
-    									<dl>
-    											<dt class="info">전용면적</dt>
-    											<dd>99.9 ㎡ (30평)</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">층수</dt>
-    											<dd>10층</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">건축년도</dt>
-    											<dd>2008년</dd>
-    									</dl>
-    							</li>
-    							<li>
-    									<dl>
-    											<dt class="info">주택 종류</dt>
-    											<dd>아파트/주상복합</dd>
-    									</dl>
-    							</li> -->
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="info_gray">
-						<ol class="step_list">
-							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
-							<li>
-								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										선택: <span>고급형, 15,100원</span>
-    									</li>
-    									<li>
-    										납입주기: <span>월납</span>
-    									</li>
-    									<li>
-    										보험기간: <span>10년</span>
-    									</li>
-    									<li>
-    										납입기간: <span>10년</span>
-    									</li>
-    								</ul> -->
-										<div class="info">보험료를 확인 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										입력: <span>김*전(790102-*******, 여성)</span>
-    									</li>
-    								</ul> -->
-										<div class="info">정보를 입력 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
-									<dd>
-										<!-- <ul>
-    									<li>
-    										확인: <span>가입내용 및 계약서류</span>
-    									</li>
-    								</ul> -->
-										<div class="info">내용을 확인 중이에요</div>
-									</dd>
-								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</li>
-							<li>
-								<dl>
-									<dt class="title">4.보험료 결제</dt>
-									<dd>
-										<div class="info">결제 진행 중이에요</div>
-									</dd>
-								</dl>
-							</li>
-						</ol>
-					</div>
-
-					<!-- 최종 보험료 -->
-					<!-- <div class="panel_total">
-    				<div class="inner">
-    					<div class="title">최종 보험료</div>
-    					<div class="right">
-    						<del>1,563,393원</del>
-    						<span class="price">7,200원</span>
-    					</div>
-    				</div>
-    			</div> -->
-
-					<!-- 다이렉트 고객센터 -->
-					<div class="customer_info">
-						<div class="contact_list">
-							<div class="list">
-								<i class="icon call"></i>
-								<span class="info">
-									다이렉트 고객센터
-									<em>1899-6782</em>
-								</span>
-							</div>
-						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
-					</div>
-				</div>
-				<!-- e: 사이드 패널 -->
-			</li>
-			<li>
-				<div class="guide_h4 pc">step2) 보험료 계산 결과</div>
-				<!-- s: 사이드 패널 -->
-				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="birth">생년월일</dt>
-											<dd>19790101</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="gender">성별</dt>
-											<dd>여성</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="person">소유/거주 여부</dt>
-											<dd>자가소유/거주중</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="home">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="info">전용면적</dt>
-											<dd>99.9 ㎡ (30평)</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">층수</dt>
-											<dd>10층</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">건축년도</dt>
-											<dd>2008년</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="info_gray">
 						<ol class="step_list">
 							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
 							<li class="active">
 								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
 									<dd>
 										<ul>
 											<li>선택: <span>고급형, 15,100원</span></li>
-											<li>납입주기: <span>월납</span></li>
-											<li>보험기간: <span>10년</span></li>
-											<li>납입기간: <span>10년</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
 										</ul>
 										<div class="info">보험료를 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+    							<span>수정</span>
+    						</button> -->
 							</li>
 							<li>
 								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
 									<dd>
 										<ul>
-											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
 										</ul>
 										<div class="info">정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+    							<span>수정</span>
+    						</button> -->
 							</li>
 							<li>
 								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
+									<dt class="title">4. 가입 내용 확인</dt>
 									<dd>
 										<ul>
-											<li>확인: <span>가입내용 및 계약서류</span></li>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
 										</ul>
 										<div class="info">내용을 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+    							<span>재확인</span>
+    						</button> -->
 							</li>
 							<li>
 								<dl>
-									<dt class="title">4.보험료 결제</dt>
+									<dt class="title">5. 보험료 결제</dt>
 									<dd>
-										<div class="info">결제 진행 중이에요</div>
+										<div class="info">결제를 진행 중이에요</div>
 									</dd>
 								</dl>
 							</li>
@@ -611,9 +189,111 @@
 								</span>
 							</div>
 						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 pc">step2) 보험료 확인</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<!-- <button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+    							<span>수정</span>
+    						</button> -->
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<!-- <button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+    							<span>재확인</span>
+    						</button> -->
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<!-- <div class="panel_total">
+    				<div class="inner">
+    					<div class="title">최종 보험료</div>
+    					<div class="right">
+    						<del>1,563,393원</del>
+    						<span class="price">7,200원</span>
+    					</div>
+    				</div>
+    			</div> -->
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
@@ -622,141 +302,75 @@
 				<div class="guide_h4 pc">step3) 피보험자/계약자 정보</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="birth">생년월일</dt>
-											<dd>19790101</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="gender">성별</dt>
-											<dd>여성</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="person">소유/거주 여부</dt>
-											<dd>자가소유/거주중</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="home">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="info">전용면적</dt>
-											<dd>99.9 ㎡ (30평)</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">층수</dt>
-											<dd>10층</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">건축년도</dt>
-											<dd>2008년</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="info_gray">
 						<ol class="step_list">
 							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
 							<li>
 								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
 									<dd>
 										<ul>
 											<li>선택: <span>고급형, 15,100원</span></li>
-											<li>납입주기: <span>월납</span></li>
-											<li>보험기간: <span>10년</span></li>
-											<li>납입기간: <span>10년</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
 										</ul>
 										<div class="info">보험료를 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li class="active">
 								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
 									<dd>
 										<ul>
-											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
 										</ul>
 										<div class="info">정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li>
 								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
+									<dt class="title">4. 가입 내용 확인</dt>
 									<dd>
 										<ul>
-											<li>확인: <span>가입내용 및 계약서류</span></li>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
 										</ul>
 										<div class="info">내용을 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+    							<span>재확인</span>
+    						</button> -->
 							</li>
 							<li>
 								<dl>
-									<dt class="title">4.보험료 결제</dt>
+									<dt class="title">5. 보험료 결제</dt>
 									<dd>
-										<div class="info">결제 진행 중이에요</div>
+										<div class="info">결제를 진행 중이에요</div>
 									</dd>
 								</dl>
 							</li>
@@ -785,9 +399,6 @@
 								</span>
 							</div>
 						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
@@ -796,141 +407,75 @@
 				<div class="guide_h4 pc">step4) 가입 전 내용 확인</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="birth">생년월일</dt>
-											<dd>19790101</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="gender">성별</dt>
-											<dd>여성</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="person">소유/거주 여부</dt>
-											<dd>자가소유/거주중</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="home">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="info">전용면적</dt>
-											<dd>99.9 ㎡ (30평)</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">층수</dt>
-											<dd>10층</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">건축년도</dt>
-											<dd>2008년</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="info_gray">
 						<ol class="step_list">
 							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
 							<li>
 								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
 									<dd>
 										<ul>
 											<li>선택: <span>고급형, 15,100원</span></li>
-											<li>납입주기: <span>월납</span></li>
-											<li>보험기간: <span>10년</span></li>
-											<li>납입기간: <span>10년</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
 										</ul>
 										<div class="info">보험료를 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li>
 								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
 									<dd>
 										<ul>
-											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
 										</ul>
 										<div class="info">정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li class="active">
 								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
+									<dt class="title">4. 가입 내용 확인</dt>
 									<dd>
 										<ul>
-											<li>확인: <span>가입내용 및 계약서류</span></li>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
 										</ul>
 										<div class="info">내용을 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+    							<span>재확인</span>
+    						</button> -->
 							</li>
 							<li>
 								<dl>
-									<dt class="title">4.보험료 결제</dt>
+									<dt class="title">5. 보험료 결제</dt>
 									<dd>
-										<div class="info">결제 진행 중이에요</div>
+										<div class="info">결제를 진행 중이에요</div>
 									</dd>
 								</dl>
 							</li>
@@ -959,9 +504,6 @@
 								</span>
 							</div>
 						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
@@ -970,141 +512,75 @@
 				<div class="guide_h4 pc">step5) 보험료 결제</div>
 				<!-- s: 사이드 패널 -->
 				<div class="side_panel">
-					<div class="info_cont pro_info_wrap">
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">가입자 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="birth">생년월일</dt>
-											<dd>19790101</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="gender">성별</dt>
-											<dd>여성</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="person">소유/거주 여부</dt>
-											<dd>자가소유/거주중</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="home">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-						<div class="pro_info_item">
-							<div class="tit_box">
-								<h3 class="pop_title_h3">건물 정보</h3>
-								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5" title="정보입력 페이지로 이동">
-									<span class="text">수정</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
-							</div>
-							<div class="data_list">
-								<ul>
-									<li>
-										<dl>
-											<dt class="info">전용면적</dt>
-											<dd>99.9 ㎡ (30평)</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">층수</dt>
-											<dd>10층</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">건축년도</dt>
-											<dd>2008년</dd>
-										</dl>
-									</li>
-									<li>
-										<dl>
-											<dt class="info">주택 종류</dt>
-											<dd>아파트/주상복합</dd>
-										</dl>
-									</li>
-								</ul>
-								<div class="info">정보를 입력 중이에요</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="info_gray">
 						<ol class="step_list">
 							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
 							<li>
 								<dl>
-									<dt class="title">1.보험료 계산 결과</dt>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
 									<dd>
 										<ul>
 											<li>선택: <span>고급형, 15,100원</span></li>
-											<li>납입주기: <span>월납</span></li>
-											<li>보험기간: <span>10년</span></li>
-											<li>납입기간: <span>10년</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
 										</ul>
 										<div class="info">보험료를 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="보험료 계산 결과 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li>
 								<dl>
-									<dt class="title">2.피보험자/계약자 정보</dt>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
 									<dd>
 										<ul>
-											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
 										</ul>
 										<div class="info">정보를 입력 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="피보험자/계약자 정보 페이지로 이동">
-									<span class="sr-only">수정</span>
-									<i class="hd_icon resetSvg"></i>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
 								</button>
 							</li>
 							<li>
 								<dl>
-									<dt class="title">3.가입 내용 확인</dt>
+									<dt class="title">4. 가입 내용 확인</dt>
 									<dd>
 										<ul>
-											<li>확인: <span>가입내용 및 계약서류</span></li>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
 										</ul>
 										<div class="info">내용을 확인 중이에요</div>
 									</dd>
 								</dl>
-								<button type="button" class="modify" title="가입내용 확인 페이지로 이동">
-									<span class="sr-only">재확인</span>
-									<i class="hd_icon resetSvg"></i>
-								</button>
+								<!-- <button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+    							<span>재확인</span>
+    						</button> -->
 							</li>
 							<li class="active">
 								<dl>
-									<dt class="title">4.보험료 결제</dt>
+									<dt class="title">5. 보험료 결제</dt>
 									<dd>
-										<div class="info">결제 진행 중이에요</div>
+										<div class="info">결제를 진행 중이에요</div>
 									</dd>
 								</dl>
 							</li>
@@ -1133,9 +609,1925 @@
 								</span>
 							</div>
 						</div>
-						<ul class="list_depth_ty2">
-							<li>인터넷가입 보험료와 차이가 있어요</li>
-						</ul>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+		</ul>
+
+		<div class="guide_h1 pc">보험가입 진행 정보 - 장기/일반 상품 Case (자동차 제외)</div>
+
+		<!-- 운전자, 연금/저축, 기업 Case -->
+		<ul style="display: flex; gap: 40px">
+			<li>
+				<div class="guide_h4 ty5">운전자</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="car">운전용도: <span>자가용</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*대(790101-1******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty5">연금</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>예상연금수령액: <span>534,100원(세전)</span></li>
+											<li>
+												<span>70세부터 10년간, 매월마다</span>
+											</li>
+											<li>납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+											<li>월보험료: <span>20만원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>계약자: <span>김*대(790101-1******, 남성)</span></li>
+											<li>피보험자: <span>윤*성(190327-1******, 남성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty5">개인정보보호배상책임</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="company">회사명: <span>포스트주얼리</span></li>
+											<li class="busi_num">사업자번호: <span>123-45-78900</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 추가 정보</dt>
+									<dd>
+										<ul>
+											<li>업종: <span>금융 및 보험업</span></li>
+											<li>이용자수: <span>100,000,000명</span></li>
+											<li>연간매출액: <span>100,000,000원</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="추가 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>129,000원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>개인사업자&middot;법인명: <span>포스트주얼리</span></li>
+											<li>사업자번호: <span>123-45-78900</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6.보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+		</ul>
+
+		<!-- 건강/암 Case -->
+		<ul style="display: flex; gap: 40px">
+			<li>
+				<div class="guide_h4 ty1">건강</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="job">직업: <span>사무직</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty1">암</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="job">직업: <span>사무직</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty1">실손의료비</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 가입자 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="job">직업: <span>사무직</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<!-- 본인 가입 Case -->
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+											<!-- 본인 이외 미성년자녀/태아 Case -->
+											<li>계약자: <span>김*전(790102-*******, 여성)</span></li>
+											<li>피보험자: <span>김*대(200101-*******, 남성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty1">실손의료비(전환용)</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 가입자 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>본인</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="job">직업: <span>사무직</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>15,100원</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty1">어린이치아</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="person">가입대상: <span>미성년 자녀</span></li>
+											<li class="birth">생년월일: <span>2020.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="job">직업: <span>미취학아동</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>계약자: <span>김*전(790102-*******, 여성)</span></li>
+											<li>피보험자: <span>김*대(200101-*******, 남성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+		</ul>
+
+		<!-- 재산/화재 Case -->
+		<ul style="display: flex; gap: 40px">
+			<li>
+				<div class="guide_h4 ty2">주택화재</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="person">소유/거주 여부: <span>자가소유/거주중</span></li>
+											<li class="home">주택 종류: <span>아파트/주상복합</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 건물 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li>전용면적: <span>99.9 ㎡ (30평)</span></li>
+											<li>층수: <span>10층</span></li>
+											<li>건축연도: <span>2008년</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="건물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<li>보험/납입 기간: <span>10년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 계산 결과 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty2">사업장화재</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="store">업종: <span>일반음식점</span></li>
+											<li class="insurance">가입할 보험: <span>다중이용업소, 가스사고배상책임</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 건물 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li>면적: <span>200.0 ㎡ (65평)</span></li>
+											<li>층수: <span>지하 1층~지상 1층</span></li>
+											<li>건축연도: <span>2008년</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="건물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>15,100원</span></li>
+											<li>보험/납입 기간: <span>3년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty2">풍수해(주택용)</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="home">주택 종류: <span>아파트, 주상복합</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 건물 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li>전용면적: <span>200.0 ㎡ (65평)</span></li>
+											<li>총 지상 층수: <span>1층</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="건물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>15,100원</span></li>
+											<li>보험 기간: <span>2025.01.01 24시~2026.01.01 24시</span></li>
+											<li>납입 방법: <span>일시납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty2">풍수해(소상공인)</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="insurance">사업자 형태: <span>개인</span></li>
+											<li class="structure">건물 형태: <span>공장</span></li>
+											<li class="store">업종: <span>금속기계기구</span></li>
+											<li class="person">소유 여부: <span>자가소유</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 건물 정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li>총 지상 층수: <span>1층</span></li>
+											<li>가입 층수: <span>1층~2층</span></li>
+											<li>전용면적: <span>200.0 ㎡ (65평)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="건물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>15,100원</span></li>
+											<li>보험 기간: <span>2025.01.01 24시~2026.01.01 24시</span></li>
+											<li>납입 방법: <span>일시납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+		</ul>
+
+		<!-- 펫 Case -->
+		<ul style="display: flex; gap: 40px">
+			<li>
+				<div class="guide_h4 ty3">굿앤굿펫</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<dl class="dep_list">
+											<dt>반려동물 정보</dt>
+											<dd>
+												<ul class="dep_opt_list">
+													<li class="pet">품종: <span>샴</span></li>
+													<li class="birth">생년월일: <span>만3세(2023.03.01)</span></li>
+													<li class="pet_gender">성별: <span>남아</span></li>
+												</ul>
+											</dd>
+											<dt>보험자 정보</dt>
+											<dd>
+												<ul class="dep_opt_list">
+													<li class="birth">생년월일: <span>1979.01.01</span></li>
+													<li class="gender">성별: <span>남성</span></li>
+													<li class="work">직업: <span>사무직</span></li>
+												</ul>
+											</dd>
+										</dl>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>고급형, 15,100원</span></li>
+											<li>의료비 외 담보 갱신주기: <span>3년</span></li>
+											<li>보험/납입 기간: <span>20년</span></li>
+											<li>보상 비율: <span>70%</span></li>
+											<li>자기부담금: <span>3만원</span></li>
+											<li>납입 방법: <span>월납</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 반려동물 정보</dt>
+									<dd>
+										<ul>
+											<li>중성화 수술: <span>예</span></li>
+											<li>할인: <span>동물등록, 유기동물입양, 다펫</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="반려동물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty3">하이펫</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="pet">품종: <span>샴</span></li>
+											<li class="birth">생년월일: <span>만3세(2023.03.01)</span></li>
+											<li class="pet_gender">성별: <span>남아</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>보험료: <span>고급형, 15,100원</span></li>
+											<li>보험 기간: <span>3년</span></li>
+											<li>납입 방법: <span>월납</span></li>
+											<li>보상 비율: <span>70%</span></li>
+											<li>자기부담금: <span>3만원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 반려동물 정보</dt>
+									<dd>
+										<ul>
+											<li>이름: <span>뽀삐</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="반려동물 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">5. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">6. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+		</ul>
+
+		<!-- 여행/레저 Case -->
+		<ul style="display: flex; gap: 40px">
+			<li>
+				<div class="guide_h4 ty4">해외여행</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="date">기간: <span>2025.05.20 11시~2025.05.24 23시</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="person">여행자: <span>1979.01.01(남성) 외 3명</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+											<!-- PM Case -->
+											<li>선택: <span>네이버파이낸셜플랜, 15,100원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<!-- 1-1. 성인단독 Case -->
+											<li>입력: <span>김*대(790101-1******, KIM HYUNDAI)</span></li>
+											<!-- 1-2. 미성년자단독 Case -->
+											<li>계약자: <span>김*대(790101-1******, KIM HYUNDAI)</span></li>
+											<li>피보험자: <span>윤*성(190327-1******, YUN TAESUNG)</span></li>
+											<!-- 2. 피보험자다수 Case -->
+											<li>계약자: <span>김*대(790101-1******, KIM HYUNDAI)</span></li>
+											<li>피보험자: <span>김*대(790101-1******, KIM HYUNDAI) 외 1인</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty4">해외장기체류</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="country">체류국가: <span>멕시코</span></li>
+											<li class="date">기간: <span>2025.05.20 11시~2025.05.24 23시</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+											<li class="person">여행자: <span>1979.01.01(남성) 외 3명</span></li>
+											<li class="work">체류목적: <span>업무(주재원)</span></li>
+											<li class="job">직업: <span>사무직</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>계약자: <span>김*대(790101-1******, KIM HYUNDAI)</span></li>
+											<li>피보험자: <span>김*대(790101-1******, KIM HYUNDAI) 외 1인</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사이드 패널 -->
+			</li>
+			<li>
+				<div class="guide_h4 ty4">국내여행 / 골프</div>
+				<!-- s: 사이드 패널 -->
+				<div class="side_panel">
+					<div class="info_gray">
+						<ol class="step_list">
+							<!-- 해당되는 단계일 시, li에 active 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="title">1. 기본정보</dt>
+									<dd>
+										<ul class="dep_opt_list">
+											<li class="date">기간: <span>2025.05.20 11시~2025.05.24 23시</span></li>
+											<li class="birth">생년월일: <span>1979.01.01</span></li>
+											<li class="gender">성별: <span>여성</span></li>
+										</ul>
+									</dd>
+								</dl>
+								<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="기본정보 페이지로 이동">
+									<span class="text">재입력</span>
+									<i class="hd_icon resetSvg"></i>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">2. 보험료 확인</dt>
+									<dd>
+										<ul>
+											<li>선택: <span>고급형, 15,100원</span></li>
+										</ul>
+										<div class="info">보험료를 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">3. 피보험자/계약자 정보</dt>
+									<dd>
+										<ul>
+											<li>입력: <span>김*전(790102-*******, 여성)</span></li>
+										</ul>
+										<div class="info">정보를 입력 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</li>
+							<li>
+								<dl>
+									<dt class="title">4. 가입 내용 확인</dt>
+									<dd>
+										<ul>
+											<li>확인: <span>가입 내용 및 계약서류</span></li>
+										</ul>
+										<div class="info">내용을 확인 중이에요</div>
+									</dd>
+								</dl>
+								<button type="button" class="modify_sub" title="가입 내용 확인 페이지로 이동">
+									<span>재확인</span>
+								</button>
+							</li>
+							<li class="active">
+								<dl>
+									<dt class="title">5. 보험료 결제</dt>
+									<dd>
+										<div class="info">결제를 진행 중이에요</div>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</div>
+
+					<!-- 최종 보험료 -->
+					<div class="panel_total">
+						<div class="inner">
+							<div class="title">최종 보험료</div>
+							<div class="right">
+								<del>1,563,393원</del>
+								<span class="price">7,200원</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 다이렉트 고객센터 -->
+					<div class="customer_info">
+						<div class="contact_list">
+							<div class="list">
+								<i class="icon call"></i>
+								<span class="info">
+									다이렉트 고객센터
+									<em>1899-6782</em>
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- e: 사이드 패널 -->
