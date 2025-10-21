@@ -1848,6 +1848,7 @@
 	height: 77px;
 	font-size: 0;
 	border-radius: 18px;
+	overflow: hidden;
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners .item a img {
 	display: block;
