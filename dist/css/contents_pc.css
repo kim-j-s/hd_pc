@@ -257,9 +257,6 @@
 .side_panel .step_list .dep_opt_list > li.country {
 	background-image: url(../images/content/bi/icon_stepper_fuel.svg);
 }
-.side_panel .step_list .dep_opt_list > li.a {
-	background-image: url(../images/content/bi/icon_stepper_sex.svg);
-}
 .side_panel .step_list > li {
 	padding-top: var(--gap-3);
 }

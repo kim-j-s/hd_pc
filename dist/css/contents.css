@@ -1142,6 +1142,9 @@
 .prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bi_wrap_content .form_group_wrap .input_text.phone input {
 	padding-left: 0;
 }
+.prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bi_wrap_content .form_group_wrap .input_text.phone.phone_full input {
+	padding-left: var(--padding-6);
+}
 .prd_bi_wrap.case1 .prd_bi_wrap_r .bi_wrap .bottom_fix_wrap {
 	z-index: 1;
 	margin-top: 0;
