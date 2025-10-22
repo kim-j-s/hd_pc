@@ -1,326 +1,327 @@
 <!-- s: 사이드 패널 -->
 <div class="side_panel">
-<div class="info_gray">
-<ol class="step_list step_car">
-<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
-	<li class="active">
-		<!-- 고객정보 -->
-		<dl>
-			<!-- s: 25-09-03 수정 -->
-			<dt class="title">1.고객 정보</dt>
-			<!-- e: 25-09-03 수정 -->
-			<dd>
-				<ul>
-					<li class="person">
-						이름
-						<span>김*대</span>
-					</li>
-					<li class="birth">
-						주민등록번호
-						<span>900101-1******</span>
-					</li>
-				</ul>
-			</dd>
-		</dl>
-		<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">			
-			<span class="text">초기화</span>
-			<i class="hd_icon resetSvg"></i>
-		</button>
-	</li>
-	<li class="active">
-		<!-- 차량정보 -->
-		<!-- 입력진행 전 -->
-		<!-- <dl>
-			 s: 25-09-03 수정 
-			{{!-- <dt class="title">2.차량 정보</dt> --}}
-			 e: 25-09-03 수정 
-			 <dd>
-				<div class="info">차량을 선택 중이에요</div>
-			</dd>
-		</dl> -->
-		<!-- 입력진행 후 -->
-		<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-		<div class="acd_item acd_item_ty9">
-			<!-- s: 25-09-03 수정 -->
-			{{#> cp/accordion ac-title="2.차량 정보"}}
-			<!-- e: 25-09-03 수정 -->
-				<dl class="dep_list">
-					<dt class="car">차량선택</dt>
-					<dd>
-						<ul class="dep_list_sub">
-							<li>
-								차량번호: <span>구매예정</span>
-							</li>
-							<li>
-								차량종류: <span>승용차</span>
-							</li>
-						</ul>
-						<button type="button" class="modify_sub" title="차량선택 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-				<dl class="dep_list">
-					<dt class="date">보험기간</dt>
-					<dd>
-						<ul class="dep_list_sub">
-							<li>
-								<span>2025.01.01~2026.01.01</span>
-							</li>
-						</ul>
-						<button type="button" class="modify_sub" title="보험기간 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-				<dl class="dep_list">
+	<div class="info_gray">
+		<ol class="step_list step_car">
+		<!-- 해당되는 단계까지 li에 active 클래스 추가 -->
+			<li class="active">
+				<!-- 고객정보 -->
+				<dl>
 					<!-- s: 25-09-03 수정 -->
-					<dt class="car_info">차량 정보입력</dt>
+					<dt class="title">1. 고객 정보</dt>
 					<!-- e: 25-09-03 수정 -->
 					<dd>
-						<ul class="dep_list_sub">
-							<li>
-								제조사: <span>기아</span>
-
-								<button type="button" class="modify_sub" title="제조사 페이지로 이동">
-									<span>수정</span>
-								</button>
+						<ul class="dep_opt_list">
+							<li class="person">
+								이름
+								<span>김*대</span>
 							</li>
-							<li>
-								자동차명: <span>K7</span>
-
-								<button type="button" class="modify_sub" title="자동차명 페이지로 이동">
-									<span>수정</span>
-								</button>
-							</li>
-							<li>
-								등록연도: <span>2025년</span>
-
-								<button type="button" class="modify_sub" title="등록연도 페이지로 이동">
-									<span>수정</span>
-								</button>
-							</li>
-							<li>
-								세부차명: <span>K7 Premier 3.0 GDi</span>
-
-								<button type="button" class="modify_sub" title="세부차명 페이지로 이동">
-									<span>수정</span>
-								</button>
+							<li class="birth">
+								주민등록번호
+								<span>900101-1******</span>
 							</li>
 						</ul>
 					</dd>
 				</dl>
-				<dl class="dep_list">
+				<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="고객정보 페이지로 이동">			
+					<span class="text">초기화</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</li>
+			<li class="active">
+				<!-- 차량정보 -->
+				<!-- 입력진행 전 -->
+				<!-- <dl>
+					s: 25-09-03 수정 
+					{{!-- <dt class="title">2. 차량 정보</dt> --}}
+					e: 25-09-03 수정 
+					<dd>
+						<div class="info">차량을 선택 중이에요</div>
+					</dd>
+				</dl> -->
+				<!-- 입력진행 후 -->
+				<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+				<div class="acd_item acd_item_ty9">
 					<!-- s: 25-09-03 수정 -->
-					<dt class="maker">차량부품 정보</dt>
+					{{#> cp/accordion ac-title="2. 차량 정보"}}
 					<!-- e: 25-09-03 수정 -->
-					<dd>
-						<ul class="dep_list_sub">
-							<li>
-								총차량가액: <span>11,000만원</span>
-							</li>
-						</ul>
-						<!-- s: 25-09-03 수정 -->
-						<button type="button" class="modify_sub" title="차량부품 정보 페이지로 이동">
-							<span>수정</span>
-						</button>
-						<!-- e: 25-09-03 수정 -->
-					</dd>
-				</dl>
-				<dl class="dep_list">
-					<dt class="alarm">알릴의무</dt>
-					<dd>
-						<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-			{{/ cp/accordion }}
-		</div>
-	</li>
-	<li class="active">
-		<!-- 운전자정보 -->
-		<!-- 입력진행 전 -->
-		<!-- <dl>
-			s: 25-09-03 수정
-			<dt class="title">3.운전자 정보</dt>
-			e: 25-09-03 수정
-			<dd>
-				<div class="info">운전범위를 입력 중이에요</div>
-			</dd>
-		</dl> -->
-		<!-- 입력진행 후 -->
-		<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-		<div class="acd_item acd_item_ty9">
-			<!-- s: 25-09-03 수정 -->
-			{{#> cp/accordion ac-title="3.운전자 정보"}}
-			<!-- e: 25-09-03 수정 -->
-				<dl class="dep_list">
-					<dt class="driver">운전범위</dt>
-					<dd>
-						<ul class="dep_list_sub">
+						<dl class="dep_list">
+							<dt class="car">차량선택</dt>
+							<dd>
+								<ul class="dep_list_sub">
+									<li>
+										차량번호: <span>구매예정</span>
+									</li>
+									<li>
+										차량종류: <span>승용차</span>
+									</li>
+								</ul>
+								<button type="button" class="modify_sub" title="차량선택 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<dt class="date">보험기간</dt>
+							<dd>
+								<ul class="dep_list_sub">
+									<li>
+										<span>2025.01.01~2026.01.01</span>
+									</li>
+								</ul>
+								<button type="button" class="modify_sub" title="보험기간 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+						<dl class="dep_list">
 							<!-- s: 25-09-03 수정 -->
-							<li>
-								운전자 범위: <span>부부 한정</span>
-							</li>
+							<dt class="car_info">차량 정보입력</dt>
 							<!-- e: 25-09-03 수정 -->
-							<li>
-								운전자나이: <span>만 24세 이상</span>
-							</li>
-						</ul>
-						<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-				<dl class="dep_list">
-					<dt class="discount">할인특약</dt>
-					<dd>
-						<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-				<dl class="dep_list">
-					<dt class="alarm">알릴의무</dt>
-					<dd>
-						<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-			{{/ cp/accordion }}
-		</div>
-	</li>
-	<li class="active">
-		<!-- 보험료확인 -->
-		<!-- 입력진행 전 -->
-		<!-- <dl>
-			s: 25-09-03 수정
-			<dt class="title">4.보험료 확인</dt>
-			e: 25-09-03 수정
-			<dd>
-				<div class="info">보험료를 확인 중이에요</div>
-			</dd>
-		</dl> -->
-		<!-- 입력진행 후 -->
-		<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-		<div class="acd_item acd_item_ty9">
-			<!-- s: 25-09-03 수정 -->
-			{{#> cp/accordion ac-title="4.보험료 확인"}}
-			<!-- e: 25-09-03 수정 -->
-			<ul class="dep_list_sub">
-				<li>
-					최종보험료: <span>1,000,000원</span>
-					<!-- s: 25-09-03 수정 -->
-					<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
-						<span>수정</span>
-					</button>
-					<!-- e: 25-09-03 수정 -->
-				</li>
-			</ul>
-			{{/ cp/accordion }}
-		</div>
-	</li>
-	<li class="active">
-		<!-- 피보험자/계약자정보 -->
-		<!-- 입력진행 전 -->
-		<!-- <dl>
-			s: 25-09-03 수정
-			<dt class="title">5.피보험자/계약자 정보</dt>
-			e: 25-09-03 수정
-			<dd>
-				<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
-			</dd>
-		</dl> -->
-		<!-- 입력진행 후 -->
-		<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
-		<div class="acd_item acd_item_ty9">
-			<!-- s: 25-09-03 수정 -->
-			{{#> cp/accordion ac-title="5.피보험자/계약자 정보"}}
-			<!-- e: 25-09-03 수정 -->
-				<dl class="dep_list">
-					<!-- s: 25-09-03 수정 -->
-					<dt class="contractor">피보험자/계약자 정보</dt>
-					<!-- e: 25-09-03 수정 -->
-					<dd>
-						<ul class="dep_list_sub">
-							<li>
-								피보험자: <span>김*대(900101-1******)</span>
-							</li>
-							<li>
-								계약자: <span>김*대(900101-1******)</span>
-							</li>
-						</ul>
-						<!-- s: 25-09-03 수정 -->
-						<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
-							<span>수정</span>
-						</button>
-						<!-- e: 25-09-03 수정 -->
-					</dd>
-				</dl>
-				<dl class="dep_list">
-					<dt class="picture">사진첨부</dt>
-					<dd>
-						<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
-							<span>수정</span>
-						</button>
-					</dd>
-				</dl>
-			{{/ cp/accordion }}
-		</div>
-	</li>
-	<li class="active">
-		<!-- 청약내용 확인 -->
-		<dl>
-			<dt class="title">6.청약내용 확인</dt>
-			<dd>
-				<!-- <div class="info">청약내용을 확인 중이에요</div> -->
-			</dd>
-		</dl>
-		<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
-			<span class="text">재조회</span>
-			<i class="hd_icon resetSvg"></i>
-		</button>
-	</li>
-	<!-- 현재 단계일시 ing 클래스 추가 -->
-	<li class="active ing">
-		<!-- 결제 -->
-		<dl>
-			<dt class="title">7.결제</dt>
-			<dd>
-				<div class="info">보험료를 결제 중이에요</div>
-			</dd>
-		</dl>
-	</li>
-</ol>
-</div>
+							<dd>
+								<ul class="dep_list_sub">
+									<li>
+										제조사: <span>기아</span>
 
-<!-- 최종 보험료 -->
-<div class="panel_total">
-<div class="inner">
-	<div class="title">최종 보험료</div>
-	<div class="right">
-		<del>1,563,393원</del>
-		<span class="price">7,200원</span>
-	</div>
-</div>
-</div>
+										<button type="button" class="modify_sub" title="제조사 페이지로 이동">
+											<span>수정</span>
+										</button>
+									</li>
+									<li>
+										자동차명: <span>K7</span>
 
-<!-- 다이렉트 고객센터 -->
-<div class="customer_info">
-<div class="contact_list">
-	<div class="list">
-		<i class="icon call"></i>
-		<span class="info">
-			다이렉트 고객센터
-			<em>1899-6782</em>
-		</span>
+										<button type="button" class="modify_sub" title="자동차명 페이지로 이동">
+											<span>수정</span>
+										</button>
+									</li>
+									<li>
+										등록연도: <span>2025년</span>
+
+										<button type="button" class="modify_sub" title="등록연도 페이지로 이동">
+											<span>수정</span>
+										</button>
+									</li>
+									<li>
+										세부차명: <span>K7 Premier 3.0 GDi</span>
+
+										<button type="button" class="modify_sub" title="세부차명 페이지로 이동">
+											<span>수정</span>
+										</button>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<!-- s: 25-09-03 수정 -->
+							<dt class="maker">차량부품 정보</dt>
+							<!-- e: 25-09-03 수정 -->
+							<dd>
+								<ul class="dep_list_sub">
+									<li>
+										총차량가액: <span>11,000만원</span>
+									</li>
+								</ul>
+								<!-- s: 25-09-03 수정 -->
+								<button type="button" class="modify_sub" title="차량부품 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+								<!-- e: 25-09-03 수정 -->
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<dt class="alarm">알릴의무</dt>
+							<dd>
+								<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+					{{/ cp/accordion }}
+				</div>
+			</li>
+			<li class="active">
+				<!-- 운전자정보 -->
+				<!-- 입력진행 전 -->
+				<!-- <dl>
+					s: 25-09-03 수정
+					<dt class="title">3. 운전자 정보</dt>
+					e: 25-09-03 수정
+					<dd>
+						<div class="info">운전범위를 입력 중이에요</div>
+					</dd>
+				</dl> -->
+				<!-- 입력진행 후 -->
+				<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+				<div class="acd_item acd_item_ty9">
+					<!-- s: 25-09-03 수정 -->
+					{{#> cp/accordion ac-title="3. 운전자 정보"}}
+					<!-- e: 25-09-03 수정 -->
+						<dl class="dep_list">
+							<dt class="driver">운전범위</dt>
+							<dd>
+								<ul class="dep_list_sub">
+									<!-- s: 25-09-03 수정 -->
+									<li>
+										운전자 범위: <span>부부 한정</span>
+									</li>
+									<!-- e: 25-09-03 수정 -->
+									<li>
+										운전자나이: <span>만 24세 이상</span>
+									</li>
+								</ul>
+								<button type="button" class="modify_sub" title="운전범위 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<dt class="discount">할인특약</dt>
+							<dd>
+								<button type="button" class="modify_sub" title="할인특약 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<dt class="alarm">알릴의무</dt>
+							<dd>
+								<button type="button" class="modify_sub" title="알릴의무 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+					{{/ cp/accordion }}
+				</div>
+			</li>
+			<li class="active">
+				<!-- 보험료확인 -->
+				<!-- 입력진행 전 -->
+				<!-- <dl>
+					s: 25-09-03 수정
+					<dt class="title">4. 보험료 확인</dt>
+					e: 25-09-03 수정
+					<dd>
+						<div class="info">보험료를 확인 중이에요</div>
+					</dd>
+				</dl> -->
+				<!-- 입력진행 후 -->
+				<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+				<div class="acd_item acd_item_ty9">
+					<!-- s: 25-09-03 수정 -->
+					{{#> cp/accordion ac-title="4. 보험료 확인"}}
+					<!-- e: 25-09-03 수정 -->
+					<ul class="dep_list_sub">
+						<li>
+							최종보험료: <span>1,000,000원</span>
+							<!-- s: 25-09-03 수정 -->
+							<button type="button" class="modify_sub" title="보험료 확인 페이지로 이동">
+								<span>수정</span>
+							</button>
+							<!-- e: 25-09-03 수정 -->
+						</li>
+					</ul>
+					{{/ cp/accordion }}
+				</div>
+			</li>
+			<li class="active">
+				<!-- 피보험자/계약자정보 -->
+				<!-- 입력진행 전 -->
+				<!-- <dl>
+					s: 25-09-03 수정
+					<dt class="title">5. 피보험자/계약자 정보</dt>
+					e: 25-09-03 수정
+					<dd>
+						<div class="info">피보험자/계약자 정보를 입력 중이에요</div>
+					</dd>
+				</dl> -->
+				<!-- 입력진행 후 -->
+				<!-- 현재 해당되는 케이스에서 active 클래스 추가, aria-expanded=true 되어야 함 -->
+				<div class="acd_item acd_item_ty9">
+					<!-- s: 25-09-03 수정 -->
+					{{#> cp/accordion ac-title="5. 피보험자/계약자 정보"}}
+					<!-- e: 25-09-03 수정 -->
+						<dl class="dep_list">
+							<!-- s: 25-09-03 수정 -->
+							<dt class="contractor">피보험자/계약자 정보</dt>
+							<!-- e: 25-09-03 수정 -->
+							<dd>
+								<ul class="dep_list_sub">
+									<li>
+										피보험자: <span>김*대(900101-1******)</span>
+									</li>
+									<li>
+										계약자: <span>김*대(900101-1******)</span>
+									</li>
+								</ul>
+								<!-- s: 25-09-03 수정 -->
+								<button type="button" class="modify_sub" title="피보험자/계약자 정보 페이지로 이동">
+									<span>수정</span>
+								</button>
+								<!-- e: 25-09-03 수정 -->
+							</dd>
+						</dl>
+						<dl class="dep_list">
+							<dt class="picture">사진첨부</dt>
+							<dd>
+								<button type="button" class="modify_sub" title="사진첨부 페이지로 이동">
+									<span>수정</span>
+								</button>
+							</dd>
+						</dl>
+					{{/ cp/accordion }}
+				</div>
+			</li>
+			<li class="active">
+				<!-- 청약내용 확인 -->
+				<dl>
+					<dt class="title">6. 청약내용 확인</dt>
+					<dd>
+						<!-- <div class="info">청약내용을 확인 중이에요</div> -->
+					</dd>
+				</dl>
+				<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_5 modify_top" title="청약내용 확인 페이지로 이동">			
+					<span class="text">재조회</span>
+					<i class="hd_icon resetSvg"></i>
+				</button>
+			</li>
+			<!-- 현재 단계일시 ing 클래스 추가 -->
+			<li class="active ing" title="현재 단계">
+				<!-- 결제 -->
+				<dl>
+					<dt class="title">7. 결제</dt>
+					<dd>
+						<div class="info">보험료를 결제 중이에요</div>
+					</dd>
+				</dl>
+			</li>
+		</ol>
 	</div>
-</div>
-<ul class="list_depth_ty2">
-	<li>인터넷가입 보험료와 차이가 있어요</li>
-</ul>
-</div>
+
+	<!-- 최종 보험료 -->
+	<div class="panel_total">
+		<div class="inner">
+			<div class="title">최종 보험료</div>
+			<div class="right">
+				<span title="할인 전 보험료">
+					<del>1,563,393원</del>
+				</span>
+				<span title="할인 후 보험료">
+					<span class="price">7,200원</span>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 다이렉트 고객센터 -->
+	<div class="customer_info">
+		<div class="contact_list">
+			<div class="list">
+				<i class="icon call"></i>
+				<span class="info">
+					다이렉트 고객센터
+					<em>1899-6782</em>
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- e: 사이드 패널 -->
