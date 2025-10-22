@@ -438,6 +438,11 @@ body {
 				padding: var(--padding-2);
 				// font-size: var(--font-size-body-xsmall);
 				font-size: var(--font-size-body-small);
+
+				&.ic {
+					padding-left: 28px;
+					background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+				}
 			}
 			
 			// .item_depth {
