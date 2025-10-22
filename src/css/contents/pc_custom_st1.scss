@@ -341,9 +341,6 @@ body {
 				&.country {
 					background-image: url(../images/content/bi/icon_stepper_fuel.svg);
 				}
-				&.a {
-					background-image: url(../images/content/bi/icon_stepper_sex.svg);
-				}
 			}
 		}
 
@@ -418,7 +415,8 @@ body {
 			&:has(.modify_top){
 				dl {
 					.title {
-						padding-right: 68px;
+						// padding-right: 68px;
+						padding-right: 112px;
 					}
 				}
 			}

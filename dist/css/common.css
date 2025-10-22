@@ -2479,9 +2479,6 @@ strong {
 .address_item.address_item_case01:focus .ad_item {
 	color: var(--color-text-basic);
 }
-.address_item:focus {
-	outline: none;
-}
 .address_item[aria-disabled="true"] {
 	pointer-events: none;
 }
