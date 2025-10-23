@@ -640,6 +640,33 @@
 				background-size: 24px auto;
 			}
 		}
+
+		.info_gray.ty4 {	
+			.title_h3 {
+				&.notice {
+					padding-left: 24px;
+					background: url(../images/icon/point_circle.svg) no-repeat left 50%/20px auto;
+					color: var(--color-text-basic)s;
+				}
+			}
+			.list_depth {
+				margin-top: 20px;
+				> li {
+					font-size: var(--font-size-body-small);
+					&:before {
+						background-color: var(--color-icon-information);
+					}
+				}
+			}
+
+			& + .list_depth_ty2 {
+				margin-top: var(--gap-11);
+				
+				li {
+					color: var(--color-text-subtle);
+				}
+			}
+		}
 	}
 	&.main_evt_box {
 		.mcont_items {

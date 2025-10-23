@@ -246,7 +246,6 @@
 }
 .side_panel .step_list > li.active .info {
 	display: block;
-	color: var(--color-text-basic);
 }
 .side_panel .step_list > li.active > dl > dt {
 	color: var(--color-text-bolder);
@@ -307,6 +306,7 @@
 	margin-top: var(--gap-3);
 	padding: var(--padding-2);
 	font-size: var(--font-size-body-small);
+	color: var(--color-text-basic);
 }
 .side_panel .step_list > li .info.ic {
 	padding-left: 28px;
@@ -5630,6 +5630,26 @@
 }
 .mcont_items_wrap .mcont_items .acd_item_ty5 .acd_head_title {
 	background-size: 24px auto;
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 .title_h3.notice {
+	padding-left: 24px;
+	background: url(../images/icon/point_circle.svg) no-repeat left 50%/20px auto;
+	color: var(--color-text-basic) s;
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 .list_depth {
+	margin-top: 20px;
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 .list_depth > li {
+	font-size: var(--font-size-body-small);
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 .list_depth > li:before {
+	background-color: var(--color-icon-information);
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 + .list_depth_ty2 {
+	margin-top: var(--gap-11);
+}
+.mcont_items_wrap .mcont_items .info_gray.ty4 + .list_depth_ty2 li {
+	color: var(--color-text-subtle);
 }
 .mcont_items_wrap.main_evt_box .mcont_items {
 	padding-top: var(--gap-11);
