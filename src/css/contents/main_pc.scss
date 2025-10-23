@@ -653,6 +653,14 @@
 
 		.acd_item_ty5 {
 			.acd_head_title {
+				width: 170px;
+				padding-left: 24px;
+				background-size: 20px auto;
+			}
+
+			.acd_btn {
+				width: 32px;
+				height: 32px;
 				background-size: 24px auto;
 			}
 		}
@@ -1102,7 +1110,8 @@
 /* 알려드려요 */
 .item_news_link {
 	display: flex;
-	padding: 0 var(--padding-5);
+	// padding: 0 var(--padding-5);
+	padding: 0 16px;
 	border-radius: var(--radius-medium1);
 	background-color: transparent;
 	transition: padding 0.3s, background-color 0.3s;
