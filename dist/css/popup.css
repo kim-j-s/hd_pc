@@ -781,6 +781,9 @@
 	-ms-flex: 1;
 	flex: 1;
 }
+.popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont > .popup_content > .call_box:first-child {
+	margin-top: 0;
+}
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont > .popup_content .info_icon {
 	color: var(--color-text-information);
 	font-size: var(--font-size-body-xsmall);
