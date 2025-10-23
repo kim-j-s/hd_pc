@@ -1331,6 +1331,9 @@
 						position: static;
 						width: 100%;
 						.cont {
+							display: flex;
+							justify-content: end;
+							flex: 1;
 							.result {
 								display: flex;
 								align-items: center;
