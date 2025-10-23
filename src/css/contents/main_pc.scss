@@ -658,6 +658,14 @@
 					}
 				}
 			}
+
+			& + .list_depth_ty2 {
+				margin-top: var(--gap-11);
+				
+				li {
+					color: var(--color-text-subtle);
+				}
+			}
 		}
 	}
 	&.main_evt_box {
