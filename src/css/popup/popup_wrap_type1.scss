@@ -41,6 +41,34 @@
 					padding-bottom: var(--padding-6);
 					// padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
 					text-align: center;
+
+					.pl_msg_top {
+						font-size: var(--font-size-heading-small);
+					}
+
+					.pl_txt1 {
+						text-align: center;
+						&.txt_left {
+							text-align: left;
+						}
+					}
+
+					.info_text {
+						text-align: center;
+						& + .list_ty2 {
+							margin-top: var(--gap-5);
+						}
+						[class^="list_"] {
+							li {
+								text-align: left;
+							}
+						}
+						.list_ty3 {
+							+ .pl_txt1 {
+								margin-top: var(--gap-5);
+							}
+						}
+					}
 					
 
 					.info_confirm {
