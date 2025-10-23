@@ -14838,6 +14838,9 @@ ol li .table_wrap + .list_ty2 li + li {
 	background: var(--color-action-secondary);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 }
+.info_gray.ty4 {
+	background-color: var(--color-surface-secondary-subtle);
+}
 .info_gray + .call_box,
 .info_gray + .ag_groups,
 .info_gray + .ag_group_wrap,
