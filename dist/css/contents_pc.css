@@ -308,6 +308,10 @@
 	padding: var(--padding-2);
 	font-size: var(--font-size-body-small);
 }
+.side_panel .step_list > li .info.ic {
+	padding-left: 28px;
+	background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+}
 .side_panel .step_list > li .acd_item_ty9 {
 	position: relative;
 	-webkit-box-flex: 1;
