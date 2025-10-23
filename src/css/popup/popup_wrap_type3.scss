@@ -196,7 +196,9 @@
 				.popup_cont > .popup_content {
 					flex: 1;
 					// padding-bottom: 12px;
-					
+					> .call_box:first-child {
+						margin-top: 0;
+					}
 					.info_icon {
 						color: var(--color-text-information);
 						font-size: var(--font-size-body-xsmall);
