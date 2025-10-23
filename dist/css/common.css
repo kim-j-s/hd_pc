@@ -146,6 +146,9 @@ strong {
 	-ms-flex-pack: end;
 	justify-content: flex-end;
 }
+sup {
+	vertical-align: top;
+}
 .wrap {
 	display: block;
 	position: relative;
@@ -816,13 +819,6 @@ strong {
 }
 .pl_ico_ty_case2 {
 	background-image: url(../images/icon/icon_complete_error.svg);
-}
-.msg_error {
-	padding-left: 20px;
-	background: url(../images/icon/icon_error.svg) no-repeat left center/16px auto;
-	font-size: var(--font-size-label-medium);
-	line-height: 21px;
-	color: var(--color-text-danger);
 }
 .link_area.right {
 	text-align: right;
@@ -6422,6 +6418,7 @@ strong {
 	gap: var(--gap-3);
 }
 .card_item_wrap .card_item .item_inner .title_info + .desc {
+	display: block;
 	margin-top: var(--gap-3);
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-information);
@@ -6474,6 +6471,13 @@ strong {
 }
 .card_item_wrap .card_item .item_inner .inner_cont .checkbox_group_wrap.column .inp_checkbox input:checked + .label:before {
 	background-size: 20px auto;
+}
+.card_item_wrap .card_item .item_inner .inner_cont + .info_gray {
+	width: 100%;
+	margin: var(--gap-4);
+}
+.card_item_wrap .card_item .item_inner .inner_cont .msg_error {
+	margin-top: var(--gap-4);
 }
 .card_item_wrap .card_item .item_inner .inp_radio,
 .card_item_wrap .card_item .item_inner .inp_checkbox {
@@ -9130,7 +9134,7 @@ strong {
 .msg_info {
 	margin-top: var(--gap-3);
 	padding-left: 20px;
-	background: url(../images/icon/icon_error.svg) no-repeat left center/16px auto;
+	background: url(../images/icon/icon_error.svg) no-repeat left top 2px/16px auto;
 	font-size: var(--font-size-label-medium);
 	line-height: 21px;
 	color: var(--color-text-information);
@@ -9138,7 +9142,7 @@ strong {
 .msg_success {
 	margin-top: var(--gap-3);
 	padding-left: 20px;
-	background: url(../images/icon/icon_success.svg) no-repeat left center/16px auto;
+	background: url(../images/icon/icon_success.svg) no-repeat left top 2px/16px auto;
 	font-size: var(--font-size-label-medium);
 	line-height: 21px;
 	color: var(--color-text-success);
@@ -9146,7 +9150,7 @@ strong {
 .msg_error {
 	margin-top: var(--gap-3);
 	padding-left: 20px;
-	background: url(../images/icon/icon_fail.svg) no-repeat left center/16px auto;
+	background: url(../images/icon/icon_fail.svg) no-repeat left top 2px/16px auto;
 	font-size: var(--font-size-label-medium);
 	line-height: 21px;
 	color: var(--color-text-danger);
@@ -9217,9 +9221,6 @@ strong {
 .comp_wrap .comp_wrap_keypad_call .keypad_call {
 	display: block;
 	width: 100%;
-}
-.comp_wrap .comp_wrap_keypad_call .keypad_call.active {
-	background-color: blue;
 }
 .comp_wrap .input_text input:-moz-read-only {
 	z-index: 1;
@@ -10066,6 +10067,9 @@ strong {
 	border-radius: 50%;
 	background-color: #6d7882;
 }
+.list_ty4.list_ty4_left > li {
+	text-align: left;
+}
 .list_ty4 > li ~ li {
 	margin-top: var(--gap-4);
 }
@@ -10278,14 +10282,15 @@ strong {
 	display: block;
 	position: relative;
 	padding-right: 36px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	gap: 4px;
+}
+.search_reult_list_container ul.search_reult_list li a > span {
+	display: block;
+}
+.search_reult_list_container ul.search_reult_list li a > span + span {
+	margin-top: var(--gap-2);
+}
+.search_reult_list_container ul.search_reult_list li a .badge_wrap + span {
+	margin-top: var(--gap-2);
 }
 .search_reult_list_container ul.search_reult_list li a .hd_badge {
 	width: -webkit-fit-content;
@@ -13320,7 +13325,6 @@ ol li .table_wrap + .list_ty2 li + li {
 	-ms-flex-pack: center;
 	justify-content: center;
 	height: 100px;
-	background-color: skyblue;
 }
 #swiper1 .swiper-slide:nth-child(even) {
 	background-color: #ddd;
@@ -14836,6 +14840,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .info_gray.ty3 {
 	background: var(--color-action-secondary);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+}
+.info_gray.ty4 {
+	background-color: var(--color-surface-secondary-subtle);
 }
 .info_gray + .call_box,
 .info_gray + .ag_groups,

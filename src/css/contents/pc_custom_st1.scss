@@ -355,7 +355,6 @@ body {
 
 				.info {
 					display: block;
-					color:  var(--color-text-basic);
 				}
 
 				> dl {
@@ -439,6 +438,12 @@ body {
 				padding: var(--padding-2);
 				// font-size: var(--font-size-body-xsmall);
 				font-size: var(--font-size-body-small);
+				color: var(--color-text-basic);
+
+				&.ic {
+					padding-left: 28px;
+					background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+				}
 			}
 			
 			// .item_depth {

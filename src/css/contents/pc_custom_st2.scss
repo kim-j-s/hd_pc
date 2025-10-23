@@ -1331,6 +1331,9 @@
 						position: static;
 						width: 100%;
 						.cont {
+							display: flex;
+							justify-content: end;
+							flex: 1;
 							.result {
 								display: flex;
 								align-items: center;
@@ -2853,6 +2856,31 @@
 	&:has(.simple_info_item.active) {
 		.pew_exception {
 			padding-bottom: 0;
+		}
+	}
+}
+
+.info_cont {
+	&.flex_row {
+		display: flex;
+		align-items: stretch; // div 높이 동일
+		height: 100%;
+		gap: var(--gap-3); 
+
+		> div {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+		> i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: rotate(-90deg);
+			flex-shrink: 0;
+			width: 32px;
+			height: 32px;
+			align-self: center;
 		}
 	}
 }

@@ -415,7 +415,8 @@
 					left: -87px;
 					z-index: 10;
 					width: 86px;
-					height: 93px;
+					// height: 93px;
+					height: 117px;
 					background: white;
 				}
 
@@ -426,7 +427,8 @@
 					right: -835px;
 					z-index: 10;
 					width: 100%;
-					height: 93px;
+					// height: 93px;
+					height: 117px;
 					background: white;
 				}
 
@@ -468,15 +470,17 @@
 
 					.re_link {
 						display: block;
-						padding: 65px var(--padding-7) calc(var(--padding-2) + 1px);
+						min-height: 110px;
+						padding: 64px var(--padding-7) calc(var(--padding-2) + 1px);
 						font-size: var(--font-size-body-small);
 						font-weight: 700;
 						// color: var(--color-text-subtle);
 						color:  var(--color-text-basic);
 						text-align: center;
 						background-repeat: no-repeat;
-						background-position: center 5px;
+						background-position: center top 4px;
 						background-size: 56px auto;
+
 						.text {
 							display: block;
 						}
@@ -511,6 +515,15 @@
 						&.travel {
 							background-image: url(../images/content/main/icon_product_travel.svg);
 						}
+						&.building {
+							background-image: url(../images/content/main/icon_product_building.svg);
+						}
+						&.save {
+							background-image: url(../images/content/main/icon_product_save.svg);
+						}
+						&.motor {
+							background-image: url(../images/content/main/icon_product_motor.svg);
+						}
 
 						//법인
 						&.c_apply {
@@ -532,7 +545,7 @@
 							background-color: var(--color-action-secondary-hover);
 
 							.tip_item {
-								bottom: calc(100% - 2px);
+								bottom: calc(100% - 1px);
 								opacity: 1;
 								transition: all .3s ease-in;
 							}
@@ -618,6 +631,9 @@
 					&.swiper_button_right {
 						right: -20px;
 					}
+					&:focus {
+						background-color: var(--color-action-white);
+					}
 				}
 			}
 		}
@@ -637,7 +653,42 @@
 
 		.acd_item_ty5 {
 			.acd_head_title {
+				width: 170px;
+				padding-left: 24px;
+				background-size: 20px auto;
+			}
+
+			.acd_btn {
+				width: 32px;
+				height: 32px;
 				background-size: 24px auto;
+			}
+		}
+
+		.info_gray.ty4 {	
+			.title_h3 {
+				&.notice {
+					padding-left: 24px;
+					background: url(../images/icon/point_circle.svg) no-repeat left 50%/20px auto;
+					color: var(--color-text-basic)s;
+				}
+			}
+			.list_depth {
+				margin-top: 20px;
+				> li {
+					font-size: var(--font-size-body-small);
+					&:before {
+						background-color: var(--color-icon-information);
+					}
+				}
+			}
+
+			& + .list_depth_ty2 {
+				margin-top: var(--gap-11);
+				
+				li {
+					color: var(--color-text-subtle);
+				}
 			}
 		}
 	}
@@ -1059,7 +1110,8 @@
 /* 알려드려요 */
 .item_news_link {
 	display: flex;
-	padding: 0 var(--padding-5);
+	// padding: 0 var(--padding-5);
+	padding: 0 16px;
 	border-radius: var(--radius-medium1);
 	background-color: transparent;
 	transition: padding 0.3s, background-color 0.3s;
