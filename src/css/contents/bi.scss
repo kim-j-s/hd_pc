@@ -16,6 +16,29 @@
 }
 
 
+
+/* 기초정보 입력 포함 팝업 예외 처리 */
+.popup_wrap {
+	&.popup_wrap_type4 {
+		.popup_container {
+			.popup_inner {
+				.popup_cont {
+					.popup_content {
+						&:has(.bi_wrap) {
+							padding-bottom: 0;
+						}
+						.bi_wrap {
+							min-height: 530px;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+/* 기초정보 입력 포함 팝업 예외 처리 */
+
+
 .bi_wrap {
 	// --t-time: 0.5s;
 	--t-time: 1s;
@@ -1090,6 +1113,12 @@
 				background-position: top 40px right 32px;
 			}
 
+			/* 높이제한 */
+			&.pbw_inner_limite_type1 {
+				max-height: 694px;
+			}
+			/* 높이제한 */
+
 
 			.pi_top {
 				flex: none;
@@ -1757,30 +1786,45 @@
 					}
 
 
-
-
 					&:has(.bottom_info_wrap) {
 						padding-bottom: var(--padding-8);
+
+						.pb_details_inner {
+							&:not(.grid3){
+								.item {
+									&:nth-last-child(-n+2){
+										padding-bottom: var(--padding-6);
+									}
+								}
+							}
+						}
 					}
 					.bottom_info_wrap {
 						// margin-top: 20px;
-						margin-top: 24px;
+						// margin-top: 24px;
 						padding-top: 20px;
 						border-top: 1px solid var(--color-border-information-light);
+						font-size: var(--font-size-body-small);
 						text-align: center;
-						
-						strong {
+
+						.top {
 							padding-left: 20px;
 							background: url(../images/icon/icon_info.svg) no-repeat left 50%;
 							background-size: 16px;
 							// font-size: var(--font-size-body-medium);
 							font-size: var(--font-size-body-small);
+							color: var(--color-text-basic);
 						}
 						.desc {
 							margin-top: var(--gap-2);
 							// font-size: var(--font-size-body-small);
 							font-size: var(--font-size-body-xsmall);
 							color: var(--color-text-subtle);
+						
+							.link {
+								text-decoration: underline;
+								text-underline-position: from-font;
+							}
 						}
 					}
 
