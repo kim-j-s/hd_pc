@@ -37,6 +37,10 @@
 
 	& + .banner_box { 
 		margin-top: var(--gap-11);
+
+		&.basic {
+			margin-top: var(--gap-8);
+		}
 	}
 
 	& + .title_h3 {
