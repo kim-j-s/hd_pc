@@ -143,52 +143,59 @@
 
 
 // banner
-.banner_box {
-	display: flex;
-	flex-flow: row wrap;
-	// justify-content: center;
-	justify-content: space-between;
-	gap: var(--gap-8) var(--gap-8);
-
-	// 1개일 시, 가운데 정렬
-	// &:has(*:only-child){
-	// 	justify-content: center;
-	// }
-
-	// &:not(:has(*:only-child)){
-	// 	* {
-	// 		width: calc(50% - 16px);
-	// 	}
-	// }
-	// &:has(*:nth-child(3)) {
-	// 	justify-content: flex-start;
-	// }
-
-	> * {
-		flex: 0 1 calc(50% - 16px);
-		text-align: center;
+.banner_box{
+	&.basic {
+		a + a {
+			margin-top: var(--gap-8);
+		}
 	}
-	
-	> img {
-		width: calc(50% - 16px);
-	}
+	&:not(.basic) {
+		display: flex;
+		flex-flow: row wrap;
+		// justify-content: center;
+		justify-content: space-between;
+		gap: var(--gap-8) var(--gap-8);
+
+		// 1개일 시, 가운데 정렬
+		// &:has(*:only-child){
+		// 	justify-content: center;
+		// }
+
+		// &:not(:has(*:only-child)){
+		// 	* {
+		// 		width: calc(50% - 16px);
+		// 	}
+		// }
+		// &:has(*:nth-child(3)) {
+		// 	justify-content: flex-start;
+		// }
+
+		> * {
+			flex: 0 1 calc(50% - 16px);
+			text-align: center;
+		}
+		
+		> img {
+			width: calc(50% - 16px);
+		}
 
 
-	& + .btn_area,
-	& + .checkbox_group_wrap {
-		margin-top: var(--gap-8);
-	}
+		& + .btn_area,
+		& + .checkbox_group_wrap {
+			margin-top: var(--gap-8);
+		}
 
-	& + [class^=list_]{
-		margin-top: var(--gap-5);
-	}
+		& + [class^=list_]{
+			margin-top: var(--gap-5);
+		}
 
-	& + .form_box {
-		margin-top: var(--gap-11);
-	}
+		& + .form_box {
+			margin-top: var(--gap-11);
+		}
 
-	&.center {
-		justify-content: center;
+		&.center {
+			justify-content: center;
+		}
 	}
 }
 
