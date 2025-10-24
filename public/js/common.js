@@ -1139,6 +1139,9 @@ $(function(){
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker");
 		$input.datepicker("show");
+		$('.ui-datepicker-calendar tbody tr td a').removeAttr('title');
+		$('.ui-datepicker-today a').attr('title', '오늘 날짜');
+		$('.ui-state-active').attr('title', '선택됨');
 	});
 
 	$(".calendar_call_month").on("click", function (e) {
@@ -1146,6 +1149,8 @@ $(function(){
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker_month");
 		$input.monthpicker("show");
+		$('.ui-datepicker tbody tr td a').removeAttr('title');
+		$('.ui-datepicker-today a').attr('title', '선택됨');
 	});
 
 	/*
