@@ -348,7 +348,6 @@
 		let newClass = 'pick' + idx;
 
 		const $parent = $(this).closest('[class*="pick"]');
-
 		// 지정된 순으로
 		if($(this).closest('.select_driver_range').hasClass('direct')){
 			let newVal = $parent.attr('class');
@@ -360,7 +359,14 @@
 			$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
 			$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newClass);
 		}
-	})
+		
+		const labelText = $(this).next().text();
+		$relGroup.attr({
+			role: 'img',
+			'aria-live': 'polite',
+			'aria-label': '운전자와의 관계: ' + labelText.replace(/\s{2,}/g, ' ').trim()
+		});
+	});
 
 	// 해제가능 radio group
 	// 
@@ -1139,6 +1145,9 @@ $(function(){
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker");
 		$input.datepicker("show");
+		$('.ui-datepicker-calendar tbody tr td a').removeAttr('title');
+		$('.ui-datepicker-today a').attr('title', '오늘 날짜');
+		$('.ui-state-active').attr('title', '선택됨');
 	});
 
 	$(".calendar_call_month").on("click", function (e) {
@@ -1146,6 +1155,8 @@ $(function(){
 		const $btn = $(this);
 		const $input = $btn.siblings(".inp_picker_month");
 		$input.monthpicker("show");
+		$('.ui-datepicker tbody tr td a').removeAttr('title');
+		$('.ui-datepicker-today a').attr('title', '선택됨');
 	});
 
 	/*
