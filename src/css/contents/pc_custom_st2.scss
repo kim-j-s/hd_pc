@@ -824,6 +824,10 @@
 
 	& + .banner_box {
 		margin-top: var(--gap-5);
+		
+		&.basic {
+			margin-top: var(--gap-8);
+		}
 	}
 
 	& + .table_wrap {
