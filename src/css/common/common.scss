@@ -337,8 +337,12 @@ sup {
 	}
 
 	.breadcrumb {
-		+ .container {
-			padding-top: var(--gap-8);
+		&:has(.breadcrumb_inner_list){
+			padding-top: var(--padding-3);
+			
+			+ .container {
+				padding-top: var(--gap-8);
+			}
 		}
 		+ .container_form {
 			padding-top: var(--gap-8);

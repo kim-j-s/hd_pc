@@ -281,7 +281,10 @@ sup {
 .wrap .header_pc + .container_form {
 	margin-top: var(--gap-12);
 }
-.wrap .breadcrumb + .container {
+.wrap .breadcrumb:has(.breadcrumb_inner_list) {
+	padding-top: var(--padding-3);
+}
+.wrap .breadcrumb:has(.breadcrumb_inner_list) + .container {
 	padding-top: var(--gap-8);
 }
 .wrap .breadcrumb + .container_form {

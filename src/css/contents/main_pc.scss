@@ -663,6 +663,12 @@
 				height: 32px;
 				background-size: 24px auto;
 			}
+
+			.acd_cont {
+				.inner {
+					padding: 0 var(--padding-3) var(--padding-8);
+				}
+			}
 		}
 
 		.info_gray.ty4 {	
@@ -678,16 +684,18 @@
 				> li {
 					font-size: var(--font-size-body-small);
 					&:before {
+						width: 2px;
+						height: 2px;
 						background-color: var(--color-icon-information);
 					}
 				}
-			}
 
-			& + .list_depth_ty2 {
-				margin-top: var(--gap-11);
-				
-				li {
-					color: var(--color-text-subtle);
+				& + .list_depth_ty2 {
+					margin-top: var(--gap-5);
+					
+					li {
+						color: var(--color-text-subtle);
+					}
 				}
 			}
 		}
@@ -1110,13 +1118,13 @@
 /* 알려드려요 */
 .item_news_link {
 	display: flex;
-	// padding: 0 var(--padding-5);
-	padding: 0 16px;
+	padding: 0 var(--padding-5);
 	border-radius: var(--radius-medium1);
 	background-color: transparent;
 	transition: padding 0.3s, background-color 0.3s;
 	min-width: 0;
 	width: 100%;
+
 	.item_news_link_inner	{
 		position: relative;
 		flex: 1 1 0;
