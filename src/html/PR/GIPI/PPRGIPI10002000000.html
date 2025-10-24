@@ -1,6 +1,8 @@
 {{#> layout/default no-gnb=true page-title="기본정보입력 | 개인정보보호배상책임보험(II)"}}
 <div id="wrap" class="wrap">
-	{{> layout/header_pc h-prd="개인정보보호배상책임보험(II)" }}
+	<!-- s: 25-10-24 수정 -->
+	{{> layout/header_pc hd-error=true no-direct=true h-prd="개인정보보호배상책임보험(II)" }}
+	<!-- e: 25-10-24 수정 -->
 
 	<div id="container" class="container">
 		<div class="content content_st1">
@@ -42,6 +44,12 @@
 											</p>
 										</div>
 									</div>
+									<!-- s: 25-10-24 수정 -->
+									<div class="bottom_info_wrap">
+										<span class="top">궁금한 내용이 있으신가요? <strong>조이앤인슈어테크</strong>로 문의해주세요.</span>
+										<p class="desc">전화상담: 1688-2026 / 이메일상담: <a class="link" href="mailto:joyandinsu@daum.net">joyandinsu@daum.net</a></p>
+									</div>
+									<!-- e: 25-10-24 수정 -->
 								</div>
 							</div>
 						</div>
@@ -129,13 +137,17 @@
 			</div>
 		</div>
 			
+		<!-- s: 25-10-24 수정 -->
 		<!-- s: aside 영역 -->
-		{{> layout/aside_pc }}
+		{{!-- {{> layout/aside_pc }} --}}
 		<!-- e: aside 영역 -->
+		<!-- e: 25-10-24 수정 -->
 	</div>
 
 	<!-- footer -->
-	{{> layout/footer no-footer=true }}
+	<!-- s: 25-10-24 수정 -->
+	{{> layout/footer no-quick=true no-footer=true }}
+	<!-- e: 25-10-24 수정 -->
 	<!-- footer -->
 </div>
 

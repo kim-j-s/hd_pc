@@ -51,29 +51,35 @@
 		<div class="hpi_bottom">
 			<div class="hpi_l{{#if h-prd}} hpi_l_nd{{/if}}">
 				{{#unless h-prd}}
-				{{#if hd-error}}
-				<h1 class="hpi_logo">
-					<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트">
-				</h1>
+					{{#if hd-error}}
+					<h1 class="hpi_logo">
+						<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트">
+					</h1>
+					{{else}}
+					<h1 class="hpi_logo">
+						<a href="#">
+							<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트 홈으로">
+						</a>
+					</h1>
+					{{/if}}
 				{{else}}
-				<h1 class="hpi_logo">
-					<a href="#">
-						<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트 홈으로">
-					</a>
-				</h1>
-				{{/if}}
-				{{else}}
-				{{#if npay}}
-				<h1 class="hpi_logo">
-					<a href="#">
-						<img src="../../../images/header/img_logo_ty2_xnpay.png" alt="현대해상 다이렉트 X Npay 홈으로">
-					</a>
-				</h1>
-				{{else}}
-				<h1 class="hpi_logo">
-					<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트">
-				</h1>
-				{{/if}}
+					{{#if npay}}
+					<h1 class="hpi_logo">
+						<a href="#">
+							<img src="../../../images/header/img_logo_ty2_xnpay.png" alt="현대해상 다이렉트 X Npay 홈으로">
+						</a>
+					</h1>
+					{{else}}
+						{{#unless no-direct}}
+						<h1 class="hpi_logo">
+							<img src="../../../images/header/img_logo_ty2.png" alt="현대해상 다이렉트">
+						</h1>
+						{{else}}
+						<h1 class="hpi_logo">
+							<img src="../../../images/header/img_logo_ty2_hd.png" alt="현대해상">
+						</h1>
+						{{/unless}}
+					{{/if}}
 				<strong class="hpi_l_prd_name">{{h-prd}}</strong>
 				{{/unless}}
 			</div>
@@ -104,19 +110,19 @@
 
 			{{#unless hd-error}}
 			<div class="hpi_sub_utils">
-				{{#if h-prd}}
-				<div class="item item_chatbot">
-					<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
-				</div>
-				{{#if gnbadd}}
-				<div class="item">
-					<a href="#" class="hus_btn hsu_home"><span class="text">홈으로 이동</span></a>
-				</div>
-				{{else}}
-				<div class="item">
-					<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
-				</div>
-				{{/if}}
+					{{#if h-prd}}
+					<div class="item item_chatbot">
+						<a href="#" class="hus_btn hsu_chatbot" target="_blank" title="새창열림"><span class="text">챗봇상담</span></a>
+					</div>
+					{{#if gnbadd}}
+					<div class="item">
+						<a href="#" class="hus_btn hsu_home"><span class="text">홈으로 이동</span></a>
+					</div>
+					{{else}}
+					<div class="item">
+						<button type="button" class="hus_btn hsu_close"><span class="text">종료</span></button>
+					</div>
+					{{/if}}
 				{{else}}
 				{{#if corp_mode}}
 				{{else}}
@@ -574,7 +580,7 @@
 					<button type="button" id="all_menu_open" class="hus_btn hsu_menu_all" onclick="openHDPopup(this,'all_menu');"><span class="text">전체메뉴 보기</span></button>
 					{{> layout/allmenu }}
 				</div>				
-				{{/if}}
+			{{/if}}
 				{{/if}}
 			</div>
 			{{/unless}}

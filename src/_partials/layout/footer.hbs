@@ -1,4 +1,5 @@
 <div class="quick_menu">
+	{{#unless no-quick}}
 	<div class="qm_item">
 		<a href="#" class="qm_btn qm_btn_acc_report"><span class="text">사고접수</span></a>
 	</div>
@@ -13,6 +14,7 @@
 		<a href="/html/GU/CNSL/PGUCNSL10000000000.html" class="qm_btn qm_btn_pro_info"><span class="text">상담안내</span></a>
 		<!-- e: 25-10-01 수정 -->
 	</div>
+	{{/unless}}
 	{{#unless no-pt}}
 	<div class="qm_item">
 		<a href="#skipNavi" class="qm_btn qm_btn_pagetop">페이지 최상단으로 이동</a>

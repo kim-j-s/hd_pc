@@ -5,11 +5,23 @@
 }
 
 .wrap {
+	// 상품안내 (header,footer 삭제된 Case)
+	&:has(.prd_view){
+		&:not(:has(.breadcrumb)){
+			padding-top: 0;
+
+			.content_body {
+				padding-bottom: 30px;
+			}
+		}
+	}
+
 	.container {
 		&.prd_view {
 			width: 100%;
 			gap: 0;
 			padding-bottom: 0;
+			padding-top: var(--gap-8);
 		}
 	}
 	.prd_link_area {
