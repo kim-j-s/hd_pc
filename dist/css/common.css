@@ -13758,6 +13758,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .table_wrap + .banner_box {
 	margin-top: var(--gap-11);
 }
+.table_wrap + .banner_box.basic {
+	margin-top: var(--gap-8);
+}
 .table_wrap + .title_h3 {
 	margin-top: var(--gap-11);
 }
