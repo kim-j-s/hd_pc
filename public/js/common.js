@@ -494,12 +494,13 @@
 		$(this).addClass('active').attr('title', '선택됨');
 	});
 
-	// inp_only_num
-	$DOM.on('keyup', '.inp_only_num', function() {
-		const $this = $(this),
-					val = $this.val().replace(/[^0-9]/g, ''); // 숫자만 허용
-		$this.val(val);
-	});
+	// inp_only_num -  input[type="tel"]로 대체
+	// $DOM.on('keyup', '.inp_only_num', function() {
+	// 	const $this = $(this),
+	// 				val = $this.val().replace(/[^0-9]/g, ''); // 숫자만 허용
+	// 	$this.val(val);
+	// });
+	// inp_only_num -  input[type="tel"]로 대체
 
 	// input[type="tel"]
 	$DOM.on('keyup', 'input[type="tel"]', function() {
@@ -656,7 +657,7 @@
 		}
 	
 		// 값 가져오기 및 하이픈/공백 제거
-		let val = $this.val() ? $this.val().replace(/[-\s]/g, '') : '';
+		let val = $this.val() ? $this.val().replace(/[^0-9*]/g, '') : '';
 	
 		// 값이 없으면 기본값 010 세팅
 		if (!val) {
@@ -672,7 +673,7 @@
 
 	$DOM.on("blur", ".input_text.phone_full input", function () {
 		let $this = $(this);
-		let val = $this.val().replace(/[^0-9]/g, ""); // 숫자만 남김
+		let val = $this.val().replace(/[^0-9*]/g, ""); // 숫자만 남김
 	
 		if (val.length === 10) {
 			// 10자리 → 010-000-0000
@@ -700,8 +701,12 @@
 	
 		if (val.length === 4) {
 			val = val.replace(/(\d{2})(\d{2})/, "$1/$2");
-		}
-	
+		}	
+		// 미결정 사항
+		if (val.length === 4) {
+			val = val.replace(/(\d{2})(\d{2})/, "$1/$2");
+		}	
+		// 미결정 사항
 		$this.val(val);
 	});
 	// 유효기간 처리
@@ -940,7 +945,6 @@ function inputState() {
 
 function inpPhoneFormat() {
 	$('.input_text').each(function() {
-		// if( $(this).hasClass('phone') && $(this).hasClass('readonly') || $(this).hasClass('phone') && $(this).hasClass('disabled') ){
 		if( $(this).hasClass('phone') ){
 			const $inp = $(this).children('.inp').find('input');
 			let val = $inp.val();
@@ -949,17 +953,16 @@ function inpPhoneFormat() {
 			$inp.val(newVal).addClass('isVal');
 		}
 		// 전화번호 입력 적용 준비 중 스크립트
-		// if( $(this).hasClass('phone_full') && $(this).hasClass('readonly') || $(this).hasClass('phone_full') && $(this).hasClass('disabled') ){
-			if( $(this).hasClass('phone_full') ) {
-				const $inp = $(this).children('.inp').find('input');
-				let val = $inp.val().replace(/[^0-9]/g, "");
-				if (val.length === 10) {
-					val = val.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
-				} else if (val.length === 11) {
-					val = val.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
-				}
-				$inp.val(val);
+		if( $(this).hasClass('phone_full') ) {
+			const $inp = $(this).children('.inp').find('input');
+			let val = $inp.val().replace(/[^0-9*]/g, "");
+			if (val.length === 10) {
+				val = val.replace(/^(\d{3})([\d*]{3})([\d*]{4})$/, "$1-$2-$3");
+			} else if (val.length === 11) {
+				val = val.replace(/^(\d{3})([\d*]{4})([\d*]{4})$/, "$1-$2-$3");
 			}
+			$inp.val(val);
+		}
 			// 전화번호 입력 적용 준비 중 스크립트
 	});
 }
