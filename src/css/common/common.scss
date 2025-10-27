@@ -343,6 +343,9 @@ sup {
 		+ .container_form {
 			padding-top: var(--gap-8);
 		}
+		&:has(.breadcrumb_inner_list){
+			padding-top: var(--padding-3);
+		}
 	}
 	/* 조건별 container 상단 간격 */
 
