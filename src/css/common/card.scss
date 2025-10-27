@@ -671,7 +671,7 @@
 			background-color: var(--color-surface-gray-subtler);
 			overflow: hidden;
 
-			* {
+			*:not(.msg_error) {
 				color: var(--color-text-disabled-on) !important;
 				div:not(.cont){
 					background-color: var(--color-surface-gray-subtler);
