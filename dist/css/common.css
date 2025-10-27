@@ -287,6 +287,9 @@ sup {
 .wrap .breadcrumb + .container_form {
 	padding-top: var(--gap-8);
 }
+.wrap .breadcrumb:has(.breadcrumb_inner_list) {
+	padding-top: var(--padding-3);
+}
 .wrap aside {
 	position: absolute;
 	top: 0;
@@ -6344,6 +6347,20 @@ sup {
 	padding-left: 28px;
 	display: block;
 }
+.card_item_wrap:not(.info_type, .ty7) .card_item .item_inner:has(.inp_checkbox, .inp_radio):has(.tit_item, .card_link) .card_list_ty1 > li:first-child {
+	margin-top: var(--gap-5);
+	padding-top: 16px;
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+	/* 목록 상 결과값만 최상단에 존재하는 경우 */
+}
+.card_item_wrap:not(.info_type, .ty7) .card_item .item_inner:has(.inp_checkbox, .inp_radio):has(.tit_item, .card_link) .card_list_ty1 > li:first-child.result {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: var(--gap-4);
+	padding-top: 0;
+	border-top: none;
+}
 .card_item_wrap .card_item {
 	position: relative;
 	padding: calc(var(--padding-8) - 1px) var(--padding-7);
@@ -6442,20 +6459,6 @@ sup {
 }
 .card_item_wrap .card_item .item_inner .inp_checkbox input {
 	margin-top: 3px;
-}
-.card_item_wrap .card_item .item_inner .card_list_ty1 > li:first-child {
-	margin-top: var(--gap-5);
-	padding-top: 16px;
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-	/* 목록 상 결과값만 최상단에 존재하는 경우 */
-}
-.card_item_wrap .card_item .item_inner .card_list_ty1 > li:first-child.result {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-top: var(--gap-4);
-	padding-top: 0;
-	border-top: none;
 }
 .card_item_wrap .card_item .item_inner .inner_cont {
 	-webkit-box-flex: 1;
@@ -6763,10 +6766,10 @@ sup {
 	background-color: var(--color-surface-gray-subtler);
 	overflow: hidden;
 }
-.card_item_wrap .card_item.disabled * {
+.card_item_wrap .card_item.disabled *:not(.msg_error) {
 	color: var(--color-text-disabled-on) !important;
 }
-.card_item_wrap .card_item.disabled * div:not(.cont) {
+.card_item_wrap .card_item.disabled *:not(.msg_error) div:not(.cont) {
 	background-color: var(--color-surface-gray-subtler);
 }
 .card_item_wrap .card_item.disabled .input_text .inp {
@@ -11532,6 +11535,9 @@ ol li .table_wrap + .list_ty2 li + li {
 	width: auto;
 }
 .bottom_fix_notice .acd_cont .inner .list_depth > li .circle_list {
+	margin-top: var(--gap-4);
+}
+.bottom_fix_notice .acd_cont .inner .list_depth + ul {
 	margin-top: var(--gap-4);
 }
 .bottom_fix_notice + .suggestion_list_wrap {
