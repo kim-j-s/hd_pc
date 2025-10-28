@@ -5534,9 +5534,9 @@
 	content: "";
 	position: absolute;
 	bottom: 0;
-	right: -835px;
+	right: -87px;
 	z-index: 10;
-	width: 100%;
+	width: 86px;
 	height: 117px;
 	background: white;
 }
@@ -6127,6 +6127,9 @@
 	display: inline-block;
 	max-width: 100%;
 	color: var(--color-text-basic);
+	vertical-align: top;
+}
+.prd_module_box .prd_login > .chg_item .text strong.truncate {
 	vertical-align: middle;
 }
 .prd_module_box .prd_login > .chg_item .text > span {
