@@ -424,9 +424,11 @@
 					content:'';
 					position: absolute;
 					bottom: 0;
-					right: -835px;
+					// right: -835px;
+					right: -87px;
 					z-index: 10;
-					width: 100%;
+					// width: 100%;
+					width: 86px;
 					// height: 93px;
 					height: 117px;
 					background: white;
@@ -1038,7 +1040,10 @@
 					display: inline-block;
 					max-width: 100%;
 					color: var(--color-text-basic);
-					vertical-align: middle;
+					vertical-align: top;
+					&.truncate {
+						vertical-align: middle;
+					}
 				}
 				> span {
 					display: inline-block;

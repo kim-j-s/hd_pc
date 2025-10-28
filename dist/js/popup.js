@@ -135,6 +135,10 @@ function openHDPopup($triggerEl, target) {
 		focusTarget.css("display", "block");
 	}
 
+	if (event && event.type === 'click') {
+		window.preventFocusSlide = true;
+}
+
 	setTimeout(() => {
 		// if (focusTarget) {
 		// 	focusTarget.focus();
@@ -301,6 +305,8 @@ function closeHDPopup(target, returnTarget = null) {
 	$target.removeAttr("opner");
 	setTimeout(function(){
 		$('body').removeAttr('tabindex');
+		window.preventFocusSlide = false;
+		console.log('preventFocusSlide 초기화:', window.preventFocusSlide);
 	}, 360);
 }
 

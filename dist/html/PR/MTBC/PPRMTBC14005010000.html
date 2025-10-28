@@ -128,6 +128,7 @@
 						</li>
 					</ul>
 
+					<!-- s: 25-10-28 수정 -->
 					<div class="form_box">
 						<h3 class="title_h3">피보험자/계약자 정보</h3>
 						<!-- 피보험자/계약자 동일 -->
@@ -169,186 +170,193 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- s: 피보험자 계피상이 -->
-					<div class="divider_ty1"></div>
-					<h3 class="title_h3">계약자 정보</h3>
-					<div class="info_gray info_text">계약자 명의의 결제수단으로만 보험료 납입이 가능하며, 계약체결 전 보험계약자의 동의(전자서명)가 필요합니다</div>
-					<div class="form_group_wrap">
-						<!-- s: 기타 -->
-						<div class="form_line full_half">
-							<div class="label_tit">피보험자와의 관계</div>
-							<!-- s: 25-09-02 수정 -->
-							<div class="input_text">
-								<div class="inp">
-									<input type="text" placeholder="관계 입력" title="이름 입력" />
-									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-								</div>
-							</div>
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<!-- e: 기타 -->
-						<!-- s: 다른 법인 -->
-						<div class="form_line">
-							<div class="label_tit">법인명</div>
-							<!-- s: 25-09-02 수정 -->
-							<div class="input_text">
-								<div class="inp">
-									<input type="text" placeholder="법인명 입력" title="법인명 입력" />
-									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-								</div>
-							</div>
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<div class="form_line">
-							<!-- s: 25-09-25 수정 -->
-							<div class="label_tit">사업자등록번호</div>
-							<!-- e: 25-09-25 수정 -->
-							<!-- s: 25-09-02 수정 -->
-							<!-- s: 25-09-25 수정 -->
-							<div class="comp_wrap business">
-								<div class="input_text">
-									<div class="inp">
-										<input type="tel" placeholder="3자리" minlength="3" maxlength="3" title="사업자번호 첫번째 3자리 입력" />
-									</div>
-								</div>
-								<span class="dash">-</span>
-								<div class="input_text">
-									<div class="inp">
-										<input type="tel" placeholder="2자리" minlength="2" maxlength="2" title="사업자번호 두번째 2자리 입력" />
-									</div>
-								</div>
-								<span class="dash">-</span>
-								<div class="input_text">
-									<div class="inp">
-										<input type="tel" placeholder="5자리" minlength="5" maxlength="5" title="사업자번호 3번째 5자리 입력" />
-									</div>
-								</div>
-							</div>
-							<!-- e: 25-09-25 수정 -->
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<!-- e: 다른 법인 -->
-						<!-- s: 대표자/피고용인 -->
-						<div class="form_line">
-							<div class="label_tit">이름</div>
-							<!-- s: 25-09-02 수정 -->
-							<div class="input_text">
-								<div class="inp">
-									<input type="text" placeholder="이름 입력" title="이름 입력" />
-									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-								</div>
-							</div>
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<div class="form_line">
-							<div class="label_tit">주민등록번호</div>
-							<div class="comp_wrap birth">
+						<!-- s: 피보험자 계피상이 -->
+						<!-- s: 25-10-28 수정 -->
+						<!-- 삭제 <div class="divider_ty1"></div> -->
+						<!-- e: 25-10-28 수정 -->
+						<h3 class="title_h3">계약자 정보</h3>
+						<div class="info_gray info_text">계약자 명의의 결제수단으로만 보험료 납입이 가능하며, 계약체결 전 보험계약자의 동의(전자서명)가 필요합니다</div>
+						<div class="form_group_wrap">
+							<!-- s: 기타 -->
+							<div class="form_line full_half">
+								<div class="label_tit">피보험자와의 관계</div>
 								<!-- s: 25-09-02 수정 -->
 								<div class="input_text">
 									<div class="inp">
-										<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞 6자리 입력" />
+										<input type="text" placeholder="관계 입력" title="이름 입력" />
 										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
 								</div>
 								<!-- e: 25-09-02 수정 -->
-								<span class="dash">-</span>
-								<!-- s: 25-08-12 수정 -->
-								<div class="comp_wrap_keypad_call form_key_pc">
-									<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
-									<span>
-										<input type="checkbox" name="" id="kp1" />
-										<label for="kp1">마우스입력기사용</label>
-									</span>
-								</div>
-
-								<!-- e: 25-08-12 수정 -->
 							</div>
-						</div>
-						<!-- e: 대표자/피고용인 -->
-						<div class="form_line">
-							<div class="label_tit">휴대폰번호</div>
-							<!-- <div class="label_tit">법인 연락처</div> 다른 법인 -->
-							<!-- s: 25-09-02 수정 -->
-							<div class="input_text phone">
-								<div class="int_txt left">010</div>
-								<div class="inp">
-									<input type="tel" placeholder="- 없이 입력" maxlength="8" title="휴대폰번호 입력" />
-									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-								</div>
-							</div>
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<div class="form_line">
-							<div class="label_tit">이메일</div>
-							<!-- s: 25-09-02 수정 -->
-							<div class="input_text">
-								<div class="inp">
-									<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
-									<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
-								</div>
-							</div>
-							<!-- e: 25-09-02 수정 -->
-						</div>
-						<div class="form_line full">
-							<div class="label_tit">우편물 수령지</div>
-							<div class="checkbox_group_wrap">
-								<div class="inp_checkbox">
-									<input type="checkbox" id="checkbox01-13" />
-									<label for="checkbox01-13" class="chk_label">
-										<span class="label_cont">피보험자(자동차 소유주) 주소와 동일</span>
-									</label>
-								</div>
-							</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								<div class="inp_radio rd_btn">
-									<input type="radio" id="addSel_01" name="addSel" checked />
-									<label for="addSel_01">
-										<span class="label_cont">자택</span>
-									</label>
-								</div>
-								<div class="inp_radio rd_btn">
-									<input type="radio" id="addSel_02" name="addSel" />
-									<label for="addSel_02">
-										<span class="label_cont">직장</span>
-									</label>
-								</div>
-							</div>
-							<div class="address_item address_item_case01" role="button" tabindex="0" title="주소검색 팝업열기">
-								<div class="address_item_inner">
-									<div class="ad_item active" data-placeholder="주소를 입력해 주세요.">
-										<span class="zip_code">03379</span>
-										<span>서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)</span>
+							<!-- e: 기타 -->
+							<!-- s: 다른 법인 -->
+							<div class="form_line">
+								<div class="label_tit">법인명</div>
+								<!-- s: 25-09-02 수정 -->
+								<div class="input_text">
+									<div class="inp">
+										<input type="text" placeholder="법인명 입력" title="법인명 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 									</div>
-									<span class="ad_stat">입력됨</span>
+								</div>
+								<!-- e: 25-09-02 수정 -->
+							</div>
+							<div class="form_line">
+								<!-- s: 25-09-25 수정 -->
+								<div class="label_tit">사업자등록번호</div>
+								<!-- e: 25-09-25 수정 -->
+								<!-- s: 25-09-02 수정 -->
+								<!-- s: 25-09-25 수정 -->
+								<div class="comp_wrap business">
+									<div class="input_text">
+										<div class="inp">
+											<input type="tel" placeholder="3자리" minlength="3" maxlength="3" title="사업자번호 첫번째 3자리 입력" />
+										</div>
+									</div>
+									<span class="dash">-</span>
+									<div class="input_text">
+										<div class="inp">
+											<input type="tel" placeholder="2자리" minlength="2" maxlength="2" title="사업자번호 두번째 2자리 입력" />
+										</div>
+									</div>
+									<span class="dash">-</span>
+									<div class="input_text">
+										<div class="inp">
+											<input type="tel" placeholder="5자리" minlength="5" maxlength="5" title="사업자번호 3번째 5자리 입력" />
+										</div>
+									</div>
+								</div>
+								<!-- e: 25-09-25 수정 -->
+								<!-- e: 25-09-02 수정 -->
+							</div>
+							<!-- e: 다른 법인 -->
+							<!-- s: 대표자/피고용인 -->
+							<div class="form_line">
+								<div class="label_tit">이름</div>
+								<!-- s: 25-09-02 수정 -->
+								<div class="input_text">
+									<div class="inp">
+										<input type="text" placeholder="이름 입력" title="이름 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+								<!-- e: 25-09-02 수정 -->
+							</div>
+							<div class="form_line">
+								<div class="label_tit">주민등록번호</div>
+								<div class="comp_wrap birth">
+									<!-- s: 25-09-02 수정 -->
+									<div class="input_text">
+										<div class="inp">
+											<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞 6자리 입력" />
+											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+										</div>
+									</div>
+									<!-- e: 25-09-02 수정 -->
+									<span class="dash">-</span>
+									<!-- s: 25-08-12 수정 -->
+									<div class="comp_wrap_keypad_call form_key_pc">
+										<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
+										<span>
+											<input type="checkbox" name="" id="kp1" />
+											<label for="kp1">마우스입력기사용</label>
+										</span>
+									</div>
+
+									<!-- e: 25-08-12 수정 -->
+								</div>
+							</div>
+							<!-- e: 대표자/피고용인 -->
+							<div class="form_line">
+								<div class="label_tit">휴대폰번호</div>
+								<!-- <div class="label_tit">법인 연락처</div> 다른 법인 -->
+								<!-- s: 25-09-02 수정 -->
+								<div class="input_text phone">
+									<div class="int_txt left">010</div>
+									<div class="inp">
+										<input type="tel" placeholder="- 없이 입력" maxlength="8" title="휴대폰번호 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+								<!-- e: 25-09-02 수정 -->
+							</div>
+							<div class="form_line">
+								<div class="label_tit">이메일</div>
+								<!-- s: 25-09-02 수정 -->
+								<div class="input_text">
+									<div class="inp">
+										<input type="email" class="email_auto" placeholder="이메일 입력" title="이메일 입력" />
+										<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+									</div>
+								</div>
+								<!-- e: 25-09-02 수정 -->
+							</div>
+							<div class="form_line full">
+								<div class="label_tit">우편물 수령지</div>
+								<div class="checkbox_group_wrap">
+									<div class="inp_checkbox">
+										<input type="checkbox" id="checkbox01-13" />
+										<label for="checkbox01-13" class="chk_label">
+											<span class="label_cont">피보험자(자동차 소유주) 주소와 동일</span>
+										</label>
+									</div>
+								</div>
+								<div class="radio_group_wrap" role="radiogroup">
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="addSel_01" name="addSel" checked />
+										<label for="addSel_01">
+											<span class="label_cont">자택</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="addSel_02" name="addSel" />
+										<label for="addSel_02">
+											<span class="label_cont">직장</span>
+										</label>
+									</div>
+								</div>
+								<div class="address_item address_item_case01" role="button" tabindex="0" title="주소검색 팝업열기">
+									<div class="address_item_inner">
+										<div class="ad_item active" data-placeholder="주소를 입력해 주세요.">
+											<span class="zip_code">03379</span>
+											<span>서울 은평구 서오릉로4길 7-8 101동 301호 (녹번동, 녹번 2차 현대 아파트)</span>
+										</div>
+										<span class="ad_stat">입력됨</span>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- e: 피보험자 계피상이 -->
-					<div class="divider_ty1"></div>
-					<div class="form_group_wrap">
-						<div class="form_line full_half">
-							<div class="label_tit">보험증권 수령방법을 선택해주세요.</div>
-							<div class="radio_group_wrap" role="radiogroup">
-								<div class="inp_radio rd_btn">
-									<input type="radio" id="receiveSel02_02" name="receiveSel02" />
-									<label for="receiveSel02_02">
-										<span class="label_cont">이메일</span>
-									</label>
+						<!-- e: 피보험자 계피상이 -->
+						<div class="divider_ty1"></div>
+						<h3 class="title_h3">보험증권 받는 방법</h3>
+
+						<!-- s: 25-10-28 수정 -->
+						<div class="form_group_wrap">
+							<div class="form_line full">
+								<!--삭제 <div class="label_tit">보험증권 수령방법을 선택해주세요.</div> -->
+								<!-- e: 25-10-28 수정 -->
+								<div class="radio_group_wrap" role="radiogroup">
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="receiveSel02_02" name="receiveSel02" />
+										<label for="receiveSel02_02">
+											<span class="label_cont">이메일</span>
+										</label>
+									</div>
+									<div class="inp_radio rd_btn">
+										<input type="radio" id="receiveSel02_04" name="receiveSel02" />
+										<label for="receiveSel02_04">
+											<span class="label_cont">우편</span>
+										</label>
+									</div>
 								</div>
-								<div class="inp_radio rd_btn">
-									<input type="radio" id="receiveSel02_04" name="receiveSel02" />
-									<label for="receiveSel02_04">
-										<span class="label_cont">우편</span>
-									</label>
-								</div>
+								<ul class="list_ty2">
+									<li>우편수령을 원하시는 경우 보험료계산 단계에서 하이카그린서비스 특약을 미가입으로 선택해주시기 바랍니다.</li>
+								</ul>
 							</div>
-							<ul class="list_ty2">
-								<li>우편수령을 원하시는 경우 보험료계산 단계에서 하이카그린서비스 특약을 미가입으로 선택해주시기 바랍니다.</li>
-							</ul>
 						</div>
 					</div>
+					<!-- e: 25-10-28 수정 -->
 
 					<!-- s: 하단 버튼 영역 -->
 					<div class="bottom_fix_wrap">

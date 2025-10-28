@@ -37,7 +37,7 @@
 					</li>
 				</ul>
 
-				
+				<!-- s: 25-10-28 수정 -->
 				<div class="form_box">
 					<h3 class="title_h3">피보험자/계약자 정보</h3>
 					<!-- 피보험자/계약자 동일 -->
@@ -66,10 +66,12 @@
 						<div class="form_line">
 							<div class="label_tit">이메일</div>
 							{{> cp/text type="email" inpclass="email_auto" placeholder="이메일 입력" inp-title="이메일 입력" }}
-						</div>						</div>
+						</div>
 					</div>
 					<!-- s: 피보험자 계피상이 -->
-					<div class="divider_ty1"></div>
+					<!-- s: 25-10-28 수정 -->
+					<!-- 삭제 <div class="divider_ty1"></div> -->
+					<!-- e: 25-10-28 수정 -->
 					<h3 class="title_h3">계약자 정보</h3>
 					<div class="info_gray info_text">
 						계약자 명의의 결제수단으로만 보험료 납입이 가능하며, 계약체결 전 보험계약자의 동의(전자서명)가 필요합니다
@@ -154,9 +156,13 @@
 					</div>
 					<!-- e: 피보험자 계피상이 -->
 					<div class="divider_ty1"></div>
+					<h3 class="title_h3">보험증권 받는 방법</h3>
+
+					<!-- s: 25-10-28 수정 -->
 					<div class="form_group_wrap">
-						<div class="form_line full_half">
-							<div class="label_tit">보험증권 수령방법을 선택해주세요.</div>
+						<div class="form_line full">
+						<!--삭제 <div class="label_tit">보험증권 수령방법을 선택해주세요.</div> -->
+					<!-- e: 25-10-28 수정 -->
 							<div class="radio_group_wrap" role="radiogroup">
 								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_02" name="receiveSel02" labelname="이메일" }}
 								{{> cp/radio rd-class="rd_btn" rd-id="receiveSel02_04" name="receiveSel02" labelname="우편" }}
@@ -166,6 +172,8 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+				<!-- e: 25-10-28 수정 -->
 			
 				<!-- s: 하단 버튼 영역 -->
 				<div class="bottom_fix_wrap">
