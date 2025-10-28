@@ -137,7 +137,7 @@ function openHDPopup($triggerEl, target) {
 
 	if (event && event.type === 'click') {
 		window.preventFocusSlide = true;
-}
+	}
 
 	setTimeout(() => {
 		// if (focusTarget) {
