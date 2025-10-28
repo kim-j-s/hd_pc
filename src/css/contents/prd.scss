@@ -171,14 +171,18 @@
 					display: none;
 				}
 				.info_gray {
+					display: flex;
+					align-items: center;
+					
 					&.bg_etc01 {
 						padding: var(--padding-8) var(--padding-7);
 					}
 				}
 				.titie_wrap {
+					flex: 1;
 					padding-left: 44px;
 					@extend %background_set;
-					@for $i from 1 through 78 {
+					@for $i from 1 through 79 {
 						&.item_ico_ty#{$i} {
 								background-image: url('../images/content/bi/visual/bg_exp_ty#{$i}.png');
 						}  
@@ -192,6 +196,10 @@
 				.list_depth_ty2,
 				.list_ty2 {
 					padding-top: var(--gap-3);
+				}
+
+				.btn_area {
+					margin-top: 0;
 				}
 			}
 		}
