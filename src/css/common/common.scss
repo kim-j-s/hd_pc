@@ -477,7 +477,12 @@ sup {
 	.price_label {
 		color: var(--color-text-subtle);
 		font-size: var(--font-size-body-small);
-		line-height: 150%;	
+		line-height: 150%;
+		.em {
+			font-weight: 700;
+			font-size: var(--font-size-body-medium);
+			color: var(--color-text-bolder);
+		}
 	}
 
 	.price_val {
