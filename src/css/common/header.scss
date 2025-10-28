@@ -1,7 +1,5 @@
 // Header
 .header {
-	// height: 48px;
-
 	&.h_none {
 		.header_inner {
 			min-height: auto;
@@ -13,7 +11,6 @@
 		flex: 1;
 		position: relative;
 		display: flex;
-		// align-items: center;
 		align-items: flex-start;
 		justify-content: space-between;
 		min-height: 56px;
@@ -21,14 +18,10 @@
 
 		.header_connect {
 			flex: 1 1 0;
-			// width: 100%;
 			padding: 3px 4px 0 4px;
-			// padding: 0 36px;
 
 			.header_title {
 				font-weight: 700;
-				// font-size: min(5vw, 18px);
-				// font-size: min(4vw, var(--font-size-heading-small));
 				font-size: var(--font-size-heading-small);
 				color: var(--color-text-bolder);
 				overflow: hidden;
@@ -66,14 +59,10 @@
 			}
 		}
 		.header_right {
-			// position: absolute;
-			// top: 12px;
-			// right: 16px;
 			flex: none;
 			display: flex;
 			align-items: center;
 			gap: var(--gap-3);
-			// transform: translateY(-50%);
 
 			.allmenu_open {
 				width: 32px;
