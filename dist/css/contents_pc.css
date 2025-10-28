@@ -3030,7 +3030,7 @@
 	border: none;
 }
 .wrap .total_price_display_ty1 .price_val {
-	font-size: var(--font-size-heading-medium);
+	font-size: var(--font-size-heading-large);
 }
 .wrap .info_gray .middle {
 	-webkit-box-pack: start;

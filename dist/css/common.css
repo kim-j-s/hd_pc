@@ -386,6 +386,11 @@ sup {
 	font-size: var(--font-size-body-small);
 	line-height: 150%;
 }
+.total_price_display_ty1 .price_label .em {
+	font-weight: 700;
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-bolder);
+}
 .total_price_display_ty1 .price_val {
 	font-size: var(--font-size-body-large);
 	font-weight: 700;
@@ -8353,55 +8358,6 @@ sup {
 }
 /**
 * 아이콘 에셋
-*/
-/*
-.hd_btn {
-	&_ty_1 {
-		.downloadSvg {
-			@include getSvg("icon/download_ty1");
-		}
-		.arrowRightSvg {
-			@include getSvg("icon/arrowRight_ty1");
-		}
-	}
-	&_ty_2 {
-		.downloadSvg {
-			@include getSvg("icon/download_ty2");
-		}
-		.arrowRightSvg {
-			@include getSvg("icon/arrowRight_ty2");
-		}
-		.cameraSvg {
-			@include getSvg("icon/camera");
-		}
-	}
-	&_ty_3 {
-		.downloadSvg {
-			@include getSvg("icon/download_ty3");
-		}
-		.arrowRightSvg {
-			@include getSvg("icon/arrowRight_ty3");
-		}
-		.openWindowSvg {
-			@include getSvg("icon/icon-open-window");
-		}
-		.mailSvg {
-			@include getSvg("icon/mail");
-		}
-		.documentSvg {
-			@include getSvg("icon/document");
-		}
-		.pictureSvg {
-			@include getSvg("icon/picture");
-		}
-		.pdfSvg {
-			@include getSvg("icon/icon_pdf");
-		}
-		.docSvg {
-			@include getSvg("icon/icon_doc");
-		}
-	}
-}
 */
 .hd_btn:disabled .downloadSvg {
 	background-image: url(../images/icon/download_disabled.svg);
