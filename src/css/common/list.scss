@@ -721,7 +721,9 @@
 				background-color: var(--color-icon-gray);
 			}
 			.table_wrap {
-				margin: var(--gap-11) 0 0 -8px;
+				&.in_table {
+					margin: var(--gap-11) 0 0 -8px;
+				}
 				
 				.pop_title_h1 {
 					+ .table {
