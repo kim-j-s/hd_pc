@@ -9196,6 +9196,7 @@ sup {
 	background-color: var(--color-input-surface-disabled);
 	border-radius: 12px;
 }
+.comp_wrap .input_text.weight,
 .comp_wrap .input_text.price {
 	margin-right: 4px;
 }
@@ -9316,65 +9317,80 @@ sup {
 .comp_wrap.key_number .hd_btn.hd_btn_ty_3 {
 	background: var(--color-button-tertiary-fill);
 }
+.weight,
 .price {
 	width: 100%;
 }
+.weight.input_text .inp,
 .price.input_text .inp {
 	width: 100%;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
+.weight.input_text .inp input,
 .price.input_text .inp input {
 	padding-right: 0;
 	text-align: right;
 }
+.weight.input_text .inp.active input,
 .price.input_text .inp.active input {
 	padding-right: 28px;
 }
+.weight .del,
 .price .del {
 	width: 28px;
 	background-position: center right;
 }
+.weight.big input,
 .price.big input {
 	color: var(--color-text-primary-bold);
 	font-size: var(--font-size-body-large);
 	font-weight: 700;
 	line-height: 54px;
 }
+.weight.big input::-webkit-input-placeholder,
 .price.big input::-webkit-input-placeholder {
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 }
+.weight.big input::-moz-placeholder,
 .price.big input::-moz-placeholder {
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 }
+.weight.big input:-ms-input-placeholder,
 .price.big input:-ms-input-placeholder {
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 }
+.weight.big input::-ms-input-placeholder,
 .price.big input::-ms-input-placeholder {
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 }
+.weight.big input::placeholder,
 .price.big input::placeholder {
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 }
+.weight.big .int_txt,
 .price.big .int_txt {
 	position: relative;
 	font-size: var(--font-size-body-small);
 }
+.weight.big .int_txt.right,
 .price.big .int_txt.right {
 	top: 0;
 	font-weight: 700;
 	font-size: var(--font-size-body-large);
 	color: var(--color-text-primary-bold);
 }
+.weight.big .del,
 .price.big .del {
 	right: calc(100% - 36px);
 }
+.weight.big:focus-within,
 .price.big:focus-within {
 	border-color: #f2650e !important;
 }
@@ -10465,7 +10481,7 @@ sup {
 	border-radius: 50%;
 	background-color: var(--color-icon-gray);
 }
-.list_depth > li .table_wrap {
+.list_depth > li .table_wrap.in_table {
 	margin: var(--gap-11) 0 0 -8px;
 }
 .list_depth > li .table_wrap .pop_title_h1 + .table {
