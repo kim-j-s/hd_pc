@@ -481,6 +481,11 @@
 			}
 	}
 
+	.form_sub_top {
+		font-size: var(--font-size-body-medium);
+		font-weight: 700;
+		color: var(--color-text-primary-bold);
+	}
 
 	.form_list {
 		>li {
@@ -491,6 +496,15 @@
 
 				>.form_line {
 					position: relative;
+					word-break: keep-all;
+
+					.form_sub_top {
+						padding-right: 312px;
+
+						& + .label_tit {
+							padding-top: var(--gap-3);
+						}
+					}
 				
 					> .label_tit {
 						margin-bottom: 0;
@@ -518,6 +532,7 @@
 							.num {
 								flex: none;
 								padding-right: 4px;
+								vertical-align: top;
 							}
 						}
 						.info_gray.ty2 {
