@@ -173,6 +173,7 @@
 				.info_gray {
 					display: flex;
 					align-items: center;
+					gap: var(--gap-4);
 					
 					&.bg_etc01 {
 						padding: var(--padding-8) var(--padding-7);
