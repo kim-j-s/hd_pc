@@ -6702,6 +6702,7 @@ ul + .form_group_wrap {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	gap: var(--gap-4);
 }
 .prd_view .guarantee_area .guarantee_list .item .info_gray.bg_etc01 {
 	padding: var(--padding-8) var(--padding-7);
