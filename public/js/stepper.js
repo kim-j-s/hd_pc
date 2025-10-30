@@ -103,7 +103,7 @@ const $stepper = {
 
 		// 진행 퍼센트 계산
 //		const progress = Math.floor(((nowIdx + 1) / $stepper.get('totalStep')) * 100);
-		const progress = Math.floor(((nowIdx) / $stepper.get('totalStep')) * 100);
+		const progress = Math.floor((nowIdx / $stepper.get('totalStep')) * 100);
 		$('.pgs_per').css('width', `${progress}%`);
 
 		// 시작 및 완료 상태 클래스 추가/제거
@@ -140,6 +140,7 @@ const $stepper = {
 	},
 	// 다음단계
 	stepNext: function () {
+		$('.stepper_togglearea').addClass('active');
 		const _nowIdx = $stepper.get('nowIdx');
 
 		// 다음 스텝 계산 (최대값 totalStep으로 제한)
