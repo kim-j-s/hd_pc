@@ -1935,6 +1935,31 @@
 	-webkit-transition: height 0s;
 	transition: height 0s;
 }
+/* bi stepper tab */
+.stepper_togglearea {
+	height: 48px;
+	-webkit-transition: all var(--t-time);
+	transition: all var(--t-time);
+}
+.stepper_togglearea .tab_wrap_list_ty2 {
+	position: relative;
+	top: 0;
+	-webkit-transition: all var(--t-time);
+	transition: all var(--t-time);
+}
+.stepper_togglearea.ty1.active {
+	overflow: hidden;
+	height: 0;
+}
+.stepper_togglearea.ty1.active .tab_wrap_list_ty2 {
+	top: -48px;
+	visibility: hidden;
+}
+.stepper_togglearea.ty2.active {
+	height: 0;
+	visibility: hidden;
+}
+/* bi stepper tab */
 .bi_wrap .bi_opts_wrap .opts_area .inp_radio.rd_btn_s1 input[type="radio"] + label {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
