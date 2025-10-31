@@ -3366,6 +3366,7 @@
 <!-- s: 25-08-12 수정-->
 <!-- s: 25-10-23 수정 -->
 <!-- s: 25-10-28 수정 -->
+<!-- s: 25-10-31 수정 -->
 <script>
 	let scrollVal = true;
 	let isClick = true;
@@ -3463,6 +3464,8 @@
 
 		let proSwiper = new Swiper(".main_recommend_box .swiper", {
 			slidesPerView: "auto",
+			resistance: true,
+			resistanceRatio: 0,
 			slideToClickedSlide: false,
 			updateOnWindowResize: true,
 			navigation: {
@@ -3488,6 +3491,14 @@
 
 					updateSlideStates(this);
 					preventSlideLoop = false;
+				},
+				touchStart: function () {
+					// 드래그 중임을 표시
+					$(".main_recommend_box").addClass("dragging");
+				},
+				touchEnd: function () {
+					// 드래그 종료
+					$(".main_recommend_box").removeClass("dragging");
 				},
 			},
 		});
@@ -3746,6 +3757,7 @@
 			});
 	});
 </script>
+<!-- e: 25-10-31 수정 -->
 <!-- e: 25-10-23 수정 -->
 <!-- e: 25-10-28 수정 -->
 <!-- e: 25-08-12 수정-->
