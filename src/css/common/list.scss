@@ -464,11 +464,19 @@
 			font-weight: 400;
 			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			
-			&:not(:has(a)){
+			&.add_item {
 				display: flex;
-				flex-direction: column;
-				gap: 4px;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				gap: var(--gap-4);
 			}
+
+			// &:not(:has(a)){
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	gap: 4px;
+			// }
 
 			i {
 				font-style: normal;
