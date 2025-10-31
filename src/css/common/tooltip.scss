@@ -374,7 +374,51 @@
 
 	}
 
+	&.ty2 {
+		z-index: 21;
+		&:has(.close){
+			.tip_item_cont {
+				.inner {
+					padding-right: 44px;
+				}
+			}
+		}
 
+		.tip_item_cont {
+			padding: var(--padding-5, 12px) var(--padding-6, 16px);
+			background-color: var(--color-element-information);
+			border: 0;
 
+			&:before {
+				height: 8px;
+				pointer-events: none;
+				background: none;
+				border: 8px solid var(--color-element-information);
+				border-left-color: transparent;
+				border-right-color: transparent;
+				border-top-color: transparent;
+				top: -14px;
+				transform: rotate(360deg);
+			}
+			
+			.inner {
+				font-weight: normal;
+				color: var(--color-text-basic-inverse);
 
+				> span {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.close {
+			position: absolute;
+			display: inline-block;
+			top: 12px;
+			right: 16px;
+			width: 16px;
+			height: 16px;
+			background: url(../images/icon/close_ty2.svg) no-repeat center/contain;
+		}
+	}
 }

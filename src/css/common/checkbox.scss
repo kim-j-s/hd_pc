@@ -731,6 +731,7 @@
 		margin-top: var(--gap-5);
 	}
 
+	& + .card_item_wrap,
 	& + .checkbox_group_wrap {
 		margin-top: var(--gap-8);
 	}
