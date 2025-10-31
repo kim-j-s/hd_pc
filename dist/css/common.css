@@ -6657,6 +6657,11 @@ sup {
 .card_item_wrap .card_item .card_list_ty1 > li:not(.list_title):last-child {
 	padding-bottom: 0;
 }
+.card_item_wrap .card_item .card_list_ty1 + .card_list_ty1 {
+	margin-top: var(--gap-5);
+	padding-top: 16px;
+	border-top: 1px solid var(--color-divider-gray-light);
+}
 .card_item_wrap .card_item .card_list_ty1 > li:not(.list_title) > *:first-child {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
@@ -8189,6 +8194,7 @@ sup {
 .checkbox_group_wrap + * {
 	margin-top: var(--gap-5);
 }
+.checkbox_group_wrap + .card_item_wrap,
 .checkbox_group_wrap + .checkbox_group_wrap {
 	margin-top: var(--gap-8);
 }
@@ -8638,6 +8644,9 @@ sup {
 }
 .i_logo_278 {
 	background-image: url("../images/logo/i_logo_278.svg");
+}
+.i_logo_279 {
+	background-image: url("../images/logo/i_logo_279.svg");
 }
 .i_logo_280 {
 	background-image: url("../images/logo/i_logo_280.svg");
@@ -14782,6 +14791,45 @@ ol li .table_wrap + .list_ty2 li + li {
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+.tip_item.ty2 {
+	z-index: 21;
+}
+.tip_item.ty2:has(.close) .tip_item_cont .inner {
+	padding-right: 44px;
+}
+.tip_item.ty2 .tip_item_cont {
+	padding: var(--padding-5, 12px) var(--padding-6, 16px);
+	background-color: var(--color-element-information);
+	border: 0;
+}
+.tip_item.ty2 .tip_item_cont:before {
+	height: 8px;
+	pointer-events: none;
+	background: none;
+	border: 8px solid var(--color-element-information);
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	top: -14px;
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.tip_item.ty2 .tip_item_cont .inner {
+	font-weight: normal;
+	color: var(--color-text-basic-inverse);
+}
+.tip_item.ty2 .tip_item_cont .inner > span {
+	font-weight: bold;
+}
+.tip_item.ty2 .close {
+	position: absolute;
+	display: inline-block;
+	top: 12px;
+	right: 16px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/icon/close_ty2.svg) no-repeat center/contain;
 }
 /* infobox */
 /* info box */

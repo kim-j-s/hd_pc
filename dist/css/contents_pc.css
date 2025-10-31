@@ -2070,6 +2070,7 @@
 	color: var(--color-text-subtle);
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd {
+	position: relative;
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
@@ -2080,6 +2081,27 @@
 	-ms-flex-align: center;
 	align-items: center;
 	font-size: var(--font-size-body-small);
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .tooltip_wrap {
+	position: absolute;
+	z-index: 30;
+	width: auto;
+	height: auto;
+	top: auto;
+	bottom: -4px;
+	right: 16px;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .tooltip_wrap .tooltip_head {
+	width: auto;
+	height: auto;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .tooltip_wrap .tooltip_head.active:after {
+	left: -16px;
+}
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .tooltip_wrap .tooltip_panel {
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .item_top {
 	gap: var(--gap-5);
