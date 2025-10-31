@@ -8,7 +8,9 @@
 				<div class="page_title">
 					<div class="p_info">보험료 계산 차량 정보 입력</div>
 					<h2 class="p_title">
-						<strong>할인특약 조회동의</strong> 후 보험료를 계산할 <strong>차량정보를 <br>입력</strong>해주세요.
+						<!-- s: 25-10-31 수정 -->
+						<strong>자동차 정보를 입력 </strong> 후 <strong>할인 특약을 입력</strong>해주세요
+						<!-- e: 25-10-31 수정 -->
 					</h2>
 				</div>
 				<div class="btn_area">
@@ -20,9 +22,11 @@
 				{{> cp/checkbox labelname="할인특약 조회동의" ag_more=true id="more_case2" checkbox_class="rd_box" label_class="chk_label_ty3" }}
 			</div> -->
 			
-			<div class="all_checking">
+			<!-- s: 25-10-31 수정 -->
+			<!-- 삭제 <div class="all_checking">
 				{{> cp/checkbox id="checkbox1" labelname="총 <strong class='point'>5</strong>건 전체 선택" }}
-			</div>
+			</div> -->
+			<!-- e: 25-10-31 수정 -->
 			<div class="card_item_wrap ty7">
 				<!-- 정보입력 완료 후, Case -->
 				<div class="card_item">
@@ -39,6 +43,9 @@
 													111가1111(현대)
 													<span class="badge_wrap">
 														<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+														<!-- s: 25-10-31 수정 -->
+														<span class="hd_badge outline solid_pastel c_success size_m">입력완료</span>
+														<!-- e: 25-10-31 수정 -->
 													</span>
 												</span>
 											</span>
@@ -96,7 +103,9 @@
 						<div class="btn_area basic">
 							{{> cp/button type="3" size="5" b-text="삭제" }}
 						</div>
-						<p class="msg_success">입력완료</p>
+						<!-- s: 25-10-31 수정 -->
+						<!-- 삭제 <p class="msg_success">입력완료</p> -->
+						<!-- e: 25-10-31 수정 -->
 					</div>
 				</div>
 				
@@ -115,6 +124,9 @@
 													222나2222
 													<span class="badge_wrap">
 														<span class="hd_badge outline solid_pastel c_secondary size_m">승용</span>
+														<!-- s: 25-10-31 수정 -->
+														<span class="hd_badge outline solid_pastel c_info size_m">입력중</span>
+														<!-- e: 25-10-31 수정 -->
 													</span>
 												</span>
 											</span>
@@ -145,6 +157,20 @@
 												250만원(9,800만원)
 												{{> cp/button type="2" size="5" b-text="부속정보 입력" }}
 												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+												<!-- s: 25-10-31 수정 -->
+												<div class="tooltip_wrap al_right active">
+													<div class="tooltip_head active">
+														<div class="tooltip_panel">
+															<div class="inner" style="display: block;">
+																<div class="inner_contents">
+																	<p><strong>부속가액</strong>을 입력해주세요.</p>
+																</div>
+																<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- e: 25-10-31 수정 -->
 											</dd>
 										</dl>
 										<dl>
@@ -172,7 +198,9 @@
 						<div class="btn_area basic">
 							{{> cp/button type="3" size="5" b-text="삭제" }}
 						</div>
-						<!-- <p class="msg_success">입력완료</p> -->
+						<!-- s: 25-10-31 수정 -->
+						<!-- 삭제 <p class="msg_success">입력완료</p> -->
+						<!-- e: 25-10-31 수정 -->
 					</div>
 				</div>
 				<div class="card_item">
@@ -227,6 +255,21 @@
 												본인만(만 43세 이상 한정)
 												{{> cp/button type="2" size="5" b-text="운전범위 입력" }}
 												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+												<!-- s: 25-10-31 수정 -->
+												<div class="tooltip_wrap al_right active">
+													<div class="tooltip_head active">
+														<div class="tooltip_panel">
+															<div class="inner" style="display: block;">
+																<div class="inner_contents">
+																	<p><strong>운전범위</strong>를 입력해주세요.</p>
+																</div>
+																<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- e: 25-10-31 수정 -->
 											</dd>
 										</dl>
 										<dl>
@@ -245,7 +288,9 @@
 					<div class="item_result">
 						<div class="btn_area basic">
 							{{> cp/button type="3" size="5" b-text="삭제" }}
-							<!-- <p class="msg_success">입력완료</p> -->
+							<!-- s: 25-10-31 수정 -->
+							<!-- 삭제 <p class="msg_success">입력완료</p> -->
+							<!-- e: 25-10-31 수정 -->
 						</div>
 					</div>
 				</div>
@@ -279,6 +324,20 @@
 												제네시스 G80 3.8
 												{{> cp/button type="2" size="5" b-text="차량정보 입력" }}
 												<!-- {{> cp/button type="3" size="5" b-text="수정" }} -->
+												<!-- s: 25-10-31 수정 -->
+												<div class="tooltip_wrap al_right active">
+													<div class="tooltip_head active">
+														<div class="tooltip_panel">
+															<div class="inner" style="display: block;">
+																<div class="inner_contents">
+																	<p><strong>자동차명</strong>을 입력해주세요.</p>
+																</div>
+																<button type="button" class="close"><span class="blind">툴팁 닫기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- e: 25-10-31 수정 -->
 											</dd>
 										</dl>
 										<dl>
@@ -313,7 +372,9 @@
 					<div class="item_result">
 						<div class="btn_area basic">
 							{{> cp/button type="3" size="5" b-text="삭제" }}
-							<!-- <p class="msg_success">입력완료</p> -->
+							<!-- s: 25-10-31 수정 -->
+							<!-- 삭제 <p class="msg_success">입력완료</p> -->
+							<!-- e: 25-10-31 수정 -->
 						</div>
 					</div>
 				</div>
