@@ -119,6 +119,11 @@
 	margin: 0 -24px;
 	position: static;
 }
+.popup_wrap .popup_container .popup_inner .popup_cont .no_list_area .btn_area.center .hd_btn {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+}
 .popup_wrap .popup_container .popup_inner .popup_cont p.bpop_sub_title {
 	font-size: var(--font-size-body-medium);
 }
