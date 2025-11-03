@@ -584,15 +584,19 @@ sup {
 
 // 목록이나 데이터가 존재하지 않는 경우
 .no_list_area {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// flex-direction: column;
 	padding: var(--gap-7) 0;
-	color:  var(--color-text-subtle);
-	font-size: var(--font-size-body-medium);
+	font-size: 0;
 	text-align: center;
-	min-height: 160px;
+	// min-height: 160px;
+
+	> * {
+		color:  var(--color-text-subtle);
+		font-size: var(--font-size-body-medium);
+	}
 
 	.hd_icon {
 		width: 32px;
