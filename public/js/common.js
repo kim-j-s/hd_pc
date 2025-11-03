@@ -83,9 +83,15 @@
 				$('.tooltip_wrap .tooltip_panel .inner').hide();
 				$t_text.css('display', 'block').focus();
 			}else {
-				$('.tooltip_wrap').removeClass('active');
-				$('.tooltip_wrap .tooltip_head').removeClass('active').find('.open').attr('aria-expanded', 'false');
-				$('.tooltip_wrap .tooltip_panel .inner').hide();
+				if($(this).hasClass('open')){
+					$('.tooltip_wrap').removeClass('active');
+					$('.tooltip_wrap .tooltip_head').removeClass('active').find('.open').attr('aria-expanded', 'false');
+					$('.tooltip_wrap .tooltip_panel .inner').hide();
+				}else {
+					$click.removeClass('active');
+					$click.find('.tooltip_head').removeClass('active');
+					$click.find('.tooltip_panel .inner').hide();
+				}
 				$focus_btn.focus();
 			}
   });
