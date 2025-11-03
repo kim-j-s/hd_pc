@@ -138,6 +138,16 @@
 						position: static;
 					}
 				}
+				 
+				.no_list_area {
+					.btn_area {
+						&.center {
+							.hd_btn {
+								flex: 0 1 auto;
+							}
+						}
+					}
+				}
 
 				// .tab_wrap {
 				// 	.tab_wrap_list_ty1.sticky_fix,
