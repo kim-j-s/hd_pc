@@ -10605,6 +10605,9 @@ sup {
 .list_depth_ty2 .sub_title + li {
 	margin-top: var(--gap-4);
 }
+.list_depth_ty2 + .title_h3 {
+	margin-top: var(--gap-8);
+}
 .list_depth_ty2 li {
 	position: relative;
 	padding-left: 8px;
@@ -12023,6 +12026,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .radio_group_wrap + .space_list_ty2 {
 	margin-top: var(--gap-8);
 }
+.radio_group_wrap + [class^="list_depth"],
 .radio_group_wrap + .form_group_wrap,
 .radio_group_wrap + .list_ty2,
 .radio_group_wrap + .btn_area {

@@ -3179,6 +3179,9 @@
 	-ms-flex-item-align: center;
 	align-self: center;
 }
+.info_cont + .info_cont {
+	margin-top: var(--gap-8);
+}
 /* PC용 component  */
 /* Component - PC용 새로 추가*/
 .info_summary {
