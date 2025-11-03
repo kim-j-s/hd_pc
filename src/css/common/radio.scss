@@ -178,6 +178,7 @@
 		margin-top: var(--gap-8);
 	}
 
+	& + [class^=list_depth],
 	& + .form_group_wrap,
 	& + .list_ty2,
 	& + .btn_area {
