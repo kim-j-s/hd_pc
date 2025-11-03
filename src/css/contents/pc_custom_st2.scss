@@ -2934,4 +2934,8 @@
 			align-self: center;
 		}
 	}
+
+	& + & {
+		margin-top: var(--gap-8);
+	}
 }
