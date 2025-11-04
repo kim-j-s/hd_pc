@@ -8,6 +8,7 @@
   // left: 0 !important;
   z-index: 9000 !important;
   width: 402px;
+	height: 481px;
   padding: 8px 0;
 	border-radius: var(--radius-xlarge2);
 	border: 1px solid var(--color-divider-gray-light, #E6E8EA);
@@ -21,6 +22,7 @@
 
 .ui-datepicker .ui-datepicker-calendar {
     width: calc(100% - 30px);
+		height: 319px;
     margin: 0 auto;
 }
 
