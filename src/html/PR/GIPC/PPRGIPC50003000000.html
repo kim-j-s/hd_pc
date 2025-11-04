@@ -140,10 +140,11 @@
 			<!-- s: 상세 보장 목록 -->
 			<div class="acc_group">
 				<div class="space_list_ty2">
+					<!-- s: 25-11-04 수정 -->
+					<!-- 삭제
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
 						<div class="coverage_item_list_ty3">
-							<!-- s: CASE1. 피보험자=성인단독 or 가족형 -->
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
@@ -154,9 +155,6 @@
 									<span class="point">10만달러</span>
 								</div>
 							</div>
-							<!-- e: CASE1. 피보험자=성인단독 or 가족형 -->
-
-							<!-- s: CASE2. 피보험자=미성년자 단독 -->
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
@@ -167,18 +165,57 @@
 									<span class="point">10만달러</span>
 								</div>
 							</div>
-							<!-- e: CASE2. 피보험자=미성년자 단독 -->
 						</div>
 						{{/ cp/accordion }}
 					</div>
+					 -->
+					<!-- e: 25-11-04 수정 -->
 
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="해외에서 아프거나 다쳤을 때" cont-class="" ac-active=true }}
+							<!-- s: 25-11-04 수정 -->
 							<ul class="coverage_item_list_ty3">
+								<!-- s: CASE1. 피보험자=성인단독 or 가족형 -->
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/ibs cid="checkbox02-1" sct="질병사망·후유장해(해외장기체류)" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+											{{> cp/ibs cid="checkbox02-0" sct="상해사망•후유장해(해외장기체류)" cts="계약자 본인 외 가족피보험자는 상해사망 담보 미가입(상해후유장애만 해당)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
+										</div>									
+									</div>
+									<div class="detail_price">
+										<span class="point">10만달러</span>
+									</div>
+								</li>
+								<!-- e: CASE1. 피보험자=성인단독 or 가족형 -->
+
+								<!-- s: CASE2. 피보험자=미성년자 단독 -->
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-01" sct="상해후유장해(해외장기체류)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
+										</div>									
+									</div>
+									<div class="detail_price">
+										<span class="point">10만달러</span>
+									</div>
+								</li>
+								<!-- e: CASE2. 피보험자=미성년자 단독 -->
+
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-02" sct="상해사망·후유장해(해외장기체류)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
+										</div>									
+									</div>
+									<div class="detail_price">
+										<span class="point">10만달러</span>
+									</div>
+								</li>
+
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-1" sct="질병사망및80%고도후유장해" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
 										</div>
 									</div>
 									<div class="detail_price">
@@ -188,7 +225,7 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/ibs cid="checkbox02-2" sct="해외장기체류 상해_해외의료실비보장" }}
+											{{> cp/ibs cid="checkbox02-2" sct="해외장기체류 상해_해외의료실비보장" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
 										</div>
 									</div>
 									<div class="detail_price">
@@ -198,13 +235,51 @@
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/ibs cid="checkbox02-3" sct="해외장기체류 질병_해외의료실비보장" }}
+											{{> cp/ibs cid="checkbox02-3" sct="해외장기체류 질병_해외의료실비보장" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
 										</div>
 									</div>
 									<div class="detail_price">
 										<span class="point">10만달러</span>
 									</div>
 								</li>
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-3" sct="중대사고 구조송환비용 등(7일 이상)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">10만달러</span>
+									</div>
+								</li>										
+							</ul>
+							<!-- e: 25-11-04 수정 -->
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						<!-- s: 25-11-04 수정 -->							
+						{{#> cp/accordion ac-title="남에게 피해를 입혔을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox03-1" sct="일괄배상(해외장기체류)" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">5,000만원</span>
+									</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+						<!-- e: 25-11-04 수정 -->
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						<!-- s: 25-11-04 수정 -->							
+						{{#> cp/accordion ac-title="해외에서 아프거나 다쳐서 국내에서 치료받을 때" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
@@ -254,42 +329,10 @@
 									<div class="detail_price">
 										<span class="point">350만원</span>
 									</div>
-								</li>											
+								</li>	
 							</ul>
 						{{/ cp/accordion }}
-					</div>
-
-					<div class="acd_item acd_item_ty2">
-						{{#> cp/accordion ac-title="머무는 동안 문제가 생겼을 때" cont-class="" ac-active=true }}
-							<ul class="coverage_item_list_ty3">
-								<li class="list">
-									<div class="detail_list">
-										<div class="item_inner">
-											{{> cp/ibs cid="checkbox03-1" sct="중대사고 구조송환비용 등(7일 이상)" }}
-										</div>
-									</div>
-									<div class="detail_price">
-										<span class="point">5,000만원</span>
-									</div>
-								</li>
-							</ul>
-						{{/ cp/accordion }}
-					</div>
-					<div class="acd_item acd_item_ty2">
-						{{#> cp/accordion ac-title="다른 사람에게 피해를 입혔을 때" cont-class="" ac-active=true }}
-							<ul class="coverage_item_list_ty3">
-								<li class="list">
-									<div class="detail_list">
-										<div class="item_inner">
-											{{> cp/ibs cid="checkbox06-1" sct="일괄배상(해외장기체류)" }}
-										</div>
-									</div>
-									<div class="detail_price">
-										<span class="point">5,000만원</span>
-									</div>
-								</li>
-							</ul>
-						{{/ cp/accordion }}
+						<!-- e: 25-11-04 수정 -->
 					</div>
 				</div>
 			</div>

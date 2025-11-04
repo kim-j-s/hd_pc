@@ -10,54 +10,51 @@
 				<div class="space_list_ty2">
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="유형 1" cont-class="" ac-active=true }}
-						<div class="coverage_item_list_ty3">
-							<div class="list">
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="기본계약(상해사망(갱신형))" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_primary size_m">NEW</span>
-											<span class="hd_badge outline solid_pastel c_point size_m">UPGRADE</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">BEST</span>
-											<span class="hd_badge outline solid_pastel c_secondary size_m">새로 나왔어요</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-										</div>
+										{{> cp/ibs sct="기본계약(상해사망(갱신형))" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_primary size_m'>NEW</span><span class='hd_badge outline solid_pastel c_point size_m'>UPGRADE</span><span class='hd_badge outline solid_pastel c_warning size_m'>BEST</span><span class='hd_badge outline solid_pastel c_secondary size_m'>새로 나왔어요</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
 									<span class="point">2천만원</span>
 								</div>
-							</div>
-						</div>
+							</li>
+						</ul>
 						{{/ cp/accordion }}
 					</div>
 
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="유형 2" cont-class="" ac-active=true }}
 							<ul class="coverage_item_list_ty3">
-								<div class="list">
+								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
-											{{> cp/ibs cid="checkbox02-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-											<div class="badge_wrap">
-												<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-												<span class="hd_badge outline solid_pastel c_primary size_m">NEW</span>
-												<span class="hd_badge outline solid_pastel c_point size_m">UPGRADE</span>
-												<span class="hd_badge outline solid_pastel c_warning size_m">BEST</span>
-												<span class="hd_badge outline solid_pastel c_secondary size_m">새로 나왔어요</span>
-												<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-												<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-												<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-											</div>
+											{{> cp/ibs cid="checkbox02-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_primary size_m'>NEW</span><span class='hd_badge outline solid_pastel c_point size_m'>UPGRADE</span><span class='hd_badge outline solid_pastel c_warning size_m'>BEST</span><span class='hd_badge outline solid_pastel c_secondary size_m'>새로 나왔어요</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span></span>" }}
 										</div>
 									</div>
 									<div class="detail_price">
 										<span class="point">4천만원</span>
 									</div>
-								</div>
+								</li>
+							</ul>
+						{{/ cp/accordion }}
+					</div>
+
+					<div class="acd_item acd_item_ty2">
+						{{#> cp/accordion ac-title="유형 2" cont-class="" ac-active=true }}
+							<ul class="coverage_item_list_ty3">
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-0" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span></span>" sct="상해사망•후유장해(해외여행중)" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">3억원</span>
+									</div>
+								</li>
 							</ul>
 						{{/ cp/accordion }}
 					</div>
@@ -68,13 +65,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="dev-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_primary size_m">NEW</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">BEST</span>
-											<span class="hd_badge outline solid_pastel c_secondary size_m">공탁금 선지급 가능</span>
-										</div>
+										{{> cp/ibs cid="dev-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_primary size_m'>NEW</span><span class='hd_badge outline solid_pastel c_warning size_m'>BEST</span><span class='hd_badge outline solid_pastel c_secondary size_m'>공탁금 선지급 가능</span></span>" }}										
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -91,14 +82,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="chi-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">3세부터 보장 시작</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">5세부터 보장 시작</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">6세부터 보장 시작</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">8세부터 보장 시작</span>
-										</div>
+										{{> cp/ibs cid="chi-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_warning size_m'>3세부터 보장 시작</span><span class='hd_badge outline solid_pastel c_warning size_m'>5세부터 보장 시작</span><span class='hd_badge outline solid_pastel c_warning size_m'>6세부터 보장 시작</span><span class='hd_badge outline solid_pastel c_warning size_m'>8세부터 보장 시작</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -115,14 +99,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="hs-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_primary size_m">NEW</span>
-											<span class="hd_badge outline solid_pastel c_point size_m">UPGRADE</span>
-											<span class="hd_badge outline solid_pastel c_secondary size_m">아래 집에 발생한 누수 피해 보장</span>
-											<span class="hd_badge outline solid_pastel c_secondary size_m">우리 집에 발생한 누수 피해 보장</span>
-										</div>
+										{{> cp/ibs cid="hs-1" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_primary size_m'>NEW</span><span class='hd_badge outline solid_pastel c_point size_m'>UPGRADE</span><span class='hd_badge outline solid_pastel c_secondary size_m'>아래 집에 발생한 누수 피해 보장</span><span class='hd_badge outline solid_pastel c_secondary size_m'>우리 집에 발생한 누수 피해 보장</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -139,16 +116,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="otv" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 10만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 15만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 20만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">가입금액 한도 실손보상</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">누적지연시간별 정액보상</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">물품당 20만원 한도</span>
-										</div>
+										{{> cp/ibs cid="otv" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 10만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 15만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 20만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>가입금액 한도 실손보상</span><span class='hd_badge outline solid_pastel c_warning size_m'>누적지연시간별 정액보상</span><span class='hd_badge outline solid_pastel c_warning size_m'>물품당 20만원 한도</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -165,12 +133,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="lst" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 15만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 20만원 한도</span>
-										</div>
+										{{> cp/ibs cid="lst" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 15만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 20만원 한도</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -187,12 +150,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="itv" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_info size_m">필수</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 15만원 한도</span>
-											<span class="hd_badge outline solid_pastel c_warning size_m">통원 20만원 한도</span>
-										</div>
+										{{> cp/ibs cid="itv" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_info size_m'>필수</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 15만원 한도</span><span class='hd_badge outline solid_pastel c_warning size_m'>통원 20만원 한도</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
@@ -209,10 +167,7 @@
 							<div class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs cid="golf" sct="암진단II(유사암제외)(건강등급)(갱신형)" }}
-										<div class="badge_wrap">
-											<span class="hd_badge outline solid_pastel c_warning size_m">자기부담금 2만원</span>
-										</div>
+										{{> cp/ibs cid="golf" sct="암진단II(유사암제외)(건강등급)(갱신형)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_warning size_m'>자기부담금 2만원</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">

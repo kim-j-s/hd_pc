@@ -125,52 +125,54 @@
 			<!-- s: 상세 보장 목록 -->
 			<div class="acc_group">
 				<div class="space_list_ty2">
+					<!-- s: 25-11-04 수정 -->
 					<div class="acd_item acd_item_ty2">
-						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
-						<div class="coverage_item_list_ty3">
-							<div class="list">
+						{{#> cp/accordion ac-title="골프 라운딩에 꼭 필요한 보장" cont-class="" ac-active=true }}
+						<ul class="coverage_item_list_ty3">
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="상해사망·후유장해(골프시설내)" }}
+										{{> cp/ibs cid="checkbox01-1" sct="상해사망·후유장해(골프시설내)" }}
 									</div>									
 								</div>
 								<div class="detail_price">
 									<span class="point">1억원</span>
 								</div>
-							</div>
-							<div class="list">
+							</li>
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="일괄배상(골프시설)(자기부담금 2만원)" }}
+										{{> cp/ibs cid="checkbox01-2" sct="일괄배상(골프시설)" bdb="<span class='badge_wrap'><span class='hd_badge outline solid_pastel c_warning size_m'>자기부담금 2만원</span></span>" }}
 									</div>									
 								</div>
 								<div class="detail_price">
 									<span class="point">1,000만원</span>
 								</div>
-							</div>
-							<div class="list">
+							</li>
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="홀인원비용" }}
-									</div>									
+										{{> cp/ibs cid="checkbox01-3" sct="홀인원비용" }}
+									</div>
 								</div>
 								<div class="detail_price">
 									<span class="point">50만원</span>
 								</div>
-							</div>
-							<div class="list">
+							</li>
+							<li class="list">
 								<div class="detail_list">
 									<div class="item_inner">
-										{{> cp/ibs sct="상해사망·후유장해(교통)" }}
+										{{> cp/ibs cid="checkbox01-4" sct="상해사망·후유장해(교통)" }}
 									</div>									
 								</div>
 								<div class="detail_price">
 									<span class="point">3,000만원</span>
 								</div>
-							</div>
-						</div>
+							</li>
+						</ul>
 						{{/ cp/accordion }}
 					</div>
+					<!-- e: 25-11-04 수정 -->
 				</div>
 			</div>
 			<!-- e: 상세 보장 목록 -->

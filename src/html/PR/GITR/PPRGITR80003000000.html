@@ -158,6 +158,8 @@
 			<!-- s: 상세 보장 목록 -->
 			<div class="acc_group">
 				<div class="space_list_ty2">
+					<!-- s: 25-11-04 수정 -->
+					<!-- 삭제
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="꼭 가입해야 할 보장" cont-class="" ac-active=true }}
 						<div class="coverage_item_list_ty3">
@@ -174,10 +176,24 @@
 						</div>
 						{{/ cp/accordion }}
 					</div>
+					 -->
+					<!-- e: 25-11-04 수정 -->
 
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="해외에서 아프거나 다쳤을 때" cont-class="" ac-active=true }}
 							<ul class="coverage_item_list_ty3">
+								<!-- s: 25-11-04 수정 -->
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox02-0" sct="상해사망•후유장해(해외여행중)" cts="계약자 본인 외 가족/동반인은 사망보장 미가입" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">3억원</span>
+									</div>
+								</li>
+								<!-- e: 25-11-04 수정 -->
 								<li class="list">
 									<div class="detail_list">
 										<div class="item_inner">

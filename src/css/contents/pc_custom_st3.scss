@@ -736,13 +736,16 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		gap: 8px;
 
 		& ~ .list {
 			margin-top: var(--gap-5);
 		}
 
 		.detail_list {
-			flex: 1;
+			// flex: 1;
+			flex: 1 1 0;
+			overflow-wrap: anywhere;
 
 			.item_inner {
 				display: flex;
@@ -750,20 +753,25 @@
 				align-items: flex-start;
 	
 				.hd_btn {
-					flex: 0 0 auto;
+					// flex: 0 0 auto;
+					flex: 1 1 0;
+
+					&.short_cut2 {
+						.short_cut2_tit {
+							margin-right: 8px;
+						}
+						.badge_wrap {
+							width: auto;
+						}
+					}
 				}
 				& + .cont_text_sub {
 					margin-top: 4px;
 				}
-
-				// .inp_checkbox {
-				// 	align-self: center;
-				// }
-
-
 			}
 	
 			.inp_checkbox {
+				flex: none;
 				.chk_label {
 					padding-left: 0;
 					width: 20px;
@@ -786,6 +794,7 @@
 		}
 
 		.detail_price {
+			flex: none;
 			font-size: var(--font-size-button-large);
 			.point {
 				font-weight: normal;
