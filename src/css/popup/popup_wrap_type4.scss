@@ -6,6 +6,12 @@
 				width: 900px;
 			}
 		}
+		&.hei_full {
+			padding: 0;
+			.popup_inner {
+				max-height: 795px;
+			}
+		}
 		&.active {
 			.popup_container {
 				// transform: translateX(0);
@@ -76,7 +82,6 @@
 				
 				.popup_cont {
 					height: auto;
-					max-height: 100%;
 					padding-top: 0;
 					padding-bottom: 0;
 
