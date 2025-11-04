@@ -407,6 +407,12 @@
 .popup_wrap.popup_wrap_type4.big .popup_container {
 	width: 900px;
 }
+.popup_wrap.popup_wrap_type4.hei_full {
+	padding: 0;
+}
+.popup_wrap.popup_wrap_type4.hei_full .popup_inner {
+	max-height: 795px;
+}
 .popup_wrap.popup_wrap_type4.iframe_custom_pc > .popup_container {
 	display: block;
 }
@@ -446,7 +452,6 @@
 }
 .popup_wrap.popup_wrap_type4 .popup_container .popup_inner .popup_cont {
 	height: auto;
-	max-height: 100%;
 	padding-top: 0;
 	padding-bottom: 0;
 }

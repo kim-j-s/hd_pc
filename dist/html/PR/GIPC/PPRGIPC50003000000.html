@@ -224,49 +224,49 @@
 					<!-- s: 상세 보장 목록 -->
 					<div class="acc_group">
 						<div class="space_list_ty2">
+							<!-- s: 25-11-04 수정 -->
+							<!-- 삭제
 							<div class="acd_item acd_item_ty2">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>꼭 가입해야 할 보장</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<div class="coverage_item_list_ty3">
-											<!-- s: CASE1. 피보험자=성인단독 or 가족형 -->
-											<div class="list">
-												<div class="detail_list">
-													<div class="item_inner">
-														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"
-																><span class="short_cut2_tit">상해사망•후유장해(해외장기체류)</span>
-																<small class="cont_text_sub">계약자 본인 외 가족/동반인은 사망보장 미가입</small>
-															</span>
-														</button>
-													</div>
-												</div>
-												<div class="detail_price">
-													<span class="point">10만달러</span>
-												</div>
-											</div>
-											<!-- e: CASE1. 피보험자=성인단독 or 가족형 -->
-
-											<!-- s: CASE2. 피보험자=미성년자 단독 -->
-											<div class="list">
-												<div class="detail_list">
-													<div class="item_inner">
-														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"><span class="short_cut2_tit">상해후유장해(해외장기체류)</span> </span>
-														</button>
-													</div>
-												</div>
-												<div class="detail_price">
-													<span class="point">10만달러</span>
-												</div>
-											</div>
-											<!-- e: CASE2. 피보험자=미성년자 단독 -->
-										</div>
-									</div>
-								</div>
-							</div>
+		<div class="acd_head active">
+		  <button type="button" class="acd_btn" aria-expanded="true"><span>꼭 가입해야 할 보장</span></button>
+		</div>
+		<div class="acd_cont">
+		  <div class="inner" style="display:block;">
+		    						<div class="coverage_item_list_ty3">
+		    							<div class="list">
+		    								<div class="detail_list">
+		    									<div class="item_inner">
+		    										<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+		    										
+		    											<span class="text"><span class="short_cut2_tit">상해사망•후유장해(해외장기체류)</span>
+		    										<small class="cont_text_sub">계약자 본인 외 가족/동반인은 사망보장 미가입</small>
+		    										</span>
+		    										
+		    										</button>									</div>									
+		    								</div>
+		    								<div class="detail_price">
+		    									<span class="point">10만달러</span>
+		    								</div>
+		    							</div>
+		    							<div class="list">
+		    								<div class="detail_list">
+		    									<div class="item_inner">
+		    										<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+		    										
+		    											<span class="text"><span class="short_cut2_tit">상해후유장해(해외장기체류)</span>
+		    										</span>
+		    										
+		    										</button>									</div>									
+		    								</div>
+		    								<div class="detail_price">
+		    									<span class="point">10만달러</span>
+		    								</div>
+		    							</div>
+		    						</div>
+		  </div>
+		</div>					</div>
+							 -->
+							<!-- e: 25-11-04 수정 -->
 
 							<div class="acd_item acd_item_ty2">
 								<div class="acd_head active">
@@ -274,19 +274,92 @@
 								</div>
 								<div class="acd_cont">
 									<div class="inner" style="display: block">
+										<!-- s: 25-11-04 수정 -->
 										<ul class="coverage_item_list_ty3">
+											<!-- s: CASE1. 피보험자=성인단독 or 가족형 -->
 											<li class="list">
 												<div class="detail_list">
 													<div class="item_inner">
 														<div class="inp_checkbox">
-															<input type="checkbox" id="checkbox02-1" title="질병사망·후유장해(해외장기체류)" />
+															<input type="checkbox" id="checkbox02-0" title="상해사망•후유장해(해외장기체류)" />
+															<label for="checkbox02-0" class="chk_label">
+																<span class="label_cont"></span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+															<span class="text"
+																><span class="short_cut2_tit">상해사망•후유장해(해외장기체류)</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+																<small class="cont_text_sub">계약자 본인 외 가족피보험자는 상해사망 담보 미가입(상해후유장애만 해당)</small>
+															</span>
+														</button>
+													</div>
+												</div>
+												<div class="detail_price">
+													<span class="point">10만달러</span>
+												</div>
+											</li>
+											<!-- e: CASE1. 피보험자=성인단독 or 가족형 -->
+
+											<!-- s: CASE2. 피보험자=미성년자 단독 -->
+											<li class="list">
+												<div class="detail_list">
+													<div class="item_inner">
+														<div class="inp_checkbox">
+															<input type="checkbox" id="checkbox02-01" title="상해후유장해(해외장기체류)" />
+															<label for="checkbox02-01" class="chk_label">
+																<span class="label_cont"></span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+															<span class="text"
+																><span class="short_cut2_tit">상해후유장해(해외장기체류)</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+															</span>
+														</button>
+													</div>
+												</div>
+												<div class="detail_price">
+													<span class="point">10만달러</span>
+												</div>
+											</li>
+											<!-- e: CASE2. 피보험자=미성년자 단독 -->
+
+											<li class="list">
+												<div class="detail_list">
+													<div class="item_inner">
+														<div class="inp_checkbox">
+															<input type="checkbox" id="checkbox02-02" title="상해사망·후유장해(해외장기체류)" />
+															<label for="checkbox02-02" class="chk_label">
+																<span class="label_cont"></span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+															<span class="text"
+																><span class="short_cut2_tit">상해사망·후유장해(해외장기체류)</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+															</span>
+														</button>
+													</div>
+												</div>
+												<div class="detail_price">
+													<span class="point">10만달러</span>
+												</div>
+											</li>
+
+											<li class="list">
+												<div class="detail_list">
+													<div class="item_inner">
+														<div class="inp_checkbox">
+															<input type="checkbox" id="checkbox02-1" title="질병사망및80%고도후유장해" />
 															<label for="checkbox02-1" class="chk_label">
 																<span class="label_cont"></span>
 															</label>
 														</div>
 														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
 															<span class="text"
-																><span class="short_cut2_tit">질병사망·후유장해(해외장기체류)</span>
+																><span class="short_cut2_tit">질병사망및80%고도후유장해</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
 																<small class="cont_text_sub">계약자 본인 외 가족/동반인은 사망보장 미가입</small>
 															</span>
 														</button>
@@ -306,7 +379,10 @@
 															</label>
 														</div>
 														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"><span class="short_cut2_tit">해외장기체류 상해_해외의료실비보장</span> </span>
+															<span class="text"
+																><span class="short_cut2_tit">해외장기체류 상해_해외의료실비보장</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+															</span>
 														</button>
 													</div>
 												</div>
@@ -324,7 +400,10 @@
 															</label>
 														</div>
 														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"><span class="short_cut2_tit">해외장기체류 질병_해외의료실비보장</span> </span>
+															<span class="text"
+																><span class="short_cut2_tit">해외장기체류 질병_해외의료실비보장</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+															</span>
 														</button>
 													</div>
 												</div>
@@ -332,6 +411,73 @@
 													<span class="point">10만달러</span>
 												</div>
 											</li>
+											<li class="list">
+												<div class="detail_list">
+													<div class="item_inner">
+														<div class="inp_checkbox">
+															<input type="checkbox" id="checkbox02-3" title="중대사고 구조송환비용 등(7일 이상)" />
+															<label for="checkbox02-3" class="chk_label">
+																<span class="label_cont"></span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+															<span class="text"
+																><span class="short_cut2_tit">중대사고 구조송환비용 등(7일 이상)</span>
+																<span class="badge_wrap"><span class="hd_badge outline solid_pastel c_info size_m">필수</span></span>
+															</span>
+														</button>
+													</div>
+												</div>
+												<div class="detail_price">
+													<span class="point">10만달러</span>
+												</div>
+											</li>
+										</ul>
+										<!-- e: 25-11-04 수정 -->
+									</div>
+								</div>
+							</div>
+
+							<div class="acd_item acd_item_ty2">
+								<!-- s: 25-11-04 수정 -->
+								<div class="acd_head active">
+									<button type="button" class="acd_btn" aria-expanded="true"><span>남에게 피해를 입혔을 때</span></button>
+								</div>
+								<div class="acd_cont">
+									<div class="inner" style="display: block">
+										<ul class="coverage_item_list_ty3">
+											<li class="list">
+												<div class="detail_list">
+													<div class="item_inner">
+														<div class="inp_checkbox">
+															<input type="checkbox" id="checkbox03-1" title="일괄배상(해외장기체류)" />
+															<label for="checkbox03-1" class="chk_label">
+																<span class="label_cont"></span>
+															</label>
+														</div>
+														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
+															<span class="text"><span class="short_cut2_tit">일괄배상(해외장기체류)</span> </span>
+														</button>
+													</div>
+												</div>
+												<div class="detail_price">
+													<span class="point">5,000만원</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e: 25-11-04 수정 -->
+							</div>
+
+							<div class="acd_item acd_item_ty2">
+								<!-- s: 25-11-04 수정 -->
+								<div class="acd_head active">
+									<button type="button" class="acd_btn" aria-expanded="true"><span>해외에서 아프거나 다쳐서 국내에서 치료받을 때</span></button>
+								</div>
+								<div class="acd_cont">
+									<div class="inner" style="display: block">
+										<ul class="coverage_item_list_ty3">
 											<li class="list">
 												<div class="detail_list">
 													<div class="item_inner">
@@ -425,65 +571,7 @@
 										</ul>
 									</div>
 								</div>
-							</div>
-
-							<div class="acd_item acd_item_ty2">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>머무는 동안 문제가 생겼을 때</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<ul class="coverage_item_list_ty3">
-											<li class="list">
-												<div class="detail_list">
-													<div class="item_inner">
-														<div class="inp_checkbox">
-															<input type="checkbox" id="checkbox03-1" title="중대사고 구조송환비용 등(7일 이상)" />
-															<label for="checkbox03-1" class="chk_label">
-																<span class="label_cont"></span>
-															</label>
-														</div>
-														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"><span class="short_cut2_tit">중대사고 구조송환비용 등(7일 이상)</span> </span>
-														</button>
-													</div>
-												</div>
-												<div class="detail_price">
-													<span class="point">5,000만원</span>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="acd_item acd_item_ty2">
-								<div class="acd_head active">
-									<button type="button" class="acd_btn" aria-expanded="true"><span>다른 사람에게 피해를 입혔을 때</span></button>
-								</div>
-								<div class="acd_cont">
-									<div class="inner" style="display: block">
-										<ul class="coverage_item_list_ty3">
-											<li class="list">
-												<div class="detail_list">
-													<div class="item_inner">
-														<div class="inp_checkbox">
-															<input type="checkbox" id="checkbox06-1" title="일괄배상(해외장기체류)" />
-															<label for="checkbox06-1" class="chk_label">
-																<span class="label_cont"></span>
-															</label>
-														</div>
-														<button type="button" class="hd_btn short_cut2" title="담보 안내 팝업 호출">
-															<span class="text"><span class="short_cut2_tit">일괄배상(해외장기체류)</span> </span>
-														</button>
-													</div>
-												</div>
-												<div class="detail_price">
-													<span class="point">5,000만원</span>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
+								<!-- e: 25-11-04 수정 -->
 							</div>
 						</div>
 					</div>

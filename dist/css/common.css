@@ -5219,10 +5219,10 @@ sup {
 /* 상품설명서에 사용되는 스타일용 */
 /* 관리자 등록용 css */
 .dp_btn {
-	display: none;
+	display: none !important;
 }
 .dp_btn.dp_btn_pc {
-	display: inline-block;
+	display: inline-block !important;
 }
 /* 관리자 등록용 css */
 /* button_tag */
@@ -5777,6 +5777,7 @@ sup {
 	display: none;
 	z-index: 9000 !important;
 	width: 402px;
+	height: 481px;
 	padding: 8px 0;
 	border-radius: var(--radius-xlarge2);
 	border: 1px solid var(--color-divider-gray-light, #e6e8ea);
@@ -5789,6 +5790,7 @@ sup {
 }
 .ui-datepicker .ui-datepicker-calendar {
 	width: calc(100% - 30px);
+	height: 319px;
 	margin: 0 auto;
 }
 .ui-datepicker-header {
@@ -7829,7 +7831,7 @@ sup {
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.switch_check.lg.txt_sm > .label_cont {
 	font-size: var(--font-size-body-xsmall);
-	color: var(--color-text-disabled-on);
+	color: var(--color-text-subtle);
 }
 .inp_checkbox input[type="checkbox"] + .chk_label.switch_check.lg::before {
 	width: 40px;
@@ -7882,7 +7884,7 @@ sup {
 	color: var(--color-text-basic);
 }
 .inp_checkbox input[type="checkbox"]:disabled + .chk_label.chk_label_ty4::before {
-	background: url(../images/icon/check_ty7.svg) no-repeat center;
+	background: url(../images/icon/check_ty2.svg) no-repeat center;
 	border: none;
 }
 .inp_checkbox input[type="checkbox"]:disabled + .chk_label.chk_label_ty5 {
@@ -7941,7 +7943,7 @@ sup {
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.switch_check::after {
 	content: "";
 	left: 14px;
-	background: var(--color-element-inverse) url(../../images/icon/toggle_open.svg) no-repeat center/10px auto;
+	background: var(--color-element-inverse) url(../images/icon/toggle_open.svg) no-repeat center/10px auto;
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.switch_check.lg::after {
 	left: 18px;
@@ -7969,7 +7971,10 @@ sup {
 }
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label::before {
 	background: var(--color-element-gray-lighter) url(../images/icon/check_ty5.svg) no-repeat center/12px auto;
-	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-darker);
+}
+.inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label .label_cont {
+	color: var(--color-text-basic);
 }
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.chk_label_ty2::before,
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.chk_label_ty3::before {
@@ -7981,14 +7986,11 @@ sup {
 	border: none;
 	background-size: 20px auto;
 }
-.inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.chk_label_ty5 > .label_cont {
-	color: var(--color-text-disabled-on);
-}
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.chk_label_ty5::after {
-	border: var(--border-width-static-regular) solid var(--color-action-disabled);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-darker);
 }
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.chk_label_ty5 span::before {
-	background: url(../images/icon/check_ty5.svg) no-repeat center;
+	background: url(../images/icon/check_ty6.svg) no-repeat center;
 }
 .inp_checkbox input[type="checkbox"]:checked:disabled + .chk_label.switch_check::before {
 	background: var(--color-element-inverse);
