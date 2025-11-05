@@ -1233,7 +1233,7 @@ sup {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 50;
+	z-index: 150;
 	width: 100%;
 	font-size: 0;
 	text-align: center;
@@ -7950,18 +7950,10 @@ sup {
 	background-size: 14px auto;
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.check_hide .sub_g_txt {
-	overflow: hidden;
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	clip: rect(0, 0, 0, 0);
+	display: none;
 }
 .inp_checkbox input[type="checkbox"]:checked + .chk_label.check_hide + .chk_lby {
-	overflow: hidden;
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	clip: rect(0, 0, 0, 0);
+	display: none;
 }
 .inp_checkbox input[type="checkbox"]:checked.right + .switch_check::after {
 	left: calc(100% - 18px);
