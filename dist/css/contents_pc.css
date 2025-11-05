@@ -3876,15 +3876,14 @@
 	-ms-flex-align: start;
 	align-items: flex-start;
 }
-.coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn {
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 0px;
-	flex: 1 1 0;
-}
 .coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 .short_cut2_tit {
 	margin-right: 8px;
+	white-space: nowrap;
 }
 .coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 .badge_wrap {
+	width: auto;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 + .badge_wrap {
 	width: auto;
 }
 .coverage_item_list_ty3 > .list .detail_list .item_inner + .cont_text_sub {

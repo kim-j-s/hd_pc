@@ -4,6 +4,15 @@
 // 	overflow: hidden;
 // }
 
+body:has(.header_pc.header_pc_nd),
+body:has(.header_pc.header_pc_error) {
+	.popup_wrap {
+		padding: 80px 0;
+	}
+}
+
+
+
 .popup_wrap {
 	position: fixed;
 	top: 0;

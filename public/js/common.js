@@ -496,9 +496,15 @@
 	});
 
 	// 선택목록 active 처리
-	$DOM.on('click', '.opt_select_list.opt_case3 .option', function(e){
-		$(this).closest('.opt_select_list').find('.option').removeClass('active').removeAttr('title');
-		$(this).addClass('active').attr('title', '선택됨');
+	$DOM.on('click keydown', '.opt_select_list.opt_case3 .option', function (e) {
+		// 키보드 이벤트일 때, Enter 또는 Space가 아니면 return
+		if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;	
+		e.preventDefault(); // Space 키 기본 스크롤 방지	
+		const $list = $(this).closest('.opt_select_list');		
+		$list.find('.option').removeClass('active').removeAttr('title');
+		$(this).addClass('active').attr('title', '선택됨');	
+		// 포커스 유지
+		$(this).focus();
 	});
 
 	// inp_only_num -  input[type="tel"]로 대체
@@ -513,7 +519,6 @@
 	$DOM.on('keyup', 'input[type="tel"]', function() {
 		const $this = $(this);
 		// comma 클래스가 상위에 있으면 실행하지 않음
-		// if ($this.closest('.comma, .price, .ex_period, .weight').length) {
 		if ($this.closest('.comma, .price, .ex_period').length) {
 			return;
 		}
