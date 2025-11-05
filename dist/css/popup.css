@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* popup_common */
 /* Popup */
+body:has(.header_pc.header_pc_nd) .popup_wrap {
+	padding: 80px 0;
+}
 .popup_wrap {
 	position: fixed;
 	top: 0;
