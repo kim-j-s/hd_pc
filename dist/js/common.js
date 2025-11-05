@@ -645,16 +645,20 @@
 			}, 300, function () {
 				$wrap.data('scrolling', false);
 
-				// 포커스 가능한 첫 요소 탐색
-				const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
-
-				if (!$wrap.hasClass('prd_car')) {
-					if ($focusable.length) {
-						$focusable.focus();
-					} else {
-						$target.attr('tabindex', '-1').focus();
+				setTimeout(function(){
+					// 포커스 가능한 첫 요소 탐색
+					const $focusable = $target.find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])').filter(':visible').first();
+	
+					if (!$wrap.hasClass('prd_car')) {
+						if ($focusable.length) {
+							$focusable.focus();
+						} else {
+							$target.attr('tabindex', '-1').focus();
+						}
+					}else {
+						$target.find('.sec_head').attr('tabindex', '-1').focus();
 					}
-				}
+				},300)
 			});
 		}
 	});
