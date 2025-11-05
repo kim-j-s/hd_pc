@@ -125,12 +125,12 @@
 								<a class="swiper-slide bann_wrap bann_ty2" href="#">			
 									<img src="../../../images/content/main/img_main_side_bann01.png" alt="배너 통 이미지1">
 								</a>
-								<!-- <a class="swiper-slide bann_wrap bann_ty2" href="#">
+								<a class="swiper-slide bann_wrap bann_ty2" href="#">
 									<img src="../../../images/content/main/img_main_side_bann02.png" alt="배너 통 이미지2">
 								</a>	
 								<a class="swiper-slide bann_wrap bann_ty2" href="#">
 									<img src="../../../images/content/main/img_main_side_bann03.png" alt="배너 통 이미지3">
-								</a> -->
+								</a>
 							</div>	
 						</div>
 						<!-- s: 25-09-26 수정 -->
@@ -1370,19 +1370,19 @@
 					},
 				}
 			});
+
+			$('.mc_bann_wrap .swiper-button-play-pause').on('click', function() {
+				// bannerSwiper.autoplay.stop();
+				if (bannerSwiper.autoplay.running){
+					bannerSwiper.autoplay.stop();
+					$(this).text('시작').addClass('active');
+				}else {
+					bannerSwiper.autoplay.start();
+					$(this).text('정지').removeClass('active');
+				}
+			});
 		}
 		/* e: 25-10-01 수정 */
-
-		$('.mc_bann_wrap .swiper-button-play-pause').on('click', function() {
-			// bannerSwiper.autoplay.stop();
-			if (bannerSwiper.autoplay.running){
-				bannerSwiper.autoplay.stop();
-				$(this).text('시작').addClass('active');
-			}else {
-				bannerSwiper.autoplay.start();
-				$(this).text('정지').removeClass('active');
-			}
-		});
 
 		/* 메인 스크롤 이벤트  */
 		$(window).on('scroll', function() {
