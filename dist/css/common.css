@@ -9691,6 +9691,9 @@ sup {
 .form_group_wrap .row.balance > * {
 	width: 50%;
 }
+.form_group_wrap .row.balance > *.btn_area {
+	margin-top: 0;
+}
 .form_group_wrap .row + .form_line {
 	margin-top: var(--gap-5);
 }

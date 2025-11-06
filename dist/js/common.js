@@ -638,7 +638,6 @@
 			const containerTop = $scrollArea.offset().top;
 			const targetTop = $target.offset().top;
 			const scrollY = targetTop - containerTop + expHeight + sHeight;
-		
 
 			if ($(this).closest('.amc_nav').length && scrollY == 0 ) {
 				$('.amc_nav').removeClass('active');
