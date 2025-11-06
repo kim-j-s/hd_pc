@@ -908,6 +908,10 @@
 		&.balance {
 			& > * { 
 				width: 50%;
+
+				&.btn_area {
+					margin-top: 0;
+				}
 			}
 		}
 
