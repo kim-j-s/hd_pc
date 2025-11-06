@@ -1136,6 +1136,19 @@
 .wrap .form_group_wrap.full .space_between button {
 	min-width: 100px;
 }
+.wrap .form_group_wrap.full .partial_half .row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.wrap .form_group_wrap.full .partial_half .row > *:not(.btn_area) {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 50%;
+	flex: 0 1 50%;
+}
+.wrap .form_group_wrap.full .partial_half .row .btn_area {
+	margin-top: 0;
+}
 .wrap .form_group_wrap .form_line ~ .form_line {
 	margin-top: 0;
 }
@@ -1337,9 +1350,6 @@
 	flex: none;
 	padding-right: 4px;
 	vertical-align: top;
-}
-.notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) .info_gray.ty2 {
-	padding-right: 312px;
 }
 .notification .form_list > li > .form_group_wrap > .form_line .info_gray.ty2 {
 	margin-top: var(--gap-5);
