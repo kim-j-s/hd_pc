@@ -12,6 +12,7 @@
 			.tag_item_wrap {
 				&.sticky {
 					top: 65px;
+					padding-bottom: 0;
 				}
 			}
 		}
@@ -266,8 +267,16 @@
 
 	// 간격
 	.sec_group {
+		&:first-child {
+			padding-top: 16px;
+		}
 		.sec_head {
 			margin-bottom: var(--gap-6);
+
+			&:focus {
+				outline: 2px solid #000;
+  			outline-offset: 1px;
+			}
 		}
 		.sec_body {
 			&:has(.title_h4) {
