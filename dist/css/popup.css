@@ -803,6 +803,12 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont .bottom_fix_notice {
 	padding-top: 32px;
 }
+.popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont .pl_txt1 {
+	text-align: center;
+}
+.popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_cont .pl_txt1.txt_left {
+	text-align: left;
+}
 .popup_wrap.popup_wrap_type3 .popup_container .popup_inner .popup_bottom .btn_area .hd_btn {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
