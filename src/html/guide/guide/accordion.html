@@ -404,7 +404,9 @@
 	<div class="guide_discription">Case1) 하단 고정버튼 영역 내</div>
 	<div class="bottom_fix_wrap bottom_panel">
 		<div class="btn_area center">
-			{{> cp/linkButton bl_class="short_cut bottom_panel_toggle" aria-controls="bottom_panel_cont" bl_text="펼치기" }}
+			<button type="button" class="btn_link short_cut bottom_panel_toggle" aria-expanded="false">
+				<span class="text">펼치기</span>
+			</button>
 		</div>
 		<div class="bottom_panel_cont" id="bottom_panel_cont">
 			<div class="info_gray bg_etc01">
