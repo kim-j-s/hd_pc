@@ -5452,6 +5452,7 @@ ul + .form_group_wrap {
 }
 /* 회원탈퇴 */
 .zoom_control {
+	display: none;
 	text-align: right;
 }
 .zoom_control > .inner {
