@@ -12040,7 +12040,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	align-items: stretch;
 	gap: 12px;
 }
-.radio_group_wrap_ty2 + * {
+.radio_group_wrap_ty2 + *:not([class^="divider_ty"]) {
 	margin-bottom: 24px;
 }
 .radio_group_wrap_ty2 .inp_radio {
@@ -14918,6 +14918,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .info_gray.ty4 {
 	background-color: var(--color-surface-secondary-subtle);
+}
+.info_gray + [class^="title_h"].ty2 {
+	margin-top: var(--gap-11);
 }
 .info_gray + .call_box,
 .info_gray + .ag_groups,
