@@ -232,13 +232,15 @@
 
 
 // divider
-.divider_ty1 {
-	height: var(--size-height_small-1);
-	margin: var(--gap-11) 0;
-}
-.divider_ty2 {
-	height: var(--size-height_small-1);
-	margin: var(--gap-11) 0;
+.wrap {
+	.divider_ty1 {
+		height: var(--size-height_small-1);
+		margin: var(--gap-11) 0;
+	}
+	.divider_ty2 {
+		height: var(--size-height_small-1);
+		margin: var(--gap-11) 0;
+	}
 }
 
 //title
@@ -1959,11 +1961,14 @@
 		gap: 12px;
 		.inp_radio {
 			flex-basis: calc(20% - 10px);
+			.label_cont {
+				white-space: nowrap;
+			}
 		}
 	}
 }
 .driver_relationship_box {
-	margin-top: 32px;
+	margin-top: var(--gap-8);
 	display: flex  ;
 	gap: var(--gap-8);
 	.driver_relationship_state {
@@ -2067,6 +2072,14 @@
 				display: block;
 			}
 		} 
+	}
+
+	& + .btn_area {
+		margin-top: var(--gap-5);
+	}
+
+	&:not(:has(.driver_relationship_state)){
+		margin-top: var(--gap-11);
 	}
 }
 

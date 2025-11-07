@@ -125,6 +125,11 @@
 	}
 
 	// margin-top 52
+	& + [class^=title_h]{
+		&.ty2 {
+			margin-top: var(--gap-11);
+		}
+	}
 	& + .call_box,
 	& + .ag_groups,
 	& + .ag_group_wrap,
