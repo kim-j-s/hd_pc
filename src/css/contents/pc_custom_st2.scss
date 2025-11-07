@@ -758,6 +758,7 @@
 
 // list
 .list_ty3 {
+	& + form,
 	& + .space_list_ty4,
 	& + .file_attach_box {
 		margin-top: var(--gap-8);
