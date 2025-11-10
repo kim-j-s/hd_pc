@@ -1521,6 +1521,7 @@
 	position: relative;
 	z-index: 1;
 }
+.list_ty3 + form,
 .list_ty3 + .space_list_ty4,
 .list_ty3 + .file_attach_box {
 	margin-top: var(--gap-8);
