@@ -202,7 +202,7 @@
 		align-items: stretch;
 		gap: 12px;
 
-		& + * {
+		& + *:not([class^=divider_ty]) {
 			margin-bottom: 24px;
 		}
 
@@ -216,6 +216,7 @@
 			}
 		}
 
+		
 		& + .row {
 			margin-top: var(--gap-5);
 		}
