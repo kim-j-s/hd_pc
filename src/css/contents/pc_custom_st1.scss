@@ -278,6 +278,13 @@ body {
 				&:before {
 					top: 18px;
 				}
+				&:has(.modify_top){
+					dl {
+						.title {
+							padding-right: 112px;
+						}
+					}
+				}
 			}
 			&:last-child {
 				&::before {
@@ -425,8 +432,8 @@ body {
 			&:has(.modify_top){
 				dl {
 					.title {
-						// padding-right: 68px;
-						padding-right: 112px;
+						padding-right: 68px;
+						// padding-right: 112px;
 					}
 				}
 			}
@@ -434,6 +441,19 @@ body {
 			// 진행중 문구
 			.info {
 				display: none;
+				margin-top: var(--gap-3);
+				padding: var(--padding-2);
+				// font-size: var(--font-size-body-xsmall);
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-basic);
+
+				&.ic {
+					padding-left: 28px;
+					background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+				}
+			}
+			// 별도 진행중 문구 case
+			.info_ty2 {
 				margin-top: var(--gap-3);
 				padding: var(--padding-2);
 				// font-size: var(--font-size-body-xsmall);
@@ -665,6 +685,10 @@ body {
 			}
 			dd {
 				text-align: left;
+
+				> ul {
+					margin-top: var(--gap-2);
+				}
 	
 				.modify_sub {
 					top: -32px;
@@ -677,6 +701,12 @@ body {
 		}
 		// 기본정보 (아이콘)
 		.dep_opt_list {
+			&.none {
+				> li {
+					padding-left: var(--padding-2);
+					background: none;
+				}
+			}
 			> li {
 				padding-left: 28px;
 				background-repeat: no-repeat;
