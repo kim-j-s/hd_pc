@@ -143,6 +143,11 @@
 					padding-bottom: 4px;
 				}
 			}
+			th {
+				&.ta_c {
+					padding-right: var(--padding-5);
+				}
+			}
 		}
 
 		&.table_num_type01 {
