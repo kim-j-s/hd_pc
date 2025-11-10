@@ -41,7 +41,7 @@
 		<script type="text/javascript" src="../../../js/scroll_option.js"></script>
 		<link rel="stylesheet" href="../../../css/libs/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="../../../css/libs/splide.min.css" />
-		<title>제휴설계내역 | 상품 - 현대해상 다이렉트</title>
+		<title>차량 정보 | 상품 - 현대해상 다이렉트</title>
 
 		<link rel="stylesheet" href="../../../css/reset.css" />
 		<link rel="stylesheet" href="../../../css/common.css" />
@@ -55,151 +55,77 @@
 			<li><a href="#container">본문바로가기</a></li>
 		</ul>
 
-		<!-- s: popup area -->
-
-		<!-- s: Bottom 팝업 -->
 		<div class="popup_wrap popup_wrap_type4 active" id="pop_type01" role="dialog" aria-hidden="false">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
 				<div class="popup_inner">
 					<div class="popup_head">
-						<div class="popup_head_title"></div>
+						<div class="popup_head_title">이륜차 등록 정보 확인</div>
 					</div>
 					<div class="popup_cont">
 						<div class="popup_content">
 							<!-- s: popup_content_top -->
 							<div class="popup_content_top">
-								<div class="title_h3 normal txt_center">$제휴사명$에서 비교하신 고객님!<br /><strong>현대해상 다이렉트</strong>에서 더 꼼꼼히 안내해드릴게요</div>
-
-								<!--s: 혜택정보가 있는 경우 -->
-								<!-- <div class="title_h3 normal txt_center"> -->
-								<!-- $제휴사명$에서 비교하신 고객님!
-									<br />
-									지금 가입하면 <strong>네이버페이 포인트 최대 3만원</strong>이 쌓여요 -->
-								<!-- </div> -->
-								<!--e: 혜택정보가 있는 경우 -->
+								<h2 class="title_h2">
+									<strong>이륜차 등록 정보 전산조회</strong>를 통해<br />
+									확인된 차량사항을 안내해드려요
+								</h2>
 							</div>
 							<!-- e: popup_content_top -->
 
-							<!-- s: 보험료 정보 영역 -->
-							<div class="info_gray">
-								<span class="hd_badge outline solid_pastel c_primary size_m">동물등록 5% + 유기동물입양 5%할인</span>
-								<h4 class="title_h4">그레이하운드 (5살, 남아)</h4>
-								<!-- s: 25-11-10 삭제 -->
-								<!-- <dl>
-									<dt>갱신주기</dt>
-									<dd>3년</dd>
-								</dl> -->
-								<!-- e: 25-11-10 삭제 -->
-								<dl>
-									<dt>의료비 1일한도</dt>
-									<dd>15만원</dd>
-								</dl>
-								<dl>
-									<dt>보상비율</dt>
-									<dd>70%</dd>
-								</dl>
-								<dl>
-									<dt>자기부담금</dt>
-									<dd>3만원</dd>
-								</dl>
-								<dl class="footer_dl">
-									<dt>월 보험료</dt>
-									<dd class="point">7,200원</dd>
-								</dl>
+							<div class="table_wrap">
+								<h3 class="title_h3">전산조회 결과</h3>
+								<table class="table table_c">
+									<caption>
+										이륜차 등록 정보 전산 조회 결과로 현재계약의 차명, 차종 등 등록정보 제공
+									</caption>
+									<colgroup>
+										<col style="width: 24%" />
+										<col style="width: 38%" />
+										<col style="width: 38%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">현재계약</th>
+											<th scope="col">등록정보</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row" class="ta_c">차명</th>
+											<td>PCX125</td>
+											<!-- 전산조회 결과 시, 등록정보 바뀐 영역에 primary_bold 클래스 추가 -->
+											<td class="primary_bold">WW125A</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="2" class="ta_c">차종</th>
+											<!-- 전산조회 결과 시, 등록정보 바뀐 영역에 primary_bold 클래스 추가 -->
+											<td>중형</td>
+											<td class="primary_bold">소형B</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-
-							<ul class="list_ty2">
-								<!-- s: 25-08-22 UXW -->
-								<!-- s: 25-11-10 수정 -->
-								<li>반려동물과 고객님의 정보를 변경하면 보험료가 달라질 수 있습니다.</li>
-								<!-- e: 25-11-10 수정 -->
-								<!-- e: 25-08-22 UXW -->
+							<ul class="list_depth_ty2">
+								<li>전산조회 결과에 따른 차량사항이 자동적용 됩니다.</li>
+								<li>자동차관리법 개정에 따라 일부 차종에 대해 구분기준이 변경되었습니다.</li>
 							</ul>
-							<!-- e: 보험료 정보 영역 -->
-
-							<!-- s: case1.강아지 -->
-							<!-- s: 25-08-22 UXW -->
-							<!-- s: 25-11-10 수정 -->
-							<div class="bottom_fix_notice etc01">
-								<div class="acd_item">
-									<div class="acd_head">
-										<button type="button" class="acd_btn" aria-expanded="false"><span>총 7개 담보 보장</span></button>
-									</div>
-									<div class="acd_cont">
-										<div class="inner">
-											<!-- e: 25-11-10 수정 -->
-											<!-- e: 25-08-22 UXW -->
-											<ul class="list_depth">
-												<li>반려견입원의료비II(갱신형)</li>
-												<li>반려견통원의료비II(갱신형)</li>
-												<li>반려견입원의료비확장보장(치과및구강질환)(갱신형)</li>
-												<li>반려견통원의료비확장보장(치과및구강질환)(갱신형)</li>
-												<li>반려견입원의료비확장보장(슬관절,고관절탈구)(갱신형)</li>
-												<li>반려견통원의료비확장보장(슬관절,고관절탈구)(갱신형)</li>
-												<li>기본계약(상해후유장해(80%이상))</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- e: case1.강아지 -->
-
-							<!-- s: case2.고양이 -->
-							<!-- s: 25-08-22 UXW -->
-							<!-- s: 25-11-10 수정 -->
-							<!-- <div class="bottom_fix_notice etc01">
-						<div class="acd_item">
-							<div class="acd_head">
-								<button type="button" class="acd_btn" aria-expanded="false"><span>총 5개 담보 보장</span></button>
-							</div>
-							<div class="acd_cont">
-								<div class="inner">
-									 -->
-							<!-- e: 25-11-10 수정 -->
-
-							<!-- <ul class="list_depth">
-												<li>반려묘입원의료비II(갱신형)</li>
-												<li>반려묘통원의료비II(갱신형)</li>
-												<li>반려묘입원의료비확장보장(치과및구강질환)(갱신형)</li>
-												<li>반려묘통원의료비확장보장(치과및구강질환)(갱신형)</li>
-												<li>기본계약(상해후유장해(80%이상))</li>
-											</ul>
-														</div>
-							</div>
-						</div>
-					</div> -->
-							<!-- e: case2.고양이 -->
-
-							<!-- s: 혜택정보가 있는 경우 이미지 파일 붙는 영역 (size: 327 * 72) -->
-							<!-- s: 25-11-10 기획서 현향화 삭제 -->
-							<!-- <div class="reward_img_area ty2">
-								<img src="../../../images/temp/rewardBanner_naver_temp.png" alt="네이버 포인트로 결제하면 최대 3만원을 포인트로 되돌려 드려요!" />
-							</div>  -->
-							<!-- e: 25-11-10 기획서 현향화 삭제 -->
-							<!-- e: 혜택정보가 있는 경우 이미지 파일 붙는 영역 -->
 						</div>
 					</div>
 
 					<div class="popup_bottom">
-						<!-- s: 버튼 활성화 -->
-						<!-- s: 25-11-10 수정 -->
 						<div class="btn_area">
 							<button type="button" class="hd_btn hd_btn_ty_1 hd_btn_s_2">
-								<span class="text">보험가입 진행하기</span>
+								<span class="text">확인</span>
 							</button>
 						</div>
-						<!-- e: 25-11-10 수정 -->
-						<!-- e: 버튼 활성화 -->
 					</div>
-
 					<!-- s: 25-08-07 수정 -->
 					<!-- e: 25-08-07 수정 -->
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
-		<!-- e: Bottom 팝업 -->
-		<!-- e: popup area -->
 	</body>
 </html>

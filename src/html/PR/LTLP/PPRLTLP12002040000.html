@@ -25,10 +25,12 @@
 		<div class="info_gray">
 			<span class="hd_badge outline solid_pastel c_primary size_m">동물등록 5% + 유기동물입양 5%할인</span>
 			<h4 class="title_h4">그레이하운드 (5살, 남아)</h4>
-			<dl>
+			<!-- s: 25-11-10 삭제 -->
+			<!-- <dl>
 				<dt>갱신주기</dt>
 				<dd>3년</dd>
-			</dl>
+			</dl> -->
+			<!-- e: 25-11-10 삭제 -->
 			<dl>
 				<dt>의료비 1일한도</dt>
 				<dd>15만원</dd>
@@ -48,15 +50,19 @@
 		</div>
 
 		<ul class="list_ty2">
-			<!-- s: 25-08-22 UXW -->		
-			<li>반려동물과 고객님의 정보 변경 시 보험료가 달라질 수 있습니다.</li>
+			<!-- s: 25-08-22 UXW -->
+			<!-- s: 25-11-10 수정 -->
+			<li>반려동물과 고객님의 정보를 변경하면 보험료가 달라질 수 있습니다.</li>
+			<!-- e: 25-11-10 수정 -->	
 			<!-- e: 25-08-22 UXW -->
 		</ul>
 		<!-- e: 보험료 정보 영역 -->
 	
 		<!-- s: case1.강아지 -->
 		<!-- s: 25-08-22 UXW -->		 
-		{{#> cp/notice notice-class="etc01" dp-title="7개 보장" }}
+		<!-- s: 25-11-10 수정 -->
+		{{#> cp/notice notice-class="etc01" dp-title="총 7개 담보 보장" }}
+		<!-- e: 25-11-10 수정 -->
 		<!-- e: 25-08-22 UXW -->
 		<ul class="list_depth">
 			<li>반려견입원의료비II(갱신형)</li>
@@ -72,8 +78,11 @@
 
 		<!-- s: case2.고양이 -->
 		<!-- s: 25-08-22 UXW -->		
-		<!-- {{#> cp/notice notice-class="etc01" dp-title="5개 보장" }}		
-		<ul class="list_depth">
+		<!-- s: 25-11-10 수정 -->
+		<!-- {{#> cp/notice notice-class="etc01" dp-title="총 5개 담보 보장" }} -->
+		<!-- e: 25-11-10 수정 -->
+		
+		<!-- <ul class="list_depth">
 			<li>반려묘입원의료비II(갱신형)</li>
 			<li>반려묘통원의료비II(갱신형)</li>
 			<li>반려묘입원의료비확장보장(치과및구강질환)(갱신형)</li>
@@ -84,9 +93,11 @@
 		<!-- e: case2.고양이 -->
 
 		<!-- s: 혜택정보가 있는 경우 이미지 파일 붙는 영역 (size: 327 * 72) -->
-		<div class="reward_img_area ty2">
+		<!-- s: 25-11-10 기획서 현향화 삭제 -->
+		<!-- <div class="reward_img_area ty2">
 			<img src="../../../images/temp/rewardBanner_naver_temp.png" alt="네이버 포인트로 결제하면 최대 3만원을 포인트로 되돌려 드려요!" />
-		</div> 
+		</div>  -->
+		<!-- e: 25-11-10 기획서 현향화 삭제 -->
 		<!-- e: 혜택정보가 있는 경우 이미지 파일 붙는 영역 -->
 
 	</div>
@@ -94,7 +105,9 @@
 
 <div class="popup_bottom">
 	<!-- s: 버튼 활성화 -->
-	<div class="btn_area">{{> cp/button type="1" size="2" b-text="다른 플랜 보기"}}</div>
+	<!-- s: 25-11-10 수정 -->
+	<div class="btn_area">{{> cp/button type="1" size="2" b-text="보험가입 진행하기"}}</div>
+	<!-- e: 25-11-10 수정 -->
 	<!-- e: 버튼 활성화 -->
 </div>
 
