@@ -314,27 +314,28 @@
 								<div class="form_line full_half">
 									<div class="label_tit">현대 블루멤버스 카드번호</div>
 									<div class="comp_wrap card">
+										<!-- s: 25-11-11 수정 -->
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 첫번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="현대 블루멤버스 카드번호 첫번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 두번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="현대 블루멤버스 카드번호 두번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 세번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="현대 블루멤버스 카드번호 세번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<!-- s: 25-08-21 UXW -->
 										<div class="comp_wrap_keypad_call form_key_pc">
-											<input type="password" name="" id="" title="카드번호 마지막 4자리 입력" placeholder="4자리" maxlength="4" />
+											<input type="password" name="" id="" title="현대 블루멤버스 카드번호 마지막 4자리 입력" placeholder="4자리" maxlength="4" />
 											<span>
 												<input type="checkbox" name="" id="kp1" />
 												<label for="kp1">마우스입력기사용</label>
@@ -342,6 +343,7 @@
 										</div>
 
 										<!-- e: 25-08-21 UXW -->
+										<!-- e: 25-11-11 수정 -->
 									</div>
 									<div class="btn_area full">
 										<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2" onclick="openHDPopup(this,'pop_type04');">
@@ -354,27 +356,28 @@
 								<div class="form_line full_half">
 									<div class="label_tit">기아 멤버스 카드번호</div>
 									<div class="comp_wrap card">
+										<!-- s: 25-11-11 수정 -->
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 첫번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="기아 멤버스 카드번호 첫번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 두번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="기아 멤버스 카드번호 두번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<div class="input_text">
 											<div class="inp">
-												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="카드번호 세번째 4자리 입력" />
+												<input type="tel" placeholder="4자리" minlength="4" maxlength="4" title="기아 멤버스 카드번호 세번째 4자리 입력" />
 											</div>
 										</div>
 										<span class="dash">-</span>
 										<!-- s: 25-08-21 UXW -->
 										<div class="comp_wrap_keypad_call form_key_pc">
-											<input type="password" name="" id="" title="카드번호 마지막 4자리 입력" placeholder="4자리" maxlength="4" />
+											<input type="password" name="" id="" title="기아 멤버스 카드번호 마지막 4자리 입력" placeholder="4자리" maxlength="4" />
 											<span>
 												<input type="checkbox" name="" id="kp2" />
 												<label for="kp2">마우스입력기사용</label>
@@ -382,6 +385,7 @@
 										</div>
 
 										<!-- e: 25-08-21 UXW -->
+										<!-- e: 25-11-11 수정 -->
 									</div>
 									<div class="btn_area full">
 										<button type="button" class="hd_btn hd_btn_ty_2 hd_btn_s_2" onclick="openHDPopup(this,'pop_type04');">
@@ -392,13 +396,15 @@
 								<!-- e: 기아 멤버스 -->
 								<div class="form_line">
 									<div class="label_tit">보유 포인트</div>
+									<!-- s: 25-11-11 수정 -->
 									<div class="input_text price">
 										<div class="inp">
-											<input type="tel" readonly title="보유 포인트 조회" />
+											<input type="tel" readonly title="보유 포인트 입력" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
 										</div>
 										<div class="int_txt right">P</div>
 									</div>
+									<!-- e: 25-11-11 수정 -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">사용 포인트</div>
@@ -640,22 +646,26 @@
 							<div class="form_group_wrap">
 								<div class="form_line">
 									<div class="label_tit">보험료 결제하실 은행</div>
-									<div class="select_item select_item_case01" role="button" tabindex="0" title="보험료 결제하실 선택" onclick="openHDPopup(this,'bank_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'bank_select');">
+									<!-- s: 25-11-11 수정 -->
+									<div class="select_item select_item_case01" role="button" tabindex="0" title="가상계좌 보험료 결제하실 선택" onclick="openHDPopup(this,'bank_select');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'bank_select');">
 										<div class="select_item_inner">
 											<div class="si_item" data-placeholder="은행 선택"></div>
 											<span class="si_stat">선택됨</span>
 										</div>
 									</div>
+									<!-- e: 25-11-11 수정 -->
 								</div>
 								<div class="form_line">
 									<div class="label_tit">입금 예정일</div>
 									<!-- s: 25-08-21 UXW -->
+									<!-- s: 25-11-11 수정 -->
 									<div class="input_text calendar">
 										<div class="inp">
-											<input type="tel" class="inp_picker" placeholder="입금 예정일 선택" title="날짜를 입력해주세요" />
+											<input type="tel" class="inp_picker" placeholder="입금 예정일" title="날짜를 입력해주세요" />
 											<button type="button" class="del"><span class="blind">텍스트 삭제</span></button><button type="button" class="btn calendar_call" title="날짜 선택"></button>
 										</div>
 									</div>
+									<!-- e: 25-11-11 수정 -->
 									<!-- e: 25-08-21 UXW -->
 									<ul class="list_ty2">
 										<!-- s: 25-09-03 수정 -->
