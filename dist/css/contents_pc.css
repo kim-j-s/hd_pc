@@ -1131,7 +1131,7 @@
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	gap: var(--gap-8);
+	gap: 0 var(--gap-8);
 }
 .wrap .form_group_wrap:not(.full) > * {
 	-webkit-box-flex: 0;
@@ -1170,6 +1170,13 @@
 	margin-top: 0;
 }
 .wrap .form_group_wrap .form_line ~ .form_line {
+	margin-top: var(--gap-8);
+}
+.wrap .form_group_wrap .form_line_ty3 + .form_line_ty3 {
+	margin-top: var(--gap-9);
+}
+.wrap .form_group_wrap .form_line:first-child,
+.wrap .form_group_wrap .form_line:nth-child(2):not(.full_half, .full) {
 	margin-top: 0;
 }
 .wrap .form_group_wrap > .list_ty2.full {
