@@ -300,11 +300,20 @@
 			}
 		}
 
+		.form_line:first-child,
+		.form_line:first-child:not(.full_half, .full) + .form_line:not(.full_half, .full) {
+			margin-top: 0;
+		}
+
+		.form_line:has(.full_half, .full) + .form_line {
+			margin-top: var(--gap-8);
+		}
+
 		.form_line {
-			&:first-child,
-			&:nth-child(2):not(.full_half, .full) {
-				margin-top: 0;
-			}
+			// &:first-child,
+			// &:nth-child(2):not(.full_half, .full) {
+			// 	margin-top: 0;
+			// }
 		}
 
 		> .list_ty2 {
