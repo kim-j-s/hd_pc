@@ -776,7 +776,7 @@
 	position: relative;
 	width: calc(50% - 6px);
 	min-height: 72px;
-	padding: 0 var(--padding-6);
+	padding: 0 var(--padding-3);
 	border: var(--border-width-static-regular) solid var(--color-button-tertiary-border-pc);
 	border-radius: var(--radius-medium3);
 }
