@@ -95,7 +95,14 @@
 										<div class="form_line">
 											<div class="label_tit">납세자 번호 미입력 사유</div>
 											<!-- s: 25-08-07 -->
-											{{#> cp/selectbox_pc s-title="납세자 번호 미입력 사유1 선택" sb-ph="선택" }}
+											<!-- s: 25-11-12 수정 -->
+											<!-- 
+											웹접근성 관련 수정이 필요한 구간입니다.
+											현재 mobile 기준의 div role button 처리된 마크업 구조 안에 selectbox가 들어가져 있습니다.
+											해당 구조 확인하시고 selectbox pc 버젼에 맞추어 수정 부탁드립니다.
+											-->
+											{{#> cp/selectbox_pc s-title="납세자 번호 미입력 사유 선택" sb-ph="선택" }}
+											<!-- e: 25-11-12 수정 -->
 											<!-- e: 25-08-07 -->
 											<option value="">미발급국가</option>
 											<option value="">미요구국가</option>
@@ -112,7 +119,9 @@
 										<!-- e: 미입력 사유 미취득 선택시 노출 -->
 										<!-- e: 25-11-12 수정 -->
 									</div>
-									<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 닫기</span></button>
+									<!-- s: 25-11-12 수정 -->
+									<button type="button" class="btn_rd_close"><span class="blind">국가 정보 입력 삭제</span></button>
+									<!-- e: 25-11-12 수정 -->
 								</div>
 								<div class="form_card_case">
 									<h3 class="title_h4">국가 정보</h3>

@@ -845,7 +845,7 @@
 			}
 		}
 
-		& ~ .form_line,
+		// & ~ .form_line,
 		& ~ .extra_area {
 			margin-top: var(--gap-8);
 		}
@@ -873,7 +873,7 @@
 
 	> .form_line_ty3 {
 		& + .form_line_ty3 {
-			margin-top: var(--gap-9);
+			// margin-top: var(--gap-9);
 		}
 	}
 
