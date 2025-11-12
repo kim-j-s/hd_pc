@@ -61,6 +61,9 @@
 	&.documentSvg {
 		@include getSvg("icon/document");
 	}
+	&.documentSvg_ty2 {
+		@include getSvg("icon/document_ty2");
+	}
 	&.pictureSvg {
 		@include getSvg("icon/picture");
 	}
@@ -87,6 +90,9 @@
 	}
 	&.callSvg {
 		@include getSvg("icon/icon_call");
+	}
+	&.rdChk {
+		@include getSvg("icon/icon_rd_chk");
 	}
 	&.docEditSvg {
 		@include getSvg("icon/icon_insurance_check");
