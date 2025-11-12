@@ -4344,6 +4344,9 @@ sup {
 	flex: 1;
 	text-align: center;
 }
+.hd_btn[class*="hd_btn_ty"] > .text.bold {
+	font-weight: 700;
+}
 /**
  *  Button Type - ty_1(default), ty_2(secondary), ty_3(tertiary)
  */
@@ -8304,6 +8307,9 @@ sup {
 .hd_icon.documentSvg {
 	background-image: url(../images/icon/document.svg);
 }
+.hd_icon.documentSvg_ty2 {
+	background-image: url(../images/icon/document_ty2.svg);
+}
 .hd_icon.pictureSvg {
 	background-image: url(../images/icon/picture.svg);
 }
@@ -8330,6 +8336,9 @@ sup {
 }
 .hd_icon.callSvg {
 	background-image: url(../images/icon/icon_call.svg);
+}
+.hd_icon.rdChk {
+	background-image: url(../images/icon/icon_rd_chk.svg);
 }
 .hd_icon.docEditSvg {
 	background-image: url(../images/icon/icon_insurance_check.svg);
@@ -9648,7 +9657,6 @@ sup {
 .form_group_wrap [class^="form_line"] .select_item + .input_text {
 	margin-top: var(--gap-5);
 }
-.form_group_wrap [class^="form_line"] ~ .form_line,
 .form_group_wrap [class^="form_line"] ~ .extra_area {
 	margin-top: var(--gap-8);
 }
@@ -9663,9 +9671,6 @@ sup {
 }
 .form_group_wrap > .form_line_ty2 + .row {
 	margin-top: var(--gap-5);
-}
-.form_group_wrap > .form_line_ty3 + .form_line_ty3 {
-	margin-top: var(--gap-9);
 }
 .form_group_wrap .form_group_wrap > .form_line ~ .form_line {
 	margin-top: var(--gap-5);
