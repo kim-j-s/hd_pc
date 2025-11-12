@@ -257,7 +257,7 @@
 	.form_group_wrap {
 		display: flex;
 		flex-flow: row wrap;
-		gap: 0 var(--gap-8);
+		gap: var(--gap-8);
 
 		&:not(.full) > * {
 			flex: 0 0 calc(50% - 16px);
@@ -291,29 +291,13 @@
 		}
 		.form_line {
 			& ~ .form_line {
-				margin-top: var(--gap-8);
+				margin-top: 0;
 			}
 		}
 		.form_line_ty3 {
 			+ .form_line_ty3 {
 				margin-top: var(--gap-9);
 			}
-		}
-
-		.form_line:first-child,
-		.form_line:first-child:not(.full_half, .full) + .form_line:not(.full_half, .full) {
-			margin-top: 0;
-		}
-
-		.form_line:has(.full_half, .full) + .form_line {
-			margin-top: var(--gap-8);
-		}
-
-		.form_line {
-			// &:first-child,
-			// &:nth-child(2):not(.full_half, .full) {
-			// 	margin-top: 0;
-			// }
 		}
 
 		/*
