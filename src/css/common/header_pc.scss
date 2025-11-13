@@ -168,11 +168,29 @@
 			box-sizing: content-box;
 			background-repeat: no-repeat;
 			background-position: center center;
+			&.new {
+				position: relative;
+				&::after {
+					content:'신규';
+					position: absolute;
+					top: 8px;
+					width: 8px;
+					height: 8px;
+					background: var(--color-icon-primary);
+					border-radius: 100%;
+				}
+			}
 			&.hsu_alarm {
 				background-image: url(../images/header/bg_header_alarm.png);
+				&.new::after {
+					right: 10px;
+				}
 			}
 			&.hsu_cart {
 				background-image: url(../images/header/icon_cart.svg);
+				&.new::after {
+					right: 7px;
+				}
 			}
 			&.hsu_search {
 				background-image: url(../images/header/bg_header_search.png);
