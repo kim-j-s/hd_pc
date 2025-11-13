@@ -111,6 +111,12 @@
 		&.crc_list_ico_type10 {
 			background-image: url('../images/content/pp00/ico_crc_list_ico_type10.svg');
 		}
+		&.crc_list_ico_type11 {
+			background-image: url('../images/content/pp00/ico_crc_list_ico_type11.svg');
+		}
+		&.crc_list_ico_type12 {
+			background-image: url('../images/content/pp00/ico_crc_list_ico_type12.svg');
+		}
 		& + .crc_list_ico {
 			padding-top: calc(var(--padding-6) + 1px);
 			border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
