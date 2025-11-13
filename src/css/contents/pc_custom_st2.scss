@@ -289,7 +289,7 @@
 				}
 			}
 		}
-		.form_line {
+		[class^=form_line] {
 			& ~ .form_line {
 				margin-top: 0;
 			}
