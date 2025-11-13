@@ -604,15 +604,27 @@ body {
 						flex: 1;
 						&.result {
 							flex:none;
-							width: 42px;
+							width: 62px;
 							color: var(--color-text-information);
 							text-align: right;
 
 							&.ok {
+								padding-right: 20px;
+								background: url(../images/icon/icon_success.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
 								color: var(--color-text-success);
 							}
 							&.ing {
+								padding-right: 20px;
+								background: url(../images/icon/icon_ing.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
 								color: var(--color-text-primary);
+							}
+							&.fail {
+								padding-right: 20px;
+								background: url(../images/icon/icon_fail.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
+								color: var(--color-text-danger);
 							}
 						}
 					}
