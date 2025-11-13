@@ -1436,11 +1436,29 @@ sup {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).new {
+	position: relative;
+}
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).new::after {
+	content: "신규";
+	position: absolute;
+	top: 8px;
+	width: 8px;
+	height: 8px;
+	background: var(--color-icon-primary);
+	border-radius: 100%;
+}
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_alarm {
 	background-image: url(../images/header/bg_header_alarm.png);
 }
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_alarm.new::after {
+	right: 10px;
+}
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_cart {
 	background-image: url(../images/header/icon_cart.svg);
+}
+.hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_cart.new::after {
+	right: 7px;
 }
 .hpi_sub_utils > .item .hus_btn:not(.hsu_chatbot).hsu_search {
 	background-image: url(../images/header/bg_header_search.png);
@@ -9657,6 +9675,7 @@ sup {
 .form_group_wrap [class^="form_line"] .select_item + .input_text {
 	margin-top: var(--gap-5);
 }
+.form_group_wrap [class^="form_line"] ~ .form_line,
 .form_group_wrap [class^="form_line"] ~ .extra_area {
 	margin-top: var(--gap-8);
 }

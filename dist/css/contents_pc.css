@@ -1176,7 +1176,7 @@
 .wrap .form_group_wrap.full .partial_half .row .btn_area {
 	margin-top: 0;
 }
-.wrap .form_group_wrap .form_line ~ .form_line {
+.wrap .form_group_wrap [class^="form_line"] ~ .form_line {
 	margin-top: 0;
 }
 .wrap .form_group_wrap .form_line_ty3 + .form_line_ty3 {
