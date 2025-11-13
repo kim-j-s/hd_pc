@@ -403,15 +403,27 @@
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
-	width: 42px;
+	width: 62px;
 	color: var(--color-text-information);
 	text-align: right;
 }
 .side_panel .step_list > li .pro_step_result > li span.result.ok {
+	padding-right: 20px;
+	background: url(../images/icon/icon_success.svg) no-repeat right top 1px/16px auto;
+	font-weight: 700;
 	color: var(--color-text-success);
 }
 .side_panel .step_list > li .pro_step_result > li span.result.ing {
+	padding-right: 20px;
+	background: url(../images/icon/icon_ing.svg) no-repeat right top 1px/16px auto;
+	font-weight: 700;
 	color: var(--color-text-primary);
+}
+.side_panel .step_list > li .pro_step_result > li span.result.fail {
+	padding-right: 20px;
+	background: url(../images/icon/icon_fail.svg) no-repeat right top 1px/16px auto;
+	font-weight: 700;
+	color: var(--color-text-danger);
 }
 .side_panel .step_list > li .result_pager {
 	display: -webkit-box;
@@ -1176,7 +1188,7 @@
 .wrap .form_group_wrap.full .partial_half .row .btn_area {
 	margin-top: 0;
 }
-.wrap .form_group_wrap .form_line ~ .form_line {
+.wrap .form_group_wrap [class^="form_line"] ~ .form_line {
 	margin-top: 0;
 }
 .wrap .form_group_wrap .form_line_ty3 + .form_line_ty3 {

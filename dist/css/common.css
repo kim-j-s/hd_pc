@@ -9657,6 +9657,7 @@ sup {
 .form_group_wrap [class^="form_line"] .select_item + .input_text {
 	margin-top: var(--gap-5);
 }
+.form_group_wrap [class^="form_line"] ~ .form_line,
 .form_group_wrap [class^="form_line"] ~ .extra_area {
 	margin-top: var(--gap-8);
 }
