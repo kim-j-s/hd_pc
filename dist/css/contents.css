@@ -7773,6 +7773,9 @@ ul + .form_group_wrap {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 .prd_car .intro_info {
 	padding-top: 160px;
@@ -8445,6 +8448,12 @@ ul + .form_group_wrap {
 }
 .crc_list .crc_list_ico.crc_list_ico_type10 {
 	background-image: url("../images/content/pp00/ico_crc_list_ico_type10.svg");
+}
+.crc_list .crc_list_ico.crc_list_ico_type11 {
+	background-image: url("../images/content/pp00/ico_crc_list_ico_type11.svg");
+}
+.crc_list .crc_list_ico.crc_list_ico_type12 {
+	background-image: url("../images/content/pp00/ico_crc_list_ico_type12.svg");
 }
 .crc_list .crc_list_ico + .crc_list_ico {
 	padding-top: calc(var(--padding-6) + 1px);
