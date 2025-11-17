@@ -525,8 +525,9 @@
 		.img_wrap_ex {
 			margin-top: var(--gap-4);
 			height:320px;
-			background-color: #fff;
+			// background-color: #fff;
 			border-radius: 16px 16px 0 0;
+			border: none;
 			overflow: hidden;
 			img {
 				width: 255px;
@@ -578,7 +579,8 @@
 				top: calc(50% - 8px);
 			}
 			&:nth-child(1)::after {
-				background-image: url('../images/content/prdcar/icon_plus.svg')
+				// background-image: url('../images/content/prdcar/icon_plus.svg')
+				background-image: url('../images/content/prdcar/icon_minus.svg')
 			}
 			&:nth-child(2)::after {
 				background-image: url('../images/content/prdcar/icon_sum.svg');
