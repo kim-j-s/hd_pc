@@ -61,7 +61,7 @@
 		background-size: auto 160px;
 
 		
-		@for $i from 1 through 5 {
+		@for $i from 1 through 6 {
 			&.bg_intro#{$i} {
 				background-image: url('../images/content/prdcar/bg_car_prd#{$i}.png');
 			}
@@ -216,6 +216,123 @@
 		}
 	}
 
+	// 할인특약 visual
+	.benefit_top_wrap {
+		.item_benefit_top {
+			padding: var(--padding-7);
+			background-color: var(--color-surface-primary-subtler);
+			border-radius: var(--radius-large2);
+					
+			@for $i from 1 through 13 {
+				&.ico_bn_visual#{$i} {
+					.inner {
+						background-image: url('../images/content/prdcar/ico_bn_visual#{$i}.png');
+					}
+				}
+			}
+	
+			.inner {
+				padding-right: 204px;
+				background-repeat: no-repeat;
+				background-position: center right;
+				background-size: auto 136px;
+
+				.box {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: var(--gap-5);
+					padding: var(--gap-6);
+					background-color: var(--color-surface-white);
+					border-radius: var(--radius-medium3);
+				}
+	
+				.i_top {
+					.title {
+						font-size: var(--font-size-heading-large);
+						font-weight: 700;
+						color: var(--color-text-bolder);
+						text-align: center;
+					}
+				}
+	
+				.i_bottom {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: var(--gap-4);
+	
+					.cont {
+						font-size: var(--font-size-body-medium);
+						color: var(--color-text-bolder);
+						text-align: center;
+						word-break: keep-all;
+		
+						.detail {
+							i {
+								font-size: var(--font-size-heading-medium);
+								font-weight: 700;
+								font-style: normal;
+								color: var(--color-text-primary-bold);
+							}
+						}
+					}
+	
+					.desc {
+						font-size: var(--font-size-body-small);
+						color: var(--color-text-subtle);
+					}
+				}
+			}
+	
+			.bn_list {
+				margin-top: var(--gap-5);
+	
+				> li {
+					position: relative;
+					padding-left: 8px;
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-information);
+	
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 9px;
+						width: 2px;
+						height: 2px;
+						border-radius: 50%;
+						background-color: var(--color-icon-information);
+					}
+	
+					& ~ li {
+						margin-top: var(--gap-4);
+					}
+				}
+	
+				&.icon {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					> li {
+						padding-left: 24px;
+						background: url('../images/icon/icon_tag.svg') no-repeat left top / 20px auto;
+						color: var(--color-text-subtle);
+						
+
+						&:before {
+							content: none;
+						}
+					}
+				}
+			}
+	
+			& + * {
+				margin-top: var(--gap-5);
+			}
+		}
+	}
+
 	// 목록
 	.info_list {
 		display: flex;
@@ -285,11 +402,19 @@
 		}
 	}
 
+	.position_event_content {
+		.sec_group {
+			&:first-child {
+				padding-top: 32px;
+			}
+		}
+	}
+
 
 	// 간격
 	.sec_group {
 		&:first-child {
-			padding-top: 16px;
+			// padding-top: 16px;
 		}
 		.sec_head {
 			margin-bottom: var(--gap-6);
@@ -516,6 +641,10 @@
 					}
 				}
 			}
+		}
+
+		& + .list_depth {
+			margin-top: var(--gap-8);
 		}
 	}
 	
