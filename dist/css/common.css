@@ -6351,6 +6351,7 @@ sup {
 }
 .card_item_wrap:not(.info_type, .ty7) .card_item .item_inner:has(.inp_checkbox, .inp_radio) .question_mark_btn[aria-disabled="true"] {
 	z-index: -1;
+	display: none;
 }
 .card_item_wrap:not(.info_type, .ty7) .card_item .item_inner:has(.inp_checkbox, .inp_radio) .question_mark_btn[aria-disabled="true"] i {
 	background: none;
@@ -7634,6 +7635,17 @@ sup {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
+/* 추후 삭제 */
+.card_item_wrap.card_item_wrap_tyexp2 .card_item input[type="checkbox"] {
+	display: none;
+}
+.card_item_wrap.card_item_wrap_tyexp2 .card_item input[type="checkbox"] + label {
+	padding-left: 0 !important;
+}
+.card_item_wrap.card_item_wrap_tyexp2 .card_item input[type="checkbox"] + label::before {
+	content: none;
+}
+/* 추후 삭제 */
 /* checkbox */
 /* Checkbox */
 .inp_checkbox {
