@@ -444,6 +444,10 @@
 					margin-top: -8px;
 				}
 			}
+
+			& + .sec_head {
+				margin-top: var(--gap-9);
+			}
 		}
 	}
 	// sec_group 안에 간격 40 인경우
