@@ -126,6 +126,7 @@
 								background: none;
 							}
 							z-index: -1;
+							display: none;
 						}
 					}
 					&:has(.tit_item) {
@@ -1610,3 +1611,26 @@
 		color: var(--color-text-subtle);
 	}
 }
+
+
+
+
+/* 추후 삭제 */
+.card_item_wrap {
+	&.card_item_wrap_tyexp2 {
+		.card_item {
+			// &:nth-child(even) {
+				input[type="checkbox"] {
+					display: none;
+					+ label {
+						padding-left: 0 !important;
+						&::before {
+							content: none;
+						}
+					}
+				}
+			// }
+		}
+	}
+}
+/* 추후 삭제 */

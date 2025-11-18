@@ -53,12 +53,12 @@
 					<!-- s: 25-08-21 UXW -->
 					<div class="label_tit">변경기준일(00시)</div>
 					{{> cp/text cal=true placeholder="날짜 입력" value="2024.08.21" inp-title="변경기준일(00시)" }}
+					<ul class="list_ty2">
+						<li>변경기준일의 00시부터 보험종료일 24시까지 변경내용의 효력이 발생합니다.</li>
+						<li>신청기간은 시작일로부터 <strong class="point">-일</strong>입니다.</li>
+					</ul>
 				</div>
 			</div>
-			<ul class="list_ty2">
-				<li>변경기준일의 00시부터 보험종료일 24시까지 변경내용의 효력이 발생합니다.</li>
-				<li>신청기간은 시작일로부터 <strong class="point">-일</strong>입니다.</li>
-			</ul>
 
 			<h3 class="title_h3">운전자 범위/연령</h3>
 			<div class="select_driver_range">
@@ -126,6 +126,9 @@
 								<p class="info_text">
 									본인 한정, 만 43세 이상 한정 운전 특약 이외의 운전자가 자동차 운전 사고 발생 시 대인배상Ⅰ(책임보험)을 제외한 나머지 보상은 받으실 수 없습니다.
 								</p>
+							</div>
+							<div class="btn_area full">
+								{{> cp/button type="2" size="2" b-text="보험료 확인하기" }}
 							</div>       
 						</div>
 						<!-- e: 본인한정 -->
@@ -500,8 +503,8 @@
 			<!-- s: 하단 버튼 영역 -->
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
-					{{> cp/button type="3" size="2" b-text="이전" }}
-					{{> cp/button type="1" size="2" b-text="특약 비교 결과 확인" disabled=true }}
+					{{> cp/button type="3" size="1" b-text="이전" }}
+					{{> cp/button type="1" size="1" b-text="특약 비교 결과 확인" disabled=true }}
 				</div>
 			</div>
 			<!-- s: 하단 버튼 영역 -->
