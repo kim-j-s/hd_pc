@@ -5776,7 +5776,7 @@ sup {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 12px;
+	gap: var(--gap-4);
 	padding: 16px 24px;
 	background-color: var(--color-element-success-lighter);
 	border-radius: 24px;
@@ -5785,7 +5785,7 @@ sup {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .bann_wrap.bann_ty1 .bann_cont .title {
 	font-size: var(--font-size-heading-xsmall);
@@ -8203,7 +8203,7 @@ sup {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	gap: 12px;
+	gap: var(--gap-4);
 	width: 100%;
 }
 .checkbox_group_wrap.ty2 {
@@ -8214,7 +8214,7 @@ sup {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .checkbox_group_wrap.ty2 .inp_checkbox {
 	-webkit-box-flex: 0;
@@ -8271,6 +8271,11 @@ sup {
 }
 .checkbox_group_wrap + .info_cont {
 	margin-top: var(--gap-8);
+}
+.checkbox_group_wrap.rd_box {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-radius: var(--radius-large2);
 }
 /* coupon */
 /* divider */
@@ -9782,7 +9787,7 @@ sup {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .form_group_wrap [class^="form_line"] .line_group .line {
 	-webkit-box-flex: 1;
@@ -9803,6 +9808,12 @@ sup {
 	margin-top: 0;
 }
 .form_group_wrap [class^="form_line"] .info_gray.ty2 {
+	margin-top: var(--gap-5);
+}
+.form_group_wrap [class^="form_line"] .address_item {
+	margin-top: 0;
+}
+.form_group_wrap [class^="form_line"] * + .address_item {
 	margin-top: var(--gap-5);
 }
 .form_group_wrap > .form_line_ty2 + .form_line_ty2 {
@@ -9831,7 +9842,7 @@ sup {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .form_group_wrap .row .form_line {
 	-webkit-box-flex: 1;
@@ -9953,7 +9964,7 @@ sup {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .range_calrendar > div {
 	-webkit-box-flex: 1;
@@ -10562,7 +10573,7 @@ sup {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 12px;
+	gap: var(--gap-4);
 	position: relative;
 }
 .select_list_ty_logo .hd_icon {
@@ -12212,7 +12223,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-align: stretch;
 	-ms-flex-align: stretch;
 	align-items: stretch;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .radio_group_wrap_ty2 + *:not([class^="divider_ty"]) {
 	margin-bottom: 24px;
@@ -12290,6 +12301,11 @@ ol li .table_wrap + .list_ty2 li + li {
 	padding-top: 0;
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
+}
+.radio_group_wrap.rd_box {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-radius: var(--radius-large2);
 }
 .radio_group_wrap_ty2 + .input_text {
 	margin-top: var(--gap-5);
@@ -12866,7 +12882,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .selectitem_wrap.row_ty1 > div:first-child {
 	-webkit-box-flex: 1.9;
@@ -13847,9 +13863,10 @@ ol li .table_wrap + .list_ty2 li + li {
 	-ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	min-width: 40px;
-	padding: 7px var(--padding-4, 10px);
+	padding: var(--padding-4) 12px;
 	background-color: var(--color-element-secondary-lighter);
-	font-size: var(--font-size-label-small);
+	font-size: var(--font-size-label-medium);
+	line-height: 20px;
 	color: var(--color-text-basic);
 	border-radius: var(--radius-max);
 	border: 0;
@@ -15312,7 +15329,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .info_gray .car_alarm_box .info {
 	font-size: var(--font-size-body-medium);
