@@ -1377,13 +1377,13 @@
 .notification .form_list > li > .form_group_wrap > .form_line > .label_tit + .row {
 	margin-top: var(--gap-5);
 }
-.notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) > .label_tit {
+.notification .form_list > li > .form_group_wrap > .form_line:has(> .radio_group_wrap) > .label_tit {
 	display: table-cell;
 	vertical-align: middle;
 	height: 56px;
 	padding-right: 312px;
 }
-.notification .form_list > li > .form_group_wrap > .form_line:has(.radio_group_wrap) > .label_tit .num {
+.notification .form_list > li > .form_group_wrap > .form_line:has(> .radio_group_wrap) > .label_tit .num {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
