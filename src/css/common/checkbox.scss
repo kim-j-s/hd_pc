@@ -791,4 +791,9 @@
 	+ .info_cont {
 		margin-top: var(--gap-8);
 	}
+	&.rd_box {
+		padding: var(--padding-8) var(--padding-7);
+		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+		border-radius: var(--radius-large2);
+	}
 }
