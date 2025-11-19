@@ -2405,7 +2405,7 @@
 	-webkit-box-align: stretch;
 	-ms-flex-align: stretch;
 	align-items: stretch;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .radio_group_wrap_ty5 .inp_radio {
 	-ms-flex-preferred-size: calc(20% - 10px);
@@ -5267,7 +5267,7 @@
 	-webkit-box-align: stretch;
 	-ms-flex-align: stretch;
 	align-items: stretch;
-	gap: 12px;
+	gap: var(--gap-4);
 }
 .main_cont_wrap .mcw_cont .mc_l_cont .main_sticky_cont .msc_inner {
 	position: relative;
