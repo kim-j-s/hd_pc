@@ -362,7 +362,11 @@
 
 .text_sub_ty3 {
 	font-size: var(--font-size-body-medium);
-	line-height: 24px;
 	color: var(--color-text-basic);
+
+	// margin-top 32
+	& + .form_group_wrap {
+		margin-top: var(--gap-8);
+	}
 }
 

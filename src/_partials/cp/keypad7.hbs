@@ -1,7 +1,7 @@
 <div class="comp_wrap_keypad_call form_key_pc">
-	<input type="password" name="" id="" title="{{kt}}"{{#if case1}} placeholder="{{case1}}"{{/if}} maxlength="7">
+	<input type="password" name="" id="" title="{{kt}}"{{#if case1}} placeholder="{{case1}}"{{/if}} maxlength="7"{{#if kpdisabled}} readonly{{/if}}>
 	<span>
-		<input type="checkbox" name="" id="{{ktid}}">
+		<input type="checkbox" name="" id="{{ktid}}"{{#if kpdisabled}} disabled{{/if}}>
 		<label for="{{ktid}}">마우스입력기사용</label>
 	</span>
 </div>
