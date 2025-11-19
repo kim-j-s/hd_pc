@@ -8272,6 +8272,11 @@ sup {
 .checkbox_group_wrap + .info_cont {
 	margin-top: var(--gap-8);
 }
+.checkbox_group_wrap.rd_box {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-radius: var(--radius-large2);
+}
 /* coupon */
 /* divider */
 .divider_ty1 {
@@ -12296,6 +12301,11 @@ ol li .table_wrap + .list_ty2 li + li {
 	padding-top: 0;
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
+}
+.radio_group_wrap.rd_box {
+	padding: var(--padding-8) var(--padding-7);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	border-radius: var(--radius-large2);
 }
 .radio_group_wrap_ty2 + .input_text {
 	margin-top: var(--gap-5);
