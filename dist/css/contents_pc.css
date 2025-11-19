@@ -5121,6 +5121,7 @@
 	flex: 1 1 0;
 	min-width: 0;
 	height: calc(var(--size-height-8) - 2px);
+	padding: var(--padding-5);
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic) !important;
 	text-align: center;
@@ -5153,6 +5154,18 @@
 }
 .form_key_pc > input:read-only + span > input + label {
 	background-image: url(../images/icon/icon_keypad_on.png);
+}
+.form_key_pc > input:-moz-read-only {
+	border-radius: 12px;
+	background-color: var(--color-input-surface-disabled) !important;
+}
+.form_key_pc > input:read-only,
+.form_key_pc > input:disabled {
+	border-radius: 12px;
+	background-color: var(--color-input-surface-disabled) !important;
+}
+.form_key_pc > input + span > input:disabled + label {
+	background-image: url(../images/icon/icon_keypad_disabled.png);
 }
 .form_key_pc > span {
 	-webkit-box-flex: 0;
