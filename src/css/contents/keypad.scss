@@ -2,10 +2,10 @@
 	display: flex;
 	width: 100%;
 	> input {
-		// width: 59px;
 		flex: 1 1 0;
 		min-width: 0;
 		height: calc(var(--size-height-8) - 2px);
+		padding: var(--padding-5);
 		font-size: var(--font-size-body-medium);
 		color: var(--color-text-basic) !important;
 		text-align: center;
@@ -22,6 +22,18 @@
 					+ label {
 						background-image: url(../images/icon/icon_keypad_on.png);
 					}
+				}
+			}
+		}
+		&:read-only,
+		&:disabled {
+			border-radius: 12px;
+			background-color: var(--color-input-surface-disabled) !important;
+		}
+		& + span {
+			> input:disabled {
+				+ label {
+					background-image: url(../images/icon/icon_keypad_disabled.png);
 				}
 			}
 		}
