@@ -223,7 +223,7 @@
 			background-color: var(--color-surface-primary-subtler);
 			border-radius: var(--radius-large2);
 					
-			@for $i from 1 through 13 {
+			@for $i from 1 through 16 {
 				&.ico_bn_visual#{$i} {
 					.inner {
 						background-image: url('../images/content/prdcar/ico_bn_visual#{$i}.png');
