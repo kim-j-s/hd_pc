@@ -210,7 +210,7 @@
 			flex-flow: row wrap;
 			max-height: 100%;
 			overflow: auto;
-			gap: 12px;
+			gap: var(--gap-4);
 			.inp_radio {
 				width: calc(50% - 6px);
 				input {

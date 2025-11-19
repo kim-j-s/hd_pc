@@ -782,14 +782,6 @@
 			& + .checkbox_group_wrap {
 				margin-top: 0;
 			}
-
-			// .tooltip_wrap {
-			// 	vertical-align: top;
-			// 	z-index: 11;
-			// 	.tooltip_panel {
-			// 		top: calc(100% + 32px);
-			// 	}
-			// }
 		}
 
 		.input_text + .btn_link.short_cut,
@@ -830,7 +822,7 @@
 
 		.line_group {
 			display: flex;
-			gap: 12px;
+			gap: var(--gap-4);
 
 			.line {
 				flex: 1;
@@ -860,6 +852,14 @@
 				margin-top: var(--gap-5);
 			}
 		}
+
+		.address_item {
+			margin-top: 0;
+		}
+		* + .address_item {
+			margin-top: var(--gap-5);
+		}
+
 	}
 
 	> .form_line_ty2 {
@@ -895,7 +895,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 12px;
+		gap: var(--gap-4);
 
 		.form_line {
 			flex: 1 1 0;
@@ -1033,7 +1033,7 @@
 .range_calrendar {
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: var(--gap-4);
 	> div {
 		flex: 1;
 	}

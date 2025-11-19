@@ -146,9 +146,12 @@
 			flex: 0 0 auto;
 			min-width: 40px;
 			// padding: var(--padding-2, 4px) var(--padding-4, 10px);
-			padding: 7px var(--padding-4, 10px);
+			// padding: 7px var(--padding-4, 10px);
+			padding:var(--padding-4) 12px;
 			background-color: var(--color-element-secondary-lighter);
-			font-size: var(--font-size-label-small);
+			// font-size: var(--font-size-label-small);
+			font-size: var(--font-size-label-medium);
+			line-height: 20px;
 			color: var(--color-text-basic);
 			border-radius: var(--radius-max);
 			border: 0;
