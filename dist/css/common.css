@@ -5284,6 +5284,21 @@ sup {
 .btn_link.short_cut.search_type {
 	background-image: url(../images/icon/icon_search.svg);
 }
+.btn_link.short_cut_ty2 {
+	display: inline-block;
+	padding: 0 20px 0 0;
+	background: url(../images/icon/arrowRight_ty6.svg) no-repeat right center/20px auto;
+}
+.btn_link.short_cut_ty2 > .text {
+	display: block;
+	font-size: var(--font-size-button-large);
+	line-height: 24px;
+	font-weight: 700;
+	color: var(--color-text-primary);
+}
+.btn_link.short_cut_ty2 > .text .hd_badge {
+	font-weight: normal;
+}
 .btn_link.new_open {
 	display: inline-block;
 	padding-right: 18px;
