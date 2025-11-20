@@ -17,28 +17,10 @@
 			}
 		}
 	}
-	// .position_event_content {
-	// 	.popup_content_body {
-	// 		gap: 0;
-	// 		.sec_group {
-	// 			+.sec_group {
-	// 				padding-top: var(--gap-11);
-	// 			}
-	// 		}
-	// 	}
-	// }
 	.popup_content_body {
 		display: flex;
 		flex-direction: column;
 		gap: var(--gap-11);
-
-		// > * {
-		// 	margin-bottom: var(--gap-11);
-
-		// 	&:last-child {
-		// 		margin-bottom: 0;
-		// 	}
-		// }
 	}
 
 	// intro info
@@ -50,11 +32,6 @@
 		}
 	}
 	.intro_info {
-		// display: flex;
-		// align-items: flex-start;
-		// position: relative;
-		// width: 100%;
-		// flex-direction: column;
 		padding-top: 160px;
 		background-repeat: no-repeat;
 		background-position: top center;
@@ -79,12 +56,6 @@
 			background-position: center center;
 			background-size: contain;
 		}
-		// @for $i from 1 through 5 {
-		// 	&.bg_intro#{$i}::before {
-		// 		display: block;
-		// 		background-image: url('../images/content/prdcar/bg_car_prd#{$i}.png');
-		// 	}
-		// }
 
 		.info_list {
 			width: 100%;
@@ -182,18 +153,6 @@
 		.info_list {
 			.item {
 				position: relative;
-				// &:before {
-				// 	content: '';
-				// 	display: block;
-				// 	position: absolute;
-				// 	top: 50%;
-				// 	left: 0;
-				// 	width: 32px;
-				// 	height: 32px;
-				// 	border-radius: var(--radius-small3);
-				// 	background-color: var(--color-surface-gray-subtler);
-				// 	transform: translateY(-50%);
-				// }
 				&:after {
 					content: '';
 					display: block;
