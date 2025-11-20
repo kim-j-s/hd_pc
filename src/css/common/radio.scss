@@ -76,8 +76,6 @@
 				}
 			}
 		}
-
-
 	
 		&:checked {
 			& + label {
@@ -94,6 +92,14 @@
 						background-image: url(../images/icon/check_ty5.svg);
 					}
 				}
+			}
+		}
+
+		&:focus {
+			+ label {
+				box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+				outline: var(--border-width-static-medium) solid #000;
+				outline-offset: -2px;
 			}
 		}
 
