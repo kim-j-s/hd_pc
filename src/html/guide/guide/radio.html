@@ -1,8 +1,15 @@
 {{#> layout/guide }}
 <div class="guide_h1">Radio</div>
 
+
+
+
+
 <div class="guide_discription">Default</div>
 {{> cp/radio rd-id="radio1" name="name1" labelname="라벨명" }}
+{{> cp/radio rd-id="radio11" name="name1" labelname="라벨명" }}
+{{> cp/radio rd-id="radio12" name="name1" labelname="라벨명" }}
+{{> cp/radio rd-id="radio13" name="name1" labelname="라벨명" }}
 <div class="guide_discription">checked</div>
 {{> cp/radio rd-id="radio2" name="name2" labelname="라벨명" checked=true }}
 <div class="guide_discription">disabled</div>
@@ -169,4 +176,13 @@
 		</div>
 	</li>
 </ul>
+
+
+<script>
+
+	$(window).on('load', function(){
+		$('#radio11').focus();
+	});
+</script>
+
 {{/ layout/guide }}
