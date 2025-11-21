@@ -2686,6 +2686,7 @@
 }
 .comp_wrap.card .comp_wrap_keypad_call.form_key_pc > input {
 	width: 59px;
+	padding: 0;
 }
 .comp_wrap.business {
 	gap: 8px;
