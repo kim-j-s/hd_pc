@@ -124,6 +124,16 @@
 		background-color: var(--color-surface-secondary-subtle);
 	}
 
+	&.btn_item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--gap-3);
+		word-break: break-all;
+		> .btn_area {
+			margin-top: 0;
+		}
+	}
 	// margin-top 52
 	& + [class^=title_h]{
 		&.ty2 {
