@@ -10608,6 +10608,12 @@ sup {
 	left: 0;
 	color: var(--color-icon-gray-light);
 }
+.list_ty2 li.point {
+	color: var(--color-text-primary-bold);
+}
+.list_ty2 li.point::before {
+	color: var(--color-icon-primary);
+}
 .list_ty2 > li ~ li {
 	margin-top: var(--gap-3);
 }
@@ -15617,6 +15623,22 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .info_gray.ty4 {
 	background-color: var(--color-surface-secondary-subtle);
+}
+.info_gray.btn_item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: var(--gap-3);
+	word-break: break-all;
+}
+.info_gray.btn_item > .btn_area {
+	margin-top: 0;
 }
 .info_gray + [class^="title_h"].ty2 {
 	margin-top: var(--gap-11);
