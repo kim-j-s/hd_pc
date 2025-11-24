@@ -2960,9 +2960,6 @@ sup {
 .address_item.address_item_case01 .ad_item.active::before {
 	content: none;
 }
-.address_item.address_item_case01 .ad_item.active + .ad_stat {
-	display: block;
-}
 .address_item.address_item_case01:focus .ad_item {
 	color: var(--color-text-basic);
 }
@@ -8152,9 +8149,6 @@ sup {
 	content: none;
 }
 /* 추후 삭제 */
-.popup_wrap {
-	padding: 0 !important;
-}
 /* checkbox */
 /* Checkbox */
 .inp_checkbox {
