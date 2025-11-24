@@ -1159,6 +1159,10 @@ sup {
 .c_loading .ci_content.cc_ty1 {
 	color: var(--color-text-bolder-inverse);
 }
+.blockUI .ci_content.cc_ty3,
+.c_loading .ci_content.cc_ty3 {
+	padding-top: var(--gap-4);
+}
 .blockUI .ci_content .ci_content_tit,
 .c_loading .ci_content .ci_content_tit {
 	display: block;
@@ -8135,7 +8139,22 @@ sup {
 .card_item_wrap.card_item_wrap_tyexp2 .card_item input[type="checkbox"] + label::before {
 	content: none;
 }
+.special_contract_list.card_item_wrap_tyexp2 .inp_radio input,
+.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input {
+	display: none !important;
+}
+.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label,
+.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label {
+	padding-left: 0;
+}
+.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label::before,
+.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label::before {
+	content: none;
+}
 /* 추후 삭제 */
+.popup_wrap {
+	padding: 0 !important;
+}
 /* checkbox */
 /* Checkbox */
 .inp_checkbox {
@@ -10630,6 +10649,7 @@ sup {
 .list_ty2 + .banner_box {
 	margin-top: var(--gap-8);
 }
+.list_ty2 + .total_price_display_ty1,
 .list_ty2 + .title_h3,
 .list_ty2 + .card_item_wrap,
 .list_ty2 + .table_wrap {

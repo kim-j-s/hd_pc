@@ -3118,7 +3118,7 @@
 }
 .wrap .total_price_display_ty1 {
 	height: auto;
-	margin: 0;
+	margin-bottom: 0;
 	padding: var(--padding-8);
 	background-color: var(--color-surface-gray-subtler);
 	border-radius: var(--radius-large2);
