@@ -161,11 +161,11 @@
 			margin-top: var(--gap-8);
 		}
 	}
-	.form_key {
-		&.pin_type {
+	// .form_key {
+	// 	&.pin_type {
 			
-		}
-	}
+	// 	}
+	// }
 	.form_key_pc {
 		// position: relative;
 		flex: none;
@@ -175,6 +175,8 @@
 		> input[type="password"] {
 			right: auto;
 			left: -1px;
+			opacity: 0;
+			pointer-events: none;
 		}
 		> span {
 			width: auto;
