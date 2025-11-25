@@ -5386,6 +5386,8 @@ ul + .form_group_wrap {
 .pin_enter .form_key_pc > input[type="password"] {
 	right: auto;
 	left: -1px;
+	opacity: 0;
+	pointer-events: none;
 }
 .pin_enter .form_key_pc > span {
 	width: auto;
