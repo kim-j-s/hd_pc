@@ -753,12 +753,12 @@
 			// 펼치기
 			$this.closest(".baad_c").addClass("active");
 			$head.addClass("active");
-			$this.attr("aria-expanded", "true").find('.text').text('이벤트 닫기');
+			$this.attr("aria-expanded", "true").find('.text').text('배너 닫기');
 			$inner.slideDown(300);
 		} else {
 			// 접기
 			$this.closest(".baad_c").removeClass("active");
-			$this.attr("aria-expanded", "false").find('.text').text('이벤트 펼치기');
+			$this.attr("aria-expanded", "false").find('.text').text('배너 펼치기');
 			$inner.slideUp(300);
 			$head.removeClass("active");
 		}
@@ -772,7 +772,7 @@
 		$this.closest('.baad_c').removeClass('active');
 		$this.closest('.baad_c_wrap').find('.baad_c_top').removeClass('active');
 		$cont.slideUp();
-		$toggle.attr("aria-expanded", "false").find('.text').text('이벤트 닫기');
+		$toggle.attr("aria-expanded", "false").find('.text').text('배너 닫기');
 		setTimeout(function(){
 			$toggle.focus();
 		},300)
