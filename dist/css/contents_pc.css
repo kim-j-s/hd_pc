@@ -3730,7 +3730,7 @@
 	color: var(--color-text-static);
 }
 .title_view_wrap .sub_desc {
-	font-size: var(--font-size-body-small);
+	font-size: var(--font-size-body-medium);
 	color: var(--color-text-subtle);
 }
 .title_view_wrap .btn_area {
