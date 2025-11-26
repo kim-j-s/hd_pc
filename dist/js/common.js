@@ -744,6 +744,41 @@
 
 
 
+	// 하단 고정형 팝업 아코디언형
+	$DOM.on("click", ".baad_c_wrap .baad_c_btn", function () {
+		const $this = $(this),
+			$head = $this.parent(".baad_c_top"),
+			$inner = $head.next(".baad_c_cont");
+		if ($inner.css("display") == "none") {
+			// 펼치기
+			$this.closest(".baad_c").addClass("active");
+			$head.addClass("active");
+			$this.attr("aria-expanded", "true").find('.text').text('이벤트 닫기');
+			$inner.slideDown(300);
+		} else {
+			// 접기
+			$this.closest(".baad_c").removeClass("active");
+			$this.attr("aria-expanded", "false").find('.text').text('이벤트 펼치기');
+			$inner.slideUp(300);
+			$head.removeClass("active");
+		}
+	});
+
+	$DOM.on('click', '.baad_c_wrap .baad_close', function(){
+		const $this = $(this),
+					$cont = $this.closest('.baad_c_cont'),
+					$toggle = $this.closest('.baad_c_wrap').find('.baad_c_btn');
+
+		$this.closest('.baad_c').removeClass('active');
+		$this.closest('.baad_c_wrap').find('.baad_c_top').removeClass('active');
+		$cont.slideUp();
+		$toggle.attr("aria-expanded", "false").find('.text').text('이벤트 닫기');
+		setTimeout(function(){
+			$toggle.focus();
+		},300)
+	});
+	// 하단 고정형 팝업 아코디언형
+
 	// 웹접근성 심사 후 활성화
 	// 건물/주택 구조 선택 모션 이벤트
 	// $DOM.on("change", ".radio_group_wrap.structure input", function () {
