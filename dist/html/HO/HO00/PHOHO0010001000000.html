@@ -3605,6 +3605,19 @@
 						// jsp 사용시
 					},
 				},
+				// 25-11-27 수정
+				on: {
+					init: function () {
+						$(this.slides).removeAttr("role");
+					},
+					slideChange: function () {
+						$(this.slides).removeAttr("role");
+					},
+					update: function () {
+						$(this.slides).removeAttr("role");
+					},
+				},
+				// 25-11-27 수정
 			});
 
 			$(".mc_bann_wrap .swiper-button-play-pause").on("click", function () {
