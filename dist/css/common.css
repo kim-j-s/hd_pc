@@ -11357,16 +11357,6 @@ sup {
 .list_depth_ty2 > li > ol > li ~ li {
 	margin-top: var(--gap-3);
 }
-.list_depth_ty2 > li > ol.number_list > li {
-	padding-left: 16px;
-}
-.list_depth_ty2 > li > ol.number_list > li::before {
-	top: 0;
-	left: 0;
-	width: 12px;
-	height: 18px;
-	background-color: transparent;
-}
 .list_depth_ty2_area .list_depth_ty2 {
 	margin-top: 0px !important;
 }
@@ -11515,10 +11505,10 @@ sup {
 	min-width: 13px;
 	text-align: center;
 }
-.circle_list > li::after {
+.circle_list > li .number::after {
 	content: "";
 	position: absolute;
-	top: 11px;
+	top: 6px;
 	left: 0;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
