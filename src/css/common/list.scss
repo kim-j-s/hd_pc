@@ -1233,7 +1233,7 @@
 		}
 		ol {
 			margin-top: var(--gap-3);
-			counter-reset: number 0;
+			//counter-reset: number 0;
 			
 			& > li {
 				position: relative;
@@ -1245,7 +1245,7 @@
 					//display: block;
 					//content:'';
 					//position: absolute;
-					//top: 0;
+					top: 9px;
 					//left: 0;
 					//counter-increment: number 1;
 					//content: counter(number) '. ';
