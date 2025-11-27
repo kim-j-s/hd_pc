@@ -1642,11 +1642,25 @@
 				display: none;
 				+ label {
 					padding-left: 0 !important;
+					cursor: auto;
 					&::before {
 						content: none;
 					}
 				}
 			}
+			// MPRMTPS10003050000
+			&.selected {
+				.inp_checkbox {
+					input[type=checkbox] {
+						&:checked {
+							~ i {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			// MPRMTPS10003050000
 		}
 		.inner_cont {
 			width: 100% !important;
@@ -1663,6 +1677,7 @@
 				display: none !important;
 				+ label {
 					padding-left: 0;
+					cursor: auto;
 					&::before {
 						content: none;
 					}
@@ -1671,5 +1686,11 @@
 		}		
 	}
 }
+
+/*
+.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label, .special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label {
+	cursor: auto;
+}
+*/
 /* 추후 삭제 */
 
