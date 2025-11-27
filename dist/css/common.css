@@ -11517,7 +11517,6 @@ sup {
 	border-radius: 50%;
 	width: 13px;
 	height: 13px;
-	z-index: -1;
 }
 .circle_list > li .circle_tit {
 	display: block;
