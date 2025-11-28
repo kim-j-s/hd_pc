@@ -8140,8 +8140,14 @@ sup {
 .card_item_wrap.card_item_wrap_tyexp2 .card_item input + label::before {
 	content: none;
 }
-.card_item_wrap.card_item_wrap_tyexp2 .card_item.selected .inp_checkbox input[type="checkbox"]:checked ~ i {
-	display: none;
+.card_item_wrap.card_item_wrap_tyexp2 .card_item.selected .inp_checkbox .chk_label .title_info::after {
+	content: "선택됨";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 .card_item_wrap.card_item_wrap_tyexp2 .inner_cont {
 	width: 100% !important;
@@ -10576,6 +10582,11 @@ sup {
 .search_inp_box + .tag_item_wrap {
 	margin-top: var(--gap-3);
 }
+/* 개발 구조 관련 적용 */
+#postDiv ~ .address_item {
+	margin-top: var(--gap-5);
+}
+/* 개발 구조 관련 적용 */
 /* list */
 .list_ty1 > li {
 	position: relative;
@@ -12711,6 +12722,19 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+}
+.radio_group_wrap .inp_radio[class*="rd_btn"] input[role="button"]:checked + label .label_cont {
+	position: relative;
+}
+.radio_group_wrap .inp_radio[class*="rd_btn"] input[role="button"]:checked + label .label_cont::after {
+	content: "선택됨";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 1px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .radio_group_wrap_ty2 {
 	width: 100%;
