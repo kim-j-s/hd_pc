@@ -9551,6 +9551,11 @@ sup {
 	font-size: var(--font-size-heading-medium);
 	font-weight: 700;
 }
+.input_text.timer .int_txt.right {
+	margin-right: 4px;
+	padding-left: 14px;
+	background: url(../images/icon/icon_timer.svg) no-repeat left center/12px auto;
+}
 .input_text + .btn_area,
 .input_text + .checkbox_group_wrap {
 	margin-top: var(--gap-5);
@@ -12581,6 +12586,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	width: 20px;
 	height: 20px;
 	opacity: 0;
+	z-index: 1;
 }
 .inp_radio input[type="radio"] + label {
 	position: relative;
@@ -12639,6 +12645,10 @@ ol li .table_wrap + .list_ty2 li + li {
 	box-shadow: 0 0 0 1px rgb(0, 0, 0);
 	outline: var(--border-width-static-medium) solid #000;
 	outline-offset: -2px;
+}
+.inp_radio.lg input[type="radio"] {
+	width: 24px;
+	height: 24px;
 }
 .inp_radio.lg input[type="radio"] + label {
 	padding-left: 32px;
@@ -15666,6 +15676,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .info_gray + .chk_group_wrap {
 	margin-top: var(--gap-11);
 }
+.info_gray + .space_list_ty5,
 .info_gray + .info_cont,
 .info_gray + .title_h3,
 .info_gray + .title_h4,
@@ -16023,6 +16034,16 @@ ol li .table_wrap + .list_ty2 li + li {
 .call_box .info_gray.ty2 .center_info .title_h4 {
 	padding-bottom: var(--gap-3);
 }
+.call_box .info_gray.ty2 .center_info .title_h4 .title_h4_cb_p {
+	display: block;
+}
+.call_box .info_gray.ty2 .center_info .title_h4 .title_h4_cb_d {
+	display: block;
+}
+.call_box .info_gray.ty2 .center_info .title_h4 .title_h4_cb_d small {
+	font-weight: 400;
+	font-size: var(--font-size-heading-xxsmall);
+}
 .call_box .info_gray.ty2 .center_info + .list_ty5 {
 	margin-top: var(--gap-3);
 }
@@ -16032,6 +16053,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .call_box.call_box_icoadd .info_gray.ty2 .center_info {
 	padding-right: 30px;
 	background: url(../images/icon/icon_tel.svg) no-repeat right center/24px auto;
+}
+.call_box.call_box_o_ty1 {
+	margin-top: var(--gap-8);
+	margin-bottom: 0;
+}
+.call_box.call_box_o_ty1 + .call_box_o_ty1 {
+	margin-top: var(--gap-5);
 }
 .function_item {
 	margin-top: var(--gap-2);

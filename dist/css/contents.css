@@ -4013,6 +4013,15 @@
 .simple_info_wrap .simple_info_item .sii_list > li + li strong {
 	color: var(--color-text-basic);
 }
+.simple_info_wrap .simple_info_item .sii_list > li + li strong.point {
+	color: var(--color-text-primary-bold);
+}
+.simple_info_wrap .simple_info_item .sii_list > li + li strong.trend.up {
+	color: var(--color-text-point);
+}
+.simple_info_wrap .simple_info_item .sii_list > li + li strong.trend.down {
+	color: var(--color-light-secondary-60);
+}
 .simple_info_wrap .simple_info_item .sii_list > li .bold {
 	font-weight: 700;
 }

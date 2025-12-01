@@ -3183,6 +3183,9 @@
 .simple_info_wrap.ty2 .simple_info_item .sii_list > li + li .trend.up {
 	color: var(--color-text-point);
 }
+.simple_info_wrap.ty2 .simple_info_item .sii_list > li + li .trend.down {
+	color: var(--color-light-secondary-60);
+}
 .simple_info_wrap.ty2 .simple_info_item .sii_list > li + li .price {
 	color: var(--color-text-primary-bold);
 }
