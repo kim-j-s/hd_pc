@@ -767,8 +767,17 @@
 					.text {
 						color: var(--color-text-subtle);
 					}
-					strong {
+					strong{
 						color: var(--color-text-basic);
+						&.point {
+							color: var(--color-text-primary-bold);
+						}
+						&.trend.up {
+							color: var(--color-text-point);
+						}
+						&.trend.down {
+							color: var(--color-light-secondary-60);
+						}
 					}
 				}
 				.bold {
