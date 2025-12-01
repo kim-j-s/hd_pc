@@ -18,7 +18,9 @@
 			<div class="table_wrap">
 				<h2 class="title_h3">정산이자</h2>
 				<table class="table">
-					<caption>계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- s: 25-12-01 수정 -->
+					<caption>정산이자의 계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- e: 25-12-01 수정 -->
 					<colgroup>
 						<col style="width:125px;">
 						<col style="width:auto;">
@@ -45,23 +47,25 @@
 
 				<h2 class="title_h3">납입 금액정보</h2>
 				<div class="info_gray">
-						<dl>
-								<dt>이자합계</dt>
-								<dd><strong class="point">9,573원</strong></dd>
-						</dl>
-						<dl>
-								<dt>대출잔액</dt>
-								<dd>4,500,000원</dd>
-						</dl>
-						<dl class="footer_dl">
-								<dt>납입금액</dt>
-								<dd class="point">4,509,573원</dd>
-						</dl>
+					<dl>
+						<dt>이자합계</dt>
+						<dd><strong class="point">9,573원</strong></dd>
+					</dl>
+					<dl>
+						<dt>대출잔액</dt>
+						<dd>4,500,000원</dd>
+					</dl>
+					<dl class="footer_dl">
+						<dt>납입금액</dt>
+						<dd class="point">4,509,573원</dd>
+					</dl>
 				</div>
 
 				<h2 class="title_h3">미납이자금액(2010.10.01 이전)</h2>
 				<table class="table">
-					<caption>계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- s: 25-12-01 수정 -->
+					<caption>미납이자금액(2010.10.01 이전)의 계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- e: 25-12-01 수정 -->
 					<colgroup>
 						<col style="width:125px;">
 						<col style="width:auto;">
@@ -81,9 +85,12 @@
 						</tr>
 					</tbody>
 				</table>
+
 				<h2 class="title_h3">미납이자금액(2010.10.01 이후)</h2>
 				<table class="table">
-					<caption>계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- s: 25-12-01 수정 -->
+					<caption>미납이자금액(2010.10.01 이후)의 계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- e: 25-12-01 수정 -->
 					<colgroup>
 						<col style="width:125px;">
 						<col style="width:auto;">
@@ -103,9 +110,12 @@
 						</tr>
 					</tbody>
 				</table>
+
 				<h2 class="title_h3">예수금</h2>
 				<table class="table">
-					<caption>계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- s: 25-12-01 수정 -->
+					<caption>예수금의 계산기간, 적용기간, 이자금액 제공</caption>
+					<!-- e: 25-12-01 수정 -->
 					<colgroup>
 						<col style="width:125px;">
 						<col style="width:auto;">
@@ -132,15 +142,15 @@
 				{{> cp/icon iconClass="exclamationSvg"}}
 				<p>납입가능이자가 없어요</p>
 			</div> -->
-            <!-- s: 꼭 알아두세요 -->
-            {{#> cp/notice dp-active=true }}
-                <ul class="list_depth">
-                    <li>미납이자액이 있을 경우, 2010년 10월 1일부터 연체이자가 폐지됨에 따라 2010년 10월 1일 이전과 이후 내역으로 미납이자액이 구분되어 조회됩니다.</li>
-                    <li>미납이자액(2010년 10월 1일 이후)은 매월 이자납입 후의 대출잔액과 합산된 금액을 기준으로 합산 시점으로부터 경과된 일수에 따라 이자금액이 산정됩니다.</li>
-                    <li>2010년 10월 1일 이후 미납이자가 있을 경우 매월 발생되는 이자금액은 변경될 수 있습니다.</li>
-                </ul>
-            {{/ cp/notice }}
-            <!-- e: 꼭 알아두세요 -->
+			<!-- s: 꼭 알아두세요 -->
+			{{#> cp/notice dp-active=true }}
+				<ul class="list_depth">
+					<li>미납이자액이 있을 경우, 2010년 10월 1일부터 연체이자가 폐지됨에 따라 2010년 10월 1일 이전과 이후 내역으로 미납이자액이 구분되어 조회됩니다.</li>
+					<li>미납이자액(2010년 10월 1일 이후)은 매월 이자납입 후의 대출잔액과 합산된 금액을 기준으로 합산 시점으로부터 경과된 일수에 따라 이자금액이 산정됩니다.</li>
+					<li>2010년 10월 1일 이후 미납이자가 있을 경우 매월 발생되는 이자금액은 변경될 수 있습니다.</li>
+				</ul>
+			{{/ cp/notice }}
+			<!-- e: 꼭 알아두세요 -->
 		</div>
 	</div>
 	<div class="popup_bottom">
