@@ -1417,7 +1417,7 @@ $(function(){
 				const $agGroupCont = $this.closest('.ag_group_cont');
 
 				$agGroupCont.find('.agc_item').each(function () {
-					$(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);;
+					$(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
 				});
 
 				updateGroupCheckState();
