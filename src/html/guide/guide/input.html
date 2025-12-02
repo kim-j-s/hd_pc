@@ -539,6 +539,30 @@
 			{{> cp/selectitem si_ph="자금출처 선택" si_title="자금출처 선택" si_popup="pop_type01"}}
 			{{> cp/text placeholder="기타 자금출처를 입력해 주세요" inp-title="기타 자금출처 입력" }}
 		</div>
+		<div class="form_line full_half">
+			<div class="label_tit">연락처</div>
+			<div class="row">
+				<div class="form_line fix_w_case02">
+						{{#> cp/selectbox_pc s-title="연락처 선택" }} 
+								<option value="" selected>휴대폰</option>
+								<option value="">집</option>
+						{{/ cp/selectbox_pc}}
+				</div>
+				<!-- CASE2. 집 or 직장 선택 시 노출 -->
+				<div class="form_line fix_w_case02">
+					{{#> cp/selectbox_pc s-title="국번 선택" }} 
+						<option value="" selected>02</option>
+						<option value="">031</option>
+						<option value="">032</option>
+						<option value="">053</option>
+					{{/ cp/selectbox_pc}}
+				</div>
+				<!-- CASE2. 집 or 직장 선택 시 노출 -->
+				<div class="form_line grow">
+					{{> cp/text type="tel" placeholder="-없이 숫자만 입력" inp-title="집 전화번호 입력" }}
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="guide_h4">.form_group_wrap > .form_line_ty2 (간격 16px)</div>
 	<div class="form_group_wrap">
