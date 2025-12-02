@@ -1407,17 +1407,18 @@ $(function(){
 			});
 
 			$groupWrap.on('change', '.agr_r_group', function () {
-				// console.log('1');
 				const $this = $(this);
 				if (!$this.is(':checked')) return;
-
 				const index = $this.closest('.inp_radio').index();
-				// console.log(index);
-			
 				const $agGroupCont = $this.closest('.ag_group_cont');
-
-				$agGroupCont.find('.agc_item').each(function () {
-					$(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);;
+				// 25-12-02 수정 - 약관 선택 목록 복수 선택 가능하도록 수정
+				// $agGroupCont.find('.agc_item').each(function () {
+				// 	$(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
+				// });
+				// 25-12-02 수정 - 약관 선택 목록 복수 선택 가능하도록 수정
+				$agGroupCont.find('.agc_item .radio_group_wrap').each(function () {
+					// $(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
+					$(this).find('.inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
 				});
 
 				updateGroupCheckState();
@@ -1810,7 +1811,7 @@ function resetProDesc() {
 
 //알릴고지 숫자 표기
 function nbList() {
-  	$('ol.form_list').each(function () {
+  	$('.form_list').each(function () {
 		const $list = $(this);
 
 		$list.find('> li').each(function (index) {
@@ -1832,7 +1833,7 @@ function nbList() {
 }
 //숫자리스트1
 function listNum() {
-	$('ol.number_list').each(function () {
+	$('.number_list').each(function () {
 		const $list = $(this);
 		// 직계 li만 선택해야 중복 번호 방지됨
 		$list.children('li').each(function (index) {
@@ -1853,7 +1854,7 @@ function listNum() {
 }
 //숫자리스트2(circle)
 function circleNum() {
-	$('ol.circle_list').each(function () {
+	$('.circle_list').each(function () {
 		const $list = $(this);
 		$list.find('> li').each(function (index) {
 			const $labels = $(this)
@@ -1871,7 +1872,7 @@ function circleNum() {
 }
 //숫자리스트2(circle)
 function circleNum2() {
-	$('ol.circle_list ol').each(function () {
+	$('.circle_list ol').each(function () {
 		const $list = $(this);
 		$list.find('> li').each(function (index) {
 			const $labels = $(this)
@@ -1889,7 +1890,7 @@ function circleNum2() {
 }
 //숫자리스트3(제 0 조)
 function clauseNum() {
-	$('ol.clause_list').each(function () {
+	$('.clause_list').each(function () {
 		const $list = $(this);
 		$list.find('> li').each(function (index) {
 			const $labels = $(this).find('strong');
