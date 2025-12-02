@@ -4333,6 +4333,15 @@ sup {
 .view_wrap .view_cont .txt_detail p {
 	margin-top: var(--gap-7);
 }
+.view_wrap .view_cont .img_link {
+	display: block;
+}
+.view_wrap .view_cont .img_link:focus {
+	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	box-shadow: 0 0 0 1px rgb(0, 0, 0);
+	outline: var(--border-width-static-medium) solid #000;
+	outline-offset: -2px;
+}
 .view_wrap .view_cont + .btn_area {
 	margin-top: var(--gap-5);
 }
@@ -12677,6 +12686,12 @@ ol li .table_wrap + .list_ty2 li + li {
 .inp_radio.lg input[type="radio"] + label + .sub_g_txt {
 	margin-top: var(--gap-2);
 	padding-left: 32px;
+}
+.inp_radio.lg input[type="radio"] + label + .sub_g_txt .list_ty2 {
+	margin-top: var(--gap-4);
+}
+.inp_radio.lg input[type="radio"] + label + .sub_g_txt .list_ty2 li {
+	color: var(--color-text-basic);
 }
 .inp_radio.lg input[type="radio"]:checked + label::before {
 	background-size: 16px auto;
