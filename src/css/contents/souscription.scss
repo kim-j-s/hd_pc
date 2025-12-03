@@ -127,6 +127,12 @@
 					margin-bottom: var(--gap-5);
 					font-size: var(--font-size-heading-small);
 					font-weight: 700;
+					color: var(--color-text-bolder);
+
+					&.point {
+						color: var(--color-text-primary-bold);
+					}
+
 					.star_list {
 						font-weight: 400;
 					}
