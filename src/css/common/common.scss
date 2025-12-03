@@ -616,6 +616,10 @@ sup {
 	> .btn_area {
 		margin-top: var(--gap-5);
 	}
+
+	& + .space_list_ty5 {
+		margin-top: var(--gap-8);
+	}
 }
 
 // 목록 미노출 간격 재정의
