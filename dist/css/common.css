@@ -482,6 +482,9 @@ sup {
 .no_list_area > .btn_area {
 	margin-top: var(--gap-5);
 }
+.no_list_area + .space_list_ty5 {
+	margin-top: var(--gap-8);
+}
 .card_item_wrap[style*="display: none"] + .no_list_area {
 	margin-top: var(--gap-8);
 }
@@ -8201,6 +8204,7 @@ sup {
 	height: 20px;
 	opacity: 0;
 	z-index: 1;
+	cursor: pointer;
 }
 .inp_checkbox input[type="checkbox"] ~ .label_area > .label_cont {
 	display: block;
@@ -14553,6 +14557,10 @@ ol li .table_wrap + .list_ty2 li + li {
 .table_wrap .info_gray .title_h3 {
 	margin-bottom: 0;
 }
+.table_wrap .title_h5 {
+	margin-bottom: var(--gap-5);
+	color: var(--color-text-bolder);
+}
 .table_wrap .title_h6 {
 	margin-bottom: var(--gap-2);
 }
@@ -14786,6 +14794,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .table_wrap .table + .title_h3 {
 	margin-top: var(--gap-11);
+}
+.table_wrap .table + .title_h5 {
+	margin-top: var(--gap-7);
 }
 .table_wrap .table .recommend {
 	background-color: var(--color-surface-primary-subtler);
