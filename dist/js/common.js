@@ -6,8 +6,6 @@
 	$(document).on('keydown', function(e) {
 		if (e.key === 'Enter') {
 			const focusedElement = document.activeElement; // 현재 포커스된 요소
-			// console.log('현재 포커스된 요소:', focusedElement);
-			// console.log('jQuery this로는:', $(focusedElement));
 		}
 	});
 
@@ -129,8 +127,6 @@
 					$('.container').animate({
 						scrollTop : newVal
 					}, 500)
-
-					// console.log($('.anchor_move').eq(idx).children('.is_coverage_graph').attr('class'));
 					$('.anchor_move').eq(moveIdx).focus();
 				}
 			})
@@ -157,15 +153,6 @@
 				$wrap.removeClass('active');
 			}
 		}
-
-		//전화번호
-		if( $this.closest('.input_text').hasClass('phone') && !$this.closest('.input_text').hasClass('phone_full') && !$this.prop('readonly') && !$this.prop('disabled') ){
-			if(val){
-				const newVal = val.replace(/ - /g, '');
-				$this.attr('maxlength', 8);
-				$this.val(newVal).removeClass('isVal');
-			}
-		}
     
   }).on('blur', '.inp > input', function(){
     const $this = $(this),
@@ -184,25 +171,11 @@
 			$(this).closest('.inp').removeClass('active');
 		});
 
-		// 전화번호
-		// if($this.closest('.input_text').hasClass('phone')){
-		if( $this.closest('.input_text').hasClass('phone') && !$this.prop('readonly') && !$this.prop('disabled') ){
-			$this.attr('maxlength', 14);
-			if(val){
-				val = val.replace(/[^0-9*]/g, '');
-				newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
-				$this.val(newVal).addClass('isVal');
-			}else {
-				$this.removeClass('isVal');
-			}
-		}
-
   }).on('click', '.inp > .del:not(.del_not)', function(e){
     const $this = $(this);
     e.preventDefault();
 	
 		setTimeout(() => {
-			// $this.siblings('input').val('').trigger("input").focus();
 			const $input = $this.siblings("input");
 			$input.val("").focus();
 			$input[0].dispatchEvent(new Event("input", { bubbles: true }));
@@ -223,9 +196,8 @@
 		$this.val($val.replace(/[^0-9]/gi, '').replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,'));
 	});
 
-	// onlyEng
+	// 영문만
 	$DOM.on('keyup', '.inp_only_eng', function() {
-		// console.log('영문만');
 		const $this = $(this);
 		let val = $this.val().replace(/[^a-zA-Z ]/g, ''); // 영문만 허용
 		val = val.toUpperCase();
@@ -295,6 +267,7 @@
 	});
 	
   /* Textarea */
+
 	// byte check
   $DOM.on('blur keyup', '.byte_check > textarea', function(){
     const str = $(this).val(),
@@ -399,55 +372,6 @@
 		});
 	});
 
-	// 해제가능 radio group
-	// 
-	// $DOM.on('click', '.radio_group_resetable .inp_radio input[type="radio"]', function(){
-	// 	// console.log('change');
-	// 	const $this = $(this);
-	// 	setTimeout(function(){
-	// 		if($this.is(':checked')) {
-	// 			// $this.closest('.radio_group_resetable').removeClass('active');
-	// 			// $this.prop('checked', false);
-	// 			console.log('checked');
-	// 		} else {
-	// 			console.log('false');
-	// 		}
-	// 	}, 0);
-	// })
-
-	// var inputs = $('input');
-	// var checked = inputs.filter(':checked').val();
-	// inputs.on('click', function(){
-	// 	console.log('x');
-	// 	if($(this).val() === checked) {
-	// 		$(this).prop('checked', false);
-	// 		checked = '';
-	// 	} else {
-	// 		$(this).prop('checked', true);
-	// 		checked = $(this).val();
-	// 	}
-	// });
-
-
-	//radio_comb(2개의 라디오 버튼 중 택1 콤비네이션)
-	// $DOM.on('change', '.radio_comb input[type="radio"]', function(){
-	// 	const parentCont = $(this).closest('.radio_comb');
-
-	// 	if(parentCont.length > 0){
-	// 		parentCont.removeClass('origin').addClass('active');
-	// 	}
-	// });
-
-	// $DOM.ready(function(){
-	// 	const target = $('.radio_comb input[type="radio"]:checked');
-	// 	target.each(function(){
-	// 		const parentCont = $(this).closest('.radio_comb');
-	// 		if(parentCont.length > 0){
-	// 			parentCont.removeClass('origin').addClass('active');
-	// 		}
-	// 	});
-	// });
-
 	// 수령지 일괄 선택
 	$DOM.on('change', '.sa_change', function() {
 		var $wrap = $(this).closest('.sa_wrap');
@@ -516,32 +440,18 @@
 		$(this).focus();
 	});
 
-	// inp_only_num -  input[type="tel"]로 대체
-	// $DOM.on('keyup', '.inp_only_num', function() {
-	// 	const $this = $(this),
-	// 				val = $this.val().replace(/[^0-9]/g, ''); // 숫자만 허용
-	// 	$this.val(val);
-	// });
-	// inp_only_num -  input[type="tel"]로 대체
-
 	// input[type="tel"]
 	$DOM.on('keyup', 'input[type="tel"]', function() {
 		const $this = $(this);
 		// comma 클래스가 상위에 있으면 실행하지 않음
-		if ($this.closest('.comma, .price, .ex_period').length) {
+		if ($this.closest('.comma, .price, .ex_period, .phone_full').length) {
 			return;
 		}
 		// 숫자만 허용
 		const val = $this.val().replace(/[^0-9]/g, '');
-		$this.val(val);		
+		$this.val(val);
+		console.log('?');
 	});
-
-	// 몸무게 입력 유형 / . 가능
-	// $DOM.on('keyup', '.inp_weight', function() {
-	// 	const $this = $(this),
-	// 				val = $this.val().replace(/[^0-9.]/g, ''); // 숫자만 허용
-	// 	$this.val(val);
-	// });
 
 	// 달력 날짜 입력 항목 focus 시 attr 추가 및 blur 시 자리수 정리 기능 추가
 	$DOM.on('focus', '.inp_picker', function() {
@@ -620,23 +530,7 @@
 			expHeight = hasActivePoEtc1
 				? exceptionHeight - titleWrapHeight * 2
 				: exceptionHeight + titleWrapHeight + 2;
-		}
-
-		// if($wrap.find('.sii_wrap').length){
-		// 	const $sii = $wrap.find('.sii_wrap').children('.position_event_tab');
-		// 	let siiHeight = 0;
-			
-		// 	if($('.position_event_content').hasClass('summary_ii')){
-		// 		// siiHeight = parseFloat($sii.css('padding-bottom'));
-		// 		siiHeight = parseFloat($scrollArea.css('margin-top'));
-		// 	}else {
-		// 		const silSickty = parseFloat($wrap.find('.position_event_tab').css('top'))
-		// 		const mTop = parseFloat($contents.css('margin-bottom'));
-		// 		siiHeight = parseFloat($sii.css('padding-bottom')) + mTop + 16 - silSickty;
-		// 	}
-		// 	sHeight = siiHeight;
-		// }
-		
+		}		
 
 		if ($target.length) {
 			$wrap.data('scrolling', true);
@@ -677,17 +571,15 @@
 		}
 	});
 
-	// 전화번호 입력 적용 준비 중 스크립트
+	// 전화번호 입력
 	$DOM.on('focus', '.input_text.phone_full input', function () {
-		console.log('진입');
-	
+		// console.log('진입');	
 		const $this = $(this);
-	
 		// 읽기 전용 또는 비활성화 상태일 경우 중단
 		if ($this.prop('readonly') || $this.prop('disabled')) {
 			return;
 		}
-	
+
 		// 값 가져오기 및 하이픈/공백 제거
 		let val = $this.val() ? $this.val().replace(/[^0-9*]/g, '') : '';
 	
@@ -704,21 +596,21 @@
 	});
 
 	$DOM.on("blur", ".input_text.phone_full input", function () {
+		console.log('phone_full blur');
 		let $this = $(this);
 		let val = $this.val().replace(/[^0-9*]/g, ""); // 숫자만 남김
 	
 		if (val.length === 10) {
 			// 10자리 → 010-000-0000
-			val = val.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+			val = val.replace(/^(\d{3})([\d*]{3})([\d*]{4})$/, "$1-$2-$3");
 		} else if (val.length === 11) {
 			// 11자리 → 010-0000-0000
-			val = val.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
+			val = val.replace(/^(\d{3})([\d*]{4})([\d*]{4})$/, "$1-$2-$3");
 		}
 	
 		$this.val(val);
 	});
-	// 전화번호 입력 적용 준비 중 스크립트
-
+	// 전화번호 입력
 
 	// 유효기간 처리
 	$DOM.on('keyup', '.input_text .ex_period', function() {
@@ -741,8 +633,6 @@
 		$this.val(val);
 	});
 	// 유효기간 처리
-
-
 
 	// 하단 고정형 팝업 아코디언형
 	$DOM.on("click", ".baad_c_wrap .baad_c_btn", function () {
@@ -779,6 +669,8 @@
 	});
 	// 하단 고정형 팝업 아코디언형
 
+
+
 	// 웹접근성 심사 후 활성화
 	// 건물/주택 구조 선택 모션 이벤트
 	// $DOM.on("change", ".radio_group_wrap.structure input", function () {
@@ -809,14 +701,9 @@ function tabScroll(){
 		const $this = $(this),
 					$scrollBox = $this.closest('[class^=tab_scroll_box]')
 					$scrollList = $scrollBox.children('.scroll');
-
-		// const btn_offset = $this.closest('.wrap').length ? $this.offset().left - 20 : $this.position().left,
 		const btn_offset = $this.position().left,
 					scrollBox_w = $scrollList.width();
 		let scrollMove = btn_offset - ($scrollBox.width() / 2) + ($this.outerWidth() / 2);
-
-		// console.log('move : ' + scrollMove);
-		// console.log('버튼 위치 : ' + btn_offset, '스크롤 위치 : ' + scrollPosition);
 		$scrollBox.animate({
 			scrollLeft: scrollMove
 		}, 200);
@@ -1029,14 +916,14 @@ function inputState() {
 
 function inpPhoneFormat() {
 	$('.input_text').each(function() {
-		if( $(this).hasClass('phone') ){
-			const $inp = $(this).children('.inp').find('input');
-			let val = $inp.val();
-			val = val.replace(/[^0-9*]/g, '');
-			newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
-			$inp.val(newVal).addClass('isVal');
-		}
-		// 전화번호 입력 적용 준비 중 스크립트
+		// if( $(this).hasClass('phone') ){
+		// 	const $inp = $(this).children('.inp').find('input');
+		// 	let val = $inp.val();
+		// 	val = val.replace(/[^0-9*]/g, '');
+		// 	newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
+		// 	$inp.val(newVal).addClass('isVal');
+		// }
+		// 전화번호 입력
 		if( $(this).hasClass('phone_full') ) {
 			const $inp = $(this).children('.inp').find('input');
 			let val = $inp.val().replace(/[^0-9*]/g, "");
@@ -1047,7 +934,7 @@ function inpPhoneFormat() {
 			}
 			$inp.val(val);
 		}
-			// 전화번호 입력 적용 준비 중 스크립트
+		// 전화번호 입력
 	});
 }
 
@@ -1264,40 +1151,6 @@ $(function(){
 		$('.ui-datepicker tbody tr td a').removeAttr('title');
 		$('.ui-datepicker-today a').attr('title', '선택됨');
 	});
-
-	/*
-	$(".calendar_call_month").on("click", function (e) {
-		e.preventDefault();
-
-		// 모바일 웹 접근성
-		$('.wrap').attr('aria-hidden', 'true');
-	
-		const $btn = $(this);
-		const $input = $btn.siblings(".inp_picker_month");
-	
-		// 포커스 복귀용으로 버튼 참조 저장
-		$lastCalendarCallBtn = $btn;
-	
-		// readonly 잠시 설정 → 키보드 입력 방지
-		$input.attr("readonly", true);
-		$input.monthpicker("show");
-	
-		// 0.5초 후 readonly 제거
-		setTimeout(function () {
-			$input.attr("readonly", false);
-		}, 500);
-	
-		// 달력 내부 포커스로 이동 (접근성 강화)
-		setTimeout(function () {
-			const $dp = $("#ui-datepicker-div");
-			// 날짜가 선택되어 있으면 해당 날짜에 포커스, 없으면 현재일
-			const $focusable = $dp.find(".ui-state-active, .ui-state-highlight, td a").first();
-			if ($focusable.length) {
-				$focusable.focus();
-			}
-		}, 400);
-	});	
-	*/
 	// 달력 호출
 
 	// 라디오 약관 동의
@@ -1313,7 +1166,6 @@ $(function(){
 			} else {
 				$groups.find('.ag_group_wrap').find('input').prop('checked', false);
 			}
-			// $groups.find('.agw_all').prop('checked', isChecked).trigger('change'); // 각 그룹에 위임
 		});
 	
 		// 그룹 단위로 동작 유지
@@ -1325,20 +1177,14 @@ $(function(){
 			$allCheck.on('change', function () {
 				const isChecked = $(this).is(':checked');
 				console.log(isChecked);
-				// $groupWrap.find('.agr_dept1.ag').prop('checked', isChecked);
-				// $groupWrap.find('.agr_dept1.noag').prop('checked', !isChecked);
-				// $groupWrap.find('.ags_sub_all, .ags_sub_chk').prop('checked', isChecked).prop('disabled', !isChecked);
-				// $groupWrap.find('.agr_dept2').prop('checked', isChecked);
 
 				if($(this).closest('.ag_groups').find('.ag_total').length) {
 					// 상위에 ag_total가 있으면 기존방식
-					// console.log('c1');
 					$groupWrap.find('.agr_dept1.ag').prop('checked', isChecked);
 					$groupWrap.find('.agr_dept1.noag').prop('checked', !isChecked);
 					$groupWrap.find('.ags_sub_all, .ags_sub_chk').prop('checked', isChecked).prop('disabled', !isChecked);
 					$groupWrap.find('.agr_dept2').prop('checked', isChecked);
 				} else {
-					// console.log('c2');
 					if(isChecked) {
 						$groupWrap.find('.agr_dept1.ag').prop('checked', isChecked);
 						$groupWrap.find('.agr_dept1.noag').prop('checked', !isChecked);

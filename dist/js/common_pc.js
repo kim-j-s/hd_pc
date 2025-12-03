@@ -16,15 +16,11 @@ $(function() {  // DOM이 준비되었을 때 실행
 		sTop = $WIN.scrollTop();
 		wrapHeight = $WRAP.outerHeight();
 		footerHeight = $FOOTER.outerHeight();
-		// console.log('wrapHeight : ', wrapHeight);
 	}
 
 	function floatingItem() {
-		// console.log(wrapHeight, footerHeight, sTop, wHeight);
-
 		const footerIs = $('.footer').css('display');
 		if(footerIs === 'none') {
-			// $FLOATING_ITEM.addClass('active');
 			return; // 푸터가 없으면 항상 활성화 상태로 유지
 		}
 
@@ -81,19 +77,6 @@ $(function() {  // DOM이 준비되었을 때 실행
 		$(this).closest('.change_mode').find('.cm_btn').removeClass('active');
 		$(this).addClass('active');
 	});
-
-	// selectbox 스타일 처리 스크립트
-	// $('.selectbox').each(function(index, element) {
-	// 	const $this = $(element);
-	// 	const selectedValue = $this.val();  // 현재 선택된 option의 value 값
-	// 	console.log(selectedValue);
-	
-	// 	if (selectedValue === 'default') {
-	// 		$this.addClass('default');
-	// 	} else {
-	// 		$this.removeClass('default'); // 필요에 따라 제거도 처리
-	// 	}
-	// });
 
 	// 페이지 상단으로 스크롤
 	$DOM.on('click', '.qm_btn_pagetop', function(e) {
