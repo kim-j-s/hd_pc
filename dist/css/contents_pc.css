@@ -3963,6 +3963,15 @@
 	width: 20px;
 	height: 20px;
 }
+.coverage_item_list_ty3 > .list .detail_list .inp_checkbox .chk_label .label_cont {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	white-space: nowrap;
+}
 .coverage_item_list_ty3 > .list .detail_list .inp_checkbox input[type="checkbox"] {
 	left: 0;
 }
