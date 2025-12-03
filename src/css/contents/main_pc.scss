@@ -773,10 +773,7 @@
 			}
 
 			&.mpc_item_ty1 {
-				// padding-right: 159px;
-				// border: var(--border-width-static-regular) solid var(--color-border-primary);
 				background-color: var(--color-action-primary-fill);
-				// background-position: right center;
 				background-size: 160px 106px;
 				@for $i from 1 through 8 {
 					&.mit1_ic#{$i} {
@@ -785,12 +782,9 @@
 				}
 			}
 			&.mpc_item_ty2 {
-				// padding-right: 107px;
-				// background-position: right 36px center;
-				// border: var(--border-width-static-regular) solid var(--color-border-inverse);
 				background-color: var(--color-action-secondary-fill);
 				background-size: 160px 106px;
-				@for $i from 1 through 19 {
+				@for $i from 1 through 20 {
 					&.mit2_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
 					}
@@ -829,6 +823,7 @@
 					.badge_wrap {
 						display: inline;
 						vertical-align: middle;
+						padding-top: 2px;
 						padding-left: var(--gap-3);
 						
 						.hd_badge {

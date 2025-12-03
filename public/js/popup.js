@@ -12,7 +12,7 @@
 let openScrollTop = null;
 function openHDPopup($triggerEl, target) {
 	if (target == undefined || target == null) {
-		console.log("오픈할 팝업 타겟이 없습니다.");
+		// console.log("오픈할 팝업 타겟이 없습니다.");
 		return false;
 	}
 
@@ -79,7 +79,7 @@ function openHDPopup($triggerEl, target) {
 	const $winHeight = $(window).height();
 	const $docHeight = $(document).height();
 
-	console.log('마지막 저장 위치 : ', openScrollTop);
+	// console.log('마지막 저장 위치 : ', openScrollTop);
 
 	//팝업 열기
 	// $('#wrap').addClass('scroll_lock');
@@ -306,7 +306,7 @@ function closeHDPopup(target, returnTarget = null) {
 	setTimeout(function(){
 		$('body').removeAttr('tabindex');
 		window.preventFocusSlide = false;
-		console.log('preventFocusSlide 초기화:', window.preventFocusSlide);
+		// console.log('preventFocusSlide 초기화:', window.preventFocusSlide);
 	}, 360);
 }
 
