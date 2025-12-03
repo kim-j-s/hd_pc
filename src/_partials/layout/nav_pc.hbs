@@ -74,6 +74,11 @@
 								</ul>
 							</div>
 
+							
+							{{/if}}
+						</li>
+						{{#unless corp_mode}}
+						<li>
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">운전자</strong>
 								<ul class="nl_dept2_list">
@@ -81,15 +86,26 @@
 										<a href="#"><span class="text">운전자보험</span></a>
 									</li>
 									<li class="item">
-										{{!-- <a href="#"><span class="text">오토바이운전자보험</span></a> --}}
 										<a href="javascript:void(0);" id="open_qr_motorcycle" onclick="openHDPopup('','qr_motorcycle');"><span class="text">오토바이운전자보험</span></a>
 									</li>
 								</ul>
 							</div>
-							{{/if}}
-						</li>
-						{{#unless corp_mode}}
-						<li>
+
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">어린이/태아</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="javascript:void(0);" id="open_qr_fetus" onclick="openHDPopup('','qr_fetus');"><span class="text">어린이보험(태아)</span></a>
+									</li>
+									<li class="item">
+										<a href="javascript:void(0);" id="open_qr_child" onclick="openHDPopup('','qr_child');"><span class="text">어린이보험(0~15세)</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">어린이치아보험</span></a>
+									</li>
+								</ul>
+							</div>
+
 							<div class="nl_dept2">
 								<strong class="nl_dept2_tit">펫</strong>
 								<ul class="nl_dept2_list">
@@ -119,28 +135,26 @@
 									</li>
 								</ul>
 							</div>
-
-							<div class="nl_dept2">
-								<strong class="nl_dept2_tit">어린이</strong>
-								<ul class="nl_dept2_list">
-									<li class="item">
-										{{!-- <a href="#"><span class="text">어린이보험(태아)</span></a> --}}
-										<a href="javascript:void(0);" id="open_qr_fetus" onclick="openHDPopup('','qr_fetus');"><span class="text">어린이보험(태아)</span></a>
-									</li>
-									<li class="item">
-										{{!-- <a href="#"><span class="text">어린이보험(0~15세)</span></a> --}}
-										<a href="javascript:void(0);" id="open_qr_child" onclick="openHDPopup('','qr_child');"><span class="text">어린이보험(0~15세)</span></a>
-									</li>
-									<li class="item">
-										<a href="#"><span class="text">어린이치아보험</span></a>
-									</li>
-								</ul>
-							</div>
 						</li>
 
 						<li>
 							<div class="nl_dept2">
-								<strong class="nl_dept2_tit"></strong>
+								<strong class="nl_dept2_tit">종합</strong>
+								<ul class="nl_dept2_list">
+									<li class="item">
+										<a href="javascript:void(0);" id="open_qr_perfecttotal" onclick="openHDPopup('','qr_perfecttotal');"><span class="text">퍼팩트종합보험</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">실손의료비보험</span></a>
+									</li>
+									<li class="item">
+										<a href="#"><span class="text">실손의료비보험(계약전환용)</span></a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="nl_dept2">
+								<strong class="nl_dept2_tit">여행/레저</strong>
 								<ul class="nl_dept2_list">
 									<li class="item">
 										<a href="#"><span class="text">해외여행보험</span></a>
@@ -166,24 +180,6 @@
 									<li class="item">
 										{{!-- <a href="#"><span class="text">저축보험</span></a> --}}
 										<a href="javascript:void(0);" id="open_qr_saving" onclick="openHDPopup('','qr_saving');"><span class="text">저축보험</span></a>
-									</li>
-								</ul>
-							</div>
-
-							<div class="nl_dept2">
-								<strong class="nl_dept2_tit">건강</strong>
-								<ul class="nl_dept2_list">
-									<li class="item">
-										<a href="#"><span class="text">건강보험</span></a>
-									</li>
-									<li class="item">
-										<a href="#"><span class="text">암보험</span></a>
-									</li>
-									<li class="item">
-										<a href="#"><span class="text">실손의료비보험</span></a>
-									</li>
-									<li class="item">
-										<a href="#"><span class="text">실손의료비보험(계약전환용)</span></a>
 									</li>
 								</ul>
 							</div>
