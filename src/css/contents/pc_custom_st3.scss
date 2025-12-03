@@ -743,7 +743,6 @@
 		}
 
 		.detail_list {
-			// flex: 1;
 			flex: 1 1 0;
 			overflow-wrap: anywhere;
 
@@ -753,13 +752,7 @@
 				align-items: flex-start;
 	
 				.hd_btn {
-					// flex: 0 0 auto;
-					// flex: 1 1 0;
-
 					&.short_cut2 {
-						// .text {
-						// 	white-space: nowrap;
-						// }
 						.short_cut2_tit {
 							margin-right: 8px;
 							white-space: nowrap;
@@ -783,6 +776,15 @@
 					padding-left: 0;
 					width: 20px;
 					height: 20px;
+					.label_cont {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 1px;
+						height: 1px;
+						overflow: hidden;
+						white-space: nowrap;
+					}
 				}
 	
 				input[type=checkbox]{
