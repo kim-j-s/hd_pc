@@ -1214,7 +1214,7 @@
 	}
 	.main_title {
 		display: block;
-		margin-top: 4px;
+		margin-top: var(--gap-2);
 		font-size: var(--font-size-heading-xsmall);
 	}
 	.btn_area {

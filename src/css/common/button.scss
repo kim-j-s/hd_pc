@@ -64,8 +64,7 @@
 
 		.hd_btn {
 			&.normal {
-				//margin-top: 2px;
-				margin-top: 4px;
+				margin-top: var(--gap-2);
 			}
 		}
 
@@ -123,10 +122,6 @@
 		}
 	}
 
-	// & + .btn_area {
-	// 	margin-top: var(--gap-4);
-	// }
-
 	&.ty2 {
 		.hd_btn {
 			flex-basis: calc(50% - 8px);
@@ -136,8 +131,6 @@
 			}
 			&.half {
 				flex-basis: calc(50% - 4px);
-				// flex: 1 1 calc(50% - 4px);
-				// width: calc(50% - 4px);
 			}
 		}
 
@@ -208,15 +201,11 @@
 		border-radius: var(--radius-medium4);
 		background-color: var(--color-button-primary-fill);
 		color: #fff;
-		// border: 0;
 		border: var(--border-width-static-regular) solid var(--color-button-primary-fill);
 
 		&:focus {
 			background-color: var(--color-button-primary-fill);
 		}
-		// &:hover {
-		// 	background-color: var(--color-button-primary-fill-hover);
-		// }
 		&:active,
 		&.active {
 			background-color: var(--color-button-primary-fill-pressed);
@@ -230,10 +219,6 @@
 		&:focus {
 			background-color: var(--color-button-secondary-fill);
 		}
-		// &:hover {
-		// 	background-color: var(--color-button-secondary-fill-hover);
-		// 	color: var(--color-text-primary);
-		// }
 		&:active,
 		&.active {
 			background-color: var(--color-button-secondary-fill-pressed);
@@ -243,16 +228,11 @@
 	&_ty_3 {
 		color: var(--color-text-basic);
 		border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-		// background: var(--color-button-tertiary-fill, rgba(255, 255, 255, 0.00));
 		background: var(--color-button-tertiary-fill);
 
 		&:focus {
 			background: var(--color-button-tertiary-fill);
-		}		
-		// &:hover {
-		// 	border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-		// 	background: var(--color-button-tertiary-fill-hover);
-		// }
+		}
 		&:active,
 		&.active {
 			border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
@@ -271,7 +251,6 @@
 	&:disabled {
 		background-color: var(--color-button-disabled-fill);
 		color: var(--color-text-disabled-on);
-		// border: 0;
 		border: var(--border-width-static-regular) solid var(--color-button-disabled-fill);
 	}
 
@@ -289,14 +268,9 @@
 		//CTA&primary
 		min-width: 98px;
 		padding: 13px calc(var(--padding-8) - 2px) 14px;
-		border-radius: var(--radius-medium4);
-		font-size: var(--font-size-button-cta-bold);
 		font-weight: 700;
-
-		// .hd_icon {
-		// 	width: 24px;
-		// 	height: 27px;
-		// }
+		font-size: var(--font-size-button-cta-bold);
+		border-radius: var(--radius-medium4);
 		&.text_long {
 			padding: 0px var(--padding-4);
 			min-width: calc(50% - 5px);
@@ -305,11 +279,10 @@
 	&_s_2 {
 		//lg
 		min-width: 48px;
-		// height: var(--button-size-large);
 		padding: 11px var(--padding-7);
-		border-radius: var(--radius-medium2);
-		font-size: var(--font-size-button-large-bold);
 		font-weight: 700;
+		font-size: var(--font-size-button-large-bold);
+		border-radius: var(--radius-medium2);
 
 		.hd_icon {
 			width: 24px;
@@ -319,12 +292,11 @@
 	&_s_3 {
 		//md
 		min-width: 78px;
-		// height: var(--button-size-medium);
 		padding: 8px var(--padding-6) 9px;
 		border-radius: var(--radius-medium2);
+		font-weight: 700;
 		font-size: var(--font-size-button-medium-bold);
 		line-height: 150%;
-		font-weight: 700;
 
 		.hd_icon {
 			width: 20px;
@@ -333,8 +305,7 @@
 	}
 	&_s_4 {
 		//sm
-		//min-width: 54px;
-		min-width: 52px;//64px;
+		min-width: 52px;
 		padding: 6px calc(var(--padding-5) - 2px);
 		border-radius: var(--radius-medium1);
 		font-size: var(--font-size-button-small-bold);

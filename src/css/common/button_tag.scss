@@ -95,15 +95,13 @@
 		flex-flow: row wrap;
 		align-items: center;
 		gap: var(--gap-4) var(--gap-3);
-		// 
-		// 
 	}
 
 	&_ty3 {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		gap: 4px 8px;
+		gap: var(--gap-2) var(--gap-3);
 	}
 
 	& + .selectitem_wrap {
@@ -131,7 +129,6 @@
 	}
 }
 .tag_item_cont {
-	// margin-top: var(--gap-8);
 	&:has(.card_list_wrap_ty4){
 		.s_title {
 			&:first-child {
