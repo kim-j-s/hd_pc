@@ -821,7 +821,8 @@
 					flex-direction: column;
 				
 					.badge_wrap {
-						display: inline;
+						gap: var(--gap-2);
+						width: auto;
 						vertical-align: middle;
 						padding-top: 2px;
 						padding-left: var(--gap-3);
