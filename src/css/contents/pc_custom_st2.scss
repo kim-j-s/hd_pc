@@ -555,7 +555,7 @@
 
 							.num {
 								flex: none;
-								padding-right: 4px;
+								padding-right: var(--padding-2);
 								vertical-align: top;
 							}
 						}
@@ -1548,7 +1548,7 @@
 							gap: var(--gap-5);
 
 							& + .cont {
-								border-left: 1px solid var(--color-divider-gray-light);
+								border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 								padding-left: var(--gap-8);
 								margin-left: var(--gap-8);
 

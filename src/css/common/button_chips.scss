@@ -6,11 +6,10 @@
     gap: var(--gap-3);
 
     &.fixed {
-        width: fit-content;
-
-        .keypad_chip_item {
-            width: 38px;
-        }
+			width: fit-content;
+			.keypad_chip_item {
+				width: 38px;
+			}
     }
 
     .keypad_chip_item {
@@ -18,25 +17,20 @@
         justify-content: center;
         align-items: center;
         height: var(--size-height-8);
-        padding: 8px;
+        padding: var(--padding-3);
         border-radius: var(--radius-medium1);
         border: var(--border-width-static-regular) solid var(--color-border-gray-light);
         background: var(--color-element-inverse);
         font-size: var(--font-size-label-medium);
         cursor: pointer;
         user-select: none;
-    
-        // &:hover {
-        //     border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-        //     background: var(--color-button-tertiary-fill-hover);
-        // }
         &:active {
-            border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-            background: var(--color-button-tertiary-fill-pressed);
+					border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
+					background: var(--color-button-tertiary-fill-pressed);
         }
     
         &.selected {
-            border: var(--border-width-static-medium) solid var(--color-element-primary);
+          border: var(--border-width-static-medium) solid var(--color-element-primary);
         }
     }
 }

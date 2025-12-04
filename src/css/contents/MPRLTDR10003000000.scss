@@ -912,7 +912,7 @@
 
 			& + .list {
 				margin-top: var(--gap-6);
-				padding-top: 20px;
+				padding-top: var(--padding-7);
 				border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 			}
 		}
@@ -980,7 +980,7 @@
 .card_item {
 	.coverage_item_list {
 		li + li {
-			padding-top: 20px;
+			padding-top: var(--padding-7);
 			border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		}
 	}

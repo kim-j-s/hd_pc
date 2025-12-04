@@ -208,7 +208,7 @@
 			flex-basis: 50%;
 			padding-left: var(--gap-8);
 			margin-left: var(--gap-8);
-			border-left: 1px solid var(--color-divider-gray-light);
+			border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 
 			.tit {
 				font-size: var(--font-size-body-medium);
@@ -1964,7 +1964,7 @@
 }
 
 .install_step {
-	border-radius: 24px;
+	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white);
 	padding: var(--padding-8) var(--padding-7);

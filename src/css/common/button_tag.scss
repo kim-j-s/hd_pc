@@ -8,7 +8,6 @@
 		border-radius: var(--radius-max);
 		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		background: #fff;
-		// transition: all 0.3s ease;
 	}
 	&.size_l {
 		> .text {
@@ -95,7 +94,9 @@
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		gap: 12px 8px;
+		gap: var(--gap-4) var(--gap-3);
+		// 
+		// 
 	}
 
 	&_ty3 {
