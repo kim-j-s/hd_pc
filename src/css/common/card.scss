@@ -103,7 +103,7 @@
 						+ .inner_cont {
 							margin-left: 28px;
 							// margin-top: var(--gap-5);
-							// padding-top: 16px;
+							// padding-top: var(--padding-6);
 							// border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 							width: calc(100% - 28px);
 						}
@@ -158,12 +158,12 @@
 					&:has(.tit_item, .card_link) {
 						.card_list_ty1 {
 							// margin-top: var(--gap-5);
-							// padding-top: 16px;
+							// padding-top: var(--padding-6);
 							// border-top: 1px solid #e1e3ea;
 							> li {
 								&:first-child {
 									margin-top: var(--gap-5);
-									padding-top: 16px;
+									padding-top: var(--padding-6);
 									border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 									/* 목록 상 결과값만 최상단에 존재하는 경우 */
 									&.result {
@@ -251,7 +251,7 @@
 					}
 					.badge_wrap {
 						display: inline;
-						// padding-left: 4px;
+						// padding-left: var(--padding-2);
 						vertical-align: top;
 
 						.hd_badge {
@@ -456,7 +456,7 @@
 
 			& + .card_list_ty1 {
 				// margin-top: var(--gap-5);
-				// padding-top: 16px;
+				// padding-top: var(--padding-6);
 				// border-top: 1px solid #e1e3ea;
 				> li {
 					&:first-child {
@@ -540,7 +540,7 @@
 
 			& + .card_list_ty1 {
 				margin-top: var(--gap-5);
-				padding-top: 16px;
+				padding-top: var(--padding-6);
 				border-top: 1px solid var(--color-divider-gray-light);
 			}
 
@@ -565,7 +565,7 @@
 				}
 
 				&.result {
-					// padding-top: 16px;
+					// padding-top: var(--padding-6);
 					// border-top: 1px solid #e1e3ea;
 					> * {
 						line-height: 24px;
@@ -660,7 +660,7 @@
 		.checkbox_group_wrap,
 		.item_info {
 			margin-top: var(--gap-5);
-			padding-top: 16px;
+			padding-top: var(--padding-6);
 			border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 		}
 		.checkbox_group_wrap {
@@ -742,7 +742,7 @@
 		//비활성화 + 선택 예외 케이스
 		&.selected {
 			&:not(.disabled) {
-				background-color: #fff;
+				background-color: var(--color-background-white);
 			}
 			.inp_checkbox {
 				input[type=checkbox]:checked {
@@ -982,7 +982,7 @@
 			}
 
 			&.result {
-				// padding-top: 16px;
+				// padding-top: var(--padding-6);
 				// border-top: var(--border-width-static-regular) solid var(--color-input-border-disabled);
 				strong {
 					font-size: var(--font-size-body-large);
@@ -1112,7 +1112,7 @@
 			}
 			> dd {
 				margin-top: var(--gap-5);
-				padding-top: 16px;
+				padding-top: var(--padding-6);
 				border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 				&.card_cont_list {
 					// &:has(.tooltip_wrap){
@@ -1614,7 +1614,7 @@
 .insu_plan {
 	margin-bottom: var(--gap-4);
 	.tit {
-		margin-bottom: 4px;
+		margin-bottom: var(--gap-2);
 		display: flex;
 		align-items: center;
 		gap: 4px;

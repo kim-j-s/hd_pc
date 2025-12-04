@@ -39,7 +39,7 @@
 	// 		[class^=rel_case]{
 	// 			position: relative;
 	// 			padding: 0 13px;
-	// 			background-color: #FFF;
+	// 			background-color: var(--color-background-white);
 	// 			text-align: center;
 	// 			border-radius: 20px;
 
@@ -55,7 +55,7 @@
 	// 					display: block;
 	// 					height: 44px;
 	// 					margin: 0 auto;
-	// 					margin-bottom: 4px;
+	// 					margin-bottom: var(--gap-2);
 	// 				}
 	// 			}
 
@@ -82,7 +82,7 @@
 	// 			.parent {
 	// 				display: flex;
 	// 				gap: 10px;
-	// 				background-color: #FFF;
+	// 				background-color: var(--color-background-white);
 	// 				padding: 0 24px;
 
 	// 				i {

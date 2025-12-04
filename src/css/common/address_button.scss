@@ -42,7 +42,7 @@
 			.item_list {
 				position: relative;
 				display: block;
-				padding-left: 8px;
+				padding-right: var(--padding-3);
 				color: var(--color-text-basic);
 
 				&:before {

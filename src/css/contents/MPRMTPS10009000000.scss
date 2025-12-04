@@ -2,13 +2,13 @@
 	padding-bottom: 60px;
 
 	.tag_item_wrap {
-		// padding-bottom: 16px;
-		background-color: #fff;
+		// padding-bottom: var(--padding-6);
+		background-color: var(--color-background-white);
 		&.sticky {
 			position: sticky;
 			top: 0;
 			z-index: 1;
-			// padding-bottom: 16px;
+			// padding-bottom: var(--padding-6);
 			// margin-bottom: 0;
 			padding: 0 24px 16px;
 			margin: 0 -24px 0;
@@ -21,7 +21,7 @@
 				left: -24px;
 				width: calc(100% + 24px);
 				height: 16px;
-				background-color: #fff;
+				background-color: var(--color-background-white);
 			}
 		}
 

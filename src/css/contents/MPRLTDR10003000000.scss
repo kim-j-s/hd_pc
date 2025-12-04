@@ -492,7 +492,7 @@
 
 			.gdi_content_list {
 				> li {
-					padding-top: 16px;
+					padding-top: var(--padding-6);
  					border-top: var(--border-width-static-regular) solid var(--color-border-gray-light);
 					 + li {
 						margin-top: var(--gap-5);
@@ -624,7 +624,7 @@
 			position: relative;
 			display: flex;
 			gap: var(--gap-3);
-			padding-left: 8px;
+			padding-right: var(--padding-3);
 			font-size: var(--font-size-body-small);
 			color: var(--color-text-subtle);
 			// background-color: rgba(200, 255, 255, 0.55);
@@ -878,7 +878,7 @@
 				z-index: 10;
 				padding-top: var(--padding-6);
 				padding-bottom: var(--padding-6);
-				background-color: #FFF;
+				background-color: var(--color-background-white);
 				box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 				border-radius: 0px 0px var(--padding-6) var(--padding-6);
 			}

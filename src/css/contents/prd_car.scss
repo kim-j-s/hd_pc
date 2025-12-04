@@ -249,7 +249,7 @@
 	
 				> li {
 					position: relative;
-					padding-left: 8px;
+					padding-right: var(--padding-3);
 					font-size: var(--font-size-body-small);
 					color: var(--color-text-information);
 	
@@ -373,7 +373,7 @@
 	// 간격
 	.sec_group {
 		&:first-child {
-			// padding-top: 16px;
+			// padding-top: var(--padding-6);
 		}
 		.sec_head {
 			margin-bottom: var(--gap-6);
@@ -488,7 +488,7 @@
 		.img_wrap_ex {
 			margin-top: var(--gap-4);
 			height:320px;
-			// background-color: #fff;
+			// background-color: var(--color-background-white);
 			border-radius: 16px 16px 0 0;
 			border: none;
 			overflow: hidden;

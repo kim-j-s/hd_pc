@@ -103,7 +103,7 @@
 			.acd_head {
 				overflow: hidden;
 				// padding-bottom: 8px;
-				background-color: #fff;
+				background-color: var(--color-background-white);
 				// border-radius: 16px 16px 0 0;
 				
 				.acd_btn {
@@ -111,7 +111,7 @@
 					width: 100%;
 					// padding: 20px 48px 12px 24px;
 					padding: 20px 48px 20px 24px;
-					background-color: #fff;
+					background-color: var(--color-background-white);
 					font-size: var(--font-size-label-medium);
 
 					&:after {
@@ -142,7 +142,7 @@
 			}
 
 			.acd_cont {
-				background-color: #fff;
+				background-color: var(--color-background-white);
 				// border-radius: 0 0 16px 16px;
 				.inner {
 					// padding: 0 24px 50px;
@@ -217,7 +217,7 @@
 
 .discount_item_box {
 	padding: var(--padding-8) var(--padding-7);
-	background-color: #fff;
+	background-color: var(--color-background-white);
 	border-radius: var(--radius-large2);
 
 	.item {

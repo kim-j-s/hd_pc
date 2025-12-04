@@ -84,7 +84,7 @@
 			}
 			.sub_info {
 				display: flex;
-				gap: 8px;
+				gap: var(--gap-3);
 				margin-top: 4px;
 
 				> span {
@@ -147,7 +147,7 @@
 						> span {
 							vertical-align: top;
 							&.point {
-								padding-left: 4px;
+								padding-left: var(--padding-2);
 								font-weight: 700;
 							}
 						}
@@ -736,7 +736,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 8px;
+		gap: var(--gap-3);
 
 		& ~ .list {
 			margin-top: var(--gap-5);
@@ -1178,7 +1178,7 @@
 			}
 			.item_top {
 				margin-top: var(--gap-6);
-				margin-bottom: 4px;
+				margin-bottom: var(--gap-2);
 			}
 		}
 

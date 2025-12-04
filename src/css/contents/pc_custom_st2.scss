@@ -54,7 +54,7 @@
 	.pack {
 		flex: 0 0 auto;
 		display: flex;
-		gap: 8px;
+		gap: var(--gap-3);
 	}
 
 	&.ty3 {
@@ -535,7 +535,7 @@
 
 						& + .info_gray.ty2 {
 							border-radius: 0;
-							background-color: #fff;
+							background-color: var(--color-background-white);
 							padding: 0;
 							margin-top: var(--gap-5);
 						}
@@ -1167,7 +1167,7 @@
 							flex-flow: row wrap;
 							border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 							margin-top: var(--gap-5);
-							padding-top: 16px;
+							padding-top: var(--padding-6);
 	
 							> li {
 								justify-content: flex-start;
@@ -1630,7 +1630,7 @@
 		.card_list_ty1 {
 			& > li {
 				&.list_title {
-					padding-bottom: 16px;
+					padding-bottom: var(--padding-6);
 					max-width: 100%;
 
 					.title {
@@ -1892,7 +1892,7 @@
 		top: -16px;
 		z-index: 10;
 		padding: 5px 0;
-		background-color: #fff;
+		background-color: var(--color-background-white);
 	}
 	&.tag_item_wrap_po_etc1 {
 		top: 0;
@@ -2283,7 +2283,7 @@
 //contact_list
 .contact_list {
 	display: flex;
-	gap: 8px;
+	gap: var(--gap-3);
 	li {
 		flex: 1;
 		+ li {
@@ -2322,7 +2322,7 @@
 
 .comp_wrap {
 	&.birth {
-		gap: 8px;
+		gap: var(--gap-3);
 		.form_key {
 			.pin_area {
 				height: var(--size-height-7);
@@ -2343,7 +2343,7 @@
 		}
 	}
 	&.card {
-		gap: 8px;
+		gap: var(--gap-3);
 		padding: 0 calc(var(--padding-6) - 2px);
 		.comp_wrap_keypad_call {
 			flex: 1.6;
@@ -2356,7 +2356,7 @@
 		}
 	}
 	&.business {
-		gap: 8px;
+		gap: var(--gap-3);
 	}
 	// 카드 비밀번호
 	&.card_pw {
@@ -2375,7 +2375,7 @@
 }
 
 .sns_box {
-	margin-bottom: 16px;
+	margin-top: var(--gap-5);
 }
 
 
@@ -2915,7 +2915,7 @@
 
 .simple_info_wrap.ty2{
 	.simple_info_item  {
-		padding-top: 24px;
+		padding-top: var(--padding-8);
 		padding-bottom: var(--padding-7);
 		.sii_list > li + li {
 			align-items: flex-start;
