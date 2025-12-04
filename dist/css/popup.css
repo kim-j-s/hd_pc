@@ -406,19 +406,22 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 /* bottom popup 스타일 아코디언 */
 .baad_c {
 	position: relative;
-	height: 32px;
 }
 .baad_c.active .baad_c_cont {
-	position: absolute;
 	background: var(--color-surface-white-subtler);
 	-webkit-box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
 	border-radius: var(--radius-large2);
+	margin-bottom: 32px;
+}
+.baad_c.active .baad_c_cont[style*="display:none"] {
+	margin-bottom: 0;
 }
 .baad_c_top {
 	-webkit-box-flex: 0;
 	-ms-flex: none;
 	flex: none;
+	display: none;
 }
 .baad_c_top .baad_c_btn {
 	position: relative;
