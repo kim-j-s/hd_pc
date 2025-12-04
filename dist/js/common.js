@@ -481,11 +481,8 @@
 		$snsTarget.toggleClass('active');
 		
 		const isActive = $snsTarget.hasClass('active');
-		// console.log('SNS 목록 : ' + isActive);
 		$this.attr('aria-expanded', isActive);
-		// $this.text(isActive ? '메뉴검색 팝업 닫기' : '메뉴검색 팝업 열기');
 		$this.attr('title', isActive ? '다이렉트 SNS 목록닫기' : '다이렉트 SNS 목록보기');
-		// return false; // 링크 기본동작 방지
 	});
 
 
