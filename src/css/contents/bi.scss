@@ -834,7 +834,7 @@
 			content: '';
 			display: inline-block;
 			height: 28px;
-			margin-left: 4px;
+			margin-left: var(--gap-2);
 			border-left: var(--border-width-static-medium) solid #f8633c;
 			animation: wating 1.5s linear infinite;
 		}
@@ -1233,7 +1233,7 @@
 								content:'';
 								width: 3px;
 								height: 3px;
-								background-color: #33363D;
+								background-color: var(--color-icon-gray);
 								border-radius: 100%;
 							}
 						}
@@ -1804,7 +1804,7 @@
 						// margin-top: 20px;
 						// margin-top: 24px;
 						padding-top: var(--padding-7);
-						border-top: 1px solid var(--color-border-information-light);
+						border-top: var(--border-width-static-regular) var(--color-border-information-light);
 						font-size: var(--font-size-body-small);
 						text-align: center;
 

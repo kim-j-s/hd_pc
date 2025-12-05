@@ -196,19 +196,19 @@ svg {
 		line-height: 150%;
 	}
 	&.s_2 {
-		border-radius: 4px;
+		border-radius: var(--radius-xsmall3);
 		font-size: var(--font-size-body-small);
 		font-weight: 400;
 		line-height: 150%;
 	}
 	&.s_3 {
-		border-radius: 4px;
+		border-radius: var(--radius-xsmall3);
 		font-size: 12px;
 		font-weight: 400;
 		line-height: 150%;
 	}
 	&.s_4 {
-		border-radius: 4px;
+		border-radius: var(--radius-xsmall3);
 		font-size: 12px;
 		font-weight: 400;
 		line-height: 150%;

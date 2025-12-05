@@ -318,9 +318,6 @@
 	}
 	&_s_b1 {
 		//b1
-		// gap: 2px;
-		// min-width: 48px;
-		// height: var(--button-size-xsmall);
 		justify-content: flex-start;
 		height: var(--size-height-10);
 		padding: 2px var(--padding-6);
@@ -337,7 +334,6 @@
 		//xs
 		gap: 2px;
 		min-width: 48px;
-		// height: var(--button-size-xsmall);
 		padding: 2px var(--padding-4);
 		border-radius: var(--radius-small3);
 		font-size: var(--font-size-button-xsmall-bold);
@@ -773,9 +769,6 @@
 			&.sm {
 				padding: 2px 10px;
 				background-size: 16px auto;
-				.text {
-					// padding-left: 18px;
-				}
 			}
 		}
 	}

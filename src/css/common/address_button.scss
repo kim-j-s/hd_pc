@@ -42,7 +42,7 @@
 			.item_list {
 				position: relative;
 				display: block;
-				padding-right: var(--padding-3);
+				padding-left: var(--padding-3);
 				color: var(--color-text-basic);
 
 				&:before {
@@ -52,7 +52,7 @@
 					content:'';
 					width: 3px;
 					height: 3px;
-					background-color: #33363D;
+					background-color: var(--color-icon-gray);
 					border-radius: 100%;
 				}
 				
@@ -65,11 +65,6 @@
 				&::before {
 					content: none;
 				}
-				// 접근성 관련 삭제
-				// + .ad_stat {
-				// 	display: block;
-				// }
-				// 접근성 관련 삭제
 			}
 		}
 		&:focus {

@@ -109,7 +109,7 @@
 				padding-right: 34px;
 			}
 			&.chk_label_ty2 {
-				padding-left: 32px;
+				padding-left: var(--padding-9);
 				&::before {
 					top: 1px;
 					width: 24px;
@@ -131,7 +131,7 @@
 				}
 			}
 			&.chk_label_ty3 {
-				padding-left: 32px;
+				padding-left: var(--padding-9);
 				&::before {
 					width: 24px;
 					height: 24px;
@@ -158,7 +158,7 @@
 				> .label_cont {
 					font-size: var(--font-size-body-small);
 					.hd_badge {
-						margin-left: 4px;
+						margin-left: var(--gap-2);
 					}
 				}
 				&::before {
@@ -261,7 +261,7 @@
 					}
 				}
 				&.text_empty {
-					padding-left: 32px;
+					padding-left: var(--padding-9);
 					&.lg {
 						padding-left: 40px;
 					}
@@ -495,7 +495,7 @@
 			& + .chk_label {
 				width: 24px;
 				height: 24px;
-				padding-left: 24px;
+				padding-left: var(--padding-8);
 				border-radius: var(--radius-small2);
 			}
 		}
@@ -572,7 +572,7 @@
 		// }
 
 		.chk_lby {
-			padding-left: 32px;
+			padding-left: var(--padding-9);
 		}
 
 		.ag_more_btn {

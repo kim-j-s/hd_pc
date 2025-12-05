@@ -153,9 +153,9 @@
 						}
 	
 						~ dt {
-							padding-left: 32px;
+							padding-left: var(--padding-9);
 							padding-left: var(--gap-6);
-							// padding-left: 24px;
+							// padding-left: var(--padding-8);
 						}
 	
 						~ dd {

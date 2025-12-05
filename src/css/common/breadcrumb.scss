@@ -30,7 +30,7 @@
 			}
 
 			& + li {
-				padding-left: 24px;
+				padding-left: var(--padding-8);
 				&::after {
 					content: '';
 					position: absolute;

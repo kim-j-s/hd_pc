@@ -103,7 +103,7 @@
 	.acd_head {
 		.acd_btn {
 			&[class*=acd_ico_]{
-				padding-left: 32px;
+				padding-left: var(--padding-9);
 				background-repeat: no-repeat;
 				// background-position: left top;
 				background-position: left center;
@@ -470,7 +470,7 @@
 			.acd_head_title {
 				flex: none;
 				width: 134px;
-				padding-left: 32px;
+				padding-left: var(--padding-9);
 				font-weight: 700;
 				font-size: var(--font-size-heading-xsmall);
 				color: var(--color-text-static);

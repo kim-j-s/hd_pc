@@ -345,7 +345,7 @@
 			// 삭제
 			.dd {
 				// background-color: var(--color-background-white);
-				margin-top: 12px;
+				margin-top: var(--gap-4);
 				font-size: 0;
 				img {
 					display: block;
@@ -667,7 +667,7 @@
 		.acd_item_ty5 {
 			.acd_head_title {
 				width: 170px;
-				padding-left: 24px;
+				padding-left: var(--padding-8);
 				background-size: 20px auto;
 			}
 
@@ -687,7 +687,7 @@
 		.info_gray.ty4 {	
 			.title_h3 {
 				&.notice {
-					padding-left: 24px;
+					padding-left: var(--padding-8);
 					background: url(../images/icon/point_circle.svg) no-repeat left 50%/20px auto;
 					color: var(--color-text-basic)s;
 				}
