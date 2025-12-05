@@ -597,7 +597,7 @@
 		.card_cont {
 			margin-top: var(--gap-5);
 			padding-top: var(--padding-6);
-			border-top: var(--border-width-static-regular) #e1e3ea;
+			border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 			.comp_wrap.key_number {
 				& + .btn_area {
 					margin-top: var(--gap-4);

@@ -235,8 +235,8 @@
 					align-items: center;
 					height: 100%;
 					padding: 12px;
-					border-radius: 16px;
-					border: 1px solid #E1E3EA;
+					border-radius: var(--radius-medium3);
+					border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 					transition: border-color 0.3s;
 					&::before {
 						content: none;

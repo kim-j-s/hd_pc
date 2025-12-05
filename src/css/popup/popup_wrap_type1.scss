@@ -39,11 +39,13 @@
 				.popup_cont {
 					padding-top: var(--padding-5);
 					padding-bottom: var(--padding-6);
-					// padding: var(--gap-4) var(--number-10) var(--padding-6) var(--number-10);
 					text-align: center;
 
 					.pl_msg_top {
 						font-size: var(--font-size-heading-small);
+						+ .info_text {
+							margin-top: var(--gap-5);
+						}
 					}
 
 					.pl_txt1 {
