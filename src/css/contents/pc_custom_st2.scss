@@ -1351,7 +1351,7 @@
 				.item_top {
 					flex-direction: row;
 					align-items: center;
-					gap: 4px;
+					gap: var(--gap-2);
 	
 					.title_info {
 						.main_title {

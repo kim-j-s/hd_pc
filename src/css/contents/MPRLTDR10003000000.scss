@@ -339,7 +339,7 @@
 	dl {
 		display: flex;
 		align-items: center;
-		gap: 4px;
+		gap: var(--gap-2);
 
 		dt, dd {
 			font-size: var(--font-size-body-small);
@@ -484,7 +484,7 @@
 
 			.head_desc_text {
 				display: flex;
-				gap: 4px;
+				gap: var(--gap-2);
 				margin: 8px 0;
 				font-size: var(--font-size-body-small);
 				color: var(--color-text-subtle);
@@ -923,7 +923,7 @@
 	> .list {
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
+		gap: var(--gap-2);
 
 		.item_title {
 			font-size: var(--font-size-label-medium);
@@ -932,7 +932,7 @@
 		.item_title_ty2 {
 			display: flex;
 			justify-content: space-between;
-			gap: 4px;
+			gap: var(--gap-2);
 			font-size: var(--font-size-label-medium);
 		}
 
@@ -953,7 +953,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 4px;
+		gap: var(--gap-2);
 
 		& ~ .list {
 			margin-top: var(--gap-5);

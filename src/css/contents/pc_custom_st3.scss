@@ -334,7 +334,7 @@
 		> li {
 			position: relative;
 			display: flex;
-			gap: 4px;
+			gap: var(--gap-2);
 			font-size: var(--font-size-body-medium);
 			& ~ li {
 				padding-left: 25px;

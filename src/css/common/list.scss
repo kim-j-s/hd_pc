@@ -481,7 +481,7 @@
 			// &:not(:has(a)){
 			// 	display: flex;
 			// 	flex-direction: column;
-			// 	gap: 4px;
+			// 	gap: var(--gap-2);
 			// }
 
 			i {
@@ -508,7 +508,7 @@
 				// roll-button 접근성 주석
 				// display: flex;
 				// flex-direction: column;
-				// gap: 4px;
+				// gap: var(--gap-2);
 
 				> span {
 					display: block;

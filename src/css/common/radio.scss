@@ -58,10 +58,6 @@
 
 		&:checked {
 			& + label {
-				// &::before:has(.logo_add:not(.logo_add)) {
-				// 	background: var(--color-element-primary) url(../images/icon/check_ty1.svg) no-repeat center center / 14px auto;
-				// 	border: var(--border-width-static-regular) solid var(--color-element-primary);
-				// }
 				&::before {
 					background: var(--color-element-primary) url(../images/icon/check_ty1.svg) no-repeat center center / 14px auto;
 					border: var(--border-width-static-regular) solid var(--color-element-primary);
@@ -335,7 +331,6 @@
 			label {
 				.label_cont {
 					display: flex;
-					// width: 100%;
 					align-items: center;
 					justify-content: space-between;
 
@@ -360,8 +355,6 @@
 		margin-top: var(--gap-5);
 	}
 }
-
-
 
 .radio_group_wrap.column {
 	flex-direction: column;
@@ -396,7 +389,7 @@
 	.start_radio {
 	  direction: rtl; // 별을 오른쪽부터 왼쪽으로 찍기 위해
 	  display: inline-flex;
-	  gap: 4px;
+		gap: var(--gap-2);
 	
 	  input {
 		position: absolute;
