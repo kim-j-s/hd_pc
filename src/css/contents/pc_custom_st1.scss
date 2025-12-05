@@ -1019,7 +1019,7 @@ body {
 					}
 
 					&:has(.acd_btn[aria-expanded="false"]){
-						padding-bottom: 16px;
+						padding-bottom: var(--padding-6);
 					}
 					&:has(.acd_btn[aria-expanded="true"]){
 						padding-bottom: 24px;
@@ -1101,7 +1101,7 @@ body {
 				}
 
 				&.active {
-					padding-bottom: 16px;
+					padding-bottom: var(--padding-6);
 
 					& ~ li {
 						.info,
@@ -1226,7 +1226,7 @@ body {
 				}
 
 				&.active {
-					padding-bottom: 16px;
+					padding-bottom: var(--padding-6);
 
 					& ~ li {
 						dl dd,

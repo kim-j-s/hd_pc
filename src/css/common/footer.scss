@@ -162,7 +162,7 @@
 				color: var(--color-text-disabled-on);
 				address {
 					> span {
-						padding-right: 4px;
+						padding-right: var(--padding-2);
 					}
 				}
 			}

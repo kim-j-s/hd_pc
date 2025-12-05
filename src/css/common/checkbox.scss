@@ -672,7 +672,7 @@
 		padding: 4px 0 0 28px;
 		.badge_wrap {
 			width: auto;
-			gap:4px;
+			gap: var(--gap-2);
 		}
 		.btn_link {
 			position: relative;
@@ -680,7 +680,7 @@
 		}
 	}
 	.chk_lby3 {
-		padding-top: 16px;
+		padding-top: var(--padding-6);
 	}
 	.ag_more_btn {
 		position: absolute;

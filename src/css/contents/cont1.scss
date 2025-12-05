@@ -107,7 +107,7 @@
 			border: 1px solid #B1B8BE;
 			background-repeat: no-repeat;
 			background-position: center center;
-			background-color: #fff;
+			background-color: var(--color-background-white);
 			transform: translateY(-50%);
 			&.stm_l {
 				left: 0;
@@ -132,7 +132,7 @@
 	&_top {
 		.ds1 {
 			height: 110px;
-			padding-top: 16px;
+			padding-top: var(--padding-6);
 			&_inner {
 				&_text {
 					font-size: 24px;
@@ -165,7 +165,7 @@
 		}
 		.ds2 {
 			position: relative;
-			margin: 16px 0;
+			margin: var(--gap-5) 0;
 			&::before {
 				content: '';
 				position: absolute;

@@ -4,13 +4,13 @@
 		
 	}
 	.chk_group_cont {
-		padding-top: 16px;
+		padding-top: var(--padding-6);
 		.card_list_wrap {
 			> li {
 				.card_wrap {
 					> dd {
 						margin-top: var(--gap-7);
-						padding-top: 24px;
+						padding-top: var(--padding-8);
 					}
 				}
 			}
@@ -44,14 +44,14 @@
 			}
 		}
 		dl {
-			margin: 16px 0 0 16px;
+			margin: var(--gap-5) 0 0 var(--gap-5);
 			display: flex;
 			justify-content: space-between;
 			align-items: top;
 			gap: var(--gap-5);
 			dt {
 				position: relative;
-				padding-left: 8px;
+				padding-right: var(--padding-3);
 				word-wrap: break-word;
 				word-break: auto-phrase;
 				&::before {
@@ -86,7 +86,7 @@
 
 	.ag_groups_top {
 		//padding: 20px;
-		padding: var(--padding-8) 20px;
+		padding: var(--padding-8) var(--padding-7);
 		border-radius: var(--radius-large2);
 		border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 		+ .ag_group_wrap {
@@ -142,7 +142,7 @@
 		}
 
 		> .badge_wrap {
-			margin-bottom: 4px;
+			margin-bottom: var(--gap-2);
 		}
 
 		.title_sub {
@@ -198,7 +198,7 @@
 				}
 
 				&.dot_mod {
-					padding-left: 8px;
+					padding-right: var(--padding-3);
 					&::before {
 						content: '';
 						position: absolute;
@@ -223,8 +223,8 @@
 
 		// agc_item_cont
 		.agc_item_cont {
-			padding-top: 16px;
-			padding-left: 16px;
+			padding-top: var(--padding-6);
+			padding-left: var(--padding-6);
 
 			&:has(.dot_none){
 				padding-top: var(--padding-3);
@@ -234,7 +234,7 @@
 		.aic_list {
 			> li {
 				position: relative;
-				padding-left: 8px;
+				padding-right: var(--padding-3);
 				font-size: var(--font-size-body-small);
 				&::before {
 					content: '';
@@ -280,7 +280,7 @@
 		// agc_item_sub_txt
 		.agc_item_sub_txt {
 			margin-top: var(--gap-5);
-			padding-left: 4px;
+			padding-left: var(--padding-2);
 			font-size: var(--font-size-body-small);
 			color: var(--color-text-subtle);
 		}
@@ -327,7 +327,7 @@
 	.ags_cont {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 12px 20px;
+		gap: var(--gap-4) var(--gap-6);
 		margin-top: var(--gap-5);
 	}
 }
@@ -339,7 +339,7 @@
 }
 
 .agree_graph {
-	margin: 16px 0;
+	margin: var(--gap-5) 0;
 	img {
 		display: block;
 		width: 100%;
@@ -354,7 +354,7 @@
 		justify-content: center;
 		position: relative;
 		width: 100%;
-		margin-bottom: 16px;
+		margin-top: var(--gap-5);
 		&::after {
 			content:"";
 			display:block;
@@ -461,7 +461,7 @@
 	width: 100%;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	margin-bottom: 16px;
+	margin-top: var(--gap-5);
 	
 	// div {
 	// 	width: calc(100% - 68px);
@@ -495,7 +495,7 @@
 	.sep_cont {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 12px 20px;
+		gap: var(--gap-4) var(--gap-6);
 		margin-top: var(--gap-5);
 	}
 }

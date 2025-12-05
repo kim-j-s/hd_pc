@@ -2,15 +2,12 @@
 // breadcrumb
 .breadcrumb {
 	flex: none;
-	// + .container {
-	// 	padding-top: var(--gap-8);
-	// }
 }
 
 .breadcrumb_inner {
 	width: 1188px;
 	margin: 0 auto;
-	padding-right: 4px;
+	padding-right: var(--padding-2);
 	
 	&_list {
 		display: flex;

@@ -84,8 +84,8 @@
 			}
 			.sub_info {
 				display: flex;
-				gap: 8px;
-				margin-top: 4px;
+				gap: var(--gap-3);
+				margin-top: var(--gap-2);
 
 				> span {
 					flex: 1 0 auto;
@@ -147,7 +147,7 @@
 						> span {
 							vertical-align: top;
 							&.point {
-								padding-left: 4px;
+								padding-left: var(--padding-2);
 								font-weight: 700;
 							}
 						}
@@ -208,7 +208,7 @@
 			flex-basis: 50%;
 			padding-left: var(--gap-8);
 			margin-left: var(--gap-8);
-			border-left: 1px solid var(--color-divider-gray-light);
+			border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
 
 			.tit {
 				font-size: var(--font-size-body-medium);
@@ -509,7 +509,7 @@
 			color: var(--color-text-primary-bold);
 
 			& + .p_title {
-				margin-top: 4px;
+				margin-top: var(--gap-2);
 			}
 		}
 		.p_title {
@@ -736,7 +736,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 8px;
+		gap: var(--gap-3);
 
 		& ~ .list {
 			margin-top: var(--gap-5);
@@ -766,7 +766,7 @@
 					}
 				}
 				& + .cont_text_sub {
-					margin-top: 4px;
+					margin-top: var(--gap-2);
 				}
 			}
 	
@@ -1178,7 +1178,7 @@
 			}
 			.item_top {
 				margin-top: var(--gap-6);
-				margin-bottom: 4px;
+				margin-bottom: var(--gap-2);
 			}
 		}
 
@@ -1964,7 +1964,7 @@
 }
 
 .install_step {
-	border-radius: 24px;
+	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	background: var(--color-surface-white);
 	padding: var(--padding-8) var(--padding-7);

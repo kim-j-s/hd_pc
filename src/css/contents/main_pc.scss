@@ -344,7 +344,7 @@
 
 			// 삭제
 			.dd {
-				// background-color: #fff;
+				// background-color: var(--color-background-white);
 				margin-top: 12px;
 				font-size: 0;
 				img {
@@ -661,7 +661,7 @@
 		padding-top: var(--gap-11);
 
 		&:first-child {
-			padding-top: 20px;
+			padding-top: var(--padding-7);
 		}
 
 		.acd_item_ty5 {
@@ -1214,7 +1214,7 @@
 	}
 	.main_title {
 		display: block;
-		margin-top: 4px;
+		margin-top: var(--gap-2);
 		font-size: var(--font-size-heading-xsmall);
 	}
 	.btn_area {

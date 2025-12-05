@@ -18,7 +18,7 @@
 			cursor: default;
 
 			.title_info .main_title {
-				font-size: var(--font-size-heading-small);//스타일우선 순위 문제로 중복선언함
+				font-size: var(--font-size-heading-small);
 			}
 			.item_inner {
 				cursor: default;
@@ -135,11 +135,6 @@
 				outline-offset: -2px;
 			}
 		}
-
-
-
-
-
 	}
 
 	.view_cont + .btn_area {
@@ -167,9 +162,9 @@
 			}
 
 			.navigation_label {
-				color: var(--color-text-subtle);
-				font-size: var(--font-size-body-small);
 				flex-shrink: 0;
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-subtle);
 
 				& + i {
 					display: block;
@@ -195,12 +190,12 @@
 		border-radius: var(--radius-medium3);
 
 		&.no_img {
-			width: 100%;
-			height: 120px;
-			background: var(--color-surface-gray-subtler);
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			width: 100%;
+			height: 120px;
+			background: var(--color-surface-gray-subtler);
 		}
 
 		img {
@@ -231,12 +226,12 @@
 }
 
 .vod_preview {
+	position: relative;
+	display: flex;
 	width: 100%;
 	height: auto;
 	border-radius: var(--radius-large2);
 	aspect-ratio: 1.778;
-	display: flex;
-	position: relative;
 	overflow: hidden;
 
 	img {
@@ -244,33 +239,31 @@
 	}
 
 	.vod_title {
+		position: absolute;
+		top: 0;
+		left: 0;
 		display: flex;
 		align-items: end;
 		width: 100%;
 		height: 100%;
 		padding: 10px 16px;
-		background: rgba(0, 0, 0, 0.5);
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		color: #ffffff;
-		font-size: var(--font-size-heading-xsmall);
 		font-weight: 700;
+		font-size: var(--font-size-heading-xsmall);
+		color: #ffffff;
+		background: rgba(0, 0, 0, 0.5);
 
 		&:before {
-			display: block;
 			content: "";
-			width: 48px;
-			height: 48px;
-			border-radius: var(--radius-max);
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
-
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: var(--radius-max);
 			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 			background: #fff url(../images/icon/icon_play.svg) no-repeat 12px center/ 24px 24px;
+			transform: translate(-50%, -50%);
 		}
 	}
 
@@ -284,18 +277,15 @@
 	.acd_item.acd_item_ty2 {
 		.acd_head {
 			padding: var(--padding-6) var(--padding-7);
-
 			.acd_btn {
 				font-size: var(--font-size-heading-xsmall);
-			}
-			
+			}			
 			&.active + .acd_cont {
-				padding: var(--padding-5) var(--padding-7) var(--padding-6);//var(--gap-4) var(--padding-6);
-
+				padding: var(--padding-5) var(--padding-7) var(--padding-6);
 				#mov_youtube_caption {
 					visibility: visible;
 					opacity: 1;
-					color: #000;
+					color: var(--color-text-basic);
 				}
 			}
 		}
@@ -317,8 +307,6 @@
 		direction: rtl; // 별을 오른쪽부터 왼쪽으로 찍기 위해
 		display: inline-flex;
 		gap: var(--gap-2);
-		
-
 		input {
 			position: absolute;
 			width: 1px;
@@ -368,37 +356,35 @@
 	//	clear: both;
 
 	.inner .info_area {
-		width: 100%;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: var(--gap-2);
-		flex-wrap: wrap;
+		width: 100%;
 
 		.hd_badge {
 			flex-shrink: 0;
 		}
 
 		.meta {
+			position: relative;
 			display: inline-block;
-			color: var(--color-text-subtle);
 			font-size: var(--font-size-body-small);
 			color: var(--color-text-subtle);
 			white-space: nowrap;
-			position: relative;
 
 			& + .meta {
 				padding-left: 9px;
 
 				&:before {
-					display: block;
 					content: "";
-					width: 1px;
-					height: 12px;
-					//margin: 0 4px;
-					background: var(--color-border-gray-light);
 					position: absolute;
 					top: 50%;
-					left: 2px;//0px;
+					left: 2px;
+					display: block;
+					width: 1px;
+					height: 12px;
+					background: var(--color-border-gray-light);
 					transform: translateY(-50%);
 				}
 			}
@@ -406,8 +392,8 @@
 	} //info_area
 
 	.inner .review_cont {
-		font-size: var(--font-size-body-medium);
 		display: -webkit-box;
+		font-size: var(--font-size-body-medium);
 		line-clamp: 2;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
@@ -418,8 +404,8 @@
 		position: absolute;
 		top: var(--padding-8);
 		right: var(--padding-7);
-		width: 32px;//24px;
-		height: 32px;//24px;
+		width: 32px;
+		height: 32px;
 		font-size: 0;
 		transition: all 0.3s;
 
