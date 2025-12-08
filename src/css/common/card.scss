@@ -1627,6 +1627,39 @@
 			width: 100% !important;
 			margin-left: 0 !important;
 		}
+		.item_inner {
+			.inp_radio,
+			.inp_checkbox {
+				.chk_label {
+					&::after {
+						content: none;
+					}
+				}
+			}
+			.checkbox_group_wrap {
+				.inp_radio,
+				.inp_checkbox {
+					input {
+						&:checked {
+							+ .chk_label {
+								.label_cont {
+									&::after {
+										content: '선택됨';
+										position: absolute;
+										width: 1px;
+										height: 1px;
+										overflow: hidden;
+									}
+								}
+							}
+						}
+					}
+					.chk_label {
+						cursor: auto;
+					}
+				}
+			}
+		}
 	}
 }
 
