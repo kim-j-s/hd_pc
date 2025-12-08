@@ -161,10 +161,10 @@ function openHDPopup($triggerEl, target) {
 			const $iframe = $target.find('iframe');
 			if ($iframe.length) {
 				$iframe.attr('tabindex', '0').focus(); // iframe 자체 포커스
-				if($target.find('.sentinel').length === 0) {
+				/*if($target.find('.sentinel').length === 0) {
 					$target.prepend('<div class="sentinel first" tabindex="0"></div>');
 					$target.append('<div class="sentinel last" tabindex="0"></div>');
-				}
+				}*/
 				// const iframeEl = $iframe[0];
 				// iframeEl.addEventListener('load', function() {
 				// 	try {
