@@ -719,28 +719,26 @@ function simpleInfo(){
 			const simpleHeight = $targetChild.height();
 
 			// 보여지는 상태일 때만 위치 계산
-			let targetOffsetTop = ($target.css('display') !== 'none') ? $target.position().top : null;
+			let targetOffsetTop = ($target.css('display') !== 'none') ? ($target[0].getBoundingClientRect().top - $wrapper[0].getBoundingClientRect().top) : null;
 			
-			if ($target.length) {
-				$target.parent().css('position', 'relative');
+			$target.parent().css('position', 'relative');
 
-				// 펼치기
-				if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
-					$targetChild.addClass('active').stop().show();
-					$target.closest('.position_event_wrap')
-						.find('.tag_item_wrap.sticky')
-						.css('top', simpleHeight)
-						.addClass('active');
+			// 펼치기
+			if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
+				$targetChild.addClass('active').stop().show();
+				$target.closest('.position_event_wrap')
+					.find('.tag_item_wrap.sticky')
+					.css('top', simpleHeight)
+					.addClass('active');
 
-				// 접기
-				} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
-					$target.removeAttr('style').removeClass('active');
-					$targetChild.removeClass('active').stop().hide();
-					$target.closest('.position_event_wrap')
-						.find('.tag_item_wrap.sticky')
-						.css('top', 0)
-						.removeClass('active');
-				}
+			// 접기
+			} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+				$target.removeAttr('style').removeClass('active');
+				$targetChild.removeClass('active').stop().hide();
+				$target.closest('.position_event_wrap')
+					.find('.tag_item_wrap.sticky')
+					.css('top', 0)
+					.removeClass('active');
 			}
 		}
 
