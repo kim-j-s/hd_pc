@@ -443,7 +443,6 @@
 		// 숫자만 허용
 		const val = $this.val().replace(/[^0-9]/g, '');
 		$this.val(val);
-		console.log('?');
 	});
 
 	// 달력 날짜 입력 항목 focus 시 attr 추가 및 blur 시 자리수 정리 기능 추가
@@ -563,7 +562,6 @@
 
 	// 전화번호 입력
 	$DOM.on('focus', '.input_text.phone_full input', function () {
-		// console.log('진입');	
 		const $this = $(this);
 		// 읽기 전용 또는 비활성화 상태일 경우 중단
 		if ($this.prop('readonly') || $this.prop('disabled')) {
@@ -586,7 +584,6 @@
 	});
 
 	$DOM.on("blur", ".input_text.phone_full input", function () {
-		console.log('phone_full blur');
 		let $this = $(this);
 		let val = $this.val().replace(/[^0-9*]/g, ""); // 숫자만 남김
 	
@@ -615,7 +612,6 @@
 		$(this).val(val.replace(/\//g, ''));
 	});
 	$DOM.on("blur", ".input_text .ex_period", function () {
-		// console.log('유효기간 진입');
 		let $this = $(this);
 		let val = $this.val().replace(/[^0-9]/g, ""); // 숫자만 남김
 		val = val.substring(0, 4);
@@ -1082,7 +1078,7 @@ $(function(){
 			// 그룹 전체 라디오 제어
 			$allCheck.on('change', function () {
 				const isChecked = $(this).is(':checked');
-				console.log(isChecked);
+				// console.log(isChecked);
 
 				if($(this).closest('.ag_groups').find('.ag_total').length) {
 					// 상위에 ag_total가 있으면 기존방식
@@ -1458,9 +1454,7 @@ $(function(){
 		const currentScrollTopInPopup = $thisPopupCont.scrollTop();
 		const scrollHeight = this.scrollHeight; // DOM element 접근
 		const clientHeight = $thisPopupCont.height();
-	
-		// console.log('currentScrollTopInPopup: ' + currentScrollTopInPopup);
-	
+		
 		// 스크롤이 최하단에 도달했는지 확인
 		if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
 			$fixedButton.hide();
@@ -1491,7 +1485,7 @@ $(function(){
 				moveTargetPosition = $popupContThis.scrollTop();
 				scrollingChk = false; // 스크롤 완료 후 플래그 해제
 			});
-			console.log('event 1');
+			// console.log('event 1');
     } else {
       $popupContThis.animate({
         scrollTop: $popupContThis[0].scrollHeight - $popupContThis.outerHeight()
@@ -1500,7 +1494,7 @@ $(function(){
 				$(this).closest('.popup_wrap').find('.scroll_down').hide();
 				$(this).closest('.popup_wrap').find('.done').show();
 			});
-			console.log('event 2');
+			// console.log('event 2');
     }
   });
 	// e: 상품설명서 주요 내용 스크롤 버튼	
