@@ -670,7 +670,6 @@
 
 	// 건물/주택 구조 선택 모션 이벤트
 	$DOM.on("change", ".radio_group_wrap.structure input", function () {
-		console.log('ss');
 		const target = this;
 		const $pc = $(target).closest('.popup_cont');
 		const $target = $(target).closest('.structure');
