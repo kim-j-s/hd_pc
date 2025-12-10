@@ -457,19 +457,16 @@
 }
 
 .agree_qr_box {
+	position: relative;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	margin-top: var(--gap-5);
-	
-	// div {
-	// 	width: calc(100% - 68px);
-	// }
+	padding-top: var(--gap-5);
 	.qr_box {
 		position: absolute;
-		top: 27px;
-		right: 20px;
+		top: -80px;
+		right: 0;
 		width: 80px;
 		height: 80px;
 		padding: 9px;
@@ -480,6 +477,10 @@
 			width: 60px;
 			height: 60px;
 		}
+	}
+
+	+ .table_wrap {
+		margin-top: var(--gap-5);
 	}
 }
 
