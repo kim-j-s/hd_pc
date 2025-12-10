@@ -3358,6 +3358,7 @@ sup {
 	border-radius: 0px 40px 40px 0px;
 }
 .agree_qr_box {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -3366,12 +3367,12 @@ sup {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-3);
-	margin-top: var(--gap-5);
+	padding-top: var(--gap-5);
 }
 .agree_qr_box .qr_box {
 	position: absolute;
-	top: 27px;
-	right: 20px;
+	top: -80px;
+	right: 0;
 	width: 80px;
 	height: 80px;
 	padding: 9px;
@@ -3382,6 +3383,9 @@ sup {
 .agree_qr_box .qr_box img {
 	width: 60px;
 	height: 60px;
+}
+.agree_qr_box + .table_wrap {
+	margin-top: var(--gap-5);
 }
 .sep_chk_box {
 	margin-top: var(--gap-5);
@@ -5290,14 +5294,10 @@ sup {
 	background-image: none;
 }
 .btn_link.short_cut.rd_box {
-	padding: 2px 10px;
+	padding: 2px 28px 2px 10px;
 	border-radius: var(--radius-small3);
 	border: var(--border-width-static-regular) solid var(--color-button-tertiary-border);
-	background: transparent;
-}
-.btn_link.short_cut.rd_box > .text {
-	padding-right: 18px;
-	background: url(../images/icon/arrowRight_ty4.svg) no-repeat right center/16px auto;
+	background-position: right 8px center;
 }
 .btn_link.short_cut.rd_box.md {
 	padding: 6px 12px;
@@ -8139,48 +8139,6 @@ sup {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
-/* 추후 삭제 */
-.card_item_wrap.card_item_wrap_tyexp2 .card_item input {
-	display: none;
-}
-.card_item_wrap.card_item_wrap_tyexp2 .card_item input + label {
-	padding-left: 0 !important;
-	cursor: auto;
-}
-.card_item_wrap.card_item_wrap_tyexp2 .card_item input + label::before {
-	content: none;
-}
-.card_item_wrap.card_item_wrap_tyexp2 .inner_cont {
-	width: 100% !important;
-	margin-left: 0 !important;
-}
-.card_item_wrap.card_item_wrap_tyexp2 .item_inner .inp_radio .chk_label::after,
-.card_item_wrap.card_item_wrap_tyexp2 .item_inner .inp_checkbox .chk_label::after {
-	content: none;
-}
-.card_item_wrap.card_item_wrap_tyexp2 .item_inner .checkbox_group_wrap .inp_radio .chk_label,
-.card_item_wrap.card_item_wrap_tyexp2 .item_inner .checkbox_group_wrap .inp_checkbox .chk_label {
-	cursor: auto;
-}
-.special_contract_list.card_item_wrap_tyexp2 .inp_radio input,
-.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input {
-	display: none !important;
-}
-.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label,
-.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label {
-	padding-left: 0;
-	cursor: auto;
-}
-.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label::before,
-.special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label::before {
-	content: none;
-}
-/*
-.special_contract_list.card_item_wrap_tyexp2 .inp_radio input + label, .special_contract_list.card_item_wrap_tyexp2 .inp_checkbox input + label {
-	cursor: auto;
-}
-*/
-/* 추후 삭제 */
 /* checkbox */
 /* Checkbox */
 .inp_checkbox {
@@ -10373,6 +10331,9 @@ sup {
 }
 .form_group_wrap > .form_line_ty2 + .row {
 	margin-top: var(--gap-5);
+}
+.form_group_wrap > .form_line_ty3 + .form_line_ty3 {
+	margin-top: var(--gap-9);
 }
 .form_group_wrap .form_group_wrap > .form_line ~ .form_line {
 	margin-top: var(--gap-5);
@@ -13887,6 +13848,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .opt_select_list.opt_case6 .option2 {
 	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center right 24px/20px auto;
+}
+.opt_select_list .option[role="button"] {
+	cursor: pointer;
 }
 .opt_select_list_top {
 	padding-bottom: var(--gap-5);

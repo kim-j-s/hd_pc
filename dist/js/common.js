@@ -10,9 +10,6 @@
 	});
 
 	$DOM.on('click', '.hsu_search', function () {
-		// e.stopPropagation();
-		// 추후 알림, 장바구니 팝업 완료 시 사용
-		// $('.wrap').toggleClass('scroll_lock');
 		$(this).toggleClass('active');
 		const $wrap = $('.all_menu_search_wrap');
 		const $btn = $(this);
@@ -308,11 +305,9 @@
     if(str.length == 0 || str == ''){
 			$count.closest('.counter').attr('aria-label', '입력한 숫자 없음');
 			$count.text('0');
-      // $count.text('0');
     }else{
 			$count.closest('.counter').attr('aria-label', '15개 중 ' + str.length + '개 입력');
 			$count.text(str.length);
-			// $count.text(str.length);
     }
 
     if (str.length > 500) {
@@ -360,8 +355,6 @@
 			// ::before가 존재하는 경우(content가 "none"이 아님)
 			if (content && content !== 'none' && labelText) {
 				selectedTexts.push(labelText);
-			} else {
-				//console.log('skip', i, 'content:', content, 'text:', `"${labelText}"`);
 			}
 		});
 		
@@ -450,7 +443,6 @@
 		// 숫자만 허용
 		const val = $this.val().replace(/[^0-9]/g, '');
 		$this.val(val);
-		console.log('?');
 	});
 
 	// 달력 날짜 입력 항목 focus 시 attr 추가 및 blur 시 자리수 정리 기능 추가
@@ -570,7 +562,6 @@
 
 	// 전화번호 입력
 	$DOM.on('focus', '.input_text.phone_full input', function () {
-		// console.log('진입');	
 		const $this = $(this);
 		// 읽기 전용 또는 비활성화 상태일 경우 중단
 		if ($this.prop('readonly') || $this.prop('disabled')) {
@@ -593,7 +584,6 @@
 	});
 
 	$DOM.on("blur", ".input_text.phone_full input", function () {
-		console.log('phone_full blur');
 		let $this = $(this);
 		let val = $this.val().replace(/[^0-9*]/g, ""); // 숫자만 남김
 	
@@ -622,7 +612,6 @@
 		$(this).val(val.replace(/\//g, ''));
 	});
 	$DOM.on("blur", ".input_text .ex_period", function () {
-		// console.log('유효기간 진입');
 		let $this = $(this);
 		let val = $this.val().replace(/[^0-9]/g, ""); // 숫자만 남김
 		val = val.substring(0, 4);
@@ -668,20 +657,17 @@
 
 
 
-	// 웹접근성 심사 후 활성화
 	// 건물/주택 구조 선택 모션 이벤트
-	// $DOM.on("change", ".radio_group_wrap.structure input", function () {
-	// 	console.log('ss');
-	// 	const target = this;
-	// 	const $pc = $(target).closest('.popup_cont');
-	// 	const $target = $(target).closest('.structure');
-	// 	const targetOffset = $target[0].offsetTop;
+	$DOM.on("change", ".radio_group_wrap.structure input", function () {
+		const target = this;
+		const $pc = $(target).closest('.popup_cont');
+		const $target = $(target).closest('.structure');
+		const targetOffset = $target[0].offsetTop;
 
-	// 	$pc.stop(true, true).animate({ 
-	// 		scrollTop: targetOffset - 200
-	// 	}, 300);
-	// });
-	// 웹접근성 심사 후 활성화
+		$pc.stop(true, true).animate({ 
+			scrollTop: targetOffset - 200
+		}, 300);
+	});
 
 
 	// 즉시 실행 함수
@@ -741,7 +727,6 @@ function simpleInfo(){
 					.removeClass('active');
 			}
 		}
-
 	});
 }
 // 간편정보 노출 방식
@@ -911,13 +896,6 @@ function inputState() {
 
 function inpPhoneFormat() {
 	$('.input_text').each(function() {
-		// if( $(this).hasClass('phone') ){
-		// 	const $inp = $(this).children('.inp').find('input');
-		// 	let val = $inp.val();
-		// 	val = val.replace(/[^0-9*]/g, '');
-		// 	newVal = ' - ' + val.replace(/([0-9*]{4})(?=[0-9*])/g, '$1 - ');
-		// 	$inp.val(newVal).addClass('isVal');
-		// }
 		// 전화번호 입력
 		if( $(this).hasClass('phone_full') ) {
 			const $inp = $(this).children('.inp').find('input');
@@ -943,7 +921,7 @@ function prdFixed() {
 		// const scrollBottom = scrollHeight - windowHeight - st;
 		if (st >= 500) {
 			$('.prd_link_area').show();
-		}else {
+		} else {
 			$('.prd_link_area').hide();
 		}
 		lastScrollTop = st <= 0 ? 0 : st;
@@ -952,26 +930,6 @@ function prdFixed() {
 
 $(window).on('load', function() {
 	inputState();
-	
-	// 폼요소 라디오, 체크박스 타이틀 연결 필요시 살릴 소스
-	// $('.form_line').each(function(index) {
-	// 	const $formBox = $(this);
-	// 	const $formLabel = $formBox.find('.label_tit');
-	// 	const $formRadio = $formBox.find('.radio_group_wrap');
-	// 	const $formCheck = $formBox.find('.checkbox_group_wrap');
-
-	// 	if ($formRadio.length) {
-	// 		const labelId = 'label_radio_' + (index + 1);
-	// 		$formLabel.attr('id', labelId);
-	// 		$formRadio.attr('aria-labelledby', labelId);
-	// 	}
-
-	// 	if ($formCheck.length) {
-	// 		const labelId = 'label_check_' + (index + 1);
-	// 		$formLabel.attr('id', labelId);
-	// 		$formCheck.attr('aria-labelledby', labelId);
-	// 	}
-	// });
 });
 
 $(function(){
@@ -1000,48 +958,7 @@ $(function(){
 
 	// 상품안내 스크롤 이벤트
 	prdFixed();
-
 	review();
-
-	//input disabled&readonly
-	/*
-	$('.input_text input').each(function() {
-		const $this = $(this),
-			  $wrapBox = $this.closest('.comp_wrap'),
-			  $wrapCard = $this.closest('.card'),
-			  $inpBox = $this.closest('.input_text'),
-			  $wrapCalendar = $this.closest('.calendar'),
-			  isDisabled = $this.prop('disabled'),
-			  isReadonly = $this.prop('readonly');
-	
-		if (isReadonly) {
-			if($wrapCard.length) {
-				$wrapBox.addClass('readonly');
-			} else if($wrapCalendar.length) {
-				$this.siblings('.calendar_call').prop('disabled', true);
-			} 
-			if(!$wrapBox.length) {
-				$inpBox.addClass('readonly');
-			} else if ($wrapBox.length) {
-				$inpBox.addClass('readonly');
-			}
-		} 
-		if (isDisabled) {
-			if($wrapCard.length) {
-			  	$wrapBox.addClass('disabled');
-			} else if($wrapCalendar.length) {
-				$this.siblings('.calendar_call').prop('disabled', true);
-			}
-			if(!$wrapBox.length) {
-				$inpBox.addClass('disabled');
-			} else if ($wrapBox.length) {
-				$inpBox.addClass('disabled');
-			}
-		}
-	});
-	*/
-
-	
 
 	// 달력 호출
 	// let $lastCalendarCallBtn = null;
@@ -1057,7 +974,6 @@ $(function(){
 		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
 		dayNamesMin: ['일','월','화','수','목','금','토'],
 		dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
-		// showAnim: "slideDown",
 		duration: 300,
 
 		// 닫기 버튼 추가
@@ -1068,8 +984,7 @@ $(function(){
 
 		// beforeShow: function (input) { 
 		beforeShow: function (input, inst) { 
-			// $("body").addClass('modal_open');
-			const $parentWrap = $(input).closest('.popup_cont'); // ← 핵심]
+			const $parentWrap = $(input).closest('.popup_cont');
 			setTimeout(function() {
 				if ($parentWrap.length) {
 					inst.dpDiv.appendTo($parentWrap);
@@ -1097,16 +1012,8 @@ $(function(){
 		showMonthAfterYear: true,
 		showButtonPanel: false,
 		showOtherMonths: true,
-		// showAnim: 'slideDown',
 		duration: 300,
-		// beforeShow: function () {
-		// 	$("body").addClass('modal_open');
-		// 	setTimeout(function(){
-		// 		$("body").addClass('modal_open');
-		// 	}, 50);
-    // },
 		beforeShow: function (input, inst) { 
-			// $("body").addClass('modal_open');
 			const $parentWrap = $(input).closest('.popup_cont'); // ← 핵심]
 			setTimeout(function() {
 				if ($parentWrap.length) {
@@ -1171,7 +1078,7 @@ $(function(){
 			// 그룹 전체 라디오 제어
 			$allCheck.on('change', function () {
 				const isChecked = $(this).is(':checked');
-				console.log(isChecked);
+				// console.log(isChecked);
 
 				if($(this).closest('.ag_groups').find('.ag_total').length) {
 					// 상위에 ag_total가 있으면 기존방식
@@ -1199,10 +1106,8 @@ $(function(){
 			// 하위 전체 체크 제어
 			$groupWrap.on('change', '.ags_sub_all', function () {
 				const isChecked = $(this).is(':checked');
-				const $agrdoGroupSub = $(this).closest('.agrdo_group_sub');
-	
-				$agrdoGroupSub.find('.ags_sub_chk').prop('checked', isChecked);
-	
+				const $agrdoGroupSub = $(this).closest('.agrdo_group_sub');	
+				$agrdoGroupSub.find('.ags_sub_chk').prop('checked', isChecked);	
 				if (isChecked) {
 					$agrdoGroupSub.prev('.agrdo_group').find('.agr_dept1.ag').prop('checked', true);
 				}
@@ -1212,10 +1117,8 @@ $(function(){
 			$groupWrap.on('change', '.ags_sub_chk', function () {
 				const $agrdoGroupSub = $(this).closest('.agrdo_group_sub');
 				const allSubChk = $agrdoGroupSub.find('.ags_sub_chk');
-				const isAllSubChecked = allSubChk.length === allSubChk.filter(':checked').length;
-	
-				$agrdoGroupSub.find('.ags_sub_all').prop('checked', isAllSubChecked);
-	
+				const isAllSubChecked = allSubChk.length === allSubChk.filter(':checked').length;	
+				$agrdoGroupSub.find('.ags_sub_all').prop('checked', isAllSubChecked);	
 				if (isAllSubChecked) {
 					$agrdoGroupSub.prev('.agrdo_group').find('.agr_dept1.ag').prop('checked', true);
 				}
@@ -1233,10 +1136,10 @@ $(function(){
 					} else if ($this.hasClass('ag') && $this.is(':checked')) {
 						$subGroup.find('input[type="checkbox"]').prop('disabled', false).prop('checked', true);
 					}
-				}
-	
+				}	
 				updateGroupCheckState();
-				updateTotalCheckState(); // 그룹 갱신 시 전체도 갱신
+				// 그룹 갱신 시 전체도 갱신
+				updateTotalCheckState();
 			});
 
 			// ag_group_cont 하위 체크박스 제어
@@ -1244,7 +1147,8 @@ $(function(){
 				const $this = $(this);
 	
 				updateGroupCheckState();
-				updateTotalCheckState(); // 그룹 갱신 시 전체도 갱신
+				// 그룹 갱신 시 전체도 갱신
+				updateTotalCheckState();
 			});
 
 			$groupWrap.on('change', '.agr_r_group', function () {
@@ -1252,18 +1156,13 @@ $(function(){
 				if (!$this.is(':checked')) return;
 				const index = $this.closest('.inp_radio').index();
 				const $agGroupCont = $this.closest('.ag_group_cont');
-				// 25-12-02 수정 - 약관 선택 목록 복수 선택 가능하도록 수정
-				// $agGroupCont.find('.agc_item').each(function () {
-				// 	$(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
-				// });
-				// 25-12-02 수정 - 약관 선택 목록 복수 선택 가능하도록 수정
 				$agGroupCont.find('.agc_item .radio_group_wrap').each(function () {
-					// $(this).find('.radio_group_wrap .inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
 					$(this).find('.inp_radio').eq(index).find('.agr_r_group').prop('checked', true);
 				});
 
 				updateGroupCheckState();
-				updateTotalCheckState(); // 그룹 갱신 시 전체도 갱신
+				// 그룹 갱신 시 전체도 갱신
+				updateTotalCheckState();
 
 			});
 	
@@ -1291,7 +1190,6 @@ $(function(){
 
 				totalDpt2.each(function () {
 					if (!$(this).is(':checked')) {
-						// console.log('단위체크중?');
 						isAllAgreed = false;
 						return false;
 					}
@@ -1314,21 +1212,18 @@ $(function(){
 				ag.each(function () {
 					if (!$(this).is(':checked')) {
 						isAgreed = false;
-						//console.log('ag : ' + isAgreed);
 						return false;
 					}
 				});
 				noag.each(function () {
 					if ($(this).is(':checked')) {
 						isAgreed = false;
-						//console.log('noag : ' + isAgreed);
 						return false;
 					}
 				});
 				dpt2.each(function () {
 					if (!$(this).is(':checked')) {
 						isAgreed = false;
-						//console.log('확인중? : ' + isAgreed);
 						return false;
 					}
 				});
@@ -1336,9 +1231,7 @@ $(function(){
 			});
 	
 			const isAllAgreed = allGroups.length === agreedGroups.length;
-			// console.log('체크 : ' + allGroups.length + ' : ', + agreedGroups.length);
 			$totalCheck.prop('checked', isAllAgreed);
-			// console.log('$totalCheck : ' + $totalCheck);
 		}
 	});
 	// 라디오 약관 동의
@@ -1364,7 +1257,6 @@ $(function(){
 	// 확대 버튼 클릭 이벤트
 	$('.z_up').on('click', function() {
 		const zContent = $(this).closest('.zoom_wrap').find('.zoom_content');
-		// var currentFontSize = parseFloat($('.zoom_content').css('zoom'));
 		var currentFontSize = parseFloat(zContent.css('zoom'));
 		var newFontSize = currentFontSize + 0.1;
 		zContent.css('zoom', newFontSize);
@@ -1474,20 +1366,6 @@ $(function(){
 	}
 	autoCompleteEmail();
 
-
-	// 진입 시 전화번호 포맷 - readonly만 적용
-	// $('.input_text').each(function() {
-	// 	if( $(this).hasClass('phone') && $(this).hasClass('readonly') ){
-	// 		const $inp = $(this).children('.inp').find('input');
-	// 		let val = $inp.val();
-	// 		// console.log(val);
-	// 		// val = val.replace(/[^0-9]/g, '');
-	// 		// newVal = ' - ' + val.replace(/(\d{4})(?=\d)/g, '$1 - ');
-	// 		$inp.val(newVal).addClass('isVal');
-	// 	}
-	// });
-
-
 	/* 페이지 내 스크롤 이벤트 */
 	// 모바일 - MY Page - 보험진단 서비스 - 보험 진단 결과 페이지에서만 사용 중
 	$('.container').on('scroll', function(){
@@ -1576,9 +1454,7 @@ $(function(){
 		const currentScrollTopInPopup = $thisPopupCont.scrollTop();
 		const scrollHeight = this.scrollHeight; // DOM element 접근
 		const clientHeight = $thisPopupCont.height();
-	
-		// console.log('currentScrollTopInPopup: ' + currentScrollTopInPopup);
-	
+		
 		// 스크롤이 최하단에 도달했는지 확인
 		if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
 			$fixedButton.hide();
@@ -1598,7 +1474,6 @@ $(function(){
 		const $moveTarget = $popupContThis.find('.move');
 		let moveTargetPosition = 0;
 		if ($moveTarget.length) {
-			// console.log( '확인한 갯수 : ' + $moveTarget.length);
 			moveTargetPosition = $moveTarget.position().top;
 		}
 
@@ -1610,7 +1485,7 @@ $(function(){
 				moveTargetPosition = $popupContThis.scrollTop();
 				scrollingChk = false; // 스크롤 완료 후 플래그 해제
 			});
-			console.log('event 1');
+			// console.log('event 1');
     } else {
       $popupContThis.animate({
         scrollTop: $popupContThis[0].scrollHeight - $popupContThis.outerHeight()
@@ -1619,7 +1494,7 @@ $(function(){
 				$(this).closest('.popup_wrap').find('.scroll_down').hide();
 				$(this).closest('.popup_wrap').find('.done').show();
 			});
-			console.log('event 2');
+			// console.log('event 2');
     }
   });
 	// e: 상품설명서 주요 내용 스크롤 버튼	
@@ -1767,8 +1642,6 @@ function prograssCar(){
 
 		const newW = Math.round((barW / allW) * 100),	//진행된 너비 % 변환
 					startW = Math.round((8 / allW) * 100);	//기준일 spot % 변환
-					// newstartW = Math.round((spotW / allW) * 100), //기준일 badge 너비 % 변환
-					// spacePer = (2 / allW) * 100;
 
 		$prograss.children('.ing').removeClass('full');
 
@@ -1776,7 +1649,6 @@ function prograssCar(){
 		$bar.find('.newStart').removeClass('small');
 		$bar.find('.newStart').children('.spot').css({ left: '', 'margin-right': '' });
 		$bar.find('.newStart').children('em').css('left', '');
-		// console.log('실행');
 
 		// bar가 시작일과 겹칠 때
 		if((allW - barW) <= spotW + spaceW){
@@ -1849,15 +1721,8 @@ $(window).on('click', function(e) {
 	var $asm_text = $('.hsu_search .text');
 	var $asm_wrap = $('.all_menu_search_wrap');
 	if (!$target.closest($asm).length && !$target.closest($asm_wrap).length) {
-		// console.log('외부 클릭 감지:', $target);
 		$asm_wrap.removeClass('active');
 		$asm.attr('aria-expanded', false).removeClass('active');
 		$asm_text.text('메뉴검색 팝업 열기');
-		// $('.wrap').removeClass('scroll_lock');
-		
-		if(!$target.hasClass('hus_btn')) {
-			// 추후 알림, 장바구니 팝업 완료 시 사용
-			// $('.wrap').removeClass('scroll_lock');
-		}
 	}
 });
