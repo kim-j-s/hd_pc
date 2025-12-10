@@ -3171,7 +3171,15 @@
 .pew_exception .sub_info span + span {
 	font-weight: 700;
 }
+.simple_info_wrap.ty2 {
+	margin: 0;
+}
 .simple_info_wrap.ty2 .simple_info_item {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: calc(100% + 48px);
 	padding-top: var(--padding-8);
 	padding-bottom: var(--padding-7);
 }
