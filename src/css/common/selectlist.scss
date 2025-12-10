@@ -306,6 +306,11 @@
 	
 	}
 
+	.option {
+		&[role="button"]{
+			cursor: pointer;
+		}
+	}
 }
 
 
