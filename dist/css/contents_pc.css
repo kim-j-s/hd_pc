@@ -984,9 +984,6 @@
 	margin-top: var(--gap-2);
 	font-size: var(--font-size-label-small);
 }
-.hd_btn_s_2 {
-	min-width: 100px;
-}
 .btn_area {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;

@@ -172,6 +172,9 @@ sup {
 .wrap:has(.footer[style*="display: none"]) .container {
 	padding-bottom: 0;
 }
+.wrap:has(.b_float_cont) {
+	padding-bottom: 140px;
+}
 .wrap.scroll_lock {
 	height: 100%;
 	overflow: hidden;
@@ -2661,6 +2664,76 @@ sup {
 }
 /* footer */
 /* Footer */
+.b_float_cont {
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	left: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-8);
+	width: 836px;
+	padding: var(--padding-5) var(--padding-8) var(--padding-6) var(--padding-8);
+	border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
+	background: var(--color-surface-white);
+	-webkit-box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	-webkit-transform: translateX(calc(-50% - 176px));
+	transform: translateX(calc(-50% - 176px));
+}
+.b_float_cont > .hd_btn.hd_btn_ty_3 {
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+}
+.b_float_cont > .hd_btn.hd_btn_ty_1 {
+	-webkit-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+	order: 3;
+}
+.b_float_cont .b_float_cont_fin {
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.b_float_cont .b_float_cont_fin .bff_in {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: var(--gap-4);
+}
+.b_float_cont .b_float_cont_fin .stat_data {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-weight: 700;
+	color: var(--color-text-primary-bold);
+	font-size: var(--font-size-heading-large);
+	white-space: nowrap;
+}
+.b_float_cont .b_float_cont_fin .bff_in_msg {
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-information);
+}
 .footer {
 	width: 100%;
 	height: 203px;
@@ -4924,7 +4997,7 @@ sup {
 	min-width: calc(50% - 5px);
 }
 .hd_btn_s_2 {
-	min-width: 48px;
+	min-width: 78px;
 	padding: 11px var(--padding-7);
 	font-weight: 700;
 	font-size: var(--font-size-button-large-bold);
@@ -4949,9 +5022,9 @@ sup {
 .hd_btn_s_4 {
 	min-width: 52px;
 	padding: 6px calc(var(--padding-5) - 2px);
-	border-radius: var(--radius-medium1);
-	font-size: var(--font-size-button-small-bold);
 	font-weight: 700;
+	font-size: var(--font-size-button-small-bold);
+	border-radius: var(--radius-medium1);
 }
 .hd_btn_s_4 .hd_icon {
 	width: 16px;
@@ -4975,9 +5048,9 @@ sup {
 	gap: 2px;
 	min-width: 48px;
 	padding: 2px var(--padding-4);
-	border-radius: var(--radius-small3);
-	font-size: var(--font-size-button-xsmall-bold);
 	font-weight: 700;
+	font-size: var(--font-size-button-xsmall-bold);
+	border-radius: var(--radius-small3);
 }
 .hd_btn_s_5 .hd_icon {
 	width: 16px;
@@ -4986,15 +5059,15 @@ sup {
 .hd_btn_s_6 {
 	min-height: 72px;
 	padding: 0 var(--padding-6);
-	border-radius: var(--radius-medium1);
-	font-size: var(--font-size-button-large);
 	font-weight: 700;
+	font-size: var(--font-size-button-large);
+	border-radius: var(--radius-medium1);
 }
 .hd_btn_s_6 .sub_g_text {
 	display: block;
 	padding-top: 4px;
-	font-size: var(--font-size-body-small);
 	font-weight: 400;
+	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
 .hd_btn_s_6.left .text {

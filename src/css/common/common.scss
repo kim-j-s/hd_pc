@@ -204,6 +204,11 @@ sup {
 		}
 	}
 
+	&:has(.b_float_cont) {
+		padding-bottom: 140px;
+
+	}
+
 	&.scroll_lock {
 		height: 100%;
 		overflow: hidden;

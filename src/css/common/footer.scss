@@ -1,4 +1,55 @@
 /* Footer */
+
+.b_float_cont {
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	left: 50%;
+	display: flex;
+	gap: var(--gap-8);
+	width: 836px;
+	padding: var(--padding-5) var(--padding-8) var(--padding-6) var(--padding-8);
+	border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
+	background: var(--color-surface-white);
+	box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	transform: translateX(calc(-50% - 176px));
+
+	> .hd_btn {
+		&.hd_btn_ty_3 {
+			order: 1;
+		}
+		&.hd_btn_ty_1 {
+			order: 3;
+		}
+	}
+	.b_float_cont_fin {
+		order: 2;
+		flex: 1 1 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.bff_in {
+			display: inline-flex;
+			align-items: center;
+			gap: var(--gap-4);
+		}
+		.stat_data {
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+			color: var(--color-text-primary-bold);
+			font-size: var(--font-size-heading-large);
+			white-space: nowrap;
+		}
+		.bff_in_msg {
+			font-size: var(--font-size-body-medium);
+			color: var(--color-text-information);
+		}
+	}
+	
+}
+
+
 .footer  {
 	width: 100%;
 	height: 203px;
