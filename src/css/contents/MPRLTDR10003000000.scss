@@ -726,7 +726,7 @@
 	top: -24px;
 	z-index: 11;
 	margin: 0 -24px;
-	background: var(--color-surface-white-subtler, #FFF);
+	background: var(--color-surface-white-subtler);
 	& + .form_box,
 	& + .title_h3,
 	& + .tab_wrap,
@@ -741,7 +741,7 @@
 		overflow: hidden;
 		padding: var(--padding-6) var(--padding-8);
 		border-radius: 0px 0px var(--padding-6) var(--padding-6);
-		background: var(--color-surface-white-subtler, #FFF);
+		background: var(--color-surface-white-subtler);
 		box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 		
 		.sii_list {
