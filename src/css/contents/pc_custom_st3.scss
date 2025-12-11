@@ -259,6 +259,14 @@
 		& + .form_box {
 			margin-top: var(--gap-8);
 		}
+
+		.summery_inner {
+			.total_wrap {
+				.val_price {
+					color: var(--color-text-primary-bold);
+				}
+			}
+		}
 	}
 }
 
