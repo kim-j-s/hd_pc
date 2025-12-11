@@ -2847,6 +2847,15 @@
 .call_info_list_ty2 .title.opt5 {
 	background-image: url(../images/content/cnsl/icon_call_info5.svg);
 }
+.call_info_list_ty2 .title.opt6 {
+	background-image: url(../images/content/cnsl/icon_call_info6.svg);
+}
+.call_info_list_ty2 .title.opt7 {
+	background-image: url(../images/content/cnsl/icon_call_info7.svg);
+}
+.call_info_list_ty2 .title.opt8 {
+	background-image: url(../images/content/cnsl/icon_call_info8.svg);
+}
 .call_info_list_ty2 .title strong {
 	display: block;
 	font-size: var(--font-size-heading-small);
@@ -3504,6 +3513,9 @@
 }
 .info_summary.payment + .form_box {
 	margin-top: var(--gap-8);
+}
+.info_summary.payment .summery_inner .total_wrap .val_price {
+	color: var(--color-text-primary-bold);
 }
 .dc_info_box {
 	position: relative;
