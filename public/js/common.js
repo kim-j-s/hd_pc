@@ -505,7 +505,11 @@
 		let tab1Scroll = null;
 
 		if ($wrap.find('.pew_exception').length) {
-			const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			// 테스트 중 PPRMTPS10004001000
+			// const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
+			// 테스트 중 PPRMTPS10004001000
+			
 			const $tagItemWrap = $wrap.find('.tag_item_wrap');
 			const $titleWrap = $wrap.find('.pec_point .title_h3');
 			const hasActivePoEtc1 = $wrap.find('.tag_item_wrap_po_etc1.active').length > 0;
@@ -791,7 +795,11 @@ function initPositionEventWrap($wrap) {
 
 
 		if ($wrap.find('.pew_exception').length) {
-			const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			// 테스트 중 PPRMTPS10004001000
+			// const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
+			// 테스트 중 PPRMTPS10004001000
+			
 			const $tagItemWrap = $wrap.find('.tag_item_wrap');
 			const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
 			const $titWrap = $wrap.find('.pec_point .title_h3');
