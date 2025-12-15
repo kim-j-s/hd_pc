@@ -836,6 +836,27 @@ function initPositionEventWrap($wrap) {
 			// expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
 
 			expHeight = 197 - 68;
+
+			if(!$simpleInfoWrap.length){
+				console.log('not');
+				const infoHeight = $wrap.find('.info_summary').outerHeight();
+				const $targetChild = $tagItemWrap.closest('.simple_info_wrap.ty2').find('.simple_info_item');
+	
+				if( scrollTop >= infoHeight){
+					$targetChild.addClass('active');
+					$wrap.closest('.position_event_wrap')
+					.find('.tag_item_wrap.sticky')
+					.addClass('active');
+					// console.log('ab');
+				}else {
+					$targetChild.removeAttr('style').removeClass('active');
+					$targetChild.removeClass('active');
+					$targetChild.closest('.position_event_wrap')
+						.find('.tag_item_wrap.sticky')
+						.removeClass('active');
+					// console.log('cd');
+				}
+			}
 		}
 
 
@@ -988,7 +1009,7 @@ $(function(){
 		initPositionEventWrap($(this));
 	});
 
-	simpleInfo();
+	// simpleInfo();
 
 	// 상품안내 스크롤 이벤트
 	prdFixed();
