@@ -844,15 +844,15 @@ function initPositionEventWrap($wrap) {
 	
 				if( scrollTop >= infoHeight){
 					$targetChild.addClass('active');
-					$wrap.closest('.position_event_wrap')
-					.find('.tag_item_wrap.sticky')
+					// $wrap.closest('.position_event_wrap')
+					// .find('.tag_item_wrap.sticky')
 					// .addClass('active');
 					// console.log('ab');
 				}else {
 					$targetChild.removeAttr('style').removeClass('active');
 					$targetChild.removeClass('active');
-					$targetChild.closest('.position_event_wrap')
-						.find('.tag_item_wrap.sticky')
+					// $targetChild.closest('.position_event_wrap')
+					// 	.find('.tag_item_wrap.sticky')
 						// .removeClass('active');
 					// console.log('cd');
 				}
