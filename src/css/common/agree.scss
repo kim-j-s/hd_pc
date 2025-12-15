@@ -51,7 +51,7 @@
 			gap: var(--gap-5);
 			dt {
 				position: relative;
-				padding-right: var(--padding-3);
+				padding-left: var(--padding-3);
 				word-wrap: break-word;
 				word-break: auto-phrase;
 				&::before {
@@ -198,7 +198,7 @@
 				}
 
 				&.dot_mod {
-					padding-right: var(--padding-3);
+					padding-left: var(--padding-3);
 					&::before {
 						content: '';
 						position: absolute;
@@ -234,7 +234,7 @@
 		.aic_list {
 			> li {
 				position: relative;
-				padding-right: var(--padding-3);
+				padding-left: var(--padding-3);
 				font-size: var(--font-size-body-small);
 				&::before {
 					content: '';
