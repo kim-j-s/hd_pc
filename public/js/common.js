@@ -698,6 +698,7 @@ function tabScroll(){
 }
 	
 // 간편정보 노출 방식
+/* 개선 전
 function simpleInfo(){
 	$('#container, .popup_cont, .container_form').on('scroll', function() {
 		const $wrapper = $(this);
@@ -733,6 +734,45 @@ function simpleInfo(){
 		}
 	});
 }
+개선 전 */
+
+/* 개선 후 */
+function simpleInfo(){
+	$('#container, .popup_cont, .container_form').on('scroll', function() {
+		const $wrapper = $(this);
+		const $target = $wrapper.find('.simple_info_wrap.ty2');
+
+		if ($target.length) {
+			const $targetChild = $target.children('.simple_info_item');
+			
+			// const simpleHeight = $targetChild.height();
+
+			// 보여지는 상태일 때만 위치 계산
+			let targetOffsetTop = ($target.css('display') !== 'none') ? ($target[0].getBoundingClientRect().top - $wrapper[0].getBoundingClientRect().top) : null;
+			
+			$target.parent().css('position', 'relative');
+
+			// 펼치기
+			if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
+				$targetChild.addClass('active').stop().show();
+				$target.closest('.position_event_wrap')
+					.find('.tag_item_wrap.sticky')
+					// .css('top', simpleHeight)
+					.addClass('active');
+
+			// 접기
+			} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+				$target.removeAttr('style').removeClass('active');
+				$targetChild.removeClass('active').stop().hide();
+				$target.closest('.position_event_wrap')
+					.find('.tag_item_wrap.sticky')
+					// .css('top', 0)
+					.removeClass('active');
+			}
+		}
+	});
+}
+/* 개선 후 */
 // 간편정보 노출 방식
 
 // 최근설계내역
@@ -799,7 +839,7 @@ function initPositionEventWrap($wrap) {
 			// const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
 			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
 			// 테스트 중 PPRMTPS10004001000
-			
+
 			const $tagItemWrap = $wrap.find('.tag_item_wrap');
 			const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
 			const $titWrap = $wrap.find('.pec_point .title_h3');
