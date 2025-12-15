@@ -1370,7 +1370,7 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_list > li {
 	position: relative;
-	padding-right: var(--padding-3);
+	padding-left: var(--padding-3);
 	font-size: var(--font-size-body-medium);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_list > li::before {
@@ -3883,7 +3883,7 @@
 	display: -ms-flexbox;
 	display: flex;
 	gap: var(--gap-3);
-	padding-right: var(--padding-3);
+	padding-left: var(--padding-3);
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
 }
@@ -5265,7 +5265,7 @@ ul + .form_group_wrap {
 	width: -moz-fit-content;
 	width: fit-content;
 	position: relative;
-	padding-right: var(--padding-3);
+	padding-left: var(--padding-3);
 	padding-top: 2px;
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
@@ -8166,7 +8166,7 @@ ul + .form_group_wrap {
 }
 .prd_car .benefit_top_wrap .item_benefit_top .bn_list > li {
 	position: relative;
-	padding-right: var(--padding-3);
+	padding-left: var(--padding-3);
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-information);
 }
