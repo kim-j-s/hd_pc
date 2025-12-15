@@ -518,11 +518,15 @@
 			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
 			const titleWrapHeight = $titleWrap.outerHeight() || 0;
 
-			const exceptionHeight = simpleInfoHeight + tagItemHeight;
+			// const exceptionHeight = simpleInfoHeight + tagItemHeight;
+			// const exceptionHeight = 192 - 52 - 30;
 
-			expHeight = hasActivePoEtc1
-				? exceptionHeight - titleWrapHeight * 2
-				: exceptionHeight + titleWrapHeight + 2;
+			// expHeight = hasActivePoEtc1
+			// 	? exceptionHeight - titleWrapHeight * 2
+			// 	: exceptionHeight + titleWrapHeight + 2;
+
+			expHeight = 197 - 68;
+			console.log(expHeight)
 		}		
 
 		if ($target.length) {
@@ -699,37 +703,55 @@ function tabScroll(){
 	
 // 간편정보 노출 방식
 function simpleInfo(){
-	$('#container, .popup_cont, .container_form').on('scroll', function() {
+	$('.popup_cont').on('scroll', function() {
 		const $wrapper = $(this);
 		const $target = $wrapper.find('.simple_info_wrap.ty2');
 
 		if ($target.length) {
 			const $targetChild = $target.children('.simple_info_item');
 			
-			const simpleHeight = $targetChild.height();
+			const infoHeight = $wrapper.find('.info_summary').outerHeight();
 
-			// 보여지는 상태일 때만 위치 계산
-			let targetOffsetTop = ($target.css('display') !== 'none') ? ($target[0].getBoundingClientRect().top - $wrapper[0].getBoundingClientRect().top) : null;
-			
-			$target.parent().css('position', 'relative');
+			const scrollTop = $wrapper.scrollTop();
 
-			// 펼치기
-			if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
-				$targetChild.addClass('active').stop().show();
+			if( scrollTop >= infoHeight){
+				$targetChild.addClass('active');
 				$target.closest('.position_event_wrap')
-					.find('.tag_item_wrap.sticky')
-					.css('top', simpleHeight)
-					.addClass('active');
-
-			// 접기
-			} else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+				.find('.tag_item_wrap.sticky')
+				.addClass('active');
+			}else {
 				$target.removeAttr('style').removeClass('active');
-				$targetChild.removeClass('active').stop().hide();
+				$targetChild.removeClass('active');
 				$target.closest('.position_event_wrap')
 					.find('.tag_item_wrap.sticky')
-					.css('top', 0)
 					.removeClass('active');
 			}
+
+
+			// const simpleHeight = $targetChild.height();
+			
+			// 보여지는 상태일 때만 위치 계산
+			// let targetOffsetTop = ($target.css('display') !== 'none') ? ($target[0].getBoundingClientRect().top - $wrapper[0].getBoundingClientRect().top) : null;
+			
+			// $target.parent().css('position', 'relative');
+
+			// // 펼치기
+			// if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
+			// 	$targetChild.addClass('active').stop().show();
+			// 	$target.closest('.position_event_wrap')
+			// 		.find('.tag_item_wrap.sticky')
+			// 		// .css('top', simpleHeight)
+			// 		.addClass('active');
+
+			// // 접기
+			// } else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
+			// 	$target.removeAttr('style').removeClass('active');
+			// 	$targetChild.removeClass('active').stop().hide();
+			// 	$target.closest('.position_event_wrap')
+			// 		.find('.tag_item_wrap.sticky')
+			// 		// .css('top', 0)
+			// 		.removeClass('active');
+			// }
 		}
 	});
 }
@@ -787,6 +809,8 @@ function initPositionEventWrap($wrap) {
 		const scrollTop = $wrap.scrollTop();
 		let expHeight = 0;
 
+		let sHeight = 0;
+
 		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
 			$('.amc_nav').removeClass('active');
 		} else {
@@ -808,8 +832,10 @@ function initPositionEventWrap($wrap) {
 			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
 			const titWrapHeight = $titWrap.outerHeight() || 0;
 
-			const exceptionHeight = simpleInfoHeight + tagItemHeight;
-			expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
+			// const exceptionHeight = simpleInfoHeight + tagItemHeight;
+			// expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
+
+			expHeight = 197 - 68;
 		}
 
 
@@ -818,7 +844,7 @@ function initPositionEventWrap($wrap) {
 		$contents.each(function (index) {
 			const targetTop = $(this).offset().top;
 			const containerTop = $scrollArea.offset().top;
-			const scrollY = targetTop - containerTop + expHeight;
+			const scrollY = targetTop - containerTop + expHeight + sHeight;
 
 			if (scrollY < scrollTop + 10) {
 				activeIdx = index;
