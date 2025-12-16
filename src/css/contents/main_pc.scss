@@ -222,8 +222,8 @@
 								padding-right: var(--padding-2);
 								&::before {
 									background-color: var(--color-action-secondary-dark-fill-hover);
-									outline: var(--border-width-static-medium) solid #000;
-									outline-offset: -2px;
+									// outline: var(--border-width-static-medium) solid #000;
+									// outline-offset: -2px;
 								}
 							}
 							&:active {
@@ -231,8 +231,8 @@
 								padding-right: var(--padding-2);
 								&::before {
 									background-color: var(--color-action-secondary-subtle-fill-pressed);
-									outline: var(--border-width-static-medium) solid #000;
-									outline-offset: -2px;
+									// outline: var(--border-width-static-medium) solid #000;
+									// outline-offset: -2px;
 								}
 							}
 						}
@@ -291,8 +291,8 @@
 							&:hover,
 							&:focus {
 								background-color: var(--color-action-secondary-inverse-hover);
-								outline: var(--border-width-static-medium) solid #000;
-								outline-offset: -2px;
+								// outline: var(--border-width-static-medium) solid #000;
+								// outline-offset: -2px;
 							}
 							&:active {
 								background-color: var(--color-action-secondary-inverse-pressed);

@@ -25,9 +25,9 @@
 		&::placeholder {
 			color: var(--color-text-disabled);
 		}
-		&:focus {
-			outline: none;
-		}
+		// &:focus {
+		// 	outline: none;
+		// }
 	}
 
 	.counter {

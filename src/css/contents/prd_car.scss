@@ -388,10 +388,10 @@
 				}
 			}
 
-			&:focus {
-				outline: 2px solid #000;
-  			outline-offset: 1px;
-			}
+			// &:focus {
+			// 	outline: 2px solid #000;
+  		// 	outline-offset: 1px;
+			// }
 		}
 		.sec_body {
 			&:has(.title_h4) {
