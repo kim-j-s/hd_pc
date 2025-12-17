@@ -60,9 +60,12 @@
 					display: flex;
 					align-items: baseline;
 					gap: 2px;
-					font-size: var(--font-size-display-medium);
 					font-weight: 700;
+					font-size: var(--font-size-display-medium);
 					color: var(--color-text-primary-bold);
+					&.not_vp {
+						color: var(--color-text-basic);
+					}
 					> span {
 						margin-top: 6px;
 						font-size: var(--font-size-body-large);
