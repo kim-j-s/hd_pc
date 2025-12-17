@@ -3355,8 +3355,12 @@
 	-ms-flex-align: baseline;
 	align-items: baseline;
 	gap: 2px;
-	font-size: var(--font-size-display-medium);
 	font-weight: 700;
+	font-size: var(--font-size-display-medium);
+	color: var(--color-text-primary-bold);
+}
+.info_summary .summery_inner .total_wrap .value .val_price.not_vp {
+	color: var(--color-text-basic);
 }
 .info_summary .summery_inner .total_wrap .value .val_price > span {
 	margin-top: 6px;
