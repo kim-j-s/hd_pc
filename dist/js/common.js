@@ -1582,7 +1582,7 @@ function resetProDesc() {
 
 //알릴고지 숫자 표기
 function nbList() {
-  	$('.form_list').each(function () {
+  	$('.form_list:not(.form_list_no_count)').each(function () {
 		const $list = $(this);
 
 		$list.find('> li').each(function (index) {
@@ -1599,8 +1599,7 @@ function nbList() {
 				$(this).prepend(`<span class="num">${numStr}</span>`);
 			});
 		});
-	});
-	
+	});	
 }
 //숫자리스트1
 function listNum() {
