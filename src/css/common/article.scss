@@ -129,11 +129,11 @@
 
 		.img_link {
 			display: block;
-			&:focus {
-				box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
-				outline: var(--border-width-static-medium) solid #000;
-				outline-offset: -2px;
-			}
+			// &:focus {
+			// 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+			// 	outline: var(--border-width-static-medium) solid #000;
+			// 	outline-offset: -2px;
+			// }
 		}
 	}
 

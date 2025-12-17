@@ -224,11 +224,11 @@
 							border: var(--border-width-static-medium) solid #F8633C;
 						}
 					}
-					&:focus {
-						+ label {
-							outline: none;
-						}
-					}
+					// &:focus {
+					// 	+ label {
+					// 		outline: none;
+					// 	}
+					// }
 				}
 				label {
 					display: flex;

@@ -3190,6 +3190,9 @@
 .simple_info_wrap.ty2 .simple_info_item.active + .tag_item_wrap {
 	padding-top: var(--padding-6);
 	padding-bottom: var(--padding-7);
+	-webkit-box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	box-shadow: 0px var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
+	border-radius: 0px 0px var(--padding-6) var(--padding-6);
 }
 .simple_info_wrap.ty2 .simple_info_item .sii_list > li + li {
 	-webkit-box-align: start;
@@ -5516,8 +5519,6 @@
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item:focus::before,
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item:hover::before {
 	background-color: var(--color-action-secondary-dark-fill-hover);
-	outline: var(--border-width-static-medium) solid #000;
-	outline-offset: -2px;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item:active {
 	padding-left: var(--padding-2);
@@ -5525,8 +5526,6 @@
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item:active::before {
 	background-color: var(--color-action-secondary-subtle-fill-pressed);
-	outline: var(--border-width-static-medium) solid #000;
-	outline-offset: -2px;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li:last-child {
 	border-bottom: none;
@@ -5588,8 +5587,6 @@
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item:hover,
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item:focus {
 	background-color: var(--color-action-secondary-inverse-hover);
-	outline: var(--border-width-static-medium) solid #000;
-	outline-offset: -2px;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item:active {
 	background-color: var(--color-action-secondary-inverse-pressed);

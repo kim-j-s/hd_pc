@@ -47,10 +47,6 @@
 	scroll-margin-top: 86px;
 }
 /* scroll margin top */
-body.scroll_lock {
-	height: 100%;
-	overflow: hidden;
-}
 .hidden {
 	display: none;
 }
@@ -4416,12 +4412,6 @@ sup {
 }
 .view_wrap .view_cont .img_link {
 	display: block;
-}
-.view_wrap .view_cont .img_link:focus {
-	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: var(--border-width-static-medium) solid #000;
-	outline-offset: -2px;
 }
 .view_wrap .view_cont + .btn_area {
 	margin-top: var(--gap-5);
@@ -9669,9 +9659,6 @@ sup {
 	color: var(--color-text-disabled-on) !important;
 	background-color: var(--color-input-surface-disabled);
 }
-.input_text input:focus {
-	outline: none;
-}
 .input_text.readonly,
 .input_text.disabled {
 	background-color: var(--color-input-surface-disabled);
@@ -9723,11 +9710,6 @@ sup {
 }
 .input_text.phone .inp input {
 	padding-left: 0;
-}
-.input_text.phone .inp input:focus {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	outline: none;
 }
 .input_text.phone .int_txt.left {
 	padding-top: 1px;
@@ -12693,12 +12675,6 @@ ol li .table_wrap + .list_ty2 li + li {
 	background-color: var(--color-element-gray-lighter);
 	background-image: url(../images/icon/check_ty5.svg);
 }
-.inp_radio input[type="radio"]:focus + label {
-	-webkit-box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	box-shadow: 0 0 0 1px rgb(0, 0, 0);
-	outline: var(--border-width-static-medium) solid #000;
-	outline-offset: -2px;
-}
 .inp_radio.lg input[type="radio"] {
 	width: 24px;
 	height: 24px;
@@ -12865,17 +12841,11 @@ ol li .table_wrap + .list_ty2 li + li {
 	color: var(--color-text-disabled);
 }
 .radio_group_wrap.structure:has(input[type="radio"]:checked) input[type="radio"] + label .img img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
 	-o-object-fit: cover;
 	object-fit: cover;
 }
 .radio_group_wrap.structure:has(input[type="radio"]:checked) input[type="radio"]:checked + label .label_cont {
 	color: var(--color-text-basic);
-}
-.radio_group_wrap.structure:has(input[type="radio"]:checked) input[type="radio"]:checked + label .img img {
-	-webkit-filter: none;
-	filter: none;
 }
 .radio_group_wrap.option {
 	margin: var(--gap-3) 0;
@@ -15263,9 +15233,6 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .textarea_wrap textarea::placeholder {
 	color: var(--color-text-disabled);
-}
-.textarea_wrap textarea:focus {
-	outline: none;
 }
 .textarea_wrap .counter {
 	margin-top: var(--gap-3);
