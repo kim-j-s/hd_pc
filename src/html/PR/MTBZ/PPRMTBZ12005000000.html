@@ -182,6 +182,53 @@
 							</ul>
 						</div>
 					</div>
+
+
+
+					<!-- s: 25-12-17 수정 -->
+					<div class="form_group_wrap full">
+						<div class="checkbox_group_wrap column">
+							{{#> cp/checkbox checkbox_class="rd_box" id="checkbox01-14" label_class="chk_label_ty3" labelname="자동차 계약에 <strong>질권설정</strong>(리스, 대출 등)이 필요한 경우 체크하세요.      통상적인 자동차보험 계약과는 무관합니다." }}
+							<div class="btn_area basic">
+								<button type="button" class="btn_link short_cut">질권설정이란</button>
+							</div>
+							{{/ cp/checkbox}}
+						</div>
+					</div>
+					<!-- s: 질권설정 checked시 노출 -->
+					<div class="if_box">
+						<ul class="list_ty2">
+							<li><strong>질권설정은 고객콜센터(1899-6782)를 통해 계약체결 후 추가하실 수 있습니다.</strong></li>
+						</ul>
+						<div class="form_group_wrap">
+							<div class="form_line full_half">
+								<div class="label_tit">질권자 사업자등록번호</div>
+								{{> cp/text class="inp_mi" placeholder="사업자등록번호 입력" inp-title="사업자등록번호 입력" }}
+								<div class="btn_area">
+									{{> cp/button type="2" size="2" b-text="조회" class="full"}}
+								</div>
+							</div>
+					
+							<div class="form_line">
+								<div class="label_tit">질권자명(금융기관명 등)</div>
+								{{> cp/text type="text" placeholder="" inp-title="질권자명 입력" }}
+							</div>
+					
+							<div class="form_line">
+								<div class="label_tit">질권설정금액(단위: 만원)</div>
+								{{> cp/text type="tel" placeholder="금액을 입력하세요" class="price" r-text="만원" inp-title="질권설정금액 입력"}}
+								<p class="info_text2"><strong>6280</strong>만원 내에서 설정가능합니다.</p>
+							</div>
+						</div>
+					</div>
+					<!-- e: 질권설정 checked시 노출 -->
+					<!-- e: 25-12-17 수정 -->
+
+
+
+
+
+
 					<!-- e: 피보험자 계피상이 -->
 					<div class="divider_ty1"></div>
 					<!-- s: 25-10-28 수정 -->

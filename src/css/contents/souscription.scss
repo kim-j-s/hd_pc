@@ -67,6 +67,7 @@
 			margin-top: var(--gap-5);
 		}
 	}
+
 	.form_group_wrap {
 		& + .form_group_wrap {
 			margin-top: var(--gap-8);
@@ -76,6 +77,13 @@
 			& + .btn_area {
 				margin-top: var(--gap-11);
 			}
+		}
+
+		.checkbox_group_wrap {
+			margin-top: 0;
+		}
+		* + .checkbox_group_wrap {
+			margin-top: var(--gap-8);
 		}
 
 		.if_box_ty2 {
