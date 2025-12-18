@@ -204,7 +204,8 @@
 	overflow-x: auto;
 	margin: 0 -24px;
 	padding: 0 24px;
-
+	// scrollbar-color: #aaa white;
+	
 	[class^=tab_wrap_list] {
 		&.scroll {
 			position: relative;
@@ -226,6 +227,9 @@
 			min-width: 64px;
 			padding: 12px 8px;
 			flex: none;
+			&:first-child {
+				margin-left: 24px;
+			}
 		}
 	}
 }
