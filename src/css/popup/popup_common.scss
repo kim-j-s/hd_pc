@@ -533,14 +533,14 @@ body:has(.header_pc.header_pc_error) {
 /* bottom popup 스타일 아코디언 */
 .baad_c {
 	position: relative;
-	height: 32px;
+	// height: 32px;
 
 	&.active {
 		.baad_c_cont {
-			position: absolute;
+			// position: absolute;
 			background: var(--color-surface-white-subtler);
-			box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
-			border-radius: var(--radius-large2);
+			// box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
+			// border-radius: var(--radius-large2);
 		}
 	}
 }
@@ -604,10 +604,15 @@ body:has(.header_pc.header_pc_error) {
 		}
 	}
 	.in_bottom {
+		margin-bottom: var(--gap-8);
 		padding: var(--padding-5) var(--padding-8) var(--padding-6);
+		border: var(--border-width-static-regular) solid var(--color-border-information-light);
+		border-top: none;
+		border-radius: 0 0 var(--radius-large2) var(--radius-large2);
+		background: var(--color-surface-white-subtle);
 	}
 
-	&:not(:has(.in_bottom)){
-	}
+	// &:not(:has(.in_bottom)){
+	// }
 }
 /* bottom popup 스타일 아코디언 */
