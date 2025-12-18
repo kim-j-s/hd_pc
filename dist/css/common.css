@@ -47,6 +47,10 @@
 	scroll-margin-top: 86px;
 }
 /* scroll margin top */
+body.scroll_lock {
+	height: 100%;
+	overflow: hidden;
+}
 .hidden {
 	display: none;
 }
@@ -14491,6 +14495,9 @@ ol li .table_wrap + .list_ty2 li + li {
 	-ms-flex: none;
 	flex: none;
 }
+.tab_scroll_box_ty1 .tab_wrap_list_ty1 .tab_btn:first-child {
+	margin-left: 24px;
+}
 /* 조회 탭 결과 컨텐츠 간격용 */
 .tab_wrap_rst.tab_wrap_rst_ty1 {
 	padding-top: var(--gap-5);
@@ -15170,6 +15177,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .text_sub + .list_depth {
 	margin-top: var(--gap-4);
 }
+.middle_text {
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-basic);
+}
+.middle_text + .form_box {
+	margin-top: var(--gap-5);
+}
 .text_sub_ty2 {
 	font-size: var(--font-size-body-medium);
 	line-height: 24px;
@@ -15613,6 +15627,9 @@ ol li .table_wrap + .list_ty2 li + li {
 .info_gray + [class^="list_depth_ty"] {
 	margin-top: var(--gap-5);
 }
+.info_gray + .middle_text {
+	margin-top: var(--gap-11);
+}
 .info_gray + .hd_icon.infoArrowSvg {
 	display: block;
 	margin: var(--gap-3) auto 0;
@@ -15794,6 +15811,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .info_gray .title_h4 {
 	color: var(--color-text-bolder);
 	font-size: var(--font-size-heading-xxsmall);
+}
+.info_gray .info_gray_tit_text {
+	font-size: var(--font-size-body-medium, 16px);
+	color: var(--color-text-basic, #1e2124);
+}
+.info_gray .info_gray_tit_text + .list_depth {
+	margin-top: var(--gap-4);
 }
 .info_gray .ft_lg {
 	font-size: var(--font-size-body-large);

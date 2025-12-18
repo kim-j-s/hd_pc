@@ -7183,6 +7183,7 @@ ul + .form_group_wrap {
 	text-align: left;
 	margin-top: var(--gap-4);
 }
+.prd_view .faq_area .item_wrap_faq .acd_item .acd_cont .inner .circle_list,
 .prd_view .faq_area .item_wrap_faq .acd_item .acd_cont .inner .list_depth_ty2 {
 	margin-top: var(--gap-5);
 }
