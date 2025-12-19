@@ -3909,6 +3909,10 @@ sup {
 	visibility: hidden;
 	opacity: 0;
 }
+.acd_item.acd_item_ty5 .acd_head.active .acd_btn {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
 .acd_item.acd_item_ty5 .acd_cont > .inner {
 	padding: 0 var(--padding-5) var(--padding-8) var(--padding-9);
 }
@@ -7001,6 +7005,7 @@ sup {
 	font-weight: 700;
 	font-size: var(--font-size-heading-small);
 	color: var(--color-text-bolder);
+	word-break: break-all;
 }
 .card_item_wrap .card_item .item_inner .title_info .main_title .info {
 	color: var(--color-text-information);
@@ -14319,6 +14324,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .tab_wrap [class^="tab_scroll_box"] {
 	position: relative;
+}
+.tab_wrap .tab_btn {
+	word-break: keep-all;
 }
 .tab_wrap_list_ty1 {
 	display: -webkit-box;
