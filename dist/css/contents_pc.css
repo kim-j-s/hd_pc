@@ -4429,6 +4429,8 @@
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label::after {
 	opacity: 1;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
 }
 .guarantee_select_wrap .select_item .item_radio input:checked + label .badge_wrap {
 	-webkit-box-pack: start;
