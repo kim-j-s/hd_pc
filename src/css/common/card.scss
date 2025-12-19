@@ -221,6 +221,7 @@
 					font-weight: 700;
 					font-size: var(--font-size-heading-small);
 					color: var(--color-text-bolder);
+					word-break: break-all;
 
 					.info {
 						color: var(--color-text-information);
