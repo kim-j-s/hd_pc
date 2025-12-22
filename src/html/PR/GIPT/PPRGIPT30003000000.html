@@ -17,7 +17,7 @@
 			</div>
 			<!-- e: content_top -->
 
-			<!-- s: 25-04-24 수정 -->
+			
 			<div class="form_group_wrap">
 				<div class="form_line">
 					<div class="label_tit">이름</div>
@@ -29,22 +29,18 @@
 					<div class="comp_wrap birth">
 						{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
 						<span class="dash">-</span>
-						
 						<!-- s: 25-05-15 수정 -->
 						{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
 						<!-- e: 25-05-15 수정 -->
-						
 					</div>
 				</div>
 
 				<div class="form_line">
 					<div class="label_tit">휴대폰번호</div>
-					
 					{{> cp/text class="phone phone_full" type="tel" placeholder="- 없이 입력" maxlength="8" inp-title="휴대폰번호 입력" }}
-					
 				</div>
 			</div>
-			<!-- e: 25-04-24 수정 -->
+			
 		</div>
 	</div>
 
