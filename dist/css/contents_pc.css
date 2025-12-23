@@ -5682,6 +5682,8 @@
 	padding: var(--padding-6) var(--padding-7) var(--padding-5);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
 	border-radius: var(--radius-large2);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .main_cont_wrap .main_product_box .main_recommend_box:not(.dragging) .re_link:hover {
 	border-radius: var(--radius-medium4);
@@ -5693,8 +5695,52 @@
 	-webkit-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
 }
+.main_cont_wrap .main_product_box .main_recommend_box.corp {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	height: 159px;
+}
+.main_cont_wrap .main_product_box .main_recommend_box.corp .re_product_list:not(.swiper-wrapper) > li {
+	min-width: 0;
+}
+.main_cont_wrap .main_product_box .main_recommend_box.corp .re_product_list > li .re_link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-width: 0;
+	width: 100%;
+	min-height: auto;
+	padding-bottom: 6px;
+}
+.main_cont_wrap .main_product_box .main_recommend_box.corp .re_product_list > li .re_link > span {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.main_cont_wrap .main_product_box .main_recommend_box.corp .re_product_list > li a[target="_blank"] > span {
+	position: relative;
+	padding-right: 20px;
+}
+.main_cont_wrap .main_product_box .main_recommend_box.corp .re_product_list > li a[target="_blank"] > span:after {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	content: "";
+	width: 16px;
+	height: 16px;
+	background: url(../images/icon/arrow_link.svg) no-repeat right center/16px auto;
+	vertical-align: middle;
+}
 .main_cont_wrap .main_product_box .main_recommend_box:has(.swiper) {
-	padding: var(--padding-6) 0 var(--padding-5);
+	padding: 15px 0 11px;
 }
 .main_cont_wrap .main_product_box .main_recommend_box:has(.swiper):before {
 	content: "";
@@ -5746,7 +5792,7 @@
 .main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li .re_link {
 	display: block;
 	min-height: 110px;
-	padding: 64px var(--padding-7) calc(var(--padding-2) + 1px);
+	padding: 64px var(--padding-7) var(--padding-2);
 	font-size: var(--font-size-body-small);
 	font-weight: 700;
 	color: var(--color-text-basic);
@@ -6478,6 +6524,7 @@
 }
 .mc_corp_evt {
 	display: block;
+	height: 159px;
 }
 .main_prd_link_list {
 	display: -webkit-box;
