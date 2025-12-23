@@ -832,9 +832,6 @@ function initPositionEventWrap($wrap) {
 			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
 			const titWrapHeight = $titWrap.outerHeight() || 0;
 
-			// const exceptionHeight = simpleInfoHeight + tagItemHeight;
-			// expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
-
 			expHeight = 197 - 68;
 
 			if(!$simpleInfoWrap.length){
@@ -844,17 +841,9 @@ function initPositionEventWrap($wrap) {
 	
 				if( scrollTop >= infoHeight){
 					$targetChild.addClass('active');
-					// $wrap.closest('.position_event_wrap')
-					// .find('.tag_item_wrap.sticky')
-					// .addClass('active');
-					// console.log('ab');
-				}else {
+				} else {
 					$targetChild.removeAttr('style').removeClass('active');
 					$targetChild.removeClass('active');
-					// $targetChild.closest('.position_event_wrap')
-					// 	.find('.tag_item_wrap.sticky')
-						// .removeClass('active');
-					// console.log('cd');
 				}
 			}
 		}
@@ -866,7 +855,6 @@ function initPositionEventWrap($wrap) {
 			const targetTop = $(this).offset().top;
 			const containerTop = $scrollArea.offset().top;
 			const scrollY = targetTop - containerTop + expHeight + sHeight;
-
 			if (scrollY < scrollTop + 10) {
 				activeIdx = index;
 			}
