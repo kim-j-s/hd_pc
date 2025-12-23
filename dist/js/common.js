@@ -3,11 +3,12 @@
         $WIN = $(window),
         wHeight = $WIN.height();
 
-	$(document).on('keydown', function(e) {
-		if (e.key === 'Enter') {
-			const focusedElement = document.activeElement; // 현재 포커스된 요소
-		}
-	});
+	// 현재 포커스된 요소
+	// $(document).on('keydown', function(e) {
+	// 	if (e.key === 'Enter') {
+	// 		const focusedElement = document.activeElement;
+	// 	}
+	// });
 
 	$DOM.on('click', '.hsu_search', function () {
 		$(this).toggleClass('active');
@@ -36,7 +37,7 @@
       $head.addClass('active');
       $inner.slideDown();
 			$this.attr('aria-expanded', 'true');
-    }else {
+    } else {
 			$this.attr('aria-expanded', 'false');
       $inner.slideUp();
 			$head.removeClass('active');
@@ -67,7 +68,7 @@
 		if(!$item.hasClass('active')){
 			$item.addClass('active');
 			$item.find('.select_radio_item .rd_btn:nth-child(5) input').focus();
-		}else {
+		} else {
 			$item.removeClass('active');
 		}
 	})
@@ -86,12 +87,12 @@
 				$t_head.addClass('active').find('.open').attr('aria-expanded', 'true');
 				$('.tooltip_wrap .tooltip_panel .inner').hide();
 				$t_text.css('display', 'block').focus();
-			}else {
+			} else {
 				if($(this).hasClass('open')){
 					$('.tooltip_wrap').removeClass('active');
 					$('.tooltip_wrap .tooltip_head').removeClass('active').find('.open').attr('aria-expanded', 'false');
 					$('.tooltip_wrap .tooltip_panel .inner').hide();
-				}else {
+				} else {
 					$click.removeClass('active');
 					$click.find('.tooltip_head').removeClass('active');
 					$click.find('.tooltip_panel .inner').hide();
@@ -146,7 +147,7 @@
 		if (!isDisabled && !isReadonly) {
 			if(val){
 				$wrap.addClass('active');
-			}else {
+			} else {
 				$wrap.removeClass('active');
 			}
 		}
@@ -226,7 +227,7 @@
 
     if ($sub_status) {
       $sub_list.find('.chk_point_sub:not(:disabled)').prop('checked', true);
-    }else {
+    } else {
       $sub_list.find('.chk_point_sub:not(:disabled)').prop('checked', false);
     }
     $chkAll($(this));
@@ -239,7 +240,7 @@
     if ($sub_chked === $sub_total) {
 			$group_sub.closest('.inp_checkbox').find('.chk_point').prop('checked', true);
 			
-    }else {
+    } else {
 			$group_sub.closest('.inp_checkbox').find('.chk_point').prop('checked', false);
     }
     $chkAll($(this));
@@ -280,7 +281,7 @@
       one_char = str.charAt(i);
       if(escape(one_char).length > 4){
         rbyte += 2;
-      }else {
+      } else {
         rbyte++;
       }
 
@@ -292,7 +293,7 @@
     if(rbyte > maxByte){
       str2 = str.substr(0,rlen);
       $(this).val(str2);
-    }else {
+    } else {
       $(this).next().find('em').html(rbyte);
     }
   });
@@ -305,7 +306,7 @@
     if(str.length == 0 || str == ''){
 			$count.closest('.counter').attr('aria-label', '입력한 숫자 없음');
 			$count.text('0');
-    }else{
+    } else{
 			$count.closest('.counter').attr('aria-label', '15개 중 ' + str.length + '개 입력');
 			$count.text(str.length);
     }
@@ -339,7 +340,7 @@
 			$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newVal);
 		
 		// 순차적으로
-		}else {
+		} else {
 			$relGroup.removeAttr('class').addClass('relationship_box ' + newClass);
 			$relGroup2.removeAttr('class').addClass('driver_relationship_cont ' + newClass);
 		}
@@ -526,7 +527,7 @@
 			// 	: exceptionHeight + titleWrapHeight + 2;
 
 			expHeight = 197 - 68;
-			console.log(expHeight)
+			// console.log(expHeight);
 		}		
 
 		if ($target.length) {
@@ -560,7 +561,7 @@
 						} else {
 							$target.attr('tabindex', '-1').focus();
 						}
-					}else {
+					} else {
 						$target.find('.sec_head').attr('tabindex', '-1').focus();
 					}
 				},300)
@@ -702,16 +703,14 @@ function tabScroll(){
 }
 	
 // 간편정보 노출 방식
-function simpleInfo(){
+function simpleInfo() {
 	$('.popup_cont').on('scroll', function() {
 		const $wrapper = $(this);
 		const $target = $wrapper.find('.simple_info_wrap.ty2');
 
 		if ($target.length) {
 			const $targetChild = $target.children('.simple_info_item');
-			
 			const infoHeight = $wrapper.find('.info_summary').outerHeight();
-
 			const scrollTop = $wrapper.scrollTop();
 
 			if( scrollTop >= infoHeight){
@@ -719,39 +718,13 @@ function simpleInfo(){
 				$target.closest('.position_event_wrap')
 				.find('.tag_item_wrap.sticky')
 				.addClass('active');
-			}else {
+			} else {
 				$target.removeAttr('style').removeClass('active');
 				$targetChild.removeClass('active');
 				$target.closest('.position_event_wrap')
 					.find('.tag_item_wrap.sticky')
 					.removeClass('active');
 			}
-
-
-			// const simpleHeight = $targetChild.height();
-			
-			// 보여지는 상태일 때만 위치 계산
-			// let targetOffsetTop = ($target.css('display') !== 'none') ? ($target[0].getBoundingClientRect().top - $wrapper[0].getBoundingClientRect().top) : null;
-			
-			// $target.parent().css('position', 'relative');
-
-			// // 펼치기
-			// if (targetOffsetTop <= 0 && !$targetChild.hasClass('active')) {
-			// 	$targetChild.addClass('active').stop().show();
-			// 	$target.closest('.position_event_wrap')
-			// 		.find('.tag_item_wrap.sticky')
-			// 		// .css('top', simpleHeight)
-			// 		.addClass('active');
-
-			// // 접기
-			// } else if (targetOffsetTop > 0 && $targetChild.hasClass('active')) {
-			// 	$target.removeAttr('style').removeClass('active');
-			// 	$targetChild.removeClass('active').stop().hide();
-			// 	$target.closest('.position_event_wrap')
-			// 		.find('.tag_item_wrap.sticky')
-			// 		// .css('top', 0)
-			// 		.removeClass('active');
-			// }
 		}
 	});
 }
@@ -832,29 +805,18 @@ function initPositionEventWrap($wrap) {
 			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
 			const titWrapHeight = $titWrap.outerHeight() || 0;
 
-			// const exceptionHeight = simpleInfoHeight + tagItemHeight;
-			// expHeight = hasPoEtc1 ? exceptionHeight - titWrapHeight * 2 : exceptionHeight;
-
 			expHeight = 197 - 68;
 
 			if(!$simpleInfoWrap.length){
-				console.log('not');
+				// console.log('not');
 				const infoHeight = $wrap.find('.info_summary').outerHeight();
 				const $targetChild = $tagItemWrap.closest('.simple_info_wrap.ty2').find('.simple_info_item');
 	
 				if( scrollTop >= infoHeight){
 					$targetChild.addClass('active');
-					// $wrap.closest('.position_event_wrap')
-					// .find('.tag_item_wrap.sticky')
-					// .addClass('active');
-					// console.log('ab');
-				}else {
+				} else {
 					$targetChild.removeAttr('style').removeClass('active');
 					$targetChild.removeClass('active');
-					// $targetChild.closest('.position_event_wrap')
-					// 	.find('.tag_item_wrap.sticky')
-						// .removeClass('active');
-					// console.log('cd');
 				}
 			}
 		}
@@ -866,7 +828,6 @@ function initPositionEventWrap($wrap) {
 			const targetTop = $(this).offset().top;
 			const containerTop = $scrollArea.offset().top;
 			const scrollY = targetTop - containerTop + expHeight + sHeight;
-
 			if (scrollY < scrollTop + 10) {
 				activeIdx = index;
 			}
@@ -973,7 +934,6 @@ function prdFixed() {
 		const st = $(this).scrollTop();
 		const scrollHeight = $(document).height();
 		const windowHeight = $(this).height();
-		// const scrollBottom = scrollHeight - windowHeight - st;
 		if (st >= 500) {
 			$('.prd_link_area').show();
 		} else {
@@ -1500,7 +1460,6 @@ $(function(){
   // 스크롤 이벤트
   $popupCont.on('scroll', function() {
 		if (scrollingChk) return;
-		// if ( $(this).find('.move').length === 0 ) return; // .move가 없으면 실행하지 않음
 		const $thisPopupCont = $(this); // 현재 스크롤된 .popup_cont
 		const $popupWrap = $thisPopupCont.closest('.popup_wrap');
 		const $fixedButton = $popupWrap.find('.scroll_down');
@@ -1716,12 +1675,12 @@ function prograssCar(){
 			}
 
 		// 기준일, 종료일 겹칠 때
-		}else if(barW <= (spotW * 2) + spaceW){
+		} else if(barW <= (spotW * 2) + spaceW){
 			$bar.find('.newStart').addClass('small');
 			$bar.find('.newStart').children('.spot').css('margin-right', spotW + spaceW + 'px');
 		
 		// 겹치지 않을 때
-		}else {
+		} else {
 			$bar.find('.newStart').children('.spot').css('left', '0');
 			$bar.find('.newStart').children('em').css('left', '0');
 		}
