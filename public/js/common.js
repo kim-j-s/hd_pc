@@ -1541,7 +1541,8 @@ function resetProDesc() {
 
 //알릴고지 숫자 표기
 function nbList() {
-  	$('.form_list:not(.form_list_no_count)').each(function () {
+  	// $('.form_list:not(.form_list_no_count)').each(function () {
+  	$('ol.form_list:not(.form_list_no_count)').each(function () {
 		const $list = $(this);
 
 		$list.find('> li').each(function (index) {
