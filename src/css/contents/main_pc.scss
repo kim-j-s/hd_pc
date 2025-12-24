@@ -1295,7 +1295,10 @@
 		text-align: center;
 		border-radius: var(--radius-large2);
 		border: var(--border-width-static-regular) solid var(--color-border-inverse);
-		transition: all 0.3s;
+		// transition: all 0.3s;
+		transition: transform 0.3s ease,
+								box-shadow 0.3s ease,
+								border-color 0.3s ease;
 		
 		.text {
 			padding-right: 20px;
@@ -1335,7 +1338,8 @@
 		&:hover {
 			top: calc(-1 * var(--gap-2));
 			box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-			transition: all 0.3s;
+			// transition: all 0.3s;
+  		transform: translateY(calc(-1 * var(--gap-2)));
 			border-color: var(--color-border-gray-dark);
 		}
 	}
