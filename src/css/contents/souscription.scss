@@ -14,6 +14,12 @@
 		}
 	}
 
+	&[style*="display: none"] {
+		& + .form_box {
+			margin-top: 0;
+		}
+	}
+
 	&.space1 {
 		margin-top: var(--gap-8);
 	}
@@ -72,11 +78,18 @@
 		& + .form_group_wrap {
 			margin-top: var(--gap-8);
 		}
+
 		& + .if_box {
 			margin-top: var(--gap-5);
 			& + .btn_area {
 				margin-top: var(--gap-11);
 			}
+		}
+
+		&[style*="display: none"] {
+			& + .if_box {
+				margin-top: 0;
+			}			
 		}
 
 		.checkbox_group_wrap {

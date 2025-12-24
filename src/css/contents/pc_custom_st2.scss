@@ -42,12 +42,7 @@
 		}
 		}
 	}
-
-
 }
-// .hd_btn_s_2 {
-// 	min-width: 100px;
-// }
 
 .btn_area {
 	justify-content: flex-start;
@@ -130,11 +125,6 @@
 		&.center {
 			justify-content: center;
 		}
-
-		// 1개일 시, 가운데 정렬
-		// &:has(.hd_btn:only-child){
-		// 	justify-content: center;
-		// }
 	}
 	.hd_btn {
 		min-width: 160px;
@@ -152,23 +142,8 @@
 	&:not(.basic) {
 		display: flex;
 		flex-flow: row wrap;
-		// justify-content: center;
 		justify-content: space-between;
 		gap: var(--gap-8) var(--gap-8);
-
-		// 1개일 시, 가운데 정렬
-		// &:has(*:only-child){
-		// 	justify-content: center;
-		// }
-
-		// &:not(:has(*:only-child)){
-		// 	* {
-		// 		width: calc(50% - 16px);
-		// 	}
-		// }
-		// &:has(*:nth-child(3)) {
-		// 	justify-content: flex-start;
-		// }
 
 		> * {
 			flex: 0 1 calc(50% - 16px);
@@ -301,14 +276,6 @@
 			}
 		}
 
-		/*
-		> .list_ty2 {
-			&.full {
-				margin-top: -16px;
-			}
-		}
-		*/
-
 		.full_half {
 			flex-basis: 100%;
 			> div,
@@ -316,6 +283,7 @@
 				width: calc(50% - 16px);
 			}
 		}
+
 		.full {
 			flex-basis: 100%;
 
@@ -348,13 +316,13 @@
 				}
 			}
 		}
+
 		.tit_full {
 			flex-basis: 100%;
 			> div:not(.label_tit) {				
 				width: calc(50% - 16px);
 			}
 		}
-
 
 		.c1 {
 			flex-basis: 100%;
@@ -376,17 +344,6 @@
 		.column {
 			gap: var(--gap-8);
 		}
-
-		// .label_tit {
-		// 	.tooltip_wrap {
-		// 		.tooltip_panel {
-		// 			width: auto;
-		// 			.inner {
-		// 				white-space: nowrap;
-		// 			}
-		// 		}
-		// 	}
-		// }
 
 		& + .space_list_ty2,
 		& + .banner_box,
