@@ -1,28 +1,30 @@
-<div class="b_float_cont">
-	<div class="b_float_cont_fin">
-		<div class="bff_in">
-			{{#unless nb}}
-			<div class="badge_wrap">
-				{{#if case1}}<span class="hd_badge outline solid_pastel c_primary size_m"><strong>고급</strong> <span class="pipe_line"><span>60</span>개 보장</span></span>{{/if}}
-				{{#if case2}}<span class="hd_badge outline solid_pastel c_warning size_m"><span><span>4</span>개 보장</span></span>{{/if}}
+{{!-- <div class="bfc_wrap"> --}}
+	<div class="b_float_cont">
+		<div class="b_float_cont_fin">
+			<div class="bff_in">
+				{{#unless nb}}
+				<div class="badge_wrap">
+					{{#if case1}}<span class="hd_badge outline solid_pastel c_primary size_m"><strong>고급</strong> <span class="pipe_line"><span>60</span>개 보장</span></span>{{/if}}
+					{{#if case2}}<span class="hd_badge outline solid_pastel c_warning size_m"><span><span>4</span>개 보장</span></span>{{/if}}
+				</div>
+				{{/unless}}
+				<div class="stat_data">
+					<span class="price">
+						{{#unless wm}}<span class="w_m">월</span> {{/unless}}<span class="n_w">23,900</span>
+					</span>
+					<span class="w_c">원</span>
+				</div>
 			</div>
-			{{/unless}}
-			<div class="stat_data">
-				<span class="price">
-					{{#unless wm}}<span class="w_m">월</span> {{/unless}}<span class="n_w">23,900</span>
-				</span>
-				<span class="w_c">원</span>
-			</div>
+			<!-- 보장변경 시 노출
+			<p class="bff_in_msg">
+				보험료를 다시 계산해주세요
+			</p>
+				-->
 		</div>
-		<!-- 보장변경 시 노출
-		<p class="bff_in_msg">
-			보험료를 다시 계산해주세요
-		</p>
-			-->
+		{{> cp/button type="3" size="2" b-text="이전"}}
+		{{> cp/button type="1" size="2" b-text="이대로 가입하기"}}
+		<!-- 보장변경 시 노출 
+		{{> cp/button type="1" size="2" b-text="보험료 다시 계산하기"}}
+		-->
 	</div>
-	{{> cp/button type="3" size="2" b-text="이전"}}
-	{{> cp/button type="1" size="2" b-text="이대로 가입하기"}}
-	<!-- 보장변경 시 노출 
-	{{> cp/button type="1" size="2" b-text="보험료 다시 계산하기"}}
-	-->
-</div>
+{{!-- </div> --}}

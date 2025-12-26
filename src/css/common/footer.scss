@@ -3,8 +3,8 @@
 .b_float_cont {
 	position: fixed;
 	bottom: 0;
+	left: calc(((100% - 1288px) / 2) + 46px);
 	z-index: 2;
-	left: 50%;
 	display: flex;
 	gap: var(--gap-8);
 	width: 836px;
@@ -12,8 +12,6 @@
 	border-radius: var(--radius-xlarge2) var(--radius-xlarge2) 0 0;
 	background: var(--color-surface-white);
 	box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	transform: translateX(calc(-50% - 176px));
-
 	> .hd_btn {
 		&.hd_btn_ty_3 {
 			order: 1;
@@ -47,6 +45,12 @@
 		}
 	}
 	
+}
+
+@media screen and (max-width: 1280px) {
+	.b_float_cont {
+		left: 46px;
+	}
 }
 
 
@@ -204,7 +208,6 @@
 						}
 					}
 				}
-
 			}
 
 			.fbl_bottom {
@@ -217,8 +220,6 @@
 					}
 				}
 			}
-			
-
 		}
 
 		.fb_right {
@@ -226,8 +227,6 @@
 			display: flex;
 			align-items: center;
 			gap: 0 20px;
-			
-
 			> a {
 				display: block;
 				background-repeat: no-repeat;
@@ -259,10 +258,9 @@
 					background-image: url(../images/footer/icon_fi_ty5.png);
 				}
 			}
-
 		}
-
 	}
-
-
 }
+
+
+
