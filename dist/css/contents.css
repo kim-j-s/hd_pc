@@ -6035,9 +6035,9 @@ ul + .form_group_wrap {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: 0;
-	padding-left: 52px;
+	padding-left: 60px;
 	font-size: var(--font-size-body-medium);
-	background-size: 24px auto;
+	background-size: 32px auto;
 	background-position: 20px 24px;
 	background-repeat: no-repeat;
 }
@@ -6059,6 +6059,9 @@ ul + .form_group_wrap {
 }
 .my_info_flow.certify li.phone {
 	background-image: url(../images/common/cert/icon_step_phone.svg);
+}
+.my_info_flow.certify li.multi_d {
+	background-image: url(../images/common/cert/icon_step_multi_d.svg);
 }
 .frame_list > li > .tit {
 	display: block;

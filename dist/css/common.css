@@ -2668,8 +2668,8 @@ sup {
 .b_float_cont {
 	position: fixed;
 	bottom: 0;
+	left: calc((100% - 1288px) / 2 + 46px);
 	z-index: 2;
-	left: 50%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2680,8 +2680,6 @@ sup {
 	background: var(--color-surface-white);
 	-webkit-box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0 var(--shadow-y-minus2, -6px) var(--shadow-blur-2, 8px) 0 var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
-	-webkit-transform: translateX(calc(-50% - 176px));
-	transform: translateX(calc(-50% - 176px));
 }
 .b_float_cont > .hd_btn.hd_btn_ty_3 {
 	-webkit-box-ordinal-group: 2;
@@ -2734,6 +2732,11 @@ sup {
 .b_float_cont .b_float_cont_fin .bff_in_msg {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-information);
+}
+@media screen and (max-width: 1280px) {
+	.b_float_cont {
+		left: 46px;
+	}
 }
 .footer {
 	width: 100%;
