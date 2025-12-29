@@ -204,6 +204,7 @@
 	.inp_radio {
 		&[class*=rd_btn]{
 			flex: 1;
+			max-width: calc(50% - 6px);
 			input {
 				&[role="button"] {
 					&:checked {
