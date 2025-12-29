@@ -289,6 +289,12 @@
 
 			.radio_group_wrap:not(.full) {
 				width: calc(50% - 16px);
+
+				&:has(.rd_btn){
+					.rd_btn {
+						max-width: calc(50% - 16px);
+					}
+				}
 			}
 			.label_tit {
 				.tooltip_wrap {
