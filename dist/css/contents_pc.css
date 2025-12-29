@@ -1181,6 +1181,12 @@
 .wrap .form_group_wrap [class^="form_line"] ~ .form_line {
 	margin-top: 0;
 }
+.wrap .form_group_wrap [class^="form_line"].full .radio_group_wrap:has(.rd_btn) .rd_btn {
+	max-width: calc(50% - 6px);
+}
+.wrap .form_group_wrap [class^="form_line"] .radio_group_wrap:has(.rd_btn) .rd_btn {
+	max-width: 195px;
+}
 .wrap .form_group_wrap .form_line_ty3 + .form_line_ty3 {
 	margin-top: var(--gap-3);
 }

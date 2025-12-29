@@ -12779,6 +12779,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
+	max-width: calc(50% - 6px);
 }
 .radio_group_wrap .inp_radio[class*="rd_btn"] input[role="button"]:checked + label .label_cont {
 	position: relative;
