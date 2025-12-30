@@ -7052,6 +7052,18 @@ sup {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-information);
 }
+.card_item_wrap .card_item .item_inner .notice_item {
+	margin-right: 19px;
+	padding: var(--padding-3) var(--padding-5) var(--padding-3) 40px;
+	background: var(--color-element-danger) url(../images/icon/inverse_circle.svg) no-repeat 12px 8px;
+	border-radius: var(--radius-medium1);
+	font-size: var(--font-size-body-small);
+	font-weight: 700;
+	color: var(--color-text-bolder-inverse);
+}
+.card_item_wrap .card_item .item_inner .notice_item + .tit_item {
+	margin-top: var(--gap-4);
+}
 .card_item_wrap .card_item .item_inner .desc_ty2 {
 	margin-top: var(--gap-4);
 	font-size: var(--font-size-body-medium);
@@ -7779,6 +7791,14 @@ sup {
 .card_list_wrap > li .card_wrap > dd.card_cont_list dl .point {
 	font-weight: 700;
 	color: var(--color-text-primary-bold);
+}
+.card_list_wrap > li .card_wrap > dd .notice_info dt,
+.card_list_wrap > li .card_wrap > dd .notice_info dd {
+	font-size: var(--font-size-body-xsmall);
+}
+.card_list_wrap > li .card_wrap > dd .notice_info dt {
+	padding-left: 20px;
+	background: url(../../images/icon/danger_circle.svg) no-repeat left center;
 }
 .card_list_wrap > li .card_wrap .card_link {
 	cursor: pointer;
@@ -12905,6 +12925,9 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .radio_group_wrap.column .inp_radio.xs ~ .xs {
 	margin-top: var(--gap-4);
+}
+.radio_group_wrap.column.car_type_option .inp_radio {
+	max-width: none;
 }
 .star_item {
 	display: -webkit-box;
