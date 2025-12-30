@@ -767,7 +767,12 @@ function fixedMenuPlay() {
 
 // 초기화 함수 (동적 요소가 생성될 때마다 호출)
 /* 개선 전 */
+/*
 function initPositionEventWrap($wrap) {
+
+	// 스크롤 시 상단 여백 확인용
+	let chkOuter = false;
+
 	if (!$wrap.length) return;
 
 	const $tabBtns = $wrap.find('.position_event_tab .tag_item');
@@ -776,17 +781,31 @@ function initPositionEventWrap($wrap) {
 
 	$wrap.data('scrolling', false);
 
+	// 스크롤 시 상단 여백 확인용
+	let expHeight = 0;
+
 	// 스크롤 이벤트 (요소 개별) - 이벤트 중복 방지 (off, on)
 	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
 		if ($wrap.data('scrolling')) return;
 
+		// scrollTop 값 가져오기
 		const scrollTop = $wrap.scrollTop();
-		/* 먼지 모르겠음 */
+		// 먼지 모르겠음
 		// let expHeight = 0;
 		// let sHeight = 0;
-		/* 먼지 모르겠음 */
+		// 먼지 모르겠음
+		// let expHeight = 129;
 
 		// pc 전체메뉴 스크롤 시 상단 고정
+		if(!chkOuter) {
+			if( $('.amc_nav').length ){
+				const $navOuter = $('.amc_nav').outerHeight();
+				expHeight = $navOuter;
+				console.log('xx : ', + expHeight);
+			}
+			chkOuter = true;
+		}
+		
 		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
 			$('.amc_nav').removeClass('active');
 		} else {
@@ -797,10 +816,12 @@ function initPositionEventWrap($wrap) {
 		let activeIdx = -1;
 
 		$contents.each(function (index) {
+			console.log('다 타나? : ', + expHeight);
 			const targetTop = $(this).offset().top;
 			const containerTop = $scrollArea.offset().top;
 			// const scrollY = targetTop - containerTop + expHeight + sHeight;
-			const scrollY = targetTop - containerTop;
+			// const scrollY = targetTop - containerTop;
+			const scrollY = targetTop - containerTop + expHeight;
 			if (scrollY < scrollTop + 10) {
 				activeIdx = index;
 			}
@@ -811,7 +832,6 @@ function initPositionEventWrap($wrap) {
 		}
 
 
-		/*
 		// 추후 관리 pew_exception 높이 측정 // PPRMTPS10004001000
 		if ($wrap.find('.pew_exception').length) {
 			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
@@ -838,14 +858,13 @@ function initPositionEventWrap($wrap) {
 				}
 			}
 		}
-		*/
 
 	});
 }
+*/
 /* 개선 전 */
 
 /* origin */
-/*
 function initPositionEventWrap($wrap) {
 	if (!$wrap.length) return;
 
@@ -918,7 +937,6 @@ function initPositionEventWrap($wrap) {
 		}
 	});
 }
-*/
 /* origin */
 
 
