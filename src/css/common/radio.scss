@@ -381,6 +381,12 @@
 			margin-top: var(--gap-4);
 		}
 	}
+
+	&.car_type_option {
+		.inp_radio {
+			max-width: none;
+		}
+	}
 }
 
 
