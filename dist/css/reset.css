@@ -913,15 +913,18 @@ a:focus,
 button:focus {
 	background-color: inherit;
 }
+/*
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-	-webkit-transition: background-color 5000s ease-in-out 0s;
-	transition: background-color 5000s ease-in-out 0s;
-	-webkit-transition: background-color 9999s ease-out;
-	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    // -webkit-text-fill-color: #fff !important;
 }
+*/
+/*
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -930,12 +933,15 @@ button::-moz-focus-inner,
 	border: 0;
 	border-style: none;
 }
+*/
+/*
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
 	outline: 1px dotted ButtonText;
 }
+*/
 [type="checkbox"],
 [type="radio"] {
 	padding: 0;

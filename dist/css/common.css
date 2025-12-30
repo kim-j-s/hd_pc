@@ -2080,7 +2080,7 @@ sup {
 .nav_list .nl_dept1_link > .text {
 	display: block;
 	font-weight: 700;
-	font-size: var(--font-size-navigation-depth-medium);
+	font-size: var(--font-size-navigation-title-small);
 }
 .nav_list .nl_dept1_link.active::after {
 	left: 0;
@@ -2223,7 +2223,7 @@ sup {
 	display: block;
 	padding: 0 var(--padding-5);
 	font-weight: 700;
-	font-size: var(--font-size-heading-xsmall);
+	font-size: var(--font-size-heading-small);
 }
 .nld_cont .nld_cont_body_list .nl_dept2 > .nl_dept2_tit + .nl_dept2_list {
 	padding-top: var(--gap-2);
@@ -2240,7 +2240,7 @@ sup {
 }
 .nld_cont .nld_cont_body_list .nl_dept2_list > .item a > .text {
 	display: inline-block;
-	font-size: var(--font-size-navigation-depth-small);
+	font-size: var(--font-size-navigation-depth-medium);
 	color: var(--color-text-basic);
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -6867,6 +6867,9 @@ sup {
 	margin-top: var(--gap-5);
 }
 .card_item_wrap .no_list_area {
+	margin-top: 0;
+}
+.card_item_wrap * + .no_list_area {
 	margin-top: var(--gap-5);
 }
 .card_item_wrap.focusin .card_item {
@@ -9821,17 +9824,11 @@ sup {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
-.input_text:focus-within {
-	border-color: var(--color-input-border-active);
-}
 .input_text.error {
 	border: 3px solid var(--color-input-border-error);
 }
 .input_text.error input {
 	height: calc(var(--size-height-8) - 6px);
-}
-.input_text.error:focus-within {
-	border-color: var(--color-input-border-error);
 }
 .msg_info {
 	margin-top: var(--gap-3);
@@ -9871,17 +9868,11 @@ sup {
 	border-radius: var(--radius-medium3);
 	/* comp_wrap 내부에서 보안키패드 호출 버튼 공통 사용요소 - 필요시 각 class별로 별도 설정 필요 */
 }
-.comp_wrap:focus-within {
-	border-color: var(--color-text-basic);
-}
 .comp_wrap.error {
 	border: 3px solid var(--color-input-border-error);
 }
 .comp_wrap.error .input_text input {
 	height: calc(var(--size-height-8) - 6px);
-}
-.comp_wrap.error .input_text:focus-within {
-	border-color: var(--color-input-border-error);
 }
 .comp_wrap.card .comp_wrap_keypad_call {
 	-webkit-box-flex: 0;
@@ -10140,10 +10131,6 @@ sup {
 .weight.big .del,
 .price.big .del {
 	right: calc(100% - 36px);
-}
-.weight.big:focus-within,
-.price.big:focus-within {
-	border-color: #f2650e !important;
 }
 .card {
 	padding: 0 16px;
@@ -15251,9 +15238,6 @@ ol li .table_wrap + .list_ty2 li + li {
 	background: var(--color-input-surface);
 	border-radius: var(--radius-medium3);
 	color: var(--color-text-subtle);
-}
-.textarea_wrap textarea:focus-within {
-	border-color: var(--color-input-border-active);
 }
 .textarea_wrap textarea:-moz-read-only {
 	background-color: var(--color-input-surface-disabled);

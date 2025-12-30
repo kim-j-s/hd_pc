@@ -73,7 +73,7 @@
 .quick_menu .qm_item > a.qm_btn_acc_report::before {
 	border-color: var(--color-button-primary-fill);
 	background-color: var(--color-button-primary-fill);
-	background-image: url(../images/common/icon_qm_tel.png);
+	background-image: url(../images/common/icon_qm_emergency.png);
 }
 .quick_menu .qm_item > a.qm_btn_acc_report:focus::before,
 .quick_menu .qm_item > a.qm_btn_acc_report:hover::before {
@@ -5451,9 +5451,9 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 	gap: 0 var(--gap-3);
 	padding: var(--padding-6) 0;
 	-webkit-transition: padding 0.3s;
@@ -5472,7 +5472,7 @@
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
 	min-width: 0;
-	font-size: var(--font-size-body-small);
+	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .text .word {
@@ -5581,10 +5581,10 @@
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_ins_list > li > .item .inner .text {
 	width: 100%;
-	font-size: var(--font-size-body-xsmall);
-	color: var(--color-text-subtle);
-	text-align: left;
 	display: block;
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-basic);
+	text-align: left;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -5612,16 +5612,16 @@
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_desc_wrap .desc_txt {
 	position: relative;
 	padding-left: var(--padding-3);
-	font-size: var(--font-size-body-xsmall);
-	color: var(--color-text-information);
+	font-size: var(--font-size-body-small, 14px);
+	color: var(--color-text-subtle, #464c53);
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_desc_wrap .desc_txt::before {
 	content: "";
 	position: absolute;
-	top: 8px;
+	top: 10px;
 	left: 0;
-	width: 2px;
-	border-bottom: 1px solid #6d7882;
+	width: 4px;
+	border-bottom: 1px solid #464c53;
 	border-radius: 50%;
 }
 .main_cont_wrap .mcw_cont .main_benefit .dd {
@@ -6396,7 +6396,7 @@
 }
 .prd_module_box .prd_module_list .item .text {
 	display: block;
-	font-size: var(--font-size-body-small);
+	font-size: var(--font-size-body-medium);
 }
 .prd_module_box .prd_module_list .item.prd_ic1 {
 	background-image: url(../images/content/main/icon_prd_document_fill.svg);
