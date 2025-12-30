@@ -24,7 +24,8 @@
 		> .text {
 			display: block;
 			font-weight: 700;
-			font-size: var(--font-size-navigation-depth-medium);
+			// font-size: var(--font-size-navigation-depth-medium);
+			font-size: var(--font-size-navigation-title-small);
 		}
 		&.active {
 			&::after {
@@ -183,7 +184,9 @@
 				display: block;
 				padding: 0 var(--padding-5);
 				font-weight: 700;
-				font-size: var(--font-size-heading-xsmall);
+				// font-size: var(--font-size-heading-xsmall);
+				font-size: var(--font-size-heading-small);
+				// background-color: blue;
 				+ .nl_dept2_list {
 					padding-top: var(--gap-2);
 				}
@@ -202,7 +205,9 @@
 					transition: 0.3s;
 					> .text {
 						display: inline-block;
-						font-size: var(--font-size-navigation-depth-small);
+						// font-size: var(--font-size-navigation-depth-small);
+						font-size: var(--font-size-navigation-depth-medium);
+						// background-color: red;
 						// color: var(--color-text-subtle);
 						color: var(--color-text-basic);
 						background-repeat: no-repeat;

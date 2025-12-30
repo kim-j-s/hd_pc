@@ -11,9 +11,9 @@
 		background: var(--color-input-surface);
 		border-radius: var(--radius-medium3);
 		color: var(--color-text-subtle);
-		&:focus-within {
-			border-color: var(--color-input-border-active);
-		}
+		// &:focus-within {
+		// 	border-color: var(--color-input-border-active);
+		// }
 		&:read-only,
 		&:disabled {
 			background-color: var(--color-input-surface-disabled);

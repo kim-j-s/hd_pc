@@ -766,6 +766,86 @@ function fixedMenuPlay() {
 }
 
 // 초기화 함수 (동적 요소가 생성될 때마다 호출)
+/* 개선 전 */
+function initPositionEventWrap($wrap) {
+	if (!$wrap.length) return;
+
+	const $tabBtns = $wrap.find('.position_event_tab .tag_item');
+	const $contents = $wrap.find('.position_event_content .pec_point');
+	const $scrollArea = $wrap.find('.position_event_content');
+
+	$wrap.data('scrolling', false);
+
+	// 스크롤 이벤트 (요소 개별) - 이벤트 중복 방지 (off, on)
+	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
+		if ($wrap.data('scrolling')) return;
+
+		const scrollTop = $wrap.scrollTop();
+		/* 먼지 모르겠음 */
+		// let expHeight = 0;
+		// let sHeight = 0;
+		/* 먼지 모르겠음 */
+
+		// pc 전체메뉴 스크롤 시 상단 고정
+		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
+			$('.amc_nav').removeClass('active');
+		} else {
+			$('.amc_nav').addClass('active');
+		}
+		// pc 전체메뉴 스크롤 시 상단 고정
+
+		let activeIdx = -1;
+
+		$contents.each(function (index) {
+			const targetTop = $(this).offset().top;
+			const containerTop = $scrollArea.offset().top;
+			// const scrollY = targetTop - containerTop + expHeight + sHeight;
+			const scrollY = targetTop - containerTop;
+			if (scrollY < scrollTop + 10) {
+				activeIdx = index;
+			}
+		});
+
+		if (activeIdx !== -1) {
+			$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+		}
+
+
+		/*
+		// 추후 관리 pew_exception 높이 측정 // PPRMTPS10004001000
+		if ($wrap.find('.pew_exception').length) {
+			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
+			const $tagItemWrap = $wrap.find('.tag_item_wrap');
+			// const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
+			// const $titWrap = $wrap.find('.pec_point .title_h3');
+
+			// const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
+			// const tagItemHeight = $tagItemWrap.outerHeight() || 0;
+			// const titWrapHeight = $titWrap.outerHeight() || 0;
+
+			expHeight = 197 - 68;
+
+			if(!$simpleInfoWrap.length){
+				// console.log('not');
+				const infoHeight = $wrap.find('.info_summary').outerHeight();
+				const $targetChild = $tagItemWrap.closest('.simple_info_wrap.ty2').find('.simple_info_item');
+	
+				if( scrollTop >= infoHeight){
+					$targetChild.addClass('active');
+				} else {
+					$targetChild.removeAttr('style').removeClass('active');
+					$targetChild.removeClass('active');
+				}
+			}
+		}
+		*/
+
+	});
+}
+/* 개선 전 */
+
+/* origin */
+/*
 function initPositionEventWrap($wrap) {
 	if (!$wrap.length) return;
 
@@ -838,6 +918,139 @@ function initPositionEventWrap($wrap) {
 		}
 	});
 }
+*/
+/* origin */
+
+
+// 개선본 */
+/*
+function initPositionEventWrap($wrap) {
+	if (!$wrap || !$wrap.length) return;
+
+	 // ===============================
+	 // * 1. 캐싱 & 상태
+	 // * ===============================
+	const state = {
+		scrolling: false,
+		expHeight: 0,
+		pointsTop: []
+	};
+
+	const $content   = $wrap.find('.position_event_content');
+	const $points    = $content.find('.pec_point');
+	const $tabBtns   = $wrap.find('.position_event_tab .tag_item');
+	const $amcNav    = $('.amc_nav');
+
+	const $infoSummary    = $wrap.find('.info_summary');
+	const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
+
+	$wrap.data('state', state);
+
+	 // * ===============================
+	 // * 2. 초기 계산
+	 // * ===============================
+	calcPointOffsets();
+	handleException(0); // 초기 상태 반영
+
+	 // ===============================
+	 // * 3. 스크롤 바인딩
+	 // * ===============================
+	bindScroll();
+
+	 // ===============================
+	 // * functions
+	 // * ===============================
+
+	function bindScroll() {
+		let ticking = false;
+
+		$wrap
+			.off('scroll.positionEvent')
+			.on('scroll.positionEvent', function () {
+				if (ticking) return;
+
+				ticking = true;
+				requestAnimationFrame(() => {
+					handleScroll();
+					ticking = false;
+				});
+			});
+	}
+
+	function handleScroll() {
+		const scrollTop = $wrap.scrollTop();
+
+		handleStickyNav(scrollTop);
+		handleException(scrollTop);
+		updateActiveTab(scrollTop);
+	}
+
+	 // ===============================
+	 // * 4. sticky nav
+	 // * ===============================
+	function handleStickyNav(scrollTop) {
+		if (!$wrap.hasClass('am_content')) return;
+		$amcNav.toggleClass('active', scrollTop > 0);
+	}
+
+	 // ===============================
+	 // * 5. exception 처리
+	 // * ===============================
+	function handleException(scrollTop) {
+		if (!$infoSummary.hasClass('pew_exception')) {
+			state.expHeight = 0;
+			return;
+		}
+
+		// 기준 offset (197 - 68)
+		state.expHeight = 129;
+
+		if (!$simpleInfoWrap.length) {
+			const infoHeight = $infoSummary.outerHeight() || 0;
+			const $target = $wrap
+				.find('.simple_info_wrap.ty2 .simple_info_item');
+
+			$target.toggleClass('active', scrollTop >= infoHeight);
+		}
+	}
+
+	 // ===============================
+	 // * 6. 탭 활성화 (배열 기반)
+	 // * ===============================
+	function updateActiveTab(scrollTop) {
+		const 기준값 = scrollTop + state.expHeight + 10;
+
+		let activeIdx = -1;
+
+		for (let i = 0; i < state.pointsTop.length; i++) {
+			if (state.pointsTop[i] <= 기준값) {
+				activeIdx = i;
+			} else {
+				break; // 정렬되어 있으므로 중단
+			}
+		}
+
+		if (activeIdx !== -1) {
+			$tabBtns
+				.removeClass('active')
+				.eq(activeIdx)
+				.addClass('active');
+		}
+	}
+
+	 // ===============================
+	 // * 7. 섹션 위치 계산 (1회)
+	 // * ===============================
+	function calcPointOffsets() {
+		const containerTop = $content.offset().top;
+
+		state.pointsTop = $points.map(function () {
+			return $(this).offset().top - containerTop;
+		}).get();
+	}
+}
+*/
+// 개선본
 
 // input 상태값 표현식
 function inputState() {

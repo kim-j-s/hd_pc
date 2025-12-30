@@ -74,7 +74,8 @@ body {
 				&::before {
 					border-color: var(--color-button-primary-fill);
 					background-color: var(--color-button-primary-fill);
-					background-image: url(../images/common/icon_qm_tel.png);
+					// background-image: url(../images/common/icon_qm_tel.png);
+					background-image: url(../images/common/icon_qm_emergency.png);
 				}
 				&:focus,
 				&:hover {

@@ -161,7 +161,8 @@
 						> .item {
 							position: relative;
 							display: flex;
-							align-items: center;
+							// align-items: center;
+							align-items: flex-start;
 							gap: 0 var(--gap-3);
 							padding: var(--padding-6) 0;
 							transition: padding 0.3s;
@@ -175,7 +176,9 @@
 								position: relative;
 								flex: 1 1 0;
 								min-width: 0;
-								font-size: var(--font-size-body-small);
+								// font-size: var(--font-size-body-small);
+								font-size: var(--font-size-body-medium);
+								// background: blue;
 								color: var(--color-text-basic);
 								.word {
 									display: block;
@@ -279,10 +282,10 @@
 								}
 								.text {
 									width: 100%;
-									font-size: var(--font-size-body-xsmall);
-									color: var(--color-text-subtle);
-									text-align: left;
 									display: block;
+									font-size: var(--font-size-body-medium);
+									color: var(--color-text-basic);
+									text-align: left;
 									text-overflow: ellipsis;
 									overflow: hidden;
 									white-space: nowrap;
@@ -319,29 +322,20 @@
 					.desc_txt {
 						position: relative;
 						padding-left: var(--padding-3);
-						font-size: var(--font-size-body-xsmall);
-						color: var(--color-text-information);
+						font-size: var(--font-size-body-small, 14px);
+						color: var(--color-text-subtle, #464C53);
 						&::before {
 							content: '';
 							position: absolute;
-							top: 8px;
+							top: 10px;
 							left: 0;
-							width: 2px;
-							border-bottom: 1px solid #6D7882;
+							width: 4px;
+							border-bottom: 1px solid #464C53;
 							border-radius: 50%;
 						}
 					}
 				}
 			}
-
-
-
-
-
-
-
-
-
 			// 삭제
 			.dd {
 				// background-color: var(--color-background-white);
@@ -1147,7 +1141,9 @@
 
 			.text {
 				display: block;
-				font-size: var(--font-size-body-small);
+				// font-size: var(--font-size-body-small);
+				// background-color: blue;
+				font-size: var(--font-size-body-medium);
 			}
 
 			&.prd_ic1 {
