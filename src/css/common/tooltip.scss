@@ -10,6 +10,23 @@
 	font-size: 0;
 	line-height: 0;
 	// background-color: #ddd;
+	
+	&.al_left {
+		.tooltip_panel {
+			left: -16px;
+		}
+	}
+	&.al_center {
+		.tooltip_panel {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&.al_right {
+		.tooltip_panel {
+			right: -16px;
+		}
+	}
 
 	&.active {
 		z-index: 2;
@@ -182,23 +199,6 @@
 				width: 16px;
 				height: 16px;
 				background: url(../images/icon/close_ty2.svg) no-repeat center/contain;
-			}
-		}
-	
-		&.al_left {
-			.tooltip_panel {
-				left: -16px;
-			}
-		}
-		&.al_center {
-			.tooltip_panel {
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
-		&.al_right {
-			.tooltip_panel {
-				right: -16px;
 			}
 		}
 	}
