@@ -1,4 +1,3 @@
-
 @mixin blind {
 	overflow: hidden;
 	position: absolute;
@@ -540,21 +539,6 @@ sup {
 }
 /* 개발에서 제어하는 부분 */
 
-
-.info_help_list {
-	dt {
-		margin-bottom: var(--gap-4);
-		font-weight: 700;
-		font-size: var(--font-size-heading-small);
-		color: var(--color-text-bolder);
-		& ~ dt {
-			margin-top: var(--gap-9);
-		}
-	}
-	dd {
-		font-size: var(--font-size-body-medium);
-	}
-}
 
 .sticky_fix {
 	position: sticky;
@@ -1179,172 +1163,6 @@ sup {
 }
 
 
-.coverage_level_box {
-	position: relative;
-	margin-top: var(--gap-2);
-	padding-bottom: 30px;
-
-	&:before {
-		position: absolute;
-		bottom:0;
-		left:0;
-		content:'부족';
-		padding: 2px 4px;
-		background-color: var(--color-border-secondary);
-		font-size: var(--font-size-label-xsmall);
-		color: #fff;
-		border-radius: var(--radius-small1);
-	}
-
-	&:after {
-		position: absolute;
-		bottom:0;
-		right:0;
-		content:'충분';
-		padding: 2px 4px;
-		background-color: var(--color-border-secondary);
-		font-size: var(--font-size-label-xsmall);
-		color: #fff;
-		border-radius: var(--radius-small1);
-	}
-	
-	.level_list {
-		position: relative;
-		display: flex;
-		margin: 0 4px;
-		padding-top: 32px;
-		
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: 1px;
-			left: 0;
-			// z-index: -1;
-			width: 100%;
-			height: 2px;
-			background-color: var(--color-background-gray-subtle);
-		}
-
-		> .level {
-			position: relative;
-			width: 25%;
-
-			&:before {
-				position: absolute;
-				top: -2px;
-				left: -4px;
-				content:'';
-				width: 8px;
-				height: 8px;
-				background: url(../images/icon/level_dot.svg) no-repeat center/8px auto;
-			}
-
-			&:after {
-				position: absolute;
-				top: -2px;
-				right: -4px;
-				content:'';
-				width: 8px;
-				height: 8px;
-				background: url(../images/icon/level_dot.svg) no-repeat center/8px auto;
-			}
-
-			&.on {
-				> span {
-					position: relative;
-					display: block;
-					width: 100%;
-					height: 4px;
-					background-color: var(--color-border-secondary);
-
-					&:before {
-						position: absolute;
-						top: -2px;
-						left: -4px;
-						z-index: 1;
-						content:'';
-						width: 8px;
-						height: 8px;
-						background: url(../images/icon/progressbar_dot.svg) no-repeat center/8px auto;
-					}
-
-					&:after {
-						position: absolute;
-						top: -2px;
-						right: -4px;
-						z-index: 1;
-						content:'';
-						width: 8px;
-						height: 8px;
-						background: url(../images/icon/progressbar_dot.svg) no-repeat center/8px auto;
-					}
-
-					> i {
-						position: absolute;
-						bottom: 6px;
-						left: calc(50% - 22px);
-						content:'';
-						width: 44px;
-						height: 32px;
-						background: url(../images/icon/car_jeep.svg) no-repeat center/ 36px auto;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-
-.compare_rank_list {
-	& + .title_h3 {
-		margin-top: var(--gap-11);
-	}
-
-	> li {
-		.info_rank {
-			display: flex;
-			gap: var(--gap-2);
-
-			& + .info_bar {
-				margin-top: var(--gap-2);
-			}
-
-			.hd_badge {
-				flex: none;
-				width: 36px;
-			}
-			.desc {
-				font-size: var(--font-size-body-small);
-				line-height: 24px;
-				color: var(--color-text-subtle);
-			}
-		}
-		.info_bar {
-			display: flex;
-			align-items: center;
-			gap: var(--gap-3);
-
-			.progress_bar_ty2 {
-				flex: 1;
-			}
-			.percent {
-				flex: none;
-				width: 46px;
-
-				.hd_badge {
-					width: 100%;
-					text-align: center;
-				}
-			}
-		}
-		& + li {
-			padding-top: 12px;
-		}
-	}
-}
-
-
 // 증가, 감소
 .trend {
 	display: flex;
@@ -1396,13 +1214,10 @@ sup {
 	}
 }
 
-
-
 // 상속 컨텐츠 Case
 .and {
 	margin-top: var(--gap-5) !important;
 }
-
 
 // 관리자_다이나믹 랜딩 배너
 .prd_bann_box {
@@ -1415,7 +1230,6 @@ sup {
 		height: 100%;
 	}
 }
-
 
 // 가입 이벤트
 .event_img_box {
@@ -1431,188 +1245,6 @@ sup {
 	}
 }
 
-
-.form_title_box {
-	display: flex;
-	justify-content: space-between;
-
-	.checkbox_group_wrap {
-		flex: none;
-		width: auto;
-		min-width: 134px;
-		margin-top: 0;
-	}
-
-	& + * {
-		margin-top: 10px;
-	}
-}
-
-
-//가입 전 알릴사항 화면용 그룹 클래스
-.notification {
-	.title_view_wrap {
-		& + .checkbox_group_wrap,
-		& + .btn_area {
-			justify-content: flex-end;
-			& > * {
-				flex-grow: 0;
-				min-width: 134px;
-			}
-		}
-	}
-
-	& > .checkbox_group_wrap:first-child {
-		justify-content: flex-end;
-			& > * {
-				flex-grow: 0;
-				min-width: 134px;
-			}
-	}
-
-	.form_sub_top {
-		font-size: var(--font-size-body-medium);
-		font-weight: 700;
-		color: var(--color-text-primary-bold);
-	}
-
-	.form_list {
-		>li {
-			> .form_group_wrap {
-				display: block;
-				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-				padding-bottom: 40px;
-
-				>.form_line {
-					position: relative;
-					word-break: keep-all;
-
-					.form_sub_top {
-						padding-right: 312px;
-
-						& + .label_tit {
-							padding-top: var(--gap-3);
-						}
-					}
-				
-					> .label_tit {
-						margin-bottom: 0;
-
-						& + .info_gray.ty2 {
-							border-radius: 0;
-							background-color: var(--color-background-white);
-							padding: 0;
-							margin-top: var(--gap-5);
-						}
-
-						& + .row {
-							margin-top: var(--gap-5);
-						}
-					}
-
-					//예,아니오 버튼이 있는 질문 스타일
-					&:has( > .radio_group_wrap){
-						> .label_tit {
-							display: table-cell;
-							vertical-align: middle;
-							height: 56px;
-							padding-right: 312px;
-
-							.num {
-								flex: none;
-								padding-right: var(--padding-2);
-								vertical-align: top;
-							}
-						}
-						.info_gray.ty2 {
-							// padding-right: 312px;
-						}
-					}
-					
-					.info_gray.ty2 {
-						margin-top: var(--gap-5);
-						margin-bottom: 0;
-
-						& + .row {
-							margin-top: var(--gap-5);
-						}
-					}
-					
-					.radio_group_wrap:not(.column) {
-						width: 280px;
-						position: absolute;
-						top: 0;
-						right: 0;
-
-						& + .form_group_wrap {
-							.label_tit {
-								padding-top:0;
-							}
-						}
-					}
-
-					.checkbox_group_wrap {
-						margin-top: var(--gap-5);
-
-						.inp_checkbox {
-							flex-basis: calc(25% - 9px);
-						}
-					}
-
-					.radio_group_wrap.row, .checkbox_group_wrap.row {
-						gap: 20px var(--gap-8);
-						margin-top: 0;
-
-						.inp_radio + .inp_radio {
-							margin-top: 0;
-						}
-					}
-
-					.form_group_wrap {
-						display: block;
-					}
-
-					.row {
-						width: 100%;
-						// display: flex !important;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						flex-wrap: wrap;
-						gap: 32px;
-
-						.form_line {
-							flex : 0 1 calc(50% - 16px);
-						}
-
-						.inp_radio, .inp_checkbox {
-							width: 50%;
-							flex : 0 1 calc(50% - 16px);
-							margin-top: 0;
-						}
-					}//.row
-
-				}//.form_line
-			}// li > .form_group_wrap
-		}
-
-		&:has(+ .divider_ty1) li:last-child {
-			.form_group_wrap {
-				padding-bottom: 0;
-				border-bottom: 0;
-			}
-		}
-	}
-
-	.form_list_ty2 {
-		> li > .form_group_wrap {
-			border-bottom: none;
-			padding-bottom: 0;
-		}
-	}
-}
-
-
 // 2단 타입 
 .multi_ty1 {
 	display: flex;
@@ -1626,17 +1258,6 @@ sup {
 		& + * {
 			margin-top: 0;
 		}
-	}
-}
-
-// 제휴설계내역 팝업
-.reward_img_area {
-	width: 252px;
-	height: 55px;
-	justify-content: flex-start;
-	margin-top: var(--gap-5);
-	& + .bottom_fix_notice  {
-		padding-top: var(--gap-8);
 	}
 }
 

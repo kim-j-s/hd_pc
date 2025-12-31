@@ -5,3 +5,18 @@
 		}
 	}
 }
+
+.info_help_list {
+	dt {
+		margin-bottom: var(--gap-4);
+		font-weight: 700;
+		font-size: var(--font-size-heading-small);
+		color: var(--color-text-bolder);
+		& ~ dt {
+			margin-top: var(--gap-9);
+		}
+	}
+	dd {
+		font-size: var(--font-size-body-medium);
+	}
+}
