@@ -3,6 +3,15 @@
 	align-items: stretch;
 	justify-content: space-between;
 	gap: var(--gap-4);
+
+	> div {
+		flex: 1;
+		min-width: 0;   
+	}
+	.hd_btn {
+		min-width: 100px;
+	}
+
 	&.row_ty1 {
 		> div:first-child {
 			flex: 1.9 1 0;
@@ -150,6 +159,13 @@
 				}
 				&::after {
 					border-radius: var(--radius-medium1);
+				}
+			}
+		}
+		&.si_ellipsis {
+			.select_item_inner  {
+				.si_item {
+					display: block;
 				}
 			}
 		}

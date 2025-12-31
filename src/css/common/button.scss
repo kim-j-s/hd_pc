@@ -5,7 +5,8 @@
 //btn_area
 .btn_area {
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
+	justify-content: flex-start;
 	gap: var(--gap-3); 
 	flex-flow: row wrap;
 
@@ -152,16 +153,70 @@
 				flex-basis: calc(50% - 5px);
 			}
 		}
+		+ .title_h3 {
+			margin-top: var(--gap-11);
+		}
+	}
+
+	&.ty5 {
+		display: flex;
+		.btn_link {
+			flex:1;
+		}
 	}
 
 	& + .info_cont {
 		margin-top: var(--gap-8);
 	}
 
+	& + .form_group_wrap {
+		margin-top: var(--gap-7);
+	}
+	& + .content_top {
+		margin-top: var(--gap-11);
+	}
+
 	&:not(.column){
 		&:has(button.hd_btn_s_4, button.hd_btn_s_5){
 			gap: var(--gap-2);
 		}
+	}
+
+	.pack {
+		flex: 0 0 auto;
+		display: flex;
+		gap: var(--gap-3);
+	}
+
+	&.half {
+		width: calc(50% - 16px);
+		button {
+			flex: 1;
+		}
+	}
+	&.full {
+		width: 100%;
+		button {
+			flex: 1;
+		}
+	}
+	&.center {
+		& + .btn_area.ty2 {
+			margin-top: var(--gap-5);
+		}
+		&.equal {
+			.hd_btn {
+				min-width: 192px;
+			}
+		}
+		&.equal_ty2 {
+			.hd_btn {
+				min-width: 160px;
+			}
+		}
+	}
+	&.mg_ty1 {
+		margin: var(--gap-11);
 	}
 }
 
@@ -264,6 +319,8 @@
   */
 
 .hd_btn {
+	flex: 0 1 auto;
+
 	&_s_1 {
 		//CTA&primary
 		min-width: 98px;
@@ -374,8 +431,19 @@
 	> .text {
 		display: block;
 	}
+
+	//icon
 	.hd_icon {
 		flex: none;
+		&.iic {
+			background-image: url(../images/icon/icon_insurance_check.svg);
+		}
+		&.documentChkSvg {
+			background-image: url(../images/icon/icon_document_check.svg);
+		}
+		&.resetSvg {
+			background-image: url(../images/icon/icon_reset_ty2.svg);
+		}
 	}
 
 	//예외
@@ -466,6 +534,33 @@
 		
 	}
 
+	&.short_cut {
+		padding-right: 20px;
+		font-size: var(--font-size-label-medium);
+		background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 2px center/16px auto;	
+	}
+
+	&.short_cut2 {
+		.text {
+			text-align: left;
+
+			.short_cut2_tit {
+				display: inline-block;
+				padding-right: 18px;
+				font-size: var(--font-size-label-medium);
+				// line-height: 1.5;
+				background: url(../images/icon/arrowRight_ty4.svg) no-repeat right 2px / 16px auto;
+				&::after {
+					content: '';
+				}
+			}
+			.cont_text_sub {
+				display: block;
+				margin-top: var(--gap-2);
+				font-size: var(--font-size-label-small);
+			}
+		}
+	}
 
 }
 
@@ -478,6 +573,7 @@
 	color: var(--color-text-basic);
 	border: 0;
 	padding: 0px 2px;
+	flex: 0 1 auto;
 
 	span.text {
 		cursor: pointer;
@@ -724,6 +820,22 @@
 		}
 	}
 
+	&.short_cut_icon_ty5 > .text dl dt {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-2);
+		display: block;
+	}  
+
+	//보험계약대출 체결·이행을 위한 개인(신용)정보 처리 상세 동의서
+	&.short_cut_icon_ty6 {
+		> .text {  
+			&::before {
+				background-image: url(../images/content/guarantee/icon_gtl_doc.svg);
+			}
+		}
+	}
+
 	&.new_open {
 		display: inline-block;
 		padding-right: 18px;
@@ -771,7 +883,9 @@
 	&.price_btn {
 		position: relative;
 		height: 100%;
-		padding-right: 19px;
+		// padding-right: 19px;
+		padding-right: 22px;
+		border-radius: 0;
 		font-size: var(--font-size-button-large);
 		color: var(--color-text-primary-bold);
 		background: url(../images/icon/arrowRight_ty6.svg) no-repeat right center /20px auto;
@@ -900,6 +1014,14 @@
 			}
 		}
 	}
+}
+
+.btn_rd_modify {
+	width: 24px;
+	height: 24px;
+	background: url(../images/icon/icon_reset_ty2.svg) no-repeat center /12px auto;
+	border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+	border-radius: 100%;
 }
 
 .infoButton {

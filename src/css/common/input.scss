@@ -335,8 +335,19 @@
 	}
 
 	&.card {
+		gap: var(--gap-3);
+		padding: 0 calc(var(--padding-6) - 2px);
+
 		.comp_wrap_keypad_call {
-			flex: none;
+			// flex: none;
+			flex: 1.6;
+
+			&.form_key_pc {
+				> input {
+					width: 59px;
+					padding: 0;
+				}
+			}
 			.pin_area {
 				&.default {
 					justify-content: center;
@@ -346,6 +357,7 @@
 	}
 
 	&.business {
+		gap: var(--gap-3);
 		.input_text {
 			flex: 1;
 			input {
@@ -407,11 +419,29 @@
 		padding: 3px 4px;
 		display: flex;
 		align-items: center;
-		gap: var(--gap-2);
+		// gap: var(--gap-2);
+		gap: var(--gap-3);
 		width: 100%;
+		
+		.form_key {
+			.pin_area {
+				height: var(--size-height-7);
+			}
+		}
+
 		& > .input_text {
 			min-width: 0;
 			width: calc(50% - 8px);
+			flex: 1 1 0;
+		}
+
+		& > .comp_wrap_keypad_call {
+			flex: none;
+			flex: 1 1 0;
+			input {
+				flex: 1 1 0;
+				width: 0;
+			}	
 		}
 
 		&:has(.big) {
@@ -528,6 +558,12 @@
 			}
 		}
 
+	}
+	
+	// 카드 비밀번호
+	&.card_pw {
+		padding-left: 12px;
+		padding-right: var(--padding-2);
 	}
 }
 
@@ -738,7 +774,8 @@
 	& + .bann_wrap,
 	& + .banner_slide_wrap,
 	& + .checkbox_group_wrap.space2,
-	& + .file_attach_box {
+	& + .file_attach_box,
+	& + .search_reult_list_container {
 		margin-top: var(--gap-8);
 	}
 
@@ -750,7 +787,8 @@
 	& + [class^=list_ty],
 	& + .btn_area,
 	& + .table_wrap,
-	& + .opt_case4 {
+	& + .opt_case4,
+	& + .info_gray.ty2:has(.insurance_policyBox) {
 		margin-top: var(--gap-5);
 	}	
 
@@ -971,6 +1009,9 @@
 			gap: 0;
 			width: 100%;
 		}
+		+ .input_text {
+			margin-top: var(--gap-5);
+		}
 	}
 
 	.radio_group_wrap {
@@ -1037,6 +1078,180 @@
 	}
 }
 
+/* 바닥페이지 form */
+.wrap {
+	.form_group_wrap {
+		display: flex;
+		flex-flow: row wrap;
+		gap: var(--gap-8);
+
+		&:not(.full) > * {
+			flex: 0 0 calc(50% - 16px);
+		}
+		&.full {
+			flex-direction: column;
+
+			.space_between {
+				gap: var(--gap-5);
+				.input_text,
+				.contractNum {
+					flex: 1;
+				}
+				button {
+					min-width: 100px;
+				}
+			}
+
+			.partial_half {
+				.row {
+					align-items: center;
+					
+					> *:not(.btn_area) {
+						flex: 0 1 50%;
+					}
+					.btn_area {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		[class^=form_line] {
+			& ~ .form_line {
+				margin-top: 0;
+			}
+
+
+			&.full {
+				.radio_group_wrap {
+					&:has(.rd_btn){
+						.rd_btn {
+							max-width: calc(50% - 6px);
+						}
+					}
+				}
+			}
+			
+
+			.radio_group_wrap {
+				&:has(.rd_btn){
+					.rd_btn {
+						max-width: 195px;
+					}
+				}
+			}
+		}
+		.form_line_ty3 {
+			+ .form_line_ty3 {
+				// margin-top: var(--gap-9);
+				margin-top: var(--gap-3);
+			}
+		}
+
+		.full_half {
+			flex-basis: 100%;
+			> div,
+			> ul {
+				width: calc(50% - 16px);
+			}
+		}
+
+		.full {
+			flex-basis: 100%;
+
+			.radio_group_wrap:not(.full) {
+				width: calc(50% - 16px);
+			}
+			.label_tit {
+				.tooltip_wrap {
+					.tooltip_panel {
+						//max-width: 836px;
+					}
+				}
+			}
+			.scp_list_r {
+				.radio_group_wrap {
+					width: auto;
+				}
+			}
+			.row_ty2 {
+				display: flex;
+				justify-content: space-between;
+				> div {
+					margin: 0;
+					width: calc(50% - 16px);
+				}
+				&.radio_group_wrap {
+					> div {
+						flex: auto;
+					}
+				}
+			}
+		}
+
+		.tit_full {
+			flex-basis: 100%;
+			> div:not(.label_tit) {				
+				width: calc(50% - 16px);
+			}
+		}
+
+		.c1 {
+			flex-basis: 100%;
+
+			.radio_group_wrap,
+			.label_tit {
+				width: calc(50% - 16px);
+			}
+		}
+
+		.row {
+			align-items: flex-start;
+			margin-top: 0;
+			.form_line {
+				margin-top: 0;
+			}
+		}
+
+		.column {
+			gap: var(--gap-8);
+		}
+
+		& + .space_list_ty2,
+		& + .banner_box,
+		& + .file_attach_box {
+			margin-top: var(--gap-8);
+		}
+
+		.c1 {
+			flex-basis: 100%;
+
+			.radio_group_wrap,
+			.label_tit {
+				width: calc(50% - 16px);
+			}
+		
+			& + .info_gray.ty2 {
+				margin-top: var(--gap-5);         
+			}
+		
+			& + .search_reult_list_container {
+				margin-top: var(--gap-8);
+			}
+		}
+
+		& + .search_result_count {
+			margin-top: var(--gap-5);
+		}
+		
+		.row_ty2,
+		.input_text,
+		.range_calrendar {
+			+ .check_group_wrap {
+				margin-top: var(--gap-5);
+			}
+		}
+	}
+}
 
 //기간 달력
 .range_calrendar {

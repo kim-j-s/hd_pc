@@ -263,4 +263,17 @@
 }
 
 
+/* 바닥페이지용 */
+.wrap {
+	&.footer_fix{
+		&:has(.ft_fix) {
+			// padding-bottom: 323px;
 
+			.footer {
+				// bottom: 120px;
+				// position: sticky;
+				// bottom: 0;
+			}
+		}
+	}
+}

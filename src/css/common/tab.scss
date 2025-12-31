@@ -202,6 +202,23 @@
 	& + .title_h3 {
 		margin-top: var(--gap-11);
 	}
+	
+	.tab_wrap_list_ty1 {
+		margin: 0;
+		overflow: visible;
+
+		.tab_btn {
+			.hd_badge {
+				padding: 0px var(--padding-3);
+				border-radius: var(--radius-max);
+				vertical-align: text-bottom;
+			}
+			&:focus {
+  			position: relative;
+				z-index: 1;
+			}
+		}
+	}
 }
 
 [class^=tab_scroll_box] {

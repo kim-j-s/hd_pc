@@ -99,6 +99,10 @@
 		// top: calc(100% + 9.5px);
 		// 상황별 top 수정 필요
 		top: calc(100% + 9px);
+		//top: calc(100% + 6px);
+		width: max-content;
+		max-width: 327px;
+		min-width: 120px;
 
 		border-radius: var(--radius-medium1);
 		background: var(--color-element-information);
@@ -178,6 +182,23 @@
 				width: 16px;
 				height: 16px;
 				background: url(../images/icon/close_ty2.svg) no-repeat center/contain;
+			}
+		}
+	
+		&.al_left {
+			.tooltip_panel {
+				left: -16px;
+			}
+		}
+		&.al_center {
+			.tooltip_panel {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&.al_right {
+			.tooltip_panel {
+				right: -16px;
 			}
 		}
 	}

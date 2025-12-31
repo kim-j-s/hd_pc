@@ -20,3 +20,14 @@
 [class^=divider_ty]{
 	background: var(--color-divider-gray-light);
 }
+
+.wrap {
+	.divider_ty1 {
+		height: var(--size-height_small-1);
+		margin: var(--gap-11) 0;
+	}
+	.divider_ty2 {
+		height: var(--size-height_small-1);
+		margin: var(--gap-11) 0;
+	}
+}

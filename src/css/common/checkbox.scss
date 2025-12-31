@@ -704,17 +704,26 @@
 		// line-height: 24px;
 		background: url(../images/icon/arrowRight_ty4.svg) no-repeat center center / 20px auto;
 	}
+	& + .card_item_wrap {
+		margin-top: var(--gap-5);
+	}
 }
 
 .checkbox_group_wrap {
 	display: inline-flex;
 	flex-flow: row wrap;
-	gap: var(--gap-4);
+	// gap: var(--gap-4);
+	gap: var(--gap-8);
 	width: 100%;
+
+	.inp_checkbox{
+		flex: 1;
+	}
 
 	&.ty2 {
 		display: flex;
-		flex-flow: row wrap;
+		// flex-flow: row wrap;
+		flex-wrap: wrap;
 		gap: var(--gap-4);
 
 		.inp_checkbox {
@@ -722,6 +731,17 @@
 			min-width: auto;
 		}
 	} 
+
+	&.ty3 {
+		gap: 32px;
+		.inp_checkbox {
+			flex: 0 1 calc(50% - 16px);
+			&.full {
+				flex:none;
+				width: 100%;
+			}
+		}
+	}
 
 	& + * {
 		margin-top: var(--gap-5);
@@ -738,7 +758,8 @@
 	& + .car_type_option {
 		margin-top: var(--gap-11);
 	}
-	& + .info_gray {
+	& + .info_gray,
+	& + .all_checking {
 		margin-top: var(--gap-8);
 	}
 }

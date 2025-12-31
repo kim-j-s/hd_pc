@@ -283,6 +283,11 @@
 	}
 	//full
 	&.popup_wrap_type4 {
+		&:has(.simple_info_item.active) {
+			.pew_exception {
+				padding-bottom: 0;
+			}
+		}
 		
 		&.popup_wrap_type5 {
 			.popup_container {

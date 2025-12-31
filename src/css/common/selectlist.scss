@@ -280,6 +280,20 @@
 				}
 			}
 		}
+		
+		&.grid {
+			&	> li {
+				.option {
+					border-top : 0;
+					border-bottom: 1px  solid var(--color-divider-gray-light);
+					cursor: pointer;
+				}
+	
+				&:nth-of-type(-n+2) { 
+					border-top: 1px  solid var(--color-divider-gray-light);
+				}
+			}
+		}
 
 		+ .title_h3 {
 			margin-top: var(--gap-11);
