@@ -401,10 +401,6 @@
 		<script>
 			$(function () {
 				toggleView();
-				/* s: 25-09-18 수정 */
-				// prdFixed();
-				// anchorMove();
-				/* e: 25-09-18 수정 */
 			});
 
 			function toggleView() {
@@ -419,49 +415,6 @@
 					}
 				});
 			}
-
-			/* s: 25-09-18 수정 */
-			/* common js로 이동
-			function prdFixed() {
-				let lastScrollTop = 0;
-				$(window).on("scroll", function () {
-					const st = $(this).scrollTop();
-					const scrollHeight = $(document).height();
-					const windowHeight = $(this).height();
-					const scrollBottom = scrollHeight - windowHeight - st;
-					if (st >= 500) {
-						$('.prd_link_area').show();
-					}else {
-						$('.prd_link_area').hide();
-					}
-					lastScrollTop = st <= 0 ? 0 : st;
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
-
-			/* s: 25-09-18 수정 */
-			/*
-			function anchorMove() {
-				$(".anchor_btn").on("click", function (e) {
-					e.preventDefault();
-					const targetId = $(this).attr("href");
-					const target = $(targetId);
-		
-					if (target.length) {
-						const targetOffset = target.offset().top - 100;
-		
-						$("html, body").stop().animate(
-							{
-								scrollTop: targetOffset
-							},
-							500
-						);
-					}
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
 		</script>
 
 		<!-- gnb 호출 qr 팝업 -->
