@@ -144,3 +144,1253 @@
 		}
 	}
 }
+
+
+/* skipNavi */
+.skipNavi {
+	position: relative;
+	z-index: 500;
+}
+.skipNavi a {
+	position: absolute;
+	font-size: 0;
+}
+.skipNavi a:focus {
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 30px;
+	font-size: var(--font-size-body-medium);
+	color: #ffffff;
+	text-align: center;
+	line-height: 30px;
+	background: #555555;
+}
+/* skipNavi */
+
+
+
+/* Layout */
+.quick_menu {
+	--color-button-tertiary-fill: rgba(255, 255, 255, 0);
+	position: fixed;
+	// left: calc(50% + 626px);
+	left: calc(50% + 690px);
+	bottom: 64px;
+	z-index: 11;
+	// z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-3) 0;
+	width: 56px;
+	&.active {
+		position: absolute;
+		bottom: 267px;
+	}
+
+	.qm_item {
+		> a {
+			position: relative;
+			display: block;
+			padding-top: var(--size-height-8);
+			.text {
+				position: relative;
+				display: block;
+				padding-top: var(--gap-2);
+				font-size: var(--font-size-body-xsmall);
+				color: var(--color-text-subtle);
+				text-align: center;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: var(--size-height-8);
+				border-radius: var(--radius-max);
+				background-repeat: no-repeat;
+				background-position: center center;
+				transition: background-color 0.3s;
+			}
+			&.qm_btn_acc_report {
+				&::before {
+					border-color: var(--color-button-primary-fill);
+					background-color: var(--color-button-primary-fill);
+					// background-image: url(../images/common/icon_qm_tel.png);
+					background-image: url(../images/common/icon_qm_emergency.png);
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-primary-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-primary-fill-pressed);
+					}
+				}
+			}
+			&.qm_btn_bd_dispatch {
+				&::before {
+					border-color: var(--color-border-secondary-dark);
+					background-color: var(--color-border-secondary-dark);
+					background-image: url(../images/common/icon_qm_car.png);
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-icon-fab-fill-hover-pc);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-icon-fab-fill-pressed-pc);
+					}
+				}
+			}
+			&.qm_btn_chatbot {
+				&::before {
+					// border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+					background-color: var(--color-button-brand-fill);
+					background-image: url(../images/common/icon_qm_chatbot.png);
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-brand-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-brand-fill-pressed);
+					}
+				}
+			}
+			
+			&.qm_btn_pro_info {
+				&::before {
+					border-color: rgba(0, 0, 0, 0.50);
+					background-color: rgba(0, 0, 0, 0.50);
+					background-image: url(../images/common/icon_qm_tel.png);
+				}
+				&:focus,
+				&:hover,
+				&:active {
+					&::before {
+						background-color: rgba(0, 0, 0, 0.75);
+					}
+				}
+			}
+			&.qm_btn_pagetop {
+				font-size: 0;
+				&::before {
+					border: var(--border-width-static-regular) solid var(--color-button-icon-fill-border);
+					background-color: var(--color-button-tertiary-fill);
+					background-image: url(../images/common/icon_qm_pagetop.png);					
+				}
+				&:focus,
+				&:hover {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-hover);
+					}
+				}
+				&:active {
+					&::before {
+						background-color: var(--color-button-tertiary-fill-pressed);
+					}
+				}
+			}			
+		}
+	}
+
+
+
+	.pageTop_btn {
+		display: block;
+		width: 40px;
+		height: 40px;
+		font-size: 0;
+		border-radius: 50px;
+	}
+
+
+
+}
+
+
+// 우측 panel
+.side_panel {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-5);
+
+	.info_gray {
+		padding: var(--padding-6) var(--padding-7);
+		background-color: var(--color-surface-gray-subtler);
+	}
+	.info_panel {
+		padding: var(--padding-8) var(--padding-7);
+		background-color: var(--color-surface-gray-subtler);
+		border-radius: var(--radius-large2);
+	}
+	
+	.step_list {
+		&:not(.step_car){
+			> li {
+				&.active {
+					&:after {
+						content:'';
+						position: absolute;
+						top: 11px;
+						left: -8px;
+						width: 16px;
+						height: 16px;
+						background: var(--color-icon-primary) url(../images/icon/check_ty1.svg) no-repeat center / 10px auto;
+						border-radius: 70px;
+					}
+				}
+			}
+		}
+
+		> li {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: var(--gap-3) 0 var(--gap-5) 14px;
+
+			// step 선 관련
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1px;
+				height: 100%;
+				//border-radius: 50%;
+				background-color: var(--color-border-gray-light);
+			}
+
+			&:first-child {
+				&:before {
+					top: 18px;
+				}
+				&:has(.modify_top){
+					dl {
+						.title {
+							padding-right: 112px;
+						}
+					}
+				}
+			}
+			&:last-child {
+				&::before {
+					height: 18px;
+				}
+			}
+
+			// 정보 리스트
+			> dl {
+				display: block;
+
+				dt {
+					&.title {
+						font-size: var(--font-size-body-medium);
+						font-weight: 700;
+						color: var(--color-text-disabled-on);
+
+						&::after {
+							content: '';
+							position: absolute;
+							// top: 23px;
+							top: 17px;
+							left: -1px;
+							width: 3px;
+							height: 3px;
+							background-color: var(--color-icon-gray);
+							border-radius: 50%;
+						}
+					}
+				}
+
+				dd {
+					position: relative;
+					// margin-top: var(--gap-3);
+					font-size: var(--font-size-body-small);
+					color: var(--color-text-disabled-on);
+					text-align: left;
+					margin-top: 0;
+
+					> ul {
+						margin-top: var(--gap-3);
+
+						> li {
+							padding: var(--gap-2);
+							font-size: var(--font-size-body-small);
+
+							& + li {
+								margin-top: 0;
+							}
+
+							> span {
+								color: var(--color-text-basic);
+							}
+
+							.result {
+								margin-left: auto;
+							}
+						}
+					}
+
+					.item_depth {
+						margin-top: var(--gap-4);
+					}
+					
+					.modify_sub {
+						right: 4px;
+					}
+				}
+			}
+
+			// 현재 단계
+
+			&.active {
+				position: relative;
+
+				.info {
+					display: block;
+				}
+
+				> dl {
+					> dt {
+						color: var(--color-text-bolder);
+						
+						&.title {
+							&:before {
+								content: '현재 단계';
+								position: absolute;
+								width: 1px;
+								height: 1px;
+								margin: -1px;
+								padding: 0;
+								border-width: 0;
+								white-space: nowrap;
+								clip: rect(0, 0, 0, 0);
+								overflow: hidden;
+							}
+						}
+					}
+				}
+			}
+		
+			// 버튼
+			.modify {
+				position: absolute;
+				right: 0;
+				top: 8px;
+				width: 24px;
+				height: 24px;
+				padding: 5px;
+
+				.hd_icon {
+					width: 12px;
+					height: 12px;
+					vertical-align: top;
+				}
+			}
+			.modify_top {
+				position: absolute;
+				right: 0;
+				padding: 2px 10px;
+				border-radius: var(--radius-small3);
+			}
+			.modify_sub {
+				position: absolute;
+				top: 11px;
+				right : 2px;
+				padding: 0;
+				width: auto;
+				height: auto;
+				border: none;
+				font-size: var(--font-size-button-small);
+				color: var(--color-text-subtle);
+				text-decoration: underline;
+				text-underline-position: from-font;
+			}
+
+			&:has(.modify){
+				> dl {
+					> .title {
+						padding-right: 34px;
+						line-height: 24px;
+					}
+				}
+			}
+			&:has(.modify_top){
+				dl {
+					.title {
+						padding-right: 68px;
+						// padding-right: 112px;
+					}
+				}
+			}
+
+			// 진행중 문구
+			.info {
+				display: none;
+				margin-top: var(--gap-3);
+				padding: var(--padding-2);
+				// font-size: var(--font-size-body-xsmall);
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-basic);
+
+				&.ic {
+					padding-left: 28px;
+					background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+				}
+			}
+			// 별도 진행중 문구 case
+			.info_ty2 {
+				margin-top: var(--gap-3);
+				padding: var(--padding-2);
+				// font-size: var(--font-size-body-xsmall);
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-basic);
+
+				&.ic {
+					padding-left: 28px;
+					background: url(../images/content/bi/icon_basic.svg) no-repeat left 4px center;
+				}
+			}
+
+			// 아코디언 case
+			.acd_item_ty9 {
+				position: relative;
+				flex: 1;
+		
+				&:before {
+					content: "";
+					position: absolute;
+					top: 9px;
+					left: -15px;
+					width: 3px;
+					height: 3px;
+					background-color: var(--color-icon-gray);
+					border-radius: 50%;
+				}
+		
+				.acd_head {
+					.acd_btn {
+						display: flex;
+						// position: relative;
+						width: 100%;
+						font-size: var(--font-size-body-small);
+
+						&[aria-expanded="true"]{
+							// font-weight: 700;
+							// color: var(--color-text-basic);
+						}
+						&[aria-expanded="false"]{
+							// color: var(--color-text-disabled-on);
+						}
+		
+						> span {
+							flex: 1;
+						}
+		
+						&:after {
+							// position: absolute;
+							// right: 0;
+							content:'';
+							width: 20px;
+							height: 20px;
+							background: url(../images/icon/arrowDown_ty3.svg) no-repeat center / 16px;
+						}
+					}
+						
+					&.last {
+						.acd_btn {
+							font-weight: 700;
+							color: var(--color-text-basic);
+							
+							&[aria-expanded="false"]{
+								font-weight: 700;
+								color: var(--color-text-basic);
+							}
+						}
+					}
+		
+					&.active {
+						.acd_btn {
+							&:after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+		
+				.acd_cont {
+					.inner {
+						padding: var(--gap-4) 0 var(--padding-3);
+		
+						.info {
+							color: var(--color-text-disabled-on);
+						}
+					}
+					
+				}
+			}
+
+			// 입력상태 결과 리스트
+			.pro_step_result {
+				padding-left: var(--gap-5);
+
+				> li {
+					display: flex;
+					justify-content: space-between;
+					gap: var(--gap-2);
+					padding: var(--padding-2) 0 var(--padding-2) var(--padding-2);
+					font-size: var(--font-size-body-xsmall);
+
+					& ~ li {
+						margin-top: 0;
+					}
+
+					span {
+						flex: 1;
+						&.result {
+							flex:none;
+							width: 62px;
+							color: var(--color-text-information);
+							text-align: right;
+
+							&.ok {
+								padding-right: 20px;
+								background: url(../images/icon/icon_success.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
+								color: var(--color-text-success);
+							}
+							&.ing {
+								padding-right: 20px;
+								background: url(../images/icon/icon_ing.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
+								color: var(--color-text-primary);
+							}
+							&.fail {
+								padding-right: 20px;
+								background: url(../images/icon/icon_fail.svg) no-repeat right top 1px / 16px auto;
+								font-weight: 700;
+								color: var(--color-text-danger);
+							}
+						}
+					}
+				}
+			}
+
+			.result_pager {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 18px;
+				color: var(--color-text-basic);
+
+				> span {
+					padding-right: 3px;
+					font-size: var(--font-size-button-small);
+
+					&:last-of-type {
+						padding-left: 3px;
+						padding-right: 0;
+					}
+				}
+
+				> button {
+					width: 16px;
+					height: 16px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 16px auto;
+
+					&.prev {
+						background-image: url(../images/icon/arrowLeft_ty1.svg);
+
+						&:disabled {
+							background-image: url(../images/icon/arrowLeft_disabled_ty2.svg);
+						}
+					}
+					&.next {
+						background-image: url(../images/icon/arrowRight_ty4.svg);
+
+						&:disabled {
+							background-image: url(../images/icon/arrowRight_disabled_ty2.svg);
+						}
+					}
+
+					.text {
+						display: inline-block;
+						width: 1px;
+						height: 1px;
+						opacity: 0;
+					}
+
+				}
+			}
+		}
+
+		// 기본정보
+		.dep_list {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+	
+			dt {
+				margin-top: var(--gap-2);
+				padding: var(--padding-3) var(--padding-2) var(--padding-2);
+				font-size: var(--font-size-body-small);
+				font-weight: 700;
+				color: var(--color-text-disabled-on);
+			}
+			dd {
+				text-align: left;
+
+				> ul {
+					margin-top: var(--gap-2);
+				}
+	
+				.modify_sub {
+					top: -32px;
+				}
+	
+				.dep_opt_list {
+					margin-top: var(--gap-2);
+				}
+			}
+		}
+		// 기본정보 (아이콘)
+		.dep_opt_list {
+			&.none {
+				> li {
+					padding-left: var(--padding-2);
+					background: none;
+				}
+			}
+			> li {
+				padding-left: 28px;
+				background-repeat: no-repeat;
+				background-position: left 4px top 6px;
+				background-size: 16px auto;
+				background-image: url(../images/content/bi/icon_basic.svg);
+				font-size: var(--font-size-body-small);
+	
+				// 생년월일
+				&.birth {
+					background-image: url(../images/content/bi/icon_stepper_birth.svg);
+				}
+				// 성별
+				&.gender {
+					background-image: url(../images/content/bi/icon_stepper_gender.svg);
+				}
+				//소유/거주 여부, 
+				&.person {
+					background-image: url(../images/content/bi/icon_stepper_person.svg);
+				}
+				// 기간
+				&.date {
+					background-image: url(../images/content/bi/icon_stepper_date.svg);
+				}
+				// 직업
+				&.job {
+					background-image: url(../images/content/bi/icon_stepper_job.svg);
+				}
+				// 회사명
+				&.company {
+					background-image: url(../images/content/bi/icon_stepper_job.svg);
+				}
+				// 사업자번호
+				&.busi_num {
+					background-image: url(../images/content/bi/icon_stepper_insurance.svg);
+				}
+	
+				/* 운전자 Case */
+				&.car {
+					background-image: url(../images/content/bi/icon_stepper_car.svg);
+				}
+	
+				/* 주택 Case */
+				// 주택 종류
+				&.home {
+					background-image: url(../images/content/bi/icon_stepper_home.svg);
+				}
+				// 업종
+				&.store {
+					background-image: url(../images/content/bi/icon_stepper_store.svg);
+				}
+				// 가입할 보험, 사업자 형태
+				&.insurance {
+					background-image: url(../images/content/bi/icon_stepper_insurance.svg);
+				}
+				// 건물 형태
+				&.structure {
+					background-image: url(../images/content/bi/icon_stepper_structure.svg);
+				}
+	
+				/* 펫 Case */
+				// 펫_종류
+				&.pet {
+					background-image: url(../images/content/bi/icon_stepper_cat.svg);
+				}
+				// 펫_성별
+				&.pet_gender {
+					background-image: url(../images/content/bi/icon_stepper_sex.svg);
+				}
+	
+	
+				/* 여행 Case */
+				// 체류목적
+				&.work {
+					background-image: url(../images/content/bi/icon_stepper_work.svg);
+				}
+				// 국가
+				&.country {
+					background-image: url(../images/content/bi/icon_stepper_fuel.svg);
+				}
+			}
+		}
+
+		// 자동차 Case
+		&.step_car {
+			> li {
+				padding: 0 0 var(--gap-5) 0;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+				&:before {
+					content: none;
+				}
+				
+				// 입력 전
+				> dl {
+					flex: 1;
+					.title {
+						font-size: var(--font-size-heading-xsmall);
+						font-weight: 700;
+
+						&:after {
+							content: none;
+						}
+					}
+				}
+
+				// 입력 후
+				> .acd_item_ty9 {
+					&:before {
+						content: none;
+					}
+					.acd_head {
+						.acd_btn {
+							font-size: var(--font-size-heading-xsmall);
+							font-weight: 700;
+
+							&:after {
+								margin: 2px 0;
+								background-size: 20px;
+							}
+						}
+					}
+					.acd_cont {
+						.inner {
+							padding-bottom: 0;
+						}
+					}
+				}
+
+				.dep_list {
+					position: relative;
+					
+					& ~ .dep_list {
+						margin-top: var(--gap-3);
+					}
+					&:has(.modify_sub){
+						> dt {
+							padding-right: 33px;
+						}
+					}
+
+					> dt {
+						margin-top: 0;
+						padding: 0 0 0 28px;
+						background-repeat: no-repeat;
+						background-position: left 4px center;
+						background-size: 16px;
+						font-size: var(--font-size-body-small);
+						font-weight: 400;
+						color: var(--color-text-basic);
+
+						//차량선택
+						&.car {
+							background-image: url(../images/content/bi/icon_stepper_car.svg);
+						}
+						//보험기간
+						&.date {
+							background-image: url(../images/content/bi/icon_stepper_date.svg);
+						}
+						//차량부품정보
+						&.maker {
+							background-image: url(../images/content/bi/icon_stepper_car_maker.svg);
+						}
+						//차량정보입력
+						&.car_info {
+							background-image: url(../images/content/bi/icon_stepper_car_detail2.svg);
+						}
+						//차량정보 - 알림 특약
+						&.alarm {
+							background-image: url(../images/content/bi/icon_stepper_alarm.svg);
+						}
+						//운전자정보 - 알림 특약
+						&.alarm2 {
+							background-image: url(../images/content/bi/icon_stepper_alarm.svg);
+						}
+						//할인 특약
+						&.discount {
+							background-image: url(../images/content/bi/icon_stepper_discount.svg);
+						}
+						//운전범위
+						&.driver {
+							background-image: url(../images/content/bi/icon_stepper_person.svg);
+						}
+						// 피보험자/계약자정보
+						&.contractor {
+							background-image: url(../images/content/bi/icon_stepper_contractor.svg);
+						}
+						// 사진첨부
+						&.picture {
+							background-image: url(../images/content/bi/icon_stepper_picture.svg);
+						}
+						// 사용용도
+						&.useful {
+							background-image: url(../images/content/bi/icon_info.svg);
+						}
+					}
+
+					dd {
+						margin-top: 0;
+						padding-left: var(--padding-8);
+
+						.info {
+							margin-top: var(--gap-2);
+							padding-left: var(--padding-2);
+							font-size: var(--font-size-body-xsmall); 
+						}
+
+						.dep_list_sub {
+							margin-top: var(--gap-2);
+
+							> li {
+								padding-left: var(--padding-2);
+							}
+						}
+						.pro_step_result {							
+							margin-top: var(--gap-4);
+							padding-left: 0;
+						}
+					}
+				}
+				
+				.dep_list_sub {
+					&:has(.modify_sub){
+						> li {
+							padding-right: 29px;
+						}
+					}
+
+					> li {
+						position: relative;
+						padding: var(--padding-2) 0 var(--padding-2) var(--padding-6);
+						font-size: var(--font-size-body-xsmall);
+						color: var(--color-text-disabled-on);
+
+						> span {
+							color: var(--color-text-basic);
+						}
+
+						& + li {
+							margin-top: 0;
+						}
+
+						.modify_sub {
+							top: 4px;
+						}
+					}
+				}
+
+				.dep_opt_list {
+					> li {
+						padding: 0 0 0 24px;
+						background-position: left 2px top 2px;
+
+						& ~ li {
+							margin-top: var(--gap-3);
+						}
+					}
+				}
+					
+				.modify_sub {
+					top: 0;
+				}
+
+				// 현재 단계
+				&.active {
+
+					&:first-child {
+						padding-bottom: 24px;
+					}
+					&:last-child {
+						padding-bottom: 0;
+					}
+
+					&:has(.acd_btn[aria-expanded="false"]){
+						padding-bottom: var(--padding-6);
+					}
+					&:has(.acd_btn[aria-expanded="true"]){
+						padding-bottom: 24px;
+					}
+
+					& ~ li {
+						dl dd,
+						.modify {
+							display: block;
+						}
+					}
+
+					> dl {
+						.title {
+							color: var(--color-text-basic);
+						}
+					}
+
+					&:last-child {
+						> dl {
+							&:after {
+								content: none;
+							}
+						}
+					}
+
+					.acd_item_ty9 {
+						&:before {
+							content: none;
+						}
+					}
+				}
+				
+				.info {
+					margin-top: var(--gap-4);
+					padding: var(--padding-2) 0 var(--padding-2) 16px;
+					font-size: var(--font-size-body-xsmall);
+					color: var(--color-text-disabled-on);
+				}
+			}
+		}
+
+		// 자동차 Case (아코디언 + 아코디언 X)
+		&.type_mix {
+			> li {
+				&:last-child {
+					&:before {
+						top: 0;
+					}
+				}
+				& ~ li {
+					padding-top: 8px;
+
+					dl {
+						.title {
+							&:after {
+								top: 16px;
+							}
+						}
+					}
+				}
+				
+				dl {
+					.title {
+						font-size: var(--font-size-body-small);
+					}
+				}
+				> .modify {
+					width: 20px;
+					height: 20px;
+					padding: 2px;
+					border: none;
+					border-radius: 0;
+
+					.hd_icon {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				&.active {
+					padding-bottom: var(--padding-6);
+
+					& ~ li {
+						.info,
+						dl dd,
+						.modify {
+							display: block;
+						}
+					}
+
+
+					.last {
+						font-weight: 700;
+						color: var(--color-text-basic);
+					}
+
+					> dl {
+						padding-bottom: 24px;
+
+						> dt {
+							font-weight: 400;
+							color: var(--color-text-disabled-on);
+						}
+
+						.title {
+							&:after {
+								top: 16px;
+							}
+						}
+
+						&:after {
+							position: absolute;
+							bottom: 16px;
+							left: 14px;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+					}
+
+					&:last-child {
+						> dl {
+							&:after {
+								content: none;
+							}
+						}
+					}
+
+					.acd_item_ty9 {
+						padding-bottom: 24px;
+								
+						&:after {
+							position: absolute;
+							bottom: 0px;
+							left: 0;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+					}
+				}
+			}
+		}
+
+		// 다수차량 Case
+		&.multiple {
+			> li {
+				position: relative;
+
+				& ~ li {
+					padding-top: 8px;
+				}
+
+				&:first-child {
+					.modify {
+						top: 0;
+					}
+
+					> dl {
+						.title {
+							&:after {
+								top: 9px;
+							}
+						}
+					}
+				}
+
+				&:last-child {
+					&:before {
+						top: 0;
+					}
+				}
+
+				> .modify {
+					position: absolute;
+					top: 8px;
+					right: 0;
+					width: 20px;
+					height: 20px;
+					padding: 2px;
+					border: none;
+					border-radius: 0;
+
+					.hd_icon {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				> dl {
+					.title {
+						&:after {
+							top: 17px;
+						}
+					}
+					dd {
+						.info {
+							display: block;
+						}
+					}
+				}
+
+				&.active {
+					padding-bottom: var(--padding-6);
+
+					& ~ li {
+						dl dd,
+						.modify {
+							display: block;
+						}
+					}
+
+					&:last-of-type {
+						> dl {
+							padding-bottom: 0;
+							&:after {
+								content: none;
+							}
+						}
+					}
+
+					> dl {
+						padding-bottom: 24px;
+
+						.title {
+							font-weight: 400;
+							color: var(--color-text-disabled-on);
+
+							&.last {
+								font-weight: 700;
+								color: var(--color-text-basic);
+							}
+						}
+	
+						&:after {
+							position: absolute;
+							bottom: 16px;
+							left: 14px;
+							content:'';
+							width: 100%;
+							height: 1px;
+							background-color: var(--color-divider-gray-light);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.panel_cont {
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap-5);
+	}
+}
+
+.panel_total {
+	padding: var(--padding-8) var(--padding-7);
+	background-color: var(--color-surface-primary-subtler);
+	border-radius: var(--radius-large2);
+
+	.inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--gap-4);
+
+		.title {
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
+		}
+
+		.right {
+			text-align: right;
+			del {
+				// font-size: var(--font-size-body-xsmall);
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-subtle);
+			}
+			.price {
+				display: block;
+				// font-size: var(--font-size-body-small);
+				font-size: var(--font-size-body-large);
+				font-weight: 700;
+				color: var(--color-text-primary-bold);
+			}
+		}
+	}
+}
+
+
+// aside panel
+.aside {
+	width: 128px;
+
+	.title_h3 {
+		font-weight: 400;
+
+		strong {
+			font-weight: 700;
+		}
+
+		& + .info_box_list {
+			margin-top: var(--gap-4);
+		}
+	}
+
+	.info_box_list {
+		.list {
+			padding: var(--padding-6) var(--padding-5);
+			background: var(--color-surface-gray-subtler);
+			border-radius: var(--radius-medium3);
+			font-size: var(--font-size-body-xsmall);
+
+			.cont {
+				.num {
+					font-size: var(--font-size-heading-xsmall);
+					color: var(--color-text-basic);
+
+					&.point {
+						color: var(--color-text-primary-bold);
+					}
+					& + * {
+						margin-top: var(--gap-4);
+					}
+				}
+				color: var(--color-text-subtle);
+			}
+
+			& + .list {
+				margin-top: var(--gap-3);
+			}
+		}
+	}
+}

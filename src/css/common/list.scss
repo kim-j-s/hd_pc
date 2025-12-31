@@ -2063,3 +2063,50 @@ ol li .table_wrap {
 		margin-top: 0 !important;
 	}
 }
+
+
+
+.icon_list_ty1 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-7) var(--gap-4);
+    width: 100%;
+	padding: var(--padding-8) var(--padding-7);
+	border-radius: var(--radius-large2);
+	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+	background: var(--color-surface-white-subtle);
+	.icon_welfare {
+		padding-left: var(--padding-10);
+		background-position: top left;
+		background-repeat: no-repeat;
+		.text_sub {
+			+ .list_ty2 {
+				margin-top: var(--gap-2);
+			}
+		}
+		&.ty1 {
+			background-image: url(../images/content/cnsr/icon_welfare01.svg);
+		}
+		&.ty2 {
+			background-image: url(../images/content/cnsr/icon_welfare02.svg);
+		}
+		&.ty3 {
+			background-image: url(../images/content/cnsr/icon_welfare03.svg);
+		}
+		&.ty4 {
+			background-image: url(../images/content/cnsr/icon_welfare04.svg);
+		}
+		&.ty5 {
+			background-image: url(../images/content/cnsr/icon_welfare05.svg);
+		}
+		&.ty6 {
+			background-image: url(../images/content/cnsr/icon_welfare06.svg);
+		}
+		&.ty7 {
+			background-image: url(../images/content/cnsr/icon_welfare07.svg);
+		}
+		&.ty8 {
+			background-image: url(../images/content/cnsr/icon_welfare08.svg);
+		}
+	} 
+}

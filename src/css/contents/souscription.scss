@@ -1223,3 +1223,199 @@ ul + .form_group_wrap {
 		}
 	}
 }
+
+
+
+
+//가입 전 알릴사항 화면용 그룹 클래스
+.notification {
+	.title_view_wrap {
+		& + .checkbox_group_wrap,
+		& + .btn_area {
+			justify-content: flex-end;
+			& > * {
+				flex-grow: 0;
+				min-width: 134px;
+			}
+		}
+	}
+
+	& > .checkbox_group_wrap:first-child {
+		justify-content: flex-end;
+			& > * {
+				flex-grow: 0;
+				min-width: 134px;
+			}
+	}
+
+	.form_sub_top {
+		font-size: var(--font-size-body-medium);
+		font-weight: 700;
+		color: var(--color-text-primary-bold);
+	}
+
+	.form_list {
+		>li {
+			> .form_group_wrap {
+				display: block;
+				border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+				padding-bottom: 40px;
+
+				>.form_line {
+					position: relative;
+					word-break: keep-all;
+
+					.form_sub_top {
+						padding-right: 312px;
+
+						& + .label_tit {
+							padding-top: var(--gap-3);
+						}
+					}
+				
+					> .label_tit {
+						margin-bottom: 0;
+
+						& + .info_gray.ty2 {
+							border-radius: 0;
+							background-color: var(--color-background-white);
+							padding: 0;
+							margin-top: var(--gap-5);
+						}
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
+					}
+
+					//예,아니오 버튼이 있는 질문 스타일
+					&:has( > .radio_group_wrap){
+						> .label_tit {
+							display: table-cell;
+							vertical-align: middle;
+							height: 56px;
+							padding-right: 312px;
+
+							.num {
+								flex: none;
+								padding-right: var(--padding-2);
+								vertical-align: top;
+							}
+						}
+						.info_gray.ty2 {
+							// padding-right: 312px;
+						}
+					}
+					
+					.info_gray.ty2 {
+						margin-top: var(--gap-5);
+						margin-bottom: 0;
+
+						& + .row {
+							margin-top: var(--gap-5);
+						}
+					}
+					
+					.radio_group_wrap:not(.column) {
+						width: 280px;
+						position: absolute;
+						top: 0;
+						right: 0;
+
+						& + .form_group_wrap {
+							.label_tit {
+								padding-top:0;
+							}
+						}
+					}
+
+					.checkbox_group_wrap {
+						margin-top: var(--gap-5);
+
+						.inp_checkbox {
+							flex-basis: calc(25% - 9px);
+						}
+					}
+
+					.radio_group_wrap.row, .checkbox_group_wrap.row {
+						gap: 20px var(--gap-8);
+						margin-top: 0;
+
+						.inp_radio + .inp_radio {
+							margin-top: 0;
+						}
+					}
+
+					.form_group_wrap {
+						display: block;
+					}
+
+					.row {
+						width: 100%;
+						// display: flex !important;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						gap: 32px;
+
+						.form_line {
+							flex : 0 1 calc(50% - 16px);
+						}
+
+						.inp_radio, .inp_checkbox {
+							width: 50%;
+							flex : 0 1 calc(50% - 16px);
+							margin-top: 0;
+						}
+					}//.row
+
+				}//.form_line
+			}// li > .form_group_wrap
+		}
+
+		&:has(+ .divider_ty1) li:last-child {
+			.form_group_wrap {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
+		}
+	}
+
+	.form_list_ty2 {
+		> li > .form_group_wrap {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+
+.form_title_box {
+	display: flex;
+	justify-content: space-between;
+
+	.checkbox_group_wrap {
+		flex: none;
+		width: auto;
+		min-width: 134px;
+		margin-top: 0;
+	}
+
+	& + * {
+		margin-top: 10px;
+	}
+}
+
+
+// 제휴설계내역 팝업
+.reward_img_area {
+	width: 252px;
+	height: 55px;
+	justify-content: flex-start;
+	margin-top: var(--gap-5);
+	& + .bottom_fix_notice  {
+		padding-top: var(--gap-8);
+	}
+}
