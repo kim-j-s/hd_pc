@@ -767,11 +767,14 @@ function fixedMenuPlay() {
 
 // 초기화 함수 (동적 요소가 생성될 때마다 호출)
 /* 개선 전 */
-/*
 function initPositionEventWrap($wrap) {
 
 	// 스크롤 시 상단 여백 확인용
+	// 전체 헤더
 	let chkOuter = false;
+	// position_event_tab
+	let petOuter = false;
+	// am_tag_item_wrap 있냐 없냐에 따라 조건 분리
 
 	if (!$wrap.length) return;
 
@@ -795,6 +798,10 @@ function initPositionEventWrap($wrap) {
 		// let sHeight = 0;
 		// 먼지 모르겠음
 		// let expHeight = 129;
+
+		// if(  ) {
+
+		// }
 
 		// pc 전체메뉴 스크롤 시 상단 고정
 		if(!chkOuter) {
@@ -833,6 +840,7 @@ function initPositionEventWrap($wrap) {
 
 
 		// 추후 관리 pew_exception 높이 측정 // PPRMTPS10004001000
+		/*
 		if ($wrap.find('.pew_exception').length) {
 			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
 			const $tagItemWrap = $wrap.find('.tag_item_wrap');
@@ -858,13 +866,14 @@ function initPositionEventWrap($wrap) {
 				}
 			}
 		}
+		*/
 
 	});
 }
-*/
 /* 개선 전 */
 
 /* origin */
+/*
 function initPositionEventWrap($wrap) {
 	if (!$wrap.length) return;
 
@@ -937,6 +946,7 @@ function initPositionEventWrap($wrap) {
 		}
 	});
 }
+*/
 /* origin */
 
 
@@ -1160,18 +1170,20 @@ function inpPhoneFormat() {
 
 // 상품안내 스크롤 이벤트
 function prdFixed() {
-	let lastScrollTop = 0;
-	$(window).on("scroll", function () {
-		const st = $(this).scrollTop();
-		const scrollHeight = $(document).height();
-		const windowHeight = $(this).height();
-		if (st >= 500) {
-			$('.prd_link_area').show();
-		} else {
-			$('.prd_link_area').hide();
-		}
-		lastScrollTop = st <= 0 ? 0 : st;
-	});
+	if($('.prd_link_area').length) {
+		let lastScrollTop = 0;
+		$(window).on("scroll", function () {
+			const st = $(this).scrollTop();
+			const scrollHeight = $(document).height();
+			const windowHeight = $(this).height();
+			if (st >= 500) {
+				$('.prd_link_area').show();
+			} else {
+				$('.prd_link_area').hide();
+			}
+			lastScrollTop = st <= 0 ? 0 : st;
+		});
+	}
 }
 
 $(window).on('load', function() {
