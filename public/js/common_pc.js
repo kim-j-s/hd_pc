@@ -1,6 +1,3 @@
-(function() {
-})();
-
 $(function() {  // DOM이 준비되었을 때 실행
 	const $DOM = $(document),
 				$WIN = $(window),
@@ -36,14 +33,18 @@ $(function() {  // DOM이 준비되었을 때 실행
 
 	// 스크롤 이벤트 처리
 	$WIN.on('scroll', function() {
-		updateDimensions();
-		floatingItem();
+		if ( $('.footer').length || !$('.footer').css('display') === 'none' ) {
+			updateDimensions();
+			floatingItem();
+		}
 	});
 
 	// 윈도우 로드 상태에서 실행
 	$WIN.on('load', function() {
-		updateDimensions();
-		floatingItem();
+		if ( $('.footer').length || !$('.footer').css('display') === 'none' ) {
+			updateDimensions();
+			floatingItem();
+		}
 	});
 
 	// 헤더 이벤트 스크립트
@@ -88,13 +89,3 @@ $(function() {  // DOM이 준비되었을 때 실행
 
 
 // ready
-$(function(){
-
-	
-
-});
-
-// load
-$(window).on('load', function() {
-	
-});

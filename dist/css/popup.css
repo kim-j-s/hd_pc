@@ -982,6 +982,12 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 	flex: none;
 	min-width: 60px;
 }
+.popup_wrap .title_h4.space1 {
+	margin-bottom: 16px;
+}
+.popup_wrap .form_group_wrap + .title_h4.space1 {
+	margin-top: 40px;
+}
 /* toast */
 .toast_wrap {
 	position: fixed;

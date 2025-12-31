@@ -102,6 +102,7 @@
   });
 
 	/* Anchor */
+	/*
 	$DOM.on('click', '.anchor_wrap .anchor_btn', function(){
     const $this = $(this),
 					btnIdx = $this.index(),
@@ -129,7 +130,8 @@
 				}
 			})
 		}
-	})
+	});
+	*/
 
   /* Input */
   $DOM.on('focus input', '.input_text .inp > input', function(){
@@ -766,16 +768,22 @@ function fixedMenuPlay() {
 }
 
 // 초기화 함수 (동적 요소가 생성될 때마다 호출)
+
+function rafThrottle(fn) {
+  let ticking = false;
+  return function () {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(() => {
+        fn();
+        ticking = false;
+      });
+    }
+  };
+}
+
 /* 개선 전 */
 function initPositionEventWrap($wrap) {
-
-	// 스크롤 시 상단 여백 확인용
-	// 전체 헤더
-	let chkOuter = false;
-	// position_event_tab
-	let petOuter = false;
-	// am_tag_item_wrap 있냐 없냐에 따라 조건 분리
-
 	if (!$wrap.length) return;
 
 	const $tabBtns = $wrap.find('.position_event_tab .tag_item');
@@ -784,72 +792,35 @@ function initPositionEventWrap($wrap) {
 
 	$wrap.data('scrolling', false);
 
-	// 스크롤 시 상단 여백 확인용
-	let expHeight = 0;
-
 	// 스크롤 이벤트 (요소 개별) - 이벤트 중복 방지 (off, on)
-	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
+	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', rafThrottle(function () {
 		if ($wrap.data('scrolling')) return;
 
-		// scrollTop 값 가져오기
 		const scrollTop = $wrap.scrollTop();
-		// 먼지 모르겠음
-		// let expHeight = 0;
-		// let sHeight = 0;
-		// 먼지 모르겠음
-		// let expHeight = 129;
+		let expHeight = 0;
 
-		// if(  ) {
+		let sHeight = 0;
 
-		// }
-
-		// pc 전체메뉴 스크롤 시 상단 고정
-		if(!chkOuter) {
-			if( $('.amc_nav').length ){
-				const $navOuter = $('.amc_nav').outerHeight();
-				expHeight = $navOuter;
-				console.log('xx : ', + expHeight);
-			}
-			chkOuter = true;
-		}
-		
 		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
 			$('.amc_nav').removeClass('active');
 		} else {
 			$('.amc_nav').addClass('active');
 		}
-		// pc 전체메뉴 스크롤 시 상단 고정
-
-		let activeIdx = -1;
-
-		$contents.each(function (index) {
-			console.log('다 타나? : ', + expHeight);
-			const targetTop = $(this).offset().top;
-			const containerTop = $scrollArea.offset().top;
-			// const scrollY = targetTop - containerTop + expHeight + sHeight;
-			// const scrollY = targetTop - containerTop;
-			const scrollY = targetTop - containerTop + expHeight;
-			if (scrollY < scrollTop + 10) {
-				activeIdx = index;
-			}
-		});
-
-		if (activeIdx !== -1) {
-			$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
-		}
 
 
-		// 추후 관리 pew_exception 높이 측정 // PPRMTPS10004001000
-		/*
 		if ($wrap.find('.pew_exception').length) {
+			// 테스트 중 PPRMTPS10004001000
+			// const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
 			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
+			// 테스트 중 PPRMTPS10004001000
+			
 			const $tagItemWrap = $wrap.find('.tag_item_wrap');
-			// const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
-			// const $titWrap = $wrap.find('.pec_point .title_h3');
+			const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
+			const $titWrap = $wrap.find('.pec_point .title_h3');
 
-			// const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
-			// const tagItemHeight = $tagItemWrap.outerHeight() || 0;
-			// const titWrapHeight = $titWrap.outerHeight() || 0;
+			const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
+			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
+			const titWrapHeight = $titWrap.outerHeight() || 0;
 
 			expHeight = 197 - 68;
 
@@ -866,11 +837,28 @@ function initPositionEventWrap($wrap) {
 				}
 			}
 		}
-		*/
 
-	});
-}
+
+		let activeIdx = -1;
+
+		$contents.each(function (index) {
+			const targetTop = $(this).offset().top;
+			const containerTop = $scrollArea.offset().top;
+			const scrollY = targetTop - containerTop + expHeight + sHeight;
+			if (scrollY < scrollTop + 10) {
+				activeIdx = index;
+			}
+		});
+
+		if (activeIdx !== -1) {
+			$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+		}
+	})
+	);
+};
 /* 개선 전 */
+
+
 
 /* origin */
 /*
@@ -1626,6 +1614,7 @@ $(function(){
 
 	/* 페이지 내 스크롤 이벤트 */
 	// 모바일 - MY Page - 보험진단 서비스 - 보험 진단 결과 페이지에서만 사용 중
+	/*
 	$('.container').on('scroll', function(){
 		const $this = $(this),
 					scrollTop = $this.scrollTop();
@@ -1642,6 +1631,7 @@ $(function(){
 			})
 		}
 	});
+	*/
 
 	// ready
 
@@ -1701,23 +1691,25 @@ $(function(){
   const $fixedButton = $('.scroll_down');
 	let scrollingChk = false; // 스크롤 중복 실행 방지 플래그	
   // 스크롤 이벤트
-  $popupCont.on('scroll', function() {
-		if (scrollingChk) return;
-		const $thisPopupCont = $(this); // 현재 스크롤된 .popup_cont
-		const $popupWrap = $thisPopupCont.closest('.popup_wrap');
-		const $fixedButton = $popupWrap.find('.scroll_down');
-		const $doneButton = $popupWrap.find('.done');
-	
-		const currentScrollTopInPopup = $thisPopupCont.scrollTop();
-		const scrollHeight = this.scrollHeight; // DOM element 접근
-		const clientHeight = $thisPopupCont.height();
+	if($('.popup_wrap').length) {
+		$popupCont.on('scroll', function() {
+			if (scrollingChk) return;
+			const $thisPopupCont = $(this); // 현재 스크롤된 .popup_cont
+			const $popupWrap = $thisPopupCont.closest('.popup_wrap');
+			const $fixedButton = $popupWrap.find('.scroll_down');
+			const $doneButton = $popupWrap.find('.done');
 		
-		// 스크롤이 최하단에 도달했는지 확인
-		if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
-			$fixedButton.hide();
-			$doneButton.show();
-		}
-	});
+			const currentScrollTopInPopup = $thisPopupCont.scrollTop();
+			const scrollHeight = this.scrollHeight; // DOM element 접근
+			const clientHeight = $thisPopupCont.height();
+			
+			// 스크롤이 최하단에 도달했는지 확인
+			if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
+				$fixedButton.hide();
+				$doneButton.show();
+			}
+		});
+	}
 
   // 하단 고정 버튼 클릭 이벤트	
   $fixedButton.on('click', function() {
