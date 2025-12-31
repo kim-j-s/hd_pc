@@ -55,6 +55,10 @@
 	& + .banner_box {
 		margin-top: var(--gap-8);
 	}
+	
+	& + .search_result_count { 
+		margin-top: var(--gap-5);
+	}
 }
 
 

@@ -35,6 +35,9 @@
 		& + .info_white {
 			margin-top: var(--gap-5);
 		}
+		& + .vision_setp {
+			margin-top: var(--gap-5);
+		}
 	}
 
 	& + [class^=file_upload_wrap_ty],
@@ -193,7 +196,9 @@
 	& + .file_upload_wrap,
 	& + .table_wrap,
 	& + .list_ty3,
-	& + .banner_box {
+	& + .banner_box,
+	+ .my_info_flow,
+	+ .form_group_wrap.ty3 {
 		margin-top: var(--gap-5);
 	}
 
@@ -262,6 +267,12 @@
 	&.md {
 		font-size: var(--font-size-body-medium);
 	}
+	
+	& + .img_area {
+		img {
+			margin:0 auto;
+		}
+	}
 }
 
 .title_sub2 {
@@ -295,7 +306,8 @@
 	}
 
 	// margin-top 32
-	& + .list_ty3{
+	& + .list_ty3,
+	& + .file_attach_box {
 		margin-top: var(--gap-8);
 	}
 
@@ -379,3 +391,9 @@
 	}
 }
 
+.text_lg {
+	font-size: var(--font-size-body-medium);
+	& + .radio_group_wrap_ty2 {
+		margin-top: var(--gap-5);
+	}
+}

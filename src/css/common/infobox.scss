@@ -113,6 +113,14 @@
 				margin-top: 0;
 			}	
 		}
+		.data_box {
+
+			&:has(dl:nth-of-type(2)) {
+				dl:nth-of-type(odd) {
+					border-right-color: var(--color-divider-gray-light);
+				}
+			}
+		}
 	}
 
 	&.ty3 {
@@ -132,6 +140,37 @@
 		word-break: break-all;
 		> .btn_area {
 			margin-top: 0;
+		}
+	}
+	
+	&.bg_primary {
+		background: var(--color-surface-primary-subtler);
+	}
+	img {
+		display: block;
+	}
+	&.summary {
+		.title_h2 {
+			font-weight: 700;
+
+			.badge_wrap {
+				// display: inline;
+				display: inline-block;
+				width: auto;
+				vertical-align: bottom;
+				// background-color: blue;
+			}
+		}
+		[class^=title_h]{
+			& + .data_box {
+				margin-top: var(--gap-6);
+			}
+		}
+		.data_box {
+			> dl {
+				padding-top: var(--gap-3);
+				border: 0 !important;
+			}
 		}
 	}
 	
@@ -199,6 +238,32 @@
 		margin-top: var(--gap-4);
 	}
 
+	& + .banner_box {
+		margin-top: var(--gap-5);
+		
+		&.basic {
+			margin-top: var(--gap-8);
+		}
+	}
+
+	& + .table_wrap {
+		margin-top: var(--gap-7);
+	}
+
+	& + .form_box {
+		margin-top: var(--gap-8);
+	}
+
+	& + .acd_item_ty2 {
+		margin-top: var(--gap-11);
+	}
+
+	.badge_wrap {
+		& + dl {
+			margin-top: var(--gap-2);
+		}
+	}
+
 	.badge_wrap_ty2 {
 		display: flex;
 		gap: var(--gap-3);
@@ -223,11 +288,6 @@
 		}
 	}
 
-	.title_h4 {
-		& + dl {
-			margin-top: var(--gap-4);
-		}
-	}
 	.title_h2 {
 		color: var(--color-text-bolder);
 		font-size: var(--font-size-heading-small);
@@ -247,6 +307,10 @@
 	.title_h4 {
 		color: var(--color-text-bolder);
 		font-size: var(--font-size-heading-xxsmall);
+		& + dl,
+		& + .data_box {
+			margin-top: var(--gap-4);
+		}
 	}
 
 	.info_gray_tit_text {
@@ -521,6 +585,209 @@
 		width: 12px;
 		height: 12px;
 	}
+
+	&:has(.form_group_wrap) {
+		padding: 32px var(--padding-card-small);
+		.form_group_wrap {
+			justify-content: center;
+			.comp_wrap {
+				background: var(--color-background-white);
+			}
+		}
+	}
+
+	.data_box {
+		display: flex;
+		flex-flow: row wrap;
+
+		&:has(dl:nth-of-type(2)) {
+			dl:nth-of-type(odd) {
+				border-right: var(--border-width-static-regular) solid var(--color-divider-secondary-light);
+			}
+		}
+
+		> dl {
+			justify-content: flex-start;
+			margin: 0;
+			width: 50%;
+			padding-top: var(--gap-5);
+			gap: var(--gap-4);
+			border-right: none;
+
+
+			&:nth-child(-n+2){
+				padding-top: 0;
+			}
+
+			&:nth-child(2n-1){
+				padding-right: var(--gap-8);
+			}
+
+			&:nth-child(2n){
+				padding-left: var(--gap-8);
+			}
+
+			dt {
+				flex: none;
+				min-width: 50px;
+			}
+			dd {
+				text-align: left;
+			}
+
+			&.footer_dl {
+				width: 100%;
+				padding: var(--gap-6) 0 0 0;
+				margin-top: var(--gap-6);
+			}
+		}
+		&.df_type_w_ty1 {//100
+			> dl {
+				dt {
+					width: 100px;
+				}
+			}
+		}
+		&.df_type_w_ty2 {//130
+			> dl {
+				dt {
+					width: 130px;
+				}
+			}
+		}
+		&.df_type_w_ty3 {//50,100
+			> dl {
+				&:nth-child(2n) {
+					dt {
+						width: 100px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 50px;
+					}
+				}
+			}
+		}
+		&.df_type_w_ty4 {//50,130
+			> dl {
+				&:nth-child(2n) {
+					dt{
+						width: 130px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 50px;
+					}
+				}
+			}
+		}
+		&.df_type_w_ty5 {//100,50
+			> dl {
+				dt{
+					width: 100px;
+				}
+				&:nth-child(2n) {
+					dt {
+						width: 50px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 100px;
+					}
+				}
+			}
+		}
+		&.df_type_w_ty6 {//100,130
+			> dl {
+				dt {
+					width: 100px;
+				}
+				&:nth-child(2n) {
+					dt {
+						width: 130px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 100px;
+					}
+				}
+			}
+		}
+		&.df_type_w_ty7 {//130,50
+			> dl {
+				dt{
+					width: 130px;
+				}
+				&:nth-child(2n) {
+					dt {
+						width: 50px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 130px;
+					}
+				}
+			}
+		}
+		&.df_type_w_ty8 {//130,100
+			> dl {
+				dt{
+					width: 130px;
+				}
+				&:nth-child(2n) {
+					dt {
+						width: 100px;
+					}
+				}
+
+				&.footer_dl {
+					dt {
+						width: 130px;
+					}
+				}
+			}
+		}
+		
+		&.df_type_w_ty9 {//90 자동차 문서확인
+			padding-bottom: var(--gap-6);
+			border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+			> dl {
+				&:nth-child(2n-1){
+					border-right: 0;
+				}
+				dt {
+					width: 90px;
+				}
+
+				&.footer_dl {
+					dt {
+						width: 90px;
+					}
+				}
+			}
+			+ .btn_area {
+				margin-top: var(--gap-6);
+			}
+		}		
+	}
+	
+	.icon_text_area {
+		background-size: 48px auto;
+		background-position: left top;
+		&.hihealth {
+			background-image: url(../images/content/bn/img_logo_hihealth.png);
+		}
+	}
 }
 
 .info_white {
@@ -632,5 +899,50 @@
 	}
 	+ .tab_wrap {
 		margin-top: var(--gap-8);
+	}
+}
+
+
+.info_gray_wrap {
+	&.wrap_type1 {
+		& + .acd_item_ty2 {
+			margin-top: var(--gap-11);
+		}
+	}
+	&.wrap_type2 {
+		& + .info_gray {
+			margin-top: var(--gap-5);
+		}
+	}
+}
+
+
+
+/* 바닥 페이지용 */
+.wrap {
+	.info_gray {
+		.middle {
+			justify-content: flex-start;
+			gap: var(--gap-4);
+		}
+		.footer_dl {
+			justify-content: flex-start;
+		}
+	}
+	
+	.card_item_wrap {
+		&.ty4 {
+			.card_item {
+				.item_inner {
+					.sub_title {
+						font-weight: 700;
+					}
+					.hd_icon {
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+		}
 	}
 }

@@ -269,6 +269,22 @@
 	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
+	
+	&.tab_case {
+		.bit {
+			height: auto;
+			margin-bottom: var(--gap-8);
+		}
+		.bit_inner {
+			position: relative;
+		}
+		.bi_opts_wrap {
+			margin-top: 0;
+			.bottom_fix_wrap {
+				padding-bottom: 0;
+			}
+		}
+	}
 }
 
 .bi_top {
@@ -370,6 +386,8 @@
 		padding: 0 20px;
 		overflow-x: scroll;
 		white-space: nowrap;
+		flex-wrap: wrap;
+		overflow-x: visible;
 	}
 }
 

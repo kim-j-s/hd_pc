@@ -105,9 +105,13 @@
 
 	}
 	> .btn_area {
+		justify-content: center;
 		margin-top: var(--gap-8);
 		& + .title_h3 {
 			margin-top: var(--gap-8);
+		}
+		.hd_btn {
+			min-width: 160px;
 		}
 	}
 	.radio_group_wrap {
@@ -121,6 +125,11 @@
 		& + .space_list_ty5 { 
 			margin-top: var(--gap-8);
 		}
+	}
+	
+	& + .acd_item_ty3,
+	& + .banner_box {
+		margin-top: var(--gap-11);
 	}
 }
 .info_text2 {
@@ -236,6 +245,9 @@
 			margin-top:  var(--gap-9);
 		}
 		.form_group_wrap {
+			> * {
+				flex: 1;
+			}
 			.row {
 				.form_line {
 					margin-top: 0;
@@ -251,6 +263,28 @@
 				}
 			}
 		}
+	}
+	.form_group_wrap [class^=form_line] .label_tit {
+		.tooltip_wrap {
+			top: 4px;
+			.tooltip_head {
+				.hd_icon {
+					width: 20px;
+					height: 20px;
+				}
+				&.active {
+					&::after {
+						top: calc(100% - 8px);
+					}
+				}
+			}
+			.tooltip_panel {
+			 	top: calc(100% + 5px);
+			}
+		}
+	}
+	+ .form_box {
+		margin-top: var(--gap-11);
 	}
 }
 ul + .form_group_wrap {
@@ -624,6 +658,33 @@ ul + .form_group_wrap {
 	& + .title_h3 {
 		margin-top: var(--gap-11);
 	}
+	&.flex_row {
+		display: flex;
+		align-items: stretch; // div 높이 동일
+		height: 100%;
+		gap: var(--gap-3); 
+
+		> div {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			margin-top: 0 !important;
+		}
+		> i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: rotate(-90deg);
+			flex-shrink: 0;
+			width: 32px;
+			height: 32px;
+			align-self: center;
+		}
+	}
+
+	& + & {
+		margin-top: var(--gap-8);
+	}
 }
 
 /* 보험가입 진행 정보 */
@@ -678,6 +739,44 @@ ul + .form_group_wrap {
 	}
 	&.ty3 {
 		margin: var(--gap-8) 0 var(--gap-7);
+	}
+	&.basic {
+		a + a {
+			margin-top: var(--gap-8);
+		}
+	}
+	&:not(.basic) {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		gap: var(--gap-8) var(--gap-8);
+
+		> * {
+			flex: 0 1 calc(50% - 16px);
+			text-align: center;
+		}
+		
+		> img {
+			width: calc(50% - 16px);
+		}
+
+
+		& + .btn_area,
+		& + .checkbox_group_wrap {
+			margin-top: var(--gap-8);
+		}
+
+		& + [class^=list_]{
+			margin-top: var(--gap-5);
+		}
+
+		& + .form_box {
+			margin-top: var(--gap-11);
+		}
+
+		&.center {
+			justify-content: center;
+		}
 	}
 }
 .pop_title_h1 {
@@ -804,6 +903,7 @@ ul + .form_group_wrap {
 }
 
 .sns_box {
+	margin-top: var(--gap-5);
 	margin-bottom: var(--gap-4);
 	display: flex;
 	justify-content: center;
@@ -1000,9 +1100,25 @@ ul + .form_group_wrap {
 	display: block;
 	padding-right: 36px;
 	background: url(../images/icon/icon_new_open.svg) no-repeat right center/24px auto;
+	position: relative;
+	background-size: 16px auto;
+
+	&::after {
+		position: absolute;
+		content: '바로가기';
+		display: block;
+		top: 50%;
+		right: 18px;
+		font-size: var(--font-size-button-medium);
+		transform: translateY(-50%);
+	}
 
 	&.call {
 		background-image: url(../images/icon/icon_call.svg);
+
+		&::after {
+			content: '방법안내';
+		}
 	}
 
 	.link_item {
@@ -1030,16 +1146,44 @@ ul + .form_group_wrap {
 		}
 	}
 }
+
 .title_item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: var(--gap-6);
 	
 	button {
 		margin-top: 0;
 	}
+
+	.item {
+		[class^=title_h] {
+			&.ct1 {
+				font-weight: 400;
+				strong {
+					font-weight: 700;
+				}
+			}
+			& + .title_sub {
+				margin-top: var(--gap-4);
+			}
+		}
+	}
+
 	& + p {
 		margin-top: var(--gap-4);
+	}
+
+	& + .info_gray {
+		&.summary {
+			margin-top: var(--gap-8);
+		}
+	}
+	& + .info_gray_wrap {
+		&.summary_type {
+			margin-top: var(--gap-8);
+		}
 	}
 }
 

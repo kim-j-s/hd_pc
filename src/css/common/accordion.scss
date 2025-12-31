@@ -221,6 +221,8 @@
 		.cont_text_sub {
 			color: var(--color-text-subtle);
 			font-size: var(--font-size-body-small);
+			font-weight: normal;
+			margin-top: var(--gap-2);
 			+ .chk_lby2,
 			+ .price_btn {
 				margin-top: var(--gap-2);

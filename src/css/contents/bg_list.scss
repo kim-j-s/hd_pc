@@ -28,6 +28,9 @@
 	}
 
 	&.bg_list_case02 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding: var(--padding-6) var(--padding-7);
 		border-radius: var(--radius-medium4);
 		background-color:  var(--color-surface-primary-subtler);
@@ -38,11 +41,14 @@
 			}
 
 			&.year_status {
-				padding-top: var(--gap-4);
-				margin-top: var(--gap-4);
+				// padding-top: var(--gap-4);
+				// margin-top: var(--gap-4);
 				text-align: center;
 				font-size: var(--font-size-body-xsmall);
 				color:  var(--color-text-subtle);
+				padding: 0;
+				margin: 0;
+				border: none;
 			}
 
 			> .tit {

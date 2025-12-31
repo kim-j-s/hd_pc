@@ -163,6 +163,9 @@
 			}
 		}
 	}
+	&.rd_img {
+		flex: 0 1 101px;
+	}
 }
 
 .radio_group_link {
@@ -257,6 +260,19 @@
 		& + .info_gray,
 		& + .table {
 			margin-top: var(--gap-5);
+		}
+	}
+	&_ty5 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: var(--gap-4);
+
+		.inp_radio {
+			flex-basis: calc(20% - 10px);
+			.label_cont {
+				white-space: nowrap;
+			}
 		}
 	}
 	

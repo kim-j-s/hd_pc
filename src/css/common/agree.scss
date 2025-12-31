@@ -484,6 +484,15 @@
 	}
 }
 
+.agrdo_group_sub,
+.sep_chk_box {
+	.ags_cont,
+	.sep_cont {
+		grid-template-columns: repeat(4, 1fr);
+		gap:var(--gap-6);
+	}
+}
+
 
 // 광고성 정보의 수신동의 - 별도 Case
 

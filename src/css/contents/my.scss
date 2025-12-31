@@ -44,7 +44,7 @@
 
 /* 계약상세 */
 .cd_top_wrap {
-	margin: -16px -24px 0 -24px;
+	// margin: -16px -24px 0 -24px;
 	padding: var(--padding-8);
 	background-color: var(--color-surface-secondary-subtler);
 	.cd_top {
@@ -118,13 +118,47 @@
 			background-image: url(../images/content/bn/img_logo_hihealth.png);
 		}
 	}
-}
-
-
-.cd_top_wrap {
+	
 	+ .title_h3,
 	+ .tab_wrap {
 		margin-top: var(--gap-8);
+	}
+
+	&:not(.ty2) {
+		padding: 0;
+		background: transparent;
+		.cd_top {
+			background: var(--color-surface-gray-subtler);
+		}
+	}
+	&.ty2 {
+		border-radius: var(--radius-large2);
+		.cd_top {
+			.number_list {
+				display: flex;
+				li {
+					margin: 0;
+					flex: 1;
+				}
+			}
+			.cd_top_name {
+				+ .work_number {
+					margin-top: var(--gap-3);
+				}
+			}
+			.icon_right {
+				display: flex;
+				align-items: center;
+				min-height: 40px;
+			}
+		}
+		+ .title_h3,
+		+ .info_gray {
+			margin-top: var(--gap-11);
+			+ .title_h3 {
+				margin-top: var(--gap-11);
+			}
+		}
 	}
 }
 
@@ -134,6 +168,8 @@
 
 /* 계약 담당자 */
 .contact_list {
+	display: flex;
+	gap: var(--gap-3);
 	padding: 23px 24px;
 	border-radius: var(--radius-large2);
 	border: var(--border-width-static-regular) solid var(--color-border-gray-light);
@@ -183,6 +219,15 @@
 		margin-top: var(--gap-11);
 	}
 
+	li {
+		flex: 1;
+		+ li {
+			margin: 0;
+			padding: 0 0 0 var(--padding-6);
+			border: var(--border-width-static-regular) solid var(--color-border-gray-light);
+			border-width: 0 0 0 1px;
+		}
+	}
 }
 /* 계약 담당자 */
 
@@ -204,6 +249,10 @@
 		+ .item {
 			margin-top: var(--gap-9);
 		}
+	}
+	.img {
+		margin: auto;
+		width: 440px;
 	}
 }
 /* 수수료 비교 이미지 */
@@ -330,6 +379,9 @@
 			.tit {
 				display: block;
 				font-size: var(--font-size-heading-xsmall);
+				+ .list_depth {
+					margin-top: var(--gap-5);
+				}
 			}
 			.desc {
 				padding-top: 12px;
@@ -392,6 +444,14 @@
 			}
 			&.multi_d {
 				background-image: url(../images/common/cert/icon_step_multi_d.svg);
+			}
+		}
+	}
+	.frame_list {
+		.file_attach_box {
+			.file_thumbnail {
+				height: 310px;
+				margin: 0;
 			}
 		}
 	}

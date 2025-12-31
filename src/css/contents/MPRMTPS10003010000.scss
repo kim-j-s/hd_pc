@@ -47,6 +47,10 @@
 			background-image: url(../images/content/mtps/icon_car_type_option3.svg);
 		}
 	}
+	
+	& + .form_group_wrap {
+		margin-top: var(--gap-11);
+	}
 }
 
 .car_input_box {
@@ -101,5 +105,153 @@
 
 	.msg_error {
 		margin-top: 9px;
+	}
+}
+
+/* 운전자 범위 */
+.driver_relationship_box {
+	margin-top: var(--gap-8);
+	display: flex  ;
+	gap: var(--gap-8);
+	.driver_relationship_state {
+		margin: 0;
+	}
+	> div {
+		flex: 1;
+	}
+	.driver_relationship_cont {
+		.title_box {
+			font-size: var(--font-size-heading-medium);
+			~ p {
+				margin-top: var(--gap-4);
+			}
+		}
+		.info_gray {
+			+ p {
+				margin-top: var(--gap-8) !important;
+			}
+		}
+		> div:not(.rel_case1) {
+			display: none;
+		}
+		&.pick1 {
+			> div {
+				display: none;
+			}
+			.rel_case2 {
+				display: block;
+			}
+		} 
+		&.pick2 {
+			> div {
+				display: none;
+			}
+			.rel_case3 {
+				display: block;
+			}
+		} 
+		&.pick3 {
+			> div {
+				display: none;
+			}
+			.rel_case4 {
+				display: block;
+			}
+		} 
+		&.pick4 {
+			> div {
+				display: none;
+			}
+			.rel_case5 {
+				display: block;
+			}
+		} 
+		&.pick5 {
+			> div {
+				display: none;
+			}
+			.rel_case6 {
+				display: block;
+			}
+		} 
+		&.pick6 {
+			> div {
+				display: none;
+			}
+			.rel_case7 {
+				display: block;
+			}
+		} 
+		&.pick7 {
+			> div {
+				display: none;
+			}
+			.rel_case8 {
+				display: block;
+			}
+		} 
+		&.pick8 {
+			> div {
+				display: none;
+			}
+			.rel_case9 {
+				display: block;
+			}
+		} 
+		&.pick9 {
+			> div {
+				display: none;
+			}
+			.rel_case10 {
+				display: block;
+			}
+		} 
+		&.pick10 {
+			> div {
+				display: none;
+			}
+			.rel_case11 {
+				display: block;
+			}
+		} 
+	}
+
+	& + .btn_area {
+		margin-top: var(--gap-5);
+	}
+
+	&:not(:has(.driver_relationship_state)){
+		margin-top: var(--gap-11);
+	}
+}
+
+.select_driver_range.direct {
+	.driver_relationship_box {		
+		.driver_relationship_cont {
+			&.pick1 {
+				> div {
+					display: none;
+				}
+				.rel_case2 {
+					display: block;
+				}
+			}
+			&.pick3 {
+				> div {
+					display: none;
+				}
+				.rel_case3 {
+					display: block;
+				}
+			}
+			&.pick4 {
+				> div {
+					display: none;
+				}
+				.rel_case4 {
+					display: block;
+				}
+			}
+		}
 	}
 }

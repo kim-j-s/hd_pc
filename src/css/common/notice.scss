@@ -1,7 +1,8 @@
-/* bottom_fix_notice */
+/* bottom_fix_notice (꼭알아두세요) */
 .bottom_fix_notice {
-	padding-top: var(--gap-11);
-	margin: 0 -24px;
+	// padding-top: var(--gap-11);
+	// margin: 0 -24px;
+	padding-top: var(--gap-12);
 
 	&.etc01 {
 		padding-top: 32px;
@@ -10,6 +11,7 @@
       
 	.acd_item {
 		background-color: var(--color-surface-gray-subtler);
+		border-radius: var(--radius-large2);
 	}
 
 	.acd_head {
@@ -72,6 +74,7 @@
 					}
 					> ul {
 						> li {
+							font-size: var(--font-size-body-small);
 							color: var(--color-text-subtle);
 							&::before {
 								color: var(--color-icon-gray-light);
@@ -112,5 +115,12 @@
 
 	+ .suggestion_list_wrap {
 		margin-top: var(--gap-9);
+	}
+
+	& + .banner_box {
+		margin-top: var(--gap-8);
+	}
+	& + .list_ty2 {
+		margin-top: var(--gap-5)
 	}
 }
