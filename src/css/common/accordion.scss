@@ -1008,3 +1008,17 @@
 
 	}
 }
+
+
+
+// 아코디언 안에 포함된 table 레이아웃
+.table_section {
+	display: flex;
+	justify-content: space-between;
+	.table_wrap {
+		width: calc(50% - var(--gap-8)/2);
+		& + .table_wrap {
+			margin-top:0;
+		}
+	}
+}

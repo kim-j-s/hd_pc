@@ -3,3 +3,99 @@
 		margin-top: var(--gap-11);
 	}
 }
+
+// 자동차 차량정보 PC
+.car_step_layout {
+	.title_view_wrap {
+		.bit {
+			margin-top: 0;
+		}
+		.bit_inner {
+			.bit_inner_text {
+				display: block;
+				font-size: var(--font-size-heading-xxlarge);
+
+				// 배서
+				&.sub_desc {
+					padding-top: var(--gap-3);
+					font-size: var(--font-size-body-small);
+				}
+			}
+			&.active {
+				.bit_btn_scrollx,
+				.bit_inner_text {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.bi_wrap {
+		min-height: auto;
+		padding: 0;
+		.layout_bg_box {
+			padding: var(--padding-6) var(--padding-8);
+			background-color: var(--color-surface-secondary-subtler);
+			border-radius: var(--radius-large2);
+	
+			.stepper_wrap {
+				width: 375px;
+				margin: 0 auto;
+			}
+		}
+	
+	}
+	.bi_stepper {
+		.bi_opts_wrap {
+			position: relative;
+			z-index: 1;
+			margin-top: var(--gap-8);
+		}
+		.opts_area {
+			flex-direction: column;
+			align-items: flex-start;
+			transition:none;
+			// gap: var(--gap-8);
+
+			.search_inp_box {
+				position: static;
+				z-index: 10;
+				width: 100%;
+				& + * {
+					margin-top: var(--gap-8);
+				}
+			}
+
+			.oai_filter {
+				justify-content: flex-end;
+			}
+			.opts_area_item {
+				margin-top: 0;
+				padding-bottom: 0;
+
+				& + * {
+					margin-top: var(--gap-8);
+				}
+			}
+
+			.search_reult_list_container {
+				width: 100%;
+
+			}
+
+			.autocomplete_wrap {
+				& + * {
+					margin-top: var(--gap-8);
+
+					&.search_result_count {
+						margin-top: var(--gap-11);
+					}
+				}
+			}
+
+			.no_list_area {
+				min-height: auto;
+			}
+		}
+	}
+}

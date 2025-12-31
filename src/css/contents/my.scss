@@ -477,6 +477,53 @@
 /* 이용방법 */
 
 
+.contact_list {
+	padding: var(--padding-8) var(--padding-7);
+	background: var(--color-surface-white);
+	border: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+	border-radius: var(--radius-large2);
+
+	> .list {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-5);
+		font-size: var(--font-size-body-xsmall);
+
+		& + .list {
+			margin-top: var(--gap-6);
+		}
+
+		.icon {
+			display: block;
+			width: 44px;
+			height: 44px;
+			background-color: var(--color-background-gray-subtler);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 20px auto;
+			border-radius: var(--radius-medium1);
+
+			&.call {
+				background-image: url(../images/icon/icon_call_fill.svg);
+			}
+			&.car {
+				background-image: url(../images/icon/icon_car_window.svg);
+			}
+		}
+
+		.info {
+			em {
+				display: block;
+				font-size: var(--font-size-body-small);
+				font-weight: 700;
+			}
+		}
+	}
+
+	& + .list_depth_ty2 {
+		margin-top: var(--gap-4);
+	}
+}
 
 
 

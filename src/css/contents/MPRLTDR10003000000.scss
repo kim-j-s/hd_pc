@@ -55,7 +55,7 @@
 }
 /* 상단 이미지 영역 */
 
-// 
+
 
 .guarantee_list_wrap {
 	display: flex;
@@ -1119,4 +1119,747 @@
 			font-weight: 700;
 		}
 	}
+}
+
+
+
+
+// 보험료확인
+.gd_middle_ba {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 52px;
+	.item:only-child {
+		margin-left: auto; 
+	}
+}
+
+.guarantee_item .gi_radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.guarantee_item .gi_radio input + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.guarantee_view_wrap {
+	display: flex;
+	min-height: 189px;
+	gap: var(--gap-9);
+	padding: var(--padding-8) var(--padding-7);
+	border-radius: var(--radius-large2);
+	border: var(--border-width-static-medium) solid var(--color-border-primary);
+	box-shadow: 0px 4px 4px 0px rgba(248, 99, 60, 0.10);
+
+	& + .dc_info_box {
+		margin-top: var(--gap-5);
+	}
+
+	> * {
+		flex: 1;
+	}
+
+	.view_left {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: var(--gap-6);
+
+		.v_top {
+			display: flex;
+			gap: var(--gap-3);
+			.badge_wrap {
+				width: auto;
+			}
+			.sub_title {
+				font-size: var(--font-size-body-small);
+				color: var(--color-text-subtle);
+			}
+		}
+		.v_info {
+			.title {
+				font-size: var(--font-size-body-medium);
+			}
+			.price {
+				font-size: var(--font-size-body-large);
+				font-weight: 700;
+
+				strong {
+					font-size: var(--font-size-display-medium);
+					// vertical-align: top;
+				}
+
+				& + .btn_area {
+					margin-top: var(--gap-2);
+				}
+			}
+			.btn_area {
+				& + .desc {
+					margin-top: var(--gap-3);
+				}
+			}
+			.desc {
+				padding-top: var(--gap-2);
+				font-size: var(--font-size-body-small);
+			}
+			
+		}
+	}
+	.view_right {
+		display: flex;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 120px auto;
+
+		&.v_bg_ty1 { 
+			background-image: url(../images/content/guarantee/img_perpect.svg);
+		}  
+		
+		&.v_bg_ty2 { //풍수해·지진재해보험(주택용)
+			background-image: url(../images/content/guarantee/bg_img_gisf.svg);
+		}  
+		&.v_bg_ty3 { //풍수해·지진재해보험(소상공인용)
+			background-image: url(../images/content/guarantee/bg_img_gisf2.svg);
+		} 
+		&.v_bg_ty4 { //실손의료비보험
+			background-image: url(../images/content/guarantee/bg_img_ltmd.svg);
+		} 
+		&.v_bg_ty5 { //실손의료비보험(계약전환용)
+			background-image: url(../images/content/guarantee/bg_img_ltsm.svg);
+		}  
+		&.v_bg_ty6 { //사업장화재보험
+			background-image: url(../images/content/guarantee/bg_img_ltwf.png);
+		}  
+		&.v_bg_ty7 { //개인정보보호배상책임보험(II)
+			background-image: url(../images/content/guarantee/bg_img_gipi.png);
+		}  
+		&.v_bg_ty8 { //보험료 확인 (영업용 플랜)
+			background-image: url(../images/content/guarantee/bg_img_ltdr.png);
+		}
+		.bubble_msg {
+			position: relative;
+			flex: 1;  
+			margin-right: 156px;//161px;
+			padding: var(--padding-3) var(--padding-6);
+			background-color: var(--color-element-primary-lighter);
+			text-align: center;
+			border-radius: var(--radius-medium1);
+			border: var(--border-width-static-regular) solid var(--color-border-primary);
+
+			> span {
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				font-size: var(--font-size-body-small);
+				font-weight: 700;
+				color: var(--color-text-primary-bold);
+				max-height: 42px;
+			}
+			
+			&:after {
+				position: absolute;
+				top: calc(50% - 6px);
+				right: -6px;
+				z-index: 100;
+				content: '';
+				display: block;
+				width: 9px;
+				height: 12px;
+				background: url(../images/icon/icon_notch.svg) no-repeat center / contain;
+			}
+					
+		}
+	}
+}
+
+//선택옵션 존재
+.guarantee_select_wrap {
+	display: flex;
+	align-items: stretch;
+	gap: var(--gap-5);
+
+	.select_item {
+		flex: 1 1 0;
+		position: relative;
+		margin: 0;
+
+		// label {
+		// 	width: 100% !important;
+		// }
+
+		&:has(.btn_area){
+			.item_radio {
+				input{
+					& + label {
+						height: 284px;
+						.item_top {
+							// padding-bottom: 28px;
+						}
+					}
+
+					&:checked {
+						& + label {
+							.item_top {
+								// margin-top: 56px;
+								padding-bottom: 28px;
+							}
+						}
+					}
+				}
+				> .btn_area {
+					left: 20px;
+					bottom: 74px;
+				}
+			}
+		}
+
+		.item_radio	{
+			position: relative;
+			height: 100%;
+
+			input {
+				position: absolute;
+				top:0;
+				left: 0;
+				opacity: 0;
+			}
+	
+			label {
+				display: flex;
+				flex-direction: column;
+				width: 410px;
+				// height: 100%;
+				height: 256px;
+				padding: var(--padding-8) var(--padding-7);
+				background: none;
+				border: var(--border-width-static-regular, 1px) solid var(--color-border-secondary-light);
+				border-radius: var(--radius-large2);
+
+				.badge_wrap {
+					height: 56px;
+
+					.hd_badge {
+						&.class_type {
+							.text {
+								em {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+				.item_desc {
+					// display: block;
+					display: -webkit-box;
+					-webkit-line-clamp: 2; /* 보여줄 줄 수 */
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+
+			// 플랜 선택 disabled 상태값
+			input {
+				&:disabled {
+					+ label {
+						background-color: var(--color-surface-gray-subtler);
+						border-color: var(--color-border-secondary-light);
+
+						.badge_wrap {
+							.hd_badge {
+								background-color: var(--color-element-disabled-light);
+								border-color: var(--color-border-disabled);
+								.text {
+									background-image: url(../images/icon/icon_badge_disabled.svg);
+									color: var(--color-text-disabled-on);
+								}
+							}
+						}
+
+						.item_top,
+						.item_desc {
+							color: var(--color-text-disabled-on);
+						}
+
+						.item_top {
+							.top_info {
+								line-height: 1.5;
+							}
+						}
+					}
+				}
+			}
+			// 플랜 선택 disabled 상태값 추가
+		}
+
+		.item_top {
+			display: flex;
+			flex-direction: column;
+			margin-top: var(--gap-8);
+
+			.top_title {
+				font-size: var(--font-size-body-medium);
+				// white-space: nowrap;
+				br {
+					display: block;
+				}
+			}
+
+			.top_info {
+				display: flex;
+				align-items: center;
+				flex-flow: row wrap;
+				gap: 0 8px;
+				line-height: 42px;
+				
+				.price {
+					width: auto;
+					font-size: var(--font-size-body-large);
+					font-weight: 700;
+
+					strong {
+						font-size: var(--font-size-display-small);
+						vertical-align: top;
+					}
+				}
+				.discount {
+					font-size: var(--font-size-body-small);
+					line-height: 150%;
+					color: var(--color-text-subtle);
+					text-decoration-line: line-through;
+				}
+			}
+		}
+		.item_desc {
+			margin-top: var(--gap-4);
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
+		}
+
+		// pm 케이스
+		&.single {
+			flex-grow: 1;
+			flex-basis: 0;
+			margin-bottom: var(--gap-8);
+			padding: var(--gap-7) var(--gap-6);
+			border: var(--border-width-static-medium, 2px) solid var(--color-border-primary);
+    	border-radius: var(--radius-large2);
+			.badge_wrap {
+				.hd_badge {
+					&.class_type {
+						width: auto;
+						height: 32px;
+						border-radius: var(--radius-small2);
+	
+						.text {
+							display: flex;
+							padding: 0;
+							background: none;
+							font-weight: 700;
+	
+							em {
+								position: relative;
+								display: inline-block;
+								padding-left: 15px;
+								font-weight: 400;
+	
+								&:before {
+									position: absolute;
+									top: 4px;
+									left: var(--gap-3);
+									content:'';
+									width: 1px;
+									height: 12px;
+									background-color: var(--color-border-success-light);
+								}
+							}
+						}
+						&.class_type03 {
+							.text {
+								font-size: var(--font-size-body-small);
+								background-image: none;
+							}
+						}
+					}
+				}
+			}
+			.item_top {
+				margin-top: var(--gap-6);
+				margin-bottom: var(--gap-2);
+			}
+		}
+
+	}
+
+	&:has(input:checked) {
+		.select_item {
+			.item_radio {
+				label {
+					position: relative;
+					justify-content: center;
+					text-align: center;
+					&::after {
+						content: '';
+						position: absolute;
+						right: 20px;
+						bottom: 34px;
+						width: 110px;
+						height: 100px;
+						font-size: 0;
+						background-repeat: no-repeat;
+						background-size: 110px auto;
+						opacity: 0;
+					}
+
+					.item_top {
+						padding-bottom: 0;
+					}
+	
+				}
+				> .btn_area {
+					display: none;
+				}
+
+				input {
+					&:checked {
+						+ label {
+							width: 410px;
+							
+							.item_top {
+								.top_title {
+									br {
+										display: none;
+									}
+								}
+							}
+							& + .btn_area {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+			.badge_wrap {
+				justify-content: center;
+			}
+
+			.item_top {
+				.top_info {
+					justify-content: center;
+					.price {
+						strong {
+							font-size: var(--font-size-body-large);
+						}
+					}
+					.discount {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.select_item {
+		position: relative;
+		background: none;
+
+		&.t1 {
+			.item_radio {
+				input {
+					&:checked {
+						& + label {
+							&::after {
+								content: 'INSURANCE PERPECT';
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_02.svg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.t2 {
+			.item_radio {
+				input {
+					&:checked {
+						& + label {
+							&::after {
+								content: 'INSURANCE GREAT';
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_03.svg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.t3 {
+			.item_radio {
+				input {
+					&:checked {
+						& + label {
+							&::after {
+								content: 'INSURANCE GOOD';
+								background-image: url(../images/content/mprl/img_MPRLTDR10003000000_04.svg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.item_radio {
+			input {
+				&:checked {
+					& + label {
+						justify-content: flex-start;
+						text-align: left;
+						// transition: all .4s;
+		
+						&:before {
+							position: absolute;
+							top:0;
+							left: 0;
+							content:'';
+							width: 100%;
+							height: 100%;
+							border: var(--border-width-static-medium, 2px) solid var(--color-border-primary);
+							border-radius: var(--radius-large2);
+						}
+						&::after {
+							opacity: 1;
+						}
+						
+						.badge_wrap {
+							justify-content: flex-start;
+							.hd_badge {
+								&.class_type {
+									width: auto;
+									height: 32px;
+									border-radius: var(--radius-small2);
+				
+									.text {
+										display: flex;
+										padding: 0;
+										background: none;
+										font-weight: 700;
+				
+										em {
+											position: relative;
+											display: inline-block;
+											padding-left: 15px;
+											font-weight: 400;
+				
+											&:before {
+												position: absolute;
+												top: 4px;
+												left: var(--gap-3);
+												content:'';
+												width: 1px;
+												height: 12px;
+												// background-color: blue;
+											}
+										}
+									}
+			
+									&.class_type01 {
+										.text {
+											em {
+												&:before {
+													background-color: var(--color-border-primary-light);
+												}
+											}
+										}
+									}
+			
+									&.class_type02 {
+										.text {
+											em {
+												&:before {
+													background-color: var(--color-border-secondary-light);
+												}
+											}
+										}
+									}
+			
+									&.class_type03 {
+										.text {
+											em {
+												&:before {
+													background-color: var(--color-border-success-light);
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.item_top {
+							.top_info {
+								justify-content: flex-start;
+								.price {
+									strong {
+										font-size: var(--font-size-display-small);
+									}
+								}
+								.discount {
+									display: block;
+								}
+							}
+						}
+						.item_desc {
+							max-width: 228px;
+						}
+					}
+				}
+			}
+			> .btn_area {
+				display: none;
+				position: absolute;
+			}
+		}
+	}
+
+	& + .dc_info_box {
+		margin-top: var(--gap-5);
+	}
+	& + .acc_group {
+		margin-top: var(--gap-8);
+	}
+
+
+	// radio 3개
+	&.guarantee_select_wrap_n3 {
+		.select_item {
+			.item_radio {
+				label {
+					width: 268px;
+				}
+
+				.input {
+					&:checked {
+						+ label {
+							&:after {
+								transition: opacity .4s ease-in-out;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&:has(input:checked) {
+			.select_item {
+				.item_radio {
+					input {
+						& + label {
+							width: 197px;
+							transition: all .3s;
+							
+							.item_desc {
+								display: none;
+							}
+						}
+						&:checked {
+							+ label {
+								width: 410px;
+
+								.item_desc {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.guarantee_info {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 0 32px;
+	[class^=item] {
+		display: flex; 
+		align-items: center;		
+	}
+	.item_right {
+		min-height: 24px;
+		gap: var(--gap-5);
+		padding-right :var(--padding-3);
+		margin-left: auto;
+
+		.list_ty4 {
+			display:flex;
+			flex-wrap: wrap;
+			gap: var(--gap-4);
+
+			&:has(.hd_btn){
+				gap: var(--gap-7);
+
+				> li {
+					margin-left: var(--padding-3);
+
+					&:last-child {
+						.hd_btn {
+							margin-right: 0;
+						}
+					}
+	
+					.hd_btn {
+						margin-right: var(--padding-3);
+					}
+				}
+			}
+
+			> li {
+				margin:0;
+				display:flex;
+				align-items: center;
+
+				&::before {
+					top: calc(50% - 1px);
+				}
+
+				> .text {
+					padding-right: var(--gap-3);
+					color: var(--color-text-subtle);
+				}
+
+				.hd_btn {
+					margin-left: var(--gap-4);
+				}
+			}
+		}
+		.data {
+			font-size: var(--font-size-body-small);
+			font-weight: 700;
+			color: var(--color-text-subtle);
+		}
+		.select_option_box {
+			& + .data {
+				margin-left: var(--gap-3);
+			}
+		}
+	}	
+}
+.guarantee_btn_area {
+	margin: var(--gap-11) 0 var(--gap-8);
 }
