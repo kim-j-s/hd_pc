@@ -1151,7 +1151,105 @@
   height: 100%;
 }
 
+//coverage_item_list
+.coverage_item_list_ty3 {
+	> .list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: var(--gap-3);
 
+		& ~ .list {
+			margin-top: var(--gap-5);
+		}
+
+		.detail_list {
+			flex: 1 1 0;
+			overflow-wrap: anywhere;
+
+			.item_inner {
+				display: flex;
+				gap: var(--gap-3);
+				align-items: flex-start;
+	
+				.hd_btn {
+					&.short_cut2 {
+						.short_cut2_tit {
+							margin-right: 8px;
+							white-space: nowrap;
+						}
+						.badge_wrap {
+							width: auto;
+						}
+						+ .badge_wrap {
+							width: auto;
+						}
+					}
+				}
+				& + .cont_text_sub {
+					margin-top: var(--gap-2);
+				}
+			}
+	
+			.inp_checkbox {
+				flex: none;
+				.chk_label {
+					padding-left: 0;
+					width: 20px;
+					height: 20px;
+					.label_cont {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 1px;
+						height: 1px;
+						overflow: hidden;
+						white-space: nowrap;
+					}
+				}
+	
+				input[type=checkbox]{
+					left: 0;
+				}
+			}
+
+			.coverage_text {
+				flex: none;
+				font-size: var(--font-size-label-medium);
+			}
+	
+			.chk_lby2 {
+				padding: 5px 0 0 28px;
+			}
+		}
+
+		.detail_price {
+			flex: none;
+			font-size: var(--font-size-button-large);
+			.point {
+				font-weight: normal;
+				color: var(--color-text-primary);
+			}
+		}
+	}
+	.table_wrap {
+		&.type_mini{
+			.title {
+				margin: var(--gap-5) 0 var(--gap-4);
+				font-size: var(--font-size-body-small);
+			}
+		}
+	}
+
+	&.border {
+		> .list {
+			& ~ .list {
+				padding-top: var(--padding-6);
+				border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+			}
+		}
+	}
+}
 
 .guarantee_view_wrap {
 	display: flex;

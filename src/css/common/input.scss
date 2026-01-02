@@ -1016,6 +1016,12 @@
 			gap: 0;
 			width: 100%;
 		}
+		// + .input_text {
+		// 	margin-top: var(--gap-5);
+		// }
+	}
+	
+	.check_group_wrap {
 		+ .input_text {
 			margin-top: var(--gap-5);
 		}

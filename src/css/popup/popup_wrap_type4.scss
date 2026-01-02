@@ -1,6 +1,12 @@
 // full popup
 .popup_wrap {
 	&.popup_wrap_type4 {
+		&:has(.simple_info_item.active) {
+			.pew_exception {
+				padding-bottom: 0;
+			}
+		}
+		
 		&.big {
 			.popup_container {
 				width: 900px;

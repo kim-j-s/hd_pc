@@ -1349,6 +1349,43 @@
 	}
 }
 
+.sel_item_list {
+	.item {
+		font-size: var(--font-size-body-small);
+
+		& ~ .item {
+			margin-top: var(--gap-3);
+		}
+
+		.sel_tit {
+			color: var(--color-text-disabled-on);
+
+			.icon {
+				width: 16px;
+				height: 16px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% auto;
+
+				&.dog {
+					background-image: url(../images/content/bi/icon_stepper_dog.svg);
+				}
+
+				&.date {
+					background-image: url(../images/content/bi/icon_stepper_date.svg);
+				}
+
+				&.birth {
+					background-image: url(../images/content/bi/icon_stepper_birth.svg);
+				}
+
+				&.gender {
+					background-image: url(../images/content/bi/icon_stepper_gender.svg);
+				}
+			}
+		}
+	}
+}
 
 // aside panel
 .aside {

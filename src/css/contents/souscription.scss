@@ -264,6 +264,11 @@
 			}
 		}
 	}
+	.form_group_wrap  {
+		> * {
+			flex: 1;
+		}
+	}
 	.form_group_wrap [class^=form_line] .label_tit {
 		.tooltip_wrap {
 			top: 4px;
@@ -307,7 +312,7 @@ ul + .form_group_wrap {
 	}
 }
 .text_lg {
-	font-size: var(--font-size-body-large);
+	// font-size: var(--font-size-body-large);
 }
 
 .pop_title_h1 {
