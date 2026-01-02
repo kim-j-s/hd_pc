@@ -5546,6 +5546,9 @@ sup {
 	display: flex;
 	gap: var(--gap-3);
 }
+.btn_area .short_cut_icon_ty5 > .text dl dt {
+	display: block;
+}
 .btn_area.half {
 	width: calc(50% - 16px);
 }
@@ -6121,7 +6124,6 @@ sup {
 	-ms-flex-align: center;
 	align-items: center;
 	gap: var(--gap-2);
-	display: block;
 }
 .btn_link.short_cut_icon_ty6 > .text::before {
 	background-image: url(../images/content/guarantee/icon_gtl_doc.svg);
@@ -8956,8 +8958,8 @@ sup {
 	cursor: default;
 }
 .card_item.donation.small.end img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(50%);
+	filter: grayscale(50%);
 	opacity: 0.7;
 	mix-blend-mode: luminosity;
 }
@@ -11865,7 +11867,7 @@ sup {
 	gap: 0;
 	width: 100%;
 }
-.form_group_wrap .checkbox_group_wrap + .input_text {
+.form_group_wrap .check_group_wrap + .input_text {
 	margin-top: var(--gap-5);
 }
 .form_group_wrap .radio_group_wrap + .form_group_wrap .label_tit {

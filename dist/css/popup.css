@@ -473,6 +473,9 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 	/* iframe 대응용 */
 	/* iframe 대응용 */
 }
+.popup_wrap.popup_wrap_type4:has(.simple_info_item.active) .pew_exception {
+	padding-bottom: 0;
+}
 .popup_wrap.popup_wrap_type4.big .popup_container {
 	width: 900px;
 }
@@ -982,10 +985,10 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 	flex: none;
 	min-width: 60px;
 }
-.popup_wrap .title_h4.space1 {
+.popup_wrap.popup_wrap_type3 .title_h4.space1 {
 	margin-bottom: 16px;
 }
-.popup_wrap .form_group_wrap + .title_h4.space1 {
+.popup_wrap.popup_wrap_type3 .form_group_wrap + .title_h4.space1 {
 	margin-top: 40px;
 }
 /* toast */

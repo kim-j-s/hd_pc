@@ -1127,6 +1127,34 @@
 	font-weight: 700;
 	color: var(--color-text-primary-bold);
 }
+.sel_item_list .item {
+	font-size: var(--font-size-body-small);
+}
+.sel_item_list .item ~ .item {
+	margin-top: var(--gap-3);
+}
+.sel_item_list .item .sel_tit {
+	color: var(--color-text-disabled-on);
+}
+.sel_item_list .item .sel_tit .icon {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+}
+.sel_item_list .item .sel_tit .icon.dog {
+	background-image: url(../images/content/bi/icon_stepper_dog.svg);
+}
+.sel_item_list .item .sel_tit .icon.date {
+	background-image: url(../images/content/bi/icon_stepper_date.svg);
+}
+.sel_item_list .item .sel_tit .icon.birth {
+	background-image: url(../images/content/bi/icon_stepper_birth.svg);
+}
+.sel_item_list .item .sel_tit .icon.gender {
+	background-image: url(../images/content/bi/icon_stepper_gender.svg);
+}
 .aside {
 	width: 128px;
 }
@@ -5650,6 +5678,99 @@
 	width: 100%;
 	height: 100%;
 }
+.coverage_item_list_ty3 > .list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	gap: var(--gap-3);
+}
+.coverage_item_list_ty3 > .list ~ .list {
+	margin-top: var(--gap-5);
+}
+.coverage_item_list_ty3 > .list .detail_list {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	overflow-wrap: anywhere;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-3);
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 .short_cut2_tit {
+	margin-right: 8px;
+	white-space: nowrap;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 .badge_wrap {
+	width: auto;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner .hd_btn.short_cut2 + .badge_wrap {
+	width: auto;
+}
+.coverage_item_list_ty3 > .list .detail_list .item_inner + .cont_text_sub {
+	margin-top: var(--gap-2);
+}
+.coverage_item_list_ty3 > .list .detail_list .inp_checkbox {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+.coverage_item_list_ty3 > .list .detail_list .inp_checkbox .chk_label {
+	padding-left: 0;
+	width: 20px;
+	height: 20px;
+}
+.coverage_item_list_ty3 > .list .detail_list .inp_checkbox .chk_label .label_cont {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.coverage_item_list_ty3 > .list .detail_list .inp_checkbox input[type="checkbox"] {
+	left: 0;
+}
+.coverage_item_list_ty3 > .list .detail_list .coverage_text {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	font-size: var(--font-size-label-medium);
+}
+.coverage_item_list_ty3 > .list .detail_list .chk_lby2 {
+	padding: 5px 0 0 28px;
+}
+.coverage_item_list_ty3 > .list .detail_price {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	font-size: var(--font-size-button-large);
+}
+.coverage_item_list_ty3 > .list .detail_price .point {
+	font-weight: normal;
+	color: var(--color-text-primary);
+}
+.coverage_item_list_ty3 .table_wrap.type_mini .title {
+	margin: var(--gap-5) 0 var(--gap-4);
+	font-size: var(--font-size-body-small);
+}
+.coverage_item_list_ty3.border > .list ~ .list {
+	padding-top: var(--padding-6);
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+}
 .guarantee_view_wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -6412,6 +6533,11 @@
 .form_list > li .form_group_wrap .info_gray.ty2 + .form_group_wrap {
 	margin-top: 0;
 }
+.form_list .form_group_wrap > * {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
 .form_list .form_group_wrap [class^="form_line"] .label_tit .tooltip_wrap {
 	top: 4px;
 }
@@ -6443,9 +6569,6 @@ ul + .form_group_wrap {
 .text_head + .info_gray,
 .text_head + .form_group_wrap {
 	margin-top: var(--gap-8);
-}
-.text_lg {
-	font-size: var(--font-size-body-large);
 }
 .pop_title_h1 {
 	font-size: var(--font-size-heading-medium) !important;
