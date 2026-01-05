@@ -841,6 +841,12 @@
 			}
 		}
 
+		.text_box {
+			& + .btn_area {
+				margin-top: var(--gap-8);
+			}
+		}
+
 		.inp_checkbox {
 			& + .radio_group_wrap {
 				margin-top: var(--gap-5);

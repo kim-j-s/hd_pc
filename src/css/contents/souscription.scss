@@ -1445,4 +1445,8 @@ ul + .form_group_wrap {
 		font-size: var(--font-size-body-medium);
 		color: var(--color-text-bolder);
 	}
+
+	& + .btn_area {
+		margin-top: var(--gap-8);
+	}
 }
