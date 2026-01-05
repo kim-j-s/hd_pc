@@ -7652,6 +7652,9 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-bolder);
 }
+.text_box + .btn_area {
+	margin-top: var(--gap-8);
+}
 /* 운전자보험 - 보험료 결제 */
 .insurance_payment_area {
 	position: relative;
