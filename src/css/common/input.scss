@@ -269,10 +269,19 @@
 	// 	border-color: var(--color-input-border-active);
 	// }
 	&.error {
-		border: 3px solid var(--color-input-border-error);
+		border: var(--border-width-variable-medium) solid var(--color-input-border-error);
+		
 		input {
-			height: calc(var(--size-height-8) - 6px);
+			height: calc(var(--size-height-8) - 8px);
 		}
+
+		.form_key_pc {
+			> input {
+				height: calc(var(--size-height-8) - 8px);
+			}
+		}
+
+
 		// &:focus-within {
 		// 	border-color: var(--color-input-border-error);
 		// }
@@ -310,6 +319,25 @@
 
 
 /* _조합 input */
+
+.comp_wrap {
+	&.card,
+	&.business {
+		padding: 3px;
+	}
+	&.error {
+		padding: 2px 3px;
+	}
+
+	.inp {
+		input {
+			height: calc(var(--size-height-8) - 8px);
+			border-radius: var(--radius-medium1);
+		}
+	}
+}
+
+
 .comp_wrap {
 	position: relative;	
 	display: flex;
@@ -317,26 +345,17 @@
 	gap: var(--gap-2);
 	border: var(--border-width-variable-regular) solid var(--color-input-border);
 	border-radius: var(--radius-medium3);
-	// &:focus-within {
-	// 	border-color: var(--color-text-basic);
-	// }
+	&:focus-within {
+		border-color: var(--color-text-basic);
+	}
 	
 	&.error {
-		border: 3px solid var(--color-input-border-error);
-		.input_text {
-			input {
-				height: calc(var(--size-height-8) - 6px);
-			}
-			// &:focus-within {
-			// 	border-color: var(--color-input-border-error);
-			// }
-
-		}
+		border: var(--border-width-variable-medium) solid var(--color-input-border-error);
 	}
 
 	&.card {
 		gap: var(--gap-3);
-		padding: 0 calc(var(--padding-6) - 2px);
+		// padding: 2px calc(var(--padding-6) - 2px);
 
 		.comp_wrap_keypad_call {
 			// flex: none;
@@ -524,6 +543,7 @@
 
 	//금액
 	&.key_number {
+		height: 56px;
 		& + .btn_area.basic {
 			margin-top: var(--gap-4);
 
@@ -555,6 +575,14 @@
 			--color-button-tertiary-fill: rgba(255, 255, 255, 1);
 			&.hd_btn_ty_3 {
 				background: var(--color-button-tertiary-fill);
+			}
+		}
+
+		.inp {
+			input {
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 
@@ -649,6 +677,7 @@
 		text-align: center;
 	}
 }
+
 .key_number {
 	width: 100%;
 	padding-right: 16px;
@@ -1371,3 +1400,11 @@
 	margin-top: var(--gap-5);
 }
 /* 개발 구조 관련 적용 */
+
+
+
+
+
+
+
+
