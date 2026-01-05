@@ -79,6 +79,5 @@
 /* 상품공통 */
 @import 'contents/prd_common.scss';
 
-
-/* PC용 component  */
+/* 키패드  */
 @import 'contents/keypad.scss';
