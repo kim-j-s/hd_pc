@@ -779,6 +779,10 @@
 	& + .spacebox6,
 	& + .title_h3 {
 		margin-top: var(--gap-11);
+
+		&.ty2 {
+			margin-top: var(--gap-8);
+		}
 	}
 
 	& + .text_sub_ty2,
@@ -867,6 +871,12 @@
 
 			& ~ .info_gray { 
 				margin-top: var(--gap-5);
+			}
+		}
+
+		.text_box {
+			& + .btn_area {
+				margin-top: var(--gap-8);
 			}
 		}
 

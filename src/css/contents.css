@@ -1,3 +1,6 @@
+/* main */
+@import 'contents/main_pc.scss';
+
 /* bg_list */
 @import "contents/bg_list.scss";
 
@@ -75,3 +78,6 @@
 
 /* 상품공통 */
 @import 'contents/prd_common.scss';
+
+/* 키패드  */
+@import 'contents/keypad.scss';

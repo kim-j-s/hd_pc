@@ -11615,6 +11615,13 @@ sup {
 .form_group_wrap + .title_h3 {
 	margin-top: var(--gap-11);
 }
+.form_group_wrap + .info_gray.ty2.ty2,
+.form_group_wrap + .radio_group_wrap.ty2,
+.form_group_wrap + .checkbox_group_wrap.ty2,
+.form_group_wrap + .spacebox6.ty2,
+.form_group_wrap + .title_h3.ty2 {
+	margin-top: var(--gap-8);
+}
 .form_group_wrap + .text_sub_ty2,
 .form_group_wrap + .select_item,
 .form_group_wrap + .form_group_wrap.space2 {
@@ -11708,6 +11715,9 @@ sup {
 .form_group_wrap [class^="form_line"] > .form_line ~ .info_gray,
 .form_group_wrap [class^="form_line"] .btn_area ~ .info_gray {
 	margin-top: var(--gap-5);
+}
+.form_group_wrap [class^="form_line"] .text_box + .btn_area {
+	margin-top: var(--gap-8);
 }
 .form_group_wrap [class^="form_line"] .inp_checkbox + .radio_group_wrap {
 	margin-top: var(--gap-5);
@@ -18221,4 +18231,52 @@ ol li .table_wrap + .list_ty2 li + li {
 .wrap .card_item_wrap.ty4 .card_item .item_inner .hd_icon {
 	width: 40px;
 	height: 40px;
+}
+/* breadcrumb */
+/* breadcrumb */
+.breadcrumb {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+.breadcrumb_inner {
+	width: 1188px;
+	margin: 0 auto;
+	padding-right: var(--padding-2);
+}
+.breadcrumb_inner_list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.breadcrumb_inner_list > li {
+	position: relative;
+	font-size: var(--font-size-navigation-depth-small);
+	line-height: 24px;
+	color: var(--color-text-subtle);
+}
+.breadcrumb_inner_list > li > a,
+.breadcrumb_inner_list > li > span {
+	display: block;
+}
+.breadcrumb_inner_list > li:last-child {
+	font-weight: 700;
+}
+.breadcrumb_inner_list > li + li {
+	padding-left: var(--padding-8);
+}
+.breadcrumb_inner_list > li + li::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: 4px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center/16px auto;
 }
