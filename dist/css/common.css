@@ -11615,6 +11615,13 @@ sup {
 .form_group_wrap + .title_h3 {
 	margin-top: var(--gap-11);
 }
+.form_group_wrap + .info_gray.ty2.ty2,
+.form_group_wrap + .radio_group_wrap.ty2,
+.form_group_wrap + .checkbox_group_wrap.ty2,
+.form_group_wrap + .spacebox6.ty2,
+.form_group_wrap + .title_h3.ty2 {
+	margin-top: var(--gap-8);
+}
 .form_group_wrap + .text_sub_ty2,
 .form_group_wrap + .select_item,
 .form_group_wrap + .form_group_wrap.space2 {
