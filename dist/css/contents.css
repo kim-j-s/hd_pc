@@ -12989,14 +12989,14 @@ ul + .form_group_wrap {
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
 	min-width: 0;
-	height: calc(var(--size-height-8) - 2px);
+	height: calc(var(--size-height-8) - 8px);
 	padding: var(--padding-5);
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic) !important;
 	text-align: center;
 	border: none;
 	background-color: var(--color-input-surface) !important;
-	border-radius: var(--radius-medium3);
+	border-radius: var(--radius-medium1);
 }
 .form_key_pc > input::-webkit-input-placeholder {
 	color: var(--color-text-disabled);

@@ -11151,10 +11151,13 @@ sup {
 	overflow: hidden;
 }
 .input_text.error {
-	border: 3px solid var(--color-input-border-error);
+	border: var(--border-width-variable-medium) solid var(--color-input-border-error);
 }
 .input_text.error input {
-	height: calc(var(--size-height-8) - 6px);
+	height: calc(var(--size-height-8) - 8px);
+}
+.input_text.error .form_key_pc > input {
+	height: calc(var(--size-height-8) - 8px);
 }
 .msg_info {
 	margin-top: var(--gap-3);
@@ -11181,6 +11184,17 @@ sup {
 	color: var(--color-text-danger);
 }
 /* _조합 input */
+.comp_wrap.card,
+.comp_wrap.business {
+	padding: 3px;
+}
+.comp_wrap.error {
+	padding: 2px 3px;
+}
+.comp_wrap .inp input {
+	height: calc(var(--size-height-8) - 8px);
+	border-radius: var(--radius-medium1);
+}
 .comp_wrap {
 	position: relative;
 	display: -webkit-box;
@@ -11194,15 +11208,14 @@ sup {
 	border-radius: var(--radius-medium3);
 	/* comp_wrap 내부에서 보안키패드 호출 버튼 공통 사용요소 - 필요시 각 class별로 별도 설정 필요 */
 }
-.comp_wrap.error {
-	border: 3px solid var(--color-input-border-error);
+.comp_wrap:focus-within {
+	border-color: var(--color-text-basic);
 }
-.comp_wrap.error .input_text input {
-	height: calc(var(--size-height-8) - 6px);
+.comp_wrap.error {
+	border: var(--border-width-variable-medium) solid var(--color-input-border-error);
 }
 .comp_wrap.card {
 	gap: var(--gap-3);
-	padding: 0 calc(var(--padding-6) - 2px);
 }
 .comp_wrap.card .comp_wrap_keypad_call {
 	-webkit-box-flex: 1.6;
@@ -11379,6 +11392,7 @@ sup {
 	background-color: transparent;
 }
 .comp_wrap.key_number {
+	height: 56px;
 	/* 현업 요청에 의한 색상 재정의 */
 }
 .comp_wrap.key_number + .btn_area.basic {
@@ -11407,6 +11421,9 @@ sup {
 }
 .comp_wrap.key_number .hd_btn.hd_btn_ty_3 {
 	background: var(--color-button-tertiary-fill);
+}
+.comp_wrap.key_number .inp input:focus {
+	outline: none;
 }
 .comp_wrap.card_pw {
 	padding-left: 12px;
