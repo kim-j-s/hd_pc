@@ -750,6 +750,10 @@
 	& + .spacebox6,
 	& + .title_h3 {
 		margin-top: var(--gap-11);
+
+		&.ty2 {
+			margin-top: var(--gap-8);
+		}
 	}
 
 	& + .text_sub_ty2,
