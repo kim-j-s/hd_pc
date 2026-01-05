@@ -783,6 +783,8 @@ function rafThrottle(fn) {
 }
 
 /* 개선 전 */
+var scrollChk;
+var simpleInfoWrapChk;
 function initPositionEventWrap($wrap) {
 	if (!$wrap.length) return;
 
@@ -824,16 +826,23 @@ function initPositionEventWrap($wrap) {
 
 			expHeight = 197 - 68;
 
+			clearTimeout(simpleInfoWrapChk); 
+			//스크롤 멈춘 0.3초 뒤에 active 부여 이벤트 실행
 			if(!$simpleInfoWrap.length){
 				// console.log('not');
 				const infoHeight = $wrap.find('.info_summary').outerHeight();
 				const $targetChild = $tagItemWrap.closest('.simple_info_wrap.ty2').find('.simple_info_item');
-	
-				if( scrollTop >= infoHeight){
-					$targetChild.addClass('active');
-				} else {
-					$targetChild.removeAttr('style').removeClass('active');
-					$targetChild.removeClass('active');
+				if($targetChild.hasClass('active')){
+					if(scrollTop < infoHeight){
+						$targetChild.removeAttr('style').removeClass('active');
+						$targetChild.removeClass('active');
+					}
+				}else{
+					if(scrollTop >= infoHeight){
+						simpleInfoWrapChk = setTimeout(function(){
+							$targetChild.addClass('active');
+						}, 30);
+					}
 				}
 			}
 		}
@@ -851,7 +860,11 @@ function initPositionEventWrap($wrap) {
 		});
 
 		if (activeIdx !== -1) {
-			$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+			clearTimeout(scrollChk); 
+			//스크롤 멈춘 0.3초 뒤에 active 부여 이벤트 실행
+			scrollChk = setTimeout(function(){
+				$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
+			}, 30);
 		}
 	})
 	);
