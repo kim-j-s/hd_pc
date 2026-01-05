@@ -6659,11 +6659,13 @@ ul + .form_group_wrap {
 	font-weight: 700;
 	color: var(--color-text-bolder);
 }
+.info_cont h2 + .form_group_wrap,
 .info_cont h2 + .table_wrap,
 .info_cont h2 + .info_gray,
 .info_cont h2 + h3,
 .info_cont h2 + ul,
 .info_cont h2 + ol,
+.info_cont .title_h2 + .form_group_wrap,
 .info_cont .title_h2 + .table_wrap,
 .info_cont .title_h2 + .info_gray,
 .info_cont .title_h2 + h3,
@@ -6904,6 +6906,7 @@ ul + .form_group_wrap {
 .info_cont .data_list ul li + li {
 	margin-top: var(--gap-3);
 }
+.info_cont + .info_gray,
 .info_cont + .title_h3 {
 	margin-top: var(--gap-11);
 }
@@ -7229,6 +7232,7 @@ ul + .form_group_wrap {
 	-webkit-box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	box-shadow: 0 var(--shadow-y-2) var(--shadow-blur-2) 0px var(--color-alpha-shadow1, rgba(0, 0, 0, 0.05));
 	border-radius: var(--radius-medium1);
+	z-index: 10;
 }
 .tab_wrap_list_ty1.tip_box .tip_item_cont {
 	padding: 4px 0;
@@ -7628,6 +7632,25 @@ ul + .form_group_wrap {
 }
 .reward_img_area + .bottom_fix_notice {
 	padding-top: var(--gap-8);
+}
+.text_box {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-height: 56px;
+	padding: 4px var(--padding-6);
+	background: var(--color-input-surface-disabled);
+	border: var(--border-width-static-regular) solid var(--color-input-border-disabled);
+	border-radius: var(--radius-medium3);
+}
+.text_box .inner {
+	font-size: var(--font-size-body-medium);
+	color: var(--color-text-bolder);
 }
 /* 운전자보험 - 보험료 결제 */
 .insurance_payment_area {
