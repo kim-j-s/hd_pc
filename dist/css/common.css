@@ -18232,3 +18232,51 @@ ol li .table_wrap + .list_ty2 li + li {
 	width: 40px;
 	height: 40px;
 }
+/* breadcrumb */
+/* breadcrumb */
+.breadcrumb {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+.breadcrumb_inner {
+	width: 1188px;
+	margin: 0 auto;
+	padding-right: var(--padding-2);
+}
+.breadcrumb_inner_list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.breadcrumb_inner_list > li {
+	position: relative;
+	font-size: var(--font-size-navigation-depth-small);
+	line-height: 24px;
+	color: var(--color-text-subtle);
+}
+.breadcrumb_inner_list > li > a,
+.breadcrumb_inner_list > li > span {
+	display: block;
+}
+.breadcrumb_inner_list > li:last-child {
+	font-weight: 700;
+}
+.breadcrumb_inner_list > li + li {
+	padding-left: var(--padding-8);
+}
+.breadcrumb_inner_list > li + li::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: 4px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/icon/arrowRight_ty4.svg) no-repeat center/16px auto;
+}
