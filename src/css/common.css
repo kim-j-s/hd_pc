@@ -135,3 +135,6 @@
 
 /* infobox */
 @import "common/infobox.scss";
+
+/* breadcrumb */
+@import 'common/breadcrumb.scss';
