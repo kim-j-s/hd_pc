@@ -4,7 +4,9 @@
 	</div>
 
 	<!-- s: full 팝업 -->
-	{{#> popup/popup_full popup-id="pop_type01" popup-active=true popup-title="건물/주택 구조" }}
+	 <!-- s: 26-01-06 수정 -->
+	 {{#> popup/popup_bottom popup-id="pop_type01" popup-active=true popup-title="건물/주택 구조" }}
+	 <!-- e: 26-01-06 수정 -->
 	<div class="popup_cont">
 		<div class="popup_content">
 			<!-- s: popup_content_top -->
@@ -173,6 +175,6 @@
 			{{> cp/button type="1" size="2" b-text="확인"}}
 		</div>
 	</div>
-	{{/ popup/popup_full}}
+	{{/ popup/popup_bottom}}
 	<!-- e: full 팝업 -->
 	{{/ layout/default }}
