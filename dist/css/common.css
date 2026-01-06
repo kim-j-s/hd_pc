@@ -15931,6 +15931,22 @@ ol li .table_wrap + .list_ty2 li + li {
 #swiper1 .swiper-slide:nth-child(even) {
 	background-color: #ddd;
 }
+/* bullet 케이스 */
+.swiper_wrap.bullet_add .bullet_add_pager {
+	text-align: center;
+}
+.swiper_wrap.bullet_add .bullet_add_pager .bap_inner {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.swiper_wrap.bullet_add .bullet_add_pager .swiper-pagination {
+	position: static;
+}
+/* bullet 케이스 */
 /* 보장플랜 케이스 */
 .sw_case01 {
 	margin: 0 -24px;
