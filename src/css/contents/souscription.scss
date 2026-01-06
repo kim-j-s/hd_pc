@@ -751,6 +751,11 @@ ul + .form_group_wrap {
 		a + a {
 			margin-top: var(--gap-8);
 		}
+		+ .banner_box {
+			&.basic {
+				margin-top: var(--gap-5);
+			}
+		}
 	}
 	&:not(.basic) {
 		display: flex;

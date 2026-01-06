@@ -14,26 +14,46 @@
 
 /* bullet 케이스 */
 .swiper_wrap {
+	.swiper-slide {
+		a {
+			display: block;
+			img {
+				display: block;
+			}
+		}
+	}
 	&.bullet_add {
-
-		// --gap-3
 		// bullet / pager / play / stop
 		.bullet_add_pager {
-
+			margin-top: var(--gap-3);
+			font-size: 0;
 			text-align: center;
-
 			.bap_inner {
 				display: inline-flex;
 				align-items: center;
+				gap: 0 var(--gap-1);
+				.swiper_button {
+					width: 24px;
+					height: 24px;
+					top: 50%;
+					background-color: transparent;
+					background-size: 16px;
+				}
+				.swiper-button-play-pause {
+					width: 24px;
+					height: 24px;
+					font-size: 0;
+					background: url(../images/icon/icon_stop.svg) no-repeat center / 16px;
+		
+					&.active {
+						background-image: url(../images/icon/icon_play.svg);
+					}
+				}
+				.swiper-pagination {
+					position: static;
+				}
 			}
-
-
-			.swiper-pagination {
-				position: static;
-			}
-
 		}
-
 	}
 }
 /* bullet 케이스 */
@@ -85,6 +105,23 @@
 	&.sp_ty1 {
 		.swiper-pagination-bullet {
 			margin: 0 2px;
+			opacity: 1;
+			background-color: var(--color-element-disabled-light);
+			transition: all 0.3s;
+			&.swiper-pagination-bullet-active {
+				width: 20px;
+				border-radius: 8px;
+				background-color: #58616A;
+			}
+		}
+	}
+	&.sp_ty2 {
+		width: auto;
+		display: inline-flex;
+		gap: 0 var(--gap-2);
+		padding: var(--padding-3);
+		.swiper-pagination-bullet {
+			margin: 0;
 			opacity: 1;
 			background-color: var(--color-element-disabled-light);
 			transition: all 0.3s;

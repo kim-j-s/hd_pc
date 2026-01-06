@@ -1,23 +1,22 @@
 /*** Custom PC ***/
 
 /* layout  */
-@import 'contents/pc_custom_st1.scss';
+/* @import 'contents/pc_custom_st1.scss'; */
 
 /* 모바일용 component  */
-@import 'contents/pc_custom_st2.scss';
+/* @import 'contents/pc_custom_st2.scss'; */
 
 /* PC용 component  */
-@import 'contents/pc_custom_st3.scss';
+/* @import 'contents/pc_custom_st3.scss'; */
 
 /* PC용 component  */
-@import 'contents/pc_custom_st4.scss';
+/* @import 'contents/pc_custom_st4.scss'; */
 
 /* PC용 component  */
-@import 'contents/keypad.scss';
-
+/* @import 'contents/keypad.scss'; */
 
 /* breadcrumb */
-@import 'common/breadcrumb.scss';
+/* @import 'common/breadcrumb.scss'; */
 
 /* breadcrumb */
-@import 'contents/main_pc.scss';
+/* @import 'contents/main_pc.scss'; */
