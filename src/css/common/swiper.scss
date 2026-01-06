@@ -12,6 +12,32 @@
 	}
 }
 
+/* bullet 케이스 */
+.swiper_wrap {
+	&.bullet_add {
+
+		// --gap-3
+		// bullet / pager / play / stop
+		.bullet_add_pager {
+
+			text-align: center;
+
+			.bap_inner {
+				display: inline-flex;
+				align-items: center;
+			}
+
+
+			.swiper-pagination {
+				position: static;
+			}
+
+		}
+
+	}
+}
+/* bullet 케이스 */
+
 
 /* 보장플랜 케이스 */
 .sw_case01 {
