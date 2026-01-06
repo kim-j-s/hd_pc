@@ -11150,6 +11150,12 @@ sup {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+.input_text:focus-within {
+	border-color: var(--color-input-border-active);
+}
+.input_text:focus-within input {
+	outline: none;
+}
 .input_text.error {
 	border: var(--border-width-variable-medium) solid var(--color-input-border-error);
 }
@@ -14511,11 +14517,6 @@ ol li .table_wrap + .list_ty2 li + li {
 .inp_radio.sm input[type="radio"]:checked + label::before {
 	background-size: 10px auto;
 }
-.inp_radio.rd_img {
-	-webkit-box-flex: 0;
-	-ms-flex: 0 1 101px;
-	flex: 0 1 101px;
-}
 .radio_group_link {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -15932,7 +15933,15 @@ ol li .table_wrap + .list_ty2 li + li {
 	background-color: #ddd;
 }
 /* bullet 케이스 */
+.swiper_wrap .swiper-slide a {
+	display: block;
+}
+.swiper_wrap .swiper-slide a img {
+	display: block;
+}
 .swiper_wrap.bullet_add .bullet_add_pager {
+	margin-top: var(--gap-3);
+	font-size: 0;
 	text-align: center;
 }
 .swiper_wrap.bullet_add .bullet_add_pager .bap_inner {
@@ -15942,8 +15951,25 @@ ol li .table_wrap + .list_ty2 li + li {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	gap: 0 var(--gap-1);
 }
-.swiper_wrap.bullet_add .bullet_add_pager .swiper-pagination {
+.swiper_wrap.bullet_add .bullet_add_pager .bap_inner .swiper_button {
+	width: 24px;
+	height: 24px;
+	top: 50%;
+	background-color: transparent;
+	background-size: 16px;
+}
+.swiper_wrap.bullet_add .bullet_add_pager .bap_inner .swiper-button-play-pause {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background: url(../images/icon/icon_stop.svg) no-repeat center/16px;
+}
+.swiper_wrap.bullet_add .bullet_add_pager .bap_inner .swiper-button-play-pause.active {
+	background-image: url(../images/icon/icon_play.svg);
+}
+.swiper_wrap.bullet_add .bullet_add_pager .bap_inner .swiper-pagination {
 	position: static;
 }
 /* bullet 케이스 */
@@ -15988,6 +16014,26 @@ ol li .table_wrap + .list_ty2 li + li {
 	transition: all 0.3s;
 }
 .swiper-pagination.sp_ty1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	width: 20px;
+	border-radius: 8px;
+	background-color: #58616a;
+}
+.swiper-pagination.sp_ty2 {
+	width: auto;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	gap: 0 var(--gap-2);
+	padding: var(--padding-3);
+}
+.swiper-pagination.sp_ty2 .swiper-pagination-bullet {
+	margin: 0;
+	opacity: 1;
+	background-color: var(--color-element-disabled-light);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.swiper-pagination.sp_ty2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	width: 20px;
 	border-radius: 8px;
 	background-color: #58616a;

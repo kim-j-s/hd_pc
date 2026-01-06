@@ -8312,6 +8312,9 @@ ul + .form_group_wrap {
 .banner_box.basic a + a {
 	margin-top: var(--gap-8);
 }
+.banner_box.basic + .banner_box.basic {
+	margin-top: var(--gap-5);
+}
 .banner_box:not(.basic) {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -10833,6 +10836,10 @@ ul + .form_group_wrap {
 	bottom: 331px;
 }
 .prd_view .in_sec {
+	width: 836px;
+	margin: 0 auto;
+}
+.prd_view .swiper_wrap {
 	width: 836px;
 	margin: 0 auto;
 }

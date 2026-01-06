@@ -125,6 +125,8 @@
 		</div>
 		<!-- e: 카드 혜택 안내 배너 -->
 
+		<div class="guide_h4">슬라이더 - bullet / play, stop</div>
+
 		<div class="swiper_wrap bullet_add" id="t1">
 			<div class="inner">
 				<div class="swiper">
@@ -148,10 +150,10 @@
 				</div>
 				<div class="bullet_add_pager">
 					<div class="bap_inner">
-						<button class="swiper_button swiper_button_left main_l"></button>
+						<button class="swiper_button swiper_button_left"></button>
 						<div class="swiper-pagination sp_ty2"></div>
 						<button class="swiper-button-play-pause" title="슬라이드 쇼 제어">정지</button>
-						<button class="swiper_button swiper_button_right main_r"></button>
+						<button class="swiper_button swiper_button_right"></button>
 					</div>
 				</div>
 			</div>
@@ -172,20 +174,20 @@
 			const controlEl = wrap.querySelector(".bullet_add_pager");
 			const paginationEl = wrap.querySelector(".swiper-pagination");
 
-			// ✅ 슬라이드 1개 이하
+			// 슬라이드 1개 이하
 			if (slideCount <= 1) {
 				if (paginationEl) paginationEl.style.display = "none";
 				if (controlEl) controlEl.style.display = "none";
 				return;
 			}
 
-			// ✅ 슬라이드 2개 이상일 때만 Swiper 생성
+			// 슬라이드 2개 이상일 때만 Swiper 생성
 			const swiper = new Swiper(swiperEl, {
 				slidesPerView: 1,
 				updateOnWindowResize: true,
 
 				autoplay: {
-					delay: 6000,
+					delay: 3000,
 					disableOnInteraction: false,
 				},
 
@@ -205,7 +207,7 @@
 				},
 			});
 
-			// ▶️ autoplay 제어
+			// autoplay 제어
 			const playPauseBtn = wrap.querySelector(".swiper-button-play-pause");
 			if (playPauseBtn) {
 				playPauseBtn.addEventListener("click", () => {
@@ -222,33 +224,8 @@
 			}
 		}
 
+		// 구동
 		initSwiperById("t1");
-
-		// var t1Swiper = new Swiper('#t1 .swiper', {
-		// 	slidesPerView: 1,
-		// 	updateOnWindowResize:true,
-		// 	navigation: {
-		// 		nextEl: ".swiper_button_right",
-		// 		prevEl: ".swiper_button_left",
-		// 	},
-		// 	a11y: {
-		// 		enabled: true,
-		// 		prevSlideMessage: '이전 항목으로 이동',
-		// 		nextSlideMessage: '다음 항목으로 이동',
-		// 	},
-		// 	pagination: {
-		// 		// el: '.swiper-pagination',
-		// 		el: '.dsdfdsf',
-
-		// 		clickable: true,
-		// 		type: 'bullets',
-		// 		renderBullet: function (index, className) {
-		// 			return `<span class="${className}" aria-label="배너${index + 1}번으로 이동"></span>`;
-		// 			// return `<span class="\${className}" aria-label="배너\${index + 1}번으로 이동"></span>`;
-		// 			// jsp 사용시
-		// 		},
-		// 	}
-		// });
 
 		var bannerSwiper = new Swiper("#card_reward_banner_wrap", {
 			slidesPerView: 1,
