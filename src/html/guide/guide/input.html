@@ -586,7 +586,10 @@
 		<div class="row">
 			<div class="form_line fix_w_case01">
 				<div class="label_tit">장착연도</div>
-				{{> cp/selectitem si_popup="select_option_ty1" si_ph="선택" si_title="장착연도 선택"}}
+				{{#> cp/selectbox_pc s-title="장착연도 선택" }} 
+					<option value="" selected>장착연도</option>
+					<option value="">장착연도</option>
+				{{/ cp/selectbox_pc}}
 			</div>
 			<div class="form_line grow">
 				<div class="label_tit">구입가격</div>
@@ -603,7 +606,10 @@
 		</div>
 		<div class="form_line">
 			<div class="label_tit">자금출처</div>
-			{{> cp/selectitem si_ph="자금출처 선택" si_title="자금출처 선택" si_popup="pop_type01"}}
+			{{#> cp/selectbox_pc s-title="자금출처 선택" }} 
+				<option value="" selected>자금출처</option>
+				<option value="">자금출처</option>
+			{{/ cp/selectbox_pc}}
 			{{> cp/text placeholder="기타 자금출처를 입력해 주세요" inp-title="기타 자금출처 입력" }}
 		</div>
 		<div class="form_line full_half">

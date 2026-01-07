@@ -265,7 +265,6 @@
 		input {
 			height: calc(var(--size-height-8) - 8px);
 		}
-
 		.form_key_pc {
 			> input {
 				height: calc(var(--size-height-8) - 8px);
@@ -348,12 +347,29 @@
 	
 	&.error {
 		border: var(--border-width-variable-medium) solid var(--color-input-border-error);
+		.inp {
+			input {
+				&:focus {
+					border: var(--border-width-static-regular) solid var(--color-input-border-error);
+				}
+			}
+		}
+
+		.comp_wrap_keypad_call {
+			input {
+				&:focus {
+					border: var(--border-width-static-regular) solid var(--color-input-border-error);
+				}
+			}
+		}
 	}
 
 	&.card {
 		gap: var(--gap-3);
 		.comp_wrap_keypad_call {
-			flex: 1.6;
+			// flex: 1.6;
+			flex: none;
+			width: auto;
 			&.form_key_pc {
 				> input {
 					width: 59px;
@@ -479,6 +495,26 @@
 			width: calc(50% - 8px);
 			.input_text {
 				border: none;
+				&::after {
+					content: '';
+					position: absolute;
+					top: calc(50% + 12px);
+					left: 0;
+					width: 100%;
+					border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-dark);
+					pointer-events: none;
+					transition: border-color 0.3s;
+				}
+				&:focus-within {
+					&::after {
+						border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+					}
+				}
+				&:has(input:not(:placeholder-shown)) {
+					&::after {
+						border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+					}
+				}
 			}
 			input {
 				width: 16px;
@@ -523,10 +559,6 @@
 		height: 56px;
 		& + .btn_area.basic {
 			margin-top: var(--gap-4);
-
-			.hd_btn_s_4 {
-				//min-width: 54px;
-			}
 		}
 
 		&:has(.phone.readonly),
@@ -559,10 +591,19 @@
 			input {
 				&:focus {
 					outline: none;
+					border: var(--border-width-static-regular) solid transparent;
 				}
 			}
 		}
-
+		.input_text {
+			&.price {
+				.inp {
+					input {
+						line-height: 48px;
+					}
+				}
+			}
+		}
 	}
 	
 	// 카드 비밀번호
@@ -666,7 +707,6 @@
 				font-size: var(--font-size-button-small);
 				color: var(--color-text-point);
 			}
-			// background-color: blue;
 		}
 	}
 	button {
@@ -1189,13 +1229,6 @@
 
 			.radio_group_wrap:not(.full) {
 				width: calc(50% - 16px);
-			}
-			.label_tit {
-				.tooltip_wrap {
-					.tooltip_panel {
-						//max-width: 836px;
-					}
-				}
 			}
 			.scp_list_r {
 				.radio_group_wrap {
