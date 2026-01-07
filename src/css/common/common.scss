@@ -216,6 +216,10 @@ sup {
 	&:has(.header_pc_error) {
 		padding: 72px 0 64px 0;
 	}
+	&:has(.header_pc_coalition) {
+		// padding: 72px 0 64px 0;
+		padding: 72px 0 0 0;
+	}
 	&:has(.footer) {
 		.container {
 			// background-color: blue;
@@ -254,6 +258,13 @@ sup {
 			display: block;
 			width: auto;
 			padding-bottom: 0;
+		}
+
+		&.coalition_hcard {
+			width: 100%;
+			.content {
+				width: 100%;
+			}
 		}
 
 		.content {
@@ -360,6 +371,9 @@ sup {
 	.header_pc {
 		+ .container {
 			margin-top: var(--gap-12);
+			&.coalition_hcard {
+				margin-top: 0;
+			}
 		}
 		+ .container_form {
 			margin-top: var(--gap-12);

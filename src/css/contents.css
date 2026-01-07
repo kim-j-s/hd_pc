@@ -4,7 +4,6 @@
 /* bg_list */
 @import "contents/bg_list.scss";
 
-
 /* smp1 */
 @import 'contents/smp1.scss';
 
@@ -13,7 +12,6 @@
 
 /* 자동완성 */
 @import 'contents/autocomplete.scss';
-
 
 /* 자동차보험 - 고객정보 */
 @import 'contents/MPRMTPS10002010000.scss';
@@ -38,7 +36,6 @@
 /* 운전자보험 - 보험료확인 */
 @import 'contents/MPRLTDR10003000000.scss';
 
-
 /* 청약 폼 */
 @import 'contents/souscription.scss';
 
@@ -50,8 +47,6 @@
 
 /* 장기 */
 @import 'contents/MPRGIPT30008000000.scss';
-
-
 
 /* 이용안내 */
 @import 'contents/opgu.scss';
@@ -78,6 +73,9 @@
 
 /* 상품공통 */
 @import 'contents/prd_common.scss';
+
+/* 여행 - 현대카드 회원 전용 해외여행보험 안내 페이지 */
+@import 'contents/tr_c.scss';
 
 /* 키패드  */
 @import 'contents/keypad.scss';

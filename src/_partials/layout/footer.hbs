@@ -22,7 +22,25 @@
 	{{/unless}}
 </div>
 {{#unless no-footer}}
-<div id="footer" class="footer{{#if footer-class}} {{footer-class}}{{/if}}">
+<div id="footer" class="footer{{#if footer-class}} {{footer-class}}{{/if}}{{#if spm}} footer_simple{{/if}}">
+	{{#if spm}}
+	<div class="ffs_inner">
+		<div class="ffs_inner_logo">
+			<img src="../../../images/footer/img_ffs_logo.png" alt="H 현대해상">
+		</div>
+		<div class="ffs_inner_cont">
+			<div class="i_info">
+				<span>현대해상화재보험㈜</span>
+				<span>대표이사 이석현</span>
+				<span>사업자등록번호 102-81-32035</span>
+				<span>(03183) 서울특별시 종로구 세종대로 163, 현대해상빌딩(세종로)</span>
+			</div>
+			<p class="copy">
+				Copyright © Hyundai Marine &amp; Fire Insurance Co, Ltd. All right reserved.
+			</p>
+		</div>
+	</div>
+	{{else}}
 	<div class="inner">
 		<div class="footer_top">
 			<div class="ft_left">
@@ -130,5 +148,6 @@
 			</div>
 		</div>
 	</div>
+	{{/if}}
 </div>
 {{/unless}}

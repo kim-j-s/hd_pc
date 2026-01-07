@@ -1,8 +1,9 @@
 {{#unless no-header}}
-<div id="header" class="header_pc{{#if h-prd}} header_pc_nd{{/if}}{{#if hd-error}} header_pc_error{{/if}}">
+<div id="header" class="header_pc{{#if h-prd}} header_pc_nd{{/if}}{{#if hd-error}} header_pc_error{{/if}}{{#if hd-hcard}} header_pc_coalition{{/if}}">
 	<div class="header_pc_inner"> 
 		{{#unless h-prd}}
 		{{#unless hd-error}}
+		{{#unless hd-hcard}}
 		<div class="hpi_top">
 			<div class="hpi_change_area">
 				<div class="hpi_cm">
@@ -48,19 +49,26 @@
 		</div>
 		{{/unless}}
 		{{/unless}}
+		{{/unless}}
 		<div class="hpi_bottom">
-			<div class="hpi_l{{#if h-prd}} hpi_l_nd{{/if}}">
+			<div class="hpi_l{{#if h-prd}} hpi_l_nd{{/if}}{{#if hd-hcard}} hpi_l_nd{{/if}}">
 				{{#unless h-prd}}
 					{{#if hd-error}}
 					<h1 class="hpi_logo">
 						<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트">
 					</h1>
 					{{else}}
-					<h1 class="hpi_logo">
-						<a href="#">
-							<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트 홈으로">
-						</a>
-					</h1>
+						{{#if hd-hcard}}
+						<h1 class="hpi_logo">
+							<img src="../../../images/header/img_logo_ty2_xhc.png" alt="현대해상 다이렉트 X Hyundai Card 회원 전용 해외여행보험 안내 페이지">
+						</h1>
+						{{else}}
+						<h1 class="hpi_logo">
+							<a href="#">
+								<img src="../../../images/header/img_logo_ty1.png" alt="현대해상 다이렉트 홈으로">
+							</a>
+						</h1>
+						{{/if}}
 					{{/if}}
 				{{else}}
 					{{#if npay}}
@@ -97,11 +105,13 @@
 			{{/if}}
 			{{#unless h-prd}}
 			{{#unless hd-error}}
+			{{#unless hd-hcard}}
 			<nav class="hpi_gnb">
 				<div id="gnb">
 					{{> layout/nav_pc}}
 				</div>
 			</nav>
+			{{/unless}}
 			{{/unless}}
 			{{/unless}}
 			{{#if gnbadd}}
@@ -113,6 +123,7 @@
 			{{/if}}
 
 			{{#unless hd-error}}
+			{{#unless hd-hcard}}
 			<div class="hpi_sub_utils">
 					{{#if h-prd}}
 					<div class="item item_chatbot">
@@ -592,6 +603,7 @@
 			{{/if}}
 				{{/if}}
 			</div>
+			{{/unless}}
 			{{/unless}}
 		</div>
 	</div>

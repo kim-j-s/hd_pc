@@ -54,7 +54,7 @@
 }
 
 
-.footer  {
+.footer {
 	width: 100%;
 	height: 203px;
 	padding-top: var(--padding-7);
@@ -66,8 +66,6 @@
 		flex-direction: column;
 		width: 1188px;
 	}
-
-
 	.footer_top {
 		display: flex;
 		align-items: center;
@@ -172,8 +170,6 @@
 		}
 
 	}
-
-
 	.footer_bottom {
 		display: flex;
 		align-items: flex-end;
@@ -260,20 +256,34 @@
 			}
 		}
 	}
-}
 
+	&.footer_simple {
+		height: auto;
+		padding: var(--padding-7) 0;
+		.ffs_inner {
+			display: inline-flex;
+			align-items: center;
+			width: 836px;
+			gap: var(--gap-5);
+			text-align: left;
+			.ffs_inner_logo {
+				flex: none;
+				font-size: 0;
+			}
+			.ffs_inner_cont {
+				flex: 1 1 0;
+				font-size: var(--font-size-body-xsmall);
+				color: var(--color-text-disabled-on);
 
-/* 바닥페이지용 */
-.wrap {
-	&.footer_fix{
-		&:has(.ft_fix) {
-			// padding-bottom: 323px;
-
-			.footer {
-				// bottom: 120px;
-				// position: sticky;
-				// bottom: 0;
+				.i_info {
+					display: flex;
+					gap: var(--gap-3);
+				}
 			}
 		}
 	}
+
+
+
 }
+

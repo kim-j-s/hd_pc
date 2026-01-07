@@ -122,7 +122,7 @@
 		}
 		&.right {
 			top: 1px;
-			padding-right: 16px;
+			padding-right: var(--padding-6);
 		}
 	}
 	.del,
@@ -608,7 +608,7 @@
 	
 	// 카드 비밀번호
 	&.card_pw {
-		padding-left: 12px;
+		padding-left: var(--padding-5);
 		padding-right: var(--padding-2);
 	}
 }
@@ -698,7 +698,7 @@
 
 .key_number {
 	width: 100%;
-	padding-right: 16px;
+	padding-right: var(--padding-6);
 	.input_text {
 		flex: auto;
 		.int_txt {
@@ -733,7 +733,7 @@
 
 //계약번호
 .contractNum {
-	padding: 0 16px;
+	padding: 0 var(--padding-6);
 	width: 100%;
 	&.readonly,
 	&.disabled,
@@ -1342,7 +1342,7 @@
 		justify-content: center;
 		height: 56px;
 		gap: 2px;
-		padding: 0 16px;
+		padding: 0 var(--padding-6);
 		font-size: var(--font-size-body-medium);
 		color: var(--color-text-disabled);
 		&.default {
