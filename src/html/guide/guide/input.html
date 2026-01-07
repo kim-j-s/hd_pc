@@ -1,6 +1,136 @@
 {{#> layout/guide }}
 <div class="guide_h1">Input</div>
 
+<del></del>
+<div class="guide_h4">Type - 주민등록번호 뒷자리 한자리만</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">생년월일/성별</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="생년월일 입력" }}
+				<span class="dash">-</span>
+				<div class="id_pass_box">
+					{{> cp/text type="tel" minlength="1" maxlength="1" placeholder="●" inp-title="성별(주민등록번호 뒷1자리) 입력" no_del="flase" }}
+					<div class="id_pass">
+						●●●●●●
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 뒷자리 한자리만(read only케이스)</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" value="250303" readonly=true }}
+				<span class="dash">-</span>
+				<div class="id_pass_box read_only">
+					{{> cp/text type="tel" minlength="1" maxlength="1" placeholder="●" inp-title="주민등록번호 뒷1자리 입력" value="1" no_del="flase" readonly=true }}
+					<div class="id_pass">
+						●●●●●●
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 error</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap error birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 전</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" value="250303" inp-title="주민등록번호 앞자리 입력" readonly=true }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp2"}}
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 전</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp3"}}
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 중</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case2=true kt="주민등록번호 뒤 7자리 입력" ktid="kp4"}}
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 불가</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp2" kpdisabled=true }}
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp7" }}
+			</div>
+		</div>
+	</div>
+
+	<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호/외국인등록번호</div>
+	<div class="form_group_wrap">
+		<div class="form_line">
+			<div class="label_tit">주민등록번호/외국인등록번호</div>
+			<div class="comp_wrap birth">
+				{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호(외국인등록번호) 앞자리 입력" }}
+				<span class="dash">-</span>
+				{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호(외국인등록번호) 뒷자리 입력" ktid="kp8" }}
+			</div>
+		</div>
+	</div>
+	<br><br>
+
+	<del></del>
+
+
+
+
+
+
+
+
 <div class="guide_h4">전화번호 입력 예시 - <span style="color: red; font-weight: bold;">개선버젼</span> </div>
 {{> cp/text class="phone phone_full" type="tel" placeholder="- 없이 입력" inp-title="휴대폰번호 입력" }}
 
@@ -271,8 +401,6 @@
 			</div>
 		</div>
 	</div>
-
-	
 
 	<div class="guide_h4">Type - 주민등록번호 error</div>
 	<div class="form_group_wrap">

@@ -4,18 +4,23 @@
 	> input {
 		flex: 1 1 0;
 		min-width: 0;
-		// height: calc(var(--size-height-8) - 2px);
 		height: calc(var(--size-height-8) - 8px);
 		padding: var(--padding-5);
 		font-size: var(--font-size-body-medium);
 		color: var(--color-text-basic) !important;
 		text-align: center;
-		border: none;
-		background-color: var(--color-input-surface) !important;
+		// border: none;
+		border: var(--border-width-static-regular) solid transparent;
 		border-radius: var(--radius-medium1);
+		background-color: var(--color-input-surface) !important;
+		transition: border-color 0.3s;
+		outline: none;
 		&::placeholder {
 			color: var(--color-text-disabled);
 			text-align: left;
+		}
+		&:focus {
+			border: var(--border-width-static-regular) solid var(--color-input-border);
 		}
 		&:read-only {
 			+ span {
