@@ -10835,6 +10835,9 @@ ul + .form_group_wrap {
 .wrap .prd_link_area:not(:has(.fixed)) + .quick_menu.active {
 	bottom: 331px;
 }
+.wrap:has(.footer_simple) .prd_link_area:not(:has(.fixed)) + .quick_menu.active {
+	bottom: 231px;
+}
 .prd_view .in_sec {
 	width: 836px;
 	margin: 0 auto;
@@ -11960,6 +11963,12 @@ ul + .form_group_wrap {
 .prd_link_area .prd_link .prd_item.item_ico_ty78::after {
 	background-image: url("../images/content/bi/visual/bg_exp_ty78.png");
 }
+.prd_link_area .prd_link .prd_item.item_ico_ty79::after {
+	background-image: url("../images/content/bi/visual/bg_exp_ty79.png");
+}
+.prd_link_area .prd_link .prd_item.item_ico_ty80::after {
+	background-image: url("../images/content/bi/visual/bg_exp_ty80.png");
+}
 .prd_link_area .prd_link .prd_item .tit {
 	font-weight: 700;
 	font-size: var(--font-size-body-medium);
@@ -12984,6 +12993,85 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
 }
+/* 여행 - 현대카드 회원 전용 해외여행보험 안내 페이지 */
+.ch_kv {
+	padding: var(--padding-10) 0;
+	background-color: var(--color-surface-warning-subtler);
+}
+.ch_kv .ch_kv_inner {
+	width: 836px;
+	margin: 0 auto;
+	background: url(../images/content/gitr/img_PRGITR80002070000_01.png) no-repeat right bottom 23px/360px auto;
+}
+.ch_kv .ch_kv_inner .n_tit {
+	display: block;
+	font-size: var(--font-size-heading-xsmall);
+}
+.ch_kv .ch_kv_inner .ch_kv_w1 {
+	padding-top: var(--padding-2);
+	font-size: var(--font-size-heading-xxlarge);
+}
+.ch_kv .ch_kv_inner .s_bullet {
+	margin-top: var(--gap-5);
+	padding-left: 24px;
+	font-weight: 700;
+	font-size: var(--font-size-body-medium);
+	background: url(../images/content/gitr/img_PRGITR80002070000_02.png) no-repeat left top 2px;
+}
+.ch_kv .ch_kv_inner .list_ty2 {
+	margin-top: var(--gap-4);
+}
+.ch_kv .ch_kv_inner .btn_area {
+	margin-top: var(--gap-8);
+}
+.ch_content {
+	width: 836px;
+	margin: 0 auto;
+	padding-top: 52px;
+}
+.ch_content + .ch_content {
+	margin-top: var(--gap-11);
+	padding-top: 53px;
+	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+}
+.ch_s_info {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0 var(--gap-5);
+}
+.ch_s_info > li {
+	padding: 31px var(--padding-8);
+	border-radius: var(--radius-large2);
+	background-color: var(--color-surface-secondary-subtler);
+}
+.ch_s_info > li::before {
+	content: "";
+	display: block;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.ch_s_info > li.ch_s_info_ty1::before {
+	background-image: url(../images/content/gitr/img_PRGITR80002070000_03.png);
+}
+.ch_s_info > li.ch_s_info_ty2::before {
+	background-image: url(../images/content/gitr/img_PRGITR80002070000_04.png);
+}
+.ch_s_info > li.ch_s_info_ty3::before {
+	background-image: url(../images/content/gitr/img_PRGITR80002070000_05.png);
+}
+.ch_s_info > li .tit {
+	display: block;
+	padding-top: var(--padding-5);
+	font-size: var(--font-size-body-small);
+	text-align: center;
+}
+.ch_s_info > li .text {
+	display: block;
+	padding-top: var(--padding-2);
+	font-size: var(--font-size-body-small);
+	text-align: center;
+}
 /* 키패드  */
 .form_key_pc {
 	display: -webkit-box;
@@ -13001,9 +13089,12 @@ ul + .form_group_wrap {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic) !important;
 	text-align: center;
-	border: none;
-	background-color: var(--color-input-surface) !important;
+	border: var(--border-width-static-regular) solid transparent;
 	border-radius: var(--radius-medium1);
+	background-color: var(--color-input-surface) !important;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+	outline: none;
 }
 .form_key_pc > input::-webkit-input-placeholder {
 	color: var(--color-text-disabled);
@@ -13024,6 +13115,9 @@ ul + .form_group_wrap {
 .form_key_pc > input::placeholder {
 	color: var(--color-text-disabled);
 	text-align: left;
+}
+.form_key_pc > input:focus {
+	border: var(--border-width-static-regular) solid var(--color-input-border);
 }
 .form_key_pc > input:-moz-read-only + span > input + label {
 	background-image: url(../images/icon/icon_keypad_on.png);

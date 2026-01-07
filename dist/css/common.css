@@ -196,6 +196,9 @@ sup {
 .wrap:has(.header_pc_error) {
 	padding: 72px 0 64px 0;
 }
+.wrap:has(.header_pc_coalition) {
+	padding: 72px 0 0 0;
+}
 .wrap:has(.footer) .container {
 	padding: 0 0 var(--padding-12);
 }
@@ -233,6 +236,12 @@ sup {
 	display: block;
 	width: auto;
 	padding-bottom: 0;
+}
+.wrap .container.coalition_hcard {
+	width: 100%;
+}
+.wrap .container.coalition_hcard .content {
+	width: 100%;
 }
 .wrap .container .content {
 	-webkit-box-flex: 0;
@@ -310,6 +319,9 @@ sup {
 }
 .wrap .header_pc + .container {
 	margin-top: var(--gap-12);
+}
+.wrap .header_pc + .container.coalition_hcard {
+	margin-top: 0;
 }
 .wrap .header_pc + .container_form {
 	margin-top: var(--gap-12);
@@ -3569,7 +3581,40 @@ sup {
 	padding-left: 51px;
 	background-image: url(../images/footer/icon_fi_ty5.png);
 }
-/* 바닥페이지용 */
+.footer.footer_simple {
+	height: auto;
+	padding: var(--padding-7) 0;
+}
+.footer.footer_simple .ffs_inner {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 836px;
+	gap: var(--gap-5);
+	text-align: left;
+}
+.footer.footer_simple .ffs_inner .ffs_inner_logo {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	font-size: 0;
+}
+.footer.footer_simple .ffs_inner .ffs_inner_cont {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	font-size: var(--font-size-body-xsmall);
+	color: var(--color-text-disabled-on);
+}
+.footer.footer_simple .ffs_inner .ffs_inner_cont .i_info {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: var(--gap-3);
+}
 /* navigation */
 /* @import "common/nav.scss"; */
 /* address button */
@@ -11041,7 +11086,7 @@ sup {
 }
 .input_text .int_txt.right {
 	top: 1px;
-	padding-right: 16px;
+	padding-right: var(--padding-6);
 }
 .input_text .del,
 .input_text .calendar_call,
@@ -11200,6 +11245,12 @@ sup {
 .comp_wrap .inp input {
 	height: calc(var(--size-height-8) - 8px);
 	border-radius: var(--radius-medium1);
+	border: var(--border-width-static-regular) solid transparent;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+}
+.comp_wrap .inp input:focus {
+	border: var(--border-width-static-regular) solid var(--color-input-border);
 }
 .comp_wrap {
 	position: relative;
@@ -11212,6 +11263,8 @@ sup {
 	gap: var(--gap-2);
 	border: var(--border-width-variable-regular) solid var(--color-input-border);
 	border-radius: var(--radius-medium3);
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
 	/* comp_wrap 내부에서 보안키패드 호출 버튼 공통 사용요소 - 필요시 각 class별로 별도 설정 필요 */
 }
 .comp_wrap:focus-within {
@@ -11220,13 +11273,20 @@ sup {
 .comp_wrap.error {
 	border: var(--border-width-variable-medium) solid var(--color-input-border-error);
 }
+.comp_wrap.error .inp input:focus {
+	border: var(--border-width-static-regular) solid var(--color-input-border-error);
+}
+.comp_wrap.error .comp_wrap_keypad_call input:focus {
+	border: var(--border-width-static-regular) solid var(--color-input-border-error);
+}
 .comp_wrap.card {
 	gap: var(--gap-3);
 }
 .comp_wrap.card .comp_wrap_keypad_call {
-	-webkit-box-flex: 1.6;
-	-ms-flex: 1.6;
-	flex: 1.6;
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	width: auto;
 }
 .comp_wrap.card .comp_wrap_keypad_call.form_key_pc > input {
 	width: 59px;
@@ -11350,12 +11410,22 @@ sup {
 }
 .comp_wrap.birth input {
 	height: 48px;
-}
-.comp_wrap.birth input:-moz-read-only {
 	text-align: center;
 }
-.comp_wrap.birth input:read-only {
-	text-align: center;
+.comp_wrap.birth input::-webkit-input-placeholder {
+	text-align: left;
+}
+.comp_wrap.birth input::-moz-placeholder {
+	text-align: left;
+}
+.comp_wrap.birth input:-ms-input-placeholder {
+	text-align: left;
+}
+.comp_wrap.birth input::-ms-input-placeholder {
+	text-align: left;
+}
+.comp_wrap.birth input::placeholder {
+	text-align: left;
 }
 .comp_wrap.birth .id_pass_box {
 	display: -webkit-box;
@@ -11364,19 +11434,59 @@ sup {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	width: calc(50% - 8px);
 	gap: var(--gap-2);
+	width: calc(50% - 8px);
 }
 .comp_wrap.birth .id_pass_box .input_text {
 	border: none;
 }
+.comp_wrap.birth .id_pass_box .input_text::after {
+	content: "";
+	position: absolute;
+	top: calc(50% + 12px);
+	left: 0;
+	width: 100%;
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-dark);
+	pointer-events: none;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
+}
+.comp_wrap.birth .id_pass_box .input_text:focus-within::after {
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+}
+.comp_wrap.birth .id_pass_box .input_text:has(input:not(:-moz-placeholder-shown))::after {
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+}
+.comp_wrap.birth .id_pass_box .input_text:has(input:not(:-ms-input-placeholder))::after {
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+}
+.comp_wrap.birth .id_pass_box .input_text:has(input:not(:placeholder-shown))::after {
+	border-bottom: var(--border-width-static-regular) solid var(--color-divider-gray-darker);
+}
 .comp_wrap.birth .id_pass_box input {
+	width: 16px;
+	height: 48px;
 	padding: 0;
-	width: 20px;
-	height: 25px;
 	text-align: center;
-	border-bottom: 1px solid #6d7882;
-	border-radius: 0;
+	border-radius: var(--radius-xxsamll);
+}
+.comp_wrap.birth .id_pass_box input:focus {
+	border: var(--border-width-static-regular) solid var(--color-input-border);
+}
+.comp_wrap.birth .id_pass_box input::-webkit-input-placeholder {
+	text-align: center;
+}
+.comp_wrap.birth .id_pass_box input::-moz-placeholder {
+	text-align: center;
+}
+.comp_wrap.birth .id_pass_box input:-ms-input-placeholder {
+	text-align: center;
+}
+.comp_wrap.birth .id_pass_box input::-ms-input-placeholder {
+	text-align: center;
+}
+.comp_wrap.birth .id_pass_box input::placeholder {
+	text-align: center;
 }
 .comp_wrap.birth .id_pass_box .id_pass {
 	line-height: 48px;
@@ -11384,17 +11494,16 @@ sup {
 	font-size: var(--font-size-body-medium);
 	text-align: center;
 	background-color: var(--color-input-surface-disabled);
-	border-radius: 12px;
+	border-radius: var(--radius-medium1);
 }
 .comp_wrap.birth .id_pass_box .id_pass2 {
-	line-height: 48px;
 	width: 100%;
 	font-size: var(--font-size-body-medium);
 	text-align: center;
-	border-radius: 12px;
+	line-height: 48px;
+	border-radius: var(--radius-medium1);
 }
 .comp_wrap.birth .id_pass_box.read_only input {
-	border-bottom: 0;
 	background-color: transparent;
 }
 .comp_wrap.key_number {
@@ -11430,9 +11539,13 @@ sup {
 }
 .comp_wrap.key_number .inp input:focus {
 	outline: none;
+	border: var(--border-width-static-regular) solid transparent;
+}
+.comp_wrap.key_number .input_text.price .inp input {
+	line-height: 48px;
 }
 .comp_wrap.card_pw {
-	padding-left: 12px;
+	padding-left: var(--padding-5);
 	padding-right: var(--padding-2);
 }
 .weight,
@@ -11545,7 +11658,7 @@ sup {
 }
 .key_number {
 	width: 100%;
-	padding-right: 16px;
+	padding-right: var(--padding-6);
 }
 .key_number .input_text {
 	-webkit-box-flex: 1;
@@ -11581,7 +11694,7 @@ sup {
 	}
 }
 .contractNum {
-	padding: 0 16px;
+	padding: 0 var(--padding-6);
 	width: 100%;
 }
 .contractNum.readonly,
@@ -12128,7 +12241,7 @@ sup {
 	justify-content: center;
 	height: 56px;
 	gap: 2px;
-	padding: 0 16px;
+	padding: 0 var(--padding-6);
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-disabled);
 }

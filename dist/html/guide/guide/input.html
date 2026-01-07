@@ -49,6 +49,220 @@
 	<body class="guide_body">
 		<div class="guide_h1">Input</div>
 
+		<del></del>
+		<div class="guide_h4">Type - 주민등록번호 뒷자리 한자리만</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">생년월일/성별</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="생년월일 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="id_pass_box">
+						<div class="input_text">
+							<div class="inp">
+								<input type="tel" placeholder="●" minlength="1" maxlength="1" title="성별(주민등록번호 뒷1자리) 입력" />
+							</div>
+						</div>
+						<div class="id_pass">●●●●●●</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 뒷자리 한자리만(read only케이스)</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" value="250303" minlength="6" maxlength="6" readonly title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="id_pass_box read_only">
+						<div class="input_text">
+							<div class="inp">
+								<input type="tel" placeholder="●" value="1" minlength="1" maxlength="1" readonly title="주민등록번호 뒷1자리 입력" />
+							</div>
+						</div>
+						<div class="id_pass">●●●●●●</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 error</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap error birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp1" />
+							<label for="kp1">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br /><br />
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 전</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" value="250303" minlength="6" maxlength="6" readonly title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp2" />
+							<label for="kp2">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 전</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp3" />
+							<label for="kp3">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 중</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp4" />
+							<label for="kp4">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호 - 입력 불가</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" readonly />
+						<span>
+							<input type="checkbox" name="" id="kp2" disabled />
+							<label for="kp2">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호 뒤 7자리 입력" placeholder="뒤 7자리" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp7" />
+							<label for="kp7">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="guide_h4">Type - 주민등록번호 - 보안키패드 호출 시 - 주민등록번호/외국인등록번호</div>
+		<div class="form_group_wrap">
+			<div class="form_line">
+				<div class="label_tit">주민등록번호/외국인등록번호</div>
+				<div class="comp_wrap birth">
+					<div class="input_text">
+						<div class="inp">
+							<input type="tel" placeholder="앞 6자리" minlength="6" maxlength="6" title="주민등록번호(외국인등록번호) 앞자리 입력" />
+							<button type="button" class="del"><span class="blind">텍스트 삭제</span></button>
+						</div>
+					</div>
+					<span class="dash">-</span>
+					<div class="comp_wrap_keypad_call form_key_pc">
+						<input type="password" name="" id="" title="주민등록번호(외국인등록번호) 뒷자리 입력" placeholder="뒤 7자리" maxlength="7" />
+						<span>
+							<input type="checkbox" name="" id="kp8" />
+							<label for="kp8">마우스입력기사용</label>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br /><br />
+
+		<del></del>
+
 		<div class="guide_h4">전화번호 입력 예시 - <span style="color: red; font-weight: bold">개선버젼</span></div>
 		<div class="input_text phone phone_full">
 			<div class="inp">
@@ -944,11 +1158,12 @@
 			<div class="row">
 				<div class="form_line fix_w_case01">
 					<div class="label_tit">장착연도</div>
-					<div class="select_item select_item_case01" role="button" tabindex="0" title="장착연도 선택" onclick="openHDPopup(this,'select_option_ty1');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'select_option_ty1');">
-						<div class="select_item_inner">
-							<div class="si_item" data-placeholder="선택"></div>
-							<span class="si_stat">선택됨</span>
-						</div>
+					<div class="select_option_box">
+						<select name="" id="" title="장착연도 선택" class="selectbox" required>
+							<option value="" hidden disabled>선택</option>
+							<option value="" selected>장착연도</option>
+							<option value="">장착연도</option>
+						</select>
 					</div>
 				</div>
 				<div class="form_line grow">
@@ -983,11 +1198,12 @@
 			</div>
 			<div class="form_line">
 				<div class="label_tit">자금출처</div>
-				<div class="select_item select_item_case01" role="button" tabindex="0" title="자금출처 선택" onclick="openHDPopup(this,'pop_type01');" onkeyup="if(event.key === 'Enter') openHDPopup(this,'pop_type01');">
-					<div class="select_item_inner">
-						<div class="si_item" data-placeholder="자금출처 선택"></div>
-						<span class="si_stat">선택됨</span>
-					</div>
+				<div class="select_option_box">
+					<select name="" id="" title="자금출처 선택" class="selectbox" required>
+						<option value="" hidden disabled>선택</option>
+						<option value="" selected>자금출처</option>
+						<option value="">자금출처</option>
+					</select>
 				</div>
 				<div class="input_text">
 					<div class="inp">
