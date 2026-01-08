@@ -1156,6 +1156,7 @@
 	> .list {
 		display: flex;
 		flex-direction: row;
+		// flex-flow: row wrap;
 		justify-content: space-between;
 		gap: var(--gap-3);
 
@@ -1231,6 +1232,15 @@
 				color: var(--color-text-primary);
 			}
 		}
+
+		&.list_sub_dom {
+			padding-top: 17px;
+			border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+		}
+  
+
+
+
 	}
 	.table_wrap {
 		&.type_mini{
