@@ -23,6 +23,9 @@
 
 		.list_ty2 {
 			margin-top: var(--gap-4);
+			> li {
+				color: var(--color-text-basic);
+			}
 		}
 		.btn_area {
 			margin-top: var(--gap-8);

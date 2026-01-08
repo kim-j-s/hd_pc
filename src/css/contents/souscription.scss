@@ -761,7 +761,7 @@ ul + .form_group_wrap {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		gap: var(--gap-8) var(--gap-8);
+		gap: var(--gap-5) var(--gap-8);
 
 		> * {
 			flex: 0 1 calc(50% - 16px);
