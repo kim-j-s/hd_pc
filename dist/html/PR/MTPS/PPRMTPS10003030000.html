@@ -70,15 +70,29 @@
 							<!-- e: popup_content_top -->
 							<p class="title_sub2">할인특약 가입을 위한 개인정보 동의를 진행해주세요.</p>
 
-							<div class="ag_groups">
+							<!-- s: 26-01-12 수정 -->
+							<div class="ag_groups ag_groups_move">
+								<!-- e: 26-01-12 수정 -->
+								<!-- s: 26-01-12 수정 -->
+								<!-- 수정
 								<div class="ag_groups_top">
 									<div class="inp_checkbox">
-										<input type="checkbox" id="chk_groupt01" class="ag_total" />
+										<input type="checkbox"
+											id="chk_groupt01"
+											class="ag_total"
+											
+											
+											
+											
+											
+										>
 										<label for="chk_groupt01" class="chk_label chk_label_ty2">
 											<span class="label_cont">아래 항목 모두 동의합니다.</span>
 										</label>
-									</div>
-								</div>
+										
+									</div>			</div>
+								-->
+								<!-- e: 26-01-12 수정 -->
 								<div class="ag_group_wrap">
 									<div class="ag_group_top">
 										<!-- s: 25-08-08 -->
@@ -229,7 +243,7 @@
 										<div class="inp_checkbox">
 											<input type="checkbox" id="chk_group02" class="agw_all" />
 											<label for="chk_group02" class="chk_label chk_label_ty2">
-												<span class="label_cont"><span class="second">[선택]</span> 르노코리아 데이터활용을 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
+												<span class="label_cont"><span class="second">[선택]</span>222222 르노코리아 데이터활용을 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
 											</label>
 										</div>
 										<!-- e: 25-10-16 수정 -->
@@ -539,8 +553,8 @@
 										<!-- s: 25-08-08 -->
 										<!-- s: 25-10-16 수정 -->
 										<div class="inp_checkbox">
-											<input type="checkbox" id="chk_group04" class="agw_all" />
-											<label for="chk_group04" class="chk_label chk_label_ty2">
+											<input type="checkbox" id="chk_group05" class="agw_all" />
+											<label for="chk_group05" class="chk_label chk_label_ty2">
 												<span class="label_cont"><span class="second">[선택]</span> 커넥티드 블랙박스 정보 활용을 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
 											</label>
 										</div>
@@ -646,8 +660,8 @@
 										<!-- s: 25-08-08 -->
 										<!-- s: 25-10-16 수정 -->
 										<div class="inp_checkbox">
-											<input type="checkbox" id="chk_group04" class="agw_all" />
-											<label for="chk_group04" class="chk_label chk_label_ty2">
+											<input type="checkbox" id="chk_group06" class="agw_all" />
+											<label for="chk_group06" class="chk_label chk_label_ty2">
 												<span class="label_cont"><span class="second">[선택]</span> 안전운전할인특약(네이버) 가입 확인을 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
 											</label>
 										</div>
@@ -749,8 +763,8 @@
 										<!-- s: 25-08-08 -->
 										<!-- s: 25-10-16 수정 -->
 										<div class="inp_checkbox">
-											<input type="checkbox" id="chk_group04" class="agw_all" />
-											<label for="chk_group04" class="chk_label chk_label_ty2">
+											<input type="checkbox" id="chk_group07" class="agw_all" />
+											<label for="chk_group07" class="chk_label chk_label_ty2">
 												<span class="label_cont"><span class="second">[선택]</span> 하이워크(걸음수) 할인특약 처리를 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
 											</label>
 										</div>
@@ -881,8 +895,8 @@
 									<div class="ag_group_top">
 										<!-- s: 25-10-16 수정 -->
 										<div class="inp_checkbox">
-											<input type="checkbox" id="chk_group05" class="agw_all" />
-											<label for="chk_group05" class="chk_label chk_label_ty2">
+											<input type="checkbox" id="chk_group08" class="agw_all" />
+											<label for="chk_group08" class="chk_label chk_label_ty2">
 												<span class="label_cont"><span class="second">[선택]</span> 대중교통할인특약 가입 확인을 위한 개인(신용)정보 처리 <span class="elaborate">상세</span> 동의</span>
 											</label>
 										</div>
@@ -1034,5 +1048,16 @@
 			</div>
 		</div>
 		<!-- e: Full 팝업 -->
+
+		<script>
+			$(window).load(function () {
+				// 팝업 높이 자동조절
+				$(".ag_groups .ag_group_wrap").each(function (i) {
+					// const offset = $(this).offset().top;
+					const offset = $(this).position().top;
+					console.log(i, " : :", offset);
+				});
+			});
+		</script>
 	</body>
 </html>

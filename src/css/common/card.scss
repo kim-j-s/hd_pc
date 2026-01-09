@@ -284,6 +284,9 @@
 				& + .tit_item {
 					margin-top: var(--gap-4);
 				}
+				&[style*="display: none"] + .tit_item {
+					margin-top: 0;
+				}
 			}
 
 			// 보안프로그램 설치안내 에서 사용됨

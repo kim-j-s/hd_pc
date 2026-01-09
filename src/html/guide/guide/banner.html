@@ -134,6 +134,8 @@
 
 			const controlEl = wrap.querySelector('.bullet_add_pager');
 			const paginationEl = wrap.querySelector('.swiper-pagination');
+			const paginationLeft = wrap.querySelector('.swiper_button_left');
+			const paginationRight = wrap.querySelector('.swiper_button_right');
 
 			// 슬라이드 1개 이하
 			if (slideCount <= 1) {
@@ -150,6 +152,11 @@
 				autoplay: {
 					delay: 3000,
 					disableOnInteraction: false,
+				},
+
+				navigation: {
+					nextEl: paginationRight,
+					prevEl: paginationLeft,
 				},
 
 				a11y: {
@@ -193,8 +200,8 @@
 			slidesPerView: 1,
 			updateOnWindowResize:true,
 			navigation: {
-				nextEl: ".swiper_button_right",
-				prevEl: ".swiper_button_left",
+				nextEl: ".banner_slide_wrap .swiper_button_right",
+				prevEl: ".banner_slide_wrap .swiper_button_left",
 			},
 			a11y: {
 				enabled: true,

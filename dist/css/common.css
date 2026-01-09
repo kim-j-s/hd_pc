@@ -7861,6 +7861,9 @@ sup {
 .card_item_wrap .card_item .item_inner .notice_item + .tit_item {
 	margin-top: var(--gap-4);
 }
+.card_item_wrap .card_item .item_inner .notice_item[style*="display: none"] + .tit_item {
+	margin-top: 0;
+}
 .card_item_wrap .card_item .item_inner .desc_ty2 {
 	margin-top: var(--gap-4);
 	font-size: var(--font-size-body-medium);
