@@ -195,12 +195,12 @@
 				<div class="form_group_wrap">
 					<!-- s: 25-07-02 수정 -->
 					<div class="form_line full_half">
-						<!-- s: 25-07-03 수정 -->
+						
 						<div class="label_tit">
 							자녀가 피보험자로 가입하는 보험에 대해 공동 친권자의 동의를 받으셨나요?
 						</div>
 						{{> cp/checkbox id="checkbox1" labelname="이혼이나 사별 등으로 공동 친권자가 없음" }}
-						<!-- e: 25-07-03 수정 -->
+						
 						<div class="radio_group_wrap" role="radiogroup">
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype01_01" name="checktype01" labelname="예" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="checktype01_02" name="checktype01" labelname="아니요" }}
@@ -241,7 +241,7 @@
 </div>
 
 <!-- s: popup area -->
-<!-- s: 25-07-03 추가 -->
+
 <!-- s: 공동친권자 동의 안내 팝업 -->
 {{#> popup/popup_bottom popup-id="pop_type01" popup-title="공동친권자 동의" popup-active="true" }}
 	<div class="popup_cont">
@@ -263,7 +263,7 @@
 	</div>
 {{/ popup/popup_bottom}}
 <!-- e: 공동친권자 동의 안내 팝업 -->
-<!-- e: 25-07-03 추가 -->
+
 
 <!-- e: popup area -->
 {{/ layout/default }}

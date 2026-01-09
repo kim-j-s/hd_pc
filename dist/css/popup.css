@@ -101,7 +101,6 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 	font-size: inherit;
 }
 .popup_wrap .popup_container .popup_inner .popup_cont {
-	overflow-y: auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -114,6 +113,7 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 	flex: 1;
 	padding: var(--padding-6) var(--padding-8) var(--padding-5);
 	font-size: var(--font-size-body-small);
+	overflow-y: auto;
 }
 .popup_wrap .popup_container .popup_inner .popup_cont.search_list_type2 {
 	padding-top: 0;

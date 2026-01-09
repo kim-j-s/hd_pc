@@ -682,6 +682,10 @@
 		}, 300);
 	});
 
+	
+
+
+	// 선택 약관 스크롤 이벤트
 	$DOM.on('click', '.ag_group_top .chk_label', function() {
 		const $this = $(this);
 		const agmDom = $this.closest('.ag_groups_move');
@@ -694,30 +698,16 @@
 			const thisChecked = $(this).closest('.inp_checkbox').find('input').is(':checked');
 			if(thisChecked) {
 				const scT = $this.closest('.popup_cont').scrollTop();				
-				const targetOffset = agmDom.find('.ag_group_wrap').eq(idx + 1).offset().top;
+				const targetOffset = agmDom.find('.ag_group_wrap').eq(idx + 1).position().top;
 				const domHeaderHeight = agmDom.closest('.popup_wrap').find('.popup_head').outerHeight();
-				const pinPoint = Math.abs(Math.abs(agmDom.offset().top - domHeaderHeight) - scT);
-
-				// console.log('agmDom.offset().top : ', agmDom.offset().top);
+				const pinPoint = Math.abs(Math.abs(agmDom.position().top - domHeaderHeight) - scT);
 
 				$(this).closest('.popup_cont').animate({ 
-					scrollTop: (targetOffset - agmDom.offset().top) + pinPoint
+					scrollTop: (targetOffset - agmDom.position().top) + pinPoint
 				}, 300);
 			}
 		}, 50);
 	});
-
-		// 744
-
-		// $('.popup_cont').scrollTop(700);
-
-		// 123 64 16 36 24 36
-		// 112
-		// 80
-
-		// 56+36 621
-
-
 
 	// 즉시 실행 함수
 

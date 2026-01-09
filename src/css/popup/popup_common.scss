@@ -114,9 +114,7 @@ body:has(.header_pc.header_pc_error) {
 			}
 
 			.popup_head {
-				// min-height: 52px;
 				min-height: 64px;
-				// padding: var(--padding-6) var(--padding-8);
 				padding: var(--padding-7) var(--padding-7) var(--padding-6) var(--padding-8);
 				font-size: var(--font-size-heading-small);
 				line-height: 150%;
@@ -130,13 +128,13 @@ body:has(.header_pc.header_pc_error) {
 			}
 
 			.popup_cont {
-				overflow-y: auto;
 				display: flex;
 				flex-direction: column;
 				flex: 1;
 				padding: var(--padding-6) var(--padding-8) var(--padding-5);
 				font-size: var(--font-size-body-small);
-				// transition: all .3s ease;
+				overflow-y: auto;
+
 
 				// 직업검색
 				&.search_list_type2 {
@@ -157,13 +155,6 @@ body:has(.header_pc.header_pc_error) {
 						}
 					}
 				}
-
-				// .tab_wrap {
-				// 	.tab_wrap_list_ty1.sticky_fix,
-				// 	.tab_scroll_box_ty1.sticky_fix {
-				// 		top: -16px;
-				// 	}
-				// }
 				// 변경할 가입조건 선택 팝업
 				p.bpop_sub_title {
 					font-size: var(--font-size-body-medium);
@@ -197,13 +188,9 @@ body:has(.header_pc.header_pc_error) {
 						& + .bottom_fix_notice {
 							margin-top: 0;
 						}
-						// & + .zoom_wrap {
-						// 	margin-top: var(--gap-3);
-						// }
 
 						& + .bg_area {
 							&.sticky_fix {
-								// top: -32px;
 								top: -16px;
 							}
 
@@ -400,8 +387,6 @@ body:has(.header_pc.header_pc_error) {
 					}
 				
 					.hd_btn {
-						// flex: 1 0 auto;
-						// min-width: calc(50% - 5px);
 						flex: 0 0 auto;
 						min-width: 160px;
 
@@ -431,10 +416,6 @@ body:has(.header_pc.header_pc_error) {
 
 			> .popup_close {
 				position: absolute;
-				// top: 14px;
-				// right: 24px;
-				// width: 24px;
-				// height: 24px;
 				top: 18px;
 				right: 20px;
 				width: 32px;
@@ -504,22 +485,7 @@ body:has(.header_pc.header_pc_error) {
 			}
 		}
 	}
-
-
-	
-
-
-
 }
-
-
-
-
-
-
-
-
-
 
 /* 달력 팝업의 경우 팝업에서 호출되는 경우 가운데 정렬 */
 .popup_wrap {
@@ -537,10 +503,7 @@ body:has(.header_pc.header_pc_error) {
 
 	&.active {
 		.baad_c_cont {
-			// position: absolute;
 			background: var(--color-surface-white-subtler);
-			// box-shadow: 0 0 2px 0 var(--color-alpha-shadow2, rgba(0, 0, 0, 0.08)), 0 var(--shadow-y-4, 16px) var(--shadow-blur-4, 24px) 0 var(--color-alpha-shadow3, rgba(0, 0, 0, 0.12));
-			// border-radius: var(--radius-large2);
 		}
 	}
 }
@@ -611,8 +574,5 @@ body:has(.header_pc.header_pc_error) {
 		border-radius: 0 0 var(--radius-large2) var(--radius-large2);
 		background: var(--color-surface-white-subtle);
 	}
-
-	// &:not(:has(.in_bottom)){
-	// }
 }
 /* bottom popup 스타일 아코디언 */
