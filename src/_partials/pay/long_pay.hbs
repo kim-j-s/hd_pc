@@ -8,9 +8,9 @@
 			</div>
 			<!-- e: 카드사(현대카드) 선택 시 -->
 			<!-- s: 이체 선택 시 -->		
-			<!-- s: 25-08-21 UXW -->	
+				
 			{{> cp/checkbox checkbox_class="rd_box" id="checkbox04-9" label_class="chk_label_ty3" labelname="1회차 보험료 결제 계좌와 같아요" }}
-			<!-- e: 25-08-21 UXW -->		
+					
 			<!-- e: 이체 선택 시 -->	
 			<!-- s: 카드사(현대카드) 선택 외 -->		
 			<div class="form_group_wrap">
@@ -20,13 +20,13 @@
 				</div>
 				<div class="form_line">
 					<div class="label_tit">계좌번호</div>
-					<!-- s: 25-08-21 UXW -->
+					
 					{{> cp/text placeholder="- 없이 입력" inp-title="2회차 이후 결제 계좌번호 입력" }}
-					<!-- e: 25-08-21 UXW -->
+					
 				</div>
 				<div class="form_line">
 					<div class="label_tit">매월 자동이체일</div>
-					<!-- s: 25-08-21 UXW -->
+					
 					{{#> cp/selectbox_pc s-title="매월 자동이체일 선택" sb-ph="매월 자동이체일 선택" }}
 						<option value="">1일</option>
 						<option value="">5일</option>
@@ -35,7 +35,7 @@
 						<option value="">20일</option>
 						<option value="">25일</option>
 					{{/ cp/selectbox_pc}}
-					<!-- e: 25-08-21 UXW -->
+					
 				</div>
 			</div>
 			<!-- e: 카드사(현대카드) 선택 외 -->
@@ -53,11 +53,11 @@
 			</div>
 			
 			<div class="checkbox_group_wrap">
-				<!-- s: 25-08-21 수정 -->
-				<!-- s: 25-09-02 수정 -->
+				
+				
 				{{> cp/checkbox labelname="<strong class='point'>[필수]</strong> 자동이체 약관 동의" ag_more=true id="agree02" label_class="chk_label_ty3" checkbox_class="rd_box" pop_open=true pop_id="pop_type06" }}
-				<!-- e: 25-09-02 수정 -->
-				<!-- e: 25-08-21 수정 -->
+				
+				
 			</div> 
 			{{#unless no_end_bank}}
 			<!-- s: 25-10-23 수정 -->
@@ -67,11 +67,11 @@
 			-->
 			<!-- e: 25-10-23 수정 -->
 			<div class="checkbox_group_wrap">
-				<!-- s: 25-08-21 수정 -->
-				<!-- s: 25-09-02 수정 -->
+				
+				
 				{{> cp/checkbox labelname="<strong class='point'>[필수]</strong> 만기환급금 입금 계좌 동의" ag_more=true id="agree01" label_class="chk_label_ty3" checkbox_class="rd_box" pop_open=true pop_id="pop_type05" }}
-				<!-- e: 25-09-02 수정 -->
-				<!-- e: 25-08-21 수정 -->
+				
+				
 			</div>
 			{{/unless}}
 			

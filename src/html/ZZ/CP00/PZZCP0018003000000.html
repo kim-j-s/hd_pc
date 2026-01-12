@@ -13,9 +13,9 @@
 				</strong>
 			</h2>
 			<div class="btn_area basic">
-				<!-- s: 25-09-02 수정 -->
+				
 				{{> cp/linkButton bl_class="short_cut" bl_text="다른 인증방법 선택" pop_id="pop_type02" }}
-				<!-- e: 25-09-02 수정 -->
+				
 			</div>
 		</div>
 		<!-- e: popup_content_top -->
@@ -30,9 +30,9 @@
 			<div class="form_line">
 				<div class="label_tit">생년월일/성별</div>
 				<div class="comp_wrap birth">
-					<!-- s: 25-08-22 UXW -->
+					
 					{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="생년월일 입력" }}
-					<!-- e: 25-08-22 UXW -->
+					
 					<span class="dash">-</span>
 					<div class="id_pass_box">
 						{{> cp/text type="tel" minlength="1" maxlength="1" placeholder="●" inp-title="성별(주민등록번호 뒷1자리) 입력" no_del="flase" }}
@@ -48,11 +48,11 @@
 			<div class="form_line">
 				<div class="label_tit">주민등록번호</div>
 				<div class="comp_wrap birth">
-					<!-- s: 25-08-22 UXW -->
+					
 					{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
 					<span class="dash">-</span>
 					{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1" }}
-					<!-- e: 25-08-22 UXW -->
+					
 				</div>
 			</div>
 
@@ -71,9 +71,9 @@
 
 			<div class="form_line">
 				<div class="label_tit">휴대폰번호</div>
-				<!-- s: 25-08-22 UXW -->
+				
 				{{> cp/text class="phone phone_full" type="tel" placeholder="- 없이 입력" maxlength="8" inp-title="휴대폰번호 입력" }}
-				<!-- e: 25-08-22 UXW -->
+				
 			</div>
 
 		</div>

@@ -2180,7 +2180,6 @@
 						</div>
 						<!-- e: intro_info -->
 
-						<!-- s: 25-09-15 수정 -->
 						<!-- s: qr코드 영역 -->
 						<div class="info_gray bg_primary space_between">
 							<div>
@@ -2206,7 +2205,6 @@
 							</a>
 						</div> -->
 						<!-- e: btn area -->
-						<!-- e: 25-09-15 수정 -->
 					</div>
 
 					<!-- s: event banner -->
@@ -2553,9 +2551,7 @@
 						<p class="tit">무배당 현대해상다이렉트 굿앤굿어린이종합보험Q(0~15세)</p>
 					</div>
 					<div class="btn_area">
-						<!-- s: 25-09-15 수정 -->
 						<a href="#" class="hd_btn hd_btn_ty_1 hd_btn_s_2" onclick="openHDPopup('','pop_type01');">
-							<!-- e: 25-09-15 수정 -->
 							<span class="text">보험료 확인하기</span>
 						</a>
 					</div>
@@ -2693,7 +2689,7 @@
 		</div>
 
 		<!-- s: popup area -->
-		<!-- s: 25-09-15 수정 -->
+
 		<div class="popup_wrap popup_wrap_type4" id="pop_type01" role="dialog" aria-hidden="true">
 			<div class="popup_container">
 				<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type01');"></div>
@@ -2730,21 +2726,16 @@
 							</button>
 						</div>
 					</div>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('pop_type01');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
 		</div>
-		<!-- e: 25-09-15 수정 -->
 		<!-- e: popup area -->
 
 		<script>
 			$(function () {
 				toggleView();
-				/* s: 25-09-18 수정 */
-				// prdFixed();
-				/* e: 25-09-18 수정 */
 			});
 
 			function toggleView() {
@@ -2759,26 +2750,6 @@
 					}
 				});
 			}
-
-			/* s: 25-09-18 수정 */
-			/* common js로 이동
-			function prdFixed() {
-				let lastScrollTop = 0;
-				$(window).on("scroll", function () {
-					const st = $(this).scrollTop();
-					const scrollHeight = $(document).height();
-					const windowHeight = $(this).height();
-					const scrollBottom = scrollHeight - windowHeight - st;
-					if (st >= 500) {
-						$('.prd_link_area').show();
-					}else {
-						$('.prd_link_area').hide();
-					}
-					lastScrollTop = st <= 0 ? 0 : st;
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
 		</script>
 
 		<!-- gnb 호출 qr 팝업 -->
@@ -2814,8 +2785,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare', '#open_qr_timeshare');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2854,8 +2824,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle', '#open_qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2894,8 +2863,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal', '#open_qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2934,8 +2902,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus', '#open_qr_fetus');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2974,8 +2941,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child', '#open_qr_child');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -3014,8 +2980,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving', '#open_qr_saving');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>

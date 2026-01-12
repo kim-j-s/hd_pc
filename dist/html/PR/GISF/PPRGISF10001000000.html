@@ -2108,13 +2108,12 @@
 				<!-- s: content_top -->
 				<div class="title_view_wrap flex_column">
 					<div class="in_sec">
-						<!-- s: 25-09-02 수정 -->
 						<span class="badge_wrap">
 							<span class="hd_badge outline solid_pastel c_primary size_m">카드할인</span>
 							<span class="hd_badge outline solid_pastel c_warning size_m">무이자할부</span>
 							<span class="hd_badge outline solid_pastel c_secondary size_m">포인트사용</span>
 						</span>
-						<!-- e: 25-09-02 수정 -->
+
 						<div class="page_title">
 							<div class="p_info">실손·비례보상 주택 풍수해·지진재해보험(III)</div>
 							<h2 class="p_title">자연재해로부터 <strong>우리집을 안전하게!</strong></h2>
@@ -2416,11 +2415,10 @@
 						<div class="popup_content">
 							<div class="table_wrap">
 								<table class="table prd">
-									<!-- s: 25-09-03 수정 -->
 									<caption>
 										구분에 따른 기준 제공
 									</caption>
-									<!-- e: 25-09-03 수정 -->
+
 									<colgroup>
 										<col style="width: 20%" />
 										<col style="width: 16%" />
@@ -2492,8 +2490,7 @@
 							</ul>
 						</div>
 					</div>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('ex_popup_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2505,10 +2502,6 @@
 		<script>
 			$(function () {
 				toggleView();
-				/* s: 25-09-18 수정 */
-				// prdFixed();
-				// anchorMove();
-				/* e: 25-09-18 수정 */
 			});
 
 			function toggleView() {
@@ -2523,49 +2516,6 @@
 					}
 				});
 			}
-
-			/* s: 25-09-18 수정 */
-			/* common js로 이동
-			function prdFixed() {
-				let lastScrollTop = 0;
-				$(window).on("scroll", function () {
-					const st = $(this).scrollTop();
-					const scrollHeight = $(document).height();
-					const windowHeight = $(this).height();
-					const scrollBottom = scrollHeight - windowHeight - st;
-					if (st >= 500) {
-						$('.prd_link_area').show();
-					}else {
-						$('.prd_link_area').hide();
-					}
-					lastScrollTop = st <= 0 ? 0 : st;
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
-
-			/* s: 25-09-18 수정 */
-			/*
-			function anchorMove() {
-				$(".anchor_btn").on("click", function (e) {
-					e.preventDefault();
-					const targetId = $(this).attr("href");
-					const target = $(targetId);
-		
-					if (target.length) {
-						const targetOffset = target.offset().top - 100;
-		
-						$("html, body").stop().animate(
-							{
-								scrollTop: targetOffset
-							},
-							500
-						);
-					}
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
 		</script>
 
 		<!-- gnb 호출 qr 팝업 -->
@@ -2601,8 +2551,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare', '#open_qr_timeshare');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2641,8 +2590,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle', '#open_qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2681,8 +2629,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal', '#open_qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2721,8 +2668,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus', '#open_qr_fetus');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2761,8 +2707,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child', '#open_qr_child');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2801,8 +2746,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving', '#open_qr_saving');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>

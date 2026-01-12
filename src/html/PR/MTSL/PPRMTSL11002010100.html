@@ -7,11 +7,11 @@
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
-					<!-- s: 25-09-05 수정 -->
+					
 					<h2 class="p_title">
 						보험료를 계산 방법을 선택해주세요
 					</h2>
-					<!-- e: 25-09-05 수정 -->
+					
 				</div>
 			</div>
 					
@@ -19,9 +19,9 @@
 				<div class="tab_wrap_list_ty1" role="tablist">
 					{{>cp/tab_btn tb-text="보유중인 자동차보험 갱신 <span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-id="ex01"}}
 					{{>cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-id="ex02" tb-active=true}}
-					<!-- s: 25-09-05 수정 -->
+					
 					{{>cp/tab_btn tb-text="최근 보험료 계산내역<span class='hd_badge solid_pastel c_primary size_m'>2</span>" tb-id="ex03"}}
-					<!-- e: 25-09-05 수정 -->
+					
 				</div>
 				<div class="tab_wrap_content" role="tabpanel" aria-labelledby="tab01" id="tabPanelex01">
 					tab inner 1
@@ -30,9 +30,9 @@
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<!-- s: 25-09-05 수정 -->
+								
 								<strong>차량번호</strong> 또는 <strong>차대번호</strong>를 입력해주세요
-								<!-- e: 25-09-05 수정 -->
+								
 							</div>
 						</div>
 						<div class="btn_area">
@@ -41,17 +41,17 @@
 					</div>
 					<div class="form_group_wrap full">
 						<div class="form_line">
-							<!-- s: 25-09-05 수정 -->
+							
 							<div class="label_tit">차량번호 7~9자리, 차대번호 17자리</div>
-							<!-- e: 25-09-05 수정 -->
+							
 							<div class="car_input_box">
 								<!-- 에러 메시지 시, error 클래스 추가 -->
 								<!-- s: 25-11-05 수정 -->
 								{{> cp/text class="car_number_input error" placeholder="123가**67" minlength="7" maxlength="17" inp-title="차량번호 또는 차대번호 입력(차량번호 7~9자리, 차대번호 17자리)"}}
 								<!-- e: 25-11-05 수정 -->
-								<!-- s: 25-09-05 수정 -->
+								
 								<p class="msg_error">차량번호, 또는 차대번호를 입력해 주세요.</p>
-								<!-- e: 25-09-05 수정 -->
+								
 							</div>
 						</div>
 					</div>
@@ -59,12 +59,12 @@
 					<div class="checkbox_group_wrap column space2">
 						
 						<div class="inp_checkbox">
-							<!-- s: 25-08-22 수정 -->
+							
 							<input type="checkbox" id="checkbox01">
 							<label for="checkbox01" class="chk_label chk_label_ty3">
 								<span class="sr-only">자동차를 구매할 예정이세요? 차량번호, 차대번호를 모르는 경우</span>
 							</label>
-							<!-- e: 25-08-22 수정 -->
+							
 							<div class="label_area">
 								<span class="label_cont">
 									자동차를 구매할 예정이세요?
@@ -89,9 +89,9 @@
 							{{> cp/button type="3" size="1" b-text="이전"}}
 							<!-- {{> cp/button type="1" size="1" b-text="다음" disabled=true }} -->
 							
-							<!-- s: 25-09-05 수정 -->
+							
 							{{> cp/button type="1" size="1" b-text="차량 정보를 입력 중이에요" disabled=true }}
-							<!-- e: 25-09-05 수정 -->
+							
 							<!-- {{> cp/button type="1" size="1" b-text="보험료 계산하기" }} -->
 							
 						</div>

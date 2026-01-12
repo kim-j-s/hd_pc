@@ -58,9 +58,9 @@
 						<div class="label_tit">연간매출액</div>
 						{{> cp/text class="price" placeholder="숫자만 입력" r-text="원" inp-title="연간매출액 입력"}}
 						<ul class="list_ty2">
-							<!-- s: 25-09-10 수정 -->
+							
 							<li>직전연도 대표업종 및 부수업종 매출액 합계</li>
-							<!-- e: 25-09-10 수정 -->
+							
 						</ul>
 					</div>
 					<div class="form_line">
@@ -71,9 +71,9 @@
 					<div class="form_line full">
 						<div class="label_tit">주소</div>
 						<!-- CASE1. 주소 입력 전 -->
-						<!-- s: 25-08-19 UXW -->
+						
 						{{> cp/address ad_ph="주소 검색" case1=true}}
-						<!-- e: 25-08-19 UXW -->
+						
 						<!-- CASE2. 주소 입력 후 -->
 						{{> cp/address ad_ph="주소 검색" case2=true }}
 					</div>
@@ -85,9 +85,9 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					<!-- s: 25-08-19 UXW -->
+					
 					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
-					<!-- e: 25-08-19 UXW -->
+					
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>

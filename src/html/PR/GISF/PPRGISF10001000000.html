@@ -6,13 +6,13 @@
 		<!-- s: content_top -->
 		<div class="title_view_wrap flex_column">
 			<div class="in_sec">
-				<!-- s: 25-09-02 수정 -->
+				
 				<span class="badge_wrap">
 					<span class="hd_badge outline solid_pastel c_primary size_m">카드할인</span>
 					<span class="hd_badge outline solid_pastel c_warning size_m">무이자할부</span>
 					<span class="hd_badge outline solid_pastel c_secondary size_m">포인트사용</span>
 				</span>
-				<!-- e: 25-09-02 수정 -->
+				
 				<div class="page_title">
 					<div class="p_info">실손·비례보상 주택 풍수해·지진재해보험(III)</div>
 					<h2 class="p_title">
@@ -179,9 +179,9 @@
 	<div class="popup_content">
 		<div class="table_wrap">
 			<table class="table prd">
-				<!-- s: 25-09-03 수정 -->
+				
 				<caption>구분에 따른 기준 제공</caption>
-				<!-- e: 25-09-03 수정 -->
+				
 				<colgroup>
 					<col style="width:20%;">
 					<col style="width:16%;">
@@ -261,10 +261,6 @@
 <script>
 $(function(){
 	toggleView();
-	/* s: 25-09-18 수정 */
-	// prdFixed();
-	// anchorMove();
-	/* e: 25-09-18 수정 */
 });
 
 function toggleView() {
@@ -280,48 +276,6 @@ function toggleView() {
   });
 }
 
-/* s: 25-09-18 수정 */
-	/* common js로 이동
-	function prdFixed() {
-		let lastScrollTop = 0;
-		$(window).on("scroll", function () {
-			const st = $(this).scrollTop();
-			const scrollHeight = $(document).height();
-			const windowHeight = $(this).height();
-			const scrollBottom = scrollHeight - windowHeight - st;
-			if (st >= 500) {
-				$('.prd_link_area').show();
-			}else {
-				$('.prd_link_area').hide();
-			}
-			lastScrollTop = st <= 0 ? 0 : st;
-		});
-	}
-	*/
-	/* e: 25-09-18 수정 */
-
-	/* s: 25-09-18 수정 */
-	/*
-	function anchorMove() {
-		$(".anchor_btn").on("click", function (e) {
-			e.preventDefault();
-			const targetId = $(this).attr("href");
-			const target = $(targetId);
-
-			if (target.length) {
-				const targetOffset = target.offset().top - 100;
-
-				$("html, body").stop().animate(
-					{
-						scrollTop: targetOffset
-					},
-					500
-				);
-			}
-		});
-	}
-	*/
-	/* e: 25-09-18 수정 */
 </script>
 
 
