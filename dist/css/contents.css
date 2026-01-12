@@ -820,6 +820,9 @@
 .main_prd .main_prd_cont .mpc_item.mpc_item_ty2.mit2_ic20 {
 	background-image: url(../images/content/main/icon_mit2_ic20.png);
 }
+.main_prd .main_prd_cont .mpc_item.mpc_item_ty2.mit2_ic21 {
+	background-image: url(../images/content/main/icon_mit2_ic21.png);
+}
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -863,6 +866,7 @@
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title .badge_wrap .hd_badge {
 	font-weight: 400;
+	height: 24px;
 }
 .main_prd .main_prd_cont .mpc_item .mpc_item_cont .mpc_title .badge_wrap + .title {
 	margin-top: var(--gap-4);
