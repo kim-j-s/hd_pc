@@ -133,7 +133,7 @@
 								</a>
 							</div>	
 						</div>
-						<!-- s: 25-09-26 수정 -->
+						
 						<div class="swiper_control">
 							<div class="c_inner">
 								<button class="swiper_button swiper_button_left main_l"></button>
@@ -146,7 +146,7 @@
 								<!-- e: 25-11-05 수정 -->
 							</div>
 						</div>
-						<!-- e: 25-09-26 수정 -->
+						
 					</div>
 
 					<!-- 로그인 영역 -->
@@ -179,9 +179,9 @@
 								</a>
 							</li>
 							<li>
-								<!-- s: 25-10-01 수정 -->
+								
 								<a href="#" class="item prd_ic3" onclick="openHDPopup(this,'pop_type01');" title="팝업 열림">
-									<!-- e: 25-10-01 수정 -->
+									
 									<span class="text">보험증명서</span>
 								</a>
 							</li>
@@ -427,11 +427,11 @@
 											<div class="mpc_title">
 												<strong class="title">
 													<em class="t_name">굿앤굿어린이종합보험Q(태아)</em>
-													<!-- s: 25-10-01 수정 -->
+													
 													<span class="badge_wrap">
 														<span class="hd_badge outline solid_pastel c_warning size_m">모바일</span>
 													</span>
-													<!-- e: 25-10-01 수정 -->
+													
 												</strong>
 												<span class="text">
 													출생부터 안심되는 우리 아이 첫! 보험<br>
@@ -452,11 +452,11 @@
 											<div class="mpc_title">
 												<strong class="title">
 													<em class="t_name">굿앤굿어린이종합보험Q(0~15세)</em>
-													<!-- s: 25-10-01 수정 -->
+													
 													<span class="badge_wrap">
 														<span class="hd_badge outline solid_pastel c_warning size_m">모바일</span>
 													</span>
-													<!-- e: 25-10-01 수정 -->
+													
 												</strong>
 												<span class="text">우리 아이 성장단계별 맞춤 보장</span>
 											</div>
@@ -758,12 +758,12 @@
 												<strong class="title">
 													<em class="t_name">해외여행보험</em>
 												</strong>
-												<!-- s: 25-09-26 수정 -->
+												
 												<span class="text">
 													자사 오프라인 대비 평균 59% 저렴<br>
 													여럿이 함께 가입하면 10% 할인
 												</span>
-												<!-- e: 25-09-26 수정 -->
+												
 											</div>
 											
 											<div class="fb_c">
@@ -870,9 +870,9 @@
 												<strong class="title">
 													<em class="t_name">저축보험</em>
 													<span class="badge_wrap">
-														<!-- s: 25-09-26 수정 -->
+														
 														<span class="hd_badge outline solid_pastel c_warning size_m">모바일</span>
-														<!-- e: 25-09-26 수정 -->
+														
 													</span>
 												</strong>
 												<span class="text">미래를 위한 든든한 목돈 마련</span>
@@ -1032,9 +1032,9 @@
 								<li>
 									<a href="#" class="item item_ico_ty1">
 										<div class="inner">
-											<!-- s: 25-10-01 수정 -->
+											
 											<strong class="tit tit_ty1">걷기할인</strong>
-											<!-- e: 25-10-01 수정 -->
+											
 											<span class="text">
 												<!-- s: 25-12-30 수정 -->
 												<span class="word">건강도 찾고<br> 보험료 할인까지</span>
@@ -1142,7 +1142,7 @@
 </div>
 
 <!-- s: popup area -->
-<!-- s: 25-10-01 수정 -->
+
 {{#> popup/popup_bottom popup-id="pop_type01" popup-title="보험증명서" }}
 <div class="popup_cont">
     <div class="popup_content">
@@ -1157,7 +1157,7 @@
     </div>
 </div>
 {{/ popup/popup_bottom}}
-<!-- e: 25-10-01 수정 -->
+
 
 <!-- 관리자 등록 배너 -->
 <div class="popup_wrap popup_wrap_type3 bann active" id="pop_admin_bann" role="dialog" aria-modal="true" aria-hidden="false">
@@ -1185,7 +1185,7 @@
 								</div>
 							</div>	
 						</div>
-						<!-- s: 25-09-26 수정 -->
+						
 						<div class="swiper_control">
 							<div class="c_inner">
 								<button class="swiper_button swiper_button_left pop_l"></button>
@@ -1196,7 +1196,7 @@
 								<!-- e: 25-11-05 수정 -->
 							</div>
 						</div>
-						<!-- e: 25-09-26 수정 -->
+						
 					</div>
 				</div>
 			</div>
@@ -1358,7 +1358,6 @@
 			}
 		})
 
-		// s: 25-09-26 수정
 		const $swiperContainer = $('.register_bann .swiper-wrapper');
 		const slideCount = $swiperContainer.find('.swiper-slide').length;
 
@@ -1405,9 +1404,7 @@
 		}else {
 			$('.register_bann').find('.swiper_control').hide();
 		}
-		// s: 25-09-26 수정
 
-		/* s: 25-10-01 수정 */
 		const $swiperContainer2 = $('.mc_bann_wrap .swiper-wrapper');
 		const slideCount2 = $swiperContainer2.find('.swiper-slide').length;
 
@@ -1466,7 +1463,6 @@
 				}
 			});
 		}
-		/* e: 25-10-01 수정 */
 
 		/* 메인 스크롤 이벤트  */
 		$(window).on('scroll', function() {
@@ -1567,12 +1563,10 @@
 			
 			isClick = false;
 
-			/* s: 25-10-10 수정 */
 			if (!$('body').hasClass('sc_up') && !$('.msc_inner').hasClass('active')){
 				$('body').addClass('sc_down');
 				$('.main_sticky_cont').css('height', '98px');
 			}
-			/* e: 25-10-10 수정 */
 
 			if ($target.length) {
         // scrollVal = false;
