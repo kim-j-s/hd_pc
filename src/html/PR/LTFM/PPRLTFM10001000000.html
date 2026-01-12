@@ -6,13 +6,13 @@
 		<!-- s: content_top -->
 		<div class="title_view_wrap flex_column">
 			<div class="in_sec">
-				<!-- s: 25-09-02 수정 -->
+				
 				<span class="badge_wrap">
 					<span class="hd_badge outline solid_pastel c_primary size_m">카드할인</span>
 					<span class="hd_badge outline solid_pastel c_warning size_m">무이자할부</span>
 					<span class="hd_badge outline solid_pastel c_secondary size_m">포인트사용</span>
 				</span>
-				<!-- e: 25-09-02 수정 -->
+				
 				<div class="page_title">
 					<div class="p_info">무배당 현대해상다이렉트 H주택화재상해보험</div>
 					<h2 class="p_title">
@@ -35,11 +35,11 @@
 						</div>
 					</div>
 					<div class="btn_area">
-						<!-- s: 25-09-11 수정 -->
+						
 						<!-- s: 25-11-17 수정 -->
 						{{> cp/linkButton bl_class="short_cut" bl_text="가입후기" href="#anchor_move" }}
 						<!-- e: 25-11-17 수정 -->
-						<!-- e: 25-09-11 수정 -->
+						
 					</div>
 				</div>
 				<!-- e: review -->
@@ -276,9 +276,9 @@
 
 
 			<!-- s: 가입후기 -->
-			<!-- s: 25-09-11 수정 -->
+			
 			<div class="recommend_area smt_ty1" id="anchor_move">
-				<!-- e: 25-09-11 수정 -->
+				
 				<div class="in_sec">
 					<div class="cont_head">
 						<h5 class="title_h5"><strong class="point">가입후기</strong></h5>
@@ -442,12 +442,6 @@
 <script>
 	$(function(){
 		toggleView();
-		/* s: 25-09-18 수정 */
-		// prdFixed();
-		/* e: 25-09-18 수정 */
-		/* s: 25-09-11 수정 */
-		// anchorMove();
-		/* e: 25-09-11 수정 */
 	});
 	
 	function toggleView() {
@@ -463,45 +457,6 @@
 		});
 	}
 	
-	/* s: 25-09-18 수정 */
-	/* common js로 이동
-	function prdFixed() {
-		let lastScrollTop = 0;
-		$(window).on("scroll", function () {
-			const st = $(this).scrollTop();
-			const scrollHeight = $(document).height();
-			const windowHeight = $(this).height();
-			const scrollBottom = scrollHeight - windowHeight - st;
-			if (st >= 500) {
-				$('.prd_link_area').show();
-			}else {
-				$('.prd_link_area').hide();
-			}
-			lastScrollTop = st <= 0 ? 0 : st;
-		});
-	}
-	*/
-	/* e: 25-09-18 수정 */
-	
-		/* s: 25-09-11 수정 */
-		// function anchorMove() {
-		//   $(".anchor_btn").on("click", function () {
-		//     const targetId = $(this).attr("href");
-		//     const target = $(targetId);
-		// 
-		//     if (target.length) {
-		//       const targetOffset = target.offset().top - 100;
-		// 
-		//       $("html, body").stop().animate(
-		// 				{
-		// 					scrollTop: targetOffset
-		//         },
-		//         500
-		//       );
-		//     }		
-		//   });
-		// }
-		/* e: 25-09-11 수정 */
 	</script>
 
 

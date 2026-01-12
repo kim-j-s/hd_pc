@@ -22,17 +22,9 @@
 				<h3 class="title_h3">기본정보</h3>
 				<div class="form_group_wrap">
 					<div class="form_line">
-						<div class="label_tit">이름</div>
-						<!-- s: 25-08-22 UXW -->
-						{{> cp/text placeholder="이름 입력" inp-title="이름 입력" }}
-						<!-- e: 25-08-22 UXW -->
+						<div class="label_tit">이름</div>						
+						{{> cp/text placeholder="이름 입력" inp-title="이름 입력" }}						
 					</div>
-					<!-- s: 25-08-29 삭제 -->
-					<!-- <div class="form_line">
-						<div class="label_tit">몸무게</div>
-						{{> cp/text type="tel" placeholder="숫자만 입력 ㎏" inp-title="몸무게 입력" }}
-					</div> -->
-					<!-- e: 25-08-29 삭제 -->
 					<div class="form_line">
 						<div class="label_tit">생년월일</div>
 						{{> cp/text type="tel" inp-title="생년월일 입력" value="20220123" readonly=true }}
@@ -62,10 +54,10 @@
 						<div class="file_info_box">
 							<h3 class="title_h3">앞모습 전체 사진 등록</h3>
 							<ul class="list_ty2">
-								<!-- s: 25-08-22 UXW -->
+								
 								<li>최근 3개월 이내의 사진을 등록해주세요.</li>
 								<li>10MB 이하의 jpg, jpeg, gif, png 파일만 등록할 수 있습니다.</li>
-								<!-- e: 25-08-22 UXW -->
+								
 							</ul>
 						</div>
 
@@ -134,40 +126,14 @@
 			<div class="divider_ty1"></div>
 			<h3 class="title_h3">할인 조건</h3>
 
-			<!-- s: 25-08-25 전체 수정 -->
-			<!-- <div class="checkbox_group_wrap">
-				{{#> cp/checkbox labelname="동물보호관리시스템에 동물등록을 했어요.(5% 할인)" id="checkbox01-1" label_class="chk_label_ty3" }}
-				<div class="chk_lby2">
-					{{> cp/linkButton bl_class="short_cut" bl_text="동물등록 우대 할인" role_b=true question_tit="동물등록 우대 할인" }} 
-				</div>
-				{{/ cp/checkbox }}
-				
-				{{#> cp/checkbox id="checkbox01-2" label_class="chk_label_ty3" labelname="오늘 기준 3년 전에 입양한 유기동물이에요.(3% 할인)" }}
-				<div class="chk_lby2">
-					{{> cp/linkButton bl_class="short_cut" bl_text="유기동물 우대 할인" role_b=true question_tit="유기동물 우대 할인" }} 
-				</div>
-				{{/ cp/checkbox }}
-			</div>
-
-			<div class="checkbox_group_wrap column">
-				{{#> cp/checkbox checkbox_class="rd_box" id="checkbox01" label_class="chk_label_ty3" labelname="반려동물 정보를 정확히 입력했어요" }}
-				<div class="chk_lby">
-					<ul class="list_ty2">
-						<li>
-							<strong>입력된 반려동물의 정보(품종/생년월일/성별/이름)가 정확한지 확인해주세요.<br>(동물등록증이 있다면 동물등록증에 등록된 정보와 일치하는지 확인해주세요.)</strong>
-						</li>
-						<li>제출한 사진 및 서류가 정확하지 않을 경우 추후 보상에 <strong class="point">불이익</strong>이 있거나, <strong class="point">보험료 추징</strong>이 발생할 수도 있습니다.</li>
-					</ul>
-				</div>
-				{{/ cp/checkbox}}
-			</div> -->
+			
 
 			<div class="form_group_wrap">
 				<div class="form_line">
 					<div class="label_tit box_column">
-						<!-- s: 25-09-11 수정 -->
+						
 						<p>동물보호관리시스템에 동물등록을 했어요.<br>(<strong class="point">5%</strong> 할인)</p>
-						<!-- e: 25-09-11 수정 -->
+						
 						{{> cp/linkButton bl_class="short_cut" bl_text="동물등록 우대 할인" role_b=true question_tit="동물등록 우대 할인" }} 
 					</div>
 					<div class="radio_group_wrap" role="radiogroup">
@@ -177,9 +143,9 @@
 				</div>
 				<div class="form_line">
 					<div class="label_tit box_column">
-						<!-- s: 25-09-11 수정 -->
+						
 						<p>계약일 이전 최근 3년 이내에 입양된 경우에만 할인받을 수 있어요.<br>(<strong class="point">3%</strong> 할인)</p>
-						<!-- e: 25-09-11 수정 -->
+						
 						{{> cp/linkButton bl_class="short_cut" bl_text="유기동물 우대 할인" role_b=true question_tit="유기동물 우대 할인" }} 
 					</div>
 					<div class="radio_group_wrap" role="radiogroup">
@@ -202,15 +168,14 @@
 					</div>
 				</div>
 			</div>
-			<!-- e: 25-08-25 전체 수정 -->
 
 			<!-- s: 하단 버튼 영역 -->
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					<!-- s: 25-08-22 UXW -->
+					
 					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
-					<!-- e: 25-08-22 UXW -->
+					
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>

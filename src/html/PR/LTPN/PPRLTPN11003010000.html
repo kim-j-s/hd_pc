@@ -1,8 +1,8 @@
 {{#> layout/default page-title="보험료 확인 | 상품"}}
 
-<!-- s: 25-08-25 UXW -->
+
 {{#> popup/popup_full popup-id="pop_type_full" popup-title="변경할 가입조건 선택" popup-active=true }}
-<!-- e: 25-08-25 UXW -->
+
 <div class="popup_cont">
 	<div class="popup_content">
 		<!-- s: popup_content_top -->
@@ -19,28 +19,28 @@
 			<div class="form_line">
 				<div class="label_tit">납입주기</div>
 				<div class="radio_group_wrap" role="radiogroup">
-					<!-- s: 25-08-25 UXW -->
-					<!-- s: 25-09-18 수정 -->
+					
+					
 					{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g1" name="radio_g1" labelname="월납" checked=true }}
-					<!-- e: 25-09-18 수정 -->
-					<!-- s: 25-09-18 수정 -->
+					
+					
 					{{> cp/radio rd-class="rd_btn" rd-id="radio_btn_g2" name="radio_g1" labelname="연납" }}
-					<!-- e: 25-09-18 수정 -->
-					<!-- e: 25-08-25 UXW -->
+					
+					
 				</div>
 			</div>
 
 			<div class="form_line">
 				<div class="label_tit">보험료</div>
-				<!-- s: 25-08-25 UXW -->
+				
 				{{> cp/text type="tel" class="price" placeholder="숫자만 입력" r-text="만원" inp-title="금액입력"}}
-				<!-- e: 25-08-25 UXW -->
+				
 			</div>
 
 			<div class="selectitem_wrap row">
 				<div class="form_line grow">
 					<div class="label_tit">납입기간</div>
-					<!-- s: 25-08-25 수정 -->
+					
 					{{#> cp/selectbox_pc s-title="납입기간 선택" sb-ph="선택"}}
 						<option value="">5년</option>
 						<option value="">7년</option>
@@ -49,11 +49,11 @@
 						<option value="">15년</option>
 						<option value="">20년</option>
 					{{/ cp/selectbox_pc}}
-					<!-- e: 25-08-25 수정 -->
+					
 				</div>
 				<div class="form_line grow">
 					<div class="label_tit">연금받는 기간</div>
-					<!-- s: 25-08-25 수정 -->
+					
 					{{#> cp/selectbox_pc s-title="연금받는 기간 선택" sb-ph="선택"}}
 						<option value="">5년</option>
 						<option value="">6년</option>
@@ -62,14 +62,14 @@
 						<option value="">9년</option>
 						<option value="">10년</option>
 					{{/ cp/selectbox_pc}}
-					<!-- e: 25-08-25 수정 -->
+					
 				</div>
 			</div>
 
 			<div class="selectitem_wrap row">
 				<div class="form_line grow">
 					<div class="label_tit">연금시작 나이</div>
-					<!-- s: 25-08-25 수정 -->
+					
 					{{#> cp/selectbox_pc s-title="연금시작 나이 선택" sb-ph="선택" }}
 						<option value="">45세</option>
 						<option value="">46세</option>
@@ -78,18 +78,18 @@
 						<option value="">49세</option>
 						<option value="">50세</option>
 					{{/ cp/selectbox_pc}}
-					<!-- e: 25-08-25 수정 -->
+					
 				</div>
 				<div class="form_line grow">
 					<div class="label_tit">연금받는 주기</div>
-					<!-- s: 25-08-25 수정 -->
+					
 					{{#> cp/selectbox_pc s-title="연금받는 주기 선택" sb-ph="선택" }}
 						<option value="">매월</option>
 						<option value="">3개월</option>
 						<option value="">6개월</option>
 						<option value="">매년</option>
 					{{/ cp/selectbox_pc}}
-					<!-- e: 25-08-25 수정 -->
+					
 				</div>
 			</div>
 		</div>		

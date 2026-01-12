@@ -7,11 +7,11 @@
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">차량 정보</div>
-					<!-- s: 25-08-25 UXW -->
+					
 					<h2 class="p_title">
 						보험료 계산 방법을 선택해주세요
 					</h2>
-					<!-- e: 25-08-25 UXW -->
+					
 				</div>
 				<div class="btn_area">
 					{{> cp/button type="3" size="4" rightIcon="arrowRightSvg" b-text="다수차량 동시 계산/가입"}}
@@ -27,18 +27,18 @@
 					<!-- e: 25-10-15 수정 -->
 					
 					{{> cp/tab_btn tb-text="신규차량, 또는 구매예정" tb-class="" tb-id="ex03"}}
-					<!-- s: 25-09-08 수정 -->
+					
 					{{> cp/tab_btn tb-text="최근 보험료 계산내역<span class='hd_badge solid_pastel c_primary size_m'>3</span>" tb-class="" tb-id="ex04"}}
-					<!-- e: 25-09-08 수정 -->
+					
 				</div>
 
 				<div class="tab_wrap_content active" role="tabpanel" aria-labelledby="tab01" id="tabPanelex01">
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<!-- s: 25-09-08 수정 -->
+								
 								보험료를 계산할 <strong>자동차</strong>를 <strong>선택</strong>해주세요
-								<!-- e: 25-09-08 수정 -->
+								
 							</div>
 						</div>
 						<div class="btn_area">
@@ -209,9 +209,9 @@
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<!-- s: 25-09-08 수정 -->
+								
 								보험료를 계산할 <strong>자동차</strong>를 <strong>선택</strong>해주세요
-								<!-- e: 25-09-08 수정 -->
+								
 							</div>
 						</div>
 						<div class="btn_area">
@@ -291,11 +291,11 @@
 							
 						</div>
 					</div>
-					<!-- s: 25-08-25 UXW -->
+					
 					<!-- <ul class="list_ty2">
 						<li>현재일 기준 보험료 계산이 가능한 계약만 조회됩니다.</li>
 					</ul> -->
-					<!-- e: 25-08-25 UXW -->
+					
 					<!-- s: 만기예정 차량이 없는 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
@@ -329,9 +329,9 @@
 					<div class="title_item">
 						<div class="item">
 							<div class="title_h3 ct1">
-								<!-- s: 25-08-25 UXW -->
+								
 								<strong>차량번호</strong> 또는 <strong>차대번호</strong>를 입력해주세요
-								<!-- e: 25-08-25 UXW -->
+								
 							</div>
 						</div>
 						<div class="btn_area">
@@ -340,17 +340,17 @@
 					</div>
 					<div class="form_group_wrap full">
 						<div class="form_line">
-							<!-- s: 25-08-25 UXW -->
+							
 							<div class="label_tit">차량번호 7~9자리, 차대번호 17자리</div>
-							<!-- e: 25-08-25 UXW -->
+							
 							<div class="car_input_box">
 								<!-- 에러 메시지 시, error 클래스 추가 -->
-								<!-- s: 25-08-25 UXW -->
+								
 								 <!-- s: 25-10-31 수정 -->
 								 {{> cp/text class="car_number_input error" placeholder="123가**67" minlength="7" maxlength="17" inp-title="차량번호 또는 차대번호 입력(차량번호 7~9자리, 차대번호 17자리)"}}
 								 <!-- e: 25-10-31 수정 -->
 								<p class="msg_error">차량번호, 또는 차대번호를 입력해 주세요.</p>
-								<!-- e: 25-08-25 UXW -->
+								
 							</div>
 						</div>
 					</div>
@@ -358,18 +358,18 @@
 					<div class="checkbox_group_wrap column space2">
 						
 						<div class="inp_checkbox">
-							<!-- s: 25-08-22 수정 -->
+							
 							<input type="checkbox" id="checkbox01">
 							<label for="checkbox01" class="chk_label chk_label_ty3">
 								<span class="sr-only">자동차를 구매할 예정이세요? 차량번호, 차대번호를 모르는 경우</span>
 							</label>
-							<!-- e: 25-08-22 수정 -->
+							
 							<div class="label_area">
 								<span class="label_cont">
 									차량을 구매예정이신가요?
-									<!-- s: 25-08-25 UXW -->
+									
 									<span class="sub_g_txt">차량번호, 차대번호를 모르는 경우</span>
-									<!-- e: 25-08-25 UXW -->
+									
 								</span>
 							</div>
 						</div>	
@@ -397,14 +397,14 @@
 				<div class="tab_wrap_content" role="tabpanel" aria-labelledby="tab04" id="tabPanelex04">
 					<div class="title_item">
 						<div class="item">
-							<!-- s: 25-08-25 UXW -->
+							
 							<div class="title_h3 ct1">
 								<strong>최근에 저장된 보험료 계산 내역을 선택해 이어서 진행할 수 있습니다</strong>
 							</div>
 							<!-- <p class="title_sub">
 								목록에서 선택해 이어서 진행할 수 있어요.
 							</p> -->
-							<!-- e: 25-08-25 UXW -->
+							
 						</div>
 					</div>
 
@@ -475,9 +475,9 @@
 					<!-- s: 만기예정 차량이 없는 경우 -->
 					<div class="no_list_area">
 						{{> cp/icon iconClass="exclamationSvg"}}
-						<!-- s: 25-09-08 수정 -->
+						
 						<p>최근 설계 내역이 없습니다.</p>
-						<!-- e: 25-09-08 수정 -->
+						
 					</div>
 					<!-- e: 만기예정 차량이 없는 경우 -->
 					<div class="bottom_fix_wrap">

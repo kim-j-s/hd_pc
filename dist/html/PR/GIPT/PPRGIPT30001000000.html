@@ -2108,13 +2108,12 @@
 				<!-- s: content_top -->
 				<div class="title_view_wrap flex_column">
 					<div class="in_sec">
-						<!-- s: 25-09-02 수정 -->
 						<span class="badge_wrap">
 							<span class="hd_badge outline solid_pastel c_primary size_m">카드할인</span>
 							<span class="hd_badge outline solid_pastel c_warning size_m">무이자할부</span>
 							<span class="hd_badge outline solid_pastel c_secondary size_m">포인트사용</span>
 						</span>
-						<!-- e: 25-09-02 수정 -->
+
 						<div class="page_title">
 							<div class="p_info">다이렉트 하이펫보험</div>
 							<h2 class="p_title">
@@ -2549,12 +2548,10 @@
 
 					<div class="popup_cont">
 						<div class="popup_content">
-							<!-- s: 25-09-02 수정 -->
 							<h3 class="title_h3 normal center">
 								현대카드로<br />
-								<!-- s: 25-09-25 수정 -->
+
 								<strong>1회차 보험료를 결제해보세요</strong>
-								<!-- e: 25-09-25 수정 -->
 							</h3>
 							<div class="info_gray">
 								<ul class="list_depth">
@@ -2569,12 +2566,10 @@
 										</ul>
 									</li>
 									<li>
-										<!-- s: 25-09-25 수정 -->
 										<strong>2회차 계속보험료도 현대카드로 결제 가능</strong>
 										<ul>
 											<li>포인트는 1회차 보험료에 한해서만 사용됩니다.</li>
 										</ul>
-										<!-- e: 25-09-25 수정 -->
 									</li>
 								</ul>
 							</div>
@@ -2582,12 +2577,10 @@
 								<li>
 									포인트 관련 상담 및 문의<br />
 									현대카드 고객센터(1577-6000)<br />
-									<!-- s: 25-08-28 수정 -->
+
 									현대카드 홈페이지(www.hyundaicard.com)
-									<!-- e: 25-08-28 수정 -->
 								</li>
 							</ul>
-							<!-- e: 25-09-02 수정 -->
 						</div>
 					</div>
 					<div class="popup_bottom">
@@ -2633,8 +2626,7 @@
 							</button>
 						</div>
 					</div>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('ex_popup_full');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2646,10 +2638,6 @@
 		<script>
 			$(function () {
 				toggleView();
-				/* s: 25-09-18 수정 */
-				// prdFixed();
-				// anchorMove();
-				/* e: 25-09-18 수정 */
 			});
 
 			function toggleView() {
@@ -2664,49 +2652,6 @@
 					}
 				});
 			}
-
-			/* s: 25-09-18 수정 */
-			/* common js로 이동
-			function prdFixed() {
-				let lastScrollTop = 0;
-				$(window).on("scroll", function () {
-					const st = $(this).scrollTop();
-					const scrollHeight = $(document).height();
-					const windowHeight = $(this).height();
-					const scrollBottom = scrollHeight - windowHeight - st;
-					if (st >= 500) {
-						$('.prd_link_area').show();
-					}else {
-						$('.prd_link_area').hide();
-					}
-					lastScrollTop = st <= 0 ? 0 : st;
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
-
-			/* s: 25-09-18 수정 */
-			/*
-			function anchorMove() {
-				$(".anchor_btn").on("click", function (e) {
-					e.preventDefault();
-					const targetId = $(this).attr("href");
-					const target = $(targetId);
-		
-					if (target.length) {
-						const targetOffset = target.offset().top - 100;
-		
-						$("html, body").stop().animate(
-							{
-								scrollTop: targetOffset
-							},
-							500
-						);
-					}
-				});
-			}
-			*/
-			/* e: 25-09-18 수정 */
 		</script>
 
 		<!-- gnb 호출 qr 팝업 -->
@@ -2742,8 +2687,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare', '#open_qr_timeshare');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_timeshare');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2782,8 +2726,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle', '#open_qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_motorcycle');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2822,8 +2765,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal', '#open_qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_perfecttotal');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2862,8 +2804,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus', '#open_qr_fetus');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_fetus');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2902,8 +2843,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child', '#open_qr_child');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_child');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>
@@ -2942,8 +2882,7 @@
 						</div>
 					</div>
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving', '#open_qr_saving');"><span class="blind">팝업 닫기</span></button>
-					<!-- s: 25-08-07 수정 -->
-					<!-- e: 25-08-07 수정 -->
+
 					<button type="button" class="popup_close" onclick="closeHDPopup('qr_saving');"><span class="blind">팝업 닫기</span></button>
 				</div>
 			</div>

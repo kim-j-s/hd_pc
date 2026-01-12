@@ -65,12 +65,12 @@
 							{{> cp/radio rd-class="rd_btn" rd-id="addSel01_01" name="addSel01" labelname="집" }}
 							{{> cp/radio rd-class="rd_btn" rd-id="addSel01_02" name="addSel01" labelname="직장" }}
 						</div>
-						<!-- s: 25-08-19 UXW -->
+						
 						<!-- CASE1. 주소 입력 전 -->
 						{{> cp/address ad_ph="주소 검색" case1=true}}
 						<!-- CASE2. 주소 입력 후 -->
 						{{> cp/address ad_ph="주소 검색" case2=true}}
-						<!-- e: 25-08-19 UXW -->
+						
 					</div>
         </div>
     	</div>
@@ -80,9 +80,9 @@
 			<div class="bottom_fix_wrap">
 				<div class="btn_area">
 					{{> cp/button type="3" size="1" b-text="이전" }}
-					<!-- s: 25-08-19 UXW -->
+					
 					{{> cp/button type="1" size="1" b-text="정보를 입력 중이에요" disabled=true }}
-					<!-- e: 25-08-19 UXW -->
+					
 					<!-- {{> cp/button type="1" size="1" b-text="모두 입력했어요" }} -->
 				</div>
 			</div>
@@ -91,9 +91,9 @@
 			<!-- s: 꼭 알아두세요 -->
 			{{#> cp/notice dp-active="active" }}
 			<ul class="list_ty1">
-				<!-- s: 25-08-19 UXW -->
+				
 				<li>입력한 정보로 개인정보도 함께 변경됩니다.</li>
-				<!-- e: 25-08-19 UXW -->
+				
 				<li>보험계약서류를 보내드리니 정확하게 입력해주세요.</li>
 			</ul>
 			{{/ cp/notice }}

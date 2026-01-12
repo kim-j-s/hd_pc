@@ -6,11 +6,11 @@
 			<div class="title_view_wrap">
 				<div class="page_title">
 					<div class="p_info">사업장 정보</div>
-					<!-- s: 25-08-25 UXW -->					
+										
 					<h2 class="p_title">
 						가입할 <strong>사업장 정보</strong> 입력 후 <strong>보험료</strong>를 확인해주세요
 					</h2>
-					<!-- e: 25-08-25 UXW -->
+					
 				</div>
 			</div>
 
@@ -37,24 +37,24 @@
 					<div class="form_line">
 						<div class="label_tit">사업장 면적</div>
 						<div class="row balance">
-							<!-- s: 25-08-25 UXW -->							
+														
 							{{> cp/text type="tel" placeholder="숫자만 입력" value="" r-text="㎡" inp-title="제곱미터 입력" }}
-							<!-- e: 25-08-25 UXW -->
+							
 							{{> cp/text type="tel" placeholder="숫자만 입력" r-text="평" inp-title="평수 면적" readonly=true }}
 						</div>
 					</div>
 					<div class="form_line">
-						<!-- s: 25-08-25 UXW -->
+						
 						<div class="label_tit">건축연도 {{> cp/tooltip text="<p>완공 후 20년 이상인 건물은 급배수설비누출로인한손해(일반)담보에 가입할 수 없습니다.</p>" trigger-icon="popover_help"}}</div>
 						{{> cp/text placeholder="숫자만 입력" inp-title="건축연도 입력" }}
-						<!-- e: 25-08-25 UXW -->
+						
 					</div>
 					<div class="form_line">
 						<div class="label_tit">사업장 층수(저층~)</div>
 						<div class="row"> 
-							<!-- s: 25-08-25 UXW -->							
+														
 							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="" r-text="층" inp-title="층수 입력" }}
-							<!-- e: 25-08-25 UXW -->
+							
 							<div class="radio_comb origin" role="radiogroup">	
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_1" name="radio_g1" labelname="지상" checked=true }}
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_2" name="radio_g1" labelname="지하"}}
@@ -64,9 +64,9 @@
 					<div class="form_line">
 						<div class="label_tit">사업장 층수(~고층)</div>
 						<div class="row"> 
-							<!-- s: 25-08-25 UXW -->							
+														
 							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="" r-text="층" inp-title="층수 입력" }}
-							<!-- e: 25-08-25 UXW -->
+							
 							<div class="radio_comb origin" role="radiogroup">	
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_1" name="radio_g2" labelname="지상" checked=true }}
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g2_2" name="radio_g2" labelname="지하" }}
@@ -78,9 +78,9 @@
 
 			<div class="divider_ty1"></div>
 			<div class="form_box">				
-				<!-- s: 25-08-25 UXW -->			
+							
 				<h3 class="title_h3">동일 건물 내 이웃 업종 입력</h3>
-				<!-- e: 25-08-25 UXW -->
+				
 				<div class="space_list_ty5">
 					<div class="table_wrap">						
 						<table class="table">
@@ -111,15 +111,15 @@
 						{{> cp/button type="3" size="3" b-text="이웃 업종 추가/삭제"}}
 					</div>
 					<ul class="list_ty3">
-						<!-- s: 25-08-25 UXW -->
+						
 						<li>사업장과 같은 방화구역 내에 있는 이웃 사업장의 업종을 모두 선택해주세요.(같은 업종이 여러 개일 경우 하나만 선택)</li>
 						<li><strong class="point">같은 방화구역 내</strong>에 있는 이웃 사업장의 업종에 따라 적용되는 보험료율이 달라질 수 있습니다.</li>
-						<!-- e: 25-08-25 UXW -->
+						
 					</ul>
 					<div class="checkbox_group_wrap column">
-						<!-- s: 25-08-25 UXW -->					
+											
 						{{> cp/checkbox checkbox_class="rd_box" id="checkbox08-1-12" label_class="chk_label_ty3" labelname="<strong class='point'>[필수]</strong> 사업장이 속한 건물의 같은 방화구역 내에 입주한 모든 이웃 업종을 입력했음을 확인합니다." }}
-						<!-- e: 25-08-25 UXW -->
+						
 					</div>
 				</div>
 			</div>

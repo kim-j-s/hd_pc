@@ -6,9 +6,9 @@
 					{{#unless prev_story}}
 					<div class="btn_area end">
 						
-						<!-- s: 25-08-21 UXW -->
+						
 						{{> cp/linkButton bl_class="short_cut" bl_text="이전 카드 정보 불러오기" bl_title="이전 카드 정보 팝업 열기" pop_id="pop_type07" }}
-						<!-- e: 25-08-21 UXW -->
+						
 						
 					</div>
 					{{/unless}}
@@ -18,9 +18,9 @@
 							<div class="label_tit">카드사</div>
 							{{> cp/selectitem si_ph="카드사 선택" si_title="카드사 선택" si_popup="card_select"}}
 							{{#unless app_no }}
-							<!-- s: 25-08-21 UXW -->
+							
 							{{> cp/checkbox id="checkbox1" labelname="앱카드 사용" }}
-							<!-- e: 25-08-21 UXW -->
+							
 							{{/unless}}
 						</div>
 						<div class="form_line">
@@ -32,9 +32,9 @@
 								<span class="dash">-</span>
 								{{> cp/text type="tel" minlength="4" maxlength="4" placeholder="4자리" inp-title="카드번호 세번째 4자리 입력" no_del="false" }}
 								<span class="dash">-</span>
-								<!-- s: 25-08-21 UXW -->
+								
 								{{> cp/keypad4 case1="4(3자리)" kt="카드번호 마지막 4(3자리) 입력" ktid="kp1" }}
-								<!-- e: 25-08-21 UXW -->
+								
 							</div>
 						</div>
 						<div class="form_line">
@@ -53,34 +53,22 @@
 								{{/unless}}
 								
 							</div>
-							<!-- s: 25-08-21 UXW -->
+							
 							{{#> cp/selectbox_pc s-title="카드 할부 선택" sb-ph="개월 수 선택" }}
 								<option value="">일시불</option>
 								<option value="">2개월</option>
 							{{/ cp/selectbox_pc}}
-							<!-- e: 25-08-21 UXW -->
+							
 						</div>
 						{{/unless}}
 						<ul class="list_ty2 full">							
 							{{#if corporate}}
-							<!-- s: 25-08-21 UXW -->
-							<!-- s: 25-09-02 수정 -->
-							<!-- s: 25-09-23 추가 -->
 							<li><strong class="point">$회사명$ 계약자 명의의 국내 발급 카드로만 결제가 가능합니다.</strong>(법인 기명카드 불가)</li>
-							<!-- e: 25-09-23 추가 -->
-							<!-- e: 25-09-02 수정 -->
-							<!-- e: 25-08-21 UXW -->
 							{{else}}
-							
-							<!-- s: 25-08-21 UXW -->
 							<li><strong class="point">계약자 명의의 국내 발급 카드로만 결제할 수 있어요.</strong>(법인, 가족카드 불가)</li>
-							<!-- e: 25-08-21 UXW -->
-							
 							{{/if}}
 							{{#if corporate_list}}
-							<!-- s: 25-09-23 추가 -->
 							<li><strong class="point">$회사명$ 계약자 명의의 국내 발급 카드로만 결제가 가능합니다.</strong>(법인 기명카드 불가)</li>
-							<!-- e: 25-09-23 추가 -->
 							{{/if}}
 							{{#unless no_info_car}}
 							<!-- s: 25-10-15 수정 -->
@@ -92,9 +80,9 @@
 						<!-- s: 현대카드 선택 시, 노출 -->
 						<div class="form_line full">
 							<div class="checkbox_group_wrap column">
-								<!-- s: 25-08-21 수정 -->
+								
 								{{> cp/checkbox checkbox_class="rd_box question" id="checkbox01-01" label_class="chk_label_ty3" labelname="현대카드 M포인트 사용" labelcont="(1천원 이상 결제시, 3만 M포인트 한도)" question=true pop_id="pop_type04" }}
-								<!-- e: 25-08-21 수정 -->
+								
 							</div>
 						</div>
 						<!-- e: 현대카드 선택 시, 노출 -->
