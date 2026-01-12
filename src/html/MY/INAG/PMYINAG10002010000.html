@@ -617,9 +617,7 @@
 			var $perBar = $progressBar.find('.per_bar');
 			var $perBarDp = $perBar.find('.per_bar_dp');
 			var perBarDpWidth = $perBarDp.outerWidth();
-			/* s: 25-11-06 */
 			$perBar.css('width', perBarDpWidth / 2); 
-			/* e: 25-11-06 */
 			// console.log('움직이는 컨텐츠 넓이 : ', perBarDpWidth);
 	
 			// 초기 클래스 제거
@@ -698,7 +696,6 @@
 				
 				const isExpired = $progressBar.hasClass('expired');
 				const isBefore = $progressBar.hasClass('before');
-				/* s: 25-11-06 */
 				let labelText = `만기 ${remainingDays}일 전`;
 				let ariaLabel = `${labelText} - 시작일:${startDate}, 종료일:${endDate}`;
 
@@ -712,7 +709,6 @@
 					}
 					$progressBar.find('.per_bar_dp .text').text(labelText);
 				}
-				/* e: 25-11-06 */
 				$progressBar.attr('aria-label', ariaLabel);	
 				
 	
@@ -726,9 +722,7 @@
 				var $perBar = $progressBar.find('.per_bar');
 				var $perBarDp = $perBar.find('.per_bar_dp');
 				var perBarDpWidth = $perBarDp.outerWidth();
-				/* s: 25-11-06 */
 				$perBar.css('width', perBarDpWidth / 2);
-				/* e: 25-11-06 */	
 	
 				// 초기 클래스 제거
 				$perBar.removeClass('pos');
