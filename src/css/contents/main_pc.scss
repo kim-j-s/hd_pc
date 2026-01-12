@@ -828,7 +828,7 @@
 			&.mpc_item_ty2 {
 				background-color: var(--color-action-secondary-fill);
 				background-size: 160px 106px;
-				@for $i from 1 through 20 {
+				@for $i from 1 through 21 {
 					&.mit2_ic#{$i} {
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
 					}
@@ -873,6 +873,7 @@
 						
 						.hd_badge {
 							font-weight: 400;
+							height: 24px;
 						}
 
 						+ .title {
