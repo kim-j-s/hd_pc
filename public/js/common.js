@@ -686,7 +686,7 @@
 
 
 	// 선택 약관 스크롤 이벤트
-	$DOM.on('click', '.ag_group_top .chk_label', function() {
+	$DOM.on('click', '.ag_groups_move .ag_group_top .chk_label', function() {
 		const $this = $(this);
 		const agmDom = $this.closest('.ag_groups_move');
 		const agmDomChilds = $this.closest('.ag_groups_move').find('.ag_group_wrap').length;
