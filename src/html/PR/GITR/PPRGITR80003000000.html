@@ -18,9 +18,7 @@
 				</div>
 				<div class="btn_area">
 					{{> cp/button type="3" size="4" b-text="모든 플랜 확인"}}
-					
 					{{> cp/button type="3" size="4" b-text="계산 결과 받기"}}
-					
 				</div>
 			</div>
 
@@ -31,17 +29,13 @@
 						<label for="g_item_ty01">
 							<span class="badge_wrap">
 								<span class="hd_badge class_type class_type03">
-									
 									<span class="text">실속 <em>13개 보장</em></span>
-									
 								</span>
 							</span>
 							<span class="item_top">
 								<span class="top_title">부담없이 가볍게</span>
 								<em class="top_info">
-									
 									<span class="price"> <strong>7,200</strong> 원</span>
-									
 								</em>
 							</span>
 							<span class="item_desc">
@@ -319,17 +313,8 @@
 					<div class="acd_item acd_item_ty2">
 						{{#> cp/accordion ac-title="일정에 문제가 생겼을 때" cont-class="" ac-active=true }}
 							<ul class="coverage_item_list_ty3">
-								<li class="list">
-									<div class="detail_list">
-										<div class="item_inner">
-											{{> cp/ibs cid="checkbox04-1" sct="항공기 및 수하물 지연비용" }}
-										</div>
-									</div>
-									<div class="detail_price">
-										<span class="point">30만원</span>
-									</div>
-								</li>
-								<li class="list">
+								
+								<!-- <li class="list">
 									<div class="detail_list">
 										<div class="item_inner">
 											{{> cp/ibs cid="checkbox04-2" sct="출국항공기 지연(2~4시간) 손해 보장" }}
@@ -338,7 +323,7 @@
 									<div class="detail_price">
 										<span class="point">3만원</span>
 									</div>
-								</li>
+								</li> -->
 								
 								<li class="list">
 									<div class="detail_list">  
@@ -363,6 +348,19 @@
 									</div>
 								</li>
 								<!-- e: 26-01-08 수정 -->
+
+								<!-- s: 26-01-13 수정 -->
+								<li class="list">
+									<div class="detail_list">
+										<div class="item_inner">
+											{{> cp/ibs cid="checkbox04-1" sct="항공기 및 수하물 지연비용" }}
+										</div>
+									</div>
+									<div class="detail_price">
+										<span class="point">30만원</span>
+									</div>
+								</li>
+								<!-- e: 26-01-13 수정 -->
 								
 							</ul>
 						{{/ cp/accordion }}
