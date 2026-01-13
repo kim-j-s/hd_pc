@@ -2359,6 +2359,9 @@ sup {
 	flex-direction: column;
 	width: 1188px;
 }
+.header_pc .popup_wrap {
+	text-align: initial;
+}
 .hpi_top {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -3801,6 +3804,9 @@ sup {
 }
 .ag_group_wrap .ag_group_top {
 	padding: var(--padding-8) 0 var(--gap-5);
+}
+.ag_group_wrap .ag_group_top .inp_checkbox input[type="checkbox"] {
+	z-index: 0;
 }
 .ag_group_wrap .ag_group_top + .ag_group_cont {
 	padding-top: var(--gap-5);
@@ -6139,7 +6145,7 @@ sup {
 	background-position: right 8px center;
 }
 .btn_link.short_cut.rd_box.md {
-	padding: 6px 12px;
+	padding: 6px 28px 6px 12px;
 	border-radius: 12px;
 	font-size: var(--font-size-button-small);
 }
