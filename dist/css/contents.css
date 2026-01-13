@@ -7076,8 +7076,8 @@
 	color: var(--color-text-primary);
 }
 .coverage_item_list_ty3 > .list.list_sub_dom {
-	padding-top: 17px;
-	border-top: var(--border-width-static-regular) solid var(--color-divider-gray-light);
+	margin-top: 8px;
+	padding-left: 28px;
 }
 .coverage_item_list_ty3 .table_wrap.type_mini .title {
 	margin: var(--gap-5) 0 var(--gap-4);
