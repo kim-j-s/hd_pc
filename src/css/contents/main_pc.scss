@@ -607,6 +607,14 @@
 								transition: all .3s ease-in;
 							}
 						}
+
+						&:active {
+							.tip_item {
+								bottom: calc(100% - 1px);
+								opacity: 1;
+								transition: all 0;
+							}
+						}
 					}
 
 					& ~ li {
