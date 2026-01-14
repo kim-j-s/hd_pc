@@ -577,6 +577,12 @@
 	-webkit-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
 }
+.main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li .re_link.active {
+	background-color: #fff;
+}
+.main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li .re_link.active .tip_item {
+	display: none;
+}
 .main_cont_wrap .main_product_box .main_recommend_box .re_product_list > li ~ li:after {
 	position: absolute;
 	top: 12px;
@@ -3577,6 +3583,10 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty25 {
 	background-image: url(../images/content/bi/visual/bg_img_mtbc_business.png);
+	background-position: top 40px right 32px;
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pi_bg_ty26 {
+	background-image: url(../images/content/bi/visual/bg_img_mtbc_fi.png);
 	background-position: top 40px right 32px;
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner.pbw_inner_limite_type1 {
@@ -13082,6 +13092,19 @@ ul + .form_group_wrap {
 	padding-top: var(--padding-2);
 	font-size: var(--font-size-body-small);
 	text-align: center;
+}
+/* 이벤트 페이지 */
+.eve_content + .eve_content {
+	margin-top: 52px;
+}
+.eve_content .ev_img {
+	font-size: 0;
+}
+.eve_content .ev_img + .msg_error {
+	margin-top: var(--gap-5);
+}
+.eve_content .btn_area {
+	margin-top: var(--gap-5);
 }
 /* 키패드  */
 .form_key_pc {

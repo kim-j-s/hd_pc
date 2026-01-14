@@ -287,6 +287,9 @@
 				&[style*="display: none"] + .tit_item {
 					margin-top: 0;
 				}
+				&[style*="display:none"] + .tit_item {
+					margin-top: 0;
+				}
 			}
 
 			// 보안프로그램 설치안내 에서 사용됨
@@ -2092,6 +2095,9 @@
 								align-items: center;
 								gap: var(--gap-4);
 								padding: 1px 0;
+								&:has(.rf) {
+									align-items: flex-start;
+								}
 								dt {
 									font-size: var(--font-size-body-small);
 									color: var(--color-text-subtle);
@@ -2103,8 +2109,11 @@
 									align-items: center;
 									font-size: var(--font-size-body-small);
 									.rf {
+										align-self: flex-start;
+										position: relative;
 										margin-left: auto;
 										padding-left: var(--padding-2);
+										white-space: nowrap;
 									}
 									.tooltip_wrap {
 										position: absolute;
