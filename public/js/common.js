@@ -10,6 +10,11 @@
 	// 	}
 	// });
 
+	$DOM.on('click', '.main_recommend_box .re_link', function () {
+		$(this).addClass('active');
+	});
+
+
 	$DOM.on('click', '.hsu_search', function () {
 		$(this).toggleClass('active');
 		const $wrap = $('.all_menu_search_wrap');

@@ -608,11 +608,11 @@
 							}
 						}
 
-						&:active {
+						&.active {
+							background-color: #fff;
+
 							.tip_item {
-								bottom: calc(100% - 1px);
-								opacity: 1;
-								transition: all 0;
+								display: none;
 							}
 						}
 					}
@@ -659,7 +659,6 @@
 						opacity: 0;
 
 						&:first-child {
-
 							&.disabled_slide {
 								&.swiper-slide-prev {
 									opacity: 0;
