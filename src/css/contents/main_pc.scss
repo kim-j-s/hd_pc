@@ -607,6 +607,14 @@
 								transition: all .3s ease-in;
 							}
 						}
+
+						&.active {
+							background-color: #fff;
+
+							.tip_item {
+								display: none;
+							}
+						}
 					}
 
 					& ~ li {
@@ -651,7 +659,6 @@
 						opacity: 0;
 
 						&:first-child {
-
 							&.disabled_slide {
 								&.swiper-slide-prev {
 									opacity: 0;
