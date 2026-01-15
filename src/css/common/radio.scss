@@ -203,11 +203,18 @@
 	& + .input_text.search {
 		margin-top: var(--gap-5);
 	}
+
+	&:not(.column){
+		.inp_radio {
+			&[class*=rd_btn]{
+				max-width: calc(50% - 6px);
+			}
+		}
+	}
 	
 	.inp_radio {
 		&[class*=rd_btn]{
 			flex: 1;
-			max-width: calc(50% - 6px);
 			input {
 				&[role="button"] {
 					&:checked {
