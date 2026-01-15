@@ -11,9 +11,7 @@
 						<div class="pi_top">
 							<h2 class="pt_title">
 								<small>현대해상 다이렉트</small>
-								
 								오랜 외국생활,<br>
-								
 								<span class="bold">어디까지 보장을 받아야 할까요?</span>
 							</h2>
 							<div class="pt_btn_area">
@@ -535,30 +533,25 @@
 <!-- e: 유효성 체크 -->	 
 <!-- e: popup area -->
 
-
-<!-- s: bottom banner팝업1 -->
-<div class="popup_wrap popup_wrap_type3 bn_ty" id="pop_type05" role="dialog" aria-modal="true" aria-hidden="true">
-	<div class="popup_container">
-		<div class="popup_dim" aria-hidden="true" onclick="closeHDPopup('pop_type05');"></div>
-		<div class="popup_inner">
-			<div class="popup_cont">
-				<div class="popup_content">
-					<a href="javascript:void(0)" title="네이버 제휴 안내 확인" onclick="closeHDPopup('pop_type05');">
-						<img src="../../../images/event/banner_travel1.png" alt="현대해상 다이렉트 해외장기체류보험 지금 가입 시 네이버페이 포인트 최대 3만원! 확인">
-					</a>
-				</div>
-			</div>
-			<div class="popup_bottom">
-				<div class="btn_area end">
-					<button type="button" class="hd_btn hd_btn_ty_3 hd_btn_s_4" onclick="closeHDPopup('pop_type05');">
-						<span class="text">닫기</span>
-					</button>
-				</div>
+	<!-- s: 카드사 선택 팝업 -->
+	<!-- s: 26-01-15 수정 -->
+	{{#> popup/popup_bottom popup-id="pb1" popup-title="" popup-active=true }}
+	<div class="popup_cont">
+		<div class="popup_content">
+			<a href="javascript:void(0)" class="popup_single_full_banner" onclick="closeHDPopup('pop_type05');">
+				<img src="../../../images/event/banner_travel1.png" alt="현대해상 다이렉트 해외장기체류보험 지금 가입 시 네이버페이 포인트 최대 3만원! 확인">
+			</a>
+		</div>
+		<div class="popup_bottom">
+			<div class="btn_area">
+				{{> cp/button type="1" size="2" b-text="확인"}}
 			</div>
 		</div>
 	</div>
-</div>
-<!-- e: bottom banner팝업1-->
+	{{/ popup/popup_bottom}}
+	<!-- e: 26-01-15 수정 -->
+	<!-- e: 카드사 선택 팝업 -->
+
 
 
 {{/ layout/default }}
