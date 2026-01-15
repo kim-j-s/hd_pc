@@ -14797,7 +14797,7 @@ ol li .table_wrap + .list_ty2 li + li {
 	height: 56px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto 22px;
+	background-size: auto 24px;
 }
 .radio_group_wrap [class*="icon_pay"] .label_cont {
 	overflow: hidden;
@@ -14807,13 +14807,13 @@ ol li .table_wrap + .list_ty2 li + li {
 	clip: rect(0, 0, 0, 0);
 }
 .radio_group_wrap .icon_pay_ty1 {
-	background-image: url(../images/logo/pay_kakao.svg);
+	background-image: url(../images/logo/pay_kakao.png);
 }
 .radio_group_wrap .icon_pay_ty2 {
-	background-image: url(../images/logo/pay_naver.svg);
+	background-image: url(../images/logo/pay_naver.png);
 }
 .radio_group_wrap .icon_pay_ty3 {
-	background-image: url(../images/logo/pay_toss.svg);
+	background-image: url(../images/logo/pay_toss.png);
 }
 .radio_group_wrap.structure:has(input[type="radio"]:checked) input[type="radio"] + label .label_cont {
 	color: var(--color-text-disabled);
