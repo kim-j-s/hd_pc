@@ -7873,6 +7873,9 @@ sup {
 .card_item_wrap .card_item .item_inner .notice_item[style*="display: none"] + .tit_item {
 	margin-top: 0;
 }
+.card_item_wrap .card_item .item_inner .notice_item[style*="display:none"] + .tit_item {
+	margin-top: 0;
+}
 .card_item_wrap .card_item .item_inner .desc_ty2 {
 	margin-top: var(--gap-4);
 	font-size: var(--font-size-body-medium);
@@ -9471,6 +9474,11 @@ sup {
 	gap: var(--gap-4);
 	padding: 1px 0;
 }
+.container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl:has(.rf) {
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dt {
 	font-size: var(--font-size-body-small);
 	color: var(--color-text-subtle);
@@ -9489,8 +9497,12 @@ sup {
 	font-size: var(--font-size-body-small);
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .rf {
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	position: relative;
 	margin-left: auto;
 	padding-left: var(--padding-2);
+	white-space: nowrap;
 }
 .container .card_item_wrap.ty7 .card_item .item_inner .inner_cont .data_info_list dl dd .tooltip_wrap {
 	position: absolute;
@@ -13070,6 +13082,7 @@ sup {
 .list_depth + .info_gray {
 	margin-top: var(--gap-5);
 }
+.list_depth + .title_h3,
 .list_depth + .radio_group_wrap_ty2 {
 	margin-top: var(--gap-11);
 }
@@ -13079,6 +13092,7 @@ sup {
 .list_depth .btn_gap {
 	margin-left: var(--gap-4);
 }
+.list_depth + .list_ty2,
 .list_depth .circle_list {
 	margin-top: var(--gap-4);
 }
@@ -14706,11 +14720,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .radio_group_wrap + .input_text.search {
 	margin-top: var(--gap-5);
 }
+.radio_group_wrap:not(.column) .inp_radio[class*="rd_btn"] {
+	max-width: calc(50% - 6px);
+}
 .radio_group_wrap .inp_radio[class*="rd_btn"] {
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	max-width: calc(50% - 6px);
 }
 .radio_group_wrap .inp_radio[class*="rd_btn"] input[role="button"]:checked + label .label_cont {
 	position: relative;
@@ -17096,6 +17112,7 @@ ol li .table_wrap + .list_ty2 li + li {
 .title_h3 [class^="msg_"] {
 	margin-left: 8px;
 	font-weight: 400;
+	background-position: left center;
 }
 .title_h3.ico_ty {
 	padding-left: 40px;

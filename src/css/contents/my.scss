@@ -458,6 +458,9 @@
 			}
 		}
 	}
+	& + [class^=list_]{
+		margin-top: var(--gap-5);
+	}
 }
 
 

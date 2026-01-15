@@ -166,7 +166,7 @@
 					background-position: left center;
 					transform: translateY(-50%);
 				}
-				@for $i from 1 through 20 {
+				@for $i from 1 through 21 {
 					&.ico_benefit#{$i}::after {
 						background-image: url('../images/content/prdcar/ico_car_benefit#{$i}.svg');
 					}
@@ -182,7 +182,7 @@
 			background-color: var(--color-surface-primary-subtler);
 			border-radius: var(--radius-large2);
 					
-			@for $i from 1 through 16 {
+			@for $i from 1 through 17 {
 				&.ico_bn_visual#{$i} {
 					.inner {
 						background-image: url('../images/content/prdcar/ico_bn_visual#{$i}.png');

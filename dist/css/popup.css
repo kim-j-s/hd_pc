@@ -955,6 +955,10 @@ body:has(.header_pc.header_pc_error) .popup_wrap {
 .popup_wrap.popup_wrap_type3 .p_benefit_info + .info_gray {
 	margin-top: var(--gap-8);
 }
+.popup_wrap.popup_wrap_type3 .popup_single_full_banner {
+	display: block;
+	margin: 0 -24px;
+}
 .popup_wrap.bn_ty .popup_container .popup_inner {
 	border-radius: var(--radius-large2) var(--radius-large2);
 	padding: 0 !important;
