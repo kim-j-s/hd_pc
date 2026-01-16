@@ -3783,6 +3783,9 @@
 	font-weight: normal;
 	color: var(--color-text-subtle);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item .item_exp .item_sub_txt.item_sub_txt_exp {
+	max-width: 200px;
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner .item .item_exp .percent {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4147,7 +4150,7 @@
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .bottom_info_wrap {
 	padding-top: var(--padding-7);
-	border-top: var(--border-width-static-regular) var(--color-border-information-light);
+	border-top: var(--border-width-static-regular) solid var(--color-border-information-light);
 	font-size: var(--font-size-body-small);
 	text-align: center;
 }
