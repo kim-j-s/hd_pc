@@ -82,13 +82,6 @@
 				</div>
 			</div>
 
-			<div class="g_line">키패드 예시 - 추후 삭제 예정</div>
-			<div class="g_dom">
-				<div class="p_guide_wrap_b">
-					{{> cp/button type="2" size="5" b-text="키패드 예시" popup="p1" b-title="입력정보 케이스"}}
-				</div>
-			</div>
-
 
 		</div>
 	</div>
@@ -103,39 +96,6 @@
 
 <!-- s: popup area -->
  <div class="popup_area">
-
-	<!-- s: Full 팝업 - 키패드 예시 - 추후 삭제 예정 -->
-	{{#> popup/popup_full popup-id="p1" popup-title="팝업 타이틀" }}
-	<div class="popup_cont">
-		<div class="popup_content">
-			<!-- s: popup_content_top -->
-			<div class="popup_content_top">
-				<h2 class="title_h2">
-					<strong>고객정보 관리 및 가입 설계를 위해<br> 동의</strong>가 필요합니다.
-				</h2>
-			</div>
-			<!-- e: popup_content_top -->
-
-			<div class="form_group_wrap">
-				<div class="form_line">
-					<div class="label_tit">계약자 이름</div>
-					{{> cp/text placeholder="입력해주세요" inp-title="계약자 이름 입력"}}
-				</div>
-				<div class="form_line xxx">
-					<div class="label_tit">주민등록번호</div>
-					<div class="comp_wrap birth">
-						{{> cp/text type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞자리 입력" }}
-						<span class="dash">-</span>
-						{{> cp/keypad7 case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
-					</div>
-				</div>
-			</div>
-
-			
-		</div>
-	</div>
-	{{/ popup/popup_full}}
-	<!-- e: Full 팝업 - 키패드 예시 - 추후 삭제 예정 -->
 
 	<!-- s: Full 팝업 -->
 	{{#> popup/popup_full popup-id="pop_type01" popup-title="팝업 타이틀" }}
