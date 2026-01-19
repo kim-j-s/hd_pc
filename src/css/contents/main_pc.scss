@@ -182,10 +182,8 @@
 								color: var(--color-text-basic);
 								.word {
 									display: block;
-									// text-overflow: ellipsis;
-									// overflow: hidden;
-									// white-space: nowrap;
 									word-break: keep-all;
+									overflow-wrap: break-word;
 								}
 							}
 							.tit {

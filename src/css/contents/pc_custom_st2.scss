@@ -498,6 +498,7 @@
 				>.form_line {
 					position: relative;
 					word-break: keep-all;
+					overflow-wrap: break-word;
 
 					.form_sub_top {
 						padding-right: 312px;

@@ -230,15 +230,14 @@
 		}
 		th {
 			vertical-align: middle;
-			// vertical-align: top;
-			//padding: var(--padding-5) var(--padding-3);
 			padding: var(--padding-5) var(--padding-5);
-			font-size: var(--font-size-heading-xxsmall);
-			text-align: left; 
 			font-weight: 700;
-			word-break: keep-all;
-			background-color: var(--color-surface-gray-subtler);	
 			color: var(--color-text-bolder);		
+			text-align: left; 
+			font-size: var(--font-size-heading-xxsmall);
+			word-break: keep-all;
+			overflow-wrap: break-word;
+			background-color: var(--color-surface-gray-subtler);	
 		}
 		td {
 			vertical-align: top;
@@ -250,8 +249,8 @@
 				padding-left: 0;
 			}
 			&.td_point {
-				color: var(--color-text-primary-bold);
 				font-weight: 700;
+				color: var(--color-text-primary-bold);
 				background: var(--color-surface-primary-subtler);
 			}
 
