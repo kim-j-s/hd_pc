@@ -860,6 +860,7 @@ sup {
 	font-size: var(--font-size-body-medium);
 	color: var(--color-text-basic);
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .process_info_area + .progress_bar {
 	margin-bottom: 0;
@@ -16295,6 +16296,7 @@ ol li .table_wrap + .list_ty2 li + li {
 }
 .tab_wrap .tab_btn {
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .tab_wrap_list_ty1 {
 	display: -webkit-box;
@@ -16685,12 +16687,13 @@ ol li .table_wrap + .list_ty2 li + li {
 .table_wrap .table th {
 	vertical-align: middle;
 	padding: var(--padding-5) var(--padding-5);
-	font-size: var(--font-size-heading-xxsmall);
-	text-align: left;
 	font-weight: 700;
-	word-break: keep-all;
-	background-color: var(--color-surface-gray-subtler);
 	color: var(--color-text-bolder);
+	text-align: left;
+	font-size: var(--font-size-heading-xxsmall);
+	word-break: keep-all;
+	overflow-wrap: break-word;
+	background-color: var(--color-surface-gray-subtler);
 }
 .table_wrap .table td {
 	vertical-align: top;
@@ -16702,8 +16705,8 @@ ol li .table_wrap + .list_ty2 li + li {
 	padding-left: 0;
 }
 .table_wrap .table td.td_point {
-	color: var(--color-text-primary-bold);
 	font-weight: 700;
+	color: var(--color-text-primary-bold);
 	background: var(--color-surface-primary-subtler);
 }
 .table_wrap .table td .inp_checkbox input[type="checkbox"] + .chk_label .label_cont {

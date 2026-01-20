@@ -194,6 +194,7 @@
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .text .word {
 	display: block;
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .main_cont_wrap .mcw_cont .main_benefit .main_benefit_cont .mbc_list > li > .item .tit {
 	position: relative;
@@ -5999,6 +6000,7 @@
 	max-width: 130px;
 	color: var(--color-text-subtle);
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .summary_ii .sic_list .sic_list_r {
 	-webkit-box-flex: 1;
@@ -8837,6 +8839,7 @@ ul + .form_group_wrap {
 .notification .form_list > li > .form_group_wrap > .form_line {
 	position: relative;
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .notification .form_list > li > .form_group_wrap > .form_line .form_sub_top {
 	padding-right: 312px;
@@ -12508,6 +12511,7 @@ ul + .form_group_wrap {
 	color: var(--color-text-bolder);
 	text-align: center;
 	word-break: keep-all;
+	overflow-wrap: break-word;
 }
 .prd_car .benefit_top_wrap .item_benefit_top .inner .i_bottom .cont .detail i {
 	font-size: var(--font-size-heading-medium);
