@@ -1287,7 +1287,6 @@
 	
 	&.event_list {
 			.card_item {
-
 			.img_box {
 				flex-shrink: 0;
 				width: 267px;
@@ -1301,7 +1300,7 @@
 			.item_inner{
 				flex-direction: row;
 				justify-content: flex-start;
-				gap: var(--gap-3);
+				// gap: var(--gap-3);
 
 				.inner_cont {
 					flex-grow: 1;
