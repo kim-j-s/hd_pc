@@ -80,10 +80,12 @@ $(function() {  // DOM이 준비되었을 때 실행
 	});
 
 	// 페이지 상단으로 스크롤
+	/*
 	$DOM.on('click', '.qm_btn_pagetop', function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: 0 }, 300);
 	});
+	*/
 	
 	
 });

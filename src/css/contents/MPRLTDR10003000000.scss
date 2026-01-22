@@ -688,10 +688,6 @@
 				background-color: var(--color-icon-information);
 				border-radius: 50%;
 			}
-
-			& + .i_data { 
-				// margin-left: var(--gap-4)
-			}
 		}
 
 		.modify_ba {
@@ -1404,18 +1400,11 @@
 		position: relative;
 		margin: 0;
 
-		// label {
-		// 	width: 100% !important;
-		// }
-
 		&:has(.btn_area){
 			.item_radio {
 				input{
 					& + label {
 						height: 284px;
-						.item_top {
-							// padding-bottom: 28px;
-						}
 					}
 
 					&:checked {
