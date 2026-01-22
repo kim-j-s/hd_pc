@@ -1287,21 +1287,20 @@
 	
 	&.event_list {
 			.card_item {
-
 			.img_box {
 				flex-shrink: 0;
-				width: 267px;
+				width: 268px;
 			
 				&.no_img {
-					width: 267px;
-					height: 111px;
+					width: 268px;
+					height: 112px;
 				}
 			}
 
 			.item_inner{
 				flex-direction: row;
 				justify-content: flex-start;
-				gap: var(--gap-3);
+				// gap: var(--gap-3);
 
 				.inner_cont {
 					flex-grow: 1;
