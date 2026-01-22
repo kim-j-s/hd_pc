@@ -1098,6 +1098,7 @@ sup {
 	flex: 0 0 50%;
 }
 .img_box.ty2.coupon .c_img img {
+	width: auto;
 	margin: 0 auto;
 }
 .img_box.ty2.coupon .list_depth {
@@ -2319,8 +2320,6 @@ sup {
 	animation: balloon-sway 4.2s ease-in-out infinite;
 }
 /* 다수차량 로딩 */
-/* header */
-/* @import "common/header.scss"; */
 /* header_pc */
 .header_pc {
 	position: fixed;
@@ -3619,8 +3618,6 @@ sup {
 	display: flex;
 	gap: var(--gap-3);
 }
-/* navigation */
-/* @import "common/nav.scss"; */
 /* address button */
 .address_item {
 	cursor: pointer;
@@ -8763,11 +8760,11 @@ sup {
 .card_list_wrap_ty2.event_list .card_item .img_box {
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	width: 267px;
+	width: 268px;
 }
 .card_list_wrap_ty2.event_list .card_item .img_box.no_img {
-	width: 267px;
-	height: 111px;
+	width: 268px;
+	height: 112px;
 }
 .card_list_wrap_ty2.event_list .card_item .item_inner {
 	-webkit-box-orient: horizontal;
@@ -8777,7 +8774,6 @@ sup {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-	gap: var(--gap-3);
 }
 .card_list_wrap_ty2.event_list .card_item .item_inner .inner_cont {
 	-webkit-box-flex: 1;
