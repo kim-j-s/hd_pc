@@ -722,6 +722,29 @@
 		}, 50);
 	});
 
+	// $DOM.on('click', '.ag_groups_move .agw_all_top .chk_label', function() {
+	// 	const $this = $(this);
+	// 	const agmDom = $this.closest('.ag_groups_move');
+	// 	const agmDomChilds = $this.closest('.ag_groups_move').find('.ag_group_wrap').length;
+	// 	const idx = $this.closest('.ag_group_wrap').index();
+	// 	if(idx + 1 >= agmDomChilds) {
+	// 		return;
+	// 	}
+	// 	setTimeout(() => {
+	// 		const thisChecked = $(this).closest('.inp_checkbox').find('input').is(':checked');
+	// 		if(thisChecked) {
+	// 			const scT = $this.closest('.popup_cont').scrollTop();				
+	// 			const targetOffset = agmDom.find('.ag_group_wrap').eq(idx + 1).position().top;
+	// 			const domHeaderHeight = agmDom.closest('.popup_wrap').find('.popup_head').outerHeight();
+	// 			const pinPoint = Math.abs(Math.abs(agmDom.position().top - domHeaderHeight) - scT);
+
+	// 			$(this).closest('.popup_cont').animate({ 
+	// 				scrollTop: (targetOffset - agmDom.position().top) + pinPoint
+	// 			}, 300);
+	// 		}
+	// 	}, 50);
+	// });
+
 	// 즉시 실행 함수
 
 })();
