@@ -948,13 +948,7 @@
 /* 기초정보입력 레이아웃 */
 .prd_bi_wrap {
 	display: flex;
-	// align-items: flex-start;
 	align-items: stretch;
-	// background-color: blue;
-
-	&.pbw_s1 {
-
-	}
 
 	//자동차보험 
 	&.case1 {
@@ -965,9 +959,6 @@
 
 				.pi_bottom {
 					margin-top: 0;
-					// padding-top: 40px;
-					// padding-top: 11px;
-
 					.pb_details {
 						.pb_details_inner {
 							.item {
@@ -995,15 +986,6 @@
 						gap: var(--gap-7);
 
 						.input_text {
-							// border-color: var(--color-border-gray-light);
-							
-							&.big {
-								input {
-									// height: auto;
-									// padding: var(--padding-7) var(--padding-6);
-									// line-height: 150%;
-								}
-							}
 							&.phone {
 								input {
 									padding-left: 0;
@@ -1014,9 +996,6 @@
 									}
 								}
 							}
-						}
-						.comp_wrap {
-							// border-color: var(--color-border-gray-light);
 						}
 					}
 				}

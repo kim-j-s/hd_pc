@@ -373,9 +373,6 @@
 
 	// 간격
 	.sec_group {
-		&:first-child {
-			// padding-top: var(--padding-6);
-		}
 		.sec_head {
 			margin-bottom: var(--gap-6);
 
@@ -388,11 +385,6 @@
 					margin-top: var(--gap-2);
 				}
 			}
-
-			// &:focus {
-			// 	outline: 2px solid #000;
-  		// 	outline-offset: 1px;
-			// }
 		}
 		.sec_body {
 			&:has(.title_h4) {
@@ -463,19 +455,6 @@
 		+ .list_depth {
 			margin-top: var(--gap-8);
 		}
-
-		// .table {
-		// 	border-collapse: collapse;
-		// }
-
-		// tbody:has(td[rowspan]) {
-		// 	td:last-child {
-		// 		border-left: var(--border-width-static-regular) solid var(--color-divider-gray-light);
-		// 	}
-		// 	td[rowspan]:last-child {
-		// 		border-right: none
-		// 	}
-		// }
 	}
 
 	.my_info_flow {
@@ -489,7 +468,6 @@
 		.img_wrap_ex {
 			margin-top: var(--gap-4);
 			height:320px;
-			// background-color: var(--color-background-white);
 			border-radius: 16px 16px 0 0;
 			border: none;
 			overflow: hidden;
@@ -543,7 +521,6 @@
 				top: calc(50% - 8px);
 			}
 			&:nth-child(1)::after {
-				// background-image: url('../images/content/prdcar/icon_plus.svg')
 				background-image: url('../images/content/prdcar/icon_minus.svg')
 			}
 			&:nth-child(2)::after {
@@ -638,27 +615,6 @@
 		background-color: var(--color-element-primary-lighter);
 		border: var(--border-width-static-regular) solid var(--color-element-primary-light);
 		border-radius: var(--radius-large2);
-		// &::before,
-		// &::after {
-		// 	content: '';
-		// 	display: inline-block;
-		// 	background-size: contain;
-		// 	background-position: center;
-		// 	background-repeat: no-repeat;
-		// }
-
-		// &::before {
-		// 	width: 32px;
-		// 	height: 32px;  
-		// 	vertical-align: top;
-		// 	margin-top: 14px;
-		// 	background-image: url('../images/content/prdcar/ico_qr_heart.png');			
-		// }
-		// &::after {
-		// 	width: 60px;
-		// 	height: 60px;
-		// 	background-image: url('../images/content/prdcar/img_qr.png');			
-		// }
 		.item {
 			flex: 1;
 			display: flex;

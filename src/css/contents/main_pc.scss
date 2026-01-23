@@ -838,11 +838,6 @@
 						background-image: url(../images/content/main/icon_mit2_ic#{$i}.png);
 					}
 				}
-				&:focus,
-				&:hover,
-				&:active {
-					// border: var(--border-width-static-regular) solid var(--color-border-gray-dark);
-				}
 			}
 
 			.mpc_item_cont {

@@ -3,13 +3,6 @@
         $WIN = $(window),
         wHeight = $WIN.height();
 
-	// 현재 포커스된 요소
-	// $(document).on('keydown', function(e) {
-	// 	if (e.key === 'Enter') {
-	// 		const focusedElement = document.activeElement;
-	// 	}
-	// });
-
 	$DOM.on('click', '.main_recommend_box .re_link', function () {
 		$(this).addClass('active');
 	});
@@ -105,38 +98,6 @@
 				$focus_btn.focus();
 			}
   });
-
-	/* Anchor */
-	/*
-	$DOM.on('click', '.anchor_wrap .anchor_btn', function(){
-    const $this = $(this),
-					btnIdx = $this.index(),
-					text = $this.find('.hd_badge').text(),
-					count = text.match(/\d+/)[0];
-
-		// 보장상태가 0일 때
-		if(count !== '0') {
-			$this.closest('.anchor_wrap').find('.anchor_btn').removeClass('active');
-			$this.addClass('active');
-
-			$('.anchor_move').each(function(idx){
-				const headerH = $('.header').innerHeight(),
-							fixH = $('.anchor_wrap.stikcy').innerHeight();
-				const moveIdx = idx,
-							positionVal = $(this).position().top,
-							scrollTop = $('.container').scrollTop(),
-							newVal = positionVal  + scrollTop - headerH - fixH;
-
-				if(moveIdx == btnIdx){
-					$('.container').animate({
-						scrollTop : newVal
-					}, 500)
-					$('.anchor_move').eq(moveIdx).focus();
-				}
-			})
-		}
-	});
-	*/
 
   /* Input */
   $DOM.on('focus input', '.input_text .inp > input', function(){
@@ -534,13 +495,6 @@
 			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
 			const titleWrapHeight = $titleWrap.outerHeight() || 0;
 
-			// const exceptionHeight = simpleInfoHeight + tagItemHeight;
-			// const exceptionHeight = 192 - 52 - 30;
-
-			// expHeight = hasActivePoEtc1
-			// 	? exceptionHeight - titleWrapHeight * 2
-			// 	: exceptionHeight + titleWrapHeight + 2;
-
 			expHeight = 197 - 68;
 			// console.log(expHeight);
 		}		
@@ -936,214 +890,6 @@ function initPositionEventWrap($wrap) {
 /* 개선 전 */
 
 
-
-/* origin */
-/*
-function initPositionEventWrap($wrap) {
-	if (!$wrap.length) return;
-
-	const $tabBtns = $wrap.find('.position_event_tab .tag_item');
-	const $contents = $wrap.find('.position_event_content .pec_point');
-	const $scrollArea = $wrap.find('.position_event_content');
-
-	$wrap.data('scrolling', false);
-
-	// 스크롤 이벤트 (요소 개별) - 이벤트 중복 방지 (off, on)
-	$wrap.off('scroll.positionEvent').on('scroll.positionEvent', function () {
-		if ($wrap.data('scrolling')) return;
-
-		const scrollTop = $wrap.scrollTop();
-		let expHeight = 0;
-
-		let sHeight = 0;
-
-		if ($(this).hasClass('am_content') && scrollTop == 0 ) {
-			$('.amc_nav').removeClass('active');
-		} else {
-			$('.amc_nav').addClass('active');
-		}
-
-
-		if ($wrap.find('.pew_exception').length) {
-			// 테스트 중 PPRMTPS10004001000
-			// const $simpleInfoWrap = $wrap.find('.simple_info_wrap');
-			const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
-			// 테스트 중 PPRMTPS10004001000
-			
-			const $tagItemWrap = $wrap.find('.tag_item_wrap');
-			const hasPoEtc1 = $wrap.find('.tag_item_wrap_po_etc1').length > 0;
-			const $titWrap = $wrap.find('.pec_point .title_h3');
-
-			const simpleInfoHeight = $simpleInfoWrap.outerHeight() || 0;
-			const tagItemHeight = $tagItemWrap.outerHeight() || 0;
-			const titWrapHeight = $titWrap.outerHeight() || 0;
-
-			expHeight = 197 - 68;
-
-			if(!$simpleInfoWrap.length){
-				// console.log('not');
-				const infoHeight = $wrap.find('.info_summary').outerHeight();
-				const $targetChild = $tagItemWrap.closest('.simple_info_wrap.ty2').find('.simple_info_item');
-	
-				if( scrollTop >= infoHeight){
-					$targetChild.addClass('active');
-				} else {
-					$targetChild.removeAttr('style').removeClass('active');
-					$targetChild.removeClass('active');
-				}
-			}
-		}
-
-
-		let activeIdx = -1;
-
-		$contents.each(function (index) {
-			const targetTop = $(this).offset().top;
-			const containerTop = $scrollArea.offset().top;
-			const scrollY = targetTop - containerTop + expHeight + sHeight;
-			if (scrollY < scrollTop + 10) {
-				activeIdx = index;
-			}
-		});
-
-		if (activeIdx !== -1) {
-			$tabBtns.removeClass('active').eq(activeIdx).addClass('active');
-		}
-	});
-}
-*/
-/* origin */
-
-
-// 개선본 */
-/*
-function initPositionEventWrap($wrap) {
-	if (!$wrap || !$wrap.length) return;
-
-	 // ===============================
-	 // * 1. 캐싱 & 상태
-	 // * ===============================
-	const state = {
-		scrolling: false,
-		expHeight: 0,
-		pointsTop: []
-	};
-
-	const $content   = $wrap.find('.position_event_content');
-	const $points    = $content.find('.pec_point');
-	const $tabBtns   = $wrap.find('.position_event_tab .tag_item');
-	const $amcNav    = $('.amc_nav');
-
-	const $infoSummary    = $wrap.find('.info_summary');
-	const $simpleInfoWrap = $wrap.find('.simple_info_wrap').not('.ty2');
-
-	$wrap.data('state', state);
-
-	 // * ===============================
-	 // * 2. 초기 계산
-	 // * ===============================
-	calcPointOffsets();
-	handleException(0); // 초기 상태 반영
-
-	 // ===============================
-	 // * 3. 스크롤 바인딩
-	 // * ===============================
-	bindScroll();
-
-	 // ===============================
-	 // * functions
-	 // * ===============================
-
-	function bindScroll() {
-		let ticking = false;
-
-		$wrap
-			.off('scroll.positionEvent')
-			.on('scroll.positionEvent', function () {
-				if (ticking) return;
-
-				ticking = true;
-				requestAnimationFrame(() => {
-					handleScroll();
-					ticking = false;
-				});
-			});
-	}
-
-	function handleScroll() {
-		const scrollTop = $wrap.scrollTop();
-
-		handleStickyNav(scrollTop);
-		handleException(scrollTop);
-		updateActiveTab(scrollTop);
-	}
-
-	 // ===============================
-	 // * 4. sticky nav
-	 // * ===============================
-	function handleStickyNav(scrollTop) {
-		if (!$wrap.hasClass('am_content')) return;
-		$amcNav.toggleClass('active', scrollTop > 0);
-	}
-
-	 // ===============================
-	 // * 5. exception 처리
-	 // * ===============================
-	function handleException(scrollTop) {
-		if (!$infoSummary.hasClass('pew_exception')) {
-			state.expHeight = 0;
-			return;
-		}
-
-		// 기준 offset (197 - 68)
-		state.expHeight = 129;
-
-		if (!$simpleInfoWrap.length) {
-			const infoHeight = $infoSummary.outerHeight() || 0;
-			const $target = $wrap
-				.find('.simple_info_wrap.ty2 .simple_info_item');
-
-			$target.toggleClass('active', scrollTop >= infoHeight);
-		}
-	}
-
-	 // ===============================
-	 // * 6. 탭 활성화 (배열 기반)
-	 // * ===============================
-	function updateActiveTab(scrollTop) {
-		const 기준값 = scrollTop + state.expHeight + 10;
-
-		let activeIdx = -1;
-
-		for (let i = 0; i < state.pointsTop.length; i++) {
-			if (state.pointsTop[i] <= 기준값) {
-				activeIdx = i;
-			} else {
-				break; // 정렬되어 있으므로 중단
-			}
-		}
-
-		if (activeIdx !== -1) {
-			$tabBtns
-				.removeClass('active')
-				.eq(activeIdx)
-				.addClass('active');
-		}
-	}
-
-	 // ===============================
-	 // * 7. 섹션 위치 계산 (1회)
-	 // * ===============================
-	function calcPointOffsets() {
-		const containerTop = $content.offset().top;
-
-		state.pointsTop = $points.map(function () {
-			return $(this).offset().top - containerTop;
-		}).get();
-	}
-}
-*/
-// 개선본
 
 // input 상태값 표현식
 function inputState() {
@@ -1689,27 +1435,6 @@ $(function(){
 	}
 	autoCompleteEmail();
 
-	/* 페이지 내 스크롤 이벤트 */
-	// 모바일 - MY Page - 보험진단 서비스 - 보험 진단 결과 페이지에서만 사용 중
-	/*
-	$('.container').on('scroll', function(){
-		const $this = $(this),
-					scrollTop = $this.scrollTop();
-		if($('.anchor_wrap').length){
-			$('.anchor_move').each(function(idx){
-				const sectionOffset = $(this).offset().top,
-							anchorH = $('.anchor_wrap').innerHeight(),
-							headerH = $('.header').innerHeight(),
-							compareVal = scrollTop + sectionOffset - anchorH - headerH - 48;
-				if(scrollTop > compareVal){
-					$('.anchor_wrap').find('.anchor_btn').removeClass('active');
-					$('.anchor_wrap').find('.anchor_btn').eq(idx).addClass('active');
-				}
-			})
-		}
-	});
-	*/
-
 	// ready
 
 	//MY - 대출신청금액입력 MMYLOAN10002010000 접고 펼치기 
@@ -1811,7 +1536,6 @@ $(function(){
 				moveTargetPosition = $popupContThis.scrollTop();
 				scrollingChk = false; // 스크롤 완료 후 플래그 해제
 			});
-			// console.log('event 1');
     } else {
       $popupContThis.animate({
         scrollTop: $popupContThis[0].scrollHeight - $popupContThis.outerHeight()
@@ -1820,7 +1544,6 @@ $(function(){
 				$(this).closest('.popup_wrap').find('.scroll_down').hide();
 				$(this).closest('.popup_wrap').find('.done').show();
 			});
-			// console.log('event 2');
     }
   });
 	// e: 상품설명서 주요 내용 스크롤 버튼	
@@ -1853,7 +1576,6 @@ function resetProDesc() {
 
 //알릴고지 숫자 표기
 function nbList() {
-  	// $('.form_list:not(.form_list_no_count)').each(function () {
   	$('ol.form_list:not(.form_list_no_count)').each(function () {
 		const $list = $(this);
 

@@ -4,9 +4,6 @@
 /* common 인증, 로딩 등 */
 @import "common/commonpage.scss";
 
-/* header */
-/* @import "common/header.scss"; */
-
 /* header_pc */
 @import "common/header_pc.scss";
 
@@ -21,9 +18,6 @@
 
 /* footer */
 @import "common/footer.scss";
-
-/* navigation */
-/* @import "common/nav.scss"; */
 
 /* address button */
 @import "common/address_button.scss";

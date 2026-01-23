@@ -245,9 +245,6 @@
 		.img {
 			font-size: 0;
 			text-align: center;
-			img {
-				// width: 100%;
-			}
 		}
 		+ .item {
 			margin-top: var(--gap-9);
@@ -473,9 +470,6 @@
 		}
 		+ li {
 			margin-top: var(--gap-6);
-		}
-		.file_attach_box {
-
 		}
 	}
 }

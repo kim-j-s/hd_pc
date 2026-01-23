@@ -5881,8 +5881,8 @@
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	padding: 0 24px 16px;
 	margin: 0 -24px 0;
+	padding: 0 24px 16px;
 }
 .sii_wrap .tag_item_wrap.sticky::before {
 	content: "";
