@@ -3840,6 +3840,12 @@
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner.item_car01 .item_ico_ty12 {
 	background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty14.svg);
 }
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner.item_car01 .item_ico_ty13 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty19.svg);
+}
+.prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner.item_car01 .item_ico_ty14 {
+	background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty20.svg);
+}
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details .pb_details_inner.item_car02 .item_ico_ty01 {
 	background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty2.svg);
 }
@@ -4182,7 +4188,6 @@
 	padding-bottom: var(--padding-2);
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pb_details.grid3 .pb_details_inner .item:nth-child(3n) {
-	background-position: right bottom 4px;
 	border-right: 0;
 }
 .prd_bi_wrap .prd_bi_wrap_l .pbw_inner .pi_bottom .pbc_banners {
