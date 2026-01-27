@@ -1506,7 +1506,8 @@ $(function(){
 			const clientHeight = $thisPopupCont.height();
 			
 			// 스크롤이 최하단에 도달했는지 확인
-			if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
+			// if (currentScrollTopInPopup + clientHeight >= scrollHeight - 80) {
+			if (currentScrollTopInPopup + clientHeight >= scrollHeight - 140) {
 				$fixedButton.hide();
 				$doneButton.show();
 			}
