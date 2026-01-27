@@ -43,27 +43,21 @@
 					<div class="pbw_inner pi_bg_ty3">
 						<!-- s: 2타입 이미지 .pi_bg_ty3-1 -->
 						<!-- <div class="pbw_inner pi_bg_ty3-1"> -->
-							<!-- e: 2타입 이미지 .pi_bg_ty3-1 -->
-							<div class="pi_top">
-								<h2 class="pt_title">
-									
-									
-									<small>자사 오프라인 대비 18.3% 저렴</small>
-									
-									
-									
-									다양한 <span class="bold">특약할인 확인</span>하고<br>
-									<span class="bold">보험료 더 할인</span> 받으세요!
-									
-								</h2>
-								
+						<!-- e: 2타입 이미지 .pi_bg_ty3-1 -->
+						<div class="pi_top">
+							<h2 class="pt_title">
+								<small>
+									자사 오프라인 대비 평균 18.3% 저렴
+									<span class="sd">(보험시작일 ‘26.2.16부터)</span>
+								</small>
+								다양한 <span class="bold">특약할인 확인</span>하고<br>
+								<span class="bold">보험료 더 할인</span> 받으세요!
+							</h2>
 							<div class="pt_btn_area">
-								
 								<a href="javascript:void(0)" class="hd_btn hd_btn_ty_3 hd_btn_s_3">
 									<span class="text">자세한 보장 내용이 궁금하다면</span>
 									<i class="hd_icon arrowRightSvg"></i>
 								</a>
-								
 							</div>
 						</div>
 
@@ -71,11 +65,12 @@
 							
 							<div class="pb_desc">
 								<h3 class="pb_title">내 차 보험료 할인 받는 방법은?</h3>
-								<p class="msg_info">해당 특약 가입 시</p>
+								<!-- s: 26-01-27 수정 -->
+								<!-- 삭제 <p class="msg_info">해당 특약 가입 시</p> -->
+								<!-- e: 26-01-27 수정 -->
 							</div>
 							<div class="pb_cont">
 								<div class="pb_details grid3">
-									
 									<div class="pb_details_inner item_car01">
 										<div class="item item_ico_ty01">
 											<p class="item_exp">
@@ -84,13 +79,16 @@
 												<small class="item_sub_txt">1천km 이하, 커넥티드방식</small>
 											</p>
 										</div>
+										<!-- s: 26-01-27 수정 -->
+										<!-- 삭제
 										<div class="item item_ico_ty02">
 											<p class="item_exp">
 												<span class="percent">18.3</span>
 												인터넷 가입
 												<small class="item_sub_txt">자사 오프라인 대비 평균</small>
 											</p>
-										</div>
+										</div> -->
+										<!-- e: 26-01-27 수정 -->
 										<div class="item item_ico_ty03">
 											<p class="item_exp">
 												<span class="percent">15.3~12.4</span>
@@ -119,11 +117,18 @@
 												<small class="item_sub_txt">안전운전점수 70점 이상</small> 
 											</p>
 										</div>
-										<div class="item item_ico_ty07">
+										<!-- s: 26-01-27 수정 -->
+										<div class="item item_ico_ty14">
 											<p class="item_exp">
-												
+												<span class="percent">5%</span>
+												월별 안전운전점수 할인<br> 추가특약
+												<small class="item_sub_txt">월별 안전운전점수 70점 이상</small> 
+											</p>
+										</div>
+										<!-- e: 26-01-27 수정 -->
+										<div class="item item_ico_ty13">
+											<p class="item_exp">
 												<span class="percent">27.5~1.9</span>
-												
 												티맵 안전운전 할인 특약 
 												<small class="item_sub_txt">안전운전점수 70점 이상</small> 
 											</p>
@@ -167,23 +172,18 @@
 									
 								</div>
 								<div class="pbc_banners">
-									
 									<div class="item">
 										<a href="#">
 											<img src="../../../images/event/banner_pc01.png" alt="마케팅 배너" />
 										</a>
 									</div>
-									
 									<div class="item">
 										<a href="#">
 											<img src="../../../images/event/banner_pc02.png" alt="마케팅 배너" />
 										</a>
 									</div>
-									
-									
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -198,53 +198,37 @@
 							<div class="form_group_wrap full">
 								<div class="form_line">
 									<div class="label_tit">이름</div>
-									
-									
-									
 									{{> cp/text class="big" placeholder="자동차 소유(예정)자" inp-title="이름 입력" }}
-									
-									
-									
 								</div>
 								<div class="form_line">
 									<div class="label_tit">주민등록번호</div>
 									<!-- 키패드 입력까지 된 후, active 클래스 추가 -->
 									<div class="comp_wrap birth active">
-										
 										{{> cp/text class="big" type="tel" minlength="6" maxlength="6" placeholder="앞 6자리" inp-title="주민등록번호 앞 6자리 입력" }}
-										
 										<span class="dash">-</span>
 										{{> cp/keypad7 kp-class="big" case1="뒤 7자리" kt="주민등록번호 뒤 7자리 입력" ktid="kp1"}}
 									</div>
 								</div>
 								<div class="form_line">
 									<div class="label_tit">휴대폰번호</div>
-									
-									
 									{{> cp/text class="phone phone_full big" type="tel" placeholder="- 없이 입력" inp-title="휴대폰번호 입력" }}
-									
-									
 								</div>
 							</div>
 						</div>
 
 						<!-- s: 하단 버튼 영역 -->
 						<div class="bottom_fix_wrap">
-							
 							<div class="btn_area">
 								{{> cp/button type="1" size="1" b-text="설계 정보를 입력 중이에요" disabled=true }}
 								<!-- {{> cp/button type="1" size="1" b-text="내 보험료를 알아볼게요" }} -->
 							</div>
-							
 						</div>
 						<!-- e: 하단 버튼 영역 -->
 					</div>
 					<!-- s: 꼭 알아두세요 -->
 					{{#> cp/notice dp-active=true }}
 					<ul class="list_ty1">
-						
 						<li>고객님의 자동차보험료를 계산하기 위해 개인(신용)정보 동의 및 본인인증이 필요합니다.</li>
-						
 						<li>가입 가능한 연령은 만 19세 이상입니다.</li>
 					</ul>
 					{{/ cp/notice }}

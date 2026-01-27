@@ -1348,110 +1348,6 @@
 									}
 								}
 							}
-
-
-
-							// @for $i from 1 through 79 {
-							// 	&.item_ico_ty#{$i} {
-							// 		background-image: url(../images/content/bi/visual/bg_exp_ty#{$i}.png);
-							// 	}
-							// }
-							// &.item_ico_ty1 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty1.png);
-							// }
-							// &.item_ico_ty2 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty2.png);
-							// }
-							// &.item_ico_ty3 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty3.png);
-							// }
-							// &.item_ico_ty4 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty4.png);
-							// }
-							// &.item_ico_ty5 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty5.png);
-							// }
-							// &.item_ico_ty6 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty6.png);
-							// }
-							// &.item_ico_ty7 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty7.png);
-							// }
-							// &.item_ico_ty8 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty8.png);
-							// }
-							// &.item_ico_ty9 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty9.png);
-							// }
-							// &.item_ico_ty10 { 
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty10.png);
-							// }
-							// &.item_ico_ty11 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty11.png);
-							// }
-							// &.item_ico_ty12 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty12.png);
-							// }
-							// &.item_ico_ty13 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty13.png);
-							// }
-							// &.item_ico_ty14 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty14.png);
-							// }
-							// &.item_ico_ty15 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty15.png);
-							// }
-							// &.item_ico_ty16 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty16.png);
-							// }
-							// &.item_ico_ty17 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty17.png);
-							// }
-							// &.item_ico_ty18 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty18.png);
-							// }
-							// &.item_ico_ty19 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty19.png);
-							// }
-							// &.item_ico_ty20 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty20.png);
-							// }
-							// &.item_ico_ty21 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty21.png);
-							// }
-							// &.item_ico_ty22 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty22.png);
-							// }
-							// &.item_ico_ty23 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty23.png);
-							// }
-							// &.item_ico_ty24 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty24.png);
-							// }
-							// &.item_ico_ty25 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty25.png);
-							// }
-							// &.item_ico_ty26 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty26.png);
-							// }
-							// &.item_ico_ty27 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty27.png);
-							// }
-							// &.item_ico_ty28 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty28.png);
-							// }
-							// &.item_ico_ty29 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty29.png);
-							// }
-							// &.item_ico_ty30 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty30.png);  
-							// }
-							// &.item_ico_ty31 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty31.png);  
-							// }
-							// &.item_ico_ty32 {
-							// 	background-image: url(../images/content/bi/visual/bg_exp_ty32.png);  
-							// }
 						}
 
 						// 자동차(개인)
@@ -1491,6 +1387,12 @@
 							}
 							.item_ico_ty12 {
 								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty14.svg);
+							}
+							.item_ico_ty13 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty19.svg);
+							}
+							.item_ico_ty14 {
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty20.svg);
 							}
 						}
 
@@ -1846,7 +1748,7 @@
 									padding-bottom: var(--padding-2);
 								}
 								&:nth-child(3n){
-									background-position: right bottom 4px;
+									// background-position: right bottom 4px;
 									border-right: 0;
 								}
 							}

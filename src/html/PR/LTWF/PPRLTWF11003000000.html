@@ -52,14 +52,17 @@
 					<div class="form_line">
 						<div class="label_tit">사업장 층수(저층~)</div>
 						<div class="row"> 
-														
 							{{> cp/text type="tel" class="grow" placeholder="숫자만 입력" value="" r-text="층" inp-title="층수 입력" }}
-							
 							<div class="radio_comb origin" role="radiogroup">	
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_1" name="radio_g1" labelname="지상" checked=true }}
 								{{> cp/radio rd-class="rd_btn" rd-id="radio_comb_g1_2" name="radio_g1" labelname="지하"}}
 							</div>
 						</div>
+						<!-- s: 26-01-27 수정 -->
+						<ul class="list_ty2">
+							<li>실제 가입하는 사업장 층수를 입력해 주세요.</li>
+						</ul>
+						<!-- e: 26-01-27 수정 -->
 					</div>
 					<div class="form_line">
 						<div class="label_tit">사업장 층수(~고층)</div>
