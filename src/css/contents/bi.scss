@@ -1172,6 +1172,17 @@
 					margin-top: var(--gap-4);
 				}
 
+				.compliance_area {
+					margin-top: var(--gap-5);
+					font-size: var(--font-size-body-small);
+					color: #878787;
+					text-align: right;
+
+					& + .pbc_banners {
+						margin-top: var(--gap-4);
+					}
+				}
+
 				> .pb_desc {
 					display: flex;
 					justify-content: space-between;
@@ -1440,7 +1451,7 @@
 								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty4.svg);
 							}
 							.item_ico_ty02 {
-								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty6.svg);
+								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty19.svg);
 							}
 							.item_ico_ty03 {
 								background-image: url(../images/content/mtps/icon_MPRMTPS10002010000_ty18.svg);
