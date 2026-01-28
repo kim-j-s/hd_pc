@@ -900,6 +900,13 @@
 						padding-top: var(--gap-2);
 						color: var(--color-text-basic);
 						font-size: var(--font-size-body-medium);
+
+						.sd {
+							display: block;
+							font-weight: 400;
+							font-size: var(--font-size-body-small, 14px);
+							line-height: normal;
+						}
 					}
 				}
 				
@@ -1258,6 +1265,12 @@
 		font-weight: 700;
 		font-size: var(--font-size-heading-xxsmall);
 		color: var(--color-text-secondary-light);
+		.sd {
+			display: block;
+			font-weight: 400;
+			font-size: var(--font-size-body-small, 14px);
+			line-height: normal;
+		}
 	}
 	.main_title {
 		display: block;
