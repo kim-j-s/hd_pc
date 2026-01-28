@@ -1172,6 +1172,17 @@
 					margin-top: var(--gap-4);
 				}
 
+				.compliance_area {
+					margin-top: var(--gap-5);
+					font-size: var(--font-size-body-small);
+					color: #878787;
+					text-align: right;
+
+					& + .pbc_banners {
+						margin-top: var(--gap-4);
+					}
+				}
+
 				> .pb_desc {
 					display: flex;
 					justify-content: space-between;
