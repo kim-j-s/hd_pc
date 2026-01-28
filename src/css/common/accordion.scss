@@ -190,8 +190,8 @@
 
 			.item_gr_title {
 				.title {
-					font-size: var(--font-size-body-medium);
 					font-weight: 700;
+					font-size: var(--font-size-body-medium);
 				}
 				.sub_text {
 					margin-top: var(--gap-3);
@@ -219,10 +219,10 @@
 			font-size: var(--font-size-label-medium);
 		}
 		.cont_text_sub {
-			color: var(--color-text-subtle);
-			font-size: var(--font-size-body-small);
-			font-weight: normal;
 			margin-top: var(--gap-2);
+			font-weight: normal;
+			font-size: var(--font-size-body-small);
+			color: var(--color-text-subtle);
 			+ .chk_lby2,
 			+ .price_btn {
 				margin-top: var(--gap-2);
@@ -238,10 +238,10 @@
 				width: 100%;
 				min-height: 32px;
 				padding-right: 36px;
-				background-color: transparent;
 				font-weight: 700;
 				font-size: var(--font-size-heading-small);
 				color: var(--color-text-bolder);
+				background-color: transparent;
 				&:after {
 					position: absolute;
 					top: calc(50% - 16px);
@@ -268,8 +268,8 @@
 				.sub_g_txt {
 					display: block;
 					padding-top: var(--gap-1);
-					font-size: var(--font-size-body-xsmall);
 					font-weight: 400;
+					font-size: var(--font-size-body-xsmall);
 					color: var(--color-text-subtle);
 				}
 
@@ -372,10 +372,10 @@
 				position: relative;
 				width: 100%;
 				padding: 12px 32px 12px 0;
-				background-color: var(--color-background-white);
 				font-weight: 700;
 				font-size: var(--font-size-heading-medium);
 				color: var(--color-text-bolder);
+				background-color: var(--color-background-white);
 				&::before {
 					content: '';
 					position: absolute;
@@ -533,9 +533,9 @@
 						display: none;
 					}
 					del {
-						color: var(--color-text-subtle);
-						font-size: var(--font-size-body-small);
 						font-weight: 400;
+						font-size: var(--font-size-body-small);
+						color: var(--color-text-subtle);
 					}
 				}
 				&::before {
@@ -918,8 +918,8 @@
 		gap: var(--gap-2);
 		
 		.title {
-			font-size: var(--font-size-heading-small);
 			font-weight: 700;
+			font-size: var(--font-size-heading-small);
 			color: var(--color-text-bolder);
 		}
 	}

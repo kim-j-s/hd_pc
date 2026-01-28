@@ -899,6 +899,7 @@ sup {
 .process_info_area + .space_list_ty2,
 .process_info_area + .space_list_ty4,
 .process_info_area + .info_cont,
+.process_info_area + .list_ty3,
 .process_info_area + .progress_bar,
 .process_info_area + .btn_area.ty_mid {
 	margin-top: var(--gap-8);
@@ -3736,12 +3737,11 @@ sup {
 	word-break: auto-phrase;
 }
 .agree_ditail_list > li .agree_tit_box .btn_link {
-	text-align: right;
 	min-width: 55px;
+	text-align: right;
 	background-position: right 3px;
 }
 .agree_ditail_list > li dl {
-	margin: var(--gap-5) 0 0 var(--gap-5);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -3752,6 +3752,7 @@ sup {
 	-ms-flex-align: top;
 	align-items: top;
 	gap: var(--gap-5);
+	margin: var(--gap-5) 0 0 var(--gap-5);
 }
 .agree_ditail_list > li dl dt {
 	position: relative;
@@ -4000,8 +4001,8 @@ sup {
 	height: 8px;
 }
 .agree_graph .graph_item .txt {
-	display: block;
 	position: relative;
+	display: block;
 	font-size: var(--font-size-body-xsmall);
 	color: var(--color-text-disabled-on);
 	text-align: center;
@@ -4017,7 +4018,7 @@ sup {
 	-ms-flex-align: center;
 	align-items: center;
 	padding: 2px 0;
-	width: calc(100% - 10px);
+	width: calc(100% - 4px);
 	min-width: 48px;
 	font-weight: 700;
 	color: var(--color-text-bolder-inverse);
@@ -4086,11 +4087,11 @@ sup {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	width: 100%;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	gap: var(--gap-3);
+	width: 100%;
 	padding-top: var(--gap-5);
 }
 .agree_qr_box .qr_box {
@@ -4298,8 +4299,8 @@ sup {
 	transition: all 0.3s;
 }
 .acd_item.acd_item_ty1 .acd_cont .item_gr_title .title {
-	font-size: var(--font-size-body-medium);
 	font-weight: 700;
+	font-size: var(--font-size-body-medium);
 }
 .acd_item.acd_item_ty1 .acd_cont .item_gr_title .sub_text {
 	margin-top: var(--gap-3);
@@ -4320,10 +4321,10 @@ sup {
 	font-size: var(--font-size-label-medium);
 }
 .acd_item.acd_item_ty2 .cont_text_sub {
-	color: var(--color-text-subtle);
-	font-size: var(--font-size-body-small);
-	font-weight: normal;
 	margin-top: var(--gap-2);
+	font-weight: normal;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
 }
 .acd_item.acd_item_ty2 .cont_text_sub + .chk_lby2,
 .acd_item.acd_item_ty2 .cont_text_sub + .price_btn {
@@ -4338,10 +4339,10 @@ sup {
 	width: 100%;
 	min-height: 32px;
 	padding-right: 36px;
-	background-color: transparent;
 	font-weight: 700;
 	font-size: var(--font-size-heading-small);
 	color: var(--color-text-bolder);
+	background-color: transparent;
 }
 .acd_item.acd_item_ty2 .acd_head .acd_btn:after {
 	position: absolute;
@@ -4367,8 +4368,8 @@ sup {
 .acd_item.acd_item_ty2 .acd_head .acd_btn .sub_g_txt {
 	display: block;
 	padding-top: var(--gap-1);
-	font-size: var(--font-size-body-xsmall);
 	font-weight: 400;
+	font-size: var(--font-size-body-xsmall);
 	color: var(--color-text-subtle);
 }
 .acd_item.acd_item_ty2 .acd_head .acd_btn .picture_info_top .cont_text_sub {
@@ -4449,10 +4450,10 @@ sup {
 	position: relative;
 	width: 100%;
 	padding: 12px 32px 12px 0;
-	background-color: var(--color-background-white);
 	font-weight: 700;
 	font-size: var(--font-size-heading-medium);
 	color: var(--color-text-bolder);
+	background-color: var(--color-background-white);
 }
 .acd_item.acd_item_ty3 .acd_head .acd_btn::before {
 	content: "";
@@ -4609,9 +4610,9 @@ sup {
 	display: none;
 }
 .acd_item.acd_item_ty6 .acd_head .acd_btn .sii_list_r del {
-	color: var(--color-text-subtle);
-	font-size: var(--font-size-body-small);
 	font-weight: 400;
+	font-size: var(--font-size-body-small);
+	color: var(--color-text-subtle);
 }
 .acd_item.acd_item_ty6 .acd_head .acd_btn::before {
 	content: "";
@@ -4903,8 +4904,8 @@ sup {
 	gap: var(--gap-2);
 }
 .picture_info_top .status .title {
-	font-size: var(--font-size-heading-small);
 	font-weight: 700;
+	font-size: var(--font-size-heading-small);
 	color: var(--color-text-bolder);
 }
 .picture_info_top .preview {
@@ -5035,17 +5036,17 @@ sup {
 	margin-top: var(--gap-2);
 }
 .view_wrap .view_title .title_info .main_title {
+	font-weight: 700;
 	font-size: var(--font-size-heading-small);
 	color: var(--color-text-bolder);
-	font-weight: 700;
 }
 .view_wrap .view_title .title_info .main_title.lg {
 	font-size: var(--font-size-heading-large);
 }
 .view_wrap .view_title .title_info + .desc {
 	margin-top: var(--gap-3);
-	color: var(--color-text-information);
 	font-size: var(--font-size-body-small);
+	color: var(--color-text-information);
 }
 .view_wrap .view_title + .btn_area {
 	margin-top: var(--gap-5);

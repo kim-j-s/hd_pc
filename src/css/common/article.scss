@@ -43,9 +43,9 @@
 			}
 
 			.main_title {
+				font-weight: 700;
 				font-size: var(--font-size-heading-small);
 				color: var(--color-text-bolder);
-				font-weight: 700;
 
 				&.lg {
 					font-size: var(--font-size-heading-large);
@@ -54,8 +54,8 @@
 
 			& + .desc {
 				margin-top: var(--gap-3);
-				color: var(--color-text-information);
 				font-size: var(--font-size-body-small);
+				color: var(--color-text-information);
 			}
 		}
 	}
