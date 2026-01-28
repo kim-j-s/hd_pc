@@ -993,24 +993,15 @@ sup {
 			background-position: left top;
 		}
 	}
-
 	& + .info_gray { 
 		margin-top:20px;
 	}
-
 }
-
-// .form_box {
-// 	& + .form_box { 
-// 		margin-top:52px;
-// 	}
-// }
 
 
 // Lottie Case
 .process_info_area {
 	text-align: center;
-
 	.process_info_icon_area {
 		width: 64px;
 		height: 64px;
@@ -1102,6 +1093,7 @@ sup {
 	+ .space_list_ty2,
 	+ .space_list_ty4,
 	+ .info_cont,
+	+ .list_ty3,
 	& + .progress_bar,
 	& + .btn_area.ty_mid {
 		margin-top: var(--gap-8);

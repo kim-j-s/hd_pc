@@ -35,17 +35,17 @@
 				word-break: auto-phrase;
 			}
 			.btn_link {
-				text-align: right;
 				min-width: 55px;
+				text-align: right;
 				background-position: right 3px;
 			}
 		}
 		dl {
-			margin: var(--gap-5) 0 0 var(--gap-5);
 			display: flex;
 			justify-content: space-between;
 			align-items: top;
 			gap: var(--gap-5);
+			margin: var(--gap-5) 0 0 var(--gap-5);
 			dt {
 				position: relative;
 				padding-left: var(--padding-3);
@@ -367,8 +367,8 @@
 			height: 8px;			
 		}
 		.txt {			
-			display:block;
 			position: relative;
+			display:block;
 			font-size:var(--font-size-body-xsmall);
 			color:var(--color-text-disabled-on);
 			text-align: center;
@@ -379,7 +379,7 @@
 				justify-content: center;
 				align-items: center;
 				padding:2px 0;
-				width: calc(100% - 10px);
+				width: calc(100% - 4px);
 				min-width: 48px;
 				font-weight: 700;
 				color:var(--color-text-bolder-inverse);
@@ -461,9 +461,9 @@
 .agree_qr_box {
 	position: relative;
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
 	gap: var(--gap-3);
+	width: 100%;
 	padding-top: var(--gap-5);
 	.qr_box {
 		position: absolute;

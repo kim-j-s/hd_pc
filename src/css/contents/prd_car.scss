@@ -166,7 +166,7 @@
 					background-position: left center;
 					transform: translateY(-50%);
 				}
-				@for $i from 1 through 21 {
+				@for $i from 1 through 22 {
 					&.ico_benefit#{$i}::after {
 						background-image: url('../images/content/prdcar/ico_car_benefit#{$i}.svg');
 					}
