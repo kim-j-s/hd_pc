@@ -1015,6 +1015,8 @@
 .table_section {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: var(--gap-8);
 	.table_wrap {
 		width: calc(50% - var(--gap-8)/2);
 		& + .table_wrap {
